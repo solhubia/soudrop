@@ -97,8 +97,7 @@ const Index = () => {
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed animate-fade-in font-medium">
-              Automatize a gestão de múltiplos marketplaces com o{" "}
-              <span className="text-primary font-bold">Soudrop</span>
+              E agora, formamos uma nova tendência: onde vender produtos físicos não demanda mais esforço, marketing ou gastos operacionais - mas sim, alguns cliques.
             </p>
             
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto animate-fade-in leading-relaxed">
