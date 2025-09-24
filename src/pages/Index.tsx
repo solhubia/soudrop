@@ -129,9 +129,9 @@ const Index = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="mb-8 animate-fade-in">
-              <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary border-primary/30 text-sm px-4 py-2">
-                🚀 Revolucione suas vendas online
+            <div className="mb-4 animate-fade-in">
+              <Badge variant="secondary" className="mb-3 bg-primary/20 text-primary border-primary/30 text-sm px-4 py-2">
+                Melhor HUB para E-commerces e Lojistas
               </Badge>
             </div>
             
