@@ -121,7 +121,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-20 relative overflow-hidden">
+      <section className="pt-32 pb-20 relative overflow-hidden">
         {/* Mouse Follower Light */}
         <div ref={mouseFollowerRef} className="fixed w-96 h-96 bg-primary/2 rounded-full blur-[100px] pointer-events-none z-0 transition-all duration-100 ease-out opacity-60" style={{
         transform: 'translate(-192px, -192px)'
