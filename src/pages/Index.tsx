@@ -178,7 +178,7 @@ const Index = () => {
                   ].map((logo, index) => (
                     <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                       <div className="flex flex-col items-center justify-center p-4 h-24">
-                        <div className="h-12 w-20 flex items-center justify-center mb-2">
+                        <div className="h-14 w-24 flex items-center justify-center mb-2">
                           <img 
                             src={logo.src} 
                             alt={logo.alt}
