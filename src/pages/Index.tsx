@@ -538,13 +538,8 @@ const Index = () => {
 
               {/* Marketplace Indicators */}
               <div className="flex items-center justify-center gap-4 mt-8 pt-6 border-t border-primary/10">
-                <div className="text-sm text-muted-foreground">Dados de todos os marketplaces:</div>
-                <div className="flex items-center gap-3">
-                  <img src={mlLogo} alt="Mercado Livre" className="h-6 w-6 object-contain opacity-80" />
-                  <img src={shopeeLogo} alt="Shopee" className="h-6 w-6 object-contain opacity-80" />
-                  <img src={amazonLogo} alt="Amazon" className="h-6 w-6 object-contain opacity-80" />
-                  <img src={magaluLogo} alt="Magalu" className="h-6 w-6 object-contain opacity-80" />
-                  <span className="text-primary font-semibold text-sm">Em um só lugar</span>
+                <div className="text-center text-muted-foreground">
+                  Veja todas essas informações, de todos os seus marketplaces no nosso DashBoard
                 </div>
               </div>
             </div>
