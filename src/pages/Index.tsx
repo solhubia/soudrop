@@ -474,13 +474,13 @@ const Index = () => {
               {/* Metrics Available */}
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
-                  <Truck className="h-6 w-6 text-primary mx-auto mb-2" />
+                  <Truck className="h-6 w-6 text-green-600 mx-auto mb-2" />
                   <div className="text-sm font-medium text-muted-foreground">Status de Envio</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <div className="w-6 h-6 bg-primary/20 rounded mx-auto mb-2 flex items-center justify-center">
-                    <div className="w-2 h-2 bg-primary rounded"></div>
+                    <div className="w-2 h-2 bg-green-600 rounded"></div>
                   </div>
                   <div className="text-sm font-medium text-muted-foreground">Data</div>
                 </div>
@@ -491,17 +491,17 @@ const Index = () => {
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
-                  <Package className="h-6 w-6 text-primary mx-auto mb-2" />
+                  <Package className="h-6 w-6 text-green-600 mx-auto mb-2" />
                   <div className="text-sm font-medium text-muted-foreground">Valor do Produto</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
-                  <DollarSign className="h-6 w-6 text-blue-600 mx-auto mb-2" />
+                  <DollarSign className="h-6 w-6 text-green-600 mx-auto mb-2" />
                   <div className="text-sm font-medium text-muted-foreground">Valor Recebido</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
-                  <BarChart3 className="h-6 w-6 text-orange-600 mx-auto mb-2" />
+                  <BarChart3 className="h-6 w-6 text-green-600 mx-auto mb-2" />
                   <div className="text-sm font-medium text-muted-foreground">Taxa de Marketplace</div>
                 </div>
               </div>
@@ -509,7 +509,7 @@ const Index = () => {
               {/* Second Row of Metrics */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
-                  <DollarSign className="h-6 w-6 text-red-600 mx-auto mb-2" />
+                  <DollarSign className="h-6 w-6 text-green-600 mx-auto mb-2" />
                   <div className="text-sm font-medium text-muted-foreground">Valor de Custo</div>
                 </div>
 
@@ -519,13 +519,13 @@ const Index = () => {
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
-                  <Truck className="h-6 w-6 text-purple-600 mx-auto mb-2" />
+                  <Truck className="h-6 w-6 text-green-600 mx-auto mb-2" />
                   <div className="text-sm font-medium text-muted-foreground">Frete</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
-                  <div className="w-6 h-6 bg-yellow-600/20 rounded mx-auto mb-2 flex items-center justify-center">
-                    <div className="w-3 h-3 bg-yellow-600 rounded"></div>
+                  <div className="w-6 h-6 bg-green-600/20 rounded mx-auto mb-2 flex items-center justify-center">
+                    <div className="w-3 h-3 bg-green-600 rounded"></div>
                   </div>
                   <div className="text-sm font-medium text-muted-foreground">Cupons</div>
                 </div>
