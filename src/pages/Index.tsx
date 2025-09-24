@@ -14,20 +14,48 @@ import madeiraMadeiraLogo from "@/assets/madeiramadeira-logo.png";
 const Index = () => {
   const mouseFollowerRef = useRef<HTMLDivElement>(null);
   const [isAnnual, setIsAnnual] = useState(true);
-
   const planData = {
     monthly: {
-      basic: { price: "R$ 299", period: "/mês", originalPrice: null, savings: null },
-      gold: { price: "R$ 399", period: "/mês", originalPrice: null, savings: null },
-      diamond: { price: "R$ 499", period: "/mês", originalPrice: null, savings: null }
+      basic: {
+        price: "R$ 299",
+        period: "/mês",
+        originalPrice: null,
+        savings: null
+      },
+      gold: {
+        price: "R$ 399",
+        period: "/mês",
+        originalPrice: null,
+        savings: null
+      },
+      diamond: {
+        price: "R$ 499",
+        period: "/mês",
+        originalPrice: null,
+        savings: null
+      }
     },
     annual: {
-      basic: { price: "R$ 2.390", period: "/ano", originalPrice: "R$ 3.588", savings: "33%" },
-      gold: { price: "R$ 2.899", period: "/ano", originalPrice: "R$ 4.788", savings: "39%" },
-      diamond: { price: "R$ 4.299", period: "/ano", originalPrice: "R$ 5.988", savings: "28%" }
+      basic: {
+        price: "R$ 2.390",
+        period: "/ano",
+        originalPrice: "R$ 3.588",
+        savings: "33%"
+      },
+      gold: {
+        price: "R$ 2.899",
+        period: "/ano",
+        originalPrice: "R$ 4.788",
+        savings: "39%"
+      },
+      diamond: {
+        price: "R$ 4.299",
+        period: "/ano",
+        originalPrice: "R$ 5.988",
+        savings: "28%"
+      }
     }
   };
-
   const currentPlan = isAnnual ? planData.annual : planData.monthly;
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -100,10 +128,7 @@ const Index = () => {
               E agora, formamos uma nova tendência: onde vender produtos físicos não demanda mais esforço, marketing ou gastos operacionais - mas sim, alguns cliques.
             </p>
             
-            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto animate-fade-in leading-relaxed">
-              A integração perfeita, logística sem preocupações e controle total das suas vendas em um único painel. 
-              <span className="text-primary font-semibold"> Vender nunca foi tão fácil.</span>
-            </p>
+            
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in">
               <Button variant="hero" size="xl" className="w-full sm:w-auto text-lg px-8 py-4 hover-scale shadow-glow">
@@ -113,25 +138,7 @@ const Index = () => {
               
             </div>
             
-            <div className="mt-8 animate-fade-in">
-              
-              
-              {/* Trust Indicators */}
-              <div className="flex flex-wrap justify-center items-center gap-6 mt-8 opacity-60">
-                <div className="flex items-center text-xs text-gray-400">
-                  <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                  1400+ produtos
-                </div>
-                <div className="flex items-center text-xs text-gray-400">
-                  <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                  Logística completa
-                </div>
-                <div className="flex items-center text-xs text-gray-400">
-                  <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                  Suporte 24/7
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -660,41 +667,24 @@ const Index = () => {
             
             {/* Toggle Buttons */}
             <div className="flex items-center justify-center gap-2 bg-gradient-card rounded-lg p-1 w-fit mx-auto border border-primary/20">
-              <button
-                onClick={() => setIsAnnual(false)}
-                className={`px-6 py-2 rounded-md text-sm font-medium transition-all ${
-                  !isAnnual 
-                    ? 'bg-primary text-primary-foreground shadow-sm' 
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
+              <button onClick={() => setIsAnnual(false)} className={`px-6 py-2 rounded-md text-sm font-medium transition-all ${!isAnnual ? 'bg-primary text-primary-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>
                 Mensal
               </button>
-              <button
-                onClick={() => setIsAnnual(true)}
-                className={`px-6 py-2 rounded-md text-sm font-medium transition-all ${
-                  isAnnual 
-                    ? 'bg-primary text-primary-foreground shadow-sm' 
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
+              <button onClick={() => setIsAnnual(true)} className={`px-6 py-2 rounded-md text-sm font-medium transition-all ${isAnnual ? 'bg-primary text-primary-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>
                 Anual
               </button>
             </div>
             
-            {isAnnual && (
-              <div className="mt-4">
+            {isAnnual && <div className="mt-4">
                 <Badge variant="secondary" className="bg-green-500/20 text-green-400 border-green-500/30">
                   💰 Economize até 39% no plano anual
                 </Badge>
-              </div>
-            )}
+              </div>}
           </div>
 
           <div className={`grid gap-8 max-w-6xl mx-auto ${isAnnual ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
             {/* Basic Plan - Only show in monthly */}
-            {!isAnnual && (
-              <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300">
+            {!isAnnual && <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300">
                 <CardHeader>
                   <div className="text-center">
                     <CardTitle className="text-2xl mb-2">Basic</CardTitle>
@@ -755,8 +745,7 @@ const Index = () => {
                     Começar Agora
                   </Button>
                 </CardContent>
-              </Card>
-            )}
+              </Card>}
 
             {/* Gold Plan */}
             <Card className="bg-gradient-primary border-primary shadow-elegant transform scale-105 relative">
@@ -769,16 +758,12 @@ const Index = () => {
                 <div className="text-center">
                   <CardTitle className="text-2xl mb-2 text-primary-foreground">Gold</CardTitle>
                   <div className="space-y-1">
-                    {isAnnual && currentPlan.gold.originalPrice && (
-                      <div className="text-lg text-primary-foreground/60 line-through">
+                    {isAnnual && currentPlan.gold.originalPrice && <div className="text-lg text-primary-foreground/60 line-through">
                         {currentPlan.gold.originalPrice}
-                      </div>
-                    )}
+                      </div>}
                     <div className="text-4xl font-bold text-primary-foreground">{currentPlan.gold.price}</div>
                     <div className="text-primary-foreground/80">{currentPlan.gold.period}</div>
-                    {isAnnual && (
-                      <div className="text-sm text-primary-foreground/80">equivalente a R$ 241/mês</div>
-                    )}
+                    {isAnnual && <div className="text-sm text-primary-foreground/80">equivalente a R$ 241/mês</div>}
                   </div>
                 </div>
               </CardHeader>
@@ -841,16 +826,12 @@ const Index = () => {
                 <div className="text-center">
                   <CardTitle className="text-2xl mb-2">Diamond</CardTitle>
                   <div className="space-y-1">
-                    {isAnnual && currentPlan.diamond.originalPrice && (
-                      <div className="text-lg text-muted-foreground line-through">
+                    {isAnnual && currentPlan.diamond.originalPrice && <div className="text-lg text-muted-foreground line-through">
                         {currentPlan.diamond.originalPrice}
-                      </div>
-                    )}
+                      </div>}
                     <div className="text-4xl font-bold text-primary">{currentPlan.diamond.price}</div>
                     <div className="text-muted-foreground">{currentPlan.diamond.period}</div>
-                    {isAnnual && (
-                      <div className="text-sm text-muted-foreground">equivalente a R$ 358/mês</div>
-                    )}
+                    {isAnnual && <div className="text-sm text-muted-foreground">equivalente a R$ 358/mês</div>}
                   </div>
                 </div>
               </CardHeader>
@@ -910,9 +891,7 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <p className="text-lg text-muted-foreground mb-6">
-              {isAnnual 
-                ? "Aproveite um desconto de até 39% no plano anual e economize ainda mais!" 
-                : "Comece com flexibilidade no plano mensal!"}
+              {isAnnual ? "Aproveite um desconto de até 39% no plano anual e economize ainda mais!" : "Comece com flexibilidade no plano mensal!"}
             </p>
             <Button variant="hero" size="xl">
               <Zap className="mr-2 h-5 w-5" />
