@@ -6,6 +6,7 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram } from "lucide-react";
 import heroImage from "@/assets/hero-soudrop.jpg";
+import pcImage from "@/assets/pc.png";
 import mlLogo from "@/assets/ml-logo.png";
 import shopeeLogo from "@/assets/shopee-logo.png";
 import magaluLogo from "@/assets/magalu-logo.png";
@@ -191,6 +192,37 @@ const Index = () => {
                   ))}
                 </CarouselContent>
               </Carousel>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <img 
+                src={pcImage} 
+                alt="Computador mostrando a plataforma Soudrop"
+                className="w-full h-auto rounded-2xl shadow-elegant"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Conheça a{" "}
+                <span className="bg-gradient-primary bg-clip-text text-transparent">Soudrop</span>
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                A Soudrop é a plataforma que revoluciona o e-commerce brasileiro. Criamos uma solução completa para sellers que querem vender mais, com menos esforço e maior eficiência.
+              </p>
+              <p className="text-lg text-muted-foreground mb-8">
+                Nossa tecnologia integra múltiplos marketplaces, oferece catálogo pronto e cuida de toda a logística, permitindo que você foque apenas no que realmente importa: vender.
+              </p>
+              <Button variant="hero" size="lg">
+                <ArrowRight className="mr-2 h-5 w-5" />
+                Saiba Mais
+              </Button>
             </div>
           </div>
         </div>
