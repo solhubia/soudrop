@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram } from "lucide-react";
 import heroImage from "@/assets/hero-soudrop.jpg";
@@ -9,11 +10,13 @@ import mlLogo from "@/assets/ml-logo.png";
 import shopeeLogo from "@/assets/shopee-logo.png";
 import magaluLogo from "@/assets/magalu-logo.png";
 import amazonLogo from "@/assets/amazon-logo.png";
-import blingLogo from "@/assets/bling-logo.webp";
+import blingLogo from "@/assets/bling-logo.png";
 import madeiraMadeiraLogo from "@/assets/madeiramadeira-logo.png";
+import tiktokLogo from "@/assets/tiktok-logo.png";
 const Index = () => {
   const mouseFollowerRef = useRef<HTMLDivElement>(null);
   const [isAnnual, setIsAnnual] = useState(true);
+  const [carouselApi, setCarouselApi] = useState<any>(null);
   const planData = {
     monthly: {
       basic: {
@@ -70,6 +73,17 @@ const Index = () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
+
+  // Auto-scroll carousel
+  useEffect(() => {
+    if (!carouselApi) return;
+
+    const interval = setInterval(() => {
+      carouselApi.scrollNext();
+    }, 3000); // Auto-scroll every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [carouselApi]);
   return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-background/90 backdrop-blur-lg border-b border-border z-50">
@@ -135,10 +149,42 @@ const Index = () => {
                 <Zap className="mr-3 h-6 w-6" />
                 Começar Agora
               </Button>
-              
             </div>
             
-            
+            {/* Logo Carousel */}
+            <div className="mt-16 animate-fade-in">
+              <p className="text-sm text-gray-400 text-center mb-8">Integrações disponíveis</p>
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                setApi={setCarouselApi}
+                className="w-full max-w-5xl mx-auto"
+              >
+                <CarouselContent className="flex items-center -ml-2 md:-ml-4">
+                  {[
+                    { src: amazonLogo, alt: "Amazon" },
+                    { src: blingLogo, alt: "Bling" },
+                    { src: madeiraMadeiraLogo, alt: "MadeiraMadeira" },
+                    { src: magaluLogo, alt: "Magalu" },
+                    { src: mlLogo, alt: "Mercado Livre" },
+                    { src: shopeeLogo, alt: "Shopee" },
+                    { src: tiktokLogo, alt: "TikTok" },
+                  ].map((logo, index) => (
+                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/4 lg:basis-1/6">
+                      <div className="flex items-center justify-center p-4">
+                        <img 
+                          src={logo.src} 
+                          alt={logo.alt}
+                          className="h-8 md:h-12 max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
+            </div>
           </div>
         </div>
       </section>
