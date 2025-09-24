@@ -343,7 +343,7 @@ const Index = () => {
                 <Badge variant="secondary" className="mb-4">Integração</Badge>
                 <h3 className="text-3xl font-bold mb-6">Integração com Marketplaces</h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Conecte sua loja aos maiores marketplaces do Brasil de forma rápida e fácil. Com apenas alguns cliques, seus produtos são sincronizados, sem dores de cabeça.
+                  Conecte suas lojas na Soudrop de forma rápida e fácil. Com apenas alguns cliques, seus produtos são sincronizados, sem dores de cabeça.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center">
