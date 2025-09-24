@@ -762,9 +762,9 @@ const Index = () => {
               </div>}
           </div>
 
-          <div className={`grid gap-8 max-w-6xl mx-auto ${isAnnual ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
-            {/* Basic Plan - Only show in monthly */}
-            {!isAnnual && <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300">
+          <div className="grid gap-8 max-w-6xl mx-auto md:grid-cols-3">
+            {/* Basic Plan */}
+            <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300">
                 <CardHeader>
                   <div className="text-center">
                     <CardTitle className="text-2xl mb-2">Basic</CardTitle>
@@ -810,7 +810,7 @@ const Index = () => {
                      </li>
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Mentoria semanal</span>
+                        <span className="text-sm">Lives semanais</span>
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
@@ -825,7 +825,7 @@ const Index = () => {
                     Começar Agora
                   </Button>
                 </CardContent>
-              </Card>}
+              </Card>
 
             {/* Gold Plan */}
             <Card className="bg-gradient-primary border-primary shadow-elegant transform scale-105 relative">
@@ -887,11 +887,15 @@ const Index = () => {
                    </li>
                    <li className="flex items-center">
                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Mentoria semanal</span>
-                   </li>
-                   <li className="flex items-center">
-                     <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
-                     <span className="text-sm text-primary-foreground/50">Importação direta da China</span>
+                      <span className="text-sm text-primary-foreground">Lives semanais</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
+                      <span className="text-sm text-primary-foreground">Mentoria em grupo quinzenal</span>
+                    </li>
+                    <li className="flex items-center">
+                      <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
+                      <span className="text-sm text-primary-foreground/50">Importação direta da China</span>
                    </li>
                  </ul>
                 <Button variant="secondary" size="lg" className="w-full mt-6">
@@ -959,7 +963,15 @@ const Index = () => {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                      <span className="text-sm">Mentoria semanal</span>
+                       <span className="text-sm">Lives semanais</span>
+                     </li>
+                     <li className="flex items-center">
+                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                       <span className="text-sm">Mentoria em grupo quinzenal</span>
+                     </li>
+                     <li className="flex items-center">
+                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                       <span className="text-sm">Possibilidade de SKU próprio</span>
                     </li>
                  </ul>
                 <Button variant="glow" size="lg" className="w-full mt-6">
