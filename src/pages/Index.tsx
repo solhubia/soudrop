@@ -79,8 +79,12 @@ const Index = () => {
     if (!carouselApi) return;
 
     const interval = setInterval(() => {
-      carouselApi.scrollNext();
-    }, 3000); // Auto-scroll every 3 seconds
+      if (carouselApi.canScrollNext()) {
+        carouselApi.scrollNext();
+      } else {
+        carouselApi.scrollTo(0);
+      }
+    }, 2500); // Auto-scroll every 2.5 seconds
 
     return () => clearInterval(interval);
   }, [carouselApi]);
@@ -164,21 +168,24 @@ const Index = () => {
               >
                 <CarouselContent className="flex items-center -ml-2 md:-ml-4">
                   {[
-                    { src: amazonLogo, alt: "Amazon" },
-                    { src: blingLogo, alt: "Bling" },
-                    { src: madeiraMadeiraLogo, alt: "MadeiraMadeira" },
-                    { src: magaluLogo, alt: "Magalu" },
-                    { src: mlLogo, alt: "Mercado Livre" },
-                    { src: shopeeLogo, alt: "Shopee" },
-                    { src: tiktokLogo, alt: "TikTok" },
+                    { src: amazonLogo, alt: "Amazon", name: "Amazon" },
+                    { src: blingLogo, alt: "Bling", name: "Bling" },
+                    { src: madeiraMadeiraLogo, alt: "MadeiraMadeira", name: "MadeiraMadeira" },
+                    { src: magaluLogo, alt: "Magalu", name: "Magalu" },
+                    { src: mlLogo, alt: "Mercado Livre", name: "Mercado Livre" },
+                    { src: shopeeLogo, alt: "Shopee", name: "Shopee" },
+                    { src: tiktokLogo, alt: "TikTok", name: "TikTok" },
                   ].map((logo, index) => (
-                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/4 lg:basis-1/6">
-                      <div className="flex items-center justify-center p-4">
-                        <img 
-                          src={logo.src} 
-                          alt={logo.alt}
-                          className="h-8 md:h-12 max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
-                        />
+                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                      <div className="flex flex-col items-center justify-center p-4 h-24">
+                        <div className="h-12 w-20 flex items-center justify-center mb-2">
+                          <img 
+                            src={logo.src} 
+                            alt={logo.alt}
+                            className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          />
+                        </div>
+                        <span className="text-xs text-gray-400 text-center font-medium">{logo.name}</span>
                       </div>
                     </CarouselItem>
                   ))}
