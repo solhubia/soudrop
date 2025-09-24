@@ -124,7 +124,7 @@ const Index = () => {
               {" "}de sellers
             </h1>
             
-            <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed animate-fade-in font-medium">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in font-medium">
               E agora, formamos uma nova tendência: onde vender produtos físicos não demanda mais esforço, marketing ou gastos operacionais - mas sim, alguns cliques.
             </p>
             
