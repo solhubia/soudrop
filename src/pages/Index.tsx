@@ -182,7 +182,7 @@ const Index = () => {
                           <img 
                             src={logo.src} 
                             alt={logo.alt}
-                            className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                            className="max-h-full max-w-full object-contain opacity-60 filter grayscale"
                           />
                         </div>
                         <span className="text-xs text-gray-400 text-center font-medium">{logo.name}</span>
