@@ -696,12 +696,13 @@ const Index = () => {
               </p>
             </div>
             
-            <p className="text-lg text-muted-foreground text-center mb-8">
-              Funciona em 3 passos práticos
-            </p>
-            
             {/* Process Flow */}
             <div className="bg-card/50 border border-border rounded-2xl p-8 md:p-12">
+              <div className="text-center mb-12">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                  Funciona em 3 passos práticos
+                </h3>
+              </div>
               {/* Mobile Layout - Vertical */}
               <div className="md:hidden space-y-8">
                 {/* Step 1 */}
