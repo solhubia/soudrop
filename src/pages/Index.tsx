@@ -682,68 +682,137 @@ const Index = () => {
       </section>
 
       {/* Unique Differential Section */}
-      <section className="py-20 bg-gradient-to-br from-green-400 via-green-500 to-green-600 relative overflow-hidden">
-        {/* Background decorative elements */}
+      <section className="py-20 bg-gradient-to-br from-primary via-primary-glow to-primary relative overflow-hidden">
+        {/* Animated background elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-          <div className="absolute bottom-10 right-10 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/20 rounded-full blur-lg"></div>
+          <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-48 h-48 bg-white/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/20 rounded-full blur-lg animate-pulse delay-500"></div>
+          <div className="absolute top-1/4 right-1/3 w-24 h-24 bg-white/8 rounded-full blur-lg animate-pulse delay-700"></div>
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6 backdrop-blur-sm">
-                <Globe className="h-10 w-10 text-white" />
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-white/20 rounded-full mb-8 backdrop-blur-sm shadow-glow animate-pulse">
+                <Globe className="h-12 w-12 text-white" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                DIFERENCIAL ÚNICO
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                NOSSO DIFERENCIAL ÚNICO
               </h2>
-              <div className="w-24 h-1 bg-white/50 mx-auto rounded-full"></div>
+              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                Simplicidade absoluta para importar da China sem complicações
+              </p>
+              <div className="w-32 h-1 bg-white/50 mx-auto rounded-full mt-6"></div>
             </div>
             
-            {/* Main content */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
-              <div className="grid md:grid-cols-3 gap-8 mb-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Package className="h-8 w-8 text-white" />
+            {/* Main Flow */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-16 border border-white/20 shadow-2xl">
+              {/* Process Flow */}
+              <div className="relative">
+                {/* Step 1 */}
+                <div className="grid md:grid-cols-3 gap-8 items-center mb-12">
+                  <div className="text-center md:text-left">
+                    <div className="relative inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-glow mb-6 hover-scale">
+                      <Package className="h-10 w-10 text-primary" />
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-3">Você Escolhe</h3>
+                    <p className="text-white/90 text-lg">Seleciona qualquer produto do nosso catálogo com +1400 itens prontos</p>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Escolha o Produto</h3>
-                  <p className="text-white/90 text-sm">Selecione qualquer item do nosso catálogo</p>
+                  
+                  {/* Arrow */}
+                  <div className="hidden md:flex justify-center">
+                    <div className="flex items-center">
+                      <div className="w-16 h-1 bg-white/50 rounded-full"></div>
+                      <ArrowRight className="h-8 w-8 text-white/70 mx-2 animate-pulse" />
+                      <div className="w-16 h-1 bg-white/50 rounded-full"></div>
+                    </div>
+                  </div>
+
+                  <div className="text-center md:text-right">
+                    <div className="relative inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-glow mb-6 hover-scale">
+                      <DollarSign className="h-10 w-10 text-primary" />
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-3">Mostramos o Preço</h3>
+                    <p className="text-white/90 text-lg">Te passamos o custo real na China + valor final no Brasil</p>
+                  </div>
                 </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <DollarSign className="h-8 w-8 text-white" />
+
+                {/* Center Arrow Down */}
+                <div className="flex justify-center mb-12">
+                  <div className="flex flex-col items-center">
+                    <div className="w-1 h-12 bg-white/50 rounded-full"></div>
+                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mb-2">
+                      <ArrowRight className="h-5 w-5 text-white rotate-90 animate-pulse" />
+                    </div>
+                    <div className="w-1 h-12 bg-white/50 rounded-full"></div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Preço Transparente</h3>
-                  <p className="text-white/90 text-sm">Custo da China + valor final no Brasil</p>
                 </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Truck className="h-8 w-8 text-white" />
+
+                {/* Step 3 */}
+                <div className="grid md:grid-cols-3 gap-8 items-center">
+                  <div className="text-center md:text-left">
+                    <div className="relative inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-glow mb-6 hover-scale">
+                      <CheckCircle className="h-10 w-10 text-primary" />
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-3">Você Decide</h3>
+                    <p className="text-white/90 text-lg">Escolhe se quer importar - sem quantidade mínima</p>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Nós Importamos</h3>
-                  <p className="text-white/90 text-sm">Fazemos todo o processo de importação</p>
+                  
+                  {/* Arrow */}
+                  <div className="hidden md:flex justify-center">
+                    <div className="flex items-center">
+                      <div className="w-16 h-1 bg-white/50 rounded-full"></div>
+                      <ArrowRight className="h-8 w-8 text-white/70 mx-2 animate-pulse" />
+                      <div className="w-16 h-1 bg-white/50 rounded-full"></div>
+                    </div>
+                  </div>
+
+                  <div className="text-center md:text-right">
+                    <div className="relative inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-glow mb-6 hover-scale">
+                      <Truck className="h-10 w-10 text-primary" />
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-3">Nós Fazemos Tudo</h3>
+                    <p className="text-white/90 text-lg">Importamos, estocamos e enviamos direto para seus clientes</p>
+                  </div>
                 </div>
               </div>
               
-              <div className="text-center">
-                <p className="text-xl md:text-2xl text-white leading-relaxed mb-6">
-                  Você pode importar produtos da China conosco, <span className="font-bold">mesmo sem saber importar</span>. 
-                  Basta escolher um produto, nós te passamos o preço de custo na China e a quanto ele chegará no Brasil e pronto, fazemos o pedido.
-                </p>
-                
-                <div className="bg-white/20 rounded-2xl p-6 backdrop-blur-sm border border-white/30">
-                  <p className="text-lg font-semibold text-white mb-2">
-                    🎯 Não tem quantidade mínima
-                  </p>
-                  <p className="text-white/90">
-                    Você pode pedir <span className="font-bold">2 unidades ou 2 mil</span> - a escolha é sua!
-                  </p>
+              {/* Bottom highlight */}
+              <div className="mt-16 pt-8 border-t border-white/20">
+                <div className="text-center">
+                  <div className="bg-gradient-to-r from-green-400 to-green-600 rounded-2xl p-8 shadow-glow">
+                    <div className="flex items-center justify-center mb-4">
+                      <Zap className="h-8 w-8 text-white mr-3" />
+                      <h3 className="text-2xl font-bold text-white">Resultado:</h3>
+                    </div>
+                    <p className="text-xl text-white mb-4">
+                      <span className="font-bold">Você vende produtos importados sem saber importar!</span>
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+                      <div className="flex items-center text-white">
+                        <CheckCircle className="h-5 w-5 mr-3 text-green-200" />
+                        <span>Sem quantidade mínima</span>
+                      </div>
+                      <div className="flex items-center text-white">
+                        <CheckCircle className="h-5 w-5 mr-3 text-green-200" />
+                        <span>Preços transparentes</span>
+                      </div>
+                      <div className="flex items-center text-white">
+                        <CheckCircle className="h-5 w-5 mr-3 text-green-200" />
+                        <span>Sem burocracia</span>
+                      </div>
+                      <div className="flex items-center text-white">
+                        <CheckCircle className="h-5 w-5 mr-3 text-green-200" />
+                        <span>Logística completa</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
