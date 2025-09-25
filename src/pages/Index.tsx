@@ -202,7 +202,7 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-1 lg:order-1">
               <video 
                 src="https://soudropbrasil.com.br/wp-content/uploads/2025/07/Soudrop-final-2.mp4"
                 controls
@@ -212,7 +212,7 @@ const Index = () => {
                 Seu navegador não suporta vídeos.
               </video>
             </div>
-            <div className="order-1 lg:order-2">
+            <div className="order-2 lg:order-2">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Conheça a{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">Soudrop</span>
