@@ -712,7 +712,7 @@ const Index = () => {
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Você Escolhe</h3>
-                  <p className="text-muted-foreground">você escolher qualquer produto que queria trazer da china</p>
+                  <p className="text-muted-foreground">você escolhe qualquer produto que queira importar</p>
                 </div>
                 
                 {/* Vertical Animated Line 1 */}
@@ -759,7 +759,7 @@ const Index = () => {
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Você Escolhe</h3>
-                  <p className="text-muted-foreground">você escolher qualquer produto que queria trazer da china</p>
+                  <p className="text-muted-foreground">você escolhe qualquer produto que queira importar</p>
                 </div>
                 
                 {/* Horizontal Animated Connecting Line 1 */}
