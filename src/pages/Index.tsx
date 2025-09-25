@@ -112,11 +112,15 @@ const Index = () => {
               </a>
             </div>
             <div className="flex gap-3">
-              <Button variant="outline" size="lg">
-                Entrar
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://app2.soudrop.com.br/login" target="_blank" rel="noopener noreferrer">
+                  Entrar
+                </a>
               </Button>
-              <Button variant="hero" size="lg">
-                Começar
+              <Button variant="hero" size="lg" asChild>
+                <a href="#planos">
+                  Começar
+                </a>
               </Button>
             </div>
           </div>
@@ -153,9 +157,11 @@ const Index = () => {
             
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in">
-              <Button variant="hero" size="xl" className="w-full sm:w-auto text-lg px-8 py-4 hover-scale shadow-glow">
-                <Zap className="mr-3 h-6 w-6" />
-                Começar Agora
+              <Button variant="hero" size="xl" className="w-full sm:w-auto text-lg px-8 py-4 hover-scale shadow-glow" asChild>
+                <a href="#planos">
+                  <Zap className="mr-3 h-6 w-6" />
+                  Começar Agora
+                </a>
               </Button>
             </div>
             
@@ -224,9 +230,11 @@ const Index = () => {
               <p className="text-lg text-muted-foreground mb-8">
                 Nossa tecnologia integra múltiplos marketplaces, oferece catálogo pronto e cuida de toda a logística, permitindo que você foque apenas no que realmente importa: vender.
               </p>
-              <Button variant="hero" size="lg">
-                <ArrowRight className="mr-2 h-5 w-5" />
-                Saiba Mais
+              <Button variant="hero" size="lg" asChild>
+                <a href="#features">
+                  <ArrowRight className="mr-2 h-5 w-5" />
+                  Saiba Mais
+                </a>
               </Button>
             </div>
           </div>
@@ -331,7 +339,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="funcionalidades" className="py-20">
+      <section id="features" className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -871,6 +879,16 @@ const Index = () => {
               <CarouselNext className="md:-right-12 -right-2 md:top-1/2 top-full md:translate-y-0 translate-y-4" />
             </Carousel>
           </div>
+          
+          {/* Call to action button after cases */}
+          <div className="text-center mt-12">
+            <Button variant="hero" size="xl" asChild>
+              <a href="#planos">
+                <Users className="mr-2 h-5 w-5" />
+                Quero fazer parte
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -1393,13 +1411,6 @@ const Index = () => {
             <p className="text-lg text-muted-foreground mb-6">
               {isAnnual ? "Aproveite um desconto de até 39% no plano anual e economize ainda mais!" : "Comece com flexibilidade no plano mensal!"}
             </p>
-            <Button variant="hero" size="xl">
-              <Zap className="mr-2 h-5 w-5" />
-              Começar Agora
-            </Button>
-            <p className="text-sm text-muted-foreground mt-4">
-              Sem compromisso • Sem necessidade de cartão de crédito
-            </p>
           </div>
         </div>
       </section>
@@ -1455,10 +1466,18 @@ const Index = () => {
             </div>
             
             <div className="mt-12 p-8 bg-gradient-card border border-primary/20 rounded-2xl">
-              <p className="text-lg text-center">
+              <p className="text-lg text-center mb-6">
                 <strong className="text-primary">Seu sucesso é nossa prioridade.</strong> Comece hoje mesmo com a tranquilidade 
                 de saber que seu investimento está completamente protegido.
               </p>
+              <div className="text-center">
+                <Button variant="hero" size="lg" asChild>
+                  <a href="#planos">
+                    <Shield className="mr-2 h-5 w-5" />
+                    Quero começar com segurança
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -1524,7 +1543,7 @@ const Index = () => {
               Soudrop
             </div>
             
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-2">
+            <a href="https://www.instagram.com/soudropbrasil" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-2">
               <Instagram className="h-5 w-5" />
               <span>Instagram</span>
             </a>
