@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useRef, useState } from "react";
-import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram, Search, CreditCard, Settings, CheckSquare, Lock } from "lucide-react";
+import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram, Search, CreditCard, Settings, CheckSquare, Lock, Shield, Clock } from "lucide-react";
 import MarketplaceMarquee from "@/components/MarketplaceMarquee";
 import heroImage from "@/assets/hero-soudrop.jpg";
 import pcImage from "@/assets/pc.png";
@@ -1392,6 +1392,66 @@ const Index = () => {
             <p className="text-sm text-muted-foreground mt-4">
               Sem compromisso • Sem necessidade de cartão de crédito
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Guarantee Section */}
+      <section className="py-20 bg-gradient-to-r from-primary/10 to-primary-glow/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center justify-center p-3 bg-primary/20 rounded-full mb-6">
+              <Shield className="h-8 w-8 text-primary" />
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+              Garantia Incondicional de 7 Dias
+            </h2>
+            
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              Acreditamos tanto na qualidade dos nossos produtos e serviços que oferecemos uma 
+              <strong className="text-primary"> garantia total de 7 dias</strong>. Se por qualquer motivo você não estiver 
+              completamente satisfeito, devolvemos 100% do seu investimento, sem perguntas.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">7 Dias Completos</h3>
+                <p className="text-muted-foreground">
+                  Uma semana inteira para testar nossos produtos e serviços
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CreditCard className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Reembolso Total</h3>
+                <p className="text-muted-foreground">
+                  100% do valor pago devolvido diretamente na sua conta
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageCircle className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Sem Perguntas</h3>
+                <p className="text-muted-foreground">
+                  Não precisa explicar o motivo, seu reembolso é garantido
+                </p>
+              </div>
+            </div>
+            
+            <div className="mt-12 p-8 bg-gradient-card border border-primary/20 rounded-2xl">
+              <p className="text-lg text-center">
+                <strong className="text-primary">Seu sucesso é nossa prioridade.</strong> Comece hoje mesmo com a tranquilidade 
+                de saber que seu investimento está completamente protegido.
+              </p>
+            </div>
           </div>
         </div>
       </section>
