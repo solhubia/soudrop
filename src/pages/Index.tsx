@@ -1081,14 +1081,14 @@ const Index = () => {
             
             <div className="bg-gradient-card border border-primary/20 rounded-2xl p-8 md:p-12 shadow-elegant">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="flex justify-center lg:justify-start">
+                <div className="flex justify-center">
                   <div className="relative">
                     <div className="w-48 h-48 bg-primary/20 rounded-full flex items-center justify-center relative">
                       <div className="w-32 h-32 bg-primary/30 rounded-full flex items-center justify-center relative">
                         <div className="w-20 h-20 bg-primary/50 rounded-full flex items-center justify-center">
-                        <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                          <Lock className="h-8 w-8 text-primary-foreground" />
-                        </div>
+                          <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                            <Lock className="h-8 w-8 text-primary-foreground" />
+                          </div>
                         </div>
                       </div>
                       {/* Animated rings */}
