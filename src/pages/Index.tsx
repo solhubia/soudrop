@@ -1064,6 +1064,78 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Security Section */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-6">
+              <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30 text-sm px-4 py-2">
+                🔒 SEGURANÇA E CONFIANÇA
+              </Badge>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+              Seus dados e vendas sempre{" "}
+              <span className="bg-gradient-primary bg-clip-text text-transparent">protegidos</span>
+            </h2>
+            
+            <div className="bg-gradient-card border border-primary/20 rounded-2xl p-8 md:p-12 shadow-elegant">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="flex justify-center lg:justify-start">
+                  <div className="relative">
+                    <div className="w-48 h-48 bg-primary/20 rounded-full flex items-center justify-center relative">
+                      <div className="w-32 h-32 bg-primary/30 rounded-full flex items-center justify-center relative">
+                        <div className="w-20 h-20 bg-primary/50 rounded-full flex items-center justify-center">
+                          <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                            <CheckCircle className="h-8 w-8 text-primary-foreground" />
+                          </div>
+                        </div>
+                      </div>
+                      {/* Animated rings */}
+                      <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping"></div>
+                      <div className="absolute inset-4 rounded-full border-2 border-primary/50 animate-ping animation-delay-300"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div>
+                  <h3 className="text-3xl font-bold mb-6">
+                    Segurança. Confiabilidade. Transparência.
+                  </h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Na Soudrop, seus dados comerciais são protegidos com os mais altos padrões de segurança. 
+                    Utilizamos criptografia de ponta e protocolos seguros para todas as transações.
+                  </p>
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1" />
+                      <div>
+                        <div className="font-semibold text-foreground">Dados Criptografados</div>
+                        <div className="text-sm text-muted-foreground">Todas as informações são protegidas com criptografia AES-256</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1" />
+                      <div>
+                        <div className="font-semibold text-foreground">Integrações Seguras</div>
+                        <div className="text-sm text-muted-foreground">Conexões certificadas com todos os marketplaces parceiros</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1" />
+                      <div>
+                        <div className="font-semibold text-foreground">Monitoramento 24/7</div>
+                        <div className="text-sm text-muted-foreground">Sistema de segurança ativo com alertas em tempo real</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section id="planos" className="py-20">
         <div className="container mx-auto px-6">
