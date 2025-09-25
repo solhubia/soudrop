@@ -278,7 +278,6 @@ const Index = () => {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.2}>
-            <ScrollReveal direction="up" delay={0.2}>
               <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
                 <CardHeader>
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
@@ -426,6 +425,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Feature 2 */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -1520,15 +1520,18 @@ const Index = () => {
       {/* FAQ Section */}
       <section id="faq" className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Perguntas{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Frequentes</span>
-            </h2>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Perguntas{" "}
+                <span className="bg-gradient-primary bg-clip-text text-transparent">Frequentes</span>
+              </h2>
+            </div>
+          </ScrollReveal>
 
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
+          <ScrollReveal direction="up" delay={0.2}>
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="item-1" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
                 <AccordionTrigger className="text-left hover:no-underline">
                   <span className="text-lg font-semibold">Como funciona a integração com marketplaces?</span>
@@ -1565,12 +1568,13 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-card border-t border-border py-12">
+      <ScrollReveal direction="up">
+        <footer className="bg-card border-t border-border py-12">
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center text-center space-y-6">
             <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
@@ -1588,6 +1592,8 @@ const Index = () => {
           </div>
         </div>
       </ScrollReveal>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
