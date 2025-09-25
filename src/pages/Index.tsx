@@ -752,7 +752,7 @@ const Index = () => {
                     <Zap className="h-5 w-5 mr-2" />
                     Resultado: Você vende sem saber importar!
                   </h3>
-                  <div className="grid md:grid-cols-2 gap-6 max-w-md mx-auto">
+                  <div className="grid md:grid-cols-2 gap-6 max-w-md mx-auto mb-6">
                     <div className="flex items-center justify-center">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
                       <span className="text-foreground">Sem quantidade mínima</span>
@@ -761,6 +761,14 @@ const Index = () => {
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
                       <span className="text-foreground">Preços transparentes</span>
                     </div>
+                  </div>
+                  
+                  {/* Diamond Plan Notice */}
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 border border-amber-500/30 rounded-full">
+                    <div className="w-3 h-3 bg-amber-500 rounded-full mr-2"></div>
+                    <span className="text-sm font-medium text-amber-600 dark:text-amber-400">
+                      Disponível no Plano Diamond
+                    </span>
                   </div>
                 </div>
               </div>
