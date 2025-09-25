@@ -12,7 +12,7 @@ import dashboardPreview from "@/assets/dashboard-preview.png";
 import mlLogo from "@/assets/ml-logo.png";
 import shopeeLogo from "@/assets/shopee-logo.png";
 import magaluLogo from "@/assets/magalu-logo.png";
-import amazonLogo from "@/assets/amazon-logo.png";
+import amazonLogo from "@/assets/tiktok-shop-logo.png";
 import blingLogo from "@/assets/bling-logo.png";
 import newLogo from "@/assets/new-logo-v2.png";
 import madeiraMadeiraLogo from "@/assets/madeiramadeira-logo.png";
@@ -377,8 +377,8 @@ const Index = () => {
                       <div className="text-sm">Shopee</div>
                     </div>
                     <div className="bg-primary/10 p-4 rounded-lg">
-                      <img src={amazonLogo} alt="Amazon" className="h-8 w-8 mx-auto mb-2 object-contain" />
-                      <div className="text-sm">Amazon</div>
+                      <img src={amazonLogo} alt="TikTok Shop" className="h-8 w-8 mx-auto mb-2 object-contain" />
+                      <div className="text-sm">TikTok Shop</div>
                     </div>
                     <div className="bg-primary/10 p-4 rounded-lg">
                       <img src={mlLogo} alt="Mercado Livre" className="h-8 w-8 mx-auto mb-2 object-contain" />
