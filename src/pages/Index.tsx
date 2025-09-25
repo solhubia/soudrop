@@ -1213,13 +1213,13 @@ const Index = () => {
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
                         <span className="text-sm">Lives semanais</span>
                      </li>
-                      <li className="flex items-center">
-                        <X className="h-5 w-5 text-destructive mr-3" />
-                        <span className="text-sm text-muted-foreground">Contabilidade</span>
-                      </li>
-                      <li className="flex items-center">
-                        <X className="h-5 w-5 text-destructive mr-3" />
-                        <span className="text-sm text-muted-foreground">Possibilidade de SKU próprio</span>
+                     <li className="flex items-center">
+                       <X className="h-5 w-5 text-destructive mr-3" />
+                       <span className="text-sm text-muted-foreground">Contabilidade</span>
+                     </li>
+                     <li className="flex items-center">
+                       <X className="h-5 w-5 text-destructive mr-3" />
+                       <span className="text-sm text-muted-foreground">Possibilidade de SKU próprio</span>
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
@@ -1278,17 +1278,13 @@ const Index = () => {
                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
                      <span className="text-sm text-primary-foreground">Publicação de anúncios em massa</span>
                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                      <span className="text-sm text-primary-foreground">Contabilidade</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                      <span className="text-sm text-primary-foreground">Suporte completo</span>
-                    </li>
-                    <li className="flex items-center">
-                      <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
-                      <span className="text-sm text-primary-foreground/50">Possibilidade de SKU próprio</span>
+                   <li className="flex items-center">
+                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
+                     <span className="text-sm text-primary-foreground">Contabilidade</span>
+                   </li>
+                   <li className="flex items-center">
+                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
+                     <span className="text-sm text-primary-foreground">Suporte completo</span>
                    </li>
                    <li className="flex items-center">
                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
@@ -1301,6 +1297,10 @@ const Index = () => {
                     <li className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
                       <span className="text-sm text-primary-foreground">Mentoria em grupo quinzenal</span>
+                    </li>
+                    <li className="flex items-center">
+                      <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
+                      <span className="text-sm text-primary-foreground/50">Possibilidade de SKU próprio</span>
                     </li>
                     <li className="flex items-center">
                       <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
