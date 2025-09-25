@@ -904,7 +904,7 @@ const Index = () => {
                     <Search className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 1</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 1</h3>
                   <p className="text-muted-foreground font-medium">Escolha o produto</p>
                   <p className="text-muted-foreground text-sm mt-1">Você escolhe o produto que deseja importar.</p>
                 </div>
@@ -922,7 +922,7 @@ const Index = () => {
                     <CreditCard className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 2</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 2</h3>
                   <p className="text-muted-foreground font-medium">Preço transparente</p>
                   <p className="text-muted-foreground text-sm mt-1">Mostramos o custo real até chegar no Brasil.</p>
                 </div>
@@ -940,7 +940,7 @@ const Index = () => {
                     <Settings className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 3</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 3</h3>
                   <p className="text-muted-foreground font-medium">Importação sem dor de cabeça</p>
                   <p className="text-muted-foreground text-sm mt-1">Nós cuidamos de todo o processo.</p>
                 </div>
@@ -958,7 +958,7 @@ const Index = () => {
                     <CheckSquare className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 4</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 4</h3>
                   <p className="text-muted-foreground font-medium">Você recebe pronto pra vender</p>
                   <p className="text-muted-foreground text-sm mt-1">Chega direto no seu estoque, sem burocracia.</p>
                 </div>
@@ -972,7 +972,7 @@ const Index = () => {
                     <Search className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 1</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 1</h3>
                   <p className="text-muted-foreground font-medium">Escolha o produto</p>
                   <p className="text-muted-foreground text-sm">Você escolhe o produto que deseja importar.</p>
                 </div>
@@ -990,7 +990,7 @@ const Index = () => {
                     <CreditCard className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 2</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 2</h3>
                   <p className="text-muted-foreground font-medium">Preço transparente</p>
                   <p className="text-muted-foreground text-sm">Mostramos o custo real até chegar no Brasil.</p>
                 </div>
@@ -1008,7 +1008,7 @@ const Index = () => {
                     <Settings className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 3</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 3</h3>
                   <p className="text-muted-foreground font-medium">Importação sem dor de cabeça</p>
                   <p className="text-muted-foreground text-sm">Nós cuidamos de todo o processo.</p>
                 </div>
@@ -1026,7 +1026,7 @@ const Index = () => {
                     <CheckSquare className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 4</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 4</h3>
                   <p className="text-muted-foreground font-medium">Você recebe pronto pra vender</p>
                   <p className="text-muted-foreground text-sm">Chega direto no seu estoque, sem burocracia.</p>
                 </div>
