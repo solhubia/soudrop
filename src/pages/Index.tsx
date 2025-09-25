@@ -389,7 +389,7 @@ const Index = () => {
                       <div className="text-sm">MadeiraMadeira</div>
                     </div>
                     <div className="bg-primary/10 p-4 rounded-lg">
-                      <img src={newLogo} alt="Bling" className="h-12 w-12 mx-auto mb-2 object-contain" />
+                      <img src={newLogo} alt="Bling" className="h-24 w-24 mx-auto mb-2 object-contain" />
                       <div className="text-sm">Bling</div>
                     </div>
                   </div>
