@@ -252,54 +252,63 @@ const Index = () => {
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Tornamos seu caminho mais fácil</span>
-            </h2>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="bg-gradient-primary bg-clip-text text-transparent">Tornamos seu caminho mais fácil</span>
+              </h2>
+            </div>
+          </ScrollReveal>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                  <ShoppingCart className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle className="text-xl">Múltiplos Marketplaces</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Integre rapidamente suas lojas com Magalu, Shopee, Mercado Livre, Bling e mais — tudo em um único painel.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <ScrollReveal direction="up" delay={0.1}>
+              <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                    <ShoppingCart className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl">Múltiplos Marketplaces</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">
+                    Integre rapidamente suas lojas com Magalu, Shopee, Mercado Livre, Bling e mais — tudo em um único painel.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                  <Package className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle className="text-xl">Catálogo Pronto</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Acesse mais de 1400 produtos prontos para venda, com anúncios, imagens, títulos e descrições configurados automaticamente.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <ScrollReveal direction="up" delay={0.2}>
+            <ScrollReveal direction="up" delay={0.2}>
+              <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                    <Package className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl">Catálogo Pronto</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">
+                    Acesse mais de 1400 produtos prontos para venda, com anúncios, imagens, títulos e descrições configurados automaticamente.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                  <Truck className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle className="text-xl">Logística Eficiente</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Estocamos, embalamos e enviamos diretamente para seus clientes. Você só se preocupa com as vendas.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <ScrollReveal direction="up" delay={0.3}>
+              <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                    <Truck className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl">Logística Eficiente</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">
+                    Estocamos, embalamos e enviamos diretamente para seus clientes. Você só se preocupa com as vendas.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
             <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
               <CardHeader>
@@ -315,19 +324,21 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                  <Globe className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle className="text-xl">Preços da China</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Com nossa base em Hong Kong, importe produtos com os melhores preços do mercado, sem margem de lucro da nossa parte.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <ScrollReveal direction="up" delay={0.5}>
+              <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                    <Globe className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl">Preços da China</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">
+                    Com nossa base em Hong Kong, importe produtos com os melhores preços do mercado, sem margem de lucro da nossa parte.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
             <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
               <CardHeader>
@@ -349,18 +360,21 @@ const Index = () => {
       {/* Features Section */}
       <section id="features" className="py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Tudo que você precisa para{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">vender com eficiência</span>
-            </h2>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Tudo que você precisa para{" "}
+                <span className="bg-gradient-primary bg-clip-text text-transparent">vender com eficiência</span>
+              </h2>
+            </div>
+          </ScrollReveal>
 
           <div className="space-y-20">
             {/* Feature 1 */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <Badge variant="secondary" className="mb-4">Integração</Badge>
+            <ScrollReveal direction="left">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <Badge variant="secondary" className="mb-4">Integração</Badge>
                 <h3 className="text-3xl font-bold mb-6">Integração com Marketplaces</h3>
                 <p className="text-lg text-muted-foreground mb-6">
                   Conecte suas lojas na Soudrop de forma rápida e fácil. Com apenas alguns cliques, seus produtos são sincronizados, sem dores de cabeça.
@@ -740,15 +754,18 @@ const Index = () => {
       {/* Video Cases Section */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Quem faz parte, aprova</span>
-            </h2>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="bg-gradient-primary bg-clip-text text-transparent">Quem faz parte, aprova</span>
+              </h2>
+            </div>
+          </ScrollReveal>
 
-          <div className="relative">
-            <Carousel
-              opts={{
+          <ScrollReveal direction="fade">
+            <div className="relative">
+              <Carousel
+                opts={{
                 align: "start",
                 loop: true,
               }}
@@ -885,10 +902,12 @@ const Index = () => {
               {/* Navigation arrows - responsive positioning */}
               <CarouselPrevious className="md:-left-12 -left-2 md:top-1/2 top-full md:translate-y-0 translate-y-4" />
               <CarouselNext className="md:-right-12 -right-2 md:top-1/2 top-full md:translate-y-0 translate-y-4" />
-            </Carousel>
-          </div>
+              </Carousel>
+            </div>
+          </ScrollReveal>
           
           {/* Call to action button after cases */}
+          <ScrollReveal direction="up" delay={0.2}>
           <div className="text-center mt-12">
             <Button variant="hero" size="xl" asChild>
               <a href="#planos">
@@ -897,6 +916,7 @@ const Index = () => {
               </a>
             </Button>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -1256,8 +1276,10 @@ const Index = () => {
                   </Button>
                 </CardContent>
               </Card>
+            </ScrollReveal>
 
             {/* Gold Plan */}
+            <ScrollReveal direction="up" delay={0.2}>
             <Card className="bg-gradient-primary border-primary shadow-elegant transform scale-105 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <Badge variant="secondary" className="bg-black text-green-500">
@@ -1335,10 +1357,12 @@ const Index = () => {
                 <Button variant="secondary" size="lg" className="w-full mt-6">
                   Começar Agora
                 </Button>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
             {/* Diamond Plan */}
+            <ScrollReveal direction="up" delay={0.3}>
             <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300">
               <CardHeader>
                 <div className="text-center">
@@ -1411,8 +1435,9 @@ const Index = () => {
                 <Button variant="glow" size="lg" className="w-full mt-6">
                   Começar Agora
                 </Button>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           </div>
 
           <div className="text-center mt-12">
@@ -1426,13 +1451,14 @@ const Index = () => {
       {/* Guarantee Section */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-primary-glow/10">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center justify-center p-3 bg-primary/20 rounded-full mb-6">
-              <Shield className="h-8 w-8 text-primary" />
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
-              Garantia Incondicional de 7 Dias
+          <ScrollReveal direction="up">
+            <div className="text-center max-w-4xl mx-auto">
+              <div className="inline-flex items-center justify-center p-3 bg-primary/20 rounded-full mb-6">
+                <Shield className="h-8 w-8 text-primary" />
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+                Garantia Incondicional de 7 Dias
             </h2>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -1487,7 +1513,7 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -1561,7 +1587,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </ScrollReveal>
     </div>;
 };
 export default Index;
