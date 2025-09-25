@@ -717,71 +717,125 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Social Proof */}
+      {/* Video Cases Section */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              O que nossos clientes{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">dizem sobre o Soudrop</span>
+              <span className="bg-gradient-primary bg-clip-text text-transparent">Cases em video</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-gradient-card border-primary/20">
-              <CardHeader>
-                <div className="flex items-center mb-4">
-                  <div className="flex text-primary">
-                    {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Video Case 1 */}
+            <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/S684xH3HM90"
+                    title="Case 1"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <blockquote className="text-base mb-6">
-                  "Usar o Soudrop foi uma mudança total para o nosso negócio. Conectamos nossas lojas de forma rápida e fácil, e em menos de 1 mês já víamos um aumento significativo nas vendas."
-                </blockquote>
-                <footer>
-                  <div className="font-semibold">João Silva</div>
-                  <div className="text-sm text-muted-foreground">Vendedor no Mercado Livre e Shopee</div>
-                </footer>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-card border-primary/20">
-              <CardHeader>
-                <div className="flex items-center mb-4">
-                  <div className="flex text-primary">
-                    {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-                  </div>
+            {/* Video Case 2 */}
+            <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/i_CJm-spTns"
+                    title="Case 2"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <blockquote className="text-base mb-6">
-                  "Nunca pensei que vender em tantos marketplaces seria tão fácil. O catálogo já vem pronto, e a integração com as plataformas é super tranquila."
-                </blockquote>
-                <footer>
-                  <div className="font-semibold">Fernanda Oliveira</div>
-                  <div className="text-sm text-muted-foreground">Proprietária de loja na Amazon e Magalu</div>
-                </footer>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-card border-primary/20">
-              <CardHeader>
-                <div className="flex items-center mb-4">
-                  <div className="flex text-primary">
-                    {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-                  </div>
+            {/* Video Case 3 */}
+            <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/LCkqdMEERSU"
+                    title="Case 3"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <blockquote className="text-base mb-6">
-                  "Com o plano Diamond, a possibilidade de importar diretamente da China tem feito toda a diferença. Conseguimos oferecer ofertas incríveis!"
-                </blockquote>
-                <footer>
-                  <div className="font-semibold">Carlos Souza</div>
-                  <div className="text-sm text-muted-foreground">Dono de loja no Mercado Livre e Bling</div>
-                </footer>
+              </CardContent>
+            </Card>
+
+            {/* Video Case 4 */}
+            <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/eT7fWX4KYIo"
+                    title="Case 4"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Video Case 5 */}
+            <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/EUA6NEXaRxw"
+                    title="Case 5"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Video Case 6 */}
+            <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/xRTvE_eypKo"
+                    title="Case 6"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Video Case 7 */}
+            <Card className="bg-gradient-card border-primary/20 overflow-hidden lg:col-start-2">
+              <CardContent className="p-0">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/gOU3AVRrdbs"
+                    title="Case 7"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </CardContent>
             </Card>
           </div>
