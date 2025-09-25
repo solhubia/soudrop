@@ -682,79 +682,80 @@ const Index = () => {
       </section>
 
       {/* Unique Differential Section */}
-      <section className="py-16">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 NOSSO{" "}
-                <span className="bg-gradient-primary bg-clip-text text-transparent">DIFERENCIAL ÚNICO</span>
+                <span className="text-green-500">DIFERENCIAL ÚNICO</span>
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground">
                 Simplicidade para importar da China sem complicações
               </p>
             </div>
             
             {/* Process Flow */}
-            <div className="bg-gradient-card rounded-2xl p-8 border border-primary/20 shadow-elegant">
-              <div className="grid md:grid-cols-4 gap-6 items-center">
+            <div className="bg-card/50 border border-border rounded-2xl p-8 md:p-12">
+              {/* Top Row */}
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
                 {/* Step 1 */}
                 <div className="text-center">
-                  <div className="relative inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-xl mb-4 hover-scale">
-                    <Package className="h-8 w-8 text-primary" />
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xs">1</div>
+                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
+                    <Package className="h-10 w-10 text-green-500" />
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                   </div>
-                  <h3 className="text-lg font-bold mb-2">Você Escolhe</h3>
-                  <p className="text-sm text-muted-foreground">Produto do catálogo</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Você Escolhe</h3>
+                  <p className="text-muted-foreground">Produto do catálogo</p>
                 </div>
                 
                 {/* Arrow */}
-                <div className="hidden md:flex justify-center">
-                  <ArrowRight className="h-6 w-6 text-primary animate-pulse" />
+                <div className="hidden md:flex justify-center items-center">
+                  <ArrowRight className="h-8 w-8 text-green-500" />
                 </div>
 
                 {/* Step 2 */}
                 <div className="text-center">
-                  <div className="relative inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-xl mb-4 hover-scale">
-                    <DollarSign className="h-8 w-8 text-primary" />
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xs">2</div>
+                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
+                    <DollarSign className="h-10 w-10 text-green-500" />
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                   </div>
-                  <h3 className="text-lg font-bold mb-2">Mostramos Preço</h3>
-                  <p className="text-sm text-muted-foreground">China + Brasil</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Mostramos Preço</h3>
+                  <p className="text-muted-foreground">China + Brasil</p>
                 </div>
+              </div>
 
-                {/* Arrow */}
-                <div className="hidden md:flex justify-center">
-                  <ArrowRight className="h-6 w-6 text-primary animate-pulse" />
-                </div>
+              {/* Arrow Down */}
+              <div className="flex justify-center mb-12">
+                <ArrowRight className="h-8 w-8 text-green-500 rotate-90" />
+              </div>
 
-                {/* Step 3 */}
-                <div className="text-center">
-                  <div className="relative inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-xl mb-4 hover-scale">
-                    <Truck className="h-8 w-8 text-primary" />
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xs">3</div>
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">Nós Fazemos</h3>
-                  <p className="text-sm text-muted-foreground">Importação completa</p>
+              {/* Step 3 */}
+              <div className="text-center mb-12">
+                <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
+                  <Truck className="h-10 w-10 text-green-500" />
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
                 </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Nós Fazemos</h3>
+                <p className="text-muted-foreground">Importação completa</p>
               </div>
               
               {/* Result */}
-              <div className="mt-8 pt-6 border-t border-primary/20 text-center">
-                <div className="bg-primary/10 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">
-                    <Zap className="inline h-5 w-5 mr-2" />
+              <div className="border-t border-border pt-8">
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-green-500 mb-6 flex items-center justify-center">
+                    <Zap className="h-5 w-5 mr-2" />
                     Resultado: Você vende sem saber importar!
                   </h3>
-                  <div className="grid md:grid-cols-2 gap-3 text-sm">
+                  <div className="grid md:grid-cols-2 gap-6 max-w-md mx-auto">
                     <div className="flex items-center justify-center">
-                      <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                      <span>Sem quantidade mínima</span>
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                      <span className="text-foreground">Sem quantidade mínima</span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                      <span>Preços transparentes</span>
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                      <span className="text-foreground">Preços transparentes</span>
                     </div>
                   </div>
                 </div>
