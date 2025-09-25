@@ -14,7 +14,7 @@ import shopeeLogo from "@/assets/shopee-logo.png";
 import magaluLogo from "@/assets/magalu-logo.png";
 import amazonLogo from "@/assets/amazon-logo.png";
 import blingLogo from "@/assets/bling-logo.png";
-import newLogo from "@/assets/new-logo.png";
+import newLogo from "@/assets/new-logo-v2.png";
 import madeiraMadeiraLogo from "@/assets/madeiramadeira-logo.png";
 import tiktokLogo from "@/assets/tiktok-logo.png";
 const Index = () => {
