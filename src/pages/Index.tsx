@@ -729,7 +729,7 @@ const Index = () => {
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Mostramos Preço</h3>
-                  <p className="text-muted-foreground">China + Brasil</p>
+                  <p className="text-muted-foreground">te mostramos por quanto ele chegará no Brasil</p>
                 </div>
 
                 {/* Vertical Animated Line 2 */}
@@ -776,7 +776,7 @@ const Index = () => {
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Mostramos Preço</h3>
-                  <p className="text-muted-foreground">China + Brasil</p>
+                  <p className="text-muted-foreground">te mostramos por quanto ele chegará no Brasil</p>
                 </div>
 
                 {/* Horizontal Animated Connecting Line 2 */}
