@@ -913,7 +913,7 @@ const Index = () => {
                 {/* Vertical Animated Line 1 */}
                 <div className="flex justify-center">
                   <div className="relative w-1 h-16 bg-border rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-[slide-down_2s_ease-in-out_infinite]"></div>
+                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-fill-sequential-vertical-1"></div>
                   </div>
                 </div>
 
@@ -931,7 +931,7 @@ const Index = () => {
                 {/* Vertical Animated Line 2 */}
                 <div className="flex justify-center">
                   <div className="relative w-1 h-16 bg-border rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-[slide-down_2s_ease-in-out_infinite_0.5s]"></div>
+                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-fill-sequential-vertical-2"></div>
                   </div>
                 </div>
 
@@ -949,7 +949,7 @@ const Index = () => {
                 {/* Vertical Animated Line 3 */}
                 <div className="flex justify-center">
                   <div className="relative w-1 h-16 bg-border rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-[slide-down_2s_ease-in-out_infinite_1s]"></div>
+                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-fill-sequential-vertical-3"></div>
                   </div>
                 </div>
 
@@ -981,7 +981,7 @@ const Index = () => {
                 {/* Horizontal Animated Connecting Line 1 */}
                 <div className="flex justify-center items-center">
                   <div className="relative w-full h-1 bg-border rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-[slide-right_2s_ease-in-out_infinite]"></div>
+                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-fill-sequential-1"></div>
                   </div>
                 </div>
 
@@ -999,7 +999,7 @@ const Index = () => {
                 {/* Horizontal Animated Connecting Line 2 */}
                 <div className="flex justify-center items-center">
                   <div className="relative w-full h-1 bg-border rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-[slide-right_2s_ease-in-out_infinite_0.5s]"></div>
+                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-fill-sequential-2"></div>
                   </div>
                 </div>
 
@@ -1017,7 +1017,7 @@ const Index = () => {
                 {/* Horizontal Animated Connecting Line 3 */}
                 <div className="flex justify-center items-center">
                   <div className="relative w-full h-1 bg-border rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-[slide-right_2s_ease-in-out_infinite_1s]"></div>
+                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-fill-sequential-3"></div>
                   </div>
                 </div>
 

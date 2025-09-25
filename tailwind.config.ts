@@ -131,6 +131,72 @@ export default {
             transform: "translateY(100%)"
           }
         },
+        "fill-sequential-1": {
+          "0%, 12.5%": {
+            transform: "translateX(-100%)"
+          },
+          "25%": {
+            transform: "translateX(0%)"
+          },
+          "87.5%, 100%": {
+            transform: "translateX(0%)"
+          }
+        },
+        "fill-sequential-2": {
+          "0%, 37.5%": {
+            transform: "translateX(-100%)"
+          },
+          "50%": {
+            transform: "translateX(0%)"
+          },
+          "87.5%, 100%": {
+            transform: "translateX(0%)"
+          }
+        },
+        "fill-sequential-3": {
+          "0%, 62.5%": {
+            transform: "translateX(-100%)"
+          },
+          "75%": {
+            transform: "translateX(0%)"
+          },
+          "87.5%, 100%": {
+            transform: "translateX(0%)"
+          }
+        },
+        "fill-sequential-vertical-1": {
+          "0%, 12.5%": {
+            transform: "translateY(-100%)"
+          },
+          "25%": {
+            transform: "translateY(0%)"
+          },
+          "87.5%, 100%": {
+            transform: "translateY(0%)"
+          }
+        },
+        "fill-sequential-vertical-2": {
+          "0%, 37.5%": {
+            transform: "translateY(-100%)"
+          },
+          "50%": {
+            transform: "translateY(0%)"
+          },
+          "87.5%, 100%": {
+            transform: "translateY(0%)"
+          }
+        },
+        "fill-sequential-vertical-3": {
+          "0%, 62.5%": {
+            transform: "translateY(-100%)"
+          },
+          "75%": {
+            transform: "translateY(0%)"
+          },
+          "87.5%, 100%": {
+            transform: "translateY(0%)"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -139,6 +205,12 @@ export default {
         "pulse": "pulse 3s ease-in-out infinite",
         "slide-right": "slide-right 2s ease-in-out infinite",
         "slide-down": "slide-down 2s ease-in-out infinite",
+        "fill-sequential-1": "fill-sequential-1 8s ease-in-out infinite",
+        "fill-sequential-2": "fill-sequential-2 8s ease-in-out infinite",
+        "fill-sequential-3": "fill-sequential-3 8s ease-in-out infinite",
+        "fill-sequential-vertical-1": "fill-sequential-vertical-1 8s ease-in-out infinite",
+        "fill-sequential-vertical-2": "fill-sequential-vertical-2 8s ease-in-out infinite",
+        "fill-sequential-vertical-3": "fill-sequential-vertical-3 8s ease-in-out infinite",
       },
     },
   },
