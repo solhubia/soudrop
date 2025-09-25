@@ -5,6 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram, Search, CreditCard, Settings, CheckSquare, Lock, Shield, Clock } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 import MarketplaceMarquee from "@/components/MarketplaceMarquee";
 import heroImage from "@/assets/hero-soudrop.jpg";
 import pcImage from "@/assets/pc.png";
@@ -156,16 +157,18 @@ const Index = () => {
             
             
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in">
-              <Button variant="hero" size="xl" className="w-full sm:w-auto text-lg px-8 py-4 hover-scale shadow-glow" asChild>
-                <a href="#planos">
-                  <Zap className="mr-3 h-6 w-6" />
-                  Começar Agora
-                </a>
-              </Button>
-            </div>
+            <ScrollReveal direction="up" delay={0.4}>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in">
+                <Button variant="hero" size="xl" className="w-full sm:w-auto text-lg px-8 py-4 hover-scale shadow-glow" asChild>
+                  <a href="#planos">
+                    <Zap className="mr-3 h-6 w-6" />
+                    Começar Agora
+                  </a>
+                </Button>
+              </div>
+            </ScrollReveal>
             
-            {/* Logo Carousel */}
+            <ScrollReveal direction="fade" delay={0.5}>
             <div className="mt-16 animate-fade-in">
               <p className="text-sm text-gray-400 text-center mb-8">Integrações disponíveis</p>
               <Carousel
@@ -200,7 +203,8 @@ const Index = () => {
                   ))}
                 </CarouselContent>
               </Carousel>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -209,7 +213,8 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-1 lg:order-1">
+            <ScrollReveal direction="left">
+              <div className="order-1 lg:order-1">
               <video 
                 src="https://soudropbrasil.com.br/wp-content/uploads/2025/07/Soudrop-final-2.mp4"
                 controls
@@ -218,8 +223,10 @@ const Index = () => {
               >
                 Seu navegador não suporta vídeos.
               </video>
-            </div>
-            <div className="order-2 lg:order-2">
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="right">
+              <div className="order-2 lg:order-2">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Conheça a{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">Soudrop</span>
@@ -236,7 +243,8 @@ const Index = () => {
                   Saiba Mais
                 </a>
               </Button>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
