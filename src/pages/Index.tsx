@@ -612,6 +612,111 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Comparison Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-primary bg-clip-text text-transparent">A mudança é gritante</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Without Soudrop */}
+            <Card className="bg-gradient-card border-destructive/20 hover:border-destructive/40 transition-all duration-300">
+              <CardHeader>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-destructive/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <X className="h-8 w-8 text-destructive" />
+                  </div>
+                  <CardTitle className="text-2xl text-destructive">Sem a Soudrop</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
+                    <span className="text-sm">Galpão para estoques</span>
+                    <span className="text-lg font-bold text-destructive">R$ 2.500/mês</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
+                    <span className="text-sm">Gasto com logística</span>
+                    <span className="text-lg font-bold text-destructive">R$ 1.800/mês</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
+                    <span className="text-sm">Funcionários para embalar</span>
+                    <span className="text-lg font-bold text-destructive">R$ 3.200/mês</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
+                    <span className="text-sm">Sistema de gestão</span>
+                    <span className="text-lg font-bold text-destructive">R$ 400/mês</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
+                    <span className="text-sm">Tempo perdido com operacional</span>
+                    <span className="text-lg font-bold text-destructive">40h/semana</span>
+                  </div>
+                </div>
+                <div className="border-t border-destructive/20 pt-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-semibold">Total mensal:</span>
+                    <span className="text-2xl font-bold text-destructive">R$ 7.900</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* With Soudrop */}
+            <Card className="bg-gradient-primary border-primary shadow-elegant">
+              <CardHeader>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary-foreground/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="h-8 w-8 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-2xl text-primary-foreground">Com a Soudrop</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between p-3 bg-primary-foreground/10 rounded-lg">
+                    <span className="text-sm text-primary-foreground">Galpão para estoques</span>
+                    <span className="text-lg font-bold text-primary-foreground">R$ 0</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-primary-foreground/10 rounded-lg">
+                    <span className="text-sm text-primary-foreground">Gasto com logística</span>
+                    <span className="text-lg font-bold text-primary-foreground">R$ 0</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-primary-foreground/10 rounded-lg">
+                    <span className="text-sm text-primary-foreground">Funcionários para embalar</span>
+                    <span className="text-lg font-bold text-primary-foreground">R$ 0</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-primary-foreground/10 rounded-lg">
+                    <span className="text-sm text-primary-foreground">Sistema de gestão</span>
+                    <span className="text-lg font-bold text-primary-foreground">Incluso</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-primary-foreground/10 rounded-lg">
+                    <span className="text-sm text-primary-foreground">Tempo perdido com operacional</span>
+                    <span className="text-lg font-bold text-primary-foreground">0h/semana</span>
+                  </div>
+                </div>
+                <div className="border-t border-primary-foreground/20 pt-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-semibold text-primary-foreground">Plano mensal:</span>
+                    <span className="text-2xl font-bold text-primary-foreground">R$ 299+</span>
+                  </div>
+                </div>
+                <div className="bg-primary-foreground/20 rounded-lg p-4 text-center">
+                  <div className="text-lg font-bold text-primary-foreground">
+                    Economiza até R$ 7.600/mês
+                  </div>
+                  <div className="text-sm text-primary-foreground/80">
+                    + Foco total em vendas
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Social Proof */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
