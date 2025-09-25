@@ -764,9 +764,9 @@ const Index = () => {
                   </div>
                   
                   {/* Diamond Plan Notice */}
-                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 border border-amber-500/30 rounded-full">
-                    <div className="w-3 h-3 bg-amber-500 rounded-full mr-2"></div>
-                    <span className="text-sm font-medium text-amber-600 dark:text-amber-400">
+                  <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                    <span className="text-sm font-medium text-green-600 dark:text-green-400">
                       Disponível no Plano Diamond
                     </span>
                   </div>
