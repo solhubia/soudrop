@@ -172,7 +172,6 @@ const Index = () => {
               >
                 <CarouselContent className="flex items-center -ml-2 md:-ml-4">
                   {[
-                    { src: amazonLogo, alt: "Amazon", name: "Amazon" },
                     { src: blingLogo, alt: "Bling", name: "Bling" },
                     { src: madeiraMadeiraLogo, alt: "MadeiraMadeira", name: "MadeiraMadeira" },
                     { src: magaluLogo, alt: "Magalu", name: "Magalu" },
@@ -253,7 +252,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Integre rapidamente suas lojas com Magalu, Shopee, Amazon, Mercado Livre, Bling e mais — tudo em um único painel.
+                  Integre rapidamente suas lojas com Magalu, Shopee, Mercado Livre, Bling e mais — tudo em um único painel.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -353,7 +352,7 @@ const Index = () => {
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                    <span>Magalu, Shopee, Amazon, Mercado Livre</span>
+                    <span>Magalu, Shopee, Mercado Livre</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
@@ -1482,7 +1481,7 @@ const Index = () => {
                   <span className="text-lg font-semibold">Como funciona a integração com marketplaces?</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-base text-muted-foreground pt-2">
-                  A integração é feita de forma automática, conectando sua loja a marketplaces como Magalu, Shopee, Amazon, Mercado Livre e outros. Após a configuração, seus produtos são sincronizados de forma rápida e você pode começar a vender imediatamente.
+                  A integração é feita de forma automática, conectando sua loja a marketplaces como Magalu, Shopee, Mercado Livre e outros. Após a configuração, seus produtos são sincronizados de forma rápida e você pode começar a vender imediatamente.
                 </AccordionContent>
               </AccordionItem>
 

@@ -2,7 +2,6 @@ const MarketplaceMarquee = () => {
   const marketplaces = [
     "Shopee",
     "Mercado Livre", 
-    "Amazon",
     "Shein",
     "Magalu",
     "TikTok Shop",
