@@ -763,7 +763,7 @@ const Index = () => {
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Você Vende</h3>
-                  <p className="text-muted-foreground">Com alta margem de lucro</p>
+                  <p className="text-muted-foreground">nós importamos tudo e enviamos para o seu estoque</p>
                 </div>
               </div>
 
@@ -827,7 +827,7 @@ const Index = () => {
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Você Vende</h3>
-                  <p className="text-muted-foreground">Com alta margem de lucro</p>
+                  <p className="text-muted-foreground">nós importamos tudo e enviamos para o seu estoque</p>
                 </div>
               </div>
               
