@@ -237,8 +237,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Por que escolher o{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Soudrop?</span>
+              <span className="bg-gradient-primary bg-clip-text text-transparent">Tornamos seu caminho mais fácil</span>
             </h2>
           </div>
           
