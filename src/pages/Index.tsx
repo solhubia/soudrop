@@ -14,6 +14,7 @@ import shopeeLogo from "@/assets/shopee-logo.png";
 import magaluLogo from "@/assets/magalu-logo.png";
 import amazonLogo from "@/assets/amazon-logo.png";
 import blingLogo from "@/assets/bling-logo.png";
+import newLogo from "@/assets/new-logo.png";
 import madeiraMadeiraLogo from "@/assets/madeiramadeira-logo.png";
 import tiktokLogo from "@/assets/tiktok-logo.png";
 const Index = () => {
@@ -388,7 +389,7 @@ const Index = () => {
                       <div className="text-sm">MadeiraMadeira</div>
                     </div>
                     <div className="bg-primary/10 p-4 rounded-lg">
-                      <img src={blingLogo} alt="Bling" className="h-8 w-8 mx-auto mb-2 object-contain" />
+                      <img src={newLogo} alt="Bling" className="h-8 w-8 mx-auto mb-2 object-contain" />
                       <div className="text-sm">Bling</div>
                     </div>
                   </div>
