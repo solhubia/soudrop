@@ -682,135 +682,79 @@ const Index = () => {
       </section>
 
       {/* Unique Differential Section */}
-      <section className="py-20 bg-gradient-to-br from-primary via-primary-glow to-primary relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-48 h-48 bg-white/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/20 rounded-full blur-lg animate-pulse delay-500"></div>
-          <div className="absolute top-1/4 right-1/3 w-24 h-24 bg-white/8 rounded-full blur-lg animate-pulse delay-700"></div>
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-6xl mx-auto">
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center justify-center w-24 h-24 bg-white/20 rounded-full mb-8 backdrop-blur-sm shadow-glow animate-pulse">
-                <Globe className="h-12 w-12 text-white" />
-              </div>
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                NOSSO DIFERENCIAL ÚNICO
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                NOSSO{" "}
+                <span className="bg-gradient-primary bg-clip-text text-transparent">DIFERENCIAL ÚNICO</span>
               </h2>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                Simplicidade absoluta para importar da China sem complicações
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Simplicidade para importar da China sem complicações
               </p>
-              <div className="w-32 h-1 bg-white/50 mx-auto rounded-full mt-6"></div>
             </div>
             
-            {/* Main Flow */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-16 border border-white/20 shadow-2xl">
-              {/* Process Flow */}
-              <div className="relative">
+            {/* Process Flow */}
+            <div className="bg-gradient-card rounded-2xl p-8 border border-primary/20 shadow-elegant">
+              <div className="grid md:grid-cols-4 gap-6 items-center">
                 {/* Step 1 */}
-                <div className="grid md:grid-cols-3 gap-8 items-center mb-12">
-                  <div className="text-center md:text-left">
-                    <div className="relative inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-glow mb-6 hover-scale">
-                      <Package className="h-10 w-10 text-primary" />
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Você Escolhe</h3>
-                    <p className="text-white/90 text-lg">Seleciona qualquer produto do nosso catálogo com +1400 itens prontos</p>
+                <div className="text-center">
+                  <div className="relative inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-xl mb-4 hover-scale">
+                    <Package className="h-8 w-8 text-primary" />
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xs">1</div>
                   </div>
-                  
-                  {/* Arrow */}
-                  <div className="hidden md:flex justify-center">
-                    <div className="flex items-center">
-                      <div className="w-16 h-1 bg-white/50 rounded-full"></div>
-                      <ArrowRight className="h-8 w-8 text-white/70 mx-2 animate-pulse" />
-                      <div className="w-16 h-1 bg-white/50 rounded-full"></div>
-                    </div>
-                  </div>
-
-                  <div className="text-center md:text-right">
-                    <div className="relative inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-glow mb-6 hover-scale">
-                      <DollarSign className="h-10 w-10 text-primary" />
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Mostramos o Preço</h3>
-                    <p className="text-white/90 text-lg">Te passamos o custo real na China + valor final no Brasil</p>
-                  </div>
+                  <h3 className="text-lg font-bold mb-2">Você Escolhe</h3>
+                  <p className="text-sm text-muted-foreground">Produto do catálogo</p>
+                </div>
+                
+                {/* Arrow */}
+                <div className="hidden md:flex justify-center">
+                  <ArrowRight className="h-6 w-6 text-primary animate-pulse" />
                 </div>
 
-                {/* Center Arrow Down */}
-                <div className="flex justify-center mb-12">
-                  <div className="flex flex-col items-center">
-                    <div className="w-1 h-12 bg-white/50 rounded-full"></div>
-                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mb-2">
-                      <ArrowRight className="h-5 w-5 text-white rotate-90 animate-pulse" />
-                    </div>
-                    <div className="w-1 h-12 bg-white/50 rounded-full"></div>
+                {/* Step 2 */}
+                <div className="text-center">
+                  <div className="relative inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-xl mb-4 hover-scale">
+                    <DollarSign className="h-8 w-8 text-primary" />
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xs">2</div>
                   </div>
+                  <h3 className="text-lg font-bold mb-2">Mostramos Preço</h3>
+                  <p className="text-sm text-muted-foreground">China + Brasil</p>
+                </div>
+
+                {/* Arrow */}
+                <div className="hidden md:flex justify-center">
+                  <ArrowRight className="h-6 w-6 text-primary animate-pulse" />
                 </div>
 
                 {/* Step 3 */}
-                <div className="grid md:grid-cols-3 gap-8 items-center">
-                  <div className="text-center md:text-left">
-                    <div className="relative inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-glow mb-6 hover-scale">
-                      <CheckCircle className="h-10 w-10 text-primary" />
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Você Decide</h3>
-                    <p className="text-white/90 text-lg">Escolhe se quer importar - sem quantidade mínima</p>
+                <div className="text-center">
+                  <div className="relative inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-xl mb-4 hover-scale">
+                    <Truck className="h-8 w-8 text-primary" />
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xs">3</div>
                   </div>
-                  
-                  {/* Arrow */}
-                  <div className="hidden md:flex justify-center">
-                    <div className="flex items-center">
-                      <div className="w-16 h-1 bg-white/50 rounded-full"></div>
-                      <ArrowRight className="h-8 w-8 text-white/70 mx-2 animate-pulse" />
-                      <div className="w-16 h-1 bg-white/50 rounded-full"></div>
-                    </div>
-                  </div>
-
-                  <div className="text-center md:text-right">
-                    <div className="relative inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-glow mb-6 hover-scale">
-                      <Truck className="h-10 w-10 text-primary" />
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Nós Fazemos Tudo</h3>
-                    <p className="text-white/90 text-lg">Importamos, estocamos e enviamos direto para seus clientes</p>
-                  </div>
+                  <h3 className="text-lg font-bold mb-2">Nós Fazemos</h3>
+                  <p className="text-sm text-muted-foreground">Importação completa</p>
                 </div>
               </div>
               
-              {/* Bottom highlight */}
-              <div className="mt-16 pt-8 border-t border-white/20">
-                <div className="text-center">
-                  <div className="bg-gradient-to-r from-green-400 to-green-600 rounded-2xl p-8 shadow-glow">
-                    <div className="flex items-center justify-center mb-4">
-                      <Zap className="h-8 w-8 text-white mr-3" />
-                      <h3 className="text-2xl font-bold text-white">Resultado:</h3>
+              {/* Result */}
+              <div className="mt-8 pt-6 border-t border-primary/20 text-center">
+                <div className="bg-primary/10 rounded-xl p-6">
+                  <h3 className="text-xl font-bold text-primary mb-3">
+                    <Zap className="inline h-5 w-5 mr-2" />
+                    Resultado: Você vende sem saber importar!
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-3 text-sm">
+                    <div className="flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                      <span>Sem quantidade mínima</span>
                     </div>
-                    <p className="text-xl text-white mb-4">
-                      <span className="font-bold">Você vende produtos importados sem saber importar!</span>
-                    </p>
-                    <div className="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
-                      <div className="flex items-center text-white">
-                        <CheckCircle className="h-5 w-5 mr-3 text-green-200" />
-                        <span>Sem quantidade mínima</span>
-                      </div>
-                      <div className="flex items-center text-white">
-                        <CheckCircle className="h-5 w-5 mr-3 text-green-200" />
-                        <span>Preços transparentes</span>
-                      </div>
-                      <div className="flex items-center text-white">
-                        <CheckCircle className="h-5 w-5 mr-3 text-green-200" />
-                        <span>Sem burocracia</span>
-                      </div>
-                      <div className="flex items-center text-white">
-                        <CheckCircle className="h-5 w-5 mr-3 text-green-200" />
-                        <span>Logística completa</span>
-                      </div>
+                    <div className="flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                      <span>Preços transparentes</span>
                     </div>
                   </div>
                 </div>
