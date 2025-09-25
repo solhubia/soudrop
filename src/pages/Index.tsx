@@ -746,7 +746,7 @@ const Index = () => {
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Nós Fazemos</h3>
-                  <p className="text-muted-foreground">Importação completa</p>
+                  <p className="text-muted-foreground">você escolhe quantas unidades deseja</p>
                 </div>
 
                 {/* Vertical Animated Line 3 */}
@@ -810,7 +810,7 @@ const Index = () => {
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Nós Fazemos</h3>
-                  <p className="text-muted-foreground">Importação completa</p>
+                  <p className="text-muted-foreground">você escolhe quantas unidades deseja</p>
                 </div>
 
                 {/* Horizontal Animated Connecting Line 3 */}
