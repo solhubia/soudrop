@@ -692,7 +692,7 @@ const Index = () => {
                 <span className="text-green-500">China</span>
               </h2>
               <p className="text-lg text-muted-foreground">
-                Simplicidade para importar da China sem complicações
+                Mesmo sem saber como fazer isso
               </p>
             </div>
             
