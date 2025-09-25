@@ -1037,7 +1037,7 @@ const Index = () => {
                 <div className="text-center">
                   <h3 className="text-xl font-bold text-green-500 mb-6 flex items-center justify-center">
                     <Zap className="h-5 w-5 mr-2" />
-                    sem pedido mínimo necessário!
+                    Sem quantidade mínima necessária!
                   </h3>
                   <div className="grid md:grid-cols-2 gap-6 max-w-md mx-auto mb-6">
                     <div className="flex items-center justify-center">
