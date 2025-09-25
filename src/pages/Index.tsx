@@ -698,8 +698,8 @@ const Index = () => {
             
             {/* Process Flow */}
             <div className="bg-card/50 border border-border rounded-2xl p-8 md:p-12">
-              {/* Top Row */}
-              <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {/* Process Steps in One Line */}
+              <div className="grid md:grid-cols-5 gap-4 items-center mb-12">
                 {/* Step 1 */}
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
@@ -710,9 +710,11 @@ const Index = () => {
                   <p className="text-muted-foreground">Produto do catálogo</p>
                 </div>
                 
-                {/* Arrow */}
+                {/* Animated Connecting Line 1 */}
                 <div className="hidden md:flex justify-center items-center">
-                  <ArrowRight className="h-8 w-8 text-green-500" />
+                  <div className="relative w-full h-1 bg-border rounded-full overflow-hidden">
+                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-[slide-right_2s_ease-in-out_infinite]"></div>
+                  </div>
                 </div>
 
                 {/* Step 2 */}
@@ -724,21 +726,23 @@ const Index = () => {
                   <h3 className="text-xl font-bold text-foreground mb-2">Mostramos Preço</h3>
                   <p className="text-muted-foreground">China + Brasil</p>
                 </div>
-              </div>
 
-              {/* Arrow Down */}
-              <div className="flex justify-center mb-12">
-                <ArrowRight className="h-8 w-8 text-green-500 rotate-90" />
-              </div>
-
-              {/* Step 3 */}
-              <div className="text-center mb-12">
-                <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                  <Truck className="h-10 w-10 text-green-500" />
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                {/* Animated Connecting Line 2 */}
+                <div className="hidden md:flex justify-center items-center">
+                  <div className="relative w-full h-1 bg-border rounded-full overflow-hidden">
+                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-[slide-right_2s_ease-in-out_infinite_0.5s]"></div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Nós Fazemos</h3>
-                <p className="text-muted-foreground">Importação completa</p>
+
+                {/* Step 3 */}
+                <div className="text-center">
+                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
+                    <Truck className="h-10 w-10 text-green-500" />
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Nós Fazemos</h3>
+                  <p className="text-muted-foreground">Importação completa</p>
+                </div>
               </div>
               
               {/* Result */}
