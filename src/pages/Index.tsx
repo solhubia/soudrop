@@ -206,7 +206,6 @@ const Index = () => {
               <video 
                 src="https://soudropbrasil.com.br/wp-content/uploads/2025/07/Soudrop-final-2.mp4"
                 autoPlay
-                muted
                 loop
                 playsInline
                 className="w-full h-auto rounded-2xl shadow-elegant"
