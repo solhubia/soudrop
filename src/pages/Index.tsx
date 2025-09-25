@@ -460,13 +460,28 @@ const Index = () => {
           {/* Dashboard Preview Image */}
           <div className="mb-16">
             <div className="max-w-6xl mx-auto">
-              <div className="relative rounded-2xl overflow-hidden shadow-elegant border border-primary/20 bg-gradient-card">
-                <img 
-                  src={dashboardPreview} 
-                  alt="Dashboard Soudrop mostrando métricas detalhadas de vendas em tempo real"
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none"></div>
+              <div className="relative group">
+                {/* Glowing background effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-primary/50 to-primary rounded-2xl blur-sm opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+                
+                {/* Main image container */}
+                <div className="relative rounded-2xl overflow-hidden shadow-elegant border-2 border-primary/30 bg-gradient-card backdrop-blur-sm">
+                  {/* Inner glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-primary/10 pointer-events-none"></div>
+                  
+                  <img 
+                    src={dashboardPreview} 
+                    alt="Dashboard Soudrop mostrando métricas detalhadas de vendas em tempo real"
+                    className="w-full h-auto relative z-10 hover:scale-[1.02] transition-transform duration-500"
+                  />
+                  
+                  {/* Bottom fade overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent pointer-events-none"></div>
+                  
+                  {/* Corner decorations */}
+                  <div className="absolute top-4 right-4 w-3 h-3 bg-primary/60 rounded-full animate-pulse"></div>
+                  <div className="absolute bottom-4 left-4 w-2 h-2 bg-primary/40 rounded-full animate-pulse delay-1000"></div>
+                </div>
               </div>
             </div>
           </div>
