@@ -205,6 +205,7 @@ const Index = () => {
             <div className="order-2 lg:order-1">
               <video 
                 src="https://soudropbrasil.com.br/wp-content/uploads/2025/07/Soudrop-final-2.mp4"
+                controls
                 autoPlay
                 loop
                 playsInline
