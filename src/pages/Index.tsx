@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram } from "lucide-react";
 import heroImage from "@/assets/hero-soudrop.jpg";
 import pcImage from "@/assets/pc.png";
+import dashboardPreview from "@/assets/dashboard-preview.png";
 import mlLogo from "@/assets/ml-logo.png";
 import shopeeLogo from "@/assets/shopee-logo.png";
 import magaluLogo from "@/assets/magalu-logo.png";
@@ -454,6 +455,20 @@ const Index = () => {
               Visualize todas as métricas de todos os marketplaces em um só lugar, 
               direto da nossa dashboard inteligente
             </p>
+          </div>
+
+          {/* Dashboard Preview Image */}
+          <div className="mb-16">
+            <div className="max-w-6xl mx-auto">
+              <div className="relative rounded-2xl overflow-hidden shadow-elegant border border-primary/20 bg-gradient-card">
+                <img 
+                  src={dashboardPreview} 
+                  alt="Dashboard Soudrop mostrando métricas detalhadas de vendas em tempo real"
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none"></div>
+              </div>
+            </div>
           </div>
 
           <div className="max-w-7xl mx-auto">
