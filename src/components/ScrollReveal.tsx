@@ -56,7 +56,7 @@ const ScrollReveal = ({
       initial="hidden"
       whileInView="visible"
       exit="hidden"
-      viewport={{ amount: 0.1, once: false }}
+      viewport={{ amount: 0.1, once: true }}
       transition={{
         duration: 0.6,
         delay,
