@@ -726,153 +726,145 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="relative">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full max-w-6xl mx-auto"
-            >
-              <CarouselContent className="flex items-center -ml-2 md:-ml-4">
-                {/* Video Case 1 */}
-                <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="bg-gradient-card border-primary/20 overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/S684xH3HM90"
-                          title="Case 1"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="flex items-center -ml-2 md:-ml-4">
+              {/* Video Case 1 */}
+              <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="aspect-video">
+                      <iframe
+                        src="https://www.youtube.com/embed/S684xH3HM90"
+                        title="Case 1"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
 
-                {/* Video Case 2 */}
-                <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="bg-gradient-card border-primary/20 overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/i_CJm-spTns"
-                          title="Case 2"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
+              {/* Video Case 2 */}
+              <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="aspect-video">
+                      <iframe
+                        src="https://www.youtube.com/embed/i_CJm-spTns"
+                        title="Case 2"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
 
-                {/* Video Case 3 */}
-                <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="bg-gradient-card border-primary/20 overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/LCkqdMEERSU"
-                          title="Case 3"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
+              {/* Video Case 3 */}
+              <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="aspect-video">
+                      <iframe
+                        src="https://www.youtube.com/embed/LCkqdMEERSU"
+                        title="Case 3"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
 
-                {/* Video Case 4 */}
-                <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="bg-gradient-card border-primary/20 overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/eT7fWX4KYIo"
-                          title="Case 4"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
+              {/* Video Case 4 */}
+              <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="aspect-video">
+                      <iframe
+                        src="https://www.youtube.com/embed/eT7fWX4KYIo"
+                        title="Case 4"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
 
-                {/* Video Case 5 */}
-                <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="bg-gradient-card border-primary/20 overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/EUA6NEXaRxw"
-                          title="Case 5"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
+              {/* Video Case 5 */}
+              <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="aspect-video">
+                      <iframe
+                        src="https://www.youtube.com/embed/EUA6NEXaRxw"
+                        title="Case 5"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
 
-                {/* Video Case 6 */}
-                <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="bg-gradient-card border-primary/20 overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/xRTvE_eypKo"
-                          title="Case 6"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
+              {/* Video Case 6 */}
+              <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="aspect-video">
+                      <iframe
+                        src="https://www.youtube.com/embed/xRTvE_eypKo"
+                        title="Case 6"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
 
-                {/* Video Case 7 */}
-                <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="bg-gradient-card border-primary/20 overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/gOU3AVRrdbs"
-                          title="Case 7"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              </CarouselContent>
-              
-              {/* Desktop arrows - hidden on mobile */}
-              <CarouselPrevious className="hidden md:flex" />
-              <CarouselNext className="hidden md:flex" />
-            </Carousel>
+              {/* Video Case 7 */}
+              <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <Card className="bg-gradient-card border-primary/20 overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="aspect-video">
+                      <iframe
+                        src="https://www.youtube.com/embed/gOU3AVRrdbs"
+                        title="Case 7"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            </CarouselContent>
             
-            {/* Mobile arrows - shown only on mobile, positioned below */}
-            <div className="flex justify-center gap-4 mt-6 md:hidden">
-              <CarouselPrevious className="static translate-y-0" />
-              <CarouselNext className="static translate-y-0" />
-            </div>
-          </div>
+            {/* Navigation arrows */}
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
