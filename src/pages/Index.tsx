@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useRef, useState } from "react";
-import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram, Search, CreditCard, Settings, CheckSquare } from "lucide-react";
+import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram, Search, CreditCard, Settings, CheckSquare, Lock } from "lucide-react";
 import MarketplaceMarquee from "@/components/MarketplaceMarquee";
 import heroImage from "@/assets/hero-soudrop.jpg";
 import pcImage from "@/assets/pc.png";
@@ -1086,9 +1086,9 @@ const Index = () => {
                     <div className="w-48 h-48 bg-primary/20 rounded-full flex items-center justify-center relative">
                       <div className="w-32 h-32 bg-primary/30 rounded-full flex items-center justify-center relative">
                         <div className="w-20 h-20 bg-primary/50 rounded-full flex items-center justify-center">
-                          <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                            <CheckCircle className="h-8 w-8 text-primary-foreground" />
-                          </div>
+                        <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                          <Lock className="h-8 w-8 text-primary-foreground" />
+                        </div>
                         </div>
                       </div>
                       {/* Animated rings */}
