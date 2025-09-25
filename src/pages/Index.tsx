@@ -203,11 +203,16 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <img 
-                src={pcImage} 
-                alt="Computador mostrando a plataforma Soudrop"
+              <video 
+                src="https://soudropbrasil.com.br/wp-content/uploads/2025/07/Soudrop-final-2.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="w-full h-auto rounded-2xl shadow-elegant"
-              />
+              >
+                Seu navegador não suporta vídeos.
+              </video>
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
