@@ -748,10 +748,27 @@ const Index = () => {
                   <h3 className="text-xl font-bold text-foreground mb-2">Nós Fazemos</h3>
                   <p className="text-muted-foreground">Importação completa</p>
                 </div>
+
+                {/* Vertical Animated Line 3 */}
+                <div className="flex justify-center">
+                  <div className="relative w-1 h-16 bg-border rounded-full overflow-hidden">
+                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-[slide-down_2s_ease-in-out_infinite_1s]"></div>
+                  </div>
+                </div>
+
+                {/* Step 4 */}
+                <div className="text-center">
+                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
+                    <CheckCircle className="h-10 w-10 text-green-500" />
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Você Vende</h3>
+                  <p className="text-muted-foreground">Com alta margem de lucro</p>
+                </div>
               </div>
 
               {/* Desktop Layout - Horizontal */}
-              <div className="hidden md:grid md:grid-cols-5 gap-4 items-center mb-12">
+              <div className="hidden md:grid md:grid-cols-7 gap-4 items-center mb-12">
                 {/* Step 1 */}
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
@@ -794,6 +811,23 @@ const Index = () => {
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Nós Fazemos</h3>
                   <p className="text-muted-foreground">Importação completa</p>
+                </div>
+
+                {/* Horizontal Animated Connecting Line 3 */}
+                <div className="flex justify-center items-center">
+                  <div className="relative w-full h-1 bg-border rounded-full overflow-hidden">
+                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-[slide-right_2s_ease-in-out_infinite_1s]"></div>
+                  </div>
+                </div>
+
+                {/* Step 4 */}
+                <div className="text-center">
+                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
+                    <CheckCircle className="h-10 w-10 text-green-500" />
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Você Vende</h3>
+                  <p className="text-muted-foreground">Com alta margem de lucro</p>
                 </div>
               </div>
               
