@@ -207,7 +207,6 @@ const Index = () => {
                 src="https://soudropbrasil.com.br/wp-content/uploads/2025/07/Soudrop-final-2.mp4"
                 controls
                 autoPlay
-                loop
                 playsInline
                 className="w-full h-auto rounded-2xl shadow-elegant"
               >
