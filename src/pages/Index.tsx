@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useRef, useState } from "react";
-import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram } from "lucide-react";
+import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram, Search, CreditCard, Settings, CheckSquare } from "lucide-react";
 import MarketplaceMarquee from "@/components/MarketplaceMarquee";
 import heroImage from "@/assets/hero-soudrop.jpg";
 import pcImage from "@/assets/pc.png";
@@ -893,7 +893,7 @@ const Index = () => {
             <div className="bg-card/50 border border-border rounded-2xl p-8 md:p-12">
               <div className="text-center mb-12">
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                  Funciona em 3 passos práticos
+                  Funciona em 4 passos práticos
                 </h3>
               </div>
               {/* Mobile Layout - Vertical */}
@@ -901,11 +901,12 @@ const Index = () => {
                 {/* Step 1 */}
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <Package className="h-10 w-10 text-green-500" />
+                    <Search className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Você Escolhe</h3>
-                  <p className="text-muted-foreground">você escolhe qualquer produto que queira importar</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 1</h3>
+                  <p className="text-muted-foreground font-medium">Escolha o produto</p>
+                  <p className="text-muted-foreground text-sm mt-1">Você escolhe o produto que deseja importar.</p>
                 </div>
                 
                 {/* Vertical Animated Line 1 */}
@@ -918,11 +919,12 @@ const Index = () => {
                 {/* Step 2 */}
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <DollarSign className="h-10 w-10 text-green-500" />
+                    <CreditCard className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Mostramos Preço</h3>
-                  <p className="text-muted-foreground">te mostramos por quanto ele chegará no Brasil</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 2</h3>
+                  <p className="text-muted-foreground font-medium">Preço transparente</p>
+                  <p className="text-muted-foreground text-sm mt-1">Mostramos o custo real até chegar no Brasil.</p>
                 </div>
 
                 {/* Vertical Animated Line 2 */}
@@ -935,11 +937,12 @@ const Index = () => {
                 {/* Step 3 */}
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <Truck className="h-10 w-10 text-green-500" />
+                    <Settings className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Nós Fazemos</h3>
-                  <p className="text-muted-foreground">você escolhe quantas unidades deseja</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 3</h3>
+                  <p className="text-muted-foreground font-medium">Importação sem dor de cabeça</p>
+                  <p className="text-muted-foreground text-sm mt-1">Nós cuidamos de todo o processo.</p>
                 </div>
 
                 {/* Vertical Animated Line 3 */}
@@ -952,11 +955,12 @@ const Index = () => {
                 {/* Step 4 */}
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <CheckCircle className="h-10 w-10 text-green-500" />
+                    <CheckSquare className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Você Vende</h3>
-                  <p className="text-muted-foreground">nós importamos tudo e enviamos para o seu estoque</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 4</h3>
+                  <p className="text-muted-foreground font-medium">Você recebe pronto pra vender</p>
+                  <p className="text-muted-foreground text-sm mt-1">Chega direto no seu estoque, sem burocracia.</p>
                 </div>
               </div>
 
@@ -965,11 +969,12 @@ const Index = () => {
                 {/* Step 1 */}
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <Package className="h-10 w-10 text-green-500" />
+                    <Search className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Você Escolhe</h3>
-                  <p className="text-muted-foreground">você escolhe qualquer produto que queira importar</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 1</h3>
+                  <p className="text-muted-foreground font-medium">Escolha o produto</p>
+                  <p className="text-muted-foreground text-sm">Você escolhe o produto que deseja importar.</p>
                 </div>
                 
                 {/* Horizontal Animated Connecting Line 1 */}
@@ -982,11 +987,12 @@ const Index = () => {
                 {/* Step 2 */}
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <DollarSign className="h-10 w-10 text-green-500" />
+                    <CreditCard className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Mostramos Preço</h3>
-                  <p className="text-muted-foreground">te mostramos por quanto ele chegará no Brasil</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 2</h3>
+                  <p className="text-muted-foreground font-medium">Preço transparente</p>
+                  <p className="text-muted-foreground text-sm">Mostramos o custo real até chegar no Brasil.</p>
                 </div>
 
                 {/* Horizontal Animated Connecting Line 2 */}
@@ -999,11 +1005,12 @@ const Index = () => {
                 {/* Step 3 */}
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <Truck className="h-10 w-10 text-green-500" />
+                    <Settings className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Nós Fazemos</h3>
-                  <p className="text-muted-foreground">você escolhe quantas unidades deseja</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 3</h3>
+                  <p className="text-muted-foreground font-medium">Importação sem dor de cabeça</p>
+                  <p className="text-muted-foreground text-sm">Nós cuidamos de todo o processo.</p>
                 </div>
 
                 {/* Horizontal Animated Connecting Line 3 */}
@@ -1016,11 +1023,12 @@ const Index = () => {
                 {/* Step 4 */}
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <CheckCircle className="h-10 w-10 text-green-500" />
+                    <CheckSquare className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Você Vende</h3>
-                  <p className="text-muted-foreground">nós importamos tudo e enviamos para o seu estoque</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">🔹 Passo 4</h3>
+                  <p className="text-muted-foreground font-medium">Você recebe pronto pra vender</p>
+                  <p className="text-muted-foreground text-sm">Chega direto no seu estoque, sem burocracia.</p>
                 </div>
               </div>
               
