@@ -635,8 +635,8 @@ const Index = () => {
               <CardContent className="space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
-                    <span className="text-sm">Galpão para estoques</span>
-                    <span className="text-lg font-bold text-destructive">R$ 2.500/mês</span>
+                    <span className="text-sm">Galpão para estoque</span>
+                    <span className="text-lg font-bold text-destructive">R$ 10.000+/mês</span>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
                     <span className="text-sm">Gasto com logística</span>
@@ -648,17 +648,17 @@ const Index = () => {
                   </div>
                   <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
                     <span className="text-sm">Sistema de gestão</span>
-                    <span className="text-lg font-bold text-destructive">R$ 400/mês</span>
+                    <span className="text-lg font-bold text-destructive">R$ 3.700/mês</span>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
-                    <span className="text-sm">Tempo perdido com operacional</span>
-                    <span className="text-lg font-bold text-destructive">40h/semana</span>
+                    <span className="text-sm">Tempo operacional</span>
+                    <span className="text-lg font-bold text-destructive">74h/semana</span>
                   </div>
                 </div>
                 <div className="border-t border-destructive/20 pt-4">
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-semibold">Total mensal:</span>
-                    <span className="text-2xl font-bold text-destructive">R$ 7.900</span>
+                    <span className="text-2xl font-bold text-destructive">R$ 18.700+</span>
                   </div>
                 </div>
               </CardContent>
@@ -700,12 +700,12 @@ const Index = () => {
                 <div className="border-t border-primary-foreground/20 pt-4">
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-semibold text-primary-foreground">Plano mensal:</span>
-                    <span className="text-2xl font-bold text-primary-foreground">R$ 299+</span>
+                    <span className="text-2xl font-bold text-primary-foreground">R$ 297</span>
                   </div>
                 </div>
                 <div className="bg-primary-foreground/20 rounded-lg p-4 text-center">
                   <div className="text-lg font-bold text-primary-foreground">
-                    Economiza até R$ 7.600/mês
+                    Economiza mais de R$ 18.400/mês
                   </div>
                   <div className="text-sm text-primary-foreground/80">
                     + Foco total em vendas
