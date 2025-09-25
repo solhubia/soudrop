@@ -688,8 +688,8 @@ const Index = () => {
             {/* Header */}
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                NOSSO{" "}
-                <span className="text-green-500">DIFERENCIAL ÚNICO</span>
+                Importe seus produtos da{" "}
+                <span className="text-green-500">China</span>
               </h2>
               <p className="text-lg text-muted-foreground">
                 Simplicidade para importar da China sem complicações
