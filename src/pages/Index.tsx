@@ -5,6 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram } from "lucide-react";
+import MarketplaceMarquee from "@/components/MarketplaceMarquee";
 import heroImage from "@/assets/hero-soudrop.jpg";
 import pcImage from "@/assets/pc.png";
 import dashboardPreview from "@/assets/dashboard-preview.png";
@@ -444,6 +445,9 @@ const Index = () => {
           </div>
         </div>
        </section>
+
+      {/* Marketplace Marquee */}
+      <MarketplaceMarquee />
 
       {/* Sales Management Dashboard Section */}
       <section className="py-20 bg-gradient-subtle">
