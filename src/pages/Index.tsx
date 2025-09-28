@@ -143,11 +143,11 @@ const Index = () => {
             </div>
             
             <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight animate-fade-in text-white">
-              Aposentamos a{" "}
+              O Maior a{" "}
               <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent animate-pulse">
-                antiga geração
+                Ecossistema
               </span>
-              {" "}de sellers
+              {" "}de Vendas Online
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in font-medium">
