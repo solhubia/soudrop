@@ -143,7 +143,7 @@ const Index = () => {
             </div>
             
             <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight animate-fade-in text-white">
-              O Maior a{" "}
+              O Maior {" "}
               <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent animate-pulse">
                 Ecossistema
               </span>
