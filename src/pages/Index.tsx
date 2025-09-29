@@ -142,7 +142,7 @@ const Index = () => {
             </div>
             
             <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight animate-fade-in text-white">
-              <span className="gradient-dynamic-text">O Maior Ecossistema</span> de Vendas Online do Brasil
+              O <span className="gradient-dynamic-text">Maior Ecossistema</span> de Vendas Online do Brasil
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in font-medium">

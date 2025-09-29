@@ -129,8 +129,8 @@
   
   .gradient-dynamic-text {
     background: var(--gradient-dynamic);
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease-in-out infinite;
+    background-size: 300% 100%;
+    animation: gradient-shift 2s ease-in-out infinite;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -147,11 +147,14 @@
 }
 
 @keyframes gradient-shift {
-  0%, 100% {
+  0% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
