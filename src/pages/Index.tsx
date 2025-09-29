@@ -397,7 +397,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Tornamos seu caminho mais fácil</span>
+              <span className="bg-gradient-primary bg-clip-text text-transparent">Uma estrutura feita para você</span>
             </h2>
           </div>
           
