@@ -17,6 +17,7 @@ import blingLogo from "@/assets/bling-logo.png";
 import newLogo from "@/assets/new-logo-v2.png";
 import madeiraMadeiraLogo from "@/assets/madeiramadeira-logo.png";
 import tiktokLogo from "@/assets/tiktok-logo.png";
+import careerPathIllustration from "@/assets/career-path-illustration.png";
 const Index = () => {
   const mouseFollowerRef = useRef<HTMLDivElement>(null);
   const [isAnnual, setIsAnnual] = useState(true);
@@ -200,6 +201,58 @@ const Index = () => {
                     </CarouselItem>)}
                 </CarouselContent>
               </Carousel>
+            </div>
+            
+            {/* Journey Section */}
+            <div className="mt-20 animate-fade-in">
+              <div className="text-center mb-12">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  O caminho é complexo, mas nós te guiamos
+                </h3>
+                <p className="text-gray-300 text-lg">
+                  Da sua primeira venda até se tornar um empresário de sucesso
+                </p>
+              </div>
+              
+              <div className="max-w-4xl mx-auto">
+                <img 
+                  src={careerPathIllustration} 
+                  alt="Caminho do iniciante ao empresário" 
+                  className="w-full h-auto rounded-2xl shadow-elegant"
+                />
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8 mt-12 max-w-4xl mx-auto">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-primary">1</span>
+                  </div>
+                  <h4 className="text-xl font-semibold text-white mb-2">Iniciante</h4>
+                  <p className="text-gray-300 text-sm">
+                    Comece do zero com nosso catálogo pronto e suporte dedicado
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-primary">2</span>
+                  </div>
+                  <h4 className="text-xl font-semibold text-white mb-2">Vendedor</h4>
+                  <p className="text-gray-300 text-sm">
+                    Escale suas vendas com integração automática em múltiplos marketplaces
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-primary">3</span>
+                  </div>
+                  <h4 className="text-xl font-semibold text-white mb-2">Empresário</h4>
+                  <p className="text-gray-300 text-sm">
+                    Gerencie seu negócio com dashboards completos e crescimento exponencial
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
