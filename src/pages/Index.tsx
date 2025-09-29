@@ -1183,7 +1183,7 @@ const Index = () => {
                   <div className="text-center">
                     <CardTitle className="text-2xl mb-2">Basic</CardTitle>
                     <div className="space-y-1">
-                      <div className="text-4xl font-bold text-primary">{currentPlan.basic.price}</div>
+                      <div className="text-4xl font-bold text-primary">12x de 197</div>
                       <div className="text-muted-foreground">{currentPlan.basic.period}</div>
                     </div>
                   </div>
