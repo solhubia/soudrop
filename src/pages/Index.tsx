@@ -511,7 +511,7 @@ const Index = () => {
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                    <span>Magalu, Shopee, Mercado Livre</span>
+                    <span>Magalu, Shopee, Mercado Livre...</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
