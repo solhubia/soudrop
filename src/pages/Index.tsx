@@ -17,7 +17,6 @@ import blingLogo from "@/assets/bling-logo.png";
 import newLogo from "@/assets/new-logo-v2.png";
 import madeiraMadeiraLogo from "@/assets/madeiramadeira-logo.png";
 import tiktokLogo from "@/assets/tiktok-logo.png";
-import careerPathIllustration from "@/assets/career-path-illustration.png";
 const Index = () => {
   const mouseFollowerRef = useRef<HTMLDivElement>(null);
   const [isAnnual, setIsAnnual] = useState(true);
@@ -202,161 +201,6 @@ const Index = () => {
                 </CarouselContent>
               </Carousel>
             </div>
-            
-            {/* Journey Section */}
-            <div className="mt-20 animate-fade-in">
-              <div className="text-center mb-12">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                  O caminho é complexo, mas nós te guiamos
-                </h3>
-                <p className="text-gray-300 text-lg">
-                  Da sua primeira venda até se tornar um empresário de sucesso
-                </p>
-              </div>
-              
-              <div className="max-w-4xl mx-auto">
-                <img 
-                  src={careerPathIllustration} 
-                  alt="Caminho do iniciante ao empresário" 
-                  className="w-full h-auto rounded-2xl shadow-elegant"
-                />
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-8 mt-12 max-w-4xl mx-auto">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-primary">1</span>
-                  </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Iniciante</h4>
-                  <p className="text-gray-300 text-sm">
-                    Comece do zero com nosso catálogo pronto e suporte dedicado
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-primary">2</span>
-                  </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Vendedor</h4>
-                  <p className="text-gray-300 text-sm">
-                    Escale suas vendas com integração automática em múltiplos marketplaces
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-primary">3</span>
-                  </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Empresário</h4>
-                  <p className="text-gray-300 text-sm">
-                    Gerencie seu negócio com dashboards completos e crescimento exponencial
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7 Pedras Section */}
-      <section className="py-20 bg-gradient-subtle relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="container mx-auto px-6 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              O Caminho das <span className="gradient-dynamic-text">7 Pedras</span> para Vender Online
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Um método testado e aprovado que guia você passo a passo desde o início até se tornar um empresário de sucesso
-            </p>
-          </div>
-
-          {/* Caminho das Pedras */}
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {[
-                {
-                  number: 1,
-                  title: "Incentivo Inicial",
-                  description: "Te ajudamos a montar sua loja, conectar aos marketplaces e instalar as ferramentas certas. Tudo pronto para começar sem dor de cabeça.",
-                  color: "from-emerald-400 to-emerald-600"
-                },
-                {
-                  number: 2,
-                  title: "Dinheiro no Bolso", 
-                  description: "Com tudo no ar, o foco é vender. Disponibilizamos as técnicas que fazem nossos membros faturarem milhões todos os meses.",
-                  color: "from-blue-400 to-blue-600"
-                },
-                {
-                  number: 3,
-                  title: "Produtos Validados",
-                  description: "Com as técnicas certas, você precisa saber o que vender. Tenha acesso a mais de 1.400 produtos já testados, com preço de custo direto da China.",
-                  color: "from-purple-400 to-purple-600"
-                },
-                {
-                  number: 4,
-                  title: "Sua Venda, Nosso Envio",
-                  description: "Depois da venda, é necessário entregar o produto. Mas nós cuidamos disso. Você vende, e nós cuidamos do resto: separamos, embalamos e enviamos.",
-                  color: "from-amber-400 to-amber-600"
-                },
-                {
-                  number: 5,
-                  title: "Descomplicando",
-                  description: "Com muitas vendas acontecendo, fica difícil acompanhar tudo. Desenvolvemos um painel simples que mostra todas as métricas de forma intuitiva.",
-                  color: "from-rose-400 to-rose-600"
-                },
-                {
-                  number: 6,
-                  title: "Seja um Empresário",
-                  description: "Com o dinheiro entrando, chegou a hora de crescer. Te ajudamos a abrir seu CNPJ e organizar sua contabilidade para criar sua empresa com facilidade.",
-                  color: "from-indigo-400 to-indigo-600"
-                },
-                {
-                  number: 7,
-                  title: "Aumentando o Lucro",
-                  description: "Participe de importações em container compartilhado e aumente sua margem de lucro com produtos direto da China - você faz o pedido, nós importamos.",
-                  color: "from-teal-400 to-teal-600"
-                }
-              ].map((pedra, index) => (
-                <div key={pedra.number} className="flex items-start gap-6 group">
-                  {/* Pedra */}
-                  <div className="flex-shrink-0 relative">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${pedra.color} rounded-[40%_60%_70%_30%/60%_30%_70%_40%] shadow-2xl transform rotate-12 group-hover:rotate-0 transition-all duration-500 hover:shadow-elegant group-hover:scale-110 relative overflow-hidden`}>
-                      {/* Brilho da pedra */}
-                      <div className="absolute inset-0 bg-gradient-to-tr from-white/30 via-transparent to-transparent rounded-[40%_60%_70%_30%/60%_30%_70%_40%]"></div>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-white font-bold text-sm drop-shadow-lg">{pedra.number}</span>
-                      </div>
-                    </div>
-                    
-                    {/* Linha conectora */}
-                    {index < 6 && (
-                      <div className="absolute left-1/2 top-16 w-0.5 h-8 bg-gradient-to-b from-primary/60 to-primary/20 transform -translate-x-1/2"></div>
-                    )}
-                  </div>
-                  
-                  {/* Conteúdo */}
-                  <div className="bg-card border rounded-2xl p-6 flex-1 group-hover:shadow-elegant transition-all duration-300">
-                    <h3 className="text-xl font-bold mb-3 text-primary">{pedra.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{pedra.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-16">
-              <Button variant="hero" size="lg" asChild>
-                <a href="#planos">
-                  <ArrowRight className="mr-2 h-5 w-5" />
-                  Começar Minha Jornada
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -421,7 +265,7 @@ const Index = () => {
                 <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
                   <Package className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl">Produtos Validados</CardTitle>
+                <CardTitle className="text-xl">Catálogo Pronto</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
@@ -561,9 +405,7 @@ const Index = () => {
               <div className="lg:order-2">
                 <Badge variant="secondary" className="mb-4">Catálogo</Badge>
                 <h3 className="text-3xl font-bold mb-6">Catálogo Completo e Pronto para Vender</h3>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Acesse mais de 1400 produtos de diversas categorias, todos prontos para serem listados. Cada item já vem com título, descrição, imagens, EAN, SKU e preço de custo configurados automaticamente.
-                </p>
+                <p className="text-lg text-muted-foreground mb-6">Integração Facilitada</p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-primary">1400+</div>
