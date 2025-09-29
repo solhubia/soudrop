@@ -407,7 +407,7 @@ const Index = () => {
                 <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
                   <ShoppingCart className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl">Múltiplos Marketplaces</CardTitle>
+                <CardTitle className="text-xl">Integração Facilitada</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
