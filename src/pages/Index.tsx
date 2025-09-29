@@ -295,7 +295,7 @@ const Index = () => {
                 {
                   number: 3,
                   title: "Produtos Validados",
-                  description: "Com as técnicas certas, você precisa saber o que vender. Te damos acesso a mais de 1.400 produtos já testados, com preço de custo direto da China.",
+                  description: "Com as técnicas certas, você precisa saber o que vender. Tenha acesso a mais de 1.400 produtos já testados, com preço de custo direto da China.",
                   color: "from-purple-400 to-purple-600"
                 },
                 {
