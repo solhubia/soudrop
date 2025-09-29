@@ -289,64 +289,74 @@ const Index = () => {
                     number: 1,
                     title: "Incentivo Inicial",
                     description: "Te ajudamos a montar sua loja, conectar aos marketplaces e instalar as ferramentas certas.",
-                    color: "from-emerald-400 to-emerald-600"
+                    color: "from-emerald-400 to-emerald-600",
+                    delay: "0s"
                   },
                   {
                     number: 2,
                     title: "Dinheiro no Bolso", 
                     description: "Te damos acesso às técnicas que fazem nossos membros faturarem milhões todos os meses.",
-                    color: "from-blue-400 to-blue-600"
+                    color: "from-blue-400 to-blue-600",
+                    delay: "0.2s"
                   },
                   {
                     number: 3,
                     title: "Produtos Validados",
                     description: "Acesso a mais de 1.400 produtos já testados, com preço de custo direto da China.",
-                    color: "from-purple-400 to-purple-600"
+                    color: "from-purple-400 to-purple-600",
+                    delay: "0.4s"
                   },
                   {
                     number: 4,
                     title: "Sua Venda, Nosso Envio",
                     description: "Você vende, e nós cuidamos do resto: separamos, embalamos e enviamos.",
-                    color: "from-amber-400 to-amber-600"
+                    color: "from-amber-400 to-amber-600",
+                    delay: "0.6s"
                   },
                   {
                     number: 5,
                     title: "Descomplicando",
                     description: "Painel simples que mostra todas as métricas de forma intuitiva.",
-                    color: "from-rose-400 to-rose-600"
+                    color: "from-rose-400 to-rose-600",
+                    delay: "0.8s"
                   },
                   {
                     number: 6,
                     title: "Seja um Empresário",
                     description: "Te ajudamos a abrir seu CNPJ e organizar sua contabilidade.",
-                    color: "from-indigo-400 to-indigo-600"
+                    color: "from-indigo-400 to-indigo-600",
+                    delay: "1s"
                   },
                   {
                     number: 7,
                     title: "Aumentando o Lucro",
                     description: "Participe de importações em container compartilhado.",
-                    color: "from-teal-400 to-teal-600"
+                    color: "from-teal-400 to-teal-600",
+                    delay: "1.2s"
                   }
                 ].map((pedra, index) => (
-                  <div key={pedra.number} className={`flex flex-col items-center ${index % 2 === 0 ? 'mt-0' : 'mt-20'}`}>
+                  <div 
+                    key={pedra.number} 
+                    className={`flex flex-col items-center ${index % 2 === 0 ? 'mt-0' : 'mt-20'} animate-fade-in`}
+                    style={{ animationDelay: pedra.delay }}
+                  >
                     {/* Pedra */}
                     <div className="group relative mb-6">
-                      <div className={`w-20 h-20 bg-gradient-to-br ${pedra.color} rounded-[40%_60%_70%_30%/60%_30%_70%_40%] shadow-2xl transform rotate-12 hover:rotate-0 transition-all duration-500 hover:shadow-elegant group-hover:scale-110 cursor-pointer relative overflow-hidden`}>
+                      <div className={`w-20 h-20 bg-gradient-to-br ${pedra.color} rounded-[40%_60%_70%_30%/60%_30%_70%_40%] shadow-2xl transform rotate-12 hover:rotate-0 transition-all duration-500 hover:shadow-elegant group-hover:scale-110 cursor-pointer relative overflow-hidden animate-pulse`}>
                         {/* Brilho da pedra */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-white/30 via-transparent to-transparent rounded-[40%_60%_70%_30%/60%_30%_70%_40%]"></div>
+                        {/* Brilho animado */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-[40%_60%_70%_30%/60%_30%_70%_40%] animate-pulse"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
                           <span className="text-white font-bold text-lg drop-shadow-lg">{pedra.number}</span>
                         </div>
                       </div>
-                      
-                      {/* Tooltip Card */}
-                      <div className="absolute left-1/2 transform -translate-x-1/2 top-24 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-20">
-                        <div className="bg-card border rounded-2xl p-6 shadow-elegant min-w-[280px] max-w-[280px]">
-                          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-card border-l border-t rotate-45"></div>
-                          <h3 className="text-lg font-bold mb-3 text-primary">{pedra.title}</h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed">{pedra.description}</p>
-                        </div>
-                      </div>
+                    </div>
+                    
+                    {/* Card sempre visível */}
+                    <div className="bg-card border rounded-2xl p-6 shadow-elegant min-w-[280px] max-w-[280px] hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                      <h3 className="text-lg font-bold mb-3 text-primary">{pedra.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{pedra.description}</p>
                     </div>
                   </div>
                 ))}
