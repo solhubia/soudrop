@@ -1259,7 +1259,7 @@ const Index = () => {
                     {isAnnual && currentPlan.gold.originalPrice && <div className="text-lg text-primary-foreground/60 line-through">
                         {currentPlan.gold.originalPrice}
                       </div>}
-                    <div className="text-4xl font-bold text-primary-foreground">{currentPlan.gold.price}</div>
+                    <div className="text-4xl font-bold text-primary-foreground">12x de 397</div>
                     <div className="text-primary-foreground/80">{currentPlan.gold.period}</div>
                     {isAnnual && <div className="text-sm text-primary-foreground/80">equivalente a R$ 241/mês</div>}
                   </div>
