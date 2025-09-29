@@ -24,19 +24,19 @@ const Index = () => {
   const planData = {
     monthly: {
       basic: {
-        price: "R$ 299",
+        price: "R$ 297",
         period: "/mês",
         originalPrice: null,
         savings: null
       },
       gold: {
-        price: "R$ 399",
+        price: "R$ 549",
         period: "/mês",
         originalPrice: null,
         savings: null
       },
       diamond: {
-        price: "R$ 499",
+        price: "R$ 1.299",
         period: "/mês",
         originalPrice: null,
         savings: null
