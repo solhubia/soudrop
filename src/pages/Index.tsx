@@ -1128,7 +1128,7 @@ const Index = () => {
                   <div className="text-center">
                     <CardTitle className="text-2xl mb-2">Basic</CardTitle>
                     <div className="space-y-1">
-                      <div className="text-4xl font-bold text-primary">12x de 197</div>
+                      <div className="text-4xl font-bold text-primary">{currentPlan.basic.price}</div>
                       <div className="text-muted-foreground">{currentPlan.basic.period}</div>
                     </div>
                   </div>
@@ -1204,7 +1204,7 @@ const Index = () => {
                     {isAnnual && currentPlan.gold.originalPrice && <div className="text-lg text-primary-foreground/60 line-through">
                         {currentPlan.gold.originalPrice}
                       </div>}
-                    <div className="text-4xl font-bold text-primary-foreground">12x de 397</div>
+                    <div className="text-4xl font-bold text-primary-foreground">{currentPlan.gold.price}</div>
                     <div className="text-primary-foreground/80">{currentPlan.gold.period}</div>
                     {isAnnual && <div className="text-sm text-primary-foreground/80">equivalente a R$ 241/mês</div>}
                   </div>
@@ -1280,7 +1280,7 @@ const Index = () => {
                     {isAnnual && currentPlan.diamond.originalPrice && <div className="text-lg text-muted-foreground line-through">
                         {currentPlan.diamond.originalPrice}
                       </div>}
-                    <div className="text-4xl font-bold text-primary">12x de 797</div>
+                    <div className="text-4xl font-bold text-primary">{currentPlan.diamond.price}</div>
                     <div className="text-muted-foreground">{currentPlan.diamond.period}</div>
                     {isAnnual && <div className="text-sm text-muted-foreground">equivalente a R$ 358/mês</div>}
                   </div>
