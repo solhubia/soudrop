@@ -1335,7 +1335,7 @@ const Index = () => {
                     {isAnnual && currentPlan.diamond.originalPrice && <div className="text-lg text-muted-foreground line-through">
                         {currentPlan.diamond.originalPrice}
                       </div>}
-                    <div className="text-4xl font-bold text-primary">{currentPlan.diamond.price}</div>
+                    <div className="text-4xl font-bold text-primary">12x 797</div>
                     <div className="text-muted-foreground">{currentPlan.diamond.period}</div>
                     {isAnnual && <div className="text-sm text-muted-foreground">equivalente a R$ 358/mês</div>}
                   </div>
