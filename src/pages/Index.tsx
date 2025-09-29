@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useRef, useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram, Search, CreditCard, Settings, CheckSquare, Lock, Shield, Clock } from "lucide-react";
 import MarketplaceMarquee from "@/components/MarketplaceMarquee";
 import heroImage from "@/assets/hero-soudrop.jpg";
@@ -22,6 +23,15 @@ const Index = () => {
   const mouseFollowerRef = useRef<HTMLDivElement>(null);
   const [isAnnual, setIsAnnual] = useState(true);
   const [carouselApi, setCarouselApi] = useState<any>(null);
+  
+  // Scroll animations
+  const benefitsAnimation = useScrollAnimation();
+  const featuresAnimation = useScrollAnimation();
+  const dashboardAnimation = useScrollAnimation();
+  const comparisonAnimation = useScrollAnimation(); 
+  const videoCasesAnimation = useScrollAnimation();
+  const pricingAnimation = useScrollAnimation();
+  const faqAnimation = useScrollAnimation();
   const planData = {
     monthly: {
       basic: {
@@ -393,7 +403,7 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section ref={benefitsAnimation.ref as any} className={`py-20 bg-gradient-subtle transition-all duration-700 ${benefitsAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -402,7 +412,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
+            <Card className={`bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-elegant ${benefitsAnimation.isVisible ? 'animate-slide-left delay-100' : 'opacity-0 translate-x-8'}`}>
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
                   <ShoppingCart className="h-6 w-6 text-primary" />
@@ -416,7 +426,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
+            <Card className={`bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-elegant ${benefitsAnimation.isVisible ? 'animate-slide-up delay-200' : 'opacity-0 translate-y-8'}`}>
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
                   <Package className="h-6 w-6 text-primary" />
@@ -430,7 +440,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
+            <Card className={`bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-elegant ${benefitsAnimation.isVisible ? 'animate-slide-right delay-300' : 'opacity-0 translate-x-8'}`}>
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
                   <Truck className="h-6 w-6 text-primary" />
@@ -490,7 +500,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="funcionalidades" className="py-20">
+      <section ref={featuresAnimation.ref as any} id="funcionalidades" className={`py-20 transition-all duration-700 ${featuresAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -609,7 +619,7 @@ const Index = () => {
       <MarketplaceMarquee />
 
       {/* Sales Management Dashboard Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section ref={dashboardAnimation.ref as any} className={`py-20 bg-gradient-subtle transition-all duration-700 ${dashboardAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -772,7 +782,7 @@ const Index = () => {
       </section>
 
       {/* Comparison Section */}
-      <section className="py-20 bg-background">
+      <section ref={comparisonAnimation.ref as any} className={`py-20 bg-background transition-all duration-700 ${comparisonAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -877,7 +887,7 @@ const Index = () => {
       </section>
 
       {/* Video Cases Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section ref={videoCasesAnimation.ref as any} className={`py-20 bg-gradient-subtle transition-all duration-700 ${videoCasesAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -1250,7 +1260,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="planos" className="py-20">
+      <section ref={pricingAnimation.ref as any} id="planos" className={`py-20 transition-all duration-700 ${pricingAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -1579,7 +1589,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-gradient-subtle">
+      <section ref={faqAnimation.ref as any} id="faq" className={`py-20 bg-gradient-subtle transition-all duration-700 ${faqAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
