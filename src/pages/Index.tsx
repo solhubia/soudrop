@@ -449,7 +449,7 @@ const Index = () => {
                 <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
                   <BarChart3 className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl">Gestão Detalhada</CardTitle>
+                <CardTitle className="text-xl">Dashboard Intuitivo</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
