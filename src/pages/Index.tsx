@@ -467,7 +467,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Com nossa base em Hong Kong, importe produtos com os melhores preços do mercado, sem margem de lucro da nossa parte.
+                  Participe de importações em container compartilhado e aumente sua margem de lucro com produtos direto da China.
                 </CardDescription>
               </CardContent>
             </Card>
