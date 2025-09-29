@@ -1625,6 +1625,42 @@ const Index = () => {
                   Aceitamos pagamentos por cartão de crédito, boleto bancário e transferências. A cobrança é feita mensal ou anualmente, dependendo do plano escolhido.
                 </AccordionContent>
               </AccordionItem>
+
+              <AccordionItem value="item-5" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="text-lg font-semibold">Sou iniciante, a Soudrop serve pra mim?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground pt-2">
+                  Sim! A Soudrop foi criada pensando especialmente em iniciantes no e-commerce. Nossa plataforma oferece todo o suporte necessário para você começar do zero, com produtos prontos, integrações automáticas e suporte especializado.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="text-lg font-semibold">Sou empresário, a Soudrop me atende?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground pt-2">
+                  Perfeitamente! Nossos planos são escaláveis e atendem desde iniciantes até empresários experientes. Oferecemos soluções robustas de gestão, múltiplas integrações e suporte logístico completo para expandir seu negócio.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="text-lg font-semibold">Quero só fornecedor, como funciona?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground pt-2">
+                  Você pode acessar nossa rede de fornecedores através dos planos superiores. Temos catálogos completos com produtos nacionais e importados, incluindo acesso direto a fornecedores da China com preços diferenciados.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-8" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="text-lg font-semibold">Posso cadastrar meus próprios SKUs?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground pt-2">
+                  Sim! Além do nosso catálogo, você pode cadastrar seus próprios produtos e SKUs. A plataforma permite gestão completa do seu inventário pessoal junto com os produtos do nosso catálogo.
+                </AccordionContent>
+              </AccordionItem>
             </Accordion>
           </div>
         </div>
