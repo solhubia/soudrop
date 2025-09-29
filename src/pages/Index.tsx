@@ -44,19 +44,19 @@ const Index = () => {
     },
     annual: {
       basic: {
-        price: "R$ 2.390",
+        price: "12x de 197",
         period: "/ano",
         originalPrice: "R$ 3.588",
         savings: "33%"
       },
       gold: {
-        price: "R$ 2.899",
+        price: "12x de 397",
         period: "/ano",
         originalPrice: "R$ 4.788",
         savings: "39%"
       },
       diamond: {
-        price: "R$ 4.299",
+        price: "12x de 797",
         period: "/ano",
         originalPrice: "R$ 5.988",
         savings: "28%"
