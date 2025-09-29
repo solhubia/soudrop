@@ -891,7 +891,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Quem faz parte, aprova</span>
+              Quem faz parte, <span className="bg-gradient-primary bg-clip-text text-transparent">aprova</span>
             </h2>
           </div>
 
