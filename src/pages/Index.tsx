@@ -258,6 +258,124 @@ const Index = () => {
         </div>
       </section>
 
+      {/* 7 Pedras Section */}
+      <section className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              O Caminho das <span className="gradient-dynamic-text">7 Pedras</span> para Vender Online
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Um método testado e aprovado que guia você passo a passo desde o início até se tornar um empresário de sucesso
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Primeira Pedra */}
+              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">1</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-primary">Incentivo Inicial</h3>
+                <p className="text-muted-foreground">
+                  Te ajudamos a montar sua loja, conectar aos marketplaces e instalar as ferramentas certas. Tudo pronto para começar sem dor de cabeça.
+                </p>
+              </div>
+
+              {/* Segunda Pedra */}
+              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">2</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-primary">Dinheiro no Bolso</h3>
+                <p className="text-muted-foreground">
+                  Com tudo no ar, o foco é vender. Te damos acesso às técnicas que fazem nossos membros faturarem milhões todos os meses.
+                </p>
+              </div>
+
+              {/* Terceira Pedra */}
+              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">3</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-primary">Produtos Validados</h3>
+                <p className="text-muted-foreground">
+                  Com as técnicas certas, você precisa saber o que vender. Te damos acesso a mais de 1.400 produtos já testados, com preço de custo direto da China.
+                </p>
+              </div>
+
+              {/* Quarta Pedra */}
+              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">4</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-primary">Sua Venda, Nosso Envio</h3>
+                <p className="text-muted-foreground">
+                  Depois da venda, é necessário entregar o produto. Mas nós cuidamos disso. Você vende, e nós cuidamos do rest: separamos, embalamos e enviamos.
+                </p>
+              </div>
+
+              {/* Quinta Pedra */}
+              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">5</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-primary">Descomplicando</h3>
+                <p className="text-muted-foreground">
+                  Com muitas vendas acontecendo, fica difícil acompanhar tudo. Desenvolvemos um painel simples que mostra todas as métricas de forma intuitiva.
+                </p>
+              </div>
+
+              {/* Sexta Pedra */}
+              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">6</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-primary">Seja um Empresário</h3>
+                <p className="text-muted-foreground">
+                  Com o dinheiro entrando, chegou a hora de crescer. Te ajudamos a abrir seu CNPJ e organizar sua contabilidade para criar sua empresa com facilidade.
+                </p>
+              </div>
+
+              {/* Sétima Pedra */}
+              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">7</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-primary">Aumentando o Lucro</h3>
+                <p className="text-muted-foreground">
+                  Participe de importações em container compartilhado e aumente sua margem de lucro com produtos direto da China - você faz o pedido, nós importamos.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Button variant="hero" size="lg" asChild>
+                <a href="#planos">
+                  <ArrowRight className="mr-2 h-5 w-5" />
+                  Começar Minha Jornada
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
