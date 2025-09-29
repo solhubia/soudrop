@@ -259,8 +259,14 @@ const Index = () => {
       </section>
 
       {/* 7 Pedras Section */}
-      <section className="py-20 bg-gradient-subtle">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-gradient-subtle relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               O Caminho das <span className="gradient-dynamic-text">7 Pedras</span> para Vender Online
@@ -270,101 +276,156 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Primeira Pedra */}
-              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">1</span>
+          {/* Caminho das Pedras */}
+          <div className="max-w-7xl mx-auto">
+            {/* Desktop Layout */}
+            <div className="hidden lg:block relative">
+              {/* Linha do caminho */}
+              <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary/20 via-primary/60 to-primary/20 rounded-full transform -translate-y-1/2 z-0"></div>
+              
+              <div className="grid grid-cols-7 gap-4 relative z-10">
+                {[
+                  {
+                    number: 1,
+                    title: "Incentivo Inicial",
+                    description: "Te ajudamos a montar sua loja, conectar aos marketplaces e instalar as ferramentas certas.",
+                    color: "from-emerald-400 to-emerald-600"
+                  },
+                  {
+                    number: 2,
+                    title: "Dinheiro no Bolso", 
+                    description: "Te damos acesso às técnicas que fazem nossos membros faturarem milhões todos os meses.",
+                    color: "from-blue-400 to-blue-600"
+                  },
+                  {
+                    number: 3,
+                    title: "Produtos Validados",
+                    description: "Acesso a mais de 1.400 produtos já testados, com preço de custo direto da China.",
+                    color: "from-purple-400 to-purple-600"
+                  },
+                  {
+                    number: 4,
+                    title: "Sua Venda, Nosso Envio",
+                    description: "Você vende, e nós cuidamos do resto: separamos, embalamos e enviamos.",
+                    color: "from-amber-400 to-amber-600"
+                  },
+                  {
+                    number: 5,
+                    title: "Descomplicando",
+                    description: "Painel simples que mostra todas as métricas de forma intuitiva.",
+                    color: "from-rose-400 to-rose-600"
+                  },
+                  {
+                    number: 6,
+                    title: "Seja um Empresário",
+                    description: "Te ajudamos a abrir seu CNPJ e organizar sua contabilidade.",
+                    color: "from-indigo-400 to-indigo-600"
+                  },
+                  {
+                    number: 7,
+                    title: "Aumentando o Lucro",
+                    description: "Participe de importações em container compartilhado.",
+                    color: "from-teal-400 to-teal-600"
+                  }
+                ].map((pedra, index) => (
+                  <div key={pedra.number} className={`flex flex-col items-center ${index % 2 === 0 ? 'mt-0' : 'mt-20'}`}>
+                    {/* Pedra */}
+                    <div className="group relative mb-6">
+                      <div className={`w-20 h-20 bg-gradient-to-br ${pedra.color} rounded-[40%_60%_70%_30%/60%_30%_70%_40%] shadow-2xl transform rotate-12 hover:rotate-0 transition-all duration-500 hover:shadow-elegant group-hover:scale-110 cursor-pointer relative overflow-hidden`}>
+                        {/* Brilho da pedra */}
+                        <div className="absolute inset-0 bg-gradient-to-tr from-white/30 via-transparent to-transparent rounded-[40%_60%_70%_30%/60%_30%_70%_40%]"></div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="text-white font-bold text-lg drop-shadow-lg">{pedra.number}</span>
+                        </div>
+                      </div>
+                      
+                      {/* Tooltip Card */}
+                      <div className="absolute left-1/2 transform -translate-x-1/2 top-24 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-20">
+                        <div className="bg-card border rounded-2xl p-6 shadow-elegant min-w-[280px] max-w-[280px]">
+                          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-card border-l border-t rotate-45"></div>
+                          <h3 className="text-lg font-bold mb-3 text-primary">{pedra.title}</h3>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{pedra.description}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-primary">Incentivo Inicial</h3>
-                <p className="text-muted-foreground">
-                  Te ajudamos a montar sua loja, conectar aos marketplaces e instalar as ferramentas certas. Tudo pronto para começar sem dor de cabeça.
-                </p>
-              </div>
-
-              {/* Segunda Pedra */}
-              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">2</span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-primary">Dinheiro no Bolso</h3>
-                <p className="text-muted-foreground">
-                  Com tudo no ar, o foco é vender. Te damos acesso às técnicas que fazem nossos membros faturarem milhões todos os meses.
-                </p>
-              </div>
-
-              {/* Terceira Pedra */}
-              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">3</span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-primary">Produtos Validados</h3>
-                <p className="text-muted-foreground">
-                  Com as técnicas certas, você precisa saber o que vender. Te damos acesso a mais de 1.400 produtos já testados, com preço de custo direto da China.
-                </p>
-              </div>
-
-              {/* Quarta Pedra */}
-              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">4</span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-primary">Sua Venda, Nosso Envio</h3>
-                <p className="text-muted-foreground">
-                  Depois da venda, é necessário entregar o produto. Mas nós cuidamos disso. Você vende, e nós cuidamos do rest: separamos, embalamos e enviamos.
-                </p>
-              </div>
-
-              {/* Quinta Pedra */}
-              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">5</span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-primary">Descomplicando</h3>
-                <p className="text-muted-foreground">
-                  Com muitas vendas acontecendo, fica difícil acompanhar tudo. Desenvolvemos um painel simples que mostra todas as métricas de forma intuitiva.
-                </p>
-              </div>
-
-              {/* Sexta Pedra */}
-              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">6</span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-primary">Seja um Empresário</h3>
-                <p className="text-muted-foreground">
-                  Com o dinheiro entrando, chegou a hora de crescer. Te ajudamos a abrir seu CNPJ e organizar sua contabilidade para criar sua empresa com facilidade.
-                </p>
-              </div>
-
-              {/* Sétima Pedra */}
-              <div className="group bg-card border rounded-3xl p-8 hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
-                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">7</span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-primary">Aumentando o Lucro</h3>
-                <p className="text-muted-foreground">
-                  Participe de importações em container compartilhado e aumente sua margem de lucro com produtos direto da China - você faz o pedido, nós importamos.
-                </p>
+                ))}
               </div>
             </div>
 
-            <div className="text-center mt-12">
+            {/* Mobile Layout */}
+            <div className="lg:hidden space-y-8">
+              {[
+                {
+                  number: 1,
+                  title: "Incentivo Inicial",
+                  description: "Te ajudamos a montar sua loja, conectar aos marketplaces e instalar as ferramentas certas. Tudo pronto para começar sem dor de cabeça.",
+                  color: "from-emerald-400 to-emerald-600"
+                },
+                {
+                  number: 2,
+                  title: "Dinheiro no Bolso", 
+                  description: "Com tudo no ar, o foco é vender. Te damos acesso às técnicas que fazem nossos membros faturarem milhões todos os meses.",
+                  color: "from-blue-400 to-blue-600"
+                },
+                {
+                  number: 3,
+                  title: "Produtos Validados",
+                  description: "Com as técnicas certas, você precisa saber o que vender. Te damos acesso a mais de 1.400 produtos já testados, com preço de custo direto da China.",
+                  color: "from-purple-400 to-purple-600"
+                },
+                {
+                  number: 4,
+                  title: "Sua Venda, Nosso Envio",
+                  description: "Depois da venda, é necessário entregar o produto. Mas nós cuidamos disso. Você vende, e nós cuidamos do resto: separamos, embalamos e enviamos.",
+                  color: "from-amber-400 to-amber-600"
+                },
+                {
+                  number: 5,
+                  title: "Descomplicando",
+                  description: "Com muitas vendas acontecendo, fica difícil acompanhar tudo. Desenvolvemos um painel simples que mostra todas as métricas de forma intuitiva.",
+                  color: "from-rose-400 to-rose-600"
+                },
+                {
+                  number: 6,
+                  title: "Seja um Empresário",
+                  description: "Com o dinheiro entrando, chegou a hora de crescer. Te ajudamos a abrir seu CNPJ e organizar sua contabilidade para criar sua empresa com facilidade.",
+                  color: "from-indigo-400 to-indigo-600"
+                },
+                {
+                  number: 7,
+                  title: "Aumentando o Lucro",
+                  description: "Participe de importações em container compartilhado e aumente sua margem de lucro com produtos direto da China - você faz o pedido, nós importamos.",
+                  color: "from-teal-400 to-teal-600"
+                }
+              ].map((pedra, index) => (
+                <div key={pedra.number} className="flex items-start gap-6 group">
+                  {/* Pedra Mobile */}
+                  <div className="flex-shrink-0 relative">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${pedra.color} rounded-[40%_60%_70%_30%/60%_30%_70%_40%] shadow-2xl transform rotate-12 group-hover:rotate-0 transition-all duration-500 hover:shadow-elegant group-hover:scale-110 relative overflow-hidden`}>
+                      {/* Brilho da pedra */}
+                      <div className="absolute inset-0 bg-gradient-to-tr from-white/30 via-transparent to-transparent rounded-[40%_60%_70%_30%/60%_30%_70%_40%]"></div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-white font-bold text-sm drop-shadow-lg">{pedra.number}</span>
+                      </div>
+                    </div>
+                    
+                    {/* Linha conectora */}
+                    {index < 6 && (
+                      <div className="absolute left-1/2 top-16 w-0.5 h-8 bg-gradient-to-b from-primary/60 to-primary/20 transform -translate-x-1/2"></div>
+                    )}
+                  </div>
+                  
+                  {/* Conteúdo */}
+                  <div className="bg-card border rounded-2xl p-6 flex-1 group-hover:shadow-elegant transition-all duration-300">
+                    <h3 className="text-xl font-bold mb-3 text-primary">{pedra.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{pedra.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-16">
               <Button variant="hero" size="lg" asChild>
                 <a href="#planos">
                   <ArrowRight className="mr-2 h-5 w-5" />
