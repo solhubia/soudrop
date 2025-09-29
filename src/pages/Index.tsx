@@ -8,6 +8,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram, Search, CreditCard, Settings, CheckSquare, Lock, Shield, Clock } from "lucide-react";
 import MarketplaceMarquee from "@/components/MarketplaceMarquee";
 import heroImage from "@/assets/hero-soudrop.jpg";
+import videoCover from "@/assets/video-cover.png";
 import pcImage from "@/assets/pc.png";
 import dashboardPreview from "@/assets/dashboard-preview.png";
 import mlLogo from "@/assets/ml-logo.png";
@@ -376,7 +377,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-1 lg:order-1">
-              <video src="https://soudropbrasil.com.br/wp-content/uploads/2025/07/Soudrop-final-2.mp4" controls playsInline className="w-full h-auto rounded-2xl shadow-elegant">
+              <video src="https://soudropbrasil.com.br/wp-content/uploads/2025/07/Soudrop-final-2.mp4" poster={videoCover} controls playsInline className="w-full h-auto rounded-2xl shadow-elegant">
                 Seu navegador não suporta vídeos.
               </video>
             </div>
