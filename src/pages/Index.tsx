@@ -81,7 +81,6 @@ const Index = () => {
   // Auto-scroll carousel
   useEffect(() => {
     if (!carouselApi) return;
-
     const interval = setInterval(() => {
       if (carouselApi.canScrollNext()) {
         carouselApi.scrollNext();
@@ -164,36 +163,43 @@ const Index = () => {
             {/* Logo Carousel */}
             <div className="mt-16 animate-fade-in">
               <p className="text-sm text-gray-400 text-center mb-8">Integrações disponíveis</p>
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                setApi={setCarouselApi}
-                className="w-full max-w-5xl mx-auto"
-              >
+              <Carousel opts={{
+              align: "start",
+              loop: true
+            }} setApi={setCarouselApi} className="w-full max-w-5xl mx-auto">
                 <CarouselContent className="flex items-center -ml-2 md:-ml-4">
-                  {[
-                    { src: blingLogo, alt: "Bling", name: "Bling" },
-                    { src: madeiraMadeiraLogo, alt: "MadeiraMadeira", name: "MadeiraMadeira" },
-                    { src: magaluLogo, alt: "Magalu", name: "Magalu" },
-                    { src: mlLogo, alt: "Mercado Livre", name: "Mercado Livre" },
-                    { src: shopeeLogo, alt: "Shopee", name: "Shopee" },
-                    { src: tiktokLogo, alt: "TikTok", name: "TikTok" },
-                  ].map((logo, index) => (
-                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  {[{
+                  src: blingLogo,
+                  alt: "Bling",
+                  name: "Bling"
+                }, {
+                  src: madeiraMadeiraLogo,
+                  alt: "MadeiraMadeira",
+                  name: "MadeiraMadeira"
+                }, {
+                  src: magaluLogo,
+                  alt: "Magalu",
+                  name: "Magalu"
+                }, {
+                  src: mlLogo,
+                  alt: "Mercado Livre",
+                  name: "Mercado Livre"
+                }, {
+                  src: shopeeLogo,
+                  alt: "Shopee",
+                  name: "Shopee"
+                }, {
+                  src: tiktokLogo,
+                  alt: "TikTok",
+                  name: "TikTok"
+                }].map((logo, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                       <div className="flex flex-col items-center justify-center p-4 h-24">
                         <div className="h-14 w-24 flex items-center justify-center mb-2">
-                          <img 
-                            src={logo.src} 
-                            alt={logo.alt}
-                            className="max-h-full max-w-full object-contain opacity-60 filter grayscale"
-                          />
+                          <img src={logo.src} alt={logo.alt} className="max-h-full max-w-full object-contain opacity-60 filter grayscale" />
                         </div>
                         <span className="text-xs text-gray-400 text-center font-medium">{logo.name}</span>
                       </div>
-                    </CarouselItem>
-                  ))}
+                    </CarouselItem>)}
                 </CarouselContent>
               </Carousel>
             </div>
@@ -206,12 +212,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-1 lg:order-1">
-              <video 
-                src="https://soudropbrasil.com.br/wp-content/uploads/2025/07/Soudrop-final-2.mp4"
-                controls
-                playsInline
-                className="w-full h-auto rounded-2xl shadow-elegant"
-              >
+              <video src="https://soudropbrasil.com.br/wp-content/uploads/2025/07/Soudrop-final-2.mp4" controls playsInline className="w-full h-auto rounded-2xl shadow-elegant">
                 Seu navegador não suporta vídeos.
               </video>
             </div>
@@ -471,11 +472,7 @@ const Index = () => {
           <div className="mb-16">
             <div className="max-w-6xl mx-auto">
               <div className="relative rounded-2xl overflow-hidden shadow-elegant border border-primary/20 bg-gradient-card">
-                <img 
-                  src={dashboardPreview} 
-                  alt="Dashboard Soudrop mostrando métricas detalhadas de vendas em tempo real"
-                  className="w-full h-auto"
-                />
+                <img src={dashboardPreview} alt="Dashboard Soudrop mostrando métricas detalhadas de vendas em tempo real" className="w-full h-auto" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none"></div>
               </div>
             </div>
@@ -735,27 +732,17 @@ const Index = () => {
           </div>
 
           <div className="relative">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full max-w-6xl mx-auto"
-            >
+            <Carousel opts={{
+            align: "start",
+            loop: true
+          }} className="w-full max-w-6xl mx-auto">
               <CarouselContent className="flex items-center -ml-2 md:-ml-4">
                 {/* Video Case 1 */}
                 <CarouselItem className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <Card className="bg-gradient-card border-primary/20 overflow-hidden">
                     <CardContent className="p-0">
                       <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/S684xH3HM90"
-                          title="Case 1"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        <iframe src="https://www.youtube.com/embed/S684xH3HM90" title="Case 1" className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                       </div>
                     </CardContent>
                   </Card>
@@ -766,14 +753,7 @@ const Index = () => {
                   <Card className="bg-gradient-card border-primary/20 overflow-hidden">
                     <CardContent className="p-0">
                       <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/i_CJm-spTns"
-                          title="Case 2"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        <iframe src="https://www.youtube.com/embed/i_CJm-spTns" title="Case 2" className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                       </div>
                     </CardContent>
                   </Card>
@@ -784,14 +764,7 @@ const Index = () => {
                   <Card className="bg-gradient-card border-primary/20 overflow-hidden">
                     <CardContent className="p-0">
                       <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/LCkqdMEERSU"
-                          title="Case 3"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        <iframe src="https://www.youtube.com/embed/LCkqdMEERSU" title="Case 3" className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                       </div>
                     </CardContent>
                   </Card>
@@ -802,14 +775,7 @@ const Index = () => {
                   <Card className="bg-gradient-card border-primary/20 overflow-hidden">
                     <CardContent className="p-0">
                       <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/eT7fWX4KYIo"
-                          title="Case 4"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        <iframe src="https://www.youtube.com/embed/eT7fWX4KYIo" title="Case 4" className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                       </div>
                     </CardContent>
                   </Card>
@@ -820,14 +786,7 @@ const Index = () => {
                   <Card className="bg-gradient-card border-primary/20 overflow-hidden">
                     <CardContent className="p-0">
                       <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/EUA6NEXaRxw"
-                          title="Case 5"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        <iframe src="https://www.youtube.com/embed/EUA6NEXaRxw" title="Case 5" className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                       </div>
                     </CardContent>
                   </Card>
@@ -838,14 +797,7 @@ const Index = () => {
                   <Card className="bg-gradient-card border-primary/20 overflow-hidden">
                     <CardContent className="p-0">
                       <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/xRTvE_eypKo"
-                          title="Case 6"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        <iframe src="https://www.youtube.com/embed/xRTvE_eypKo" title="Case 6" className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                       </div>
                     </CardContent>
                   </Card>
@@ -856,14 +808,7 @@ const Index = () => {
                   <Card className="bg-gradient-card border-primary/20 overflow-hidden">
                     <CardContent className="p-0">
                       <div className="aspect-video">
-                        <iframe
-                          src="https://www.youtube.com/embed/gOU3AVRrdbs"
-                          title="Case 7"
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        <iframe src="https://www.youtube.com/embed/gOU3AVRrdbs" title="Case 7" className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                       </div>
                     </CardContent>
                   </Card>
@@ -1335,7 +1280,7 @@ const Index = () => {
                     {isAnnual && currentPlan.diamond.originalPrice && <div className="text-lg text-muted-foreground line-through">
                         {currentPlan.diamond.originalPrice}
                       </div>}
-                    <div className="text-4xl font-bold text-primary">12x 797</div>
+                    <div className="text-4xl font-bold text-primary">12x de 797</div>
                     <div className="text-muted-foreground">{currentPlan.diamond.period}</div>
                     {isAnnual && <div className="text-sm text-muted-foreground">equivalente a R$ 358/mês</div>}
                   </div>
