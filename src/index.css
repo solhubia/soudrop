@@ -43,6 +43,7 @@
     --gradient-hero: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 71% 35%) 50%, hsl(210 11% 6%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(210 11% 8%), hsl(210 11% 12%));
     --gradient-subtle: linear-gradient(180deg, hsl(210 11% 6%), hsl(210 11% 8%));
+    --gradient-dynamic: linear-gradient(45deg, hsl(142 71% 45%), hsl(142 71% 55%), hsl(142 71% 65%), hsl(142 71% 45%));
     
     /* Shadows with green glow */
     --shadow-glow: 0 0 40px hsl(142 71% 45% / 0.3);
@@ -125,6 +126,15 @@
   .hover-scale {
     @apply transition-transform duration-300 hover:scale-105;
   }
+  
+  .gradient-dynamic-text {
+    background: var(--gradient-dynamic);
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @keyframes marquee {
@@ -133,6 +143,15 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 
