@@ -289,7 +289,7 @@ const Index = () => {
                 {
                   number: 2,
                   title: "Dinheiro no Bolso", 
-                  description: "Com tudo no ar, o foco é vender. Liberamos acesso às técnicas que fazem nossos membros faturarem milhões todos os meses.",
+                  description: "Com tudo no ar, o foco é vender. Disponibilizamos as técnicas que fazem nossos membros faturarem milhões todos os meses.",
                   color: "from-blue-400 to-blue-600"
                 },
                 {
