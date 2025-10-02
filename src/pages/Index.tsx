@@ -1349,9 +1349,11 @@ const Index = () => {
                        <span className="text-sm text-muted-foreground">Importação direta da China</span>
                      </li>
                    </ul>
-                  <Button variant="outline" size="lg" className="w-full mt-6">
-                    Começar Agora
-                  </Button>
+                   <Button variant="outline" size="lg" className="w-full mt-6" asChild>
+                     <a href="https://pay.kiwify.com.br/4nJOn5Y" target="_blank" rel="noopener noreferrer">
+                       Começar Agora
+                     </a>
+                   </Button>
                 </CardContent>
               </Card>
 
