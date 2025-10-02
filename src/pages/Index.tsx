@@ -24,12 +24,12 @@ const Index = () => {
   const mouseFollowerRef = useRef<HTMLDivElement>(null);
   const [isAnnual, setIsAnnual] = useState(true);
   const [carouselApi, setCarouselApi] = useState<any>(null);
-  
+
   // Scroll animations
   const benefitsAnimation = useScrollAnimation();
   const featuresAnimation = useScrollAnimation();
   const dashboardAnimation = useScrollAnimation();
-  const comparisonAnimation = useScrollAnimation(); 
+  const comparisonAnimation = useScrollAnimation();
   const videoCasesAnimation = useScrollAnimation();
   const pricingAnimation = useScrollAnimation();
   const faqAnimation = useScrollAnimation();
@@ -226,11 +226,7 @@ const Index = () => {
               </div>
               
               <div className="max-w-4xl mx-auto">
-                <img 
-                  src={careerPathIllustration} 
-                  alt="Caminho do iniciante ao empresário" 
-                  className="w-full h-auto rounded-2xl shadow-elegant"
-                />
+                <img src={careerPathIllustration} alt="Caminho do iniciante ao empresário" className="w-full h-auto rounded-2xl shadow-elegant" />
               </div>
               
               <div className="grid md:grid-cols-3 gap-8 mt-12 max-w-4xl mx-auto">
@@ -290,51 +286,42 @@ const Index = () => {
           {/* Caminho das Pedras */}
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
-              {[
-                {
-                  number: 1,
-                  title: "Incentivo Inicial",
-                  description: "Te ajudamos a montar sua loja, conectar aos marketplaces e instalar as ferramentas certas. Tudo pronto para começar sem dor de cabeça.",
-                  color: "from-emerald-400 to-emerald-600"
-                },
-                {
-                  number: 2,
-                  title: "Dinheiro no Bolso", 
-                  description: "Com tudo no ar, o foco é vender. Disponibilizamos as técnicas que fazem nossos membros faturarem milhões todos os meses.",
-                  color: "from-blue-400 to-blue-600"
-                },
-                {
-                  number: 3,
-                  title: "Produtos Validados",
-                  description: "Com as técnicas certas, você precisa saber o que vender. Tenha acesso a mais de 1.400 produtos já testados, com preço de custo direto da China.",
-                  color: "from-purple-400 to-purple-600"
-                },
-                {
-                  number: 4,
-                  title: "Sua Venda, Nosso Envio",
-                  description: "Depois da venda, é necessário entregar o produto. Mas nós cuidamos disso. Você vende, e nós cuidamos do resto: separamos, embalamos e enviamos.",
-                  color: "from-amber-400 to-amber-600"
-                },
-                {
-                  number: 5,
-                  title: "Descomplicando",
-                  description: "Com muitas vendas acontecendo, fica difícil acompanhar tudo. Desenvolvemos um painel simples que mostra todas as métricas de forma intuitiva.",
-                  color: "from-rose-400 to-rose-600"
-                },
-                {
-                  number: 6,
-                  title: "Seja um Empresário",
-                  description: "Com o dinheiro entrando, chegou a hora de crescer. Te ajudamos a abrir seu CNPJ e organizar sua contabilidade para criar sua empresa com facilidade.",
-                  color: "from-indigo-400 to-indigo-600"
-                },
-                {
-                  number: 7,
-                  title: "Aumentando o Lucro",
-                  description: "Participe de importações em container compartilhado e aumente sua margem de lucro com produtos direto da China - você faz o pedido, nós importamos.",
-                  color: "from-teal-400 to-teal-600"
-                }
-              ].map((pedra, index) => (
-                <div key={pedra.number} className="flex items-start gap-6 group">
+              {[{
+              number: 1,
+              title: "Incentivo Inicial",
+              description: "Te ajudamos a montar sua loja, conectar aos marketplaces e instalar as ferramentas certas. Tudo pronto para começar sem dor de cabeça.",
+              color: "from-emerald-400 to-emerald-600"
+            }, {
+              number: 2,
+              title: "Dinheiro no Bolso",
+              description: "Com tudo no ar, o foco é vender. Disponibilizamos as técnicas que fazem nossos membros faturarem milhões todos os meses.",
+              color: "from-blue-400 to-blue-600"
+            }, {
+              number: 3,
+              title: "Produtos Validados",
+              description: "Com as técnicas certas, você precisa saber o que vender. Tenha acesso a mais de 1.400 produtos já testados, com preço de custo direto da China.",
+              color: "from-purple-400 to-purple-600"
+            }, {
+              number: 4,
+              title: "Sua Venda, Nosso Envio",
+              description: "Depois da venda, é necessário entregar o produto. Mas nós cuidamos disso. Você vende, e nós cuidamos do resto: separamos, embalamos e enviamos.",
+              color: "from-amber-400 to-amber-600"
+            }, {
+              number: 5,
+              title: "Descomplicando",
+              description: "Com muitas vendas acontecendo, fica difícil acompanhar tudo. Desenvolvemos um painel simples que mostra todas as métricas de forma intuitiva.",
+              color: "from-rose-400 to-rose-600"
+            }, {
+              number: 6,
+              title: "Seja um Empresário",
+              description: "Com o dinheiro entrando, chegou a hora de crescer. Te ajudamos a abrir seu CNPJ e organizar sua contabilidade para criar sua empresa com facilidade.",
+              color: "from-indigo-400 to-indigo-600"
+            }, {
+              number: 7,
+              title: "Aumentando o Lucro",
+              description: "Participe de importações em container compartilhado e aumente sua margem de lucro com produtos direto da China - você faz o pedido, nós importamos.",
+              color: "from-teal-400 to-teal-600"
+            }].map((pedra, index) => <div key={pedra.number} className="flex items-start gap-6 group">
                   {/* Pedra */}
                   <div className="flex-shrink-0 relative">
                     <div className={`w-16 h-16 bg-gradient-to-br ${pedra.color} rounded-[40%_60%_70%_30%/60%_30%_70%_40%] shadow-2xl transform rotate-12 group-hover:rotate-0 transition-all duration-500 hover:shadow-elegant group-hover:scale-110 relative overflow-hidden`}>
@@ -346,9 +333,7 @@ const Index = () => {
                     </div>
                     
                     {/* Linha conectora */}
-                    {index < 6 && (
-                      <div className="absolute left-1/2 top-16 w-0.5 h-8 bg-gradient-to-b from-primary/60 to-primary/20 transform -translate-x-1/2"></div>
-                    )}
+                    {index < 6 && <div className="absolute left-1/2 top-16 w-0.5 h-8 bg-gradient-to-b from-primary/60 to-primary/20 transform -translate-x-1/2"></div>}
                   </div>
                   
                   {/* Conteúdo */}
@@ -356,8 +341,7 @@ const Index = () => {
                     <h3 className="text-xl font-bold mb-3 text-primary">{pedra.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{pedra.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="text-center mt-16">
@@ -1302,7 +1286,7 @@ const Index = () => {
                    <ul className="space-y-3">
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Integrações com marketplaces</span>
+                       <span className="text-sm">Integrações com 2 marketplaces</span>
                      </li>
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
