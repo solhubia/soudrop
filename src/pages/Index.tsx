@@ -1365,7 +1365,7 @@ const Index = () => {
                  <ul className="space-y-3">
                    <li className="flex items-center">
                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Integrações com marketplaces</span>
+                     <span className="text-sm text-primary-foreground">Integrações com 5 marketplaces</span>
                    </li>
                    <li className="flex items-center">
                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
@@ -1441,7 +1441,7 @@ const Index = () => {
                  <ul className="space-y-3">
                    <li className="flex items-center">
                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                     <span className="text-sm">Integrações com marketplaces</span>
+                     <span className="text-sm">Integrações ILIMITADAS com marketplaces</span>
                    </li>
                    <li className="flex items-center">
                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
