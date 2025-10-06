@@ -1,3 +1,4 @@
+import "../index.css";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -39,39 +40,45 @@ const Index = () => {
         price: "R$ 297",
         period: "/mês",
         originalPrice: null,
-        savings: null
+        savings: null,
+        link: "https://pay.kiwify.com.br/iX6YTpV"
       },
-      gold: {
+      pro: {
         price: "R$ 549",
         period: "/mês",
         originalPrice: null,
-        savings: null
+        savings: null,
+        link: "https://pay.kiwify.com.br/4U6QDHh"
       },
-      diamond: {
+      premium: {
         price: "R$ 1.299",
         period: "/mês",
         originalPrice: null,
-        savings: null
+        savings: null,
+        link: "https://pay.kiwify.com.br/yJ381De"
       }
     },
     annual: {
       basic: {
         price: "12x de 197",
         period: "/ano",
-        originalPrice: "R$ 3.588",
-        savings: "33%"
+        originalPrice: "R$ 3.564",
+        savings: "33%",
+        link: "https://pay.kiwify.com.br/ugbezvy"
       },
-      gold: {
+      pro: {
         price: "12x de 397",
         period: "/ano",
-        originalPrice: "R$ 4.788",
-        savings: "39%"
+        originalPrice: "R$ 6.588",
+        savings: "27%",
+        link: "https://pay.kiwify.com.br/eNU8PpO"
       },
-      diamond: {
+      premium: {
         price: "12x de 797",
         period: "/ano",
-        originalPrice: "R$ 5.988",
-        savings: "28%"
+        originalPrice: "R$ 15.588",
+        savings: "38%",
+        link: "https://pay.kiwify.com.br/Mf2g854"
       }
     }
   };
@@ -105,34 +112,46 @@ const Index = () => {
   }, [carouselApi]);
   return <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-background/90 backdrop-blur-lg border-b border-border z-50">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Soudrop
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#funcionalidades" className="text-foreground hover:text-primary transition-colors">
-                Funcionalidades
-              </a>
-              <a href="#planos" className="text-foreground hover:text-primary transition-colors">
-                Planos
-              </a>
-              <a href="#faq" className="text-foreground hover:text-primary transition-colors">
-                FAQ
+      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-border z-50 transition-all duration-300">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="relative flex h-16 items-center">
+            
+            {/* Left side: Logo */}
+            <div className="flex-shrink-0">
+              <a href="#" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                SouDrop
               </a>
             </div>
-            <div className="flex gap-3">
-              <Button variant="outline" size="lg" asChild>
-                <a href="https://app2.soudrop.com.br/login" target="_blank" rel="noopener noreferrer">
-                  Entrar
+
+            {/* Center: Navigation Links (Absolutely Centered) */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+              <div className="hidden md:flex items-center space-x-8">
+                <a href="#funcionalidades" className="text-muted-foreground hover:text-primary font-medium transition-colors">
+                  Funcionalidades
                 </a>
-              </Button>
-              <Button variant="hero" size="lg" asChild>
-                <a href="#planos">
-                  Começar
+                <a href="#planos" className="text-muted-foreground hover:text-primary font-medium transition-colors">
+                  Planos
                 </a>
-              </Button>
+                <a href="#faq" className="text-muted-foreground hover:text-primary font-medium transition-colors">
+                  FAQ
+                </a>
+              </div>
+            </div>
+
+            {/* Right side: Action Buttons */}
+            <div className="absolute inset-y-0 right-0 flex items-center">
+              <div className="flex items-center gap-3">
+                <Button variant="outline" size="default" asChild className="hidden sm:inline-flex">
+                  <a href="https://app2.soudrop.com.br/login" target="_blank" rel="noopener noreferrer">
+                    Entrar
+                  </a>
+                </Button>
+                <Button variant="hero" size="default" asChild>
+                  <a href="#planos">
+                    Começar
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -1158,11 +1177,11 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  {/* Diamond Plan Notice */}
+                  {/* Premium Plan Notice */}
                   <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full">
                     <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
                     <span className="text-sm font-medium text-green-600 dark:text-green-400">
-                      Disponível no Plano Diamond
+                      Disponível no Plano Premium
                     </span>
                   </div>
                 </div>
@@ -1265,7 +1284,7 @@ const Index = () => {
             
             {isAnnual && <div className="mt-4">
                 <Badge variant="secondary" className="bg-green-500/20 text-green-400 border-green-500/30">
-                  💰 Economize até 39% no plano anual
+                  💰 Economize até 38% no plano anual
                 </Badge>
               </div>}
           </div>
@@ -1277,6 +1296,9 @@ const Index = () => {
                   <div className="text-center">
                     <CardTitle className="text-2xl mb-2">Basic</CardTitle>
                     <div className="space-y-1">
+                      {isAnnual && currentPlan.basic.originalPrice && <div className="text-lg text-muted-foreground line-through">
+                        {currentPlan.basic.originalPrice}
+                      </div>}
                       <div className="text-4xl font-bold text-primary">{currentPlan.basic.price}</div>
                       <div className="text-muted-foreground">{currentPlan.basic.period}</div>
                     </div>
@@ -1326,22 +1348,38 @@ const Index = () => {
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
+                       <span className="text-sm text-muted-foreground">Mentoria em grupo quinzenal</span>
+                     </li>
+                     <li className="flex items-center">
+                       <X className="h-5 w-5 text-destructive mr-3" />
                        <span className="text-sm text-muted-foreground">Possibilidade de SKU próprio</span>
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
                        <span className="text-sm text-muted-foreground">Importação direta da China</span>
                      </li>
+                     <li className="flex items-center">
+                       <X className="h-5 w-5 text-destructive mr-3" />
+                       <span className="text-sm text-muted-foreground">Catálogo exclusivo</span>
+                     </li>
+                     <li className="flex items-center">
+                       <X className="h-5 w-5 text-destructive mr-3" />
+                       <span className="text-sm text-muted-foreground">3 meses de consultoria</span>
+                     </li>
+                     <li className="flex items-center">
+                       <X className="h-5 w-5 text-destructive mr-3" />
+                       <span className="text-sm text-muted-foreground">Gerente de contas</span>
+                     </li>
                    </ul>
-                   <Button variant="outline" size="lg" className="w-full mt-6" asChild>
-                     <a href="https://pay.kiwify.com.br/4nJOn5Y" target="_blank" rel="noopener noreferrer">
+                   <Button variant="glow" size="lg" className="w-full mt-6">
+                      <a href={currentPlan.basic.link} target="_blank" rel="noopener noreferrer">
                        Começar Agora
-                     </a>
-                   </Button>
+                      </a>
+                    </Button>
                 </CardContent>
               </Card>
 
-            {/* Gold Plan */}
+            {/* Pro Plan */}
             <Card className="bg-gradient-primary border-primary shadow-elegant transform scale-105 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <Badge variant="secondary" className="bg-black text-green-500">
@@ -1350,14 +1388,14 @@ const Index = () => {
               </div>
               <CardHeader>
                 <div className="text-center">
-                  <CardTitle className="text-2xl mb-2 text-primary-foreground">Gold</CardTitle>
+                  <CardTitle className="text-2xl mb-2 text-primary-foreground">Pro</CardTitle>
                   <div className="space-y-1">
-                    {isAnnual && currentPlan.gold.originalPrice && <div className="text-lg text-primary-foreground/60 line-through">
-                        {currentPlan.gold.originalPrice}
+                    {isAnnual && currentPlan.pro.originalPrice && <div className="text-lg text-primary-foreground/60 line-through">
+                        {currentPlan.pro.originalPrice}
                       </div>}
-                    <div className="text-4xl font-bold text-primary-foreground">{currentPlan.gold.price}</div>
-                    <div className="text-primary-foreground/80">{currentPlan.gold.period}</div>
-                    {isAnnual && <div className="text-sm text-primary-foreground/80">equivalente a R$ 241/mês</div>}
+                    <div className="text-4xl font-bold text-primary-foreground">{currentPlan.pro.price}</div>
+                    <div className="text-primary-foreground/80">{currentPlan.pro.period}</div>
+                    {/* {isAnnual && <div className="text-sm text-primary-foreground/80">equivalente a R$ 241/mês</div>} */}
                   </div>
                 </div>
               </CardHeader>
@@ -1369,7 +1407,7 @@ const Index = () => {
                    </li>
                    <li className="flex items-center">
                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Mais Popular</span>
+                     <span className="text-sm text-primary-foreground">Logística completa</span>
                    </li>
                    <li className="flex items-center">
                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
@@ -1387,10 +1425,7 @@ const Index = () => {
                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
                      <span className="text-sm text-primary-foreground">Publicação de anúncios em massa</span>
                    </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Contabilidade</span>
-                   </li>
+
                    <li className="flex items-center">
                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
                      <span className="text-sm text-primary-foreground">Suporte completo</span>
@@ -1404,6 +1439,10 @@ const Index = () => {
                       <span className="text-sm text-primary-foreground">Lives semanais</span>
                     </li>
                     <li className="flex items-center">
+                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
+                     <span className="text-sm text-primary-foreground">Contabilidade</span>
+                   </li>
+                    <li className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
                       <span className="text-sm text-primary-foreground">Mentoria em grupo quinzenal</span>
                     </li>
@@ -1415,27 +1454,39 @@ const Index = () => {
                       <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
                       <span className="text-sm text-primary-foreground/50">Importação direta da China</span>
                    </li>
+                   <li className="flex items-center">
+                      <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
+                      <span className="text-sm text-primary-foreground/50">Catálogo exclusivo</span>
+                   </li>
+                   <li className="flex items-center">
+                      <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
+                      <span className="text-sm text-primary-foreground/50">3 meses de consultoria</span>
+                   </li>
+                   <li className="flex items-center">
+                      <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
+                      <span className="text-sm text-primary-foreground/50">Gerente de contas</span>
+                   </li>
                  </ul>
                 <Button variant="secondary" size="lg" className="w-full mt-6" asChild>
-                  <a href="https://pay.kiwify.com.br/7poXnqZ" target="_blank" rel="noopener noreferrer">
+                  <a href={currentPlan.pro.link} target="_blank" rel="noopener noreferrer">
                     Começar Agora
                   </a>
                 </Button>
               </CardContent>
             </Card>
 
-            {/* Diamond Plan */}
+            {/* Premium Plan */}
             <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300">
               <CardHeader>
                 <div className="text-center">
-                  <CardTitle className="text-2xl mb-2">Diamond</CardTitle>
+                  <CardTitle className="text-2xl mb-2">Premium</CardTitle>
                   <div className="space-y-1">
-                    {isAnnual && currentPlan.diamond.originalPrice && <div className="text-lg text-muted-foreground line-through">
-                        {currentPlan.diamond.originalPrice}
+                    {isAnnual && currentPlan.premium.originalPrice && <div className="text-lg text-muted-foreground line-through">
+                        {currentPlan.premium.originalPrice}
                       </div>}
-                    <div className="text-4xl font-bold text-primary">{currentPlan.diamond.price}</div>
-                    <div className="text-muted-foreground">{currentPlan.diamond.period}</div>
-                    {isAnnual && <div className="text-sm text-muted-foreground">equivalente a R$ 358/mês</div>}
+                    <div className="text-4xl font-bold text-primary">{currentPlan.premium.price}</div>
+                    <div className="text-muted-foreground">{currentPlan.premium.period}</div>
+                    {/* {isAnnual && <div className="text-sm text-muted-foreground">equivalente a R$ 358/mês</div>} */}
                   </div>
                 </div>
               </CardHeader>
@@ -1465,17 +1516,10 @@ const Index = () => {
                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
                      <span className="text-sm">Publicação de anúncios em massa</span>
                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                      <span className="text-sm">Contabilidade</span>
-                   </li>
+                   
                     <li className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
                       <span className="text-sm">Suporte completo</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                      <span className="text-sm">Importação direta da China</span>
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
@@ -1485,7 +1529,11 @@ const Index = () => {
                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
                        <span className="text-sm">Lives semanais</span>
                      </li>
-                     <li className="flex items-center">
+                    <li className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                      <span className="text-sm">Contabilidade</span>
+                    </li>
+                    <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
                        <span className="text-sm">Mentoria em grupo quinzenal</span>
                      </li>
@@ -1493,9 +1541,27 @@ const Index = () => {
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
                        <span className="text-sm">Possibilidade de SKU próprio</span>
                     </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                      <span className="text-sm">Importação direta da China</span>
+                    </li>
+                    <li className="flex items-center">
+                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                     <span className="text-sm">Catálogo exclusivo</span>
+                   </li>
+                   <li className="flex items-center">
+                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                     <span className="text-sm">3 meses de consultoria</span>
+                   </li>
+                   <li className="flex items-center">
+                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                     <span className="text-sm">Gerente de contas</span>
+                   </li>
                  </ul>
                 <Button variant="glow" size="lg" className="w-full mt-6">
-                  Começar Agora
+                  <a href={currentPlan.premium.link} target="_blank" rel="noopener noreferrer">
+                    Começar Agora
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -1503,7 +1569,7 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <p className="text-lg text-muted-foreground mb-6">
-              {isAnnual ? "Aproveite um desconto de até 39% no plano anual e economize ainda mais!" : "Comece com flexibilidade no plano mensal!"}
+              {isAnnual ? "Aproveite um desconto de até 38% no plano anual e economize ainda mais!" : "Comece com flexibilidade no plano mensal!"}
             </p>
           </div>
         </div>
@@ -1603,7 +1669,7 @@ const Index = () => {
                   <span className="text-lg font-semibold">Posso importar produtos diretamente da China?</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-base text-muted-foreground pt-2">
-                  Sim! No plano Diamond, você pode importar produtos diretamente da China por meio dos nossos grupos de compra, garantindo os melhores preços.
+                  Sim! No plano Premium, você pode importar produtos diretamente da China por meio dos nossos grupos de compra, garantindo os melhores preços.
                 </AccordionContent>
               </AccordionItem>
 

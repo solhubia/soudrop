@@ -16,7 +16,7 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Linkhnjjjs */}
+          {/* Links */}
           <div className="space-y-8 max-w-lg mx-auto">
             <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <LinkCard
