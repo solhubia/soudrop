@@ -1,9 +1,9 @@
 import { LinkCard } from "@/components/LinkCard";
-import "../index_links.css";
+import "../index.css"; 
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-background">
+    <div className="min-h-screen theme-links bg-gradient-links-background font-sans">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-2xl mx-auto">
           {/* Header */}
@@ -22,7 +22,7 @@ const Index = () => {
               <LinkCard
                 title="Importe da China"
                 description="Clique aqui para fazer importação"
-                url="#"
+                url="https://4k384ufgv64.typeform.com/to/vTnWbUQI"
                 variant="red"
                 type="import"
               />
@@ -32,7 +32,7 @@ const Index = () => {
               <LinkCard
                 title="Vender sem estoque"
                 description="Acesse o site da Soudrop"
-                url="https://soudrop.com.br"
+                url="https://4k384ufgv64.typeform.com/to/rIQVeImj"
                 variant="soudrop"
                 type="website"
               />
@@ -62,3 +62,4 @@ const Index = () => {
 };
 
 export default Index;
+

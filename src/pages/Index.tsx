@@ -112,34 +112,46 @@ const Index = () => {
   }, [carouselApi]);
   return <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-background/90 backdrop-blur-lg border-b border-border z-50">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Soudrop
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#funcionalidades" className="text-foreground hover:text-primary transition-colors">
-                Funcionalidades
-              </a>
-              <a href="#planos" className="text-foreground hover:text-primary transition-colors">
-                Planos
-              </a>
-              <a href="#faq" className="text-foreground hover:text-primary transition-colors">
-                FAQ
+      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-border z-50 transition-all duration-300">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="relative flex h-16 items-center">
+            
+            {/* Left side: Logo */}
+            <div className="flex-shrink-0">
+              <a href="#" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                SouDrop
               </a>
             </div>
-            <div className="flex gap-3">
-              <Button variant="outline" size="lg" asChild>
-                <a href="https://app2.soudrop.com.br/login" target="_blank" rel="noopener noreferrer">
-                  Entrar
+
+            {/* Center: Navigation Links (Absolutely Centered) */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+              <div className="hidden md:flex items-center space-x-8">
+                <a href="#funcionalidades" className="text-muted-foreground hover:text-primary font-medium transition-colors">
+                  Funcionalidades
                 </a>
-              </Button>
-              <Button variant="hero" size="lg" asChild>
-                <a href="#planos">
-                  Começar
+                <a href="#planos" className="text-muted-foreground hover:text-primary font-medium transition-colors">
+                  Planos
                 </a>
-              </Button>
+                <a href="#faq" className="text-muted-foreground hover:text-primary font-medium transition-colors">
+                  FAQ
+                </a>
+              </div>
+            </div>
+
+            {/* Right side: Action Buttons */}
+            <div className="absolute inset-y-0 right-0 flex items-center">
+              <div className="flex items-center gap-3">
+                <Button variant="outline" size="default" asChild className="hidden sm:inline-flex">
+                  <a href="https://app2.soudrop.com.br/login" target="_blank" rel="noopener noreferrer">
+                    Entrar
+                  </a>
+                </Button>
+                <Button variant="hero" size="default" asChild>
+                  <a href="#planos">
+                    Começar
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -1359,11 +1371,11 @@ const Index = () => {
                        <span className="text-sm text-muted-foreground">Gerente de contas</span>
                      </li>
                    </ul>
-                   <Button variant="outline" size="lg" className="w-full mt-6" asChild>
-                     <a href={currentPlan.basic.link} target="_blank" rel="noopener noreferrer">
+                   <Button variant="glow" size="lg" className="w-full mt-6">
+                      <a href={currentPlan.basic.link} target="_blank" rel="noopener noreferrer">
                        Começar Agora
-                     </a>
-                   </Button>
+                      </a>
+                    </Button>
                 </CardContent>
               </Card>
 
