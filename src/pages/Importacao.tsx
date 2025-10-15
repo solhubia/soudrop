@@ -129,7 +129,7 @@ const Importacao = () => {
 
                 {/* CTA Button */}
                 <Button size="xl" className="text-lg px-12 w-full md:w-auto group" asChild>
-                  <a href="https://4k384ufgv64.typeform.com/to/vTnWbUQI" target="_blank" rel="noopener noreferrer">
+                  <a href="https://pay.kiwify.com.br/mMnqX0U" target="_blank" rel="noopener noreferrer">
                     Quero Entrar para o Clube
                     <Zap className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -201,7 +201,7 @@ const Importacao = () => {
               Garanta sua vaga no clube exclusivo por apenas R$ 297 e comece a importar com preços de atacado
             </p>
             <Button size="xl" className="text-lg px-12 w-full md:w-auto group" asChild>
-              <a href="https://4k384ufgv64.typeform.com/to/vTnWbUQI" target="_blank" rel="noopener noreferrer">
+              <a href="https://pay.kiwify.com.br/mMnqX0U" target="_blank" rel="noopener noreferrer">
                 Quero Garantir Minha Vaga
                 <Ship className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
