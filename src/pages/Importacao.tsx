@@ -57,7 +57,7 @@ const Importacao = () => {
               {[
                 {
                   icon: TrendingDown,
-                  title: "Preços de Atacado",
+                  title: "Preços de Fábrica",
                   description: "Acesso aos mesmos preços de quem importa em grande volume, mesmo comprando pouco"
                 },
                 {
