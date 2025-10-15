@@ -58,12 +58,12 @@ const Importacao = () => {
                 {
                   icon: TrendingDown,
                   title: "Preços de Fábrica",
-                  description: "Acesso aos mesmos preços de quem importa em grande volume, mesmo comprando pouco"
+                  description: "Preço de quem compra em grande volume mesmo comprando pouco, compartilhando custos de importação"
                 },
                 {
                   icon: Users,
                   title: "Compras Coletivas",
-                  description: "Junte-se a outros membros para alcançar volumes maiores e preços ainda melhores"
+                  description: "Compartilhe custos de importação em grande volume e tenha acesso a preços imbatíveis"
                 },
                 {
                   icon: Shield,
@@ -72,18 +72,18 @@ const Importacao = () => {
                 },
                 {
                   icon: Globe,
-                  title: "Rede de Contatos",
-                  description: "Conecte-se com outros importadores e compartilhe experiências"
+                  title: "Networking de Qualidade",
+                  description: "Conecte-se com importadores experientes e expanda sua rede de contatos"
                 },
                 {
                   icon: Package,
-                  title: "Consultoria Incluída",
-                  description: "Suporte para escolher produtos, negociar e gerenciar suas importações"
+                  title: "Desenho Estratégico",
+                  description: "Chamada exclusiva para mapear estratégias do seu negócio com importação"
                 },
                 {
                   icon: Zap,
                   title: "Conteúdo Exclusivo",
-                  description: "Treinamentos, planilhas e ferramentas para otimizar suas importações"
+                  description: "Treinamentos e ferramentas para otimizar suas importações"
                 }
               ].map((benefit, index) => (
                 <div 
@@ -174,11 +174,11 @@ const Importacao = () => {
               {[
                 "Acesso ao catálogo exclusivo de fornecedores",
                 "Grupo privado de membros no WhatsApp",
-                "Consultoria individual para suas importações",
+                "Chamada para desenho estratégico do negócio",
                 "Treinamento completo sobre importação",
-                "Planilhas e ferramentas de gestão",
+                "Networking de qualidade com importadores",
                 "Participação em compras coletivas",
-                "Atualizações de fornecedores toda semana",
+                "Preços de grande volume mesmo comprando pouco",
                 "Suporte prioritário da equipe"
               ].map((feature, index) => (
                 <div key={index} className="flex items-center gap-3 bg-card p-4 rounded-lg border border-border">
