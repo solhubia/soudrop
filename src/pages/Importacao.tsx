@@ -1,39 +1,43 @@
-import { Ship, Globe, TrendingDown, CheckCircle2, Clock, Shield, Zap, Package } from "lucide-react";
+import { Ship, Globe, TrendingDown, CheckCircle2, Users, Shield, Zap, Package, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Importacao = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-primary/5">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 md:py-32">
+      {/* Hero Section with Video */}
+      <section className="relative overflow-hidden py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6 animate-fade-in">
-              <Ship className="w-4 h-4" />
-              <span className="text-sm font-semibold">Importação Simplificada</span>
+          <div className="max-w-5xl mx-auto">
+            {/* Badge */}
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full animate-fade-in">
+                <Users className="w-4 h-4" />
+                <span className="text-sm font-semibold">Clube Exclusivo de Importação</span>
+              </div>
             </div>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 bg-gradient-primary bg-clip-text text-transparent leading-tight">
-              Importe da China com
+
+            {/* Video Section */}
+            <div className="relative w-full aspect-video bg-secondary/50 rounded-2xl overflow-hidden mb-8 border border-border shadow-2xl">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto backdrop-blur-sm">
+                    <Play className="w-10 h-10 text-primary ml-1" />
+                  </div>
+                  <p className="text-muted-foreground">Seu vídeo será inserido aqui</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Headline */}
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-center mb-6 leading-tight">
+              Escale Seu Negócio com Acesso a
               <br />
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Total Facilidade</span>
+              <span className="bg-gradient-primary bg-clip-text text-transparent">Preços da China Mesmo Importando Pouco</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Deixe toda a complexidade da importação conosco. Encontramos os melhores produtos, negociamos preços e cuidamos de toda a logística para você.
+            <p className="text-lg md:text-xl text-muted-foreground text-center mb-8 max-w-3xl mx-auto leading-relaxed">
+              Entre para o clube exclusivo e tenha acesso aos mesmos preços e fornecedores que grandes importadores usam, sem precisar comprar em grande volume
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="xl" className="text-lg px-8 group" asChild>
-                <a href="https://4k384ufgv64.typeform.com/to/vTnWbUQI" target="_blank" rel="noopener noreferrer">
-                  Começar a Importar
-                  <Zap className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-              <Button size="xl" variant="outline" className="text-lg px-8">
-                Ver Como Funciona
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -42,41 +46,44 @@ const Importacao = () => {
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Por que importar conosco?
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              O Que Você Ganha no Clube
             </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Todos os benefícios para você escalar suas importações pagando muito menos
+            </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: TrendingDown,
-                  title: "Preços Imbatíveis",
-                  description: "Acesso direto a fábricas chinesas com preços até 70% mais baratos que no Brasil"
+                  title: "Preços de Atacado",
+                  description: "Acesso aos mesmos preços de quem importa em grande volume, mesmo comprando pouco"
                 },
                 {
-                  icon: Clock,
-                  title: "Economize Tempo",
-                  description: "Não perca tempo com burocracia. Cuidamos de toda a documentação e logística"
+                  icon: Users,
+                  title: "Compras Coletivas",
+                  description: "Junte-se a outros membros para alcançar volumes maiores e preços ainda melhores"
                 },
                 {
                   icon: Shield,
-                  title: "Processo Seguro",
-                  description: "Garantia total no processo. Seu investimento está protegido do início ao fim"
+                  title: "Fornecedores Verificados",
+                  description: "Catálogo exclusivo de fornecedores já testados e aprovados pelos membros"
                 },
                 {
                   icon: Globe,
-                  title: "Acesso Global",
-                  description: "Milhares de fornecedores verificados prontos para atender suas necessidades"
+                  title: "Rede de Contatos",
+                  description: "Conecte-se com outros importadores e compartilhe experiências"
                 },
                 {
                   icon: Package,
-                  title: "Controle de Qualidade",
-                  description: "Inspeção rigorosa de todos os produtos antes do envio para o Brasil"
+                  title: "Consultoria Incluída",
+                  description: "Suporte para escolher produtos, negociar e gerenciar suas importações"
                 },
                 {
                   icon: Zap,
-                  title: "Suporte Total",
-                  description: "Equipe especializada te acompanha em cada etapa do processo"
+                  title: "Conteúdo Exclusivo",
+                  description: "Treinamentos, planilhas e ferramentas para otimizar suas importações"
                 }
               ].map((benefit, index) => (
                 <div 
@@ -95,73 +102,84 @@ const Importacao = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
+      {/* Offer Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Como funciona o processo
-            </h2>
-            
-            <div className="space-y-8">
-              {[
-                {
-                  step: "01",
-                  title: "Escolha seus produtos",
-                  description: "Diga o que precisa ou escolha entre milhares de produtos disponíveis no nosso catálogo"
-                },
-                {
-                  step: "02",
-                  title: "Nós negociamos por você",
-                  description: "Nossa equipe negocia os melhores preços e condições diretamente com as fábricas"
-                },
-                {
-                  step: "03",
-                  title: "Cuidamos da logística",
-                  description: "Gerenciamos todo o transporte, desembaraço aduaneiro e entrega até você"
-                },
-                {
-                  step: "04",
-                  title: "Receba seus produtos",
-                  description: "Produtos chegam com segurança e você começa a lucrar"
-                }
-              ].map((item, index) => (
-                <div 
-                  key={index}
-                  className="flex gap-6 items-start bg-card p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300"
-                >
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center text-white font-black text-xl">
-                    {item.step}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.description}</p>
+            <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background p-8 md:p-12 rounded-2xl border-2 border-primary/20 shadow-2xl">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-5xl font-black mb-4">
+                  Entre para o Clube Agora
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Investimento único para acesso vitalício
+                </p>
+                
+                {/* Price */}
+                <div className="mb-8">
+                  <div className="inline-block">
+                    <p className="text-sm text-muted-foreground mb-2">De R$ 997 por apenas</p>
+                    <div className="flex items-baseline justify-center gap-2">
+                      <span className="text-2xl font-bold">R$</span>
+                      <span className="text-6xl md:text-7xl font-black bg-gradient-primary bg-clip-text text-transparent">297</span>
+                    </div>
+                    <p className="text-sm text-primary font-semibold mt-2">ou 12x de R$ 29,19</p>
                   </div>
                 </div>
-              ))}
+
+                {/* CTA Button */}
+                <Button size="xl" className="text-lg px-12 w-full md:w-auto group" asChild>
+                  <a href="https://4k384ufgv64.typeform.com/to/vTnWbUQI" target="_blank" rel="noopener noreferrer">
+                    Quero Entrar para o Clube
+                    <Zap className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
+
+                <p className="text-sm text-muted-foreground mt-4">
+                  🔒 Pagamento 100% seguro
+                </p>
+              </div>
+
+              {/* Bonus/Guarantee */}
+              <div className="grid md:grid-cols-2 gap-4 mt-8 pt-8 border-t border-border">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold mb-1">Garantia de 7 dias</h4>
+                    <p className="text-sm text-muted-foreground">Se não gostar, devolvemos 100% do seu dinheiro</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold mb-1">Acesso vitalício</h4>
+                    <p className="text-sm text-muted-foreground">Pague uma vez e aproveite para sempre</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features List Section */}
+      {/* What's Included Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              O que está incluído
+              Tudo que você recebe ao entrar
             </h2>
             
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Busca e seleção de fornecedores",
-                "Negociação de preços e condições",
-                "Controle de qualidade dos produtos",
-                "Gestão completa de documentação",
-                "Transporte internacional",
-                "Desembaraço aduaneiro",
-                "Entrega no Brasil",
-                "Suporte durante todo o processo"
+                "Acesso ao catálogo exclusivo de fornecedores",
+                "Grupo privado de membros no WhatsApp",
+                "Consultoria individual para suas importações",
+                "Treinamento completo sobre importação",
+                "Planilhas e ferramentas de gestão",
+                "Participação em compras coletivas",
+                "Atualizações de fornecedores toda semana",
+                "Suporte prioritário da equipe"
               ].map((feature, index) => (
                 <div key={index} className="flex items-center gap-3 bg-card p-4 rounded-lg border border-border">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
@@ -173,22 +191,25 @@ const Importacao = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Final CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center bg-gradient-to-br from-primary/10 to-primary/5 p-12 rounded-2xl border border-primary/20">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Pronto para começar a importar?
+              Última Chance para Entrar com Desconto
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Preencha o formulário e nossa equipe entrará em contato para dar início ao seu projeto de importação
+              Garanta sua vaga no clube exclusivo por apenas R$ 297 e comece a importar com preços de atacado
             </p>
-            <Button size="xl" className="text-lg px-12" asChild>
+            <Button size="xl" className="text-lg px-12 w-full md:w-auto group" asChild>
               <a href="https://4k384ufgv64.typeform.com/to/vTnWbUQI" target="_blank" rel="noopener noreferrer">
-                Solicitar Importação Agora
-                <Ship className="w-5 h-5 ml-2" />
+                Quero Garantir Minha Vaga
+                <Ship className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
+            <p className="text-sm text-muted-foreground mt-4">
+              ⏰ Oferta por tempo limitado
+            </p>
           </div>
         </div>
       </section>
