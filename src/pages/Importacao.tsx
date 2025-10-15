@@ -175,7 +175,6 @@ const Importacao = () => {
                 "Acesso ao catálogo exclusivo de fornecedores",
                 "Grupo privado de membros no WhatsApp",
                 "Chamada para desenho estratégico do negócio",
-                "Treinamento completo sobre importação",
                 "Networking de qualidade com importadores",
                 "Participação em compras coletivas",
                 "Preços de grande volume mesmo comprando pouco",
