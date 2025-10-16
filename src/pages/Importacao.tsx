@@ -17,15 +17,14 @@ const Importacao = () => {
             </div>
 
             {/* Video Section */}
-            <div className="relative w-full aspect-video bg-secondary/50 rounded-2xl overflow-hidden mb-8 border border-border shadow-2xl">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto backdrop-blur-sm">
-                    <Play className="w-10 h-10 text-primary ml-1" />
-                  </div>
-                  <p className="text-muted-foreground">Seu vídeo será inserido aqui</p>
-                </div>
-              </div>
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-8 border border-border shadow-2xl">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/AFsOl5kf_hM"
+                title="Vídeo do Clube de Importação"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
 
             {/* Headline */}
