@@ -63,7 +63,7 @@ const ObrigadoSoudrop = () => {
                 Acesse agora a plataforma e comece a vender
               </p>
               <Button size="lg" className="w-full" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://app2.soudrop.com.br/login" target="_blank" rel="noopener noreferrer">
                   <Package className="w-5 h-5 mr-2" />
                   Acessar Plataforma
                 </a>
