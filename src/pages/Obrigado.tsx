@@ -44,7 +44,7 @@ const Obrigado = () => {
                 Entre no nosso grupo exclusivo e conecte-se com outros membros do clube
               </p>
               <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white" asChild>
-                <a href="https://chat.whatsapp.com/seu-link-aqui" target="_blank" rel="noopener noreferrer">
+                <a href="https://chat.whatsapp.com/HRok0Pvs3A54BZH1UcmAFU?mode=wwt" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Entrar no Grupo
                 </a>
