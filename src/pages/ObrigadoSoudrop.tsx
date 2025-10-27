@@ -1,14 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, MessageCircle, Package } from "lucide-react";
 import { useEffect } from "react";
-
 const ObrigadoSoudrop = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
           {/* Success Icon */}
@@ -20,10 +17,10 @@ const ObrigadoSoudrop = () => {
           </div>
 
           {/* Main Content */}
-          <div className="text-center space-y-6 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              Bem-vindo ao Soudrop! 🎉
-            </h1>
+          <div className="text-center space-y-6 mb-12 animate-fade-in" style={{
+          animationDelay: '0.2s'
+        }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Bem-vindo a Soudrop! 🎉</h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
               Parabéns! Agora você faz parte da plataforma de dropshipping mais completa do Brasil.
             </p>
@@ -32,7 +29,9 @@ const ObrigadoSoudrop = () => {
           {/* Cards with Buttons */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* WhatsApp Card */}
-            <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{
+            animationDelay: '0.4s'
+          }}>
               <div className="flex justify-center">
                 <div className="p-4 bg-green-500/10 rounded-full">
                   <MessageCircle className="w-8 h-8 text-green-500" />
@@ -51,7 +50,9 @@ const ObrigadoSoudrop = () => {
             </div>
 
             {/* Soudrop Platform Card */}
-            <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{
+            animationDelay: '0.6s'
+          }}>
               <div className="flex justify-center">
                 <div className="p-4 bg-primary/10 rounded-full">
                   <Package className="w-8 h-8 text-primary" />
@@ -71,7 +72,9 @@ const ObrigadoSoudrop = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center space-y-4 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center space-y-4 animate-fade-in" style={{
+          animationDelay: '0.8s'
+        }}>
             <h3 className="text-2xl font-bold">Próximos Passos</h3>
             <ul className="space-y-3 text-left max-w-xl mx-auto text-muted-foreground">
               <li className="flex items-start">
@@ -90,8 +93,6 @@ const ObrigadoSoudrop = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ObrigadoSoudrop;
