@@ -1,14 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, MessageCircle, GraduationCap } from "lucide-react";
 import { useEffect } from "react";
-
 const Obrigado = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
           {/* Success Icon */}
@@ -20,7 +17,9 @@ const Obrigado = () => {
           </div>
 
           {/* Main Content */}
-          <div className="text-center space-y-6 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="text-center space-y-6 mb-12 animate-fade-in" style={{
+          animationDelay: '0.2s'
+        }}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
               Bem-vindo ao Clube! 🎉
             </h1>
@@ -32,7 +31,9 @@ const Obrigado = () => {
           {/* Cards with Buttons */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* WhatsApp Card */}
-            <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{
+            animationDelay: '0.4s'
+          }}>
               <div className="flex justify-center">
                 <div className="p-4 bg-green-500/10 rounded-full">
                   <MessageCircle className="w-8 h-8 text-green-500" />
@@ -42,11 +43,7 @@ const Obrigado = () => {
               <p className="text-muted-foreground text-center">
                 Entre no nosso grupo exclusivo e conecte-se com outros membros do clube
               </p>
-              <Button 
-                size="lg" 
-                className="w-full bg-green-500 hover:bg-green-600 text-white"
-                asChild
-              >
+              <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white" asChild>
                 <a href="https://chat.whatsapp.com/seu-link-aqui" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Entrar no Grupo
@@ -55,7 +52,9 @@ const Obrigado = () => {
             </div>
 
             {/* Training Card */}
-            <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{
+            animationDelay: '0.6s'
+          }}>
               <div className="flex justify-center">
                 <div className="p-4 bg-primary/10 rounded-full">
                   <GraduationCap className="w-8 h-8 text-primary" />
@@ -65,11 +64,7 @@ const Obrigado = () => {
               <p className="text-muted-foreground text-center">
                 Acesse agora o treinamento completo sobre importação
               </p>
-              <Button 
-                size="lg" 
-                className="w-full"
-                asChild
-              >
+              <Button size="lg" className="w-full" asChild>
                 <a href="https://seu-link-de-treinamento.com" target="_blank" rel="noopener noreferrer">
                   <GraduationCap className="w-5 h-5 mr-2" />
                   Acessar Treinamento
@@ -79,7 +74,9 @@ const Obrigado = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center space-y-4 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center space-y-4 animate-fade-in" style={{
+          animationDelay: '0.8s'
+        }}>
             <h3 className="text-2xl font-bold">Próximos Passos</h3>
             <ul className="space-y-3 text-left max-w-xl mx-auto text-muted-foreground">
               <li className="flex items-start">
@@ -92,14 +89,12 @@ const Obrigado = () => {
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-2 mt-1">✓</span>
-                <span>Comece a importar com preços de atacado</span>
+                <span>Comece a importar com os preços mais baratos do MUNDO </span>
               </li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Obrigado;
