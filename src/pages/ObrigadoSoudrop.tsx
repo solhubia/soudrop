@@ -42,7 +42,7 @@ const ObrigadoSoudrop = () => {
                 Entre no nosso grupo exclusivo e conecte-se com outros membros
               </p>
               <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://chat.whatsapp.com/ChzrC8Px4sPFYkImtHPa5Z?mode=wwt" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Entrar no Grupo
                 </a>
