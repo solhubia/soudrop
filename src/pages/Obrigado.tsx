@@ -65,7 +65,7 @@ const Obrigado = () => {
                 Acesse agora o treinamento completo sobre importação
               </p>
               <Button size="lg" className="w-full" asChild>
-                <a href="https://seu-link-de-treinamento.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://members.kiwify.com/login?club=e1f2c564-2002-4b3c-995d-48b5f1721dc4" target="_blank" rel="noopener noreferrer">
                   <GraduationCap className="w-5 h-5 mr-2" />
                   Acessar Treinamento
                 </a>
