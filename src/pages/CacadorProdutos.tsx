@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Star, Lock, Clock, Users, TrendingUp, Shield, Zap } from "lucide-react";
+import expertPhoto from "@/assets/expert-photo.jpg";
 import {
   Accordion,
   AccordionContent,
@@ -168,8 +169,12 @@ const CacadorProdutos = () => {
             <Card className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex-shrink-0">
-                  <div className="w-32 h-32 rounded-full bg-gradient-primary flex items-center justify-center text-4xl font-bold text-primary-foreground">
-                    RF
+                  <div className="w-32 h-32 rounded-full overflow-hidden">
+                    <img 
+                      src={expertPhoto} 
+                      alt="Renan Ferreira - Expert em Importação" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <div className="space-y-4 text-center md:text-left">
