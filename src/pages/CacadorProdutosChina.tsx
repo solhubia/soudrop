@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui_link/button";
 import { Card } from "@/components/ui/card";
 import { Check, Star, Lock, Clock, Users, TrendingUp, Shield, Zap, Sparkles } from "lucide-react";
+import renanPhoto from "@/assets/renan-ferreira.jpg";
 import {
   Accordion,
   AccordionContent,
@@ -179,8 +180,12 @@ const CacadorProdutosChina = () => {
             <Card className="p-8 md:p-12 bg-gradient-to-br from-[#C41E3A]/10 to-[#FFD700]/10 border-[#FFD700]/30">
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex-shrink-0">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#C41E3A] to-[#FFD700] flex items-center justify-center text-4xl font-bold text-white border-4 border-[#FFD700]/50">
-                    RF
+                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#C41E3A] to-[#FFD700] p-1 border-4 border-[#FFD700]/50">
+                    <img 
+                      src={renanPhoto} 
+                      alt="Renan Ferreira" 
+                      className="w-full h-full rounded-full object-cover"
+                    />
                   </div>
                 </div>
                 <div className="space-y-4 text-center md:text-left">
