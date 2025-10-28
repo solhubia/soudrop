@@ -169,7 +169,7 @@ const CacadorProdutos = () => {
             <Card className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex-shrink-0">
-                  <div className="w-32 h-32 rounded-full overflow-hidden">
+                  <div className="w-32 h-40 rounded-lg overflow-hidden">
                     <img 
                       src={expertPhoto} 
                       alt="Renan Ferreira - Expert em Importação" 
