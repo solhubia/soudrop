@@ -11,6 +11,7 @@ import CacadorProdutos from "./pages/CacadorProdutos";
 import CacadorProdutosChina from "./pages/CacadorProdutosChina";
 import Obrigado from "./pages/Obrigado";
 import ObrigadoSoudrop from "./pages/ObrigadoSoudrop";
+import ObrigadoCacadorChina from "./pages/ObrigadoCacadorChina";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/cacador-produtos-china" element={<CacadorProdutosChina />} />
           <Route path="/obrigado" element={<Obrigado />} />
           <Route path="/obrigado-soudrop" element={<ObrigadoSoudrop />} />
+          <Route path="/obrigado-cacador-china" element={<ObrigadoCacadorChina />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
