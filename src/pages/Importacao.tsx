@@ -37,6 +37,17 @@ const Importacao = () => {
             <p className="text-lg md:text-xl text-muted-foreground text-center mb-8 max-w-3xl mx-auto leading-relaxed">
               Entre para o clube exclusivo e tenha acesso aos mesmos preços e fornecedores que grandes importadores usam, sem precisar comprar em grande volume
             </p>
+
+            <div className="flex justify-center">
+              <Button 
+                size="lg" 
+                className="text-lg px-8 group"
+                onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                ENTRAR PARA O CLUBE AGORA
+                <Zap className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -102,7 +113,7 @@ const Importacao = () => {
       </section>
 
       {/* Offer Section */}
-      <section className="py-20">
+      <section id="oferta" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background p-8 md:p-12 rounded-2xl border-2 border-primary/20 shadow-2xl">
