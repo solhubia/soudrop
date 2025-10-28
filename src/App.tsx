@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Links from "./pages/Links";
 import Importacao from "./pages/Importacao";
 import CacadorProdutos from "./pages/CacadorProdutos";
+import CacadorProdutosChina from "./pages/CacadorProdutosChina";
 import Obrigado from "./pages/Obrigado";
 import ObrigadoSoudrop from "./pages/ObrigadoSoudrop";
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/links" element={<Links />} />
           <Route path="/importacao" element={<Importacao />} />
           <Route path="/cacador-produtos" element={<CacadorProdutos />} />
+          <Route path="/cacador-produtos-china" element={<CacadorProdutosChina />} />
           <Route path="/obrigado" element={<Obrigado />} />
           <Route path="/obrigado-soudrop" element={<ObrigadoSoudrop />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
