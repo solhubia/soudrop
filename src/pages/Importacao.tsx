@@ -131,9 +131,9 @@ const Importacao = () => {
                     <p className="text-sm text-muted-foreground mb-2">De R$ 997 por apenas</p>
                     <div className="flex items-baseline justify-center gap-2">
                       <span className="text-2xl font-bold">R$</span>
-                      <span className="text-6xl md:text-7xl font-black bg-gradient-primary bg-clip-text text-transparent">362</span>
+                      <span className="text-6xl md:text-7xl font-black bg-gradient-primary bg-clip-text text-transparent">297</span>
                     </div>
-                    <p className="text-sm text-primary font-semibold mt-2">ou 12x de R$ 30,17</p>
+                    <p className="text-sm text-primary font-semibold mt-2">ou 12x de R$ 29,19</p>
                   </div>
                 </div>
 
@@ -208,7 +208,7 @@ const Importacao = () => {
               Última Chance para Entrar com Desconto
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Garanta sua vaga no clube exclusivo por apenas R$ 362 e comece a importar com preços de atacado
+              Garanta sua vaga no clube exclusivo por apenas R$ 297 e comece a importar com preços de atacado
             </p>
             <Button size="xl" className="text-lg px-12 w-full md:w-auto group" asChild>
               <a href="https://pay.kiwify.com.br/YdspuHP" target="_blank" rel="noopener noreferrer">
