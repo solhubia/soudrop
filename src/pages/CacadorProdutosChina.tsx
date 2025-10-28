@@ -11,15 +11,37 @@ import {
 import { useState, useEffect } from "react";
 
 const CacadorProdutosChina = () => {
-  const [timeLeft, setTimeLeft] = useState(900); // 15 minutos em segundos
+  const [isExtendedOffer, setIsExtendedOffer] = useState(() => {
+    return localStorage.getItem("extendedOffer") === "true";
+  });
+  
+  const [timeLeft, setTimeLeft] = useState(() => {
+    const extended = localStorage.getItem("extendedOffer") === "true";
+    return extended ? 600 : 900; // 10 minutos ou 15 minutos
+  });
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          if (!isExtendedOffer) {
+            // Primeira vez que chega a zero - ativar oferta estendida
+            localStorage.setItem("extendedOffer", "true");
+            setIsExtendedOffer(true);
+            return 600; // 10 minutos
+          } else {
+            // Segunda vez - recarregar a página
+            localStorage.removeItem("extendedOffer");
+            window.location.reload();
+            return 0;
+          }
+        }
+        return prev - 1;
+      });
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isExtendedOffer]);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -36,11 +58,18 @@ const CacadorProdutosChina = () => {
     <div className="min-h-screen bg-[#0A0604] text-[#FFF9E6]">
       {/* Countdown Timer Header */}
       <div className="bg-gradient-to-r from-[#C41E3A] to-[#C41E3A]/80 text-white py-3 sticky top-0 z-50 shadow-lg border-b-2 border-[#FFD700]">
-        <div className="container mx-auto px-4 flex items-center justify-center gap-3">
-          <Clock className="w-5 h-5 animate-pulse text-[#FFD700]" />
-          <span className="font-bold text-lg">
-            ⏰ Esta oferta é por tempo limitado: {formatTime(timeLeft)}
-          </span>
+        <div className="container mx-auto px-4 flex flex-col items-center justify-center gap-2 text-center">
+          {isExtendedOffer && (
+            <div className="text-sm text-[#FFD700] font-semibold animate-pulse">
+              🎉 Essa oferta especial acabou… mas conseguimos liberar mais 10 minutos para você aproveitar antes que o preço suba novamente!
+            </div>
+          )}
+          <div className="flex items-center gap-3">
+            <Clock className="w-5 h-5 animate-pulse text-[#FFD700]" />
+            <span className="font-bold text-lg">
+              ⏰ {isExtendedOffer ? "ÚLTIMA CHANCE" : "Esta oferta é por tempo limitado"}: {formatTime(timeLeft)}
+            </span>
+          </div>
         </div>
       </div>
 
