@@ -256,7 +256,7 @@ const CacadorProdutos = () => {
                 </div>
 
                 <Button size="xl" variant="default" className="w-full" asChild>
-                  <a href="#checkout">
+                  <a href="https://pay.kiwify.com.br/8SaUXFm">
                     <Zap className="w-5 h-5 mr-2" />
                     Quero Aprender a Achar Produtos Lucrativos Agora!
                   </a>
