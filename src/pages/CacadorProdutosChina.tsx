@@ -8,8 +8,25 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useState, useEffect } from "react";
 
 const CacadorProdutosChina = () => {
+  const [timeLeft, setTimeLeft] = useState(900); // 15 minutos em segundos
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+  };
+
   const scrollToCTA = () => {
     const element = document.getElementById("cta-section");
     element?.scrollIntoView({ behavior: "smooth" });
@@ -17,6 +34,16 @@ const CacadorProdutosChina = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0604] text-[#FFF9E6]">
+      {/* Countdown Timer Header */}
+      <div className="bg-gradient-to-r from-[#C41E3A] to-[#C41E3A]/80 text-white py-3 sticky top-0 z-50 shadow-lg border-b-2 border-[#FFD700]">
+        <div className="container mx-auto px-4 flex items-center justify-center gap-3">
+          <Clock className="w-5 h-5 animate-pulse text-[#FFD700]" />
+          <span className="font-bold text-lg">
+            ⏰ Esta oferta é por tempo limitado: {formatTime(timeLeft)}
+          </span>
+        </div>
+      </div>
+
       {/* Hero Section with Chinese Theme */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#C41E3A]/20 via-transparent to-[#FFD700]/10" />
