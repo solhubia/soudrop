@@ -291,7 +291,7 @@ const CacadorProdutosChina = () => {
                 </div>
 
                 <Button size="lg" variant="red" className="w-full text-lg py-6" asChild>
-                  <a href="#checkout">
+                  <a href="https://pay.kiwify.com.br/8SaUXFm">
                     <Zap className="w-5 h-5 mr-2" />
                     SIM! Quero Aprender a Importar Agora!
                   </a>
