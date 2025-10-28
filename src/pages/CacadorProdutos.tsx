@@ -8,8 +8,25 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useState, useEffect } from "react";
 
 const CacadorProdutos = () => {
+  const [timeLeft, setTimeLeft] = useState(900); // 15 minutos em segundos
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+  };
+
   const scrollToCTA = () => {
     const element = document.getElementById("cta-section");
     element?.scrollIntoView({ behavior: "smooth" });
@@ -17,6 +34,16 @@ const CacadorProdutos = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+      {/* Countdown Timer Header */}
+      <div className="bg-gradient-to-r from-destructive to-destructive/80 text-white py-3 sticky top-0 z-50 shadow-lg">
+        <div className="container mx-auto px-4 flex items-center justify-center gap-3">
+          <Clock className="w-5 h-5 animate-pulse" />
+          <span className="font-bold text-lg">
+            ⏰ Esta oferta é por tempo limitado: {formatTime(timeLeft)}
+          </span>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
