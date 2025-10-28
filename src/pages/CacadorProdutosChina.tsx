@@ -180,11 +180,11 @@ const CacadorProdutosChina = () => {
             <Card className="p-8 md:p-12 bg-gradient-to-br from-[#C41E3A]/10 to-[#FFD700]/10 border-[#FFD700]/30">
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex-shrink-0">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#C41E3A] to-[#FFD700] p-1 border-4 border-[#FFD700]/50">
+                  <div className="w-32 h-32 rounded-full overflow-hidden">
                     <img 
                       src={renanPhoto} 
                       alt="Renan Ferreira" 
-                      className="w-full h-full rounded-full object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
