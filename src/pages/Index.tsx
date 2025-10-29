@@ -21,7 +21,19 @@ import newLogo from "@/assets/new-logo-v2.png";
 import madeiraMadeiraLogo from "@/assets/madeiramadeira-logo.png";
 import tiktokLogo from "@/assets/tiktok-logo.png";
 import careerPathIllustration from "@/assets/career-path-illustration.png";
+import { 
+  trackViewContent, 
+  trackInitiateCheckout, 
+  trackAddToCart, 
+  trackPurchase, 
+  trackLead, 
+  trackCompleteRegistration 
+} from "@/lib/fbq";
+
 const Index = () => {
+  useEffect(() => {
+      trackViewContent("courses", { content_name: document.title });
+  }, []);
   const mouseFollowerRef = useRef<HTMLDivElement>(null);
   const [isAnnual, setIsAnnual] = useState(true);
   const [carouselApi, setCarouselApi] = useState<any>(null);
@@ -147,7 +159,7 @@ const Index = () => {
                   </a>
                 </Button>
                 <Button variant="hero" size="default" asChild>
-                  <a href="#planos">
+                  <a href="#planos" onClick={() => trackInitiateCheckout("soudrop")}>
                     Começar
                   </a>
                 </Button>
@@ -182,7 +194,7 @@ const Index = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in">
               <Button variant="hero" size="xl" className="w-full sm:w-auto text-lg px-8 py-4 hover-scale shadow-glow" asChild>
-                <a href="#planos">
+                <a href="#planos" onClick={() => trackInitiateCheckout("soudrop")}>
                   <Zap className="mr-3 h-6 w-6" />
                   Começar Agora
                 </a>
@@ -365,7 +377,7 @@ const Index = () => {
 
             <div className="text-center mt-16">
               <Button variant="hero" size="lg" asChild>
-                <a href="#planos">
+                <a href="#planos" onClick={() => trackInitiateCheckout("soudrop")}>
                   <ArrowRight className="mr-2 h-5 w-5" />
                   Começar Minha Jornada
                 </a>
@@ -396,7 +408,7 @@ const Index = () => {
                 Nossa tecnologia integra múltiplos marketplaces, oferece catálogo pronto e cuida de toda a logística, permitindo que você foque apenas no que realmente importa: vender.
               </p>
               <Button variant="hero" size="lg" asChild>
-                <a href="#features">
+                <a href="#features" onClick={() => trackViewContent("soudrop", { content_name: "About Section" })}>
                   <ArrowRight className="mr-2 h-5 w-5" />
                   Saiba Mais
                 </a>
@@ -992,7 +1004,7 @@ const Index = () => {
           {/* Call to action button after cases */}
           <div className="text-center mt-12">
             <Button variant="hero" size="xl" asChild>
-              <a href="#planos">
+              <a href="#planos" onClick={() => trackInitiateCheckout("soudrop")}>
                 <Users className="mr-2 h-5 w-5" />
                 Quero fazer parte
               </a>
@@ -1372,7 +1384,7 @@ const Index = () => {
                      </li>
                    </ul>
                    <Button variant="glow" size="lg" className="w-full mt-6">
-                      <a href={currentPlan.basic.link} target="_blank" rel="noopener noreferrer">
+                      <a href={currentPlan.basic.link} target="_blank" rel="noopener noreferrer" onClick={() => trackPurchase("soudrop", isAnnual ? 197 * 12 : 297)}>
                        Começar Agora
                       </a>
                     </Button>
@@ -1468,7 +1480,7 @@ const Index = () => {
                    </li>
                  </ul>
                 <Button variant="secondary" size="lg" className="w-full mt-6" asChild>
-                  <a href={currentPlan.pro.link} target="_blank" rel="noopener noreferrer">
+                  <a href={currentPlan.pro.link} target="_blank" rel="noopener noreferrer" onClick={() => trackPurchase("soudrop", isAnnual ? 397 * 12 : 549)}>
                     Começar Agora
                   </a>
                 </Button>
@@ -1559,7 +1571,7 @@ const Index = () => {
                    </li>
                  </ul>
                 <Button variant="glow" size="lg" className="w-full mt-6">
-                  <a href={currentPlan.premium.link} target="_blank" rel="noopener noreferrer">
+                  <a href={currentPlan.premium.link} target="_blank" rel="noopener noreferrer" onClick={() => trackPurchase("soudrop", isAnnual ? 797 * 12 : 1299)}>
                     Começar Agora
                   </a>
                 </Button>
@@ -1631,7 +1643,7 @@ const Index = () => {
                 de saber que seu investimento está completamente protegido.
               </p>
               <div className="text-center">
-                <Button variant="hero" size="lg" asChild>
+                <Button variant="hero" size="lg" asChild onClick={() => trackInitiateCheckout("soudrop")}>
                   <a href="#planos">
                     <Shield className="mr-2 h-5 w-5" />
                     Quero começar com segurança
