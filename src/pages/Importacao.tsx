@@ -1,7 +1,7 @@
 import { Ship, Globe, TrendingDown, CheckCircle2, Users, Shield, Zap, Package, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
-import { trackViewContent, trackInitiateCheckout, trackPurchase } from "@/lib/fbq";
+import { trackViewContent, trackInitiateCheckout, trackWishCheckout  } from "@/lib/fbq";
 
 const Importacao = () => {
   useEffect(() => {
@@ -49,7 +49,7 @@ const Importacao = () => {
                 size="lg" 
                 className="text-lg px-8 group"
                 onClick={() => {
-                  trackInitiateCheckout("club", 297); 
+                  trackWishCheckout("club"); 
                   document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
@@ -148,7 +148,7 @@ const Importacao = () => {
 
                 {/* CTA Button */}
                 <Button size="xl" className="text-lg px-12 w-full md:w-auto group" asChild>
-                  <a href="https://pay.kiwify.com.br/YdspuHP" target="_blank" rel="noopener noreferrer" onClick={() => trackPurchase("club", 297)}>
+                  <a href="https://pay.kiwify.com.br/YdspuHP" target="_blank" rel="noopener noreferrer" onClick={() => trackInitiateCheckout("club", 297)}>
                     Quero Entrar para o Clube
                     <Zap className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>

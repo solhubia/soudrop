@@ -2,7 +2,7 @@ import { Button } from "@/components/ui_link/button";
 import { Card } from "@/components/ui/card";
 import { Check, Star, Lock, Clock, Users, TrendingUp, Shield, Zap, Sparkles } from "lucide-react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
-import { trackViewContent, trackInitiateCheckout, trackPurchase } from "@/lib/fbq";
+import { trackViewContent, trackInitiateCheckout, trackWishCheckout } from "@/lib/fbq";
 
 import {
   Accordion,
@@ -73,7 +73,7 @@ const CacadorProdutosChina = () => {
               O método testado e aprovado por importadores profissionais, agora disponível em um treinamento completo por <span className="font-bold text-[#FFD700]">apenas R$37</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-              <Button size="lg" variant="red" onClick={() => { trackInitiateCheckout("courses", 37); scrollToCTA;}} className="w-full sm:w-auto text-lg px-8 py-6">
+              <Button size="lg" variant="red" onClick={() => { trackWishCheckout("courses"); scrollToCTA;}} className="w-full sm:w-auto text-lg px-8 py-6">
                 <Zap className="w-5 h-5 mr-2" />
                 Quero Começar Agora!
               </Button>
@@ -296,7 +296,7 @@ const CacadorProdutosChina = () => {
 
                 <Button size="lg" variant="red" className="w-full text-lg py-6" asChild>
                   <a href="https://pay.kiwify.com.br/8SaUXFm"
-                    onClick={() => trackPurchase("courses", 37)}>
+                    onClick={() => trackInitiateCheckout("courses", 37)}>
                     <Zap className="w-5 h-5 mr-2" />
                     SIM! Quero Aprender a Importar Agora!
                   </a>

@@ -13,6 +13,7 @@ import Obrigado from "./pages/Obrigado";
 import ObrigadoSoudrop from "./pages/ObrigadoSoudrop";
 import ObrigadoCacadorChina from "./pages/ObrigadoCacadorChina";
 import { useEffect } from "react";
+import { trackViewContent } from "./lib/fbq";
 
 // -----------------------------
 // Tipagem fbq (TypeScript safe)
@@ -23,42 +24,6 @@ declare global {
   }
 }
 
-// Helpers de rastreamento com content_category
-function trackViewContent(category: "club" | "courses" | "soudrop", extra?: {
-  content_name?: string;
-  content_ids?: string[];
-  value?: number;
-  currency?: string;
-}) {
-  window.fbq?.("track", "ViewContent", {
-    content_category: category,
-    content_name: extra?.content_name,
-    content_ids: extra?.content_ids,
-    value: extra?.value,
-    currency: extra?.currency || "BRL",
-  });
-}
-
-export function trackInitiateCheckout(category: "club" | "courses" | "soudrop", value?: number) {
-  window.fbq?.("track", "InitiateCheckout", { content_category: category, value, currency: "BRL" });
-}
-
-export function trackAddToCart(category: "club" | "courses" | "soudrop", value?: number) {
-  window.fbq?.("track", "AddToCart", { content_category: category, value, currency: "BRL" });
-}
-
-export function trackPurchase(category: "club" | "courses" | "soudrop", value: number) {
-  window.fbq?.("track", "Purchase", { content_category: category, value, currency: "BRL" });
-}
-
-export function trackLead(category: "club" | "courses" | "soudrop") {
-  window.fbq?.("track", "Lead", { content_category: category });
-}
-
-export function trackCompleteRegistration(category: "club" | "courses" | "soudrop") {
-  window.fbq?.("track", "CompleteRegistration", { content_category: category });
-}
-
 // -------------------------------------------
 // Componente que envia ViewContent por rota
 // -------------------------------------------
@@ -66,18 +31,26 @@ function RouteListener() {
   const location = useLocation();
 
   useEffect(() => {
-    const path = location.pathname.toLowerCase();
+    const timer = setTimeout(() => {
+      const path = location.pathname.toLowerCase();
 
-    // Regras simples: ajuste conforme suas rotas reais
-    let category: "club" | "courses" | "soudrop" = "soudrop";
-    if (path.startsWith("/clube") || path.includes("importacao")) {
-      category = "club";
-    } else if (path.startsWith("/cursos") || path.includes("/curso/")) {
-      category = "courses";
-    }
+      let category: "club" | "courses" | "soudrop" = "soudrop";
+      if (path.startsWith("/clube") || path.includes("importacao")) {
+        category = "club";
+      } else if (path.startsWith("/cursos") || path.includes("/curso/")) {
+        category = "courses";
+      }
 
-    // Dispara ViewContent contextualizado
-    trackViewContent(category, { content_name: document.title });
+      // Dispara ViewContent contextualizado APENAS se não for a página inicial
+      if (path !== "/") {
+        // AGORA IMPORTE da lib correta
+        import('@/lib/fbq').then(({ trackViewContent }) => {
+          trackViewContent(category, { content_name: document.title });
+        });
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, [location]);
 
   return null;
@@ -87,7 +60,10 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
-    // Meta Pixel Code (base)
+    // Verifica se o Pixel já foi carregado
+    if (window.fbq) return;
+
+    // Carrega o script do Pixel apenas uma vez
     (function (f: any, b: Document, e: string, v: string, n?: any, t?: HTMLScriptElement, s?: HTMLScriptElement) {
       if (f.fbq) return;
       n = f.fbq = function () {
@@ -105,10 +81,9 @@ const App = () => {
       s.parentNode!.insertBefore(t, s);
     })(window as any, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
 
-    window.fbq?.("init", "1144631303730010"); // SEU Pixel
-    window.fbq?.("track", "PageView");
+    window.fbq?.("init", "1144631303730010");
 
-    // Fallback para noScript (ok manter)
+    // Fallback para noScript (pode manter)
     const img = document.createElement("img");
     img.height = 1;
     img.width = 1;
@@ -117,7 +92,6 @@ const App = () => {
     document.body.appendChild(img);
 
     return () => {
-      // opcional: remover o fallback ao desmontar
       if (img && img.parentNode) img.parentNode.removeChild(img);
     };
   }, []);
