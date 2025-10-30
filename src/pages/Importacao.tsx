@@ -2,8 +2,11 @@ import { Ship, Globe, TrendingDown, CheckCircle2, Users, Shield, Zap, Package, P
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import { trackViewContent, trackInitiateCheckout, trackWishCheckout  } from "@/lib/fbq";
+import { useTracking } from "@/hooks/useTracking";
 
 const Importacao = () => {
+  const { trackEventOnce } = useTracking();
+
   useEffect(() => {
     // Dispara ViewContent com content_category 'club' quando a página for acessada
     trackViewContent("club", { content_name: document.title });
@@ -48,9 +51,14 @@ const Importacao = () => {
               <Button 
                 size="lg" 
                 className="text-lg px-8 group"
-                onClick={() => {
-                  trackWishCheckout("club"); 
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Scroll sempre acontece
                   document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' });
+                  // Tracking apenas uma vez
+                  trackEventOnce('wish_checkout', () => {
+                    trackWishCheckout("club");
+                  });
                 }}
               >
                 ENTRAR PARA O CLUBE AGORA
@@ -148,7 +156,11 @@ const Importacao = () => {
 
                 {/* CTA Button */}
                 <Button size="xl" className="text-lg px-12 w-full md:w-auto group" asChild>
-                  <a href="https://pay.kiwify.com.br/YdspuHP" target="_blank" rel="noopener noreferrer" onClick={() => trackInitiateCheckout("club", 297)}>
+                  <a href="https://pay.kiwify.com.br/YdspuHP" target="_blank" rel="noopener noreferrer" 
+                    onClick={() => trackEventOnce('club_checkout', () => {
+                      trackInitiateCheckout("club", 297);
+                    })}
+                  >
                     Quero Entrar para o Clube
                     <Zap className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -220,7 +232,11 @@ const Importacao = () => {
               Garanta sua vaga no clube exclusivo por apenas R$ 297 e comece a importar com preços de atacado
             </p>
             <Button size="xl" className="text-lg px-12 w-full md:w-auto group" asChild>
-              <a href="https://pay.kiwify.com.br/YdspuHP" target="_blank" rel="noopener noreferrer">
+              <a href="https://pay.kiwify.com.br/YdspuHP" target="_blank" rel="noopener noreferrer"
+                onClick={() => trackEventOnce('final_club_checkout', () => {
+                  trackInitiateCheckout("club", 297);
+                })}
+              >
                 Quero Garantir Minha Vaga
                 <Ship className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>

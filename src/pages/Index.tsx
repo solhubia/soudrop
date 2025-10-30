@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useRef, useState } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useTracking } from "@/hooks/useTracking";
 import { CheckCircle, Package, BarChart3, Zap, ShoppingCart, TrendingUp, Star, Users, Globe, Truck, DollarSign, MessageCircle, Phone, Mail, ArrowRight, X, Instagram, Search, CreditCard, Settings, CheckSquare, Lock, Shield, Clock } from "lucide-react";
 import MarketplaceMarquee from "@/components/MarketplaceMarquee";
 import heroImage from "@/assets/hero-soudrop.jpg";
@@ -28,6 +29,8 @@ import {
 } from "@/lib/fbq";
 
 const Index = () => {
+  const { trackEventOnce } = useTracking();
+
   useEffect(() => {
     // Adicione uma verificação para evitar duplicação
     const hasTracked = sessionStorage.getItem('soudrop_viewContent_tracked');
@@ -165,7 +168,15 @@ const Index = () => {
                   </a>
                 </Button>
                 <Button variant="hero" size="default" asChild>
-                  <a href="#planos" onClick={() => trackWishCheckout("soudrop")}>
+                  <a href="#planos" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // Scroll sempre acontece, tracking apenas uma vez
+                      document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' });
+                      trackEventOnce('wish_checkout', () => {
+                        trackWishCheckout("soudrop");
+                      });
+                    }}>
                     Começar
                   </a>
                 </Button>
@@ -200,7 +211,16 @@ const Index = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in">
               <Button variant="hero" size="xl" className="w-full sm:w-auto text-lg px-8 py-4 hover-scale shadow-glow" asChild>
-                <a href="#planos" onClick={() => trackWishCheckout("soudrop")}>
+                <a href="#planos" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Scroll sempre acontece
+                    document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' });
+                    // Tracking apenas uma vez
+                    trackEventOnce('hero_wish_checkout', () => {
+                      trackWishCheckout("soudrop");
+                    });
+                  }}>
                   <Zap className="mr-3 h-6 w-6" />
                   Começar Agora
                 </a>
@@ -383,7 +403,17 @@ const Index = () => {
 
             <div className="text-center mt-16">
               <Button variant="hero" size="lg" asChild>
-                <a href="#planos" onClick={() => trackWishCheckout("soudrop")}>
+                <a href="#planos" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Scroll sempre acontece
+                    document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' });
+                    // Tracking apenas uma vez
+                    trackEventOnce('journey_wish_checkout', () => {
+                      trackWishCheckout("soudrop");
+                    });
+                  }}
+                >
                   <ArrowRight className="mr-2 h-5 w-5" />
                   Começar Minha Jornada
                 </a>
@@ -1010,7 +1040,17 @@ const Index = () => {
           {/* Call to action button after cases */}
           <div className="text-center mt-12">
             <Button variant="hero" size="xl" asChild>
-              <a href="#planos" onClick={() => trackWishCheckout("soudrop")}>
+              <a href="#planos" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Scroll sempre acontece
+                  document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' });
+                  // Tracking apenas uma vez
+                  trackEventOnce('cases_wish_checkout', () => {
+                    trackWishCheckout("soudrop");
+                  });
+                }}
+              >
                 <Users className="mr-2 h-5 w-5" />
                 Quero fazer parte
               </a>
@@ -1390,7 +1430,11 @@ const Index = () => {
                      </li>
                    </ul>
                    <Button variant="glow" size="lg" className="w-full mt-6">
-                      <a href={currentPlan.basic.link} target="_blank" rel="noopener noreferrer" onClick={() => trackInitiateCheckout("soudrop", isAnnual ? 197 * 12 : 297)}>
+                      <a href={currentPlan.basic.link} target="_blank" rel="noopener noreferrer" 
+                        onClick={() => trackEventOnce('basic_checkout', () => {
+                          trackInitiateCheckout("soudrop", isAnnual ? 197 * 12 : 297);
+                        })}
+                      >
                        Começar Agora
                       </a>
                     </Button>
@@ -1486,7 +1530,11 @@ const Index = () => {
                    </li>
                  </ul>
                 <Button variant="secondary" size="lg" className="w-full mt-6" asChild>
-                  <a href={currentPlan.pro.link} target="_blank" rel="noopener noreferrer" onClick={() => trackInitiateCheckout("soudrop", isAnnual ? 397 * 12 : 549)}>
+                  <a href={currentPlan.pro.link} target="_blank" rel="noopener noreferrer" 
+                    onClick={() => trackEventOnce('pro_checkout', () => {
+                      trackInitiateCheckout("soudrop", isAnnual ? 397 * 12 : 549);
+                    })}
+                  >
                     Começar Agora
                   </a>
                 </Button>
@@ -1577,7 +1625,11 @@ const Index = () => {
                    </li>
                  </ul>
                 <Button variant="glow" size="lg" className="w-full mt-6">
-                  <a href={currentPlan.premium.link} target="_blank" rel="noopener noreferrer" onClick={() => trackInitiateCheckout("soudrop", isAnnual ? 797 * 12 : 1299)}>
+                  <a href={currentPlan.premium.link} target="_blank" rel="noopener noreferrer" 
+                    onClick={() => trackEventOnce('premium_checkout', () => {
+                      trackInitiateCheckout("soudrop", isAnnual ? 797 * 12 : 1299);
+                    })}
+                  >
                     Começar Agora
                   </a>
                 </Button>
@@ -1649,7 +1701,17 @@ const Index = () => {
                 de saber que seu investimento está completamente protegido.
               </p>
               <div className="text-center">
-                <Button variant="hero" size="lg" asChild onClick={() => trackWishCheckout("soudrop")}>
+                <Button variant="hero" size="lg" asChild
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // Scroll sempre acontece
+                      document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' });
+                      // Tracking apenas uma vez
+                      trackEventOnce('start_today_wish_checkout', () => {
+                        trackWishCheckout("soudrop");
+                      });
+                    }}
+                  >
                   <a href="#planos">
                     <Shield className="mr-2 h-5 w-5" />
                     Quero começar com segurança

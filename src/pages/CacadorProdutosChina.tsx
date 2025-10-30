@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Check, Star, Lock, Clock, Users, TrendingUp, Shield, Zap, Sparkles } from "lucide-react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { trackViewContent, trackInitiateCheckout, trackWishCheckout } from "@/lib/fbq";
-
+import { useTracking } from "@/hooks/useTracking";
 import {
   Accordion,
   AccordionContent,
@@ -13,6 +13,7 @@ import {
 import { useState, useEffect } from "react";
 
 const CacadorProdutosChina = () => {
+  const { trackEventOnce } = useTracking();
   const [timeLeft, setTimeLeft] = useState(900); // 15 minutos em segundos
 
   useEffect(() => {
@@ -73,7 +74,16 @@ const CacadorProdutosChina = () => {
               O método testado e aprovado por importadores profissionais, agora disponível em um treinamento completo por <span className="font-bold text-[#FFD700]">apenas R$37</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-              <Button size="lg" variant="red" onClick={() => { trackWishCheckout("courses"); scrollToCTA();}} className="w-full sm:w-auto text-lg px-8 py-6">
+              <Button size="lg" variant="red" className="w-full sm:w-auto text-lg px-8 py-6"
+                onClick={() => { 
+                  // Scroll sempre acontece
+                  scrollToCTA();
+                  // Tracking apenas uma vez
+                  trackEventOnce('comecar_agora', () => {
+                    trackWishCheckout("courses");
+                  });
+                }}
+              >
                 <Zap className="w-5 h-5 mr-2" />
                 Quero Começar Agora!
               </Button>
@@ -105,7 +115,16 @@ const CacadorProdutosChina = () => {
                   <p className="text-[#FFF9E6]/80">
                     Descubra onde estão os produtos mais lucrativos da China e como qualquer pessoa pode começar a importar hoje mesmo.
                   </p>
-                  <Button variant="blue" size="lg" onClick={() => { trackWishCheckout("courses"); scrollToCTA();}}>
+                  <Button variant="blue" size="lg" 
+                    onClick={() => { 
+                      // Scroll sempre acontece
+                      scrollToCTA();
+                      // Tracking apenas uma vez
+                      trackEventOnce('garantir_agora', () => {
+                        trackWishCheckout("courses");
+                      });
+                    }}
+                  >
                     Garantir Acesso Agora
                   </Button>
                 </div>
@@ -159,7 +178,16 @@ const CacadorProdutosChina = () => {
             <p className="text-lg text-[#FFF9E6]/80">
               Em poucas horas você vai enxergar oportunidades que 95% das pessoas não conseguem ver — produtos que praticamente se vendem sozinhos, com margens incríveis de lucro.
             </p>
-            <Button size="lg" variant="red" onClick={() => { trackWishCheckout("courses"); scrollToCTA();}}className="text-lg px-8 py-6">
+            <Button size="lg" variant="red" className="text-lg px-8 py-6"
+              onClick={() => { 
+                // Scroll sempre acontece
+                scrollToCTA();
+                // Tracking apenas uma vez
+                trackEventOnce('quero_transformacao', () => {
+                  trackWishCheckout("courses");
+                });
+              }}
+            >
               Quero Essa Transformação!
             </Button>
           </div>
@@ -296,7 +324,10 @@ const CacadorProdutosChina = () => {
 
                 <Button size="lg" variant="red" className="w-full text-lg py-6" asChild>
                   <a href="https://pay.kiwify.com.br/8SaUXFm"
-                    onClick={() => trackInitiateCheckout("courses", 37)}>
+                    onClick={() => trackEventOnce('courses_checkout', () => {
+                      trackInitiateCheckout("courses", 37);
+                    })}
+                    >
                     <Zap className="w-5 h-5 mr-2" />
                     SIM! Quero Aprender a Importar Agora!
                   </a>
@@ -393,7 +424,16 @@ const CacadorProdutosChina = () => {
             <p className="text-lg text-[#FFF9E6]/80">
               Dê o primeiro passo hoje e descubra o poder de importar com estratégia, conhecimento e método comprovado.
             </p>
-            <Button size="lg" variant="red" onClick={() => { trackWishCheckout("courses"); scrollToCTA();}} className="w-full sm:w-auto text-lg px-8 py-6">
+            <Button size="lg" variant="red" className="w-full sm:w-auto text-lg px-8 py-6"
+              onClick={() => { 
+                // Scroll sempre acontece
+                scrollToCTA();
+                // Tracking apenas uma vez
+                trackEventOnce('garantir_vaga', () => {
+                  trackWishCheckout("courses");
+                });
+              }}
+            >
               <Sparkles className="w-5 h-5 mr-2" />
               Garantir Minha Vaga Agora!
             </Button>
