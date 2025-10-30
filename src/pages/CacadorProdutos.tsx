@@ -64,7 +64,7 @@ const CacadorProdutos = () => {
               O mesmo método usado por importadores profissionais agora disponível para você, em um curso simples e direto de <span className="font-bold text-primary">apenas R$37</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-              <Button size="xl" variant="hero" onClick={() => { trackWishCheckout("courses"); scrollToCTA;}} className="w-full sm:w-auto">
+              <Button size="xl" variant="hero" onClick={() => { trackWishCheckout("courses"); scrollToCTA();}} className="w-full sm:w-auto">
                 <Zap className="w-5 h-5 mr-2" />
                 Quero Aprender Agora!
               </Button>
@@ -96,7 +96,7 @@ const CacadorProdutos = () => {
                   <p className="text-muted-foreground">
                     E como qualquer pessoa pode acessar o mesmo mercado que abastece as maiores lojas do Brasil.
                   </p>
-                  <Button variant="gradient" size="lg" onClick={() => { trackWishCheckout("courses"); scrollToCTA;}}>
+                  <Button variant="gradient" size="lg" onClick={() => { trackWishCheckout("courses"); scrollToCTA();}}>
                     Começar Agora
                   </Button>
                 </div>
@@ -148,7 +148,7 @@ const CacadorProdutos = () => {
             <p className="text-lg text-muted-foreground">
               Em poucas horas, vai enxergar oportunidades que 95% das pessoas não veem — produtos que vendem sozinhos, com margens de até 300%.
             </p>
-            <Button size="xl" variant="hero" onClick={() => { trackWishCheckout("courses"); scrollToCTA;}}>
+            <Button size="xl" variant="hero" onClick={() => { trackWishCheckout("courses"); scrollToCTA();}}>
               Quero Essa Transformação!
             </Button>
           </div>
@@ -357,7 +357,7 @@ const CacadorProdutos = () => {
             <p className="text-lg text-muted-foreground">
               Dê o primeiro passo hoje — e descubra o poder de importar com estratégia.
             </p>
-            <Button size="xl" variant="hero" onClick={() => { trackWishCheckout("courses"); scrollToCTA;}} className="w-full sm:w-auto">
+            <Button size="xl" variant="hero" onClick={() => { trackWishCheckout("courses"); scrollToCTA();}} className="w-full sm:w-auto">
               <Zap className="w-5 h-5 mr-2" />
               Garantir Minha Vaga Agora!
             </Button>
