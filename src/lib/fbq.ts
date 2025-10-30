@@ -31,7 +31,7 @@ export function trackViewContent(category: "club" | "soudrop" | "courses", extra
 
 export function trackWishCheckout(category: "club" | "soudrop" | "courses" ) {
   if (!ensureFbq()) return;
-  window.fbq("track", "WishCheckout", { content_category: category });
+  window.fbq("track", "AddToWishlist", { content_category: category });
 }
 
 export function trackInitiateCheckout(category: "club" | "soudrop" | "courses", value?: number) {
