@@ -21,7 +21,7 @@ const Importacao = () => {
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full animate-fade-in">
                 <Users className="w-4 h-4" />
-                <span className="text-sm font-semibold">Clube Exclusivo de Importação</span>
+                <span className="text-sm font-semibold">🔒 Clube Exclusivo de Importação | Vídeo rápido (1 min)</span>
               </div>
             </div>
 
@@ -37,14 +37,12 @@ const Importacao = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-center mb-6 leading-tight">
-              Escale Seu Negócio com Acesso a
-              <br />
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Preços da China Mesmo Importando Pouco</span>
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-6 leading-tight">
+              Importe direto da fábrica com preço de atacado mesmo comprando pouco — sem atravessador e dentro da lei.
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground text-center mb-8 max-w-3xl mx-auto leading-relaxed">
-              Entre para o clube exclusivo e tenha acesso aos mesmos preços e fornecedores que grandes importadores usam, sem precisar comprar em grande volume
+              A gente junta vários compradores menores, negocia como se fosse um grande e divide custo de importação. Você paga preço de quem traz container mesmo começando pequeno.
             </p>
 
             <div className="flex justify-center">
@@ -61,7 +59,7 @@ const Importacao = () => {
                   });
                 }}
               >
-                ENTRAR PARA O CLUBE AGORA
+                Quero ver se eu posso entrar
                 <Zap className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>

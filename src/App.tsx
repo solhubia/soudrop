@@ -15,14 +15,6 @@ import ObrigadoCacadorChina from "./pages/ObrigadoCacadorChina";
 import { useEffect } from "react";
 import { trackViewContent } from "./lib/fbq";
 
-// -----------------------------
-// Tipagem fbq (TypeScript safe)
-// -----------------------------
-declare global {
-  interface Window {
-    fbq?: (...args: any[]) => void;
-  }
-}
 
 // -------------------------------------------
 // Componente que envia ViewContent por rota
