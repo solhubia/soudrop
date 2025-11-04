@@ -74,18 +74,15 @@ const CacadorProdutosChina = () => {
               O método testado e aprovado por importadores profissionais, agora disponível em um treinamento completo por <span className="font-bold text-[#FFD700]">apenas R$37</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-              <Button size="lg" variant="red" className="w-full sm:w-auto text-lg px-8 py-6"
-                onClick={() => { 
-                  // Scroll sempre acontece
-                  scrollToCTA();
-                  // Tracking apenas uma vez
-                  trackEventOnce('comecar_agora', () => {
-                    trackWishCheckout("courses");
-                  });
-                }}
-              >
-                <Zap className="w-5 h-5 mr-2" />
-                Quero Começar Agora!
+              <Button size="lg" variant="red" className="w-full sm:w-auto text-lg px-8 py-6" asChild>
+                <a href="https://pay.kiwify.com.br/8SaUXFm"
+                  onClick={() => trackEventOnce('comecar_agora', () => {
+                    trackInitiateCheckout("courses", 37);
+                  })}
+                >
+                  <Zap className="w-5 h-5 mr-2" />
+                  Quero Começar Agora!
+                </a>
               </Button>
               <div className="flex items-center gap-2 text-sm text-[#FFD700]">
                 <Shield className="w-4 h-4" />
@@ -115,17 +112,14 @@ const CacadorProdutosChina = () => {
                   <p className="text-[#FFF9E6]/80">
                     Descubra onde estão os produtos mais lucrativos da China e como qualquer pessoa pode começar a importar hoje mesmo.
                   </p>
-                  <Button variant="blue" size="lg" 
-                    onClick={() => { 
-                      // Scroll sempre acontece
-                      scrollToCTA();
-                      // Tracking apenas uma vez
-                      trackEventOnce('garantir_agora', () => {
-                        trackWishCheckout("courses");
-                      });
-                    }}
-                  >
-                    Garantir Acesso Agora
+                  <Button variant="blue" size="lg" asChild>
+                    <a href="https://pay.kiwify.com.br/8SaUXFm"
+                      onClick={() => trackEventOnce('garantir_agora', () => {
+                        trackInitiateCheckout("courses", 37);
+                      })}
+                    >
+                      Garantir Acesso Agora
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -178,17 +172,14 @@ const CacadorProdutosChina = () => {
             <p className="text-lg text-[#FFF9E6]/80">
               Em poucas horas você vai enxergar oportunidades que 95% das pessoas não conseguem ver — produtos que praticamente se vendem sozinhos, com margens incríveis de lucro.
             </p>
-            <Button size="lg" variant="red" className="text-lg px-8 py-6"
-              onClick={() => { 
-                // Scroll sempre acontece
-                scrollToCTA();
-                // Tracking apenas uma vez
-                trackEventOnce('quero_transformacao', () => {
-                  trackWishCheckout("courses");
-                });
-              }}
-            >
-              Quero Essa Transformação!
+            <Button size="lg" variant="red" className="text-lg px-8 py-6" asChild>
+              <a href="https://pay.kiwify.com.br/8SaUXFm"
+                onClick={() => trackEventOnce('quero_transformacao', () => {
+                  trackInitiateCheckout("courses", 37);
+                })}
+              >
+                Quero Essa Transformação!
+              </a>
             </Button>
           </div>
         </div>
