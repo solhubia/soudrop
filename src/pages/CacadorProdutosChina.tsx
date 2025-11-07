@@ -99,11 +99,17 @@ const CacadorProdutosChina = () => {
           <div className="max-w-5xl mx-auto">
             <Card className="overflow-hidden border-[#C41E3A]/30 bg-[#0F0A08] shadow-[0_0_30px_rgba(196,30,58,0.3)]">
               <div className="grid md:grid-cols-2 gap-8 p-8">
-                <div className="aspect-video bg-gradient-to-br from-[#C41E3A]/30 to-[#FFD700]/20 rounded-lg flex items-center justify-center border border-[#FFD700]/20">
-                  <div className="text-center space-y-2">
-                    <TrendingUp className="w-16 h-16 mx-auto text-[#FFD700]" />
-                    <p className="text-sm text-[#FFF9E6]/60">[Vídeo de Apresentação]</p>
-                  </div>
+                <div className="aspect-video rounded-lg overflow-hidden border border-[#FFD700]/20">
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/nplRDIrHuzA" 
+                    title="Vídeo de Apresentação" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
                 </div>
                 <div className="flex flex-col justify-center space-y-4">
                   <h2 className="text-2xl md:text-3xl font-bold text-[#FFD700]">
