@@ -168,6 +168,26 @@ const FontesSecretasDetalhes = () => {
           </Card>
         </section>
 
+        {/* Special Offer Section */}
+        <section className="mb-8 md:mb-16">
+          <Card className="p-6 md:p-8 bg-gradient-to-br from-[#0F0A08] to-[#1a1410] border-[#FFD700] border-2 max-w-3xl mx-auto text-center">
+            <p className="text-xl md:text-2xl lg:text-3xl text-[#FFF9E6] mb-4 leading-tight">
+              Esse mesmo conteúdo vale{" "}
+              <span className="text-[#C41E3A] font-bold line-through">R$997</span>{" "}
+              em uma mentoria individual, mas você vai pagar apenas{" "}
+              <span className="text-[#4ADE80] font-bold text-3xl md:text-4xl lg:text-5xl">R$37</span>{" "}
+              👇
+            </p>
+            
+            <Button 
+              onClick={handleCTA} 
+              className="w-full mt-6 bg-[#4ADE80] hover:bg-[#4ADE80]/90 text-[#0F0A08] text-lg md:text-xl lg:text-2xl py-6 md:py-8 rounded-lg font-bold shadow-[0_0_30px_rgba(74,222,128,0.5)] hover:shadow-[0_0_40px_rgba(74,222,128,0.7)] transition-all"
+            >
+              GARANTIR ACESSO POR R$37
+            </Button>
+          </Card>
+        </section>
+
         {/* Guarantee Section */}
         <section className="mb-8 md:mb-16">
           <Card className="p-4 md:p-8 bg-gradient-to-r from-[#C41E3A]/20 to-[#FFD700]/10 border-[#FFD700] border-2">
