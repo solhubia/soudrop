@@ -19,6 +19,8 @@ const FontesSecretas = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [showResults, setShowResults] = useState(false);
+  const [showLoading, setShowLoading] = useState(false);
+  const [loadingProgress, setLoadingProgress] = useState(0);
   const [showNextPage, setShowNextPage] = useState(false);
   const questions = [{
     question: "Qual é o seu objetivo com importação hoje?",
@@ -52,7 +54,24 @@ const FontesSecretas = () => {
   const handleCTA = () => {
     window.open("https://pay.kiwify.com.br/8SaUXFm", "_blank");
   };
-  if (showResults && !showNextPage) {
+
+  const handleContinueToLoading = () => {
+    setShowLoading(true);
+    // Simular progresso de carregamento
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += 2;
+      setLoadingProgress(progress);
+      if (progress >= 100) {
+        clearInterval(interval);
+        setTimeout(() => {
+          setShowLoading(false);
+          setShowNextPage(true);
+        }, 500);
+      }
+    }, 50);
+  };
+  if (showResults && !showLoading && !showNextPage) {
     return <div className="min-h-screen bg-[#0F0A08] text-[#FFF9E6]">
         <div className="container mx-auto px-3 md:px-4 py-6 md:py-8 max-w-6xl">
           {/* Results Section */}
@@ -93,11 +112,36 @@ const FontesSecretas = () => {
             <p className="text-base md:text-lg text-[#FFF9E6]/80 mb-6 md:mb-8 max-w-2xl mx-auto">
               Descubra como as <span className="text-[#FFD700] font-bold">Fontes Secretas</span> podem transformar o seu negócio de importação
             </p>
-            <Button onClick={() => setShowNextPage(true)} className="bg-[#4ADE80] hover:bg-[#4ADE80]/90 text-[#0F0A08] text-lg md:text-xl lg:text-2xl py-6 md:py-8 px-8 md:px-12 rounded-lg font-bold shadow-[0_0_30px_rgba(74,222,128,0.3)] hover:shadow-[0_0_40px_rgba(74,222,128,0.5)] transition-all">
+            <Button onClick={handleContinueToLoading} className="bg-[#4ADE80] hover:bg-[#4ADE80]/90 text-[#0F0A08] text-lg md:text-xl lg:text-2xl py-6 md:py-8 px-8 md:px-12 rounded-lg font-bold shadow-[0_0_30px_rgba(74,222,128,0.3)] hover:shadow-[0_0_40px_rgba(74,222,128,0.5)] transition-all">
               Continuar
               <ChevronRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
             </Button>
           </section>
+        </div>
+      </div>;
+  }
+
+  if (showLoading) {
+    return <div className="min-h-screen bg-[#FFF9E6] text-[#0F0A08] flex items-center justify-center">
+        <div className="container mx-auto px-3 md:px-4 py-6 md:py-8 max-w-2xl">
+          {/* Top Progress Bar */}
+          <div className="mb-12 md:mb-16">
+            <Progress value={75} className="h-2 bg-[#0F0A08]/10" />
+          </div>
+
+          <div className="text-center space-y-6 md:space-y-8">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+              Estamos analisando suas respostas... ⏳
+            </h1>
+            
+            <div className="space-y-3">
+              <p className="text-base md:text-lg text-[#0F0A08]/70">Carregando...</p>
+              <div className="max-w-md mx-auto">
+                <Progress value={loadingProgress} className="h-3 bg-[#0F0A08]/10" />
+              </div>
+              <p className="text-xl md:text-2xl font-bold text-[#0F0A08]">{loadingProgress}%</p>
+            </div>
+          </div>
         </div>
       </div>;
   }
