@@ -191,35 +191,36 @@ const FontesSecretasDetalhes = () => {
 
         {/* Guarantee Section */}
         <section className="mb-8 md:mb-16">
-          <Card className="p-6 md:p-10 bg-gradient-to-r from-[#C41E3A]/20 to-[#FFD700]/10 border-[#FFD700] border-2 max-w-3xl mx-auto">
-            <div className="text-center">
+          <Card className="p-6 md:p-10 bg-[#0F0A08] border-[#FFD700] border-2 max-w-3xl mx-auto">
+            <div className="text-left">
               <img 
                 src={garantia120Image} 
                 alt="Garantia de 120 dias" 
-                className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6"
+                className="w-24 h-24 md:w-32 md:h-32 mb-6"
               />
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-[#FFD700] px-2 leading-tight">
-                Garantia de 120 Dias: Risco Zero Para Você!
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                <span className="text-[#FFF9E6]">Garantia de 120 Dias: </span>
+                <span className="text-[#C41E3A]">Risco Zero para sua Jornada Rumo ao Sucesso!</span>
               </h2>
-              <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/90 mb-4 md:mb-6 max-w-3xl mx-auto px-2">
-                Se você aplicar o método e não encontrar produtos lucrativos ou fornecedores confiáveis nos próximos 120 dias, eu devolvo 100% do seu investimento.
+              
+              <p className="text-base md:text-lg text-[#FFF9E6] mb-6 leading-relaxed">
+                Se você estiver com sua operação ativa e <span className="font-bold">não faturar</span> nos próximos <span className="font-bold">120 dias</span>, <span className="font-bold underline">eu reembolso 100% do seu valor investido</span> nas Fontes Secretas da China.
               </p>
-              <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/90 mb-4 md:mb-6 max-w-3xl mx-auto px-2">
-                Tenho certeza de que você vai encontrar produtos com margens de lucro absurdas. Por isso criei essa garantia: ou você tem resultado, ou não paga nada.
+              
+              <p className="text-base md:text-lg text-[#FFF9E6] mb-6 leading-relaxed">
+                Eu tenho tanta certeza que com as <span className="font-bold">Fontes Secretas + Os Fornecedores Validados</span> é impossível você não ter resultado, que eu criei essa <span className="font-bold">garantia ABSURDA.</span>
               </p>
-              <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
-                <div className="flex items-center justify-center gap-2 md:gap-3 px-2">
-                  <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] flex-shrink-0" />
-                  <span className="text-sm md:text-base text-[#FFF9E6] text-left">Você tem 120 dias inteiros para testar</span>
-                </div>
-                <div className="flex items-center justify-center gap-2 md:gap-3 px-2">
-                  <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] flex-shrink-0" />
-                  <span className="text-sm md:text-base text-[#FFF9E6] text-left">Se não tiver lucro ou não encontrar oportunidades reais, o risco é meu</span>
-                </div>
-              </div>
-              <p className="text-xs md:text-sm text-[#FFF9E6]/60 italic px-2">
-                "Se você não tiver resultado, eu não quero o seu dinheiro."
+              
+              <p className="text-base md:text-lg text-[#FFF9E6] mb-8 leading-relaxed">
+                <span className="font-bold">Sem burocracia alguma</span>, se você seguir os passos e não tiver resultados, eu te devolvo o valor de volta pra você na hora.
               </p>
+
+              <Button 
+                onClick={handleCTA} 
+                className="w-full bg-[#4ADE80] hover:bg-[#4ADE80]/90 text-[#0F0A08] text-base md:text-lg lg:text-xl py-5 md:py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(74,222,128,0.3)] hover:shadow-[0_0_40px_rgba(74,222,128,0.5)] transition-all uppercase"
+              >
+                LIBERAR ACESSO AGORA
+              </Button>
             </div>
           </Card>
         </section>
