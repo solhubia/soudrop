@@ -130,34 +130,40 @@ const FontesSecretasDetalhes = () => {
         {/* What You'll Learn */}
         <section className="mb-8 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#FFD700] px-2 leading-tight">
-            O Que Você Vai Aprender
+            O Que Você Vai Aprender Nesse Curso:
           </h2>
           <div className="grid md:grid-cols-2 gap-4 md:gap-6">
             {[
               {
                 icon: TrendingUp,
-                text: "Como descobrir produtos lucrativos antes de chegarem ao Brasil"
+                title: "Fornecedores confiáveis da China:",
+                text: "Lista exclusiva com fornecedores testados e verificados. Você não vai mais perder tempo e dinheiro com intermediários ou golpistas."
               },
               {
                 icon: Target,
-                text: "Como identificar fornecedores reais e confiáveis"
+                title: "Como validar fornecedores:",
+                text: "Passo a passo completo para identificar se um fornecedor é real, seguro e confiável antes de fazer qualquer pedido."
               },
               {
                 icon: Rocket,
-                text: "Como encontrar mar azul (produtos com baixa concorrência e alta margem)"
+                title: "Produtos com alta margem de lucro:",
+                text: "Descubra produtos exclusivos com baixa concorrência e margens de até 300%. Acesse nichos pouco explorados antes dos seus concorrentes."
               },
               {
                 icon: CheckCircle2,
-                text: "Como validar um produto sem precisar de estoque"
+                title: "Planilha de cálculo de custos:",
+                text: "Ferramenta pronta para calcular todos os custos de importação (produto + frete + impostos) e descobrir seu lucro real antes de importar."
               },
               {
                 icon: Star,
-                text: "Como montar sua própria lista de produtos vencedores"
+                title: "Método de pesquisa de produtos:",
+                text: "Aprenda a encontrar produtos vencedores usando estratégias secretas que grandes importadores usam para descobrir tendências antes que virem febre no Brasil."
               }
             ].map((item, idx) => (
               <Card key={idx} className="p-4 md:p-6 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all">
                 <item.icon className="w-8 h-8 md:w-10 md:h-10 text-[#C41E3A] mb-3 md:mb-4" />
-                <p className="text-sm md:text-base text-[#FFF9E6]">{item.text}</p>
+                <p className="text-sm md:text-base text-[#FFD700] font-bold mb-2">{item.title}</p>
+                <p className="text-sm md:text-base text-[#FFF9E6]/80">{item.text}</p>
               </Card>
             ))}
           </div>
