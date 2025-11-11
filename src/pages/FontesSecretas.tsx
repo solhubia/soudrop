@@ -346,7 +346,7 @@ const FontesSecretas = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-[#4ADE80] flex-shrink-0 mt-1" />
                   <p className="text-base md:text-lg lg:text-xl text-[#FFF9E6] font-semibold">
-                    100% Pronto para usar — só descobrir e lucrar
+                    100% Pronto para usar — só aplicar e lucrar
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
