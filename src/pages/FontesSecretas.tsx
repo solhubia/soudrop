@@ -375,8 +375,13 @@ const FontesSecretas = () => {
             <Badge className="mb-3 md:mb-4 bg-[#C41E3A] text-white border-[#FFD700] text-xs md:text-sm">
               🔓 Acesso Exclusivo
             </Badge>
-            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-[#FFD700] leading-tight px-2">
-              Descubra as <span className="text-[#C41E3A]">Fontes Secretas da China</span>
+            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight px-2">
+              <span className="text-[#FFF9E6]">Acesse as </span>
+              <span className="text-[#C41E3A]">Fontes Secretas da China</span>
+              <span className="text-[#FFF9E6]"> Que Fazem Até Iniciantes </span>
+              <span className="text-[#4ADE80]">Lucrarem 3x Mais.</span>
+              <span className="text-[#FFF9E6]"> Sem Intermediários ou </span>
+              <span className="text-[#C41E3A]">Pagar Caro em Revendedores.</span>
             </h1>
             <p className="text-base md:text-xl lg:text-2xl text-[#FFF9E6]/80 mb-3 md:mb-4 px-2">
               Aprenda onde encontrar os produtos mais baratos do mundo — antes que cheguem ao Brasil
