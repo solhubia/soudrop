@@ -189,15 +189,21 @@ const FontesSecretasDetalhes = () => {
           </Card>
         </section>
 
+        {/* Guarantee Badge */}
+        <section className="mb-8 md:mb-16">
+          <div className="flex justify-center">
+            <img 
+              src={garantia120Image} 
+              alt="Garantia de 120 dias" 
+              className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+            />
+          </div>
+        </section>
+
         {/* Guarantee Section */}
         <section className="mb-8 md:mb-16">
           <Card className="p-6 md:p-10 bg-[#0F0A08] border-[#FFD700] border-2 max-w-3xl mx-auto">
             <div className="text-left">
-              <img 
-                src={garantia120Image} 
-                alt="Garantia de 120 dias" 
-                className="w-24 h-24 md:w-32 md:h-32 mb-6"
-              />
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
                 <span className="text-[#FFF9E6]">Garantia de 120 Dias: </span>
                 <span className="text-[#C41E3A]">Risco Zero para sua Jornada Rumo ao Sucesso!</span>
