@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, TrendingUp, Target, Shield, Clock, Rocket, Star, ChevronRight } from "lucide-react";
 import { useTracking } from "@/hooks/useTracking";
+import { useEffect } from "react";
 import priceComparisonImg from "@/assets/price-comparison.png";
 import depoimentoGustavoImg from "@/assets/depoimento-gustavo.jpeg";
 import depoimentoFelipeImg from "@/assets/depoimento-felipe.jpeg";
@@ -17,6 +18,19 @@ const FontesSecretas = () => {
   const {
     trackEventOnce
   } = useTracking();
+
+  useEffect(() => {
+    // Evento pro seu sistema interno
+    trackEventOnce("view_fontes_secretas_lp");
+
+    // Evento direto no GA4 (opcional)
+    if (window.gtag) {
+      window.gtag("event", "page_view", {
+        page_title: "Fontes Secretas",
+        page_path: "/fontes-secretas",
+      });
+    }
+  }, [trackEventOnce]);
   
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
