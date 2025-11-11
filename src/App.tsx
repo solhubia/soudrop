@@ -10,6 +10,7 @@ import Importacao from "./pages/Importacao";
 import CacadorProdutos from "./pages/CacadorProdutos";
 import CacadorProdutosChina from "./pages/CacadorProdutosChina";
 import FontesSecretas from "./pages/FontesSecretas";
+import FontesSecretasDetalhes from "./pages/FontesSecretasDetalhes";
 import Obrigado from "./pages/Obrigado";
 import ObrigadoSoudrop from "./pages/ObrigadoSoudrop";
 import ObrigadoCacadorChina from "./pages/ObrigadoCacadorChina";
@@ -104,6 +105,7 @@ const App = () => {
             <Route path="/cacador-produtos" element={<CacadorProdutos />} />
             <Route path="/cacador-produtos-china" element={<CacadorProdutosChina />} />
             <Route path="/fontes-secretas" element={<FontesSecretas />} />
+            <Route path="/fontes-secretas-detalhes" element={<FontesSecretasDetalhes />} />
             <Route path="/obrigado" element={<Obrigado />} />
             <Route path="/obrigado-soudrop" element={<ObrigadoSoudrop />} />
             <Route path="/obrigado-cacador-china" element={<ObrigadoCacadorChina />} />
