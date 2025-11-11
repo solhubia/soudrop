@@ -336,9 +336,56 @@ const FontesSecretas = () => {
                 <p>Aliexpress Não é o lugar mais barato</p>
                 <p>Nem mesmo a Canton fair é o Lugar mais barato</p>
                 <p className="mt-4 md:mt-6 text-[#FFD700] normal-case tracking-normal">
-                  Existe alguns lugares que você pode ter  e os importadores não querem que você saiba
+                  Existe alguns lugares que você pode ter <span className="text-[#4ADE80]">300% de lucro</span> e os importadores não querem que você saiba
                 </p>
               </div>
+            </Card>
+
+            {/* Benefits Section */}
+            <Card className="p-6 md:p-8 bg-[#0F0A08] border-[#FFD700]/30 max-w-2xl mx-auto mt-6 md:mt-8 text-left">
+              <div className="space-y-4 md:space-y-5 mb-6 md:mb-8">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-[#4ADE80] flex-shrink-0 mt-1" />
+                  <p className="text-base md:text-lg lg:text-xl text-[#FFF9E6] font-semibold">
+                    100% Pronto para usar — só descobrir e lucrar
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-[#4ADE80] flex-shrink-0 mt-1" />
+                  <p className="text-base md:text-lg lg:text-xl text-[#FFF9E6] font-semibold">
+                    Funciona mesmo se você achar que "não tem experiência com importação"
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-[#4ADE80] flex-shrink-0 mt-1" />
+                  <p className="text-base md:text-lg lg:text-xl text-[#FFF9E6] font-semibold">
+                    Resultados em dias, não meses
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-[#4ADE80] flex-shrink-0 mt-1" />
+                  <p className="text-base md:text-lg lg:text-xl text-[#FFF9E6] font-semibold">
+                    Baseado em fontes reais testadas por importadores profissionais
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-[#4ADE80] flex-shrink-0 mt-1" />
+                  <p className="text-base md:text-lg lg:text-xl text-[#FFF9E6] font-semibold">
+                    Fornecedores, plataformas e métodos práticos incluídos
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/80 mb-6 md:mb-8 leading-relaxed">
+                Você não precisa criar nada do zero — é literalmente acessar as fontes, escolher seus produtos e começar a lucrar mais no mesmo dia
+              </p>
+
+              <Button 
+                onClick={() => setCurrentStep(0)} 
+                className="w-full bg-[#4ADE80] hover:bg-[#4ADE80]/90 text-[#0F0A08] text-base md:text-lg lg:text-xl py-5 md:py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(74,222,128,0.3)] hover:shadow-[0_0_40px_rgba(74,222,128,0.5)] transition-all"
+              >
+                🚀 QUERO DESCOBRIR AS FONTES SECRETAS
+              </Button>
             </Card>
           </div>}
 
