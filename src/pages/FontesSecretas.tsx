@@ -16,6 +16,20 @@ const FontesSecretas = () => {
   const {
     trackEventOnce
   } = useTracking();
+
+  useEffect(() => {
+    // Evento pro seu sistema interno
+    trackEventOnce("view_fontes_secretas_lp");
+
+    // Evento direto no GA4 (opcional)
+    if (window.gtag) {
+      window.gtag("event", "page_view", {
+        page_title: "Fontes Secretas",
+        page_path: "/fontes-secretas",
+      });
+    }
+  }, [trackEventOnce]);
+  
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [showResults, setShowResults] = useState(false);
