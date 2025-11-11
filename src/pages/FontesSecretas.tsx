@@ -75,51 +75,51 @@ const FontesSecretas = () => {
   if (showResults) {
     return (
       <div className="min-h-screen bg-[#0F0A08] text-[#FFF9E6]">
-        <div className="container mx-auto px-4 py-8 max-w-6xl">
+        <div className="container mx-auto px-3 md:px-4 py-6 md:py-8 max-w-6xl">
           {/* Results Section */}
-          <section className="text-center mb-16 animate-fade-in">
-            <Badge className="mb-4 bg-[#C41E3A] text-white border-[#FFD700]">
+          <section className="text-center mb-8 md:mb-16 animate-fade-in">
+            <Badge className="mb-3 md:mb-4 bg-[#C41E3A] text-white border-[#FFD700] text-xs md:text-sm">
               ✓ Quiz Completo
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#FFD700]">
+            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-[#FFD700] leading-tight px-2">
               Veja os Resultados de Quem Já Está Aplicando o Método
             </h1>
-            <p className="text-xl text-[#FFF9E6]/80 max-w-3xl mx-auto mb-8">
+            <p className="text-base md:text-xl text-[#FFF9E6]/80 max-w-3xl mx-auto mb-6 md:mb-8 px-2">
               Alunos que acessaram as <span className="text-[#FFD700] font-bold">Fontes Secretas da China</span> já encontraram produtos com margens de até <span className="text-[#C41E3A] font-bold">300% de lucro</span> e criaram negócios extremamente lucrativos — sem depender de intermediários.
             </p>
           </section>
 
           {/* Testimonials */}
-          <section className="mb-16">
-            <div className="grid md:grid-cols-3 gap-6">
+          <section className="mb-8 md:mb-16">
+            <div className="grid md:grid-cols-3 gap-4 md:gap-6">
               {[
                 { quote: "Achei um fornecedor com preço inacreditável.", author: "Maria S." },
                 { quote: "Em 3 dias encontrei 5 produtos lucrativos.", author: "João P." },
                 { quote: "Já recuperei o investimento no primeiro pedido.", author: "Carlos R." }
               ].map((testimonial, idx) => (
-                <Card key={idx} className="p-6 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all">
-                  <Star className="w-8 h-8 text-[#FFD700] mb-4" />
-                  <p className="text-[#FFF9E6] mb-4 italic">"{testimonial.quote}"</p>
-                  <p className="text-[#FFD700] font-semibold">— {testimonial.author}</p>
+                <Card key={idx} className="p-4 md:p-6 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all">
+                  <Star className="w-6 h-6 md:w-8 md:h-8 text-[#FFD700] mb-3 md:mb-4" />
+                  <p className="text-sm md:text-base text-[#FFF9E6] mb-3 md:mb-4 italic">"{testimonial.quote}"</p>
+                  <p className="text-sm md:text-base text-[#FFD700] font-semibold">— {testimonial.author}</p>
                 </Card>
               ))}
             </div>
           </section>
 
           {/* Transformation Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-[#FFD700]">
+          <section className="mb-8 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#FFD700] px-2 leading-tight">
               O Que Pode Acontecer Nos Próximos Dias
             </h2>
-            <p className="text-center text-[#FFF9E6]/80 mb-12 max-w-3xl mx-auto">
+            <p className="text-center text-sm md:text-base text-[#FFF9E6]/80 mb-8 md:mb-12 max-w-3xl mx-auto px-3">
               Enquanto a maioria continua comprando de intermediários, você vai aprender a chegar <span className="text-[#FFD700] font-bold">direto na origem dos produtos</span>, pagando até <span className="text-[#C41E3A] font-bold">10x mais barato</span> e encontrando <span className="text-[#FFD700] font-bold">oportunidades de mar azul</span> que quase ninguém conhece.
             </p>
             
-            <Card className="p-8 bg-gradient-to-r from-[#C41E3A]/20 to-[#FFD700]/10 border-[#FFD700]/30">
-              <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-4 md:p-8 bg-gradient-to-r from-[#C41E3A]/20 to-[#FFD700]/10 border-[#FFD700]/30">
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-[#FFF9E6]/60 mb-4">Hoje</h3>
-                  <ul className="space-y-2 text-[#FFF9E6]/70">
+                  <h3 className="text-xl md:text-2xl font-bold text-[#FFF9E6]/60 mb-3 md:mb-4">Hoje</h3>
+                  <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-[#FFF9E6]/70">
                     <li>• Produtos comuns</li>
                     <li>• Margens pequenas</li>
                     <li>• Alta concorrência</li>
@@ -127,8 +127,8 @@ const FontesSecretas = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-[#FFD700] mb-4">Amanhã</h3>
-                  <ul className="space-y-2 text-[#FFD700]">
+                  <h3 className="text-xl md:text-2xl font-bold text-[#FFD700] mb-3 md:mb-4">Amanhã</h3>
+                  <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-[#FFD700]">
                     <li>• Produtos exclusivos</li>
                     <li>• Margens altas (até 300%)</li>
                     <li>• Mar azul</li>
@@ -140,12 +140,12 @@ const FontesSecretas = () => {
           </section>
 
           {/* Identification Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-[#FFD700]">
+          <section className="mb-8 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#FFD700] px-2 leading-tight">
               Se Você Se Identificar com 2 ou Mais Dessas Frases, Esse Curso Foi Feito Pra Você 👇
             </h2>
-            <Card className="p-8 bg-[#0F0A08] border-[#C41E3A]/30">
-              <div className="space-y-4">
+            <Card className="p-4 md:p-8 bg-[#0F0A08] border-[#C41E3A]/30">
+              <div className="space-y-3 md:space-y-4">
                 {[
                   "Compro produtos caros e ganho pouco",
                   "Não sei onde achar fornecedores confiáveis",
@@ -153,9 +153,9 @@ const FontesSecretas = () => {
                   "Vejo outros lucrando e não sei como eles fazem",
                   "Quero vender produtos que ninguém mais vende"
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#C41E3A] flex-shrink-0 mt-1" />
-                    <p className="text-lg text-[#FFF9E6]">{item}</p>
+                  <div key={idx} className="flex items-start gap-2 md:gap-3">
+                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#C41E3A] flex-shrink-0 mt-0.5 md:mt-1" />
+                    <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]">{item}</p>
                   </div>
                 ))}
               </div>
@@ -163,17 +163,17 @@ const FontesSecretas = () => {
           </section>
 
           {/* Before/After Table */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-[#FFD700]">
+          <section className="mb-8 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#FFD700] px-2 leading-tight">
               Antes e Depois das Fontes Secretas
             </h2>
             <Card className="overflow-hidden border-[#FFD700]/30">
               <div className="overflow-x-auto">
-                <table className="w-full">
+                <table className="w-full text-sm md:text-base">
                   <thead>
                     <tr className="bg-[#C41E3A]/20">
-                      <th className="p-4 text-left text-[#FFF9E6]/60">Antes das Fontes Secretas</th>
-                      <th className="p-4 text-left text-[#FFD700]">Depois das Fontes Secretas</th>
+                      <th className="p-3 md:p-4 text-left text-[#FFF9E6]/60 text-xs md:text-base">Antes das Fontes Secretas</th>
+                      <th className="p-3 md:p-4 text-left text-[#FFD700] text-xs md:text-base">Depois das Fontes Secretas</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -184,8 +184,8 @@ const FontesSecretas = () => {
                       ["Alto risco e desinformação", "Fornecedores testados e confiáveis"]
                     ].map((row, idx) => (
                       <tr key={idx} className="border-t border-[#FFD700]/10">
-                        <td className="p-4 text-[#FFF9E6]/70">{row[0]}</td>
-                        <td className="p-4 text-[#FFD700]">{row[1]}</td>
+                        <td className="p-3 md:p-4 text-[#FFF9E6]/70">{row[0]}</td>
+                        <td className="p-3 md:p-4 text-[#FFD700]">{row[1]}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -195,11 +195,11 @@ const FontesSecretas = () => {
           </section>
 
           {/* What You'll Learn */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-[#FFD700]">
+          <section className="mb-8 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#FFD700] px-2 leading-tight">
               O Que Você Vai Aprender
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               {[
                 { icon: TrendingUp, text: "Como descobrir produtos lucrativos antes de chegarem ao Brasil" },
                 { icon: Target, text: "Como identificar fornecedores reais e confiáveis" },
@@ -207,40 +207,40 @@ const FontesSecretas = () => {
                 { icon: CheckCircle2, text: "Como validar um produto sem precisar de estoque" },
                 { icon: Star, text: "Como montar sua própria lista de produtos vencedores" }
               ].map((item, idx) => (
-                <Card key={idx} className="p-6 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all">
-                  <item.icon className="w-10 h-10 text-[#C41E3A] mb-4" />
-                  <p className="text-[#FFF9E6]">{item.text}</p>
+                <Card key={idx} className="p-4 md:p-6 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all">
+                  <item.icon className="w-8 h-8 md:w-10 md:h-10 text-[#C41E3A] mb-3 md:mb-4" />
+                  <p className="text-sm md:text-base text-[#FFF9E6]">{item.text}</p>
                 </Card>
               ))}
             </div>
           </section>
 
           {/* Guarantee Section */}
-          <section className="mb-16">
-            <Card className="p-8 bg-gradient-to-r from-[#C41E3A]/20 to-[#FFD700]/10 border-[#FFD700] border-2">
+          <section className="mb-8 md:mb-16">
+            <Card className="p-4 md:p-8 bg-gradient-to-r from-[#C41E3A]/20 to-[#FFD700]/10 border-[#FFD700] border-2">
               <div className="text-center">
-                <Shield className="w-16 h-16 text-[#FFD700] mx-auto mb-4" />
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#FFD700]">
+                <Shield className="w-12 h-12 md:w-16 md:h-16 text-[#FFD700] mx-auto mb-3 md:mb-4" />
+                <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-[#FFD700] px-2 leading-tight">
                   🛡️ Garantia de 120 Dias: Risco Zero Para Você!
                 </h2>
-                <p className="text-lg text-[#FFF9E6]/90 mb-6 max-w-3xl mx-auto">
+                <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/90 mb-4 md:mb-6 max-w-3xl mx-auto px-2">
                   Se você aplicar o método das <span className="text-[#FFD700] font-bold">Fontes Secretas da China</span>, seguir o passo a passo e <span className="text-[#C41E3A] font-bold">não encontrar produtos lucrativos ou fornecedores confiáveis</span> nos próximos <span className="font-bold">120 dias</span>, eu devolvo <span className="font-bold">100% do seu investimento</span>.
                 </p>
-                <p className="text-lg text-[#FFF9E6]/90 mb-6 max-w-3xl mx-auto">
+                <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/90 mb-4 md:mb-6 max-w-3xl mx-auto px-2">
                   Tenho tanta certeza de que, com as estratégias do treinamento, <span className="text-[#FFD700] font-bold">você vai encontrar produtos ocultos e margens de lucro que nunca viu antes</span>, que criei essa <span className="font-bold">garantia absurda</span>:<br/>
                   👉 <span className="text-[#C41E3A] font-bold">ou você tem resultado, ou não paga nada.</span>
                 </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center justify-center gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#FFD700]" />
-                    <span className="text-[#FFF9E6]">Você tem 120 dias inteiros pra testar</span>
+                <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                  <div className="flex items-center justify-center gap-2 md:gap-3 px-2">
+                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] flex-shrink-0" />
+                    <span className="text-sm md:text-base text-[#FFF9E6] text-left">Você tem 120 dias inteiros pra testar</span>
                   </div>
-                  <div className="flex items-center justify-center gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#FFD700]" />
-                    <span className="text-[#FFF9E6]">Se não tiver lucro ou não achar oportunidades reais, o risco é meu</span>
+                  <div className="flex items-center justify-center gap-2 md:gap-3 px-2">
+                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] flex-shrink-0" />
+                    <span className="text-sm md:text-base text-[#FFF9E6] text-left">Se não tiver lucro ou não achar oportunidades reais, o risco é meu</span>
                   </div>
                 </div>
-                <p className="text-sm text-[#FFF9E6]/60 italic">
+                <p className="text-xs md:text-sm text-[#FFF9E6]/60 italic px-2">
                   "Se você não tiver resultado, eu não quero o seu dinheiro. Eu quero o seu sucesso."
                 </p>
               </div>
@@ -248,56 +248,56 @@ const FontesSecretas = () => {
           </section>
 
           {/* Pricing Section */}
-          <section className="mb-16">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#FFD700]">
+          <section className="mb-8 md:mb-16">
+            <div className="text-center mb-6 md:mb-8">
+              <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-3 md:mb-4 text-[#FFD700] px-2 leading-tight">
                 Acesso às Fontes Secretas da China
               </h2>
-              <p className="text-4xl md:text-6xl font-bold text-[#C41E3A] mb-4">
+              <p className="text-3xl md:text-4xl lg:text-6xl font-bold text-[#C41E3A] mb-3 md:mb-4">
                 Por Apenas R$37 💥
               </p>
-              <p className="text-lg text-[#FFF9E6]/80 max-w-2xl mx-auto mb-8">
+              <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/80 max-w-2xl mx-auto mb-6 md:mb-8 px-3">
                 Tenha acesso imediato ao treinamento completo e aprenda o mesmo método usado por grandes importadores para descobrir produtos lucrativos e fornecedores reais, direto da China.
               </p>
             </div>
 
-            <Card className="p-8 bg-[#0F0A08] border-[#FFD700]/30 max-w-2xl mx-auto mb-8">
-              <div className="space-y-4 mb-8">
+            <Card className="p-4 md:p-8 bg-[#0F0A08] border-[#FFD700]/30 max-w-2xl mx-auto mb-6 md:mb-8">
+              <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
                 {[
                   "📊 Planilha de cálculo de custos e lucros",
                   "🧭 Checklist de verificação de fornecedores",
                   "💬 Grupo VIP com atualizações e oportunidades"
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#FFD700] flex-shrink-0 mt-1" />
-                    <p className="text-lg text-[#FFF9E6]">{item}</p>
+                  <div key={idx} className="flex items-start gap-2 md:gap-3">
+                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] flex-shrink-0 mt-0.5 md:mt-1" />
+                    <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]">{item}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="text-center mb-6">
-                <div className="inline-flex items-center gap-2 bg-[#C41E3A]/20 px-4 py-2 rounded-full mb-4">
-                  <Clock className="w-5 h-5 text-[#FFD700]" />
-                  <span className="text-[#FFD700] font-semibold">Oferta disponível por tempo limitado</span>
+              <div className="text-center mb-4 md:mb-6">
+                <div className="inline-flex items-center gap-2 bg-[#C41E3A]/20 px-3 md:px-4 py-1.5 md:py-2 rounded-full mb-3 md:mb-4">
+                  <Clock className="w-4 h-4 md:w-5 md:h-5 text-[#FFD700]" />
+                  <span className="text-xs md:text-sm text-[#FFD700] font-semibold">Oferta por tempo limitado</span>
                 </div>
               </div>
 
               <Button 
                 onClick={handleCTA}
-                className="w-full bg-[#C41E3A] hover:bg-[#C41E3A]/90 text-white text-xl py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(196,30,58,0.5)] hover:shadow-[0_0_40px_rgba(196,30,58,0.7)] transition-all"
+                className="w-full bg-[#C41E3A] hover:bg-[#C41E3A]/90 text-white text-base md:text-lg lg:text-xl py-4 md:py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(196,30,58,0.5)] hover:shadow-[0_0_40px_rgba(196,30,58,0.7)] transition-all"
               >
                 🔥 Quero Acessar as Fontes Secretas Agora
-                <ChevronRight className="ml-2 w-6 h-6" />
+                <ChevronRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
               </Button>
             </Card>
           </section>
 
           {/* FAQ Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-[#FFD700]">
+          <section className="mb-8 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#FFD700] px-2 leading-tight">
               Dúvidas Frequentes
             </h2>
-            <Card className="p-8 bg-[#0F0A08] border-[#FFD700]/30 max-w-3xl mx-auto">
+            <Card className="p-4 md:p-8 bg-[#0F0A08] border-[#FFD700]/30 max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
                 {[
                   {
@@ -322,10 +322,10 @@ const FontesSecretas = () => {
                   }
                 ].map((faq, idx) => (
                   <AccordionItem key={idx} value={`item-${idx}`}>
-                    <AccordionTrigger className="text-[#FFF9E6] hover:text-[#FFD700]">
+                    <AccordionTrigger className="text-sm md:text-base text-[#FFF9E6] hover:text-[#FFD700] text-left">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-[#FFF9E6]/80">
+                    <AccordionContent className="text-sm md:text-base text-[#FFF9E6]/80">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -335,19 +335,19 @@ const FontesSecretas = () => {
           </section>
 
           {/* Final CTA */}
-          <section className="text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#FFD700]">
+          <section className="text-center px-2">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-3 md:mb-4 text-[#FFD700] leading-tight">
               Enquanto outros ainda compram caro de intermediários...
             </h2>
-            <p className="text-2xl md:text-3xl mb-8 text-[#FFF9E6]">
+            <p className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-[#FFF9E6] leading-tight">
               Você vai direto na <span className="text-[#C41E3A] font-bold">fonte secreta dos produtos mais baratos do mundo.</span>
             </p>
-            <p className="text-lg text-[#FFF9E6]/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/80 mb-6 md:mb-8 max-w-2xl mx-auto">
               Dê o primeiro passo hoje e descubra onde nascem os produtos que geram margens absurdas de lucro.
             </p>
             <Button 
               onClick={handleCTA}
-              className="bg-[#C41E3A] hover:bg-[#C41E3A]/90 text-white text-2xl py-8 px-12 rounded-lg font-bold shadow-[0_0_30px_rgba(196,30,58,0.5)] hover:shadow-[0_0_40px_rgba(196,30,58,0.7)] transition-all"
+              className="bg-[#C41E3A] hover:bg-[#C41E3A]/90 text-white text-lg md:text-xl lg:text-2xl py-6 md:py-8 px-8 md:px-12 rounded-lg font-bold shadow-[0_0_30px_rgba(196,30,58,0.5)] hover:shadow-[0_0_40px_rgba(196,30,58,0.7)] transition-all"
             >
               👉 Quero Descobrir as Fontes Secretas Agora
             </Button>
@@ -361,51 +361,51 @@ const FontesSecretas = () => {
     <div className="min-h-screen bg-[#0F0A08] text-[#FFF9E6]">
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-[#0F0A08]/95 backdrop-blur-sm border-b border-[#FFD700]/20">
-        <div className="container mx-auto px-4 py-4">
-          <Progress value={progressPercentage} className="h-2" />
-          <p className="text-sm text-[#FFF9E6]/60 mt-2 text-center">
+        <div className="container mx-auto px-3 py-2 md:py-4">
+          <Progress value={progressPercentage} className="h-1.5 md:h-2" />
+          <p className="text-xs md:text-sm text-[#FFF9E6]/60 mt-1.5 md:mt-2 text-center">
             Pergunta {currentStep + 1} de {questions.length}
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 pt-24 pb-12 max-w-4xl">
+      <div className="container mx-auto px-3 pt-16 md:pt-24 pb-8 md:pb-12 max-w-4xl">
         {currentStep === 0 && (
-          <div className="text-center mb-12 animate-fade-in">
-            <Badge className="mb-4 bg-[#C41E3A] text-white border-[#FFD700]">
+          <div className="text-center mb-6 md:mb-12 animate-fade-in">
+            <Badge className="mb-3 md:mb-4 bg-[#C41E3A] text-white border-[#FFD700] text-xs md:text-sm">
               🔓 Acesso Exclusivo
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#FFD700]">
+            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-[#FFD700] leading-tight px-2">
               Descubra as <span className="text-[#C41E3A]">Fontes Secretas da China</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#FFF9E6]/80 mb-4">
+            <p className="text-base md:text-xl lg:text-2xl text-[#FFF9E6]/80 mb-3 md:mb-4 px-2">
               Aprenda onde encontrar os produtos mais baratos do mundo — antes que cheguem ao Brasil
             </p>
-            <Card className="p-6 bg-[#0F0A08] border-[#FFD700]/30 max-w-2xl mx-auto mt-8">
-              <p className="text-lg text-[#FFF9E6]/90 mb-4">
+            <Card className="p-4 md:p-6 bg-[#0F0A08] border-[#FFD700]/30 max-w-2xl mx-auto mt-4 md:mt-8">
+              <p className="text-sm md:text-lg text-[#FFF9E6]/90 mb-3 md:mb-4">
                 Existe um mapa usado por quem realmente lucra com importação.
               </p>
-              <p className="text-lg text-[#FFF9E6]/90">
+              <p className="text-sm md:text-lg text-[#FFF9E6]/90">
                 Agora você vai ter acesso às mesmas <span className="text-[#FFD700] font-bold">fontes ocultas de produtos e fornecedores</span> que os grandes importadores usam para ter margens de até <span className="text-[#C41E3A] font-bold">300% de lucro</span>.
               </p>
             </Card>
           </div>
         )}
 
-        <Card className="p-8 md:p-12 bg-[#0F0A08] border-[#FFD700]/30 shadow-[0_0_30px_rgba(255,215,0,0.1)] animate-fade-in">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#FFD700]">
+        <Card className="p-4 md:p-8 lg:p-12 bg-[#0F0A08] border-[#FFD700]/30 shadow-[0_0_30px_rgba(255,215,0,0.1)] animate-fade-in">
+          <h2 className="text-lg md:text-2xl lg:text-3xl font-bold mb-4 md:mb-8 text-[#FFD700] leading-tight">
             {questions[currentStep].question}
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4">
             {questions[currentStep].options.map((option, idx) => (
               <Button
                 key={idx}
                 onClick={() => handleAnswer(option)}
                 variant="outline"
-                className="w-full justify-start text-left p-6 h-auto bg-[#0F0A08] border-[#FFF9E6]/20 hover:border-[#FFD700] hover:bg-[#FFD700]/10 text-[#FFF9E6] hover:text-[#FFD700] transition-all text-lg"
+                className="w-full justify-start text-left p-4 md:p-6 h-auto bg-[#0F0A08] border-[#FFF9E6]/20 hover:border-[#FFD700] hover:bg-[#FFD700]/10 text-[#FFF9E6] hover:text-[#FFD700] transition-all text-sm md:text-base lg:text-lg min-h-[60px] md:min-h-auto"
               >
-                <span className="mr-3 text-[#C41E3A] font-bold">{String.fromCharCode(65 + idx)}.</span>
-                {option}
+                <span className="mr-2 md:mr-3 text-[#C41E3A] font-bold text-base md:text-lg flex-shrink-0">{String.fromCharCode(65 + idx)}.</span>
+                <span className="leading-relaxed">{option}</span>
               </Button>
             ))}
           </div>
