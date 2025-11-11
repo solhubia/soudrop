@@ -147,7 +147,7 @@ const FontesSecretas = () => {
             <Card className="p-4 md:p-8 bg-[#0F0A08] border-[#C41E3A]/30">
               <div className="space-y-3 md:space-y-4">
                 {[
-                  "Compro produtos caros e ganho pouco",
+                  "Vendo produtos com margem baixa",
                   "Não sei onde achar fornecedores confiáveis",
                   "Tenho medo de investir e perder dinheiro",
                   "Vejo outros lucrando e não sei como eles fazem",
