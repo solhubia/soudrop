@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { CheckCircle2, TrendingUp, Target, Shield, Clock, Rocket, Star, ChevronRight } from "lucide-react";
+import { CheckCircle2, TrendingUp, Target, Shield, Clock, Rocket, Star, ChevronRight, X } from "lucide-react";
+import antesDepoisImage from "@/assets/antes-depois-produtos.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useTracking } from "@/hooks/useTracking";
 
@@ -98,14 +99,31 @@ const FontesSecretasDetalhes = () => {
                     ["Alto risco e desinformação", "Fornecedores testados e confiáveis"]
                   ].map((row, idx) => (
                     <tr key={idx} className="border-t border-[#FFD700]/10">
-                      <td className="p-3 md:p-4 text-[#FFF9E6]/70">{row[0]}</td>
-                      <td className="p-3 md:p-4 text-[#FFD700] font-semibold">{row[1]}</td>
+                      <td className="p-3 md:p-4 text-[#FFF9E6]/70 flex items-start gap-2">
+                        <span className="text-[#C41E3A] flex-shrink-0">❌</span>
+                        <span>{row[0]}</span>
+                      </td>
+                      <td className="p-3 md:p-4 text-[#FFD700] font-semibold">
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#4ADE80] flex-shrink-0">✅</span>
+                          <span>{row[1]}</span>
+                        </div>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
           </Card>
+          
+          {/* Comparison Image */}
+          <div className="mt-8 md:mt-12">
+            <img 
+              src={antesDepoisImage} 
+              alt="Comparação de lucros antes e depois das Fontes Secretas" 
+              className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
+            />
+          </div>
         </section>
 
         {/* What You'll Learn */}
