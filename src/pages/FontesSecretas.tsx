@@ -1,4 +1,5 @@
 import { useState } from "react";
+import crescimentoLucrosImg from "@/assets/crescimento-lucros.png";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -16,19 +17,6 @@ const FontesSecretas = () => {
   const {
     trackEventOnce
   } = useTracking();
-
-  useEffect(() => {
-    // Evento pro seu sistema interno
-    trackEventOnce("view_fontes_secretas_lp");
-
-    // Evento direto no GA4 (opcional)
-    if (window.gtag) {
-      window.gtag("event", "page_view", {
-        page_title: "Fontes Secretas",
-        page_path: "/fontes-secretas",
-      });
-    }
-  }, [trackEventOnce]);
   
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
@@ -158,37 +146,27 @@ const FontesSecretas = () => {
   if (showResults && showNextPage) {
     return <div className="min-h-screen bg-[#0F0A08] text-[#FFF9E6]">
         <div className="container mx-auto px-3 md:px-4 py-6 md:py-8 max-w-6xl">
-          {/* Transformation Section */}
+          {/* Seu Plano Foi Aprovado Section */}
           <section className="mb-8 md:mb-16">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#FFD700] px-2 leading-tight">
-              O Que Pode Acontecer Nos Próximos Dias
-            </h2>
-            <p className="text-center text-sm md:text-base text-[#FFF9E6]/80 mb-8 md:mb-12 max-w-3xl mx-auto px-3">
-              Enquanto a maioria continua comprando de intermediários, você vai aprender a chegar <span className="text-[#FFD700] font-bold">direto na origem dos produtos</span>, pagando até <span className="text-[#C41E3A] font-bold">10x mais barato</span> e encontrando <span className="text-[#FFD700] font-bold">oportunidades de mar azul</span> que quase ninguém conhece.
-            </p>
-            
-            <Card className="p-4 md:p-8 bg-gradient-to-r from-[#C41E3A]/20 to-[#FFD700]/10 border-[#FFD700]/30">
-              <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-[#FFF9E6]/60 mb-3 md:mb-4">Hoje</h3>
-                  <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-[#FFF9E6]/70">
-                    <li>• Produtos comuns</li>
-                    <li>• Margens pequenas</li>
-                    <li>• Alta concorrência</li>
-                    <li>• Dependência de intermediários</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-[#FFD700] mb-3 md:mb-4">Amanhã</h3>
-                  <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-[#FFD700]">
-                    <li>• Produtos exclusivos</li>
-                    <li>• Margens altas (até 300%)</li>
-                    <li>• Mar azul</li>
-                    <li>• Fornecedores diretos</li>
-                  </ul>
-                </div>
+            <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 rounded-2xl p-6 md:p-10 border-2 border-emerald-300 dark:border-emerald-700">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 md:mb-6 text-emerald-700 dark:text-emerald-400 px-2 leading-tight">
+                Seu plano foi aprovado!
+              </h2>
+              <p className="text-center text-sm md:text-base text-[#0F0A08] dark:text-[#FFF9E6] mb-6 md:mb-8 max-w-3xl mx-auto px-3">
+                Agora a decisão é sua! Isso é o que pode acontecer com seu negócio caso tome a decisão correta:
+              </p>
+              
+              <div className="max-w-4xl mx-auto">
+                <img 
+                  src={crescimentoLucrosImg} 
+                  alt="Crescimento de lucros com produtos lucrativos" 
+                  className="w-full h-auto rounded-lg shadow-lg mb-2"
+                />
+                <p className="text-center text-xs md:text-sm text-gray-500 dark:text-gray-400 italic">
+                  Lucro de até 4x maior
+                </p>
               </div>
-            </Card>
+            </div>
           </section>
 
           {/* Identification Section */}
