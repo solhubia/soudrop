@@ -371,7 +371,7 @@ const FontesSecretas = () => {
 
               <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/80 mb-6 md:mb-8 leading-relaxed">Você não precisa criar nada do zero — é literalmente acessar as fontes, escolher seus produtos e começar lucrar!</p>
 
-              <Button onClick={() => setCurrentStep(1)} className="w-full bg-[#4ADE80] hover:bg-[#4ADE80]/90 text-[#0F0A08] text-base md:text-lg lg:text-xl py-5 md:py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(74,222,128,0.3)] hover:shadow-[0_0_40px_rgba(74,222,128,0.5)] transition-all">
+              <Button onClick={() => setCurrentStep(1)} className="w-full bg-[#4ADE80] hover:bg-[#4ADE80]/90 text-[#0F0A08] text-base md:text-lg lg:text-xl py-5 md:py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(74,222,128,0.3)] hover:shadow-[0_0_40px_rgba(74,222,128,0.5)] transition-all whitespace-normal h-auto min-h-[60px]">
                 🚀 QUERO DESCOBRIR AS FONTES SECRETAS
               </Button>
             </Card>
