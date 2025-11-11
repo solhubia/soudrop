@@ -31,7 +31,7 @@ const FontesSecretas = () => {
       ...answers,
       [currentStep]: answer
     });
-    if (currentStep < questions.length - 1) {
+    if (currentStep < questions.length) {
       setTimeout(() => {
         setCurrentStep(currentStep + 1);
       }, 300);
@@ -41,7 +41,7 @@ const FontesSecretas = () => {
       }, 300);
     }
   };
-  const progressPercentage = (currentStep + 1) / questions.length * 100;
+  const progressPercentage = currentStep / questions.length * 100;
   const handleCTA = () => {
     window.open("https://pay.kiwify.com.br/8SaUXFm", "_blank");
   };
@@ -304,14 +304,16 @@ const FontesSecretas = () => {
   }
   return <div className="min-h-screen bg-[#0F0A08] text-[#FFF9E6]">
       {/* Progress Bar */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-[#0F0A08]/95 backdrop-blur-sm border-b border-[#FFD700]/20">
-        <div className="container mx-auto px-3 py-2 md:py-4">
-          <Progress value={progressPercentage} className="h-1.5 md:h-2" />
-          <p className="text-xs md:text-sm text-[#FFF9E6]/60 mt-1.5 md:mt-2 text-center">
-            Pergunta {currentStep + 1} de {questions.length}
-          </p>
+      {currentStep > 0 && (
+        <div className="fixed top-0 left-0 right-0 z-50 bg-[#0F0A08]/95 backdrop-blur-sm border-b border-[#FFD700]/20">
+          <div className="container mx-auto px-3 py-2 md:py-4">
+            <Progress value={progressPercentage} className="h-1.5 md:h-2" />
+            <p className="text-xs md:text-sm text-[#FFF9E6]/60 mt-1.5 md:mt-2 text-center">
+              Pergunta {currentStep} de {questions.length}
+            </p>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="container mx-auto px-3 pt-16 md:pt-24 pb-8 md:pb-12 max-w-4xl">
         {currentStep === 0 && <div className="text-center mb-6 md:mb-12 animate-fade-in">
@@ -381,7 +383,7 @@ const FontesSecretas = () => {
               </p>
 
               <Button 
-                onClick={() => setCurrentStep(0)} 
+                onClick={() => setCurrentStep(1)} 
                 className="w-full bg-[#4ADE80] hover:bg-[#4ADE80]/90 text-[#0F0A08] text-base md:text-lg lg:text-xl py-5 md:py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(74,222,128,0.3)] hover:shadow-[0_0_40px_rgba(74,222,128,0.5)] transition-all"
               >
                 🚀 QUERO DESCOBRIR AS FONTES SECRETAS
@@ -389,17 +391,19 @@ const FontesSecretas = () => {
             </Card>
           </div>}
 
-        <Card className="p-4 md:p-8 lg:p-12 bg-[#0F0A08] border-[#FFD700]/30 shadow-[0_0_30px_rgba(255,215,0,0.1)] animate-fade-in">
-          <h2 className="text-lg md:text-2xl lg:text-3xl font-bold mb-4 md:mb-8 text-[#FFD700] leading-tight">
-            {questions[currentStep].question}
-          </h2>
-          <div className="space-y-3 md:space-y-4">
-            {questions[currentStep].options.map((option, idx) => <Button key={idx} onClick={() => handleAnswer(option)} variant="outline" className="w-full justify-start text-left p-4 md:p-6 h-auto bg-[#0F0A08] border-[#FFF9E6]/20 hover:border-[#FFD700] hover:bg-[#FFD700]/10 text-[#FFF9E6] hover:text-[#FFD700] transition-all text-sm md:text-base lg:text-lg min-h-[60px] md:min-h-auto">
-                <span className="mr-2 md:mr-3 text-[#C41E3A] font-bold text-base md:text-lg flex-shrink-0">{String.fromCharCode(65 + idx)}.</span>
-                <span className="leading-relaxed">{option}</span>
-              </Button>)}
-          </div>
-        </Card>
+        {currentStep > 0 && (
+          <Card className="p-4 md:p-8 lg:p-12 bg-[#0F0A08] border-[#FFD700]/30 shadow-[0_0_30px_rgba(255,215,0,0.1)] animate-fade-in">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-bold mb-4 md:mb-8 text-[#FFD700] leading-tight">
+              {questions[currentStep - 1].question}
+            </h2>
+            <div className="space-y-3 md:space-y-4">
+              {questions[currentStep - 1].options.map((option, idx) => <Button key={idx} onClick={() => handleAnswer(option)} variant="outline" className="w-full justify-start text-left p-4 md:p-6 h-auto bg-[#0F0A08] border-[#FFF9E6]/20 hover:border-[#FFD700] hover:bg-[#FFD700]/10 text-[#FFF9E6] hover:text-[#FFD700] transition-all text-sm md:text-base lg:text-lg min-h-[60px] md:min-h-auto">
+                  <span className="mr-2 md:mr-3 text-[#C41E3A] font-bold text-base md:text-lg flex-shrink-0">{String.fromCharCode(65 + idx)}.</span>
+                  <span className="leading-relaxed">{option}</span>
+                </Button>)}
+            </div>
+          </Card>
+        )}
       </div>
     </div>;
 };
