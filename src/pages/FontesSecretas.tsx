@@ -188,15 +188,38 @@ const FontesSecretas = () => {
 
           {/* Identification Section */}
           <section className="mb-8 md:mb-16">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#FFD700] px-2 leading-tight">
-              Se Você Se Identificar com 2 ou Mais Dessas Frases, Esse Curso Foi Feito Pra Você 👇
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6 text-[#0F0A08] dark:text-[#FFF9E6] px-2 leading-tight">
+              Nos próximos dias..
             </h2>
-            <Card className="p-4 md:p-8 bg-[#0F0A08] border-[#C41E3A]/30">
+            
+            <p className="text-center text-base md:text-lg text-[#0F0A08]/80 dark:text-[#FFF9E6]/80 mb-8 md:mb-12 max-w-4xl mx-auto px-3 leading-relaxed">
+              Enquanto a concorrência gasta uma fortuna comprando produtos saturados de fornecedores comuns, você vai conseguir acessar <span className="font-bold underline decoration-[#C41E3A]">fornecedores exclusivos com margens de até 300%</span> sem precisar investir em estoque caro ou arriscar seu dinheiro com fontes duvidosas.
+            </p>
+
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#0F0A08] dark:text-[#FFF9E6] px-2 leading-tight">
+              Se você se identificar com 2 ou mais dessas frases, esse curso foi feito pra você:
+            </h3>
+            
+            <Card className="p-4 md:p-8 bg-white dark:bg-[#0F0A08] border-2 border-[#C41E3A]/20">
               <div className="space-y-3 md:space-y-4">
-                {["Vendo produtos com margem baixa", "Não sei onde achar fornecedores confiáveis", "Tenho medo de investir e perder dinheiro", "Vejo outros lucrando e não sei como eles fazem", "Quero vender produtos que ninguém mais vende"].map((item, idx) => <div key={idx} className="flex items-start gap-2 md:gap-3">
-                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#C41E3A] flex-shrink-0 mt-0.5 md:mt-1" />
-                    <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]">{item}</p>
-                  </div>)}
+                {[
+                  "Não tenho dinheiro pra investir em estoque caro",
+                  "Vendo produtos com margem baixa",
+                  "Não sei onde achar fornecedores confiáveis",
+                  "Tenho medo de ser enganado por fornecedores falsos",
+                  "Quero vender produtos exclusivos que poucos têm acesso"
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-[#C41E3A]/5 dark:bg-[#C41E3A]/10 rounded-lg">
+                    <div className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 mt-0.5">
+                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="#C41E3A" strokeWidth="3" strokeLinecap="round" />
+                      </svg>
+                    </div>
+                    <p className="text-sm md:text-base lg:text-lg text-[#0F0A08] dark:text-[#FFF9E6] font-medium flex-1">
+                      "{item}"
+                    </p>
+                  </div>
+                ))}
               </div>
             </Card>
           </section>
