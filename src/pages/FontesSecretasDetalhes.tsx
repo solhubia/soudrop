@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, TrendingUp, Target, Shield, Clock, Rocket, Star, ChevronRight, X } from "lucide-react";
 import antesDepoisImage from "@/assets/antes-depois-produtos.png";
+import garantia120Image from "@/assets/garantia-120.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useTracking } from "@/hooks/useTracking";
 
@@ -190,31 +191,18 @@ const FontesSecretasDetalhes = () => {
 
         {/* Guarantee Section */}
         <section className="mb-8 md:mb-16">
-          <Card className="p-4 md:p-8 bg-gradient-to-r from-[#C41E3A]/20 to-[#FFD700]/10 border-[#FFD700] border-2">
+          <Card className="p-6 md:p-10 bg-gradient-to-r from-[#C41E3A]/20 to-[#FFD700]/10 border-[#FFD700] border-2 max-w-3xl mx-auto">
             <div className="text-center">
-              <Shield className="w-12 h-12 md:w-16 md:h-16 text-[#FFD700] mx-auto mb-3 md:mb-4" />
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-[#FFD700] px-2 leading-tight">
-                🛡️ Garantia de 120 Dias: Risco Zero Para Você!
+              <img 
+                src={garantia120Image} 
+                alt="Garantia de 120 dias" 
+                className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6"
+              />
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-[#FFF9E6] px-2 leading-tight">
+                Garantia de 120 Dias Sem Risco
               </h2>
-              <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/90 mb-4 md:mb-6 max-w-3xl mx-auto px-2">
-                Se você aplicar o método das <span className="text-[#FFD700] font-bold">Fontes Secretas da China</span>, seguir o passo a passo e <span className="text-[#C41E3A] font-bold">não encontrar produtos lucrativos ou fornecedores confiáveis</span> nos próximos <span className="font-bold">120 dias</span>, eu devolvo <span className="font-bold">100% do seu investimento</span>.
-              </p>
-              <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/90 mb-4 md:mb-6 max-w-3xl mx-auto px-2">
-                Tenho tanta certeza de que, com as estratégias do treinamento, <span className="text-[#FFD700] font-bold">você vai encontrar produtos ocultos e margens de lucro que nunca viu antes</span>, que criei essa <span className="font-bold">garantia absurda</span>:<br />
-                👉 <span className="text-[#C41E3A] font-bold">ou você tem resultado, ou não paga nada.</span>
-              </p>
-              <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
-                <div className="flex items-center justify-center gap-2 md:gap-3 px-2">
-                  <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] flex-shrink-0" />
-                  <span className="text-sm md:text-base text-[#FFF9E6] text-left">Você tem 120 dias inteiros pra testar</span>
-                </div>
-                <div className="flex items-center justify-center gap-2 md:gap-3 px-2">
-                  <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] flex-shrink-0" />
-                  <span className="text-sm md:text-base text-[#FFF9E6] text-left">Se não tiver lucro ou não achar oportunidades reais, o risco é meu</span>
-                </div>
-              </div>
-              <p className="text-xs md:text-sm text-[#FFF9E6]/60 italic px-2">
-                "Se você não tiver resultado, eu não quero o seu dinheiro. Eu quero o seu sucesso."
+              <p className="text-base md:text-lg lg:text-xl text-[#FFF9E6]/90 max-w-2xl mx-auto px-2">
+                Não gostou? Achou que não é pra você? Devolvo 100% do seu dinheiro. Sem perguntas, sem complicações.
               </p>
             </div>
           </Card>
