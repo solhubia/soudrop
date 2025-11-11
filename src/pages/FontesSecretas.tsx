@@ -193,7 +193,7 @@ const FontesSecretas = () => {
             </h2>
             
             <p className="text-center text-base md:text-lg text-[#0F0A08]/80 dark:text-[#FFF9E6]/80 mb-8 md:mb-12 max-w-4xl mx-auto px-3 leading-relaxed">
-              Enquanto a concorrência gasta uma fortuna comprando produtos saturados de fornecedores comuns, você vai conseguir acessar <span className="font-bold underline decoration-[#C41E3A]">fornecedores exclusivos com margens de até 300%</span> sem precisar investir em estoque caro ou arriscar seu dinheiro com fontes duvidosas.
+              Enquanto a concorrência continua comprando produtos saturados de fornecedores comuns pagando caro, você vai conseguir acessar <span className="font-bold underline decoration-[#C41E3A] decoration-2">fornecedores exclusivos com margens de até 300%</span> e <span className="font-bold underline decoration-[#C41E3A] decoration-2">sem investir em estoque caro ou arriscar seu dinheiro com fontes duvidosas</span>.
             </p>
 
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#0F0A08] dark:text-[#FFF9E6] px-2 leading-tight">
