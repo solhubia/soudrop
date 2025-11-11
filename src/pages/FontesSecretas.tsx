@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, TrendingUp, Target, Shield, Clock, Rocket, Star, ChevronRight } from "lucide-react";
 import { useTracking } from "@/hooks/useTracking";
 import priceComparisonImg from "@/assets/price-comparison.png";
+import depoimentoGustavoImg from "@/assets/depoimento-gustavo.jpeg";
 const FontesSecretas = () => {
   const {
     trackEventOnce
@@ -65,10 +66,10 @@ const FontesSecretas = () => {
           {/* Testimonials */}
           <section className="mb-8 md:mb-16">
             <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+              <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
+                <img src={depoimentoGustavoImg} alt="Depoimento de Gustavo via WhatsApp" className="w-full h-auto" />
+              </Card>
               {[{
-              quote: "Achei um fornecedor com preço inacreditável.",
-              author: "Maria S."
-            }, {
               quote: "Em 3 dias encontrei 5 produtos lucrativos.",
               author: "João P."
             }, {
