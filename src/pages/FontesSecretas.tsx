@@ -8,6 +8,10 @@ import { CheckCircle2, TrendingUp, Target, Shield, Clock, Rocket, Star, ChevronR
 import { useTracking } from "@/hooks/useTracking";
 import priceComparisonImg from "@/assets/price-comparison.png";
 import depoimentoGustavoImg from "@/assets/depoimento-gustavo.jpeg";
+import depoimentoFelipeImg from "@/assets/depoimento-felipe.jpeg";
+import depoimentoFelipe2Img from "@/assets/depoimento-felipe-2.jpeg";
+import depoimentoCarlosImg from "@/assets/depoimento-carlos.jpeg";
+import depoimentoPatriciaImg from "@/assets/depoimento-patricia.jpeg";
 const FontesSecretas = () => {
   const {
     trackEventOnce
@@ -65,21 +69,22 @@ const FontesSecretas = () => {
 
           {/* Testimonials */}
           <section className="mb-8 md:mb-16">
-            <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+            <div className="flex flex-col gap-4 md:gap-6 max-w-3xl mx-auto">
               <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
                 <img src={depoimentoGustavoImg} alt="Depoimento de Gustavo via WhatsApp" className="w-full h-auto" />
               </Card>
-              {[{
-              quote: "Em 3 dias encontrei 5 produtos lucrativos.",
-              author: "João P."
-            }, {
-              quote: "Já recuperei o investimento no primeiro pedido.",
-              author: "Carlos R."
-            }].map((testimonial, idx) => <Card key={idx} className="p-4 md:p-6 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all">
-                  <Star className="w-6 h-6 md:w-8 md:h-8 text-[#FFD700] mb-3 md:mb-4" />
-                  <p className="text-sm md:text-base text-[#FFF9E6] mb-3 md:mb-4 italic">"{testimonial.quote}"</p>
-                  <p className="text-sm md:text-base text-[#FFD700] font-semibold">— {testimonial.author}</p>
-                </Card>)}
+              <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
+                <img src={depoimentoFelipeImg} alt="Depoimento de Felipe via WhatsApp" className="w-full h-auto" />
+              </Card>
+              <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
+                <img src={depoimentoFelipe2Img} alt="Depoimento completo de Felipe via WhatsApp" className="w-full h-auto" />
+              </Card>
+              <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
+                <img src={depoimentoCarlosImg} alt="Depoimento de Carlos via WhatsApp" className="w-full h-auto" />
+              </Card>
+              <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
+                <img src={depoimentoPatriciaImg} alt="Depoimento de Patrícia via WhatsApp" className="w-full h-auto" />
+              </Card>
             </div>
           </section>
 
