@@ -263,24 +263,6 @@ const FontesSecretasDetalhes = () => {
           </Card>
         </section>
 
-        {/* Final CTA */}
-        <section className="text-center px-2">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-3 md:mb-4 text-[#FFD700] leading-tight">
-            Enquanto outros ainda compram caro de intermediários...
-          </h2>
-          <p className="text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-[#FFF9E6] leading-tight">
-            Você vai direto na <span className="text-[#C41E3A] font-bold">fonte secreta dos produtos mais baratos do mundo.</span>
-          </p>
-          <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/80 mb-6 md:mb-8 max-w-2xl mx-auto">
-            Dê o primeiro passo hoje e descubra onde nascem os produtos que geram margens absurdas de lucro.
-          </p>
-          <Button 
-            onClick={handleCTA} 
-            className="bg-[#C41E3A] hover:bg-[#C41E3A]/90 text-white text-lg md:text-xl lg:text-2xl py-6 md:py-8 px-8 md:px-12 rounded-lg font-bold shadow-[0_0_30px_rgba(196,30,58,0.5)] hover:shadow-[0_0_40px_rgba(196,30,58,0.7)] transition-all"
-          >
-            👉 Quero Descobrir as Fontes Secretas Agora
-          </Button>
-        </section>
       </div>
     </div>
   );
