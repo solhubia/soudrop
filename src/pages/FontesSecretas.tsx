@@ -327,7 +327,7 @@ const FontesSecretas = () => {
               <span className="text-[#C41E3A]">Pagar Caro em Revendedores.</span>
             </h1>
             <p className="text-base md:text-xl lg:text-2xl text-[#FFF9E6]/80 mb-3 md:mb-4 px-2">
-              Aprenda onde encontrar os produtos mais baratos do mundo — antes que cheguem ao Brasil
+              Descubra o método simples que revela as fontes secretas da China que reduzem seus custos pela metade e multiplicam suas margens de lucro — sem precisar de intermediários, fornecedores caros ou contatos na China.
             </p>
             <Card className="p-4 md:p-6 bg-[#0F0A08] border-[#FFD700]/30 max-w-2xl mx-auto mt-4 md:mt-8">
               <p className="text-sm md:text-lg text-[#FFF9E6]/90 mb-3 md:mb-4">
