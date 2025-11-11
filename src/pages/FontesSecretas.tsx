@@ -56,15 +56,11 @@ const FontesSecretas = () => {
         <div className="container mx-auto px-3 md:px-4 py-6 md:py-8 max-w-6xl">
           {/* Results Section */}
           <section className="text-center mb-8 md:mb-16 animate-fade-in">
-            <Badge className="mb-3 md:mb-4 bg-[#C41E3A] text-white border-[#FFD700] text-xs md:text-sm">
-              ✓ Quiz Completo
-            </Badge>
-            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-[#FFD700] leading-tight px-2">
-              Veja os Resultados de Quem Já Está Aplicando o Método
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 leading-tight px-2">
+              <span className="text-[#FFF9E6]">Esses foram os resultados de alguns dos meus alunos, </span>
+              <span className="text-[#4ADE80]">dos mais diversos nichos e tipos de produtos</span>
+              <span className="text-[#FFF9E6]">:</span>
             </h1>
-            <p className="text-base md:text-xl text-[#FFF9E6]/80 max-w-3xl mx-auto mb-6 md:mb-8 px-2">
-              Alunos que acessaram as <span className="text-[#FFD700] font-bold">Fontes Secretas da China</span> já encontraram produtos com margens de até <span className="text-[#C41E3A] font-bold">300% de lucro</span> e criaram negócios extremamente lucrativos — sem depender de intermediários.
-            </p>
           </section>
 
           {/* Testimonials */}
