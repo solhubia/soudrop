@@ -198,11 +198,27 @@ const FontesSecretasDetalhes = () => {
                 alt="Garantia de 120 dias" 
                 className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6"
               />
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-[#FFF9E6] px-2 leading-tight">
-                Garantia de 120 Dias Sem Risco
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-[#FFD700] px-2 leading-tight">
+                Garantia de 120 Dias: Risco Zero Para Você!
               </h2>
-              <p className="text-base md:text-lg lg:text-xl text-[#FFF9E6]/90 max-w-2xl mx-auto px-2">
-                Não gostou? Achou que não é pra você? Devolvo 100% do seu dinheiro. Sem perguntas, sem complicações.
+              <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/90 mb-4 md:mb-6 max-w-3xl mx-auto px-2">
+                Se você aplicar o método e não encontrar produtos lucrativos ou fornecedores confiáveis nos próximos 120 dias, eu devolvo 100% do seu investimento.
+              </p>
+              <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/90 mb-4 md:mb-6 max-w-3xl mx-auto px-2">
+                Tenho certeza de que você vai encontrar produtos com margens de lucro absurdas. Por isso criei essa garantia: ou você tem resultado, ou não paga nada.
+              </p>
+              <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                <div className="flex items-center justify-center gap-2 md:gap-3 px-2">
+                  <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] flex-shrink-0" />
+                  <span className="text-sm md:text-base text-[#FFF9E6] text-left">Você tem 120 dias inteiros para testar</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 md:gap-3 px-2">
+                  <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] flex-shrink-0" />
+                  <span className="text-sm md:text-base text-[#FFF9E6] text-left">Se não tiver lucro ou não encontrar oportunidades reais, o risco é meu</span>
+                </div>
+              </div>
+              <p className="text-xs md:text-sm text-[#FFF9E6]/60 italic px-2">
+                "Se você não tiver resultado, eu não quero o seu dinheiro."
               </p>
             </div>
           </Card>
