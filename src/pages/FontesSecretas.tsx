@@ -336,7 +336,7 @@ const FontesSecretas = () => {
                 <p>Aliexpress Não é o lugar mais barato</p>
                 <p>Nem mesmo a Canton fair é o Lugar mais barato</p>
                 <p className="mt-4 md:mt-6 text-[#FFD700] normal-case tracking-normal">
-                  Existe alguns lugares que você pode ter <span className="text-[#4ADE80]">300% de lucro</span> e os importadores não querem que você saiba
+                  Existe alguns lugares que você pode ter  e os importadores não querem que você saiba
                 </p>
               </div>
             </Card>
