@@ -305,16 +305,14 @@ const FontesSecretas = () => {
   }
   return <div className="min-h-screen bg-[#0F0A08] text-[#FFF9E6]">
       {/* Progress Bar */}
-      {currentStep > 0 && (
-        <div className="fixed top-0 left-0 right-0 z-50 bg-[#0F0A08]/95 backdrop-blur-sm border-b border-[#FFD700]/20">
+      {currentStep > 0 && <div className="fixed top-0 left-0 right-0 z-50 bg-[#0F0A08]/95 backdrop-blur-sm border-b border-[#FFD700]/20">
           <div className="container mx-auto px-3 py-2 md:py-4">
             <Progress value={progressPercentage} className="h-1.5 md:h-2" />
             <p className="text-xs md:text-sm text-[#FFF9E6]/60 mt-1.5 md:mt-2 text-center">
               Pergunta {currentStep} de {questions.length}
             </p>
           </div>
-        </div>
-      )}
+        </div>}
 
       <div className="container mx-auto px-3 pt-16 md:pt-24 pb-8 md:pb-12 max-w-4xl">
         {currentStep === 0 && <div className="text-center mb-6 md:mb-12 animate-fade-in">
@@ -333,11 +331,7 @@ const FontesSecretas = () => {
               Descubra o método simples que revela as fontes secretas da China que reduzem seus custos pela metade e multiplicam suas margens de lucro — sem precisar de intermediários, fornecedores caros ou contatos na China.
             </p>
             <div className="max-w-4xl mx-auto mt-4 md:mt-8">
-              <img 
-                src={priceComparisonImg} 
-                alt="Comparação de preços: mesmo produto custa ¥1.58 na China e R$28 no Brasil" 
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
+              <img src={priceComparisonImg} alt="Comparação de preços: mesmo produto custa ¥1.58 na China e R$28 no Brasil" className="w-full h-auto rounded-lg shadow-lg" />
             </div>
 
             {/* Benefits Section */}
@@ -375,21 +369,15 @@ const FontesSecretas = () => {
                 </div>
               </div>
 
-              <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/80 mb-6 md:mb-8 leading-relaxed">
-                Você não precisa criar nada do zero — é literalmente acessar as fontes, escolher seus produtos e começar a lucrar mais no mesmo dia
-              </p>
+              <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/80 mb-6 md:mb-8 leading-relaxed">Você não precisa criar nada do zero — é literalmente acessar as fontes, escolher seus produtos e começar \</p>
 
-              <Button 
-                onClick={() => setCurrentStep(1)} 
-                className="w-full bg-[#4ADE80] hover:bg-[#4ADE80]/90 text-[#0F0A08] text-base md:text-lg lg:text-xl py-5 md:py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(74,222,128,0.3)] hover:shadow-[0_0_40px_rgba(74,222,128,0.5)] transition-all"
-              >
+              <Button onClick={() => setCurrentStep(1)} className="w-full bg-[#4ADE80] hover:bg-[#4ADE80]/90 text-[#0F0A08] text-base md:text-lg lg:text-xl py-5 md:py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(74,222,128,0.3)] hover:shadow-[0_0_40px_rgba(74,222,128,0.5)] transition-all">
                 🚀 QUERO DESCOBRIR AS FONTES SECRETAS
               </Button>
             </Card>
           </div>}
 
-        {currentStep > 0 && (
-          <Card className="p-4 md:p-8 lg:p-12 bg-[#0F0A08] border-[#FFD700]/30 shadow-[0_0_30px_rgba(255,215,0,0.1)] animate-fade-in">
+        {currentStep > 0 && <Card className="p-4 md:p-8 lg:p-12 bg-[#0F0A08] border-[#FFD700]/30 shadow-[0_0_30px_rgba(255,215,0,0.1)] animate-fade-in">
             <h2 className="text-lg md:text-2xl lg:text-3xl font-bold mb-4 md:mb-8 text-[#FFD700] leading-tight">
               {questions[currentStep - 1].question}
             </h2>
@@ -399,8 +387,7 @@ const FontesSecretas = () => {
                   <span className="leading-relaxed">{option}</span>
                 </Button>)}
             </div>
-          </Card>
-        )}
+          </Card>}
       </div>
     </div>;
 };
