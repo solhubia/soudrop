@@ -195,7 +195,7 @@ const FontesSecretasDetalhes = () => {
             <img 
               src={garantia120Image} 
               alt="Garantia de 120 dias" 
-              className="w-80 h-80 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem]"
+              className="w-80 md:w-96 lg:w-[28rem] aspect-square object-contain"
             />
           </div>
         </section>
