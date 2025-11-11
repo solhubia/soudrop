@@ -8,6 +8,12 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, TrendingUp, Target, Shield, Clock, Rocket, Star, ChevronRight } from "lucide-react";
 import { useTracking } from "@/hooks/useTracking";
 import priceComparisonImg from "@/assets/price-comparison.png";
+
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, params?: Record<string, any>) => void;
+  }
+}
 import depoimentoGustavoImg from "@/assets/depoimento-gustavo.jpeg";
 import depoimentoFelipeImg from "@/assets/depoimento-felipe.jpeg";
 import depoimentoFelipe2Img from "@/assets/depoimento-felipe-2.jpeg";
@@ -159,24 +165,24 @@ const FontesSecretas = () => {
         <div className="container mx-auto px-3 md:px-4 py-6 md:py-8 max-w-6xl">
           {/* Seu Plano Foi Aprovado Section */}
           <section className="mb-8 md:mb-16">
-            <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 rounded-2xl p-6 md:p-10 border-2 border-emerald-300 dark:border-emerald-700">
+            <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 rounded-2xl p-6 md:p-10 border-2 border-emerald-300 dark:border-emerald-700 mb-6">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 md:mb-6 text-emerald-700 dark:text-emerald-400 px-2 leading-tight">
                 Seu plano foi aprovado!
               </h2>
-              <p className="text-center text-sm md:text-base text-[#0F0A08] dark:text-[#FFF9E6] mb-6 md:mb-8 max-w-3xl mx-auto px-3">
+              <p className="text-center text-sm md:text-base text-[#0F0A08] dark:text-[#FFF9E6] max-w-3xl mx-auto px-3">
                 Agora a decisão é sua! Isso é o que pode acontecer com seu negócio caso tome a decisão correta:
               </p>
-              
-              <div className="max-w-4xl mx-auto">
-                <img 
-                  src={crescimentoLucrosImg} 
-                  alt="Crescimento de lucros com produtos lucrativos" 
-                  className="w-full h-auto rounded-lg shadow-lg mb-2"
-                />
-                <p className="text-center text-xs md:text-sm text-gray-500 dark:text-gray-400 italic">
-                  Lucro de até 4x maior
-                </p>
-              </div>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <img 
+                src={crescimentoLucrosImg} 
+                alt="Crescimento de lucros com produtos lucrativos" 
+                className="w-full h-auto rounded-lg shadow-lg mb-2"
+              />
+              <p className="text-center text-xs md:text-sm text-gray-500 dark:text-gray-400 italic">
+                Lucro de até 4x maior
+              </p>
             </div>
           </section>
 
