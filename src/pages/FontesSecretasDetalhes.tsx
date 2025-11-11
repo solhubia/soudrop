@@ -190,7 +190,7 @@ const FontesSecretasDetalhes = () => {
         </section>
 
         {/* Guarantee Badge */}
-        <section className="mb-8 md:mb-16">
+        <section className="mb-4 md:mb-6">
           <div className="flex justify-center">
             <img 
               src={garantia120Image} 
