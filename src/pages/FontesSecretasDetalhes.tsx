@@ -224,56 +224,8 @@ const FontesSecretasDetalhes = () => {
           </Card>
         </section>
 
-        {/* Pricing Section */}
-        <section className="mb-8 md:mb-16">
-          <div className="text-center mb-6 md:mb-8">
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-3 md:mb-4 text-[#FFD700] px-2 leading-tight">
-              Acesso às Fontes Secretas da China
-            </h2>
-            <p className="text-3xl md:text-4xl lg:text-6xl font-bold text-[#C41E3A] mb-3 md:mb-4">
-              Por Apenas R$37 💥
-            </p>
-            <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/80 max-w-2xl mx-auto mb-6 md:mb-8 px-3">
-              Tenha acesso imediato ao treinamento completo e aprenda o mesmo método usado por grandes importadores para descobrir produtos lucrativos e fornecedores reais, direto da China.
-            </p>
-          </div>
-
-          <Card className="p-4 md:p-8 bg-[#0F0A08] border-[#FFD700]/30 max-w-2xl mx-auto mb-6 md:mb-8">
-            <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
-              {[
-                "📊 Planilha de cálculo de custos e lucros",
-                "🧭 Checklist de verificação de fornecedores",
-                "💬 Grupo VIP com atualizações e oportunidades"
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-2 md:gap-3">
-                  <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] flex-shrink-0 mt-0.5 md:mt-1" />
-                  <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]">{item}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mb-4 md:mb-6">
-              <div className="inline-flex items-center gap-2 bg-[#C41E3A]/20 px-3 md:px-4 py-1.5 md:py-2 rounded-full mb-3 md:mb-4">
-                <Clock className="w-4 h-4 md:w-5 md:h-5 text-[#FFD700]" />
-                <span className="text-xs md:text-sm text-[#FFD700] font-semibold">Oferta por tempo limitado</span>
-              </div>
-            </div>
-
-            <Button 
-              onClick={handleCTA} 
-              className="w-full bg-[#C41E3A] hover:bg-[#C41E3A]/90 text-white text-base md:text-lg lg:text-xl py-4 md:py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(196,30,58,0.5)] hover:shadow-[0_0_40px_rgba(196,30,58,0.7)] transition-all"
-            >
-              🔥 Quero Acessar as Fontes Secretas Agora
-              <ChevronRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
-            </Button>
-          </Card>
-        </section>
-
         {/* FAQ Section */}
         <section className="mb-8 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#FFD700] px-2 leading-tight">
-            Dúvidas Frequentes
-          </h2>
           <Card className="p-4 md:p-8 bg-[#0F0A08] border-[#FFD700]/30 max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
               {[
