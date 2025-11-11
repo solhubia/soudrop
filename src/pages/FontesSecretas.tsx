@@ -6,55 +6,31 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, TrendingUp, Target, Shield, Clock, Rocket, Star, ChevronRight } from "lucide-react";
 import { useTracking } from "@/hooks/useTracking";
-
 const FontesSecretas = () => {
-  const { trackEventOnce } = useTracking();
-  
+  const {
+    trackEventOnce
+  } = useTracking();
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [showResults, setShowResults] = useState(false);
-
-  const questions = [
-    {
-      question: "Qual é o seu objetivo com importação hoje?",
-      options: [
-        "Começar a importar do zero",
-        "Encontrar produtos com alta margem de lucro",
-        "Descobrir fornecedores confiáveis",
-        "Escalar meu negócio atual de revenda"
-      ]
-    },
-    {
-      question: "Você já comprou produtos direto da China alguma vez?",
-      options: [
-        "Sim, já importei antes",
-        "Não, quero aprender do zero",
-        "Só comprei de revendedores"
-      ]
-    },
-    {
-      question: "Quanto você pretende investir nas primeiras compras?",
-      options: [
-        "Até R$500",
-        "De R$500 a R$1.000",
-        "De R$1.000 a R$3.000",
-        "Mais de R$3.000"
-      ]
-    },
-    {
-      question: "O que mais te impede de começar agora?",
-      options: [
-        "Medo de ser enganado por fornecedores",
-        "Não saber onde achar produtos lucrativos",
-        "Falta de confiança para importar sozinho",
-        "Falta de conhecimento sobre o processo"
-      ]
-    }
-  ];
-
+  const questions = [{
+    question: "Qual é o seu objetivo com importação hoje?",
+    options: ["Começar a importar do zero", "Encontrar produtos com alta margem de lucro", "Descobrir fornecedores confiáveis", "Escalar meu negócio atual de revenda"]
+  }, {
+    question: "Você já comprou produtos direto da China alguma vez?",
+    options: ["Sim, já importei antes", "Não, quero aprender do zero", "Só comprei de revendedores"]
+  }, {
+    question: "Quanto você pretende investir nas primeiras compras?",
+    options: ["Até R$500", "De R$500 a R$1.000", "De R$1.000 a R$3.000", "Mais de R$3.000"]
+  }, {
+    question: "O que mais te impede de começar agora?",
+    options: ["Medo de ser enganado por fornecedores", "Não saber onde achar produtos lucrativos", "Falta de confiança para importar sozinho", "Falta de conhecimento sobre o processo"]
+  }];
   const handleAnswer = (answer: string) => {
-    setAnswers({ ...answers, [currentStep]: answer });
-    
+    setAnswers({
+      ...answers,
+      [currentStep]: answer
+    });
     if (currentStep < questions.length - 1) {
       setTimeout(() => {
         setCurrentStep(currentStep + 1);
@@ -65,16 +41,12 @@ const FontesSecretas = () => {
       }, 300);
     }
   };
-
-  const progressPercentage = ((currentStep + 1) / questions.length) * 100;
-
+  const progressPercentage = (currentStep + 1) / questions.length * 100;
   const handleCTA = () => {
     window.open("https://pay.kiwify.com.br/8SaUXFm", "_blank");
   };
-
   if (showResults) {
-    return (
-      <div className="min-h-screen bg-[#0F0A08] text-[#FFF9E6]">
+    return <div className="min-h-screen bg-[#0F0A08] text-[#FFF9E6]">
         <div className="container mx-auto px-3 md:px-4 py-6 md:py-8 max-w-6xl">
           {/* Results Section */}
           <section className="text-center mb-8 md:mb-16 animate-fade-in">
@@ -92,17 +64,20 @@ const FontesSecretas = () => {
           {/* Testimonials */}
           <section className="mb-8 md:mb-16">
             <div className="grid md:grid-cols-3 gap-4 md:gap-6">
-              {[
-                { quote: "Achei um fornecedor com preço inacreditável.", author: "Maria S." },
-                { quote: "Em 3 dias encontrei 5 produtos lucrativos.", author: "João P." },
-                { quote: "Já recuperei o investimento no primeiro pedido.", author: "Carlos R." }
-              ].map((testimonial, idx) => (
-                <Card key={idx} className="p-4 md:p-6 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all">
+              {[{
+              quote: "Achei um fornecedor com preço inacreditável.",
+              author: "Maria S."
+            }, {
+              quote: "Em 3 dias encontrei 5 produtos lucrativos.",
+              author: "João P."
+            }, {
+              quote: "Já recuperei o investimento no primeiro pedido.",
+              author: "Carlos R."
+            }].map((testimonial, idx) => <Card key={idx} className="p-4 md:p-6 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all">
                   <Star className="w-6 h-6 md:w-8 md:h-8 text-[#FFD700] mb-3 md:mb-4" />
                   <p className="text-sm md:text-base text-[#FFF9E6] mb-3 md:mb-4 italic">"{testimonial.quote}"</p>
                   <p className="text-sm md:text-base text-[#FFD700] font-semibold">— {testimonial.author}</p>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </section>
 
@@ -146,18 +121,10 @@ const FontesSecretas = () => {
             </h2>
             <Card className="p-4 md:p-8 bg-[#0F0A08] border-[#C41E3A]/30">
               <div className="space-y-3 md:space-y-4">
-                {[
-                  "Vendo produtos com margem baixa",
-                  "Não sei onde achar fornecedores confiáveis",
-                  "Tenho medo de investir e perder dinheiro",
-                  "Vejo outros lucrando e não sei como eles fazem",
-                  "Quero vender produtos que ninguém mais vende"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2 md:gap-3">
+                {["Vendo produtos com margem baixa", "Não sei onde achar fornecedores confiáveis", "Tenho medo de investir e perder dinheiro", "Vejo outros lucrando e não sei como eles fazem", "Quero vender produtos que ninguém mais vende"].map((item, idx) => <div key={idx} className="flex items-start gap-2 md:gap-3">
                     <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#C41E3A] flex-shrink-0 mt-0.5 md:mt-1" />
                     <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]">{item}</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </Card>
           </section>
@@ -177,17 +144,10 @@ const FontesSecretas = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {[
-                      ["Compra de revendedores locais", "Compra direto da origem"],
-                      ["Margens pequenas (20–40%)", "Margens altas (até 300%)"],
-                      ["Produtos saturados", "Produtos exclusivos e pouco explorados"],
-                      ["Alto risco e desinformação", "Fornecedores testados e confiáveis"]
-                    ].map((row, idx) => (
-                      <tr key={idx} className="border-t border-[#FFD700]/10">
+                    {[["Compra de revendedores locais", "Compra direto da origem"], ["Margens pequenas (20–40%)", "Margens altas (até 300%)"], ["Produtos saturados", "Produtos exclusivos e pouco explorados"], ["Alto risco e desinformação", "Fornecedores testados e confiáveis"]].map((row, idx) => <tr key={idx} className="border-t border-[#FFD700]/10">
                         <td className="p-3 md:p-4 text-[#FFF9E6]/70">{row[0]}</td>
                         <td className="p-3 md:p-4 text-[#FFD700]">{row[1]}</td>
-                      </tr>
-                    ))}
+                      </tr>)}
                   </tbody>
                 </table>
               </div>
@@ -200,18 +160,25 @@ const FontesSecretas = () => {
               O Que Você Vai Aprender
             </h2>
             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-              {[
-                { icon: TrendingUp, text: "Como descobrir produtos lucrativos antes de chegarem ao Brasil" },
-                { icon: Target, text: "Como identificar fornecedores reais e confiáveis" },
-                { icon: Rocket, text: "Como encontrar mar azul (produtos com baixa concorrência e alta margem)" },
-                { icon: CheckCircle2, text: "Como validar um produto sem precisar de estoque" },
-                { icon: Star, text: "Como montar sua própria lista de produtos vencedores" }
-              ].map((item, idx) => (
-                <Card key={idx} className="p-4 md:p-6 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all">
+              {[{
+              icon: TrendingUp,
+              text: "Como descobrir produtos lucrativos antes de chegarem ao Brasil"
+            }, {
+              icon: Target,
+              text: "Como identificar fornecedores reais e confiáveis"
+            }, {
+              icon: Rocket,
+              text: "Como encontrar mar azul (produtos com baixa concorrência e alta margem)"
+            }, {
+              icon: CheckCircle2,
+              text: "Como validar um produto sem precisar de estoque"
+            }, {
+              icon: Star,
+              text: "Como montar sua própria lista de produtos vencedores"
+            }].map((item, idx) => <Card key={idx} className="p-4 md:p-6 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all">
                   <item.icon className="w-8 h-8 md:w-10 md:h-10 text-[#C41E3A] mb-3 md:mb-4" />
                   <p className="text-sm md:text-base text-[#FFF9E6]">{item.text}</p>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </section>
 
@@ -227,7 +194,7 @@ const FontesSecretas = () => {
                   Se você aplicar o método das <span className="text-[#FFD700] font-bold">Fontes Secretas da China</span>, seguir o passo a passo e <span className="text-[#C41E3A] font-bold">não encontrar produtos lucrativos ou fornecedores confiáveis</span> nos próximos <span className="font-bold">120 dias</span>, eu devolvo <span className="font-bold">100% do seu investimento</span>.
                 </p>
                 <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/90 mb-4 md:mb-6 max-w-3xl mx-auto px-2">
-                  Tenho tanta certeza de que, com as estratégias do treinamento, <span className="text-[#FFD700] font-bold">você vai encontrar produtos ocultos e margens de lucro que nunca viu antes</span>, que criei essa <span className="font-bold">garantia absurda</span>:<br/>
+                  Tenho tanta certeza de que, com as estratégias do treinamento, <span className="text-[#FFD700] font-bold">você vai encontrar produtos ocultos e margens de lucro que nunca viu antes</span>, que criei essa <span className="font-bold">garantia absurda</span>:<br />
                   👉 <span className="text-[#C41E3A] font-bold">ou você tem resultado, ou não paga nada.</span>
                 </p>
                 <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
@@ -263,16 +230,10 @@ const FontesSecretas = () => {
 
             <Card className="p-4 md:p-8 bg-[#0F0A08] border-[#FFD700]/30 max-w-2xl mx-auto mb-6 md:mb-8">
               <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
-                {[
-                  "📊 Planilha de cálculo de custos e lucros",
-                  "🧭 Checklist de verificação de fornecedores",
-                  "💬 Grupo VIP com atualizações e oportunidades"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2 md:gap-3">
+                {["📊 Planilha de cálculo de custos e lucros", "🧭 Checklist de verificação de fornecedores", "💬 Grupo VIP com atualizações e oportunidades"].map((item, idx) => <div key={idx} className="flex items-start gap-2 md:gap-3">
                     <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] flex-shrink-0 mt-0.5 md:mt-1" />
                     <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]">{item}</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
               <div className="text-center mb-4 md:mb-6">
@@ -282,10 +243,7 @@ const FontesSecretas = () => {
                 </div>
               </div>
 
-              <Button 
-                onClick={handleCTA}
-                className="w-full bg-[#C41E3A] hover:bg-[#C41E3A]/90 text-white text-base md:text-lg lg:text-xl py-4 md:py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(196,30,58,0.5)] hover:shadow-[0_0_40px_rgba(196,30,58,0.7)] transition-all"
-              >
+              <Button onClick={handleCTA} className="w-full bg-[#C41E3A] hover:bg-[#C41E3A]/90 text-white text-base md:text-lg lg:text-xl py-4 md:py-6 rounded-lg font-bold shadow-[0_0_30px_rgba(196,30,58,0.5)] hover:shadow-[0_0_40px_rgba(196,30,58,0.7)] transition-all">
                 🔥 Quero Acessar as Fontes Secretas Agora
                 <ChevronRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
               </Button>
@@ -299,37 +257,29 @@ const FontesSecretas = () => {
             </h2>
             <Card className="p-4 md:p-8 bg-[#0F0A08] border-[#FFD700]/30 max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
-                {[
-                  {
-                    question: "Preciso ter CNPJ para importar?",
-                    answer: "Não! Você pode começar como pessoa física e depois formalizar."
-                  },
-                  {
-                    question: "Posso começar com pouco dinheiro?",
-                    answer: "Sim. Há estratégias seguras para começar com valores baixos e escalar gradualmente."
-                  },
-                  {
-                    question: "Recebo acesso imediato?",
-                    answer: "Sim, o acesso é liberado assim que o pagamento é confirmado."
-                  },
-                  {
-                    question: "E se eu não gostar do curso?",
-                    answer: "Você tem 120 dias de garantia total — risco zero."
-                  },
-                  {
-                    question: "Posso importar mesmo sem falar chinês?",
-                    answer: "Sim! O método mostra como negociar de forma simples, com ferramentas automáticas e seguras."
-                  }
-                ].map((faq, idx) => (
-                  <AccordionItem key={idx} value={`item-${idx}`}>
+                {[{
+                question: "Preciso ter CNPJ para importar?",
+                answer: "Não! Você pode começar como pessoa física e depois formalizar."
+              }, {
+                question: "Posso começar com pouco dinheiro?",
+                answer: "Sim. Há estratégias seguras para começar com valores baixos e escalar gradualmente."
+              }, {
+                question: "Recebo acesso imediato?",
+                answer: "Sim, o acesso é liberado assim que o pagamento é confirmado."
+              }, {
+                question: "E se eu não gostar do curso?",
+                answer: "Você tem 120 dias de garantia total — risco zero."
+              }, {
+                question: "Posso importar mesmo sem falar chinês?",
+                answer: "Sim! O método mostra como negociar de forma simples, com ferramentas automáticas e seguras."
+              }].map((faq, idx) => <AccordionItem key={idx} value={`item-${idx}`}>
                     <AccordionTrigger className="text-sm md:text-base text-[#FFF9E6] hover:text-[#FFD700] text-left">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-sm md:text-base text-[#FFF9E6]/80">
                       {faq.answer}
                     </AccordionContent>
-                  </AccordionItem>
-                ))}
+                  </AccordionItem>)}
               </Accordion>
             </Card>
           </section>
@@ -345,20 +295,14 @@ const FontesSecretas = () => {
             <p className="text-sm md:text-base lg:text-lg text-[#FFF9E6]/80 mb-6 md:mb-8 max-w-2xl mx-auto">
               Dê o primeiro passo hoje e descubra onde nascem os produtos que geram margens absurdas de lucro.
             </p>
-            <Button 
-              onClick={handleCTA}
-              className="bg-[#C41E3A] hover:bg-[#C41E3A]/90 text-white text-lg md:text-xl lg:text-2xl py-6 md:py-8 px-8 md:px-12 rounded-lg font-bold shadow-[0_0_30px_rgba(196,30,58,0.5)] hover:shadow-[0_0_40px_rgba(196,30,58,0.7)] transition-all"
-            >
+            <Button onClick={handleCTA} className="bg-[#C41E3A] hover:bg-[#C41E3A]/90 text-white text-lg md:text-xl lg:text-2xl py-6 md:py-8 px-8 md:px-12 rounded-lg font-bold shadow-[0_0_30px_rgba(196,30,58,0.5)] hover:shadow-[0_0_40px_rgba(196,30,58,0.7)] transition-all">
               👉 Quero Descobrir as Fontes Secretas Agora
             </Button>
           </section>
         </div>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="min-h-screen bg-[#0F0A08] text-[#FFF9E6]">
+  return <div className="min-h-screen bg-[#0F0A08] text-[#FFF9E6]">
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-[#0F0A08]/95 backdrop-blur-sm border-b border-[#FFD700]/20">
         <div className="container mx-auto px-3 py-2 md:py-4">
@@ -370,8 +314,7 @@ const FontesSecretas = () => {
       </div>
 
       <div className="container mx-auto px-3 pt-16 md:pt-24 pb-8 md:pb-12 max-w-4xl">
-        {currentStep === 0 && (
-          <div className="text-center mb-6 md:mb-12 animate-fade-in">
+        {currentStep === 0 && <div className="text-center mb-6 md:mb-12 animate-fade-in">
             <Badge className="mb-3 md:mb-4 bg-[#C41E3A] text-white border-[#FFD700] text-xs md:text-sm">
               🔓 Acesso Exclusivo
             </Badge>
@@ -379,7 +322,7 @@ const FontesSecretas = () => {
               <span className="text-[#FFF9E6]">Acesse as </span>
               <span className="text-[#C41E3A]">Fontes Secretas da China</span>
               <span className="text-[#FFF9E6]"> Que Fazem Até Iniciantes </span>
-              <span className="text-[#4ADE80]">Lucrarem 3x Mais.</span>
+              <span className="text-[#4ADE80]">Lucrarem 4x Mais.</span>
               <span className="text-[#FFF9E6]"> Sem Intermediários ou </span>
               <span className="text-[#C41E3A]">Pagar Caro em Revendedores.</span>
             </h1>
@@ -394,30 +337,20 @@ const FontesSecretas = () => {
                 Agora você vai ter acesso às mesmas <span className="text-[#FFD700] font-bold">fontes ocultas de produtos e fornecedores</span> que os grandes importadores usam para ter margens de até <span className="text-[#C41E3A] font-bold">300% de lucro</span>.
               </p>
             </Card>
-          </div>
-        )}
+          </div>}
 
         <Card className="p-4 md:p-8 lg:p-12 bg-[#0F0A08] border-[#FFD700]/30 shadow-[0_0_30px_rgba(255,215,0,0.1)] animate-fade-in">
           <h2 className="text-lg md:text-2xl lg:text-3xl font-bold mb-4 md:mb-8 text-[#FFD700] leading-tight">
             {questions[currentStep].question}
           </h2>
           <div className="space-y-3 md:space-y-4">
-            {questions[currentStep].options.map((option, idx) => (
-              <Button
-                key={idx}
-                onClick={() => handleAnswer(option)}
-                variant="outline"
-                className="w-full justify-start text-left p-4 md:p-6 h-auto bg-[#0F0A08] border-[#FFF9E6]/20 hover:border-[#FFD700] hover:bg-[#FFD700]/10 text-[#FFF9E6] hover:text-[#FFD700] transition-all text-sm md:text-base lg:text-lg min-h-[60px] md:min-h-auto"
-              >
+            {questions[currentStep].options.map((option, idx) => <Button key={idx} onClick={() => handleAnswer(option)} variant="outline" className="w-full justify-start text-left p-4 md:p-6 h-auto bg-[#0F0A08] border-[#FFF9E6]/20 hover:border-[#FFD700] hover:bg-[#FFD700]/10 text-[#FFF9E6] hover:text-[#FFD700] transition-all text-sm md:text-base lg:text-lg min-h-[60px] md:min-h-auto">
                 <span className="mr-2 md:mr-3 text-[#C41E3A] font-bold text-base md:text-lg flex-shrink-0">{String.fromCharCode(65 + idx)}.</span>
                 <span className="leading-relaxed">{option}</span>
-              </Button>
-            ))}
+              </Button>)}
           </div>
         </Card>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default FontesSecretas;
