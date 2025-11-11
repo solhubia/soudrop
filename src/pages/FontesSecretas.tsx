@@ -124,11 +124,6 @@ const FontesSecretas = () => {
   if (showLoading) {
     return <div className="min-h-screen bg-[#FFF9E6] text-[#0F0A08] flex items-center justify-center">
         <div className="container mx-auto px-3 md:px-4 py-6 md:py-8 max-w-2xl">
-          {/* Top Progress Bar */}
-          <div className="mb-12 md:mb-16">
-            <Progress value={75} className="h-2 bg-[#0F0A08]/10" />
-          </div>
-
           <div className="text-center space-y-6 md:space-y-8">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
               Estamos analisando suas respostas... ⏳
