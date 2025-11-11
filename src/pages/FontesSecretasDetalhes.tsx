@@ -82,6 +82,16 @@ const FontesSecretasDetalhes = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-[#FFD700] px-2 leading-tight">
             Antes e Depois das Fontes Secretas
           </h2>
+          
+          {/* Comparison Image */}
+          <div className="mb-8 md:mb-12">
+            <img 
+              src={antesDepoisImage} 
+              alt="Comparação de lucros antes e depois das Fontes Secretas" 
+              className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
+            />
+          </div>
+          
           <Card className="overflow-hidden border-[#FFD700]/30 bg-[#0F0A08]">
             <div className="overflow-x-auto">
               <table className="w-full text-sm md:text-base">
@@ -115,15 +125,6 @@ const FontesSecretasDetalhes = () => {
               </table>
             </div>
           </Card>
-          
-          {/* Comparison Image */}
-          <div className="mt-8 md:mt-12">
-            <img 
-              src={antesDepoisImage} 
-              alt="Comparação de lucros antes e depois das Fontes Secretas" 
-              className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
-            />
-          </div>
         </section>
 
         {/* What You'll Learn */}
