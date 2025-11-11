@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, TrendingUp, Target, Shield, Clock, Rocket, Star, ChevronRight } from "lucide-react";
 import { useTracking } from "@/hooks/useTracking";
+import priceComparisonImg from "@/assets/price-comparison.png";
 const FontesSecretas = () => {
   const {
     trackEventOnce
@@ -331,17 +332,13 @@ const FontesSecretas = () => {
             <p className="text-base md:text-xl lg:text-2xl text-[#FFF9E6]/80 mb-3 md:mb-4 px-2">
               Descubra o método simples que revela as fontes secretas da China que reduzem seus custos pela metade e multiplicam suas margens de lucro — sem precisar de intermediários, fornecedores caros ou contatos na China.
             </p>
-            <Card className="p-4 md:p-6 bg-[#0F0A08] border-[#FFD700]/30 max-w-2xl mx-auto mt-4 md:mt-8">
-              <div className="space-y-2 md:space-y-3 text-sm md:text-base lg:text-lg text-[#FFF9E6]/90 uppercase font-bold tracking-wide">
-                <p>25 de março não é o lugar mais barato</p>
-                <p>Importadores no Brasil não é o lugar mais barato</p>
-                <p>Aliexpress Não é o lugar mais barato</p>
-                <p>Nem mesmo a Canton fair é o Lugar mais barato</p>
-                <p className="mt-4 md:mt-6 text-[#FFD700] normal-case tracking-normal">
-                  Existe alguns lugares que você pode ter <span className="text-[#4ADE80]">300% de lucro</span> e os importadores não querem que você saiba
-                </p>
-              </div>
-            </Card>
+            <div className="max-w-4xl mx-auto mt-4 md:mt-8">
+              <img 
+                src={priceComparisonImg} 
+                alt="Comparação de preços: mesmo produto custa ¥1.58 na China e R$28 no Brasil" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
 
             {/* Benefits Section */}
             <Card className="p-6 md:p-8 bg-[#0F0A08] border-[#FFD700]/30 max-w-2xl mx-auto mt-6 md:mt-8 text-left">
