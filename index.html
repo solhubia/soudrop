@@ -47,5 +47,76 @@
       });
     })();
     </script>
+
+    <!-- URL Masking & UTM Preservation Script -->
+    <script>
+    (function() {
+      // ===== Ajuste a sua base fixa aqui =====
+      var BASE_PATH = "/fontes-secretas";
+
+      // ----- UTMs: capturar e preservar ao longo da sessão -----
+      function saveInitialUTM() {
+        var qs = window.location.search || "";
+        if (qs && qs.indexOf("utm_") > -1) {
+          sessionStorage.setItem("utm_qs", qs.replace(/^\?/, ""));
+        }
+      }
+      function getPreservedQS() {
+        var current = window.location.search;
+        if (current && current !== "?") return current; // já tem query atual
+        var saved = sessionStorage.getItem("utm_qs");
+        return saved ? ("?" + saved) : ""; // volta as UTMs originais, se necessário
+      }
+
+      // ----- Normalização da URL para manter sempre /fontes-secretas -----
+      function normalizeURL() {
+        try {
+          var loc = window.location;
+          var path = loc.pathname;
+          var search = getPreservedQS();
+          var hash = loc.hash || "";
+
+          // Se já está exatamente em /fontes-secretas, só garanta que as UTMs preservadas apareçam
+          if (path === BASE_PATH) {
+            // Se não há utm na search atual mas temos uma preservada, atualiza sem recarregar
+            if ((!loc.search || loc.search === "?") && search) {
+              history.replaceState(history.state, document.title, BASE_PATH + search + hash);
+            }
+            return;
+          }
+
+          // Se é uma rota do mesmo fluxo (ex.: /fontes-secretas-qualquercoisa), mascarar para /fontes-secretas
+          if (path.indexOf(BASE_PATH) === 0) {
+            history.replaceState(history.state, document.title, BASE_PATH + search + hash);
+            return;
+          }
+        } catch (e) { /* silencioso */ }
+      }
+
+      // ----- Patches para rotas SPA (pushState/replaceState/popstate) -----
+      ["pushState","replaceState"].forEach(function(fn){
+        var orig = history[fn];
+        history[fn] = function() {
+          var r = orig.apply(this, arguments);
+          // dá tempo do router trocar a rota antes de normalizar
+          setTimeout(normalizeURL, 0);
+          return r;
+        };
+      });
+      window.addEventListener("popstate", normalizeURL);
+
+      // ----- Execução inicial -----
+      saveInitialUTM();
+      // Normaliza quando o DOM estiver pronto e também logo de cara
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", normalizeURL);
+      } else {
+        normalizeURL();
+      }
+      // Re-normaliza após pequenos atrasos de renderização do app
+      setTimeout(normalizeURL, 50);
+      setTimeout(normalizeURL, 250);
+    })();
+    </script>
   </body>
 </html>
