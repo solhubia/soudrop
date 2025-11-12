@@ -43,7 +43,7 @@ const FontesSecretasDetalhes = () => {
         });
       }
     });
-    window.open("https://pay.kiwify.com.br/8SaUXFm", "_blank");
+    window.open("https://pay.kiwify.com.br/fntsE35", "_blank");
   };
 
   return (
@@ -190,7 +190,7 @@ const FontesSecretasDetalhes = () => {
         </section>
 
         {/* Guarantee Badge */}
-        <section className="mb-4 md:mb-6">
+        <section className="mb-8 md:mb-16">
           <div className="flex justify-center">
             <img 
               src={garantia120Image} 
