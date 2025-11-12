@@ -32,5 +32,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- UTM Tracking Script -->
+    <script>
+    (function() {
+      var qs = window.location.search;
+      if (!qs || qs === '?') return; // sem UTM, não faz nada
+      var links = document.querySelectorAll('a[href*="kiwify.com"], a[href*="checkout.kiwify.com"]');
+      links.forEach(function(link) {
+        var sep = link.href.indexOf('?') > -1 ? '&' : '?';
+        if (link.href.indexOf('utm_') === -1) {
+          link.href = link.href + sep + qs.replace(/^\?/, '');
+        }
+      });
+    })();
+    </script>
   </body>
 </html>
