@@ -43,7 +43,7 @@ const FontesSecretasDetalhes = () => {
         });
       }
     });
-    window.open("https://pay.kiwify.com.br/fntsE35", "_blank");
+    window.open("https://pay.kiwify.com.br/8SaUXFm", "_blank");
   };
 
   return (
