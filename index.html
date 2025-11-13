@@ -7,7 +7,13 @@
     <meta name="description" content="Automatize a gestão de múltiplos marketplaces com Soudrop. Integração perfeita, logística sem preocupações e controle total das suas vendas em um único painel." />
     <meta name="author" content="Soudrop" />
 
+    <!-- Preconnect para otimizar carregamento de fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
 
     <meta property="og:title" content="Soudrop - Automação de Vendas em Múltiplos Marketplaces" />
     <meta property="og:description" content="A integração perfeita, logística sem preocupações e controle total das suas vendas em um único painel. Vender nunca foi tão fácil." />
@@ -18,8 +24,8 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://app2.soudrop.com.br/images/logo_login_soudrop.png" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN06VFEFFH"></script>
+    <!-- Google tag (gtag.js) - Defer para não bloquear renderização -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-CN06VFEFFH"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}

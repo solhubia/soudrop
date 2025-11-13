@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import crescimentoLucrosImg from "@/assets/crescimento-lucros.png";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -62,12 +62,12 @@ const FontesSecretas = () => {
     return () => clearInterval(timer);
   }, [showDetails]);
 
-  const formatTime = (seconds: number) => {
+  const formatTime = useCallback((seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
     return `${mins}:${secs.toString().padStart(2, '0')}`;
-  };
-  const questions = [{
+  }, []);
+  const questions = useMemo(() => [{
     question: "Qual é o seu objetivo com importação hoje?",
     options: ["Começar a importar do zero", "Encontrar produtos com alta margem de lucro", "Descobrir fornecedores confiáveis", "Escalar meu negócio atual de revenda"]
   }, {
@@ -79,12 +79,12 @@ const FontesSecretas = () => {
   }, {
     question: "O que mais te impede de começar agora?",
     options: ["Medo de ser enganado por fornecedores", "Não saber onde achar produtos lucrativos", "Falta de confiança para importar sozinho", "Falta de conhecimento sobre o processo"]
-  }];
-  const handleAnswer = (answer: string) => {
-    setAnswers({
-      ...answers,
+  }], []);
+  const handleAnswer = useCallback((answer: string) => {
+    setAnswers(prev => ({
+      ...prev,
       [currentStep]: answer
-    });
+    }));
     if (currentStep < questions.length) {
       setTimeout(() => {
         setCurrentStep(currentStep + 1);
@@ -94,9 +94,9 @@ const FontesSecretas = () => {
         setShowResults(true);
       }, 300);
     }
-  };
-  const progressPercentage = currentStep / questions.length * 100;
-  const handleCTA = () => {
+  }, [currentStep, questions.length]);
+  const progressPercentage = useMemo(() => currentStep / questions.length * 100, [currentStep, questions.length]);
+  const handleCTA = useCallback(() => {
     trackEventOnce("click_fontes_secretas_cta", () => {
       const fbq = (window as any).fbq;
       if (fbq) {
@@ -108,9 +108,9 @@ const FontesSecretas = () => {
       }
     });
     window.open("https://pay.kiwify.com.br/8SaUXFm", "_blank");
-  };
+  }, [trackEventOnce]);
 
-  const handleContinueToLoading = () => {
+  const handleContinueToLoading = useCallback(() => {
     setShowLoading(true);
     // Simular progresso de carregamento
     let progress = 0;
@@ -125,7 +125,7 @@ const FontesSecretas = () => {
         }, 500);
       }
     }, 50);
-  };
+  }, []);
   if (showResults && !showLoading && !showNextPage) {
     return <div className="min-h-screen bg-[#0F0A08] text-[#FFF9E6]">
         <div className="container mx-auto px-3 md:px-4 py-6 md:py-8 max-w-6xl">
@@ -142,19 +142,19 @@ const FontesSecretas = () => {
           <section className="mb-8 md:mb-16">
             <div className="flex flex-col gap-4 md:gap-6 max-w-3xl mx-auto">
               <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
-                <img src={depoimentoGustavoImg} alt="Depoimento de Gustavo via WhatsApp" className="w-full h-auto" />
+                <img src={depoimentoGustavoImg} alt="Depoimento de Gustavo via WhatsApp" className="w-full h-auto" loading="lazy" />
               </Card>
               <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
-                <img src={depoimentoFelipeImg} alt="Depoimento de Felipe via WhatsApp" className="w-full h-auto" />
+                <img src={depoimentoFelipeImg} alt="Depoimento de Felipe via WhatsApp" className="w-full h-auto" loading="lazy" />
               </Card>
               <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
-                <img src={depoimentoFelipe2Img} alt="Depoimento completo de Felipe via WhatsApp" className="w-full h-auto" />
+                <img src={depoimentoFelipe2Img} alt="Depoimento completo de Felipe via WhatsApp" className="w-full h-auto" loading="lazy" />
               </Card>
               <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
-                <img src={depoimentoCarlosImg} alt="Depoimento de Carlos via WhatsApp" className="w-full h-auto" />
+                <img src={depoimentoCarlosImg} alt="Depoimento de Carlos via WhatsApp" className="w-full h-auto" loading="lazy" />
               </Card>
               <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
-                <img src={depoimentoPatriciaImg} alt="Depoimento de Patrícia via WhatsApp" className="w-full h-auto" />
+                <img src={depoimentoPatriciaImg} alt="Depoimento de Patrícia via WhatsApp" className="w-full h-auto" loading="lazy" />
               </Card>
             </div>
           </section>
@@ -215,6 +215,8 @@ const FontesSecretas = () => {
                 src={crescimentoLucrosImg} 
                 alt="Crescimento de lucros com produtos lucrativos" 
                 className="w-full h-auto rounded-lg shadow-lg mb-2"
+                loading="eager"
+                fetchPriority="high"
               />
               <p className="text-center text-xs md:text-sm text-gray-500 dark:text-gray-400 italic">
                 Lucro de até 4x maior
@@ -318,6 +320,7 @@ const FontesSecretas = () => {
                 src={antesDepoisImage} 
                 alt="Comparação de lucros antes e depois das Fontes Secretas" 
                 className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
+                loading="lazy"
               />
             </div>
             
@@ -424,6 +427,7 @@ const FontesSecretas = () => {
                 src={garantia120Image} 
                 alt="Garantia de 120 dias" 
                 className="w-80 md:w-96 lg:w-[28rem] aspect-square object-contain"
+                loading="lazy"
               />
             </div>
           </section>
@@ -530,7 +534,7 @@ const FontesSecretas = () => {
               Descubra o método simples que revela as fontes secretas da China que reduzem seus custos pela metade e multiplicam suas margens de lucro — sem precisar de intermediários, fornecedores caros ou contatos na China.
             </p>
             <div className="max-w-4xl mx-auto mt-4 md:mt-8">
-              <img src={priceComparisonImg} alt="Comparação de preços: mesmo produto custa ¥1.58 na China e R$28 no Brasil" className="w-full h-auto rounded-lg shadow-lg" />
+              <img src={priceComparisonImg} alt="Comparação de preços: mesmo produto custa ¥1.58 na China e R$28 no Brasil" className="w-full h-auto rounded-lg shadow-lg" loading="lazy" />
             </div>
 
             {/* Benefits Section */}

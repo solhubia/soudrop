@@ -87,6 +87,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Otimização de renderização de imagens */
+  img {
+    content-visibility: auto;
+  }
 }
 
 @layer utilities {
