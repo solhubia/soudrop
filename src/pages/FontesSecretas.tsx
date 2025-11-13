@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, TrendingUp, Target, Shield, Clock, Rocket, Star, ChevronRight } from "lucide-react";
 import { useTracking } from "@/hooks/useTracking";
 import priceComparisonImg from "@/assets/price-comparison.png";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 declare global {
   interface Window {
@@ -142,19 +143,19 @@ const FontesSecretas = () => {
           <section className="mb-8 md:mb-16">
             <div className="flex flex-col gap-4 md:gap-6 max-w-3xl mx-auto">
               <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
-                <img src={depoimentoGustavoImg} alt="Depoimento de Gustavo via WhatsApp" className="w-full h-auto" />
+                <OptimizedImage src={depoimentoGustavoImg} alt="Depoimento de Gustavo via WhatsApp" width={800} height={600} />
               </Card>
               <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
-                <img src={depoimentoFelipeImg} alt="Depoimento de Felipe via WhatsApp" className="w-full h-auto" />
+                <OptimizedImage src={depoimentoFelipeImg} alt="Depoimento de Felipe via WhatsApp" width={800} height={600} />
               </Card>
               <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
-                <img src={depoimentoFelipe2Img} alt="Depoimento completo de Felipe via WhatsApp" className="w-full h-auto" />
+                <OptimizedImage src={depoimentoFelipe2Img} alt="Depoimento completo de Felipe via WhatsApp" width={800} height={600} />
               </Card>
               <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
-                <img src={depoimentoCarlosImg} alt="Depoimento de Carlos via WhatsApp" className="w-full h-auto" />
+                <OptimizedImage src={depoimentoCarlosImg} alt="Depoimento de Carlos via WhatsApp" width={800} height={600} />
               </Card>
               <Card className="p-0 bg-[#0F0A08] border-[#FFD700]/30 hover:border-[#FFD700] transition-all overflow-hidden">
-                <img src={depoimentoPatriciaImg} alt="Depoimento de Patrícia via WhatsApp" className="w-full h-auto" />
+                <OptimizedImage src={depoimentoPatriciaImg} alt="Depoimento de Patrícia via WhatsApp" width={800} height={600} />
               </Card>
             </div>
           </section>
@@ -211,10 +212,13 @@ const FontesSecretas = () => {
             </div>
             
             <div className="max-w-4xl mx-auto">
-              <img 
+              <OptimizedImage 
                 src={crescimentoLucrosImg} 
                 alt="Crescimento de lucros com produtos lucrativos" 
-                className="w-full h-auto rounded-lg shadow-lg mb-2"
+                className="rounded-lg shadow-lg mb-2"
+                priority={true}
+                width={1200}
+                height={800}
               />
               <p className="text-center text-xs md:text-sm text-gray-500 dark:text-gray-400 italic">
                 Lucro de até 4x maior
@@ -314,10 +318,12 @@ const FontesSecretas = () => {
             
             {/* Comparison Image */}
             <div className="mb-8 md:mb-12">
-              <img 
+              <OptimizedImage 
                 src={antesDepoisImage} 
                 alt="Comparação de lucros antes e depois das Fontes Secretas" 
-                className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
+                className="max-w-4xl mx-auto rounded-lg shadow-lg"
+                width={1200}
+                height={800}
               />
             </div>
             
@@ -420,10 +426,12 @@ const FontesSecretas = () => {
           {/* Guarantee Badge */}
           <section className="mb-4 md:mb-6">
             <div className="flex justify-center">
-              <img 
+              <OptimizedImage 
                 src={garantia120Image} 
                 alt="Garantia de 120 dias" 
                 className="w-80 md:w-96 lg:w-[28rem] aspect-square object-contain"
+                width={448}
+                height={448}
               />
             </div>
           </section>
@@ -530,7 +538,14 @@ const FontesSecretas = () => {
               Descubra o método simples que revela as fontes secretas da China que reduzem seus custos pela metade e multiplicam suas margens de lucro — sem precisar de intermediários, fornecedores caros ou contatos na China.
             </p>
             <div className="max-w-4xl mx-auto mt-4 md:mt-8">
-              <img src={priceComparisonImg} alt="Comparação de preços: mesmo produto custa ¥1.58 na China e R$28 no Brasil" className="w-full h-auto rounded-lg shadow-lg" />
+              <OptimizedImage 
+                src={priceComparisonImg} 
+                alt="Comparação de preços: mesmo produto custa ¥1.58 na China e R$28 no Brasil" 
+                className="rounded-lg shadow-lg"
+                priority={true}
+                width={1200}
+                height={800}
+              />
             </div>
 
             {/* Benefits Section */}
