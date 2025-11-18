@@ -79,15 +79,22 @@ const LiveImportacao = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Warning Banner */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-red-600 py-2 px-4">
+        <p className="text-white text-center font-bold uppercase text-sm md:text-base">
+          ⚠️ ÚLTIMAS VAGAS PARA A LIVE EXCLUSIVA DE IMPORTAÇÃO DA CHINA
+        </p>
+      </div>
+
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-primary/20">
+      <header className="fixed top-8 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-primary/20">
         <div className="container mx-auto px-4 py-4">
           <img src={logoSoudrop} alt="SouDrop Brasil" className="h-10 md:h-12" />
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="pt-24 md:pt-32 pb-16 md:pb-24 relative overflow-hidden">
+      <section className="pt-32 md:pt-40 pb-16 md:pb-24 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-hero opacity-50"></div>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
