@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, Target, TrendingUp, Shield, DollarSign, Users, Star, Package } from "lucide-react";
 import logoSoudrop from "@/assets/soudrop-logo-oficial.png";
 import mentorPhoto from "@/assets/renan-ferreira.jpg";
-
 const LiveImportacao = () => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -16,7 +15,6 @@ const LiveImportacao = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -24,61 +22,45 @@ const LiveImportacao = () => {
     setIsSubmitted(true);
     setIsSubmitting(false);
   };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
-  const learningTopics = [
-    {
-      icon: Package,
-      text: "Como funciona, na prática, a importação da China para revenda em marketplaces"
-    },
-    {
-      icon: Target,
-      text: "Como escolher produtos com alta margem e demanda real"
-    },
-    {
-      icon: Shield,
-      text: "Como encontrar e validar fornecedores confiáveis na China"
-    },
-    {
-      icon: Users,
-      text: "Como usar a importação compartilhada para começar com pouco capital"
-    },
-    {
-      icon: TrendingUp,
-      text: "Como evitar os erros que fazem iniciantes perder dinheiro"
-    },
-    {
-      icon: DollarSign,
-      text: "Estratégias para maximizar lucro e reduzir riscos na operação"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Carlos Mendes",
-      role: "Vendedor Mercado Livre • SP",
-      text: "Comecei a importar há 6 meses e já triplicou minha margem. A importação compartilhada foi essencial para começar sem grandes riscos."
-    },
-    {
-      name: "Patricia Silva",
-      role: "Lojista Shopee • RJ",
-      text: "Antes eu comprava de distribuidores aqui no Brasil. Agora importo direto e minha competitividade aumentou demais!"
-    },
-    {
-      name: "Felipe Costa",
-      role: "Empreendedor Digital • MG",
-      text: "O passo a passo de validação de fornecedor me poupou de cair em golpes. Hoje importo com segurança e previsibilidade."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const learningTopics = [{
+    icon: Package,
+    text: "Como funciona, na prática, a importação da China para revenda em marketplaces"
+  }, {
+    icon: Target,
+    text: "Como escolher produtos com alta margem e demanda real"
+  }, {
+    icon: Shield,
+    text: "Como encontrar e validar fornecedores confiáveis na China"
+  }, {
+    icon: Users,
+    text: "Como usar a importação compartilhada para começar com pouco capital"
+  }, {
+    icon: TrendingUp,
+    text: "Como evitar os erros que fazem iniciantes perder dinheiro"
+  }, {
+    icon: DollarSign,
+    text: "Estratégias para maximizar lucro e reduzir riscos na operação"
+  }];
+  const testimonials = [{
+    name: "Carlos Mendes",
+    role: "Vendedor Mercado Livre • SP",
+    text: "Comecei a importar há 6 meses e já triplicou minha margem. A importação compartilhada foi essencial para começar sem grandes riscos."
+  }, {
+    name: "Patricia Silva",
+    role: "Lojista Shopee • RJ",
+    text: "Antes eu comprava de distribuidores aqui no Brasil. Agora importo direto e minha competitividade aumentou demais!"
+  }, {
+    name: "Felipe Costa",
+    role: "Empreendedor Digital • MG",
+    text: "O passo a passo de validação de fornecedor me poupou de cair em golpes. Hoje importo com segurança e previsibilidade."
+  }];
+  return <div className="min-h-screen bg-background">
       {/* Warning Banner */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-red-600 py-2 px-4">
         <p className="text-white text-center font-bold uppercase text-sm md:text-base">
@@ -89,7 +71,7 @@ const LiveImportacao = () => {
       {/* Header */}
       <header className="fixed top-8 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-primary/20">
         <div className="container mx-auto px-4 py-4">
-          <img src={logoSoudrop} alt="SouDrop Brasil" className="h-10 md:h-12" />
+          
         </div>
       </header>
 
@@ -140,8 +122,7 @@ const LiveImportacao = () => {
             <div className="flex justify-center lg:justify-end">
               <Card className="w-full max-w-md bg-card border-2 border-primary/30 shadow-elegant">
                 <CardContent className="p-8">
-                  {!isSubmitted ? (
-                    <>
+                  {!isSubmitted ? <>
                       <div className="text-center mb-6">
                         <h3 className="text-2xl font-bold text-foreground mb-2">
                           Garanta Sua Vaga Agora
@@ -154,50 +135,20 @@ const LiveImportacao = () => {
                       <form onSubmit={handleSubmit} className="space-y-4">
                         <div className="space-y-2">
                           <Label htmlFor="nome" className="text-foreground">Nome Completo</Label>
-                          <Input
-                            id="nome"
-                            name="nome"
-                            placeholder="Seu nome completo"
-                            value={formData.nome}
-                            onChange={handleInputChange}
-                            required
-                            className="bg-input border-primary/20 focus:border-primary"
-                          />
+                          <Input id="nome" name="nome" placeholder="Seu nome completo" value={formData.nome} onChange={handleInputChange} required className="bg-input border-primary/20 focus:border-primary" />
                         </div>
 
                         <div className="space-y-2">
                           <Label htmlFor="email" className="text-foreground">E-mail</Label>
-                          <Input
-                            id="email"
-                            name="email"
-                            type="email"
-                            placeholder="seu@email.com"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            required
-                            className="bg-input border-primary/20 focus:border-primary"
-                          />
+                          <Input id="email" name="email" type="email" placeholder="seu@email.com" value={formData.email} onChange={handleInputChange} required className="bg-input border-primary/20 focus:border-primary" />
                         </div>
 
                         <div className="space-y-2">
                           <Label htmlFor="whatsapp" className="text-foreground">WhatsApp</Label>
-                          <Input
-                            id="whatsapp"
-                            name="whatsapp"
-                            placeholder="(00) 00000-0000"
-                            value={formData.whatsapp}
-                            onChange={handleInputChange}
-                            required
-                            className="bg-input border-primary/20 focus:border-primary"
-                          />
+                          <Input id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" value={formData.whatsapp} onChange={handleInputChange} required className="bg-input border-primary/20 focus:border-primary" />
                         </div>
 
-                        <Button
-                          type="submit"
-                          disabled={isSubmitting}
-                          className="w-full bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-lg font-bold py-6 mt-6"
-                          size="lg"
-                        >
+                        <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-lg font-bold py-6 mt-6" size="lg">
                           {isSubmitting ? "Processando..." : "🔥 Quero garantir minha vaga na live exclusiva"}
                         </Button>
                       </form>
@@ -206,9 +157,7 @@ const LiveImportacao = () => {
                         <Shield className="w-4 h-4 text-primary" />
                         <span>Seus dados estão seguros</span>
                       </div>
-                    </>
-                  ) : (
-                    <div className="text-center py-8">
+                    </> : <div className="text-center py-8">
                       <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <CheckCircle2 className="w-8 h-8 text-primary" />
                       </div>
@@ -218,8 +167,7 @@ const LiveImportacao = () => {
                       <p className="text-muted-foreground">
                         Você receberá todas as informações da live no e-mail cadastrado.
                       </p>
-                    </div>
-                  )}
+                    </div>}
                 </CardContent>
               </Card>
             </div>
@@ -244,11 +192,7 @@ const LiveImportacao = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-xl rounded-full"></div>
-                <img 
-                  src={mentorPhoto} 
-                  alt="Renan Ferreira" 
-                  className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border-4 border-primary/30 shadow-elegant"
-                />
+                <img src={mentorPhoto} alt="Renan Ferreira" className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border-4 border-primary/30 shadow-elegant" />
               </div>
             </div>
 
@@ -312,8 +256,7 @@ const LiveImportacao = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {learningTopics.map((topic, index) => (
-              <Card key={index} className="bg-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
+            {learningTopics.map((topic, index) => <Card key={index} className="bg-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -324,8 +267,7 @@ const LiveImportacao = () => {
                     </p>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -340,13 +282,10 @@ const LiveImportacao = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-card border-2 border-primary/30 hover:border-accent/50 transition-all duration-300 hover:shadow-elegant">
+            {testimonials.map((testimonial, index) => <Card key={index} className="bg-card border-2 border-primary/30 hover:border-accent/50 transition-all duration-300 hover:shadow-elegant">
                 <CardContent className="p-8">
                   <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
                   </div>
                   
                   <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -358,8 +297,7 @@ const LiveImportacao = () => {
                     <p className="text-sm text-primary">{testimonial.role}</p>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -389,11 +327,10 @@ const LiveImportacao = () => {
               </Badge>
             </div>
 
-            <Button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-xl font-bold py-8 px-12"
-              size="xl"
-            >
+            <Button onClick={() => window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          })} className="bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-xl font-bold py-8 px-12" size="xl">
               🔥 Quero garantir minha vaga na live exclusiva
             </Button>
 
@@ -403,8 +340,6 @@ const LiveImportacao = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default LiveImportacao;
