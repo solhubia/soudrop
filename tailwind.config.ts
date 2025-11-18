@@ -31,9 +31,8 @@ export default {
         },
         cacador: {
           pink: "hsl(var(--cacador-pink))",
-          "pink-dark": "hsl(var(--cacador-pink-dark))",
-          "yellow-neon": "hsl(var(--cacador-yellow-neon))",
-          "yellow-neon-dark": "hsl(var(--cacador-yellow-neon-dark))",
+          "pink-light": "hsl(var(--cacador-pink-light))",
+          yellow: "hsl(var(--cacador-yellow))",
           "bg-main": "hsl(var(--cacador-bg-main))",
           "bg-alt": "hsl(var(--cacador-bg-alt))",
           "bg-section": "hsl(var(--cacador-bg-section))",
