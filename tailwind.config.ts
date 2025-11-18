@@ -29,6 +29,11 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        soudrop: {
+          green: "hsl(var(--soudrop-green))",
+          yellow: "hsl(var(--soudrop-yellow))",
+          black: "hsl(var(--soudrop-black))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -65,12 +70,14 @@ export default {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-card': 'var(--gradient-card)',
         'gradient-subtle': 'var(--gradient-subtle)',
+        'gradient-yellow': 'var(--gradient-yellow)',
         "gradient-soudrop": "var(--gradient-soudrop)",
         "gradient-shopee": "var(--gradient-shopee)",
         "gradient-links-background": "var(--gradient-links-background)",
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
+        'yellow-glow': 'var(--shadow-yellow-glow)',
         'card': 'var(--shadow-card)',
         'elegant': 'var(--shadow-elegant)',
       },

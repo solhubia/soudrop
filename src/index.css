@@ -5,37 +5,53 @@
 
 @layer base {
   :root {
-    /* --- TEMA PRINCIPAL (LANDING PAGE) --- */
-    --background: 210 11% 6%;
-    --foreground: 210 40% 98%;
-    --card: 210 11% 8%;
-    --card-foreground: 210 40% 98%;
-    --popover: 210 11% 8%;
-    --popover-foreground: 210 40% 98%;
-    --border: 210 11% 15%;
-    --input: 210 11% 15%;
-    --ring: 142 71% 45%;
-    --radius: 0.5rem;
-    --primary: 142 71% 45%;
-    --primary-foreground: 210 11% 6%;
-    --primary-glow: 142 71% 55%;
-    --primary-dark: 142 71% 35%;
-    --secondary: 210 11% 15%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 210 11% 12%;
-    --muted-foreground: 210 20% 70%;
-    --accent: 142 71% 45%;
-    --accent-foreground: 210 11% 6%;
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 210 40% 98%;
-    --gradient-primary: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 71% 35%) 50%, hsl(210 11% 6%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(210 11% 8%), hsl(210 11% 12%));
-    --gradient-subtle: linear-gradient(180deg, hsl(210 11% 6%), hsl(210 11% 8%));
-    --gradient-dynamic: linear-gradient(45deg, hsl(142 71% 45%), hsl(142 71% 55%), hsl(142 71% 65%), hsl(142 71% 45%));
-    --shadow-glow: 0 0 40px hsl(142 71% 45% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
-    --shadow-elegant: 0 20px 60px -20px hsl(142 71% 45% / 0.2);
+    /* --- TEMA PRINCIPAL (SOUDROP LIVE) --- */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 142 100% 33%;
+    --radius: 0.75rem;
+    
+    /* Cores SouDrop */
+    --soudrop-green: 142 100% 33%;
+    --soudrop-yellow: 48 100% 50%;
+    --soudrop-black: 0 0% 3%;
+    
+    --primary: 142 100% 33%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 100% 43%;
+    --primary-dark: 142 100% 23%;
+    
+    --secondary: 48 100% 50%;
+    --secondary-foreground: 0 0% 3%;
+    
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+    
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 0% 3%;
+    
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Gradientes SouDrop */
+    --gradient-primary: linear-gradient(135deg, hsl(142 100% 33%), hsl(142 100% 23%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 100% 15%) 0%, hsl(0 0% 3%) 50%, hsl(0 0% 5%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 5%), hsl(0 0% 8%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 3%), hsl(0 0% 5%));
+    --gradient-yellow: linear-gradient(135deg, hsl(48 100% 50%), hsl(45 100% 45%));
+    --gradient-dynamic: linear-gradient(45deg, hsl(142 100% 33%), hsl(142 100% 43%), hsl(142 100% 33%));
+    
+    /* Sombras SouDrop */
+    --shadow-glow: 0 0 60px hsl(142 100% 33% / 0.4);
+    --shadow-yellow-glow: 0 0 40px hsl(48 100% 50% / 0.3);
+    --shadow-card: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
+    --shadow-elegant: 0 20px 60px -20px hsl(142 100% 33% / 0.3);
 
     --links-background: 222 15% 8%;
     --links-foreground: 210 40% 98%;
