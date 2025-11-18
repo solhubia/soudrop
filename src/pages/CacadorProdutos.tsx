@@ -71,50 +71,50 @@ const CacadorProdutos = () => {
     role: "Empreendedor Digital • MG",
     text: "O método de comparação de preços me abriu os olhos para oportunidades que eu nunca tinha visto antes."
   }];
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-[hsl(var(--cacador-background))]">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[hsl(var(--cacador-orange))]">
         <div className="container mx-auto px-4 py-4 flex justify-center">
           
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 md:pt-40 pb-16 md:pb-24 relative overflow-hidden">
+      <section className="pt-32 md:pt-40 pb-16 md:pb-24 relative overflow-hidden bg-gradient-to-br from-[hsl(var(--cacador-red))] via-[hsl(var(--cacador-orange))] to-[hsl(var(--cacador-yellow))]">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-white/10"></div>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge className="bg-primary/20 text-primary border border-primary/30 px-6 py-2 text-sm font-bold">
+            <Badge className="bg-white/20 text-white border-2 border-white/40 px-6 py-2 text-sm font-bold backdrop-blur-sm">
               CURSO ONLINE • 100% GRAVADO
             </Badge>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg">
               Caçador de Produtos: Encontre Produtos Lucrativos na China{" "}
-              <span className="text-primary">Mesmo Começando do Zero</span>
+              <span className="text-[hsl(var(--cacador-yellow))] drop-shadow-lg">Mesmo Começando do Zero</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto drop-shadow-md">
               Um curso direto ao ponto para te mostrar como pesquisar, comparar e encontrar 
               produtos com potencial real de lucro nos marketplaces.
             </p>
 
             <div className="flex flex-col items-center gap-6 pt-4">
               <div className="text-center">
-                <p className="text-muted-foreground text-lg mb-2">Investimento único de apenas</p>
-                <div className="text-5xl md:text-6xl font-bold text-primary">
+                <p className="text-white/80 text-lg mb-2">Investimento único de apenas</p>
+                <div className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg">
                   R$ 27,90
                 </div>
               </div>
 
-              <Button onClick={scrollToCTA} className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-12 py-8 text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Button onClick={scrollToCTA} className="bg-[hsl(var(--cacador-yellow))] hover:bg-[hsl(var(--cacador-yellow-dark))] text-[hsl(var(--cacador-red))] px-12 py-8 text-xl font-bold shadow-[var(--shadow-cacador-cta)] hover:shadow-[var(--shadow-cacador-yellow)] transition-all duration-300 hover:scale-105">
                 Quero acessar o Caçador de Produtos
               </Button>
 
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-white/70">
                 Curso online, acesso pela internet, conteúdo prático e direto ao ponto.
               </p>
             </div>
@@ -123,19 +123,19 @@ const CacadorProdutos = () => {
       </section>
 
       {/* Para quem é o curso */}
-      <section className="py-16 md:py-24 bg-card/50">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-foreground mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[hsl(var(--cacador-red))] mb-12">
               Para quem é o Caçador de Produtos
             </h2>
             
             <div className="space-y-4">
-              {targetAudience.map((item, index) => <Card key={index} className="bg-card border-l-4 border-l-primary hover:shadow-lg transition-shadow duration-300">
+              {targetAudience.map((item, index) => <Card key={index} className="bg-white border-l-4 border-l-[hsl(var(--cacador-orange))] hover:shadow-[var(--shadow-cacador-red)] transition-shadow duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                      <p className="text-foreground text-lg">{item}</p>
+                      <CheckCircle2 className="w-6 h-6 text-[hsl(var(--cacador-red))] flex-shrink-0 mt-1" />
+                      <p className="text-[hsl(var(--cacador-foreground))] text-lg">{item}</p>
                     </div>
                   </CardContent>
                 </Card>)}
@@ -145,23 +145,23 @@ const CacadorProdutos = () => {
       </section>
 
       {/* O que você vai aprender */}
-      <section className="py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background to-card/30"></div>
+      <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-[hsl(var(--cacador-background))] to-[hsl(var(--cacador-orange))]/10">
+        <div className="absolute inset-0"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[hsl(var(--cacador-red))] mb-4">
               O que você vai aprender por dentro do curso
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-              {learningTopics.map((topic, index) => <Card key={index} className="bg-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
+              {learningTopics.map((topic, index) => <Card key={index} className="bg-white border-2 border-[hsl(var(--cacador-orange))]/30 hover:border-[hsl(var(--cacador-red))]/50 transition-all duration-300 hover:shadow-[var(--shadow-cacador-red)]">
                   <CardContent className="p-6">
                     <div className="space-y-4">
-                      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <topic.icon className="w-7 h-7 text-primary" />
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[hsl(var(--cacador-red))]/10 to-[hsl(var(--cacador-orange))]/10 flex items-center justify-center">
+                        <topic.icon className="w-7 h-7 text-[hsl(var(--cacador-red))]" />
                       </div>
-                      <p className="text-foreground font-medium leading-relaxed">
+                      <p className="text-[hsl(var(--cacador-foreground))] font-medium leading-relaxed">
                         {topic.text}
                       </p>
                     </div>
@@ -212,12 +212,12 @@ const CacadorProdutos = () => {
       </section>
 
       {/* Quem é o especialista */}
-      <section className="py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background to-card/30"></div>
+      <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-[hsl(var(--cacador-background))] to-[hsl(var(--cacador-orange))]/5">
+        <div className="absolute inset-0"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-foreground mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[hsl(var(--cacador-red))] mb-12">
               Quem está por trás do Caçador de Produtos
             </h2>
 
@@ -225,8 +225,8 @@ const CacadorProdutos = () => {
               {/* Photo */}
               <div className="flex justify-center lg:justify-end">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl rounded-full"></div>
-                  <img src={mentorPhoto} alt="Renan Ferreira" className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border-4 border-primary/30 shadow-2xl" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--cacador-red))]/20 to-[hsl(var(--cacador-orange))]/20 blur-2xl rounded-full"></div>
+                  <img src={mentorPhoto} alt="Renan Ferreira" className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border-4 border-[hsl(var(--cacador-red))]/40 shadow-2xl" />
                 </div>
               </div>
 
@@ -395,21 +395,21 @@ const CacadorProdutos = () => {
       </section>
 
       {/* CTA Final */}
-      <section id="cta-section" className="py-16 md:py-24 bg-gradient-to-br from-primary/10 via-card/50 to-accent/10 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-3xl"></div>
+      <section id="cta-section" className="py-16 md:py-24 bg-gradient-to-br from-[hsl(var(--cacador-red))]/10 via-[hsl(var(--cacador-orange))]/10 to-[hsl(var(--cacador-yellow))]/10 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[hsl(var(--cacador-orange))]/10 blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge className="bg-destructive/20 text-destructive border border-destructive/30 px-6 py-2 text-sm font-bold">
+            <Badge className="bg-[hsl(var(--cacador-red))]/20 text-[hsl(var(--cacador-red))] border-2 border-[hsl(var(--cacador-red))]/40 px-6 py-2 text-sm font-bold">
               OFERTA PROMOCIONAL POR TEMPO LIMITADO
             </Badge>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[hsl(var(--cacador-foreground))]">
               Pronto para se tornar um{" "}
-              <span className="text-primary">Caçador de Produtos</span>?
+              <span className="text-[hsl(var(--cacador-red))]">Caçador de Produtos</span>?
             </h2>
             
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-[hsl(var(--cacador-foreground))]/70 max-w-2xl mx-auto">
               O Caçador de Produtos foi feito para acelerar o caminho de quem quer importar 
               com mais segurança e escolher produtos com mais inteligência. Um investimento 
               acessível perto do potencial de retorno que você pode alcançar.
@@ -417,30 +417,30 @@ const CacadorProdutos = () => {
 
             <div className="flex flex-col items-center gap-6 pt-4">
               <div className="text-center">
-                <p className="text-muted-foreground text-lg mb-2">Investimento único de apenas</p>
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-2">
+                <p className="text-[hsl(var(--cacador-foreground))]/70 text-lg mb-2">Investimento único de apenas</p>
+                <div className="text-5xl md:text-6xl font-bold text-[hsl(var(--cacador-red))] mb-2">
                   R$ 27,90
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-[hsl(var(--cacador-foreground))]/60">
                   Pagamento único, sem mensalidades
                 </p>
               </div>
 
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-12 py-8 text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <Button className="bg-[hsl(var(--cacador-yellow))] hover:bg-[hsl(var(--cacador-yellow-dark))] text-[hsl(var(--cacador-red))] px-12 py-8 text-xl font-bold shadow-[var(--shadow-cacador-cta)] hover:shadow-[var(--shadow-cacador-yellow)] transition-all duration-300 hover:scale-105">
                 Quero acessar o Caçador de Produtos
               </Button>
 
               <div className="flex flex-wrap gap-4 justify-center items-center pt-4">
-                <div className="flex items-center gap-2 text-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <div className="flex items-center gap-2 text-[hsl(var(--cacador-foreground))]">
+                  <CheckCircle2 className="w-5 h-5 text-[hsl(var(--cacador-red))]" />
                   <span className="font-medium">Acesso Imediato</span>
                 </div>
-                <div className="flex items-center gap-2 text-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <div className="flex items-center gap-2 text-[hsl(var(--cacador-foreground))]">
+                  <CheckCircle2 className="w-5 h-5 text-[hsl(var(--cacador-red))]" />
                   <span className="font-medium">Conteúdo Completo</span>
                 </div>
-                <div className="flex items-center gap-2 text-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <div className="flex items-center gap-2 text-[hsl(var(--cacador-foreground))]">
+                  <CheckCircle2 className="w-5 h-5 text-[hsl(var(--cacador-red))]" />
                   <span className="font-medium">Suporte Incluso</span>
                 </div>
               </div>
@@ -450,9 +450,9 @@ const CacadorProdutos = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-card border-t border-border">
+      <footer className="py-8 bg-gradient-to-br from-[hsl(var(--cacador-red-dark))] to-[hsl(var(--cacador-red))] border-t-4 border-[hsl(var(--cacador-yellow))]">
         <div className="container mx-auto px-4">
-          <div className="text-center text-muted-foreground text-sm">
+          <div className="text-center text-white text-sm">
             <p>© 2024 SouDrop Brasil. Todos os direitos reservados.</p>
           </div>
         </div>
