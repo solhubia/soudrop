@@ -113,8 +113,6 @@ const LiveImportacao = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center px-4 py-16 bg-gradient-hero overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070')] bg-cover bg-center opacity-5"></div>
-        
         {/* Elementos decorativos */}
         <div className="absolute top-20 right-10 w-32 h-32 bg-soudrop-green/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-10 w-40 h-40 bg-soudrop-yellow/10 rounded-full blur-3xl"></div>
