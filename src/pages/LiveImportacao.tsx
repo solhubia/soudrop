@@ -38,7 +38,7 @@ const LiveImportacao = () => {
         {!isSubmitted ? (
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="space-y-2">
-              <Label htmlFor="nome" className="text-foreground font-semibold">Nome completo</Label>
+              <Label htmlFor="nome" className="text-foreground font-semibold text-base">Nome completo</Label>
               <Input
                 id="nome"
                 name="nome"
@@ -47,11 +47,11 @@ const LiveImportacao = () => {
                 value={formData.nome}
                 onChange={handleInputChange}
                 required
-                className="bg-input border-border/50 focus:border-primary h-12 text-lg"
+                className="bg-input border-2 border-border/50 focus:border-primary h-14 text-lg transition-all"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-foreground font-semibold">E-mail</Label>
+              <Label htmlFor="email" className="text-foreground font-semibold text-base">E-mail</Label>
               <Input
                 id="email"
                 name="email"
@@ -60,11 +60,11 @@ const LiveImportacao = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="bg-input border-border/50 focus:border-primary h-12 text-lg"
+                className="bg-input border-2 border-border/50 focus:border-primary h-14 text-lg transition-all"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="whatsapp" className="text-foreground font-semibold">WhatsApp</Label>
+              <Label htmlFor="whatsapp" className="text-foreground font-semibold text-base">WhatsApp</Label>
               <Input
                 id="whatsapp"
                 name="whatsapp"
@@ -73,15 +73,15 @@ const LiveImportacao = () => {
                 value={formData.whatsapp}
                 onChange={handleInputChange}
                 required
-                className="bg-input border-border/50 focus:border-primary h-12 text-lg"
+                className="bg-input border-2 border-border/50 focus:border-primary h-14 text-lg transition-all"
               />
             </div>
             <Button 
               type="submit" 
-              className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold text-xl py-7 shadow-yellow-glow hover:scale-105 transition-all"
+              className="w-full bg-secondary hover:bg-secondary/80 text-secondary-foreground font-black text-xl py-8 shadow-cta hover:shadow-yellow-glow hover:scale-[1.02] transition-all duration-300 uppercase tracking-wide"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Enviando..." : "QUERO GARANTIR MINHA VAGA"}
+              {isSubmitting ? "Enviando..." : "🔥 Quero garantir minha vaga"}
             </Button>
             <p className="text-xs text-muted-foreground text-center mt-3">
               🔒 Seus dados estão seguros. Ao preencher, você concorda em receber comunicações sobre a live.
@@ -89,7 +89,7 @@ const LiveImportacao = () => {
           </form>
         ) : (
           <div className="text-center py-10">
-            <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+            <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 shadow-glow">
               <CheckCircle2 className="w-12 h-12 text-primary" />
             </div>
             <h3 className="text-3xl font-bold mb-3 text-foreground">Vaga garantida! 🎉</h3>
@@ -125,8 +125,8 @@ const LiveImportacao = () => {
         <div className="relative max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-secondary rounded-full shadow-yellow-glow">
-                <span className="text-secondary-foreground font-bold uppercase text-sm tracking-wider flex items-center gap-2">
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-secondary rounded-full shadow-cta animate-pulse">
+                <span className="text-secondary-foreground font-black uppercase text-sm tracking-wider flex items-center gap-2">
                   <Zap className="w-5 h-5" />
                   Live Exclusiva • Online e Gratuita
                 </span>
@@ -168,11 +168,11 @@ const LiveImportacao = () => {
               </div>
               
               <div className="flex flex-wrap gap-3">
-                <div className="px-5 py-3 bg-primary/20 border-2 border-primary rounded-xl">
-                  <span className="text-primary font-bold uppercase text-sm">🔥 Vagas Limitadas</span>
+                <div className="px-5 py-3 bg-secondary/30 border-2 border-secondary rounded-xl shadow-yellow-glow">
+                  <span className="text-secondary font-black uppercase text-sm">🔥 Vagas Limitadas</span>
                 </div>
-                <div className="px-5 py-3 bg-secondary/20 border-2 border-secondary rounded-xl">
-                  <span className="text-secondary-foreground font-bold uppercase text-sm">✅ 100% Gratuito</span>
+                <div className="px-5 py-3 bg-primary/20 border-2 border-primary rounded-xl shadow-glow">
+                  <span className="text-primary font-bold uppercase text-sm">✅ 100% Gratuito</span>
                 </div>
               </div>
             </div>
@@ -188,9 +188,9 @@ const LiveImportacao = () => {
       <section className="py-20 px-4 bg-card border-y border-border/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-secondary font-bold uppercase tracking-wider mb-3">Quem vai te guiar nessa jornada</p>
+            <p className="text-secondary font-black uppercase tracking-wider mb-3 text-lg">Quem vai te guiar nessa jornada</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase mb-4">
-              Conheça o <span className="text-primary">mentor</span> da SouDrop Brasil
+              Conheça o <span className="text-primary drop-shadow-glow">mentor</span> da SouDrop Brasil
             </h2>
           </div>
           
@@ -282,9 +282,9 @@ const LiveImportacao = () => {
       <section className="py-20 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-secondary font-bold uppercase tracking-wider mb-3">Resultados reais</p>
+            <p className="text-primary font-black uppercase tracking-wider mb-3 text-lg">Resultados reais</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase mb-4">
-              Prova real de quem já está <span className="text-primary">no jogo</span>
+              Prova real de quem já está <span className="text-secondary drop-shadow-glow">no jogo</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Veja o que dizem os vendedores que já aplicaram nossas estratégias
@@ -332,9 +332,9 @@ const LiveImportacao = () => {
       <section className="py-20 px-4 bg-card border-y border-border/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-secondary font-bold uppercase tracking-wider mb-3">Conteúdo da Live</p>
+            <p className="text-primary font-black uppercase tracking-wider mb-3 text-lg">Conteúdo da Live</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase mb-4">
-              O que você vai <span className="text-primary">aprender</span>
+              O que você vai <span className="text-secondary drop-shadow-glow">aprender</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Conteúdo prático e direto ao ponto
@@ -374,12 +374,12 @@ const LiveImportacao = () => {
                 description: "Um roteiro claro e seguro do início ao fim"
               }
             ].map((item, index) => (
-              <Card key={index} className="bg-muted/30 border-2 border-primary/30 hover:border-primary hover:shadow-glow transition-all group">
+              <Card key={index} className="bg-muted/30 border-2 border-primary/30 hover:border-primary hover:shadow-glow transition-all duration-300 group">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/30 group-hover:shadow-glow transition-all">
                     <item.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
+                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
@@ -393,8 +393,8 @@ const LiveImportacao = () => {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070')] bg-cover bg-center opacity-5"></div>
         
         <div className="relative max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-secondary rounded-full shadow-yellow-glow mb-8">
-            <span className="text-secondary-foreground font-bold uppercase text-sm tracking-wider flex items-center gap-2">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-secondary rounded-full shadow-cta mb-8 animate-pulse">
+            <span className="text-secondary-foreground font-black uppercase text-sm tracking-wider flex items-center gap-2">
               <Zap className="w-5 h-5" />
               Últimas Vagas Disponíveis
             </span>
@@ -403,11 +403,15 @@ const LiveImportacao = () => {
           <h2 className="text-3xl md:text-5xl font-black uppercase mb-6">
             <span className="text-foreground">Garanta sua vaga na</span>
             <br />
-            <span className="text-primary">Live Exclusiva</span>
+            <span className="text-primary drop-shadow-glow">Live Exclusiva</span>
           </h2>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Preencha o formulário abaixo e receba <span className="text-secondary font-bold">acesso imediato</span> ao link da live
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Preencha o formulário abaixo e receba <span className="text-secondary font-black">acesso imediato</span> ao link da live
+          </p>
+          
+          <p className="text-lg text-primary font-bold mb-12">
+            ⚡ Vagas limitadas e conteúdo prático para quem quer realmente importar da China
           </p>
           
           <div className="max-w-lg mx-auto">
