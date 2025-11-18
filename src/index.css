@@ -5,16 +5,16 @@
 
 @layer base {
   :root {
-    /* --- TEMA PRINCIPAL (SOUDROP LIVE - PROFISSIONAL) --- */
-    --background: 220 25% 3%;
-    --foreground: 0 0% 98%;
-    --card: 220 20% 6%;
-    --card-foreground: 0 0% 98%;
-    --popover: 220 20% 6%;
-    --popover-foreground: 0 0% 98%;
-    --border: 142 40% 25%;
-    --input: 220 15% 10%;
-    --ring: 142 76% 45%;
+    /* --- TEMA DARK VENDE-C PRO STYLE --- */
+    --background: 252 38% 3%;
+    --foreground: 0 0% 100%;
+    --card: 252 33% 5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 252 33% 5%;
+    --popover-foreground: 0 0% 100%;
+    --border: 252 20% 15%;
+    --input: 252 25% 8%;
+    --ring: 340 100% 50%;
     --radius: 0.75rem;
     
     /* Cores SouDrop - Paleta Chamativa e Profissional */
@@ -78,27 +78,29 @@
     --gradient-shopee: linear-gradient(135deg, hsl(0 72% 51%) 0%, hsl(14 91% 60%) 100%);
     --gradient-links-background: linear-gradient(135deg, hsl(222 15% 8%) 0%, hsl(222 15% 12%) 100%);
     
-    /* --- TEMA CAÇADOR DE PRODUTOS (VERMELHO + AMARELO + LARANJA) --- */
-    --cacador-red: 0 85% 55%;
-    --cacador-red-dark: 0 75% 45%;
-    --cacador-yellow: 45 95% 60%;
-    --cacador-yellow-dark: 45 90% 50%;
-    --cacador-orange: 25 95% 60%;
-    --cacador-orange-dark: 25 85% 50%;
-    --cacador-background: 0 0% 98%;
-    --cacador-foreground: 0 0% 10%;
-    --cacador-card: 0 0% 100%;
+    /* --- TEMA CAÇADOR DE PRODUTOS DARK (VENDE-C PRO STYLE) --- */
+    --cacador-bg-main: 252 38% 3%;
+    --cacador-bg-alt: 252 33% 5%;
+    --cacador-bg-section: 0 0% 7%;
+    --cacador-text-primary: 0 0% 100%;
+    --cacador-text-secondary: 0 0% 87%;
+    --cacador-pink: 340 100% 66%;
+    --cacador-pink-dark: 340 100% 50%;
+    --cacador-orange: 27 100% 50%;
+    --cacador-orange-dark: 27 90% 45%;
+    --cacador-yellow: 45 98% 63%;
+    --cacador-yellow-dark: 45 95% 55%;
     
-    /* Gradientes Caçador */
-    --gradient-cacador-hero: linear-gradient(135deg, hsl(0 85% 55%) 0%, hsl(25 95% 60%) 50%, hsl(45 95% 60%) 100%);
-    --gradient-cacador-red: linear-gradient(135deg, hsl(0 85% 55%) 0%, hsl(0 75% 45%) 100%);
-    --gradient-cacador-orange: linear-gradient(135deg, hsl(25 95% 60%) 0%, hsl(25 85% 50%) 100%);
-    --gradient-cacador-cta: linear-gradient(135deg, hsl(45 95% 60%) 0%, hsl(45 90% 50%) 100%);
+    /* Gradientes Caçador Dark */
+    --gradient-cacador-hero: linear-gradient(135deg, hsl(252 38% 3%) 0%, hsl(340 100% 10%) 50%, hsl(252 38% 3%) 100%);
+    --gradient-cacador-pink: linear-gradient(135deg, hsl(340 100% 66%) 0%, hsl(340 100% 50%) 100%);
+    --gradient-cacador-orange: linear-gradient(135deg, hsl(27 100% 50%) 0%, hsl(27 90% 45%) 100%);
+    --gradient-cacador-cta: linear-gradient(135deg, hsl(45 98% 63%) 0%, hsl(45 95% 55%) 100%);
     
-    /* Sombras Caçador */
-    --shadow-cacador-red: 0 10px 40px hsl(0 85% 55% / 0.3);
-    --shadow-cacador-yellow: 0 8px 30px hsl(45 95% 60% / 0.4);
-    --shadow-cacador-cta: 0 4px 20px hsl(45 95% 60% / 0.5);
+    /* Sombras Caçador Dark */
+    --shadow-cacador-pink: 0 10px 40px hsl(340 100% 50% / 0.4);
+    --shadow-cacador-yellow: 0 8px 30px hsl(45 98% 63% / 0.5);
+    --shadow-cacador-cta: 0 4px 20px hsl(45 98% 63% / 0.6);
     
     /* --- TEMA CHINA (PÁGINA ALTERNATIVA) --- */
     --china-background: 0 15% 8%;

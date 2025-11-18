@@ -212,12 +212,10 @@ const CacadorProdutos = () => {
       </section>
 
       {/* Quem é o especialista */}
-      <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-[hsl(var(--cacador-background))] to-[hsl(var(--cacador-orange))]/5">
-        <div className="absolute inset-0"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="py-16 md:py-24 bg-cacador-bg-main">
+        <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[hsl(var(--cacador-red))] mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-cacador-pink mb-12">
               Quem está por trás do Caçador de Produtos
             </h2>
 
@@ -225,54 +223,38 @@ const CacadorProdutos = () => {
               {/* Photo */}
               <div className="flex justify-center lg:justify-end">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--cacador-red))]/20 to-[hsl(var(--cacador-orange))]/20 blur-2xl rounded-full"></div>
-                  <img src={mentorPhoto} alt="Renan Ferreira" className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border-4 border-[hsl(var(--cacador-red))]/40 shadow-2xl" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-cacador-pink/30 to-cacador-orange/30 blur-2xl rounded-full"></div>
+                  <img src={mentorPhoto} alt="Renan Ferreira" className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border-4 border-cacador-pink/40 shadow-2xl" />
                 </div>
               </div>
 
               {/* Content */}
               <div className="space-y-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                <h3 className="text-2xl md:text-3xl font-bold text-cacador-text-primary">
                   Renan Ferreira
                 </h3>
                 
-                <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
-                  <p>
-                    Empresário e importador há mais de 10 anos, com experiência direta dentro de 
-                    fábricas e escritórios na China. Já importei milhares de produtos e hoje ensino, 
-                    de forma prática, como qualquer pessoa pode fazer o mesmo.
-                  </p>
-                  
-                  <p>
-                    Trabalho diariamente com vendas em marketplaces como Mercado Livre, Shopee, 
-                    Amazon e Magalu, utilizando a importação como estratégia principal para aumentar 
-                    margem de lucro e competitividade.
-                  </p>
-                  
-                  <p>
-                    Ao longo desses anos, já ajudei centenas de vendedores a estruturarem suas 
-                    operações de importação, encontrarem produtos campeões e aumentarem seus lucros 
-                    de forma consistente e segura.
-                  </p>
+                <div className="space-y-4 text-cacador-text-secondary text-lg leading-relaxed">
+...
                 </div>
 
                 {/* Authority bullets */}
                 <div className="space-y-3 pt-4">
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <span className="text-foreground font-medium text-lg">
+                    <CheckCircle2 className="w-6 h-6 text-cacador-pink flex-shrink-0 mt-1" />
+                    <span className="text-cacador-text-primary font-medium text-lg">
                       Mais de 10 anos de experiência com importação da China
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <span className="text-foreground font-medium text-lg">
+                    <CheckCircle2 className="w-6 h-6 text-cacador-pink flex-shrink-0 mt-1" />
+                    <span className="text-cacador-text-primary font-medium text-lg">
                       Milhares de produtos importados diretamente de fábricas chinesas
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <span className="text-foreground font-medium text-lg">
+                    <CheckCircle2 className="w-6 h-6 text-cacador-pink flex-shrink-0 mt-1" />
+                    <span className="text-cacador-text-primary font-medium text-lg">
                       Vendedor ativo em Mercado Livre, Shopee, Amazon e Magalu
                     </span>
                   </div>
