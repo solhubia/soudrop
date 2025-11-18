@@ -108,8 +108,8 @@ const LiveImportacao = () => {
         
         <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
-            <div className="inline-block px-4 py-2 bg-primary/20 border border-primary rounded-full">
-              <span className="text-primary font-semibold flex items-center gap-2">
+            <div className="inline-block px-4 py-2 bg-destructive/20 border border-destructive rounded-full">
+              <span className="text-destructive font-semibold flex items-center gap-2">
                 <Clock className="w-4 h-4" />
                 Live Exclusiva
               </span>
