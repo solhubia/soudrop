@@ -33,7 +33,7 @@ const LiveImportacao = () => {
   };
 
   const FormularioCaptura = () => (
-    <Card className="bg-soudrop-black/90 border-2 border-soudrop-green shadow-glow backdrop-blur-sm">
+    <Card className="bg-card/95 border-2 border-primary shadow-glow backdrop-blur-sm">
       <CardContent className="p-8">
         {!isSubmitted ? (
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -47,7 +47,7 @@ const LiveImportacao = () => {
                 value={formData.nome}
                 onChange={handleInputChange}
                 required
-                className="bg-input border-border/50 focus:border-soudrop-green h-12 text-lg"
+                className="bg-input border-border/50 focus:border-primary h-12 text-lg"
               />
             </div>
             <div className="space-y-2">
@@ -60,7 +60,7 @@ const LiveImportacao = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="bg-input border-border/50 focus:border-soudrop-green h-12 text-lg"
+                className="bg-input border-border/50 focus:border-primary h-12 text-lg"
               />
             </div>
             <div className="space-y-2">
@@ -73,12 +73,12 @@ const LiveImportacao = () => {
                 value={formData.whatsapp}
                 onChange={handleInputChange}
                 required
-                className="bg-input border-border/50 focus:border-soudrop-green h-12 text-lg"
+                className="bg-input border-border/50 focus:border-primary h-12 text-lg"
               />
             </div>
             <Button 
               type="submit" 
-              className="w-full bg-soudrop-yellow hover:bg-soudrop-yellow/90 text-soudrop-black font-bold text-xl py-7 shadow-yellow-glow hover:scale-105 transition-all"
+              className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold text-xl py-7 shadow-yellow-glow hover:scale-105 transition-all"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Enviando..." : "QUERO GARANTIR MINHA VAGA"}
@@ -89,8 +89,8 @@ const LiveImportacao = () => {
           </form>
         ) : (
           <div className="text-center py-10">
-            <div className="w-20 h-20 rounded-full bg-soudrop-green/20 flex items-center justify-center mx-auto mb-4">
-              <CheckCircle2 className="w-12 h-12 text-soudrop-green" />
+            <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+              <CheckCircle2 className="w-12 h-12 text-primary" />
             </div>
             <h3 className="text-3xl font-bold mb-3 text-foreground">Vaga garantida! 🎉</h3>
             <p className="text-muted-foreground text-lg">
@@ -127,8 +127,8 @@ const LiveImportacao = () => {
         <div className="relative max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-yellow rounded-full shadow-yellow-glow">
-                <span className="text-soudrop-black font-bold uppercase text-sm tracking-wider flex items-center gap-2">
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-secondary rounded-full shadow-yellow-glow">
+                <span className="text-secondary-foreground font-bold uppercase text-sm tracking-wider flex items-center gap-2">
                   <Zap className="w-5 h-5" />
                   Live Exclusiva • Online e Gratuita
                 </span>
@@ -137,21 +137,21 @@ const LiveImportacao = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] uppercase">
                 <span className="text-foreground">Como Importar</span>
                 <br />
-                <span className="text-soudrop-green">da China</span>
+                <span className="text-primary">da China</span>
                 <br />
                 <span className="text-foreground">e Lucrar nos</span>
                 <br />
-                <span className="text-soudrop-yellow">Marketplaces</span>
+                <span className="text-foreground">Marketplaces</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground font-medium leading-relaxed">
-                Aprenda o passo a passo completo para <span className="text-soudrop-green font-bold">escolher produtos vencedores</span>, negociar com fornecedores chineses e <span className="text-soudrop-yellow font-bold">multiplicar seu lucro</span> nos principais marketplaces do Brasil.
+                Aprenda o passo a passo completo para <span className="text-primary font-bold">escolher produtos vencedores</span>, negociar com fornecedores chineses e <span className="text-primary font-bold">multiplicar seu lucro</span> nos principais marketplaces do Brasil.
               </p>
               
-              <div className="space-y-4 bg-card/80 backdrop-blur-md p-6 rounded-2xl border border-soudrop-green/30 shadow-glow">
+              <div className="space-y-4 bg-card/80 backdrop-blur-md p-6 rounded-2xl border border-primary/30 shadow-glow">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-soudrop-green/20 flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-soudrop-green" />
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Clock className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground uppercase tracking-wide">Data</p>
@@ -159,8 +159,8 @@ const LiveImportacao = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-soudrop-yellow/20 flex items-center justify-center">
-                    <Zap className="w-6 h-6 text-soudrop-yellow" />
+                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-secondary-foreground" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground uppercase tracking-wide">Horário</p>
@@ -170,11 +170,11 @@ const LiveImportacao = () => {
               </div>
               
               <div className="flex flex-wrap gap-3">
-                <div className="px-5 py-3 bg-soudrop-green/20 border-2 border-soudrop-green rounded-xl">
-                  <span className="text-soudrop-green font-bold uppercase text-sm">🔥 Vagas Limitadas</span>
+                <div className="px-5 py-3 bg-primary/20 border-2 border-primary rounded-xl">
+                  <span className="text-primary font-bold uppercase text-sm">🔥 Vagas Limitadas</span>
                 </div>
-                <div className="px-5 py-3 bg-soudrop-yellow/20 border-2 border-soudrop-yellow rounded-xl">
-                  <span className="text-soudrop-yellow font-bold uppercase text-sm">✅ 100% Gratuito</span>
+                <div className="px-5 py-3 bg-secondary/20 border-2 border-secondary rounded-xl">
+                  <span className="text-secondary-foreground font-bold uppercase text-sm">✅ 100% Gratuito</span>
                 </div>
               </div>
             </div>
@@ -190,24 +190,24 @@ const LiveImportacao = () => {
       <section className="py-20 px-4 bg-card border-y border-border/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-soudrop-yellow font-bold uppercase tracking-wider mb-3">Quem vai te guiar</p>
+            <p className="text-secondary font-bold uppercase tracking-wider mb-3">Quem vai te guiar nessa jornada</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase mb-4">
-              Conheça o <span className="text-soudrop-green">mentor</span> da SouDrop Brasil
+              Conheça o <span className="text-primary">mentor</span> da SouDrop Brasil
             </h2>
           </div>
           
-          <Card className="bg-background border-soudrop-green/30 shadow-glow">
+          <Card className="bg-background border-primary/30 shadow-glow">
             <CardContent className="p-8 md:p-12">
               <div className="grid md:grid-cols-[280px_1fr] gap-10 items-start">
                 <div className="mx-auto md:mx-0">
                   <div className="relative">
-                    <div className="w-64 h-64 rounded-3xl bg-gradient-primary overflow-hidden border-4 border-soudrop-yellow shadow-yellow-glow">
+                    <div className="w-64 h-64 rounded-3xl bg-primary/10 overflow-hidden border-4 border-primary shadow-glow">
                       <div className="w-full h-full bg-muted flex items-center justify-center">
                         <Users className="w-24 h-24 text-muted-foreground" />
                       </div>
                     </div>
-                    <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-soudrop-yellow rounded-full flex items-center justify-center border-4 border-background shadow-yellow-glow">
-                      <Star className="w-10 h-10 text-soudrop-black" />
+                    <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-secondary rounded-full flex items-center justify-center border-4 border-background shadow-yellow-glow">
+                      <Star className="w-10 h-10 text-secondary-foreground" />
                     </div>
                   </div>
                 </div>
@@ -215,27 +215,27 @@ const LiveImportacao = () => {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-3xl md:text-4xl font-black uppercase mb-2 text-foreground">Renan Ferreira</h3>
-                    <p className="text-xl text-soudrop-green font-bold">Empresário e Importador há mais de 10 anos</p>
+                    <p className="text-xl text-primary font-bold">Empresário e Importador há mais de 10 anos</p>
                   </div>
                   
                   <div className="space-y-4 text-lg text-foreground/90 leading-relaxed">
                     <p>
-                      Sou <span className="text-soudrop-green font-bold">Renan Ferreira</span>, empresário e importador há mais de 10 anos, com experiência direta em fábricas da China. Já importei milhares de produtos e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo — sem depender de ninguém.
+                      Sou <span className="text-primary font-bold">Renan Ferreira</span>, empresário e importador há mais de 10 anos, com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo — sem depender de atravessadores.
                     </p>
                     
                     <p>
-                      Além da importação, sou <span className="text-soudrop-yellow font-bold">estrategista de vendas, tráfego e negociação</span>, formado em Publicidade e Propaganda. Tenho 4 empresas em meu nome: uma Agência de Tráfego que fatura 7 dígitos por ano, uma startup avaliada em 5 milhões de reais, uma escola online que forma empreendedores digitais para a nova economia e uma consultoria de vendas para grandes corporações.
+                      Trabalho diariamente no <span className="text-primary font-bold">campo de batalha da importação</span>: negociando com fornecedores chineses, visitando fábricas, analisando catálogos, fechando carregamentos e desenhando operações seguras e lucrativas para quem vende em marketplaces no Brasil.
                     </p>
                     
                     <p>
-                      No <span className="text-soudrop-green font-bold">campo de batalha há mais de 7 anos</span>, já atendi mais de 1.000 empresas de diferentes nichos e gerenciei mais de 10 milhões de reais em campanhas de anúncios online. Hoje utilizo toda essa experiência para criar <span className="text-soudrop-yellow font-bold">operações de importação lucrativas</span> para lojistas que vendem em marketplaces. Nesta live, vou te mostrar o que realmente funciona na prática para importar da China e lucrar, sem achismo e sem complicação.
+                      Depois de anos testando produtos, formatos de compra e modelos de operação, desenvolvi um <span className="text-primary font-bold">passo a passo simples</span> para que lojistas e empreendedores iniciantes consigam importar da China com muito mais segurança, margem e previsibilidade. Nesta live, vou abrir o jogo e te mostrar exatamente como isso funciona na prática.
                     </p>
                   </div>
                   
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
-                    <div className="flex items-start gap-3 p-4 bg-card/50 rounded-xl border border-soudrop-green/20">
-                      <div className="w-10 h-10 rounded-lg bg-soudrop-green/20 flex items-center justify-center flex-shrink-0">
-                        <Award className="w-6 h-6 text-soudrop-green" />
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
+                    <div className="flex items-start gap-3 p-4 bg-card/50 rounded-xl border border-primary/20">
+                      <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <Award className="w-6 h-6 text-primary" />
                       </div>
                       <div>
                         <p className="font-bold text-foreground">+10 anos</p>
@@ -243,9 +243,9 @@ const LiveImportacao = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-3 p-4 bg-card/50 rounded-xl border border-soudrop-yellow/20">
-                      <div className="w-10 h-10 rounded-lg bg-soudrop-yellow/20 flex items-center justify-center flex-shrink-0">
-                        <Package className="w-6 h-6 text-soudrop-yellow" />
+                    <div className="flex items-start gap-3 p-4 bg-card/50 rounded-xl border border-primary/20">
+                      <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <Package className="w-6 h-6 text-primary" />
                       </div>
                       <div>
                         <p className="font-bold text-foreground">Milhares</p>
@@ -253,33 +253,23 @@ const LiveImportacao = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-3 p-4 bg-card/50 rounded-xl border border-soudrop-green/20">
-                      <div className="w-10 h-10 rounded-lg bg-soudrop-green/20 flex items-center justify-center flex-shrink-0">
-                        <Users className="w-6 h-6 text-soudrop-green" />
-                      </div>
-                      <div>
-                        <p className="font-bold text-foreground">+1.000</p>
-                        <p className="text-sm text-muted-foreground">Empresas atendidas</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3 p-4 bg-card/50 rounded-xl border border-soudrop-yellow/20">
-                      <div className="w-10 h-10 rounded-lg bg-soudrop-yellow/20 flex items-center justify-center flex-shrink-0">
-                        <TrendingUp className="w-6 h-6 text-soudrop-yellow" />
-                      </div>
-                      <div>
-                        <p className="font-bold text-foreground">+R$ 10M</p>
-                        <p className="text-sm text-muted-foreground">Gerenciados em anúncios</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3 p-4 bg-card/50 rounded-xl border border-soudrop-green/20 sm:col-span-2 lg:col-span-1">
-                      <div className="w-10 h-10 rounded-lg bg-soudrop-green/20 flex items-center justify-center flex-shrink-0">
-                        <ShieldCheck className="w-6 h-6 text-soudrop-green" />
+                    <div className="flex items-start gap-3 p-4 bg-card/50 rounded-xl border border-primary/20">
+                      <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <ShieldCheck className="w-6 h-6 text-primary" />
                       </div>
                       <div>
                         <p className="font-bold text-foreground">Operações</p>
                         <p className="text-sm text-muted-foreground">Import. compartilhada</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-3 p-4 bg-card/50 rounded-xl border border-primary/20">
+                      <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <Users className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-bold text-foreground">Experiência</p>
+                        <p className="text-sm text-muted-foreground">em fábricas na China</p>
                       </div>
                     </div>
                   </div>
@@ -294,9 +284,9 @@ const LiveImportacao = () => {
       <section className="py-20 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-soudrop-yellow font-bold uppercase tracking-wider mb-3">Resultados reais</p>
+            <p className="text-secondary font-bold uppercase tracking-wider mb-3">Resultados reais</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase mb-4">
-              Prova real de quem já está <span className="text-soudrop-green">no jogo</span>
+              Prova real de quem já está <span className="text-primary">no jogo</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Veja o que dizem os vendedores que já aplicaram nossas estratégias
@@ -321,17 +311,17 @@ const LiveImportacao = () => {
                 cargo: "Vendedor Amazon • MG"
               }
             ].map((depoimento, index) => (
-              <Card key={index} className="bg-card border-2 border-soudrop-green/30 hover:border-soudrop-yellow hover:shadow-yellow-glow transition-all">
+              <Card key={index} className="bg-card border-2 border-primary/30 hover:border-secondary hover:shadow-glow transition-all">
                 <CardContent className="p-8">
                   <div className="mb-4">
-                    <Quote className="w-12 h-12 text-soudrop-yellow/40" />
+                    <Quote className="w-12 h-12 text-secondary/40" />
                   </div>
                   <p className="text-foreground/90 leading-relaxed mb-6 text-lg">
                     "{depoimento.texto}"
                   </p>
                   <div className="border-t border-border/50 pt-4">
                     <p className="font-bold text-foreground">{depoimento.nome}</p>
-                    <p className="text-sm text-soudrop-green">{depoimento.cargo}</p>
+                    <p className="text-sm text-primary">{depoimento.cargo}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -344,9 +334,9 @@ const LiveImportacao = () => {
       <section className="py-20 px-4 bg-card border-y border-border/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-soudrop-yellow font-bold uppercase tracking-wider mb-3">Conteúdo da Live</p>
+            <p className="text-secondary font-bold uppercase tracking-wider mb-3">Conteúdo da Live</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase mb-4">
-              O que você vai <span className="text-soudrop-green">aprender</span>
+              O que você vai <span className="text-primary">aprender</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Conteúdo prático e direto ao ponto
@@ -357,28 +347,28 @@ const LiveImportacao = () => {
             {[
               {
                 icon: TrendingUp,
-                title: "Como funciona a importação da China na prática",
+                title: "Como funciona, na prática, a importação da China",
                 description: "O passo a passo completo para revenda em marketplaces brasileiros"
               },
               {
                 icon: Package,
-                title: "Como escolher produtos com alta margem e alta demanda",
+                title: "Como escolher produtos com alta margem e demanda real",
                 description: "Critérios práticos de seleção que aumentam suas chances de lucro"
               },
               {
                 icon: Users,
-                title: "Como encontrar e negociar com fornecedores confiáveis",
+                title: "Como encontrar e validar fornecedores confiáveis",
                 description: "Onde buscar, como validar e negociar com segurança na China"
               },
               {
                 icon: ShieldCheck,
-                title: "Como aproveitar a importação compartilhada",
-                description: "Comece com menos capital dividindo custos com outros vendedores"
+                title: "Como usar a importação compartilhada",
+                description: "Comece com pouco capital dividindo custos com outros vendedores"
               },
               {
                 icon: Zap,
-                title: "Como estruturar suas ofertas para vender mais",
-                description: "Estratégias práticas para se destacar nos marketplaces"
+                title: "Como estruturar suas primeiras compras",
+                description: "Estratégias para não travar seu caixa e começar da forma certa"
               },
               {
                 icon: CheckCircle2,
@@ -386,10 +376,10 @@ const LiveImportacao = () => {
                 description: "Um roteiro claro e seguro do início ao fim"
               }
             ].map((item, index) => (
-              <Card key={index} className="bg-background border-2 border-soudrop-green/30 hover:border-soudrop-green hover:shadow-glow transition-all group">
+              <Card key={index} className="bg-muted/30 border-2 border-primary/30 hover:border-primary hover:shadow-glow transition-all group">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 rounded-2xl bg-soudrop-green/20 flex items-center justify-center mb-6 group-hover:bg-soudrop-green/30 transition-colors">
-                    <item.icon className="w-8 h-8 text-soudrop-green" />
+                  <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
+                    <item.icon className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
@@ -405,8 +395,8 @@ const LiveImportacao = () => {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070')] bg-cover bg-center opacity-5"></div>
         
         <div className="relative max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-yellow rounded-full shadow-yellow-glow mb-8">
-            <span className="text-soudrop-black font-bold uppercase text-sm tracking-wider flex items-center gap-2">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-secondary rounded-full shadow-yellow-glow mb-8">
+            <span className="text-secondary-foreground font-bold uppercase text-sm tracking-wider flex items-center gap-2">
               <Zap className="w-5 h-5" />
               Últimas Vagas Disponíveis
             </span>
@@ -415,11 +405,11 @@ const LiveImportacao = () => {
           <h2 className="text-3xl md:text-5xl font-black uppercase mb-6">
             <span className="text-foreground">Garanta sua vaga na</span>
             <br />
-            <span className="text-soudrop-green">Live Exclusiva</span>
+            <span className="text-primary">Live Exclusiva</span>
           </h2>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Preencha o formulário abaixo e receba <span className="text-soudrop-yellow font-bold">acesso imediato</span> ao link da live
+            Preencha o formulário abaixo e receba <span className="text-secondary font-bold">acesso imediato</span> ao link da live
           </p>
           
           <div className="max-w-lg mx-auto">
