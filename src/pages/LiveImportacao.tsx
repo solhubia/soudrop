@@ -97,9 +97,7 @@ const LiveImportacao = () => {
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-                Descubra o passo a passo completo para aumentar sua margem de lucro, 
-                ter acesso direto a fornecedores chineses e importar com segurança — 
-                mesmo sendo iniciante.
+                Descubra o passo a passo completo para aumentar sua margem de lucro, ter acesso direto a fornecedores chineses e importar com segurança mesmo sendo iniciante.
               </p>
 
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
@@ -183,7 +181,7 @@ const LiveImportacao = () => {
               Quem vai te guiar nessa jornada
             </h2>
             <p className="text-xl text-primary font-semibold">
-              Conheça o mentor da SouDrop Brasil
+              Conheça o mentor do Clube de importação         
             </p>
           </div>
 
@@ -200,7 +198,7 @@ const LiveImportacao = () => {
             <div className="space-y-6">
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Sou <span className="text-foreground font-semibold">Renan Ferreira</span>, empresário e importador há mais de 10 anos, 
+                  Sou Renan Ferreira, empresário e importador há mais de 10 anos, com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo.                       <span className="text-foreground font-semibold">Renan Ferreira</span>, empresário e importador há mais de 10 anos, 
                   com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos 
                   e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo — sem depender de atravessadores.
                 </p>
@@ -221,10 +219,8 @@ const LiveImportacao = () => {
               {/* Authority Bullets */}
               <div className="space-y-3 pt-4">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-foreground font-medium text-lg">
-                    +10 anos de experiência com importação da China
-                  </span>
+                  
+                  
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
