@@ -45,55 +45,104 @@ const CacadorProdutos = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-cacador-bg-main">
+    <div className="min-h-screen bg-cacador-bg-main overflow-x-hidden">
       <header className="fixed top-0 left-0 right-0 z-50 bg-cacador-bg-alt/95 backdrop-blur-sm border-b border-cacador-pink-light/20">
         <div className="container mx-auto px-4 py-4 flex justify-center" />
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 md:pt-40 pb-16 md:pb-24 relative overflow-hidden bg-gradient-cacador-hero">
+      <section className="pt-24 md:pt-40 pb-12 md:pb-24 relative overflow-hidden bg-gradient-cacador-hero">
         <div className="absolute inset-0 bg-gradient-to-br from-cacador-pink/5 via-transparent to-cacador-pink/5" />
-        <div className="absolute inset-0">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-cacador-pink/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-cacador-pink/8 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
-                <Badge className="bg-cacador-pink text-white px-4 py-2 text-sm font-semibold">🔥 Oferta Limitada</Badge>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cacador-text-primary leading-tight">Caçador de Produtos</h1>
-                <p className="text-xl md:text-2xl text-cacador-text-secondary leading-relaxed">Encontre produtos lucrativos na China mesmo começando do zero</p>
-                <div className="space-y-4">
-                  <p className="text-lg text-cacador-text-secondary">Um curso direto ao ponto para te mostrar como pesquisar, comparar e encontrar produtos com potencial real de lucro nos marketplaces.</p>
-                  <div className="flex flex-wrap gap-3 items-center">
-                    <Badge variant="outline" className="border-cacador-pink-light text-cacador-pink-light">100% Online</Badge>
-                    <Badge variant="outline" className="border-cacador-pink-light text-cacador-pink-light">Acesso pela internet</Badge>
-                    <Badge variant="outline" className="border-cacador-pink-light text-cacador-pink-light">Conteúdo prático</Badge>
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+              <div className="space-y-6 md:space-y-8 w-full">
+                <div>
+                  <Badge className="mb-4 md:mb-6 bg-cacador-pink text-white border-none px-4 py-2 text-sm">
+                    Curso 100% Online
+                  </Badge>
+                  <h1 className="text-3xl md:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+                    Caçador de Produtos
+                  </h1>
+                  <p className="text-lg md:text-2xl text-cacador-text-secondary leading-relaxed">
+                    Aprenda a encontrar produtos na China com margem de lucro real, sem depender de "gurus" e sem cair em furadas.
+                  </p>
+                </div>
+
+                <div className="space-y-3 md:space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-cacador-pink flex-shrink-0 mt-1" />
+                    <p className="text-cacador-text-secondary text-base md:text-lg">
+                      Aprenda a comparar preços e achar oportunidades de lucro
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-cacador-pink flex-shrink-0 mt-1" />
+                    <p className="text-cacador-text-secondary text-base md:text-lg">
+                      Saiba como validar fornecedores no 1688 com segurança
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-cacador-pink flex-shrink-0 mt-1" />
+                    <p className="text-cacador-text-secondary text-base md:text-lg">
+                      Descubra os sites "secretos" que os próprios chineses usam
+                    </p>
                   </div>
                 </div>
+
+                <Button 
+                  onClick={scrollToCTA}
+                  size="lg"
+                  className="w-full md:w-auto bg-cacador-yellow hover:bg-cacador-yellow/90 text-black font-bold text-base md:text-lg px-8 py-6 md:py-7 rounded-lg shadow-lg hover:shadow-cacador-pink/20 transition-all duration-300 hover:scale-105"
+                >
+                  Quero ter acesso agora
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </div>
 
-              <div className="flex justify-center lg:justify-end">
-                <Card className="w-full max-w-md bg-cacador-dark-card border-2 border-cacador-pink-light/30 shadow-cacador-pink">
-                  <CardContent className="p-8 space-y-6">
-                    <div className="text-center space-y-4">
-                      <div className="flex items-center justify-center gap-2">
-                        <span className="text-cacador-text-secondary line-through text-lg">De R$ 97,00</span>
+              <div className="relative w-full mt-6 md:mt-0">
+                <Card className="bg-cacador-dark-card border border-cacador-pink-light/30 shadow-xl">
+                  <CardContent className="p-6 md:p-8">
+                    <div className="space-y-5 md:space-y-6">
+                      <div>
+                        <p className="text-cacador-text-secondary text-sm mb-2">Oferta especial por tempo limitado</p>
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-3xl md:text-5xl font-bold text-white">R$ 97</span>
+                          <span className="text-lg md:text-xl text-cacador-text-secondary line-through">R$ 297</span>
+                        </div>
+                        <p className="text-cacador-pink text-sm mt-2 font-semibold">67% de desconto</p>
                       </div>
-                      <div className="space-y-2">
-                        <p className="text-cacador-text-secondary text-sm uppercase tracking-wider">Investimento hoje:</p>
-                        <p className="text-5xl md:text-6xl font-bold text-cacador-pink">R$ 27,90</p>
+
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2 text-cacador-text-secondary text-sm md:text-base">
+                          <CheckCircle2 className="w-5 h-5 text-cacador-pink flex-shrink-0" />
+                          <span>Acesso imediato ao curso</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-cacador-text-secondary text-sm md:text-base">
+                          <CheckCircle2 className="w-5 h-5 text-cacador-pink flex-shrink-0" />
+                          <span>6 módulos completos</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-cacador-text-secondary text-sm md:text-base">
+                          <CheckCircle2 className="w-5 h-5 text-cacador-pink flex-shrink-0" />
+                          <span>Aula bônus exclusiva</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-cacador-text-secondary text-sm md:text-base">
+                          <CheckCircle2 className="w-5 h-5 text-cacador-pink flex-shrink-0" />
+                          <span>Certificado de conclusão</span>
+                        </div>
                       </div>
-                      <p className="text-cacador-text-secondary text-sm">Pagamento seguro, acesso online imediato</p>
-                    </div>
-                    <Button onClick={scrollToCTA} className="w-full h-14 text-lg font-bold bg-cacador-yellow hover:bg-cacador-yellow/90 hover:shadow-[0_0_20px_rgba(255,214,0,0.3)] text-black shadow-cacador-cta transition-all">
-                      Quero acessar o Caçador de Produtos
-                    </Button>
-                    <div className="flex items-center justify-center gap-2 text-sm text-cacador-text-secondary">
-                      <Shield className="w-4 h-4" />
-                      <span>Compra 100% segura</span>
+
+                      <Button 
+                        onClick={scrollToCTA}
+                        size="lg"
+                        className="w-full bg-cacador-yellow hover:bg-cacador-yellow/90 text-black font-bold text-base md:text-lg py-6 md:py-7 rounded-lg shadow-lg hover:shadow-cacador-pink/20 transition-all duration-300"
+                      >
+                        Garantir minha vaga
+                      </Button>
+
+                      <p className="text-xs text-cacador-text-secondary text-center">
+                        🔒 Pagamento 100% seguro
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -103,7 +152,7 @@ const CacadorProdutos = () => {
         </div>
       </section>
 
-      {/* Para quem é */}
+      
       <section className="py-16 md:py-24 bg-cacador-bg-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -288,20 +337,16 @@ const CacadorProdutos = () => {
       <section className="py-16 md:py-24 bg-cacador-bg-section">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-12">O que dizem os alunos</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-12">O que dizem os alunos do Caçador de Produtos</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="bg-cacador-dark-card border-2 border-cacador-pink-light/30 hover:border-cacador-pink-light/50 transition-all">
+                <Card key={index} className="bg-cacador-dark-card border-cacador-pink-light/20 hover:border-cacador-pink-light/40 transition-all">
                   <CardContent className="p-6 space-y-4">
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-cacador-yellow text-cacador-yellow" />
-                      ))}
-                    </div>
-                    <p className="text-cacador-text-secondary leading-relaxed italic">"{testimonial.text}"</p>
-                    <div className="pt-4 border-t border-cacador-pink-light/20">
-                      <p className="font-semibold text-cacador-pink">{testimonial.name}</p>
-                      <p className="text-sm text-cacador-text-secondary">{testimonial.role}</p>
+                    <Star className="w-6 h-6 text-cacador-yellow" />
+                    <p className="text-cacador-text-secondary leading-relaxed">{testimonial.text}</p>
+                    <div className="text-sm">
+                      <p className="font-semibold text-cacador-text-primary">{testimonial.name}</p>
+                      <p className="text-cacador-text-secondary">{testimonial.role}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -311,119 +356,54 @@ const CacadorProdutos = () => {
         </div>
       </section>
 
-      {/* Por que funciona */}
-      <section className="py-16 md:py-24 bg-cacador-bg-alt">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-12">Por que esse método funciona?</h2>
-            <div className="space-y-4">
-              {[
-                "Porque se baseia em dados reais de preços e demanda dos marketplaces",
-                "Porque é focado em processo simples, que você pode aplicar no dia a dia",
-                "Porque foi criado a partir de experiência real com importação e vendas em marketplaces",
-                "Porque ensina a pescar, não apenas entrega o peixe pronto",
-                "Porque você aprende a validar antes de investir, reduzindo drasticamente os riscos"
-              ].map((item, index) => (
-                <Card key={index} className="bg-cacador-dark-card border-cacador-pink-light/20">
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-cacador-pink flex-shrink-0 mt-1" />
-                    <p className="text-lg text-cacador-text-secondary">{item}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Como funciona o acesso */}
-      <section className="py-16 md:py-24 bg-cacador-bg-section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-12">Como funciona o acesso ao curso</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { num: "1", title: "100% Online", desc: "Curso totalmente online. Assista quando e onde quiser, no seu ritmo." },
-                { num: "2", title: "Acesso Imediato", desc: "Receba seus dados de acesso por e-mail logo após a confirmação do pagamento." },
-                { num: "3", title: "Aulas Gravadas", desc: "Todas as aulas são gravadas e organizadas em módulos para facilitar seu aprendizado." },
-                { num: "4", title: "Plataforma Segura", desc: "Pagamento processado em plataforma segura e reconhecida no mercado." }
-              ].map((item, index) => (
-                <Card key={index} className="bg-cacador-dark-card border-cacador-pink-light/20">
-                  <CardContent className="p-6 space-y-3">
-                    <div className="w-12 h-12 rounded-xl bg-cacador-pink flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">{item.num}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-cacador-text-primary">{item.title}</h3>
-                    <p className="text-cacador-text-secondary">{item.desc}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Garantia */}
-      <section className="py-16 md:py-24 bg-cacador-bg-alt">
+      {/* CTA Section */}
+      <section id="cta-section" className="py-16 md:py-24 bg-cacador-bg-alt">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-cacador-pink mb-6">
-              <Shield className="w-12 h-12 text-white" />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
+              Ainda com dúvidas? <span className="text-cacador-pink">Aproveite agora!</span>
+            </h2>
+            <p className="text-lg text-cacador-text-secondary mb-12">
+              O Caçador de Produtos é o método mais rápido e prático para você começar a importar da China e encontrar produtos lucrativos para vender nos marketplaces.
+            </p>
+            <Button onClick={scrollToCTA} className="h-16 px-12 text-xl font-bold bg-cacador-yellow hover:bg-cacador-yellow/90 hover:shadow-[0_0_30px_rgba(255,214,0,0.4)] text-black shadow-cacador-cta rounded-2xl transition-all">
+              Quero ter acesso ao Caçador de Produtos
+            </Button>
+          </div>
+        </div>
+      </section>
+      
+      <section className="py-12 md:py-24 bg-cacador-bg-alt">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-5xl font-bold text-white text-center mb-8 md:mb-16 px-2">
+              Para quem é o <span className="text-cacador-pink">Caçador de Produtos</span>?
+            </h2>
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-6">
+              {targetAudience.map((text, index) => (
+                <Card key={index} className="bg-cacador-dark-card border border-cacador-pink-light/30 hover:border-cacador-pink/50 transition-all duration-300">
+                  <CardContent className="p-5 md:p-6">
+                    <div className="flex items-start gap-3 md:gap-4">
+                      <div className="bg-cacador-pink/20 p-2 rounded-lg flex-shrink-0">
+                        <Target className="w-5 h-5 md:w-6 md:h-6 text-cacador-pink" />
+                      </div>
+                      <p className="text-cacador-text-secondary text-base md:text-lg leading-relaxed">{text}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Você pode testar sem risco</h2>
-            <p className="text-xl text-cacador-text-secondary mb-8 leading-relaxed">
-              Nosso objetivo é entregar conteúdo prático e aplicável. A compra é feita em plataforma segura e você recebe acesso imediato ao conteúdo completo do curso.
-            </p>
-            <p className="text-lg text-cacador-text-secondary">
-              Temos certeza de que o Caçador de Produtos vai te ajudar a encontrar melhores produtos e tomar decisões mais inteligentes na importação.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* CTA Final */}
-      <section id="cta-section" className="py-16 md:py-24 bg-gradient-cacador-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cacador-pink/5 via-transparent to-cacador-pink/5" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge className="bg-cacador-pink text-white px-6 py-3 text-base font-bold">🔥 Oferta Promocional por Tempo Limitado</Badge>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cacador-text-primary">Pronto para se tornar um Caçador de Produtos?</h2>
-            <p className="text-xl text-cacador-text-secondary leading-relaxed max-w-2xl mx-auto">
-              Acesso completo ao curso Caçador de Produtos com aulas passo a passo focadas em encontrar produtos lucrativos para importar da China e vender em marketplaces.
+      
+      <footer className="bg-cacador-bg-alt border-t border-cacador-pink-light/20 py-8 md:py-12">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-6xl mx-auto text-center">
+            <p className="text-cacador-text-secondary text-sm md:text-base">
+              © 2024 Caçador de Produtos. Todos os direitos reservados.
             </p>
-            <Card className="max-w-md mx-auto bg-cacador-dark-card border-2 border-cacador-pink-light/30 shadow-cacador-pink">
-              <CardContent className="p-8 space-y-6">
-                <div className="text-center space-y-4">
-                  <div className="flex items-center justify-center gap-2">
-                    <span className="text-cacador-text-secondary line-through text-lg">De R$ 97,00</span>
-                  </div>
-                  <div className="space-y-2">
-                    <p className="text-cacador-text-secondary text-sm uppercase tracking-wider">Investimento hoje:</p>
-                    <p className="text-6xl md:text-7xl font-bold text-cacador-pink">R$ 27,90</p>
-                  </div>
-                </div>
-                <Button className="w-full h-16 text-xl font-bold bg-cacador-yellow hover:bg-cacador-yellow/90 hover:shadow-[0_0_30px_rgba(255,214,0,0.4)] text-black shadow-cacador-cta transition-all">
-                  Quero acessar o Caçador de Produtos
-                </Button>
-                <div className="flex items-center justify-center gap-2 text-sm text-cacador-text-secondary">
-                  <Shield className="w-4 h-4" />
-                  <span>Pagamento 100% seguro • Acesso imediato</span>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-12 bg-cacador-bg-main border-t border-cacador-pink-light/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto text-center space-y-4">
-            <p className="text-cacador-text-secondary">© 2024 Caçador de Produtos. Todos os direitos reservados.</p>
-            <div className="flex justify-center gap-6 text-sm">
-              <a href="#" className="text-cacador-pink hover:text-cacador-yellow transition-colors">Termos de Uso</a>
-              <a href="#" className="text-cacador-pink hover:text-cacador-yellow transition-colors">Política de Privacidade</a>
-            </div>
           </div>
         </div>
       </footer>
