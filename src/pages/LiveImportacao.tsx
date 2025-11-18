@@ -5,35 +5,28 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Zap, DollarSign, Package, ShieldCheck } from "lucide-react";
 import logoSoudrop from "@/assets/soudrop-logo-oficial.png";
-
 const LiveImportacao = () => {
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
-    whatsapp: "",
+    whatsapp: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
     setIsSubmitted(true);
     setIsSubmitting(false);
   };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header com Logo */}
       <header className="py-6 md:py-8 px-4 border-b border-border/10">
         <div className="max-w-7xl mx-auto flex justify-center">
@@ -99,7 +92,7 @@ const LiveImportacao = () => {
               {/* Badges de Destaque */}
               <div className="flex flex-wrap gap-3 pt-4">
                 <div className="px-4 py-2 bg-secondary/30 border border-secondary rounded-lg">
-                  <span className="text-secondary font-bold uppercase text-xs md:text-sm">🔥 Vagas Limitadas</span>
+                  <span className="text-secondary font-bold uppercase text-xs md:text-sm">🔥 VAGAS LIMITADAS</span>
                 </div>
                 <div className="px-4 py-2 bg-primary/20 border border-primary rounded-lg">
                   <span className="text-primary font-bold uppercase text-xs md:text-sm">✅ 100% Gratuito</span>
@@ -114,8 +107,7 @@ const LiveImportacao = () => {
             <div className="lg:pl-8">
               <Card className="bg-card/95 border-2 border-primary shadow-glow backdrop-blur-sm">
                 <CardContent className="p-6 md:p-8">
-                  {!isSubmitted ? (
-                    <form onSubmit={handleSubmit} className="space-y-5">
+                  {!isSubmitted ? <form onSubmit={handleSubmit} className="space-y-5">
                       <div className="text-center mb-6">
                         <h2 className="text-2xl md:text-3xl font-black text-foreground uppercase mb-2">
                           Garanta sua vaga
@@ -129,64 +121,31 @@ const LiveImportacao = () => {
                         <Label htmlFor="nome" className="text-foreground font-semibold text-base">
                           Nome completo
                         </Label>
-                        <Input
-                          id="nome"
-                          name="nome"
-                          type="text"
-                          placeholder="Digite seu nome"
-                          value={formData.nome}
-                          onChange={handleInputChange}
-                          required
-                          className="bg-input border-2 border-border/50 focus:border-primary h-12 md:h-14 text-base md:text-lg transition-all"
-                        />
+                        <Input id="nome" name="nome" type="text" placeholder="Digite seu nome" value={formData.nome} onChange={handleInputChange} required className="bg-input border-2 border-border/50 focus:border-primary h-12 md:h-14 text-base md:text-lg transition-all" />
                       </div>
                       
                       <div className="space-y-2">
                         <Label htmlFor="email" className="text-foreground font-semibold text-base">
                           E-mail
                         </Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          placeholder="seu@email.com"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          required
-                          className="bg-input border-2 border-border/50 focus:border-primary h-12 md:h-14 text-base md:text-lg transition-all"
-                        />
+                        <Input id="email" name="email" type="email" placeholder="seu@email.com" value={formData.email} onChange={handleInputChange} required className="bg-input border-2 border-border/50 focus:border-primary h-12 md:h-14 text-base md:text-lg transition-all" />
                       </div>
                       
                       <div className="space-y-2">
                         <Label htmlFor="whatsapp" className="text-foreground font-semibold text-base">
                           WhatsApp
                         </Label>
-                        <Input
-                          id="whatsapp"
-                          name="whatsapp"
-                          type="tel"
-                          placeholder="(00) 00000-0000"
-                          value={formData.whatsapp}
-                          onChange={handleInputChange}
-                          required
-                          className="bg-input border-2 border-border/50 focus:border-primary h-12 md:h-14 text-base md:text-lg transition-all"
-                        />
+                        <Input id="whatsapp" name="whatsapp" type="tel" placeholder="(00) 00000-0000" value={formData.whatsapp} onChange={handleInputChange} required className="bg-input border-2 border-border/50 focus:border-primary h-12 md:h-14 text-base md:text-lg transition-all" />
                       </div>
                       
-                      <Button 
-                        type="submit" 
-                        className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-black text-lg md:text-xl py-6 md:py-8 shadow-cta hover:shadow-yellow-glow hover:scale-[1.02] transition-all duration-300 uppercase tracking-wide"
-                        disabled={isSubmitting}
-                      >
+                      <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-black text-lg md:text-xl py-6 md:py-8 shadow-cta hover:shadow-yellow-glow hover:scale-[1.02] transition-all duration-300 uppercase tracking-wide" disabled={isSubmitting}>
                         {isSubmitting ? "Enviando..." : "🔥 Quero garantir minha vaga"}
                       </Button>
                       
                       <p className="text-xs text-muted-foreground text-center mt-3">
                         🔒 Seus dados estão seguros. Ao preencher, você concorda em receber comunicações sobre a live.
                       </p>
-                    </form>
-                  ) : (
-                    <div className="text-center py-8 md:py-10">
+                    </form> : <div className="text-center py-8 md:py-10">
                       <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 shadow-glow">
                         <CheckCircle2 className="w-12 h-12 text-primary" />
                       </div>
@@ -196,16 +155,13 @@ const LiveImportacao = () => {
                       <p className="text-muted-foreground text-base md:text-lg">
                         Você receberá todas as informações da live no seu e-mail e WhatsApp.
                       </p>
-                    </div>
-                  )}
+                    </div>}
                 </CardContent>
               </Card>
             </div>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default LiveImportacao;
