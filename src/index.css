@@ -99,6 +99,22 @@
     --shadow-cacador-yellow: 0 8px 40px hsl(48 100% 50% / 0.3);
     --shadow-cacador-cta: 0 4px 30px hsl(48 100% 50% / 0.4);
     
+    /* --- TEMA SOUDROP ELITE (PRETO + BRANCO + DOURADO) --- */
+    --elite-black: 0 0% 0%;
+    --elite-white: 0 0% 100%;
+    --elite-gold: 45 100% 51%;
+    --elite-gold-light: 45 100% 60%;
+    --elite-gold-dark: 45 100% 40%;
+    --elite-gray: 0 0% 20%;
+    
+    /* Gradientes Elite */
+    --gradient-elite-gold: linear-gradient(135deg, hsl(45 100% 51%) 0%, hsl(45 100% 40%) 100%);
+    --gradient-elite-bg: linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(0 0% 5%) 50%, hsl(0 0% 0%) 100%);
+    
+    /* Sombras Elite */
+    --shadow-elite-gold: 0 10px 60px hsl(45 100% 51% / 0.3);
+    --shadow-elite-gold-strong: 0 0 40px hsl(45 100% 51% / 0.5), 0 0 20px hsl(45 100% 51% / 0.3);
+    
     /* --- TEMA CHINA (PÁGINA ALTERNATIVA) --- */
     --china-background: 0 15% 8%;
     --china-foreground: 45 100% 98%;
