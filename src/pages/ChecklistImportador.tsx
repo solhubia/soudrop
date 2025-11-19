@@ -273,14 +273,11 @@ const ChecklistImportador = () => {
               {/* Foto esquerda */}
               <div className="flex justify-center">
                 <div className="relative w-full max-w-sm aspect-square bg-gradient-to-br from-[#3F4045]/40 to-[#5D737E]/20 rounded-2xl border border-[#5D737E]/20 overflow-hidden shadow-xl">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center space-y-4 p-8">
-                      <Users className="w-24 h-24 text-[#5D737E]/40 mx-auto" />
-                      <p className="text-[#FCFCFC]/40 text-sm">
-                        Foto do especialista
-                      </p>
-                    </div>
-                  </div>
+                  <img 
+                    src={renanFerreira} 
+                    alt="Renan Ferreira - Especialista em Importação da China" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
