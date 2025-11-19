@@ -146,7 +146,7 @@ const SoudropPro = () => {
               <Card key={index} className="border-2 border-gray-200 hover:border-green-500 transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-6 flex items-start gap-4">
                   <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
-                  <p className="text-gray-700 text-lg">{item}</p>
+                  <p className="text-white text-lg">{item}</p>
                 </CardContent>
               </Card>
             ))}
