@@ -40,6 +40,14 @@ export default {
           "text-primary": "hsl(var(--cacador-text-primary))",
           "text-secondary": "hsl(var(--cacador-text-secondary))",
         },
+        elite: {
+          black: "hsl(var(--elite-black))",
+          white: "hsl(var(--elite-white))",
+          gold: "hsl(var(--elite-gold))",
+          "gold-light": "hsl(var(--elite-gold-light))",
+          "gold-dark": "hsl(var(--elite-gold-dark))",
+          gray: "hsl(var(--elite-gray))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -83,6 +91,8 @@ export default {
         "gradient-cacador-hero": "var(--gradient-cacador-hero)",
         "gradient-cacador-pink": "var(--gradient-cacador-pink)",
         "gradient-cacador-cta": "var(--gradient-cacador-cta)",
+        "gradient-elite-gold": "var(--gradient-elite-gold)",
+        "gradient-elite-bg": "var(--gradient-elite-bg)",
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
@@ -92,6 +102,8 @@ export default {
         'cacador-pink': 'var(--shadow-cacador-pink)',
         'cacador-yellow': 'var(--shadow-cacador-yellow)',
         'cacador-cta': 'var(--shadow-cacador-cta)',
+        'elite-gold': 'var(--shadow-elite-gold)',
+        'elite-gold-strong': 'var(--shadow-elite-gold-strong)',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
