@@ -3,85 +3,61 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield } from "lucide-react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import soudropLogo from "@/assets/soudrop-logo-oficial.png";
-
 const SoudropElite = () => {
   const handleCTA = () => {
     window.open("https://pay.hotmart.com/example", "_blank");
   };
-
-  const pilares = [
-    {
-      icon: TrendingUp,
-      title: "Estrutura para FULL e FLEX",
-      description: "Direção estratégica para operar nos modelos Full e Flex. Como usar essas modalidades com inteligência para escalar vendas sem virar refém da logística. Educação e estratégia, não promessa operacional."
-    },
-    {
-      icon: Award,
-      title: "0 Taxa de Gestão de Vendas",
-      description: "Não cobro taxa de gestão separada. O programa inclui orientação de gestão de vendas. Aqui, a gestão entra como parte da formação, não como mensalidade eterna."
-    },
-    {
-      icon: Target,
-      title: "Gestão de Vendas",
-      description: "Frameworks sobre mix de produtos, precificação prática, giro de estoque, análise de anúncios e campanhas. Faça o aluno enxergar o que dá dinheiro e o que trava o caixa."
-    },
-    {
-      icon: Briefcase,
-      title: "Gestão de Negócio",
-      description: "Mentalidade de dono. Organização de rotina, processos e indicadores. Saia do modo 'apagar incêndio' e entre no modo 'construir algo escalável'. Ferramentas simples para clareza de decisão."
-    },
-    {
-      icon: Calculator,
-      title: "Contabilidade e Estrutura Empresarial",
-      description: "Entendimento de CNPJ, regime tributário adequado, organização fiscal. Educação contábil aplicada para você parar de ser refém da contabilidade e conversar melhor com seu contador."
-    },
-    {
-      icon: GraduationCap,
-      title: "Educação Premium e Acompanhamento",
-      description: "Aulas gravadas + encontros ao vivo. Espaço para dúvidas estratégicas. Materiais de apoio completos. Tudo focado em transformar o dono no gestor do próprio negócio."
-    }
-  ];
-
-  const paraQuemE = [
-    "Já vende (ou quer vender) com importação, marketplaces ou e-commerce",
-    "Sente que o problema não é mais só produto, é gestão",
-    "Está cansado de não saber se está realmente ganhando dinheiro",
-    "Faz tudo sozinho, na correria, e sente que o negócio não se sustenta assim",
-    "Quer parar de ser 'eu-presa' e estruturar uma empresa com visão de longo prazo"
-  ];
-
-  const bonus = [
-    {
-      icon: Target,
-      title: "Modelo de Painel de Indicadores",
-      description: "Tenha visibilidade total do seu negócio"
-    },
-    {
-      icon: Calculator,
-      title: "Roteiro para Conversa com Contador",
-      description: "Saiba exatamente o que perguntar e cobrar"
-    },
-    {
-      icon: TrendingUp,
-      title: "Modelo de Estrutura de Custos",
-      description: "Entenda sua margem real de lucro"
-    },
-    {
-      icon: Crown,
-      title: "Checklist de Migração",
-      description: "De eu-presa para empresa de verdade"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-elite-black text-elite-white">
+  const pilares = [{
+    icon: TrendingUp,
+    title: "Estrutura para FULL e FLEX",
+    description: "Direção estratégica para operar nos modelos Full e Flex. Como usar essas modalidades com inteligência para escalar vendas sem virar refém da logística. Educação e estratégia, não promessa operacional."
+  }, {
+    icon: Award,
+    title: "0 Taxa de Gestão de Vendas",
+    description: "Não cobro taxa de gestão separada. O programa inclui orientação de gestão de vendas. Aqui, a gestão entra como parte da formação, não como mensalidade eterna."
+  }, {
+    icon: Target,
+    title: "Gestão de Vendas",
+    description: "Frameworks sobre mix de produtos, precificação prática, giro de estoque, análise de anúncios e campanhas. Faça o aluno enxergar o que dá dinheiro e o que trava o caixa."
+  }, {
+    icon: Briefcase,
+    title: "Gestão de Negócio",
+    description: "Mentalidade de dono. Organização de rotina, processos e indicadores. Saia do modo 'apagar incêndio' e entre no modo 'construir algo escalável'. Ferramentas simples para clareza de decisão."
+  }, {
+    icon: Calculator,
+    title: "Contabilidade e Estrutura Empresarial",
+    description: "Entendimento de CNPJ, regime tributário adequado, organização fiscal. Educação contábil aplicada para você parar de ser refém da contabilidade e conversar melhor com seu contador."
+  }, {
+    icon: GraduationCap,
+    title: "Educação Premium e Acompanhamento",
+    description: "Aulas gravadas + encontros ao vivo. Espaço para dúvidas estratégicas. Materiais de apoio completos. Tudo focado em transformar o dono no gestor do próprio negócio."
+  }];
+  const paraQuemE = ["Já vende (ou quer vender) com importação, marketplaces ou e-commerce", "Sente que o problema não é mais só produto, é gestão", "Está cansado de não saber se está realmente ganhando dinheiro", "Faz tudo sozinho, na correria, e sente que o negócio não se sustenta assim", "Quer parar de ser 'eu-presa' e estruturar uma empresa com visão de longo prazo"];
+  const bonus = [{
+    icon: Target,
+    title: "Modelo de Painel de Indicadores",
+    description: "Tenha visibilidade total do seu negócio"
+  }, {
+    icon: Calculator,
+    title: "Roteiro para Conversa com Contador",
+    description: "Saiba exatamente o que perguntar e cobrar"
+  }, {
+    icon: TrendingUp,
+    title: "Modelo de Estrutura de Custos",
+    description: "Entenda sua margem real de lucro"
+  }, {
+    icon: Crown,
+    title: "Checklist de Migração",
+    description: "De eu-presa para empresa de verdade"
+  }];
+  return <div className="min-h-screen bg-elite-black text-elite-white">
       {/* Hero Premium */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-elite-bg px-6 py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_hsl(45_100%_51%_/_0.1),_transparent_50%)]" />
         
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <div className="mb-8 flex justify-center">
-            <img src={soudropLogo} alt="SouDrop" className="h-16 opacity-90" />
+            
           </div>
           
           <div className="mb-6 inline-flex items-center gap-2 px-6 py-2 border border-elite-gold/30 rounded-full bg-elite-gold/5">
@@ -99,18 +75,11 @@ const SoudropElite = () => {
           </p>
 
           <div className="mb-12">
-            <img 
-              src={renanPhoto} 
-              alt="Renan Ferreira" 
-              className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-elite-gold shadow-elite-gold-strong"
-            />
+            <img src={renanPhoto} alt="Renan Ferreira" className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-elite-gold shadow-elite-gold-strong" />
             <p className="mt-4 text-elite-white/60 text-sm">Com Renan Ferreira</p>
           </div>
 
-          <Button 
-            onClick={handleCTA}
-            className="bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-lg px-12 py-7 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105"
-          >
+          <Button onClick={handleCTA} className="bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-lg px-12 py-7 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
             QUERO PARAR DE SER "EU-PRESA"
           </Button>
 
@@ -142,15 +111,10 @@ const SoudropElite = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
-            {paraQuemE.map((item, index) => (
-              <div 
-                key={index}
-                className="flex items-start gap-4 p-6 bg-elite-black/50 border border-elite-gold/20 rounded-xl hover:border-elite-gold/40 transition-all"
-              >
+            {paraQuemE.map((item, index) => <div key={index} className="flex items-start gap-4 p-6 bg-elite-black/50 border border-elite-gold/20 rounded-xl hover:border-elite-gold/40 transition-all">
                 <Check className="w-6 h-6 text-elite-gold flex-shrink-0 mt-1" />
                 <p className="text-elite-white/90 text-lg">{item}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -167,9 +131,8 @@ const SoudropElite = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pilares.map((pilar, index) => {
-              const Icon = pilar.icon;
-              return (
-                <Card key={index} className="bg-elite-black border-2 border-elite-gold/20 hover:border-elite-gold/50 transition-all hover:shadow-elite-gold">
+            const Icon = pilar.icon;
+            return <Card key={index} className="bg-elite-black border-2 border-elite-gold/20 hover:border-elite-gold/50 transition-all hover:shadow-elite-gold">
                   <CardContent className="p-8">
                     <div className="mb-6 w-16 h-16 rounded-xl bg-gradient-elite-gold flex items-center justify-center">
                       <Icon className="w-8 h-8 text-elite-black" />
@@ -177,9 +140,8 @@ const SoudropElite = () => {
                     <h3 className="text-2xl font-bold text-elite-white mb-4">{pilar.title}</h3>
                     <p className="text-elite-white/70 leading-relaxed">{pilar.description}</p>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
         </div>
       </section>
@@ -221,11 +183,7 @@ const SoudropElite = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <img 
-                src={renanPhoto} 
-                alt="Renan Ferreira" 
-                className="w-full rounded-2xl border-4 border-elite-gold/30 shadow-elite-gold"
-              />
+              <img src={renanPhoto} alt="Renan Ferreira" className="w-full rounded-2xl border-4 border-elite-gold/30 shadow-elite-gold" />
             </div>
             <div>
               <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 border border-elite-gold/30 rounded-full bg-elite-gold/5">
@@ -295,9 +253,8 @@ const SoudropElite = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {bonus.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <Card key={index} className="bg-gradient-elite-gold border-0 text-elite-black hover:scale-105 transition-all">
+            const Icon = item.icon;
+            return <Card key={index} className="bg-gradient-elite-gold border-0 text-elite-black hover:scale-105 transition-all">
                   <CardContent className="p-6 text-center">
                     <div className="mb-4 w-14 h-14 rounded-full bg-elite-black/10 flex items-center justify-center mx-auto">
                       <Icon className="w-7 h-7" />
@@ -305,9 +262,8 @@ const SoudropElite = () => {
                     <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                     <p className="text-sm text-elite-black/70">{item.description}</p>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
         </div>
       </section>
@@ -391,10 +347,7 @@ const SoudropElite = () => {
                   </div>
                 </div>
 
-                <Button 
-                  onClick={handleCTA}
-                  className="w-full bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-xl px-12 py-8 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105"
-                >
+                <Button onClick={handleCTA} className="w-full bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-xl px-12 py-8 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
                   QUERO ESTRUTURAR MEU NEGÓCIO
                 </Button>
 
@@ -422,10 +375,7 @@ const SoudropElite = () => {
             com gestão, estrutura e visão de longo prazo.
           </p>
           
-          <Button 
-            onClick={handleCTA}
-            className="bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-xl px-16 py-8 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105"
-          >
+          <Button onClick={handleCTA} className="bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-xl px-16 py-8 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
             QUERO ENTRAR PARA ESSE GRUPO
           </Button>
 
@@ -438,14 +388,12 @@ const SoudropElite = () => {
       {/* Footer */}
       <footer className="py-12 px-6 bg-elite-black border-t border-elite-gold/10">
         <div className="max-w-6xl mx-auto text-center">
-          <img src={soudropLogo} alt="SouDrop" className="h-12 opacity-70 mx-auto mb-6" />
+          
           <p className="text-elite-white/40 text-sm">
             © 2024 SouDrop. Todos os direitos reservados.
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default SoudropElite;
