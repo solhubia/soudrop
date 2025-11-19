@@ -5,7 +5,7 @@ import renanPhoto from "@/assets/renan-ferreira.jpg";
 import soudropLogo from "@/assets/soudrop-logo-oficial.png";
 const SoudropElite = () => {
   const handleCTA = () => {
-    window.open("https://pay.hotmart.com/example", "_blank");
+    window.open("https://pay.kiwify.com.br/dfkyoMp", "_blank");
   };
   const pilares = [{
     icon: TrendingUp,
