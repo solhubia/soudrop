@@ -3,49 +3,74 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, Target, TrendingUp, Shield, Package, Search, Star, PlayCircle, ArrowRight } from "lucide-react";
 import mentorPhoto from "@/assets/renan-ferreira.jpg";
-
 const CacadorProdutos = () => {
   const scrollToCTA = () => {
     const ctaSection = document.getElementById("cta-section");
     if (ctaSection) {
-      ctaSection.scrollIntoView({ behavior: "smooth" });
+      ctaSection.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  const targetAudience = [
-    "Para quem vende em marketplaces e sente que a margem está cada vez menor",
-    "Para quem quer parar de depender apenas de distribuidores nacionais",
-    "Para quem tem vontade de importar da China, mas não sabe por onde começar",
-    "Para quem não quer perder dinheiro escolhendo produtos errados",
-    "Para quem quer ter um processo claro para analisar oportunidades e produtos"
-  ];
-
-  const learningTopics = [
-    { icon: Target, text: "Como entender, na prática, o impacto da importação na sua vida e no seu negócio" },
-    { icon: Search, text: "Quais são os sites 'secretos' que os próprios chineses usam para comprar barato" },
-    { icon: Shield, text: "Como encontrar e validar fornecedores de confiança no 1688" },
-    { icon: TrendingUp, text: "Como comparar preços entre China e Mercado Livre para achar oportunidades de lucro" },
-    { icon: Package, text: "Como usar Pipi Ads + 1688 para validar demanda de produtos" },
-    { icon: CheckCircle2, text: "Como transformar esse conhecimento em uma rotina simples de caça de produtos lucrativos" }
-  ];
-
-  const courseModules = [
-    { number: "01", title: "Bem-vindo – Quem sou eu e como a importação mudou minha vida", description: "Entenda a visão geral do curso e a mentalidade correta para importar com segurança e lucro." },
-    { number: "02", title: "Os sites 'secretos' que os próprios chineses usam para comprar barato", description: "Descubra plataformas usadas pelos chineses para encontrar preços realmente competitivos." },
-    { number: "03", title: "Como achar um fornecedor de confiança no 1688", description: "Aprenda critérios práticos para analisar fornecedores e reduzir riscos na importação." },
-    { number: "04", title: "Comparando preços e encontrando oportunidades no Mercado Livre", description: "Compare preço de compra x preço de venda real, identificando produtos com boa margem." },
-    { number: "05", title: "Bônus – Pipi Ads + 1688", description: "Aula bônus mostrando como usar Pipi Ads junto com 1688 para validar produtos e demanda." },
-    { number: "06", title: "Encerramento e próximos passos", description: "Orientações finais para você continuar evoluindo como um verdadeiro caçador de produtos." }
-  ];
-
-  const testimonials = [
-    { name: "Carlos Mendes", role: "Vendedor Mercado Livre • SP", text: "Consegui encontrar melhores produtos e evitar várias furadas. O curso é direto ao ponto e muito prático." },
-    { name: "Patricia Silva", role: "Lojista Shopee • RJ", text: "Ganhei muito mais confiança na escolha de produtos para importar. Vale cada centavo do investimento." },
-    { name: "Felipe Costa", role: "Empreendedor Digital • MG", text: "O método de comparação de preços me abriu os olhos para oportunidades que eu nunca tinha visto antes." }
-  ];
-
-  return (
-    <div className="min-h-screen bg-cacador-bg-main overflow-x-hidden">
+  const targetAudience = ["Para quem vende em marketplaces e sente que a margem está cada vez menor", "Para quem quer parar de depender apenas de distribuidores nacionais", "Para quem tem vontade de importar da China, mas não sabe por onde começar", "Para quem não quer perder dinheiro escolhendo produtos errados", "Para quem quer ter um processo claro para analisar oportunidades e produtos"];
+  const learningTopics = [{
+    icon: Target,
+    text: "Como entender, na prática, o impacto da importação na sua vida e no seu negócio"
+  }, {
+    icon: Search,
+    text: "Quais são os sites 'secretos' que os próprios chineses usam para comprar barato"
+  }, {
+    icon: Shield,
+    text: "Como encontrar e validar fornecedores de confiança no 1688"
+  }, {
+    icon: TrendingUp,
+    text: "Como comparar preços entre China e Mercado Livre para achar oportunidades de lucro"
+  }, {
+    icon: Package,
+    text: "Como usar Pipi Ads + 1688 para validar demanda de produtos"
+  }, {
+    icon: CheckCircle2,
+    text: "Como transformar esse conhecimento em uma rotina simples de caça de produtos lucrativos"
+  }];
+  const courseModules = [{
+    number: "01",
+    title: "Bem-vindo – Quem sou eu e como a importação mudou minha vida",
+    description: "Entenda a visão geral do curso e a mentalidade correta para importar com segurança e lucro."
+  }, {
+    number: "02",
+    title: "Os sites 'secretos' que os próprios chineses usam para comprar barato",
+    description: "Descubra plataformas usadas pelos chineses para encontrar preços realmente competitivos."
+  }, {
+    number: "03",
+    title: "Como achar um fornecedor de confiança no 1688",
+    description: "Aprenda critérios práticos para analisar fornecedores e reduzir riscos na importação."
+  }, {
+    number: "04",
+    title: "Comparando preços e encontrando oportunidades no Mercado Livre",
+    description: "Compare preço de compra x preço de venda real, identificando produtos com boa margem."
+  }, {
+    number: "05",
+    title: "Bônus – Pipi Ads + 1688",
+    description: "Aula bônus mostrando como usar Pipi Ads junto com 1688 para validar produtos e demanda."
+  }, {
+    number: "06",
+    title: "Encerramento e próximos passos",
+    description: "Orientações finais para você continuar evoluindo como um verdadeiro caçador de produtos."
+  }];
+  const testimonials = [{
+    name: "Carlos Mendes",
+    role: "Vendedor Mercado Livre • SP",
+    text: "Consegui encontrar melhores produtos e evitar várias furadas. O curso é direto ao ponto e muito prático."
+  }, {
+    name: "Patricia Silva",
+    role: "Lojista Shopee • RJ",
+    text: "Ganhei muito mais confiança na escolha de produtos para importar. Vale cada centavo do investimento."
+  }, {
+    name: "Felipe Costa",
+    role: "Empreendedor Digital • MG",
+    text: "O método de comparação de preços me abriu os olhos para oportunidades que eu nunca tinha visto antes."
+  }];
+  return <div className="min-h-screen bg-cacador-bg-main overflow-x-hidden">
       <header className="fixed top-0 left-0 right-0 z-50 bg-cacador-bg-alt/95 backdrop-blur-sm border-b border-cacador-pink-light/20">
         <div className="container mx-auto px-4 py-4 flex justify-center" />
       </header>
@@ -90,11 +115,7 @@ const CacadorProdutos = () => {
                   </div>
                 </div>
 
-                <Button 
-                  onClick={scrollToCTA}
-                  size="lg"
-                  className="w-full md:w-auto bg-cacador-yellow hover:bg-cacador-yellow/90 text-black font-bold text-base md:text-lg px-8 py-6 md:py-7 rounded-lg shadow-lg hover:shadow-cacador-pink/20 transition-all duration-300 hover:scale-105"
-                >
+                <Button onClick={scrollToCTA} size="lg" className="w-full md:w-auto bg-cacador-yellow hover:bg-cacador-yellow/90 text-black font-bold text-base md:text-lg px-8 py-6 md:py-7 rounded-lg shadow-lg hover:shadow-cacador-pink/20 transition-all duration-300 hover:scale-105">
                   Quero ter acesso agora
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -107,7 +128,7 @@ const CacadorProdutos = () => {
                       <div>
                         <p className="text-cacador-text-secondary text-sm mb-2">Oferta especial por tempo limitado</p>
                         <div className="flex items-baseline gap-2">
-                          <span className="text-3xl md:text-5xl font-bold text-white">R$ 97</span>
+                          <span className="text-3xl md:text-5xl font-bold text-white">R$ 27,90                </span>
                           <span className="text-lg md:text-xl text-cacador-text-secondary line-through">R$ 297</span>
                         </div>
                         <p className="text-cacador-pink text-sm mt-2 font-semibold">67% de desconto</p>
@@ -132,11 +153,7 @@ const CacadorProdutos = () => {
                         </div>
                       </div>
 
-                      <Button 
-                        onClick={scrollToCTA}
-                        size="lg"
-                        className="w-full bg-cacador-yellow hover:bg-cacador-yellow/90 text-black font-bold text-base md:text-lg py-6 md:py-7 rounded-lg shadow-lg hover:shadow-cacador-pink/20 transition-all duration-300"
-                      >
+                      <Button onClick={scrollToCTA} size="lg" className="w-full bg-cacador-yellow hover:bg-cacador-yellow/90 text-black font-bold text-base md:text-lg py-6 md:py-7 rounded-lg shadow-lg hover:shadow-cacador-pink/20 transition-all duration-300">
                         Garantir minha vaga
                       </Button>
 
@@ -161,12 +178,10 @@ const CacadorProdutos = () => {
               <p className="text-lg text-cacador-text-secondary">Se você se encaixa em algum desses perfis, este curso foi feito para você</p>
             </div>
             <div className="space-y-4">
-              {targetAudience.map((item, index) => (
-                <div key={index} className="flex items-start gap-4 p-6 bg-cacador-dark-card rounded-xl border border-cacador-pink-light/20 hover:border-cacador-pink-light/40 transition-all">
+              {targetAudience.map((item, index) => <div key={index} className="flex items-start gap-4 p-6 bg-cacador-dark-card rounded-xl border border-cacador-pink-light/20 hover:border-cacador-pink-light/40 transition-all">
                   <CheckCircle2 className="w-6 h-6 text-cacador-pink flex-shrink-0 mt-1" />
                   <p className="text-lg text-cacador-text-primary font-medium">{item}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -184,18 +199,10 @@ const CacadorProdutos = () => {
                     O que você encontra dentro do Caçador de Produtos
                   </h2>
                   <div className="space-y-4">
-                    {[
-                      "Passo a passo para pesquisar produtos na China com foco em lucro",
-                      "Aulas mostrando onde encontrar produtos que os próprios chineses compram barato",
-                      "Método para avaliar fornecedores no 1688 com mais segurança",
-                      "Comparação prática entre preço na China e preço nos marketplaces brasileiros",
-                      "Estratégias para montar uma lista de produtos priorizados para testar"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-3">
+                    {["Passo a passo para pesquisar produtos na China com foco em lucro", "Aulas mostrando onde encontrar produtos que os próprios chineses compram barato", "Método para avaliar fornecedores no 1688 com mais segurança", "Comparação prática entre preço na China e preço nos marketplaces brasileiros", "Estratégias para montar uma lista de produtos priorizados para testar"].map((item, index) => <div key={index} className="flex items-start gap-3">
                         <ArrowRight className="w-5 h-5 text-white flex-shrink-0 mt-1" />
                         <p className="text-white text-lg leading-relaxed">{item}</p>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </CardContent>
               </Card>
@@ -210,17 +217,10 @@ const CacadorProdutos = () => {
                     Depois de aplicar o que você aprende no Caçador de Produtos, você passa a ter muito mais clareza sobre o que vale a pena testar, reduz o risco de errar na escolha dos produtos e começa a enxergar oportunidades que antes passavam despercebidas.
                   </p>
                   <div className="space-y-4">
-                    {[
-                      "Mais segurança na hora de decidir onde investir seu dinheiro",
-                      "Menos chances de trazer produtos sem margem ou sem demanda",
-                      "Mais velocidade para encontrar novas oportunidades de produtos",
-                      "Base sólida para dar os próximos passos na importação com consciência"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-3">
+                    {["Mais segurança na hora de decidir onde investir seu dinheiro", "Menos chances de trazer produtos sem margem ou sem demanda", "Mais velocidade para encontrar novas oportunidades de produtos", "Base sólida para dar os próximos passos na importação com consciência"].map((item, index) => <div key={index} className="flex items-start gap-3">
                         <ArrowRight className="w-5 h-5 text-cacador-pink-light flex-shrink-0 mt-1" />
                         <p className="text-white text-lg leading-relaxed">{item}</p>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </CardContent>
               </Card>
@@ -243,18 +243,16 @@ const CacadorProdutos = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-12">O que você vai aprender por dentro do curso</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {learningTopics.map((topic, index) => {
-                const Icon = topic.icon;
-                return (
-                  <Card key={index} className="bg-cacador-dark-card border-cacador-pink-light/20 hover:border-cacador-pink-light/40 transition-all">
+              const Icon = topic.icon;
+              return <Card key={index} className="bg-cacador-dark-card border-cacador-pink-light/20 hover:border-cacador-pink-light/40 transition-all">
                     <CardContent className="p-6 space-y-4">
                       <div className="w-12 h-12 rounded-xl bg-cacador-pink flex items-center justify-center">
                         <Icon className="w-6 h-6 text-white" />
                       </div>
                       <p className="text-cacador-text-secondary leading-relaxed">{topic.text}</p>
                     </CardContent>
-                  </Card>
-                );
-              })}
+                  </Card>;
+            })}
             </div>
           </div>
         </div>
@@ -269,8 +267,7 @@ const CacadorProdutos = () => {
               <p className="text-lg text-cacador-text-secondary">Conteúdo estruturado e prático para você aplicar imediatamente</p>
             </div>
             <div className="space-y-4">
-              {courseModules.map((module, index) => (
-                <Card key={index} className="bg-cacador-dark-card border-cacador-pink-light/20 hover:border-cacador-pink-light/40 transition-all overflow-hidden">
+              {courseModules.map((module, index) => <Card key={index} className="bg-cacador-dark-card border-cacador-pink-light/20 hover:border-cacador-pink-light/40 transition-all overflow-hidden">
                   <CardContent className="p-0">
                     <div className="flex items-start gap-6 p-6">
                       <div className="flex-shrink-0">
@@ -287,8 +284,7 @@ const CacadorProdutos = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -339,8 +335,7 @@ const CacadorProdutos = () => {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-12">O que dizem os alunos do Caçador de Produtos</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="bg-cacador-dark-card border-cacador-pink-light/20 hover:border-cacador-pink-light/40 transition-all">
+              {testimonials.map((testimonial, index) => <Card key={index} className="bg-cacador-dark-card border-cacador-pink-light/20 hover:border-cacador-pink-light/40 transition-all">
                   <CardContent className="p-6 space-y-4">
                     <Star className="w-6 h-6 text-cacador-yellow" />
                     <p className="text-cacador-text-secondary leading-relaxed">{testimonial.text}</p>
@@ -349,8 +344,7 @@ const CacadorProdutos = () => {
                       <p className="text-cacador-text-secondary">{testimonial.role}</p>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -380,8 +374,7 @@ const CacadorProdutos = () => {
               Para quem é o <span className="text-cacador-pink">Caçador de Produtos</span>?
             </h2>
             <div className="flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-6">
-              {targetAudience.map((text, index) => (
-                <Card key={index} className="bg-cacador-dark-card border border-cacador-pink-light/30 hover:border-cacador-pink/50 transition-all duration-300">
+              {targetAudience.map((text, index) => <Card key={index} className="bg-cacador-dark-card border border-cacador-pink-light/30 hover:border-cacador-pink/50 transition-all duration-300">
                   <CardContent className="p-5 md:p-6">
                     <div className="flex items-start gap-3 md:gap-4">
                       <div className="bg-cacador-pink/20 p-2 rounded-lg flex-shrink-0">
@@ -390,8 +383,7 @@ const CacadorProdutos = () => {
                       <p className="text-cacador-text-secondary text-base md:text-lg leading-relaxed">{text}</p>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -407,8 +399,6 @@ const CacadorProdutos = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default CacadorProdutos;
