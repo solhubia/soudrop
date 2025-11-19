@@ -5,7 +5,7 @@ import renanFerreira from "@/assets/renan-ferreira.jpg";
 import soudropLogo from "@/assets/soudrop-logo-oficial.png";
 const SoudropStart = () => {
   const handleCTA = () => {
-    window.open('https://pay.kiwify.com.br/2vuuaJJ', '_blank');
+    window.open('https://pay.kiwify.com.br/RIqama1', '_blank');
   };
   const entregaveis = [{
     icon: <Zap className="w-8 h-8" />,
