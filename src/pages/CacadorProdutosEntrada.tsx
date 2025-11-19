@@ -6,7 +6,7 @@ import renanFerreira from "@/assets/renan-ferreira.jpg";
 
 const CacadorProdutosEntrada = () => {
   const handleCTA = () => {
-    window.open('https://pay.kiwify.com.br/7Fkvhm7', '_blank');
+    window.open('https://pay.kiwify.com.br/2vuuaJJ', '_blank');
   };
 
   const painPoints = [
