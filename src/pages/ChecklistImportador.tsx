@@ -120,62 +120,99 @@ const ChecklistImportador = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#FF6B35]/5 to-transparent py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
-            <div className="space-y-6">
-              <div className="inline-block bg-[#FF6B35]/10 text-[#FF6B35] px-4 py-2 rounded-full text-sm font-semibold">
+      <section className="bg-[#02111B] py-20 md:py-32 relative overflow-hidden">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#5D737E]/5 via-transparent to-transparent pointer-events-none" />
+        
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center max-w-7xl mx-auto">
+            
+            {/* Left side - Content */}
+            <div className="space-y-8">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-[#5D737E]/20 border border-[#5D737E]/30 text-[#FCFCFC] px-4 py-2 rounded-full text-sm font-medium">
+                <div className="w-2 h-2 bg-[#5D737E] rounded-full animate-pulse" />
                 Curso online gravado • Acesso pela internet
               </div>
-              <h1 className="text-3xl md:text-5xl font-bold text-[#111827] leading-tight">
+
+              {/* Headline */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#FCFCFC] leading-tight">
                 Caçador de Produtos: encontre produtos lucrativos na China mesmo começando do zero
               </h1>
-              <p className="text-lg text-[#6B7280] leading-relaxed">
+
+              {/* Subheadline */}
+              <p className="text-lg md:text-xl text-[#FCFCFC]/80 leading-relaxed">
                 Um curso 100% online, direto ao ponto, que mostra como pesquisar, comparar e escolher produtos com potencial real de lucro para vender em marketplaces como Mercado Livre, Shopee, Amazon e Magalu.
               </p>
-              
-              <div className="space-y-3">
+
+              {/* Benefits */}
+              <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-[#FF6B35] mt-1 flex-shrink-0" />
-                  <p className="text-[#111827]">Método focado em prática, não em teoria complicada</p>
+                  <div className="mt-1 flex-shrink-0">
+                    <Check className="w-5 h-5 text-[#5D737E]" />
+                  </div>
+                  <p className="text-[#FCFCFC]/90">Método focado em prática, não em teoria complicada</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-[#FF6B35] mt-1 flex-shrink-0" />
-                  <p className="text-[#111827]">Pensado para quem vende em marketplaces e quer aumentar margem</p>
+                  <div className="mt-1 flex-shrink-0">
+                    <Check className="w-5 h-5 text-[#5D737E]" />
+                  </div>
+                  <p className="text-[#FCFCFC]/90">Pensado para quem vende em marketplaces e quer aumentar a margem</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-[#FF6B35] mt-1 flex-shrink-0" />
-                  <p className="text-[#111827]">Conteúdo para reduzir erros na hora de escolher produtos para importar</p>
+                  <div className="mt-1 flex-shrink-0">
+                    <Check className="w-5 h-5 text-[#5D737E]" />
+                  </div>
+                  <p className="text-[#FCFCFC]/90">Conteúdo para reduzir erros na hora de escolher produtos para importar</p>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-xl border-2 border-[#FF6B35] shadow-lg inline-block">
-                <p className="text-[#6B7280] text-sm mb-1">Por apenas</p>
-                <p className="text-5xl font-bold text-[#FF6B35]">R$ 17,90</p>
+              {/* Price */}
+              <div className="pt-4">
+                <p className="text-[#FCFCFC]/70 text-sm mb-2">Investimento</p>
+                <p className="text-4xl md:text-5xl font-bold text-[#FCFCFC]">R$ 27,90</p>
               </div>
 
-              <Button 
-                onClick={scrollToCTA}
-                size="lg"
-                className="w-full md:w-auto bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white text-lg px-12 py-6 font-semibold shadow-lg hover:shadow-xl transition-all"
-              >
-                Quero acessar o Caçador de Produtos
-              </Button>
-
-              <p className="text-sm text-[#6B7280]">
-                Curso online, acesso pela internet, conteúdo prático e direto ao ponto.
-              </p>
+              {/* CTA Button */}
+              <div className="space-y-4 pt-2">
+                <Button
+                  onClick={scrollToCTA}
+                  size="lg"
+                  className="w-full md:w-auto bg-[#5D737E] hover:bg-[#5D737E]/90 text-[#FCFCFC] text-lg px-10 py-6 font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                >
+                  Quero acessar o Caçador de Produtos
+                </Button>
+                
+                <p className="text-sm text-[#FCFCFC]/60">
+                  Curso online, acesso pela internet, conteúdo prático e direto ao ponto.
+                </p>
+              </div>
             </div>
 
-            <div className="flex justify-center">
-              <div className="bg-white p-8 rounded-2xl shadow-2xl border border-[#E5E7EB] w-full max-w-md">
-                <div className="aspect-[3/4] bg-gradient-to-br from-[#FF6B35]/20 to-[#FF6B35]/5 rounded-xl flex items-center justify-center">
-                  <Package className="w-32 h-32 text-[#FF6B35]" />
+            {/* Right side - Image placeholder */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-lg">
+                {/* Image container with subtle border */}
+                <div className="relative aspect-[4/5] bg-gradient-to-br from-[#3F4045]/30 to-[#30292F]/30 rounded-2xl border border-[#5D737E]/20 overflow-hidden shadow-2xl">
+                  {/* Placeholder content */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center space-y-4 p-8">
+                      <Package className="w-24 h-24 text-[#5D737E]/40 mx-auto" />
+                      <p className="text-[#FCFCFC]/40 text-sm">
+                        Espaço para imagem do especialista, mockup ou foto de importação
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Subtle overlay effect */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#02111B]/40 via-transparent to-transparent" />
                 </div>
-                <p className="text-center mt-6 text-[#111827] font-bold text-xl">Caçador de Produtos</p>
-                <p className="text-center text-[#6B7280] text-sm mt-2">Curso online completo</p>
+
+                {/* Decorative element */}
+                <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#5D737E]/10 rounded-full blur-3xl -z-10" />
               </div>
             </div>
+
           </div>
         </div>
       </section>
