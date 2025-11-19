@@ -442,7 +442,7 @@ const CacadorProdutos = () => {
                     </div>
                   </div>
 
-                  <Button size="lg" className="w-full bg-cacador-yellow hover:bg-cacador-yellow/90 text-black font-bold text-base md:text-lg py-6 md:py-7 rounded-lg shadow-lg hover:shadow-cacador-pink/20 transition-all duration-300 hover:scale-105" onClick={() => window.open('https://pay.kiwify.com.br/EaRh3G0', '_blank')}>
+                  <Button size="lg" className="w-full bg-cacador-yellow hover:bg-cacador-yellow/90 text-black font-bold text-base md:text-lg py-6 md:py-7 rounded-lg shadow-lg hover:shadow-cacador-pink/20 transition-all duration-300 hover:scale-105" onClick={() => window.open('https://pay.kiwify.com.br/20tge9P', '_blank')}>
                     Quero começar agora
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
