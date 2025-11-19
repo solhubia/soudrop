@@ -420,7 +420,7 @@ const CacadorProdutos = () => {
               <CardContent className="p-6 md:p-8">
                 <div className="space-y-5 md:space-y-6">
                   <div className="text-center py-4">
-                    <span className="text-5xl md:text-6xl font-bold text-white">R$ 37,90</span>
+                    <span className="text-5xl md:text-6xl font-bold text-white">R$ 27,90</span>
                   </div>
 
                   <div className="space-y-3">
