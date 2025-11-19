@@ -16,6 +16,7 @@ import Obrigado from "./pages/Obrigado";
 import ObrigadoSoudrop from "./pages/ObrigadoSoudrop";
 import ObrigadoCacadorChina from "./pages/ObrigadoCacadorChina";
 import ChecklistImportador from "./pages/ChecklistImportador.tsx";
+import CacadorProdutosEntrada from "./pages/CacadorProdutosEntrada";
 import { useEffect } from "react";
 import { trackViewContent } from "./lib/fbq";
 
@@ -107,6 +108,7 @@ const App = () => {
             <Route path="/cacador-produtos" element={<CacadorProdutos />} />
             <Route path="/cacador-produtos-china" element={<CacadorProdutosChina />} />
             <Route path="/checklist-importador" element={<ChecklistImportador />} />
+            <Route path="/cacador-produtos-entrada" element={<CacadorProdutosEntrada />} />
             <Route path="/fontes-secretas" element={<FontesSecretas />} />
             <Route path="/fontes-secretas-detalhes" element={<FontesSecretasDetalhes />} />
             <Route path="/live-importacao" element={<LiveImportacao />} />
