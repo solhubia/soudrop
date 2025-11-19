@@ -32,7 +32,7 @@ const ChecklistImportador = () => {
                 Checklist do Importador Lucrativo: organize seus passos antes de trazer produtos da China
               </h1>
               <p className="text-lg text-[#6B7280]">
-                Um guia simples e direto para você não esquecer nenhum passo importante na hora de importar e evitar erros que custam caro.
+                Um guia simples e direto para você não esquecer nenhum passo importante na hora de importar e evitar erros que custam caro no seu e-commerce ou operação de marketplace.
               </p>
               
               <div className="space-y-3">
@@ -46,12 +46,12 @@ const ChecklistImportador = () => {
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-[#FF6B35] mt-1 flex-shrink-0" />
-                  <p className="text-[#111827]">Saiba o que analisar antes de escolher um produto</p>
+                  <p className="text-[#111827]">Saiba o que analisar antes de escolher um produto e um fornecedor</p>
                 </div>
               </div>
 
               <div className="bg-white p-6 rounded-lg border-2 border-[#FF6B35] inline-block">
-                <p className="text-[#6B7280] text-sm mb-2">Investimento</p>
+                <p className="text-[#6B7280] text-sm mb-2">Por apenas</p>
                 <p className="text-4xl font-bold text-[#FF6B35]">R$ 17,90</p>
               </div>
 
@@ -87,7 +87,7 @@ const ChecklistImportador = () => {
             Por que este checklist é importante para você
           </h2>
           <p className="text-lg text-[#6B7280] text-center max-w-3xl mx-auto mb-12">
-            Muitos vendedores perdem tempo e dinheiro porque tentam importar sem uma ordem clara dos passos. O resultado é retrabalho, custos extras e até produtos parados na alfândega.
+            Você vende, fatura, mas tentou importar e sentiu que estava no escuro? Muitos vendedores perdem tempo e dinheiro porque tentam importar sem clareza dos passos. O resultado é retrabalho, custos extras e até produtos parados na alfândega.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -173,7 +173,7 @@ const ChecklistImportador = () => {
               {
                 icon: <Calculator className="w-8 h-8 text-[#FF6B35]" />,
                 title: "Checklist de custos e margens",
-                description: "Itens que você não pode esquecer na hora de calcular"
+                description: "O que não pode faltar na conta: todos os custos para calcular sua margem real"
               },
               {
                 icon: <ShieldCheck className="w-8 h-8 text-[#FF6B35]" />,
@@ -251,13 +251,13 @@ const ChecklistImportador = () => {
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-[#111827]">Nome do Especialista</h3>
                   <p className="text-[#6B7280] leading-relaxed">
-                    Com mais de X anos de experiência em importação direta da China, ajudei centenas de vendedores de marketplaces a estruturarem suas operações com mais segurança e previsibilidade.
+                    Com anos de experiência em importação direta da China, trabalhei com centenas de vendedores de marketplaces como Mercado Livre, Shopee, Amazon e Magalu, ajudando a estruturar operações com mais segurança e previsibilidade.
                   </p>
                   <p className="text-[#6B7280] leading-relaxed">
-                    Minha missão é simplificar o caminho para outros empreendedores, mostrando que é possível importar sem mistério quando você tem clareza dos passos e sabe o que precisa ser feito em cada etapa.
+                    Minha missão é simplificar o caminho para outros empreendedores, mostrando que é possível importar sem mistério quando você tem clareza dos passos e sabe exatamente o que precisa ser feito em cada etapa.
                   </p>
                   <p className="text-[#6B7280] leading-relaxed">
-                    Este checklist reúne tudo o que aprendi na prática, condensado em um material objetivo que você pode usar como guia sempre que precisar.
+                    Este checklist reúne tudo o que aprendi na prática, condensado em um material objetivo e direto ao ponto que você pode usar como guia sempre que precisar organizar uma nova importação.
                   </p>
                 </div>
               </div>
@@ -366,10 +366,10 @@ const ChecklistImportador = () => {
 
               <AccordionItem value="item-6" className="bg-white border border-[#E5E7EB] rounded-lg px-6">
                 <AccordionTrigger className="text-[#111827] font-semibold hover:text-[#FF6B35]">
-                  Preciso de conhecimento avançado em importação?
+                  Preciso já vender em marketplace para aproveitar?
                 </AccordionTrigger>
                 <AccordionContent className="text-[#6B7280]">
-                  Não. O material foi criado justamente para simplificar o processo e mostrar o que fazer em cada etapa, mesmo que você nunca tenha importado antes.
+                  Não é obrigatório, mas o checklist é especialmente útil para quem já vende (ou pretende vender) em marketplaces como Mercado Livre, Shopee, Amazon, Magalu, ou tem e-commerce próprio e quer aumentar margem importando.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -390,7 +390,7 @@ const ChecklistImportador = () => {
               </p>
 
               <div className="bg-white p-6 rounded-lg inline-block mb-8">
-                <p className="text-[#6B7280] text-sm mb-2">Investimento único</p>
+                <p className="text-[#6B7280] text-sm mb-2">Por apenas</p>
                 <p className="text-5xl font-bold text-[#FF6B35]">R$ 17,90</p>
               </div>
 
