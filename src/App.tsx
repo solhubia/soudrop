@@ -15,7 +15,7 @@ import LiveImportacao from "./pages/LiveImportacao";
 import Obrigado from "./pages/Obrigado";
 import ObrigadoSoudrop from "./pages/ObrigadoSoudrop";
 import ObrigadoCacadorChina from "./pages/ObrigadoCacadorChina";
-import ChecklistImportador from "./pages/ChecklistImportador";
+import ChecklistImportador from "./pages/ChecklistImportador.tsx";
 import { useEffect } from "react";
 import { trackViewContent } from "./lib/fbq";
 
