@@ -220,14 +220,11 @@ const CacadorProdutosEntrada = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-full max-w-lg">
                 <div className="relative aspect-[4/5] bg-gradient-to-br from-[#111827]/80 to-[#0B1120]/80 rounded-2xl border border-[#38BDF8]/20 overflow-hidden shadow-2xl">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center space-y-4 p-8">
-                      <Package className="w-24 h-24 text-[#38BDF8]/40 mx-auto" />
-                      <p className="text-[#9CA3AF] text-sm">
-                        Mockup do curso (notebook + celular)
-                      </p>
-                    </div>
-                  </div>
+                  <img 
+                    src={renanFerreira} 
+                    alt="Renan Ferreira - Especialista em Importação" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#38BDF8]/10 rounded-full blur-3xl -z-10" />
               </div>
