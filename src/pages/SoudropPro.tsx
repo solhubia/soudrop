@@ -3,70 +3,51 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import dashboardPreview from "@/assets/dashboard-preview.png";
-
 const SoudropPro = () => {
   const handleCTA = () => {
     window.open("https://pay.kiwify.com.br/2vuuaJJ", "_blank");
   };
-
-  const deliverables = [
-    {
-      icon: Rocket,
-      title: "Lançador Automático de Produtos",
-      description: "Ferramenta que automatiza o que antes era manual. Ideal para quem já tem mais de 3 operações rodando. Ajuda a lançar, organizar e distribuir produtos com muito mais velocidade."
-    },
-    {
-      icon: BarChart3,
-      title: "Plataforma Completa SouDrop",
-      description: "Dashboards avançadas, relatórios de performance e visão clara de faturamento, pedidos, integrações e operação. Tudo aquilo que era básico no plano de 499, agora turbinado para escala."
-    },
-    {
-      icon: FileText,
-      title: "Gerador de Títulos e Descrições",
-      description: "Gera títulos otimizados para marketplace e cria descrições pensadas para conversão. Ajuda a publicar mais rápido com mais qualidade."
-    },
-    {
-      icon: TrendingUp,
-      title: "Educação Avançada",
-      description: "Conteúdo para quem já está jogando o jogo. Foco em escala, margem, mix de produtos, operação e processo. Não é 'curso para iniciante', é estruturação de operação."
-    },
-    {
-      icon: Link2,
-      title: "6 Integrações Liberadas",
-      description: "Mais integrações do que o plano de entrada. Conexão com múltiplos marketplaces e canais. Base para escalar vendas em vários pontos ao mesmo tempo."
-    },
-    {
-      icon: Shield,
-      title: "120 dias de Garantia Operacional",
-      description: "Tempo suficiente para testar, operar e sentir a diferença. Dá segurança para quem está em fase de profissionalização."
-    }
-  ];
-
-  const benefits = [
-    "Pare de depender de planilha improvisada e anotações soltas",
-    "Tenha uma visão clara dos produtos que dão lucro e dos que drenam sua margem",
-    "Publique anúncios com mais velocidade e qualidade",
-    "Tire seu negócio do modo 'amador' e leve para o modo 'empresa de verdade'",
-    "Use tecnologia e automação a seu favor, sem precisar ser programador"
-  ];
-
-  const bonuses = [
-    { icon: Target, title: "Playbook de Escala em Marketplaces" },
-    { icon: Sparkles, title: "Modelos prontos de títulos de alta performance" },
-    { icon: FileText, title: "Modelos de descrições voltadas para conversão" },
-    { icon: BarChart3, title: "Mini treinamento de leitura e interpretação dos relatórios" }
-  ];
-
-  const forWho = [
-    "Você já fez pelo menos 3 operações de importação",
-    "Já conhece um pouco do jogo e agora quer organizar e escalar",
-    "Está cansado de fazer tudo na mão e sentir que não domina os números",
-    "Quer tratar sua operação como empresa de verdade, não como 'rolezinho de vendas'",
-    "Quer ter ferramenta, dados e processo para dar o próximo passo"
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+  const deliverables = [{
+    icon: Rocket,
+    title: "Lançador Automático de Produtos",
+    description: "Ferramenta que automatiza o que antes era manual. Ideal para quem já tem mais de 3 operações rodando. Ajuda a lançar, organizar e distribuir produtos com muito mais velocidade."
+  }, {
+    icon: BarChart3,
+    title: "Plataforma Completa SouDrop",
+    description: "Dashboards avançadas, relatórios de performance e visão clara de faturamento, pedidos, integrações e operação. Tudo aquilo que era básico no plano de 499, agora turbinado para escala."
+  }, {
+    icon: FileText,
+    title: "Gerador de Títulos e Descrições",
+    description: "Gera títulos otimizados para marketplace e cria descrições pensadas para conversão. Ajuda a publicar mais rápido com mais qualidade."
+  }, {
+    icon: TrendingUp,
+    title: "Educação Avançada",
+    description: "Conteúdo para quem já está jogando o jogo. Foco em escala, margem, mix de produtos, operação e processo. Não é 'curso para iniciante', é estruturação de operação."
+  }, {
+    icon: Link2,
+    title: "6 Integrações Liberadas",
+    description: "Mais integrações do que o plano de entrada. Conexão com múltiplos marketplaces e canais. Base para escalar vendas em vários pontos ao mesmo tempo."
+  }, {
+    icon: Shield,
+    title: "120 dias de Garantia Operacional",
+    description: "Tempo suficiente para testar, operar e sentir a diferença. Dá segurança para quem está em fase de profissionalização."
+  }];
+  const benefits = ["Pare de depender de planilha improvisada e anotações soltas", "Tenha uma visão clara dos produtos que dão lucro e dos que drenam sua margem", "Publique anúncios com mais velocidade e qualidade", "Tire seu negócio do modo 'amador' e leve para o modo 'empresa de verdade'", "Use tecnologia e automação a seu favor, sem precisar ser programador"];
+  const bonuses = [{
+    icon: Target,
+    title: "Playbook de Escala em Marketplaces"
+  }, {
+    icon: Sparkles,
+    title: "Modelos prontos de títulos de alta performance"
+  }, {
+    icon: FileText,
+    title: "Modelos de descrições voltadas para conversão"
+  }, {
+    icon: BarChart3,
+    title: "Mini treinamento de leitura e interpretação dos relatórios"
+  }];
+  const forWho = ["Você já fez pelo menos 3 operações de importação", "Já conhece um pouco do jogo e agora quer organizar e escalar", "Está cansado de fazer tudo na mão e sentir que não domina os números", "Quer tratar sua operação como empresa de verdade, não como 'rolezinho de vendas'", "Quer ter ferramenta, dados e processo para dar o próximo passo"];
+  return <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-20 pb-32 px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-purple-50 to-blue-50 opacity-60" />
@@ -95,11 +76,7 @@ const SoudropPro = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  onClick={handleCTA}
-                  size="lg"
-                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white text-lg px-8 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-                >
+                <Button onClick={handleCTA} size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white text-lg px-8 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                   QUERO ESCALAR MINHA OPERAÇÃO
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -119,11 +96,7 @@ const SoudropPro = () => {
             
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-purple-400 rounded-3xl blur-2xl opacity-30 animate-pulse" />
-              <img
-                src={dashboardPreview}
-                alt="Dashboard SouDrop PRO"
-                className="relative rounded-3xl shadow-2xl border-8 border-white"
-              />
+              <img src={dashboardPreview} alt="Dashboard SouDrop PRO" className="relative rounded-3xl shadow-2xl border-8 border-white" />
             </div>
           </div>
         </div>
@@ -142,14 +115,12 @@ const SoudropPro = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {forWho.map((item, index) => (
-              <Card key={index} className="border-2 border-gray-200 hover:border-green-500 transition-all duration-300 hover:shadow-lg">
+            {forWho.map((item, index) => <Card key={index} className="border-2 border-gray-200 hover:border-green-500 transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-6 flex items-start gap-4">
                   <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
                   <p className="text-white text-lg">{item}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -167,21 +138,19 @@ const SoudropPro = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {deliverables.map((item, index) => (
-              <Card key={index} className="border-2 border-gray-200 hover:border-purple-500 transition-all duration-300 hover:shadow-xl group">
+            {deliverables.map((item, index) => <Card key={index} className="border-2 border-gray-200 hover:border-purple-500 transition-all duration-300 hover:shadow-xl group">
                 <CardHeader>
                   <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-purple-100 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <item.icon className="h-8 w-8 text-purple-600" />
                   </div>
-                  <CardTitle className="text-xl text-gray-900">{item.title}</CardTitle>
+                  <CardTitle className="text-xl text-purple-600">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-white text-base leading-relaxed">
                     {item.description}
                   </CardDescription>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -208,19 +177,19 @@ const SoudropPro = () => {
               <CardContent className="p-8 space-y-4">
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">3 integrações</span>
+                  <span className="text-zinc-50">3 integrações</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">Dashboard limitada</span>
+                  <span className="text-zinc-50">Dashboard limitada</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">Estrutura para começar</span>
+                  <span className="text-zinc-50">Estrutura para começar</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">Educação para iniciantes</span>
+                  <span className="text-gray-50">Educação para iniciantes</span>
                 </div>
               </CardContent>
             </Card>
@@ -239,23 +208,23 @@ const SoudropPro = () => {
               <CardContent className="p-8 space-y-4">
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="text-gray-700 font-semibold">6 integrações</span>
+                  <span className="font-semibold text-zinc-50">6 integrações</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="text-gray-700 font-semibold">Lançador automático</span>
+                  <span className="font-semibold text-zinc-50">Lançador automático</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="text-gray-700 font-semibold">Dashboards + relatórios completos</span>
+                  <span className="font-semibold text-zinc-50">Dashboards + relatórios completos</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="text-gray-700 font-semibold">Gerador de títulos e descrições</span>
+                  <span className="font-semibold text-zinc-50">Gerador de títulos e descrições</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="text-gray-700 font-semibold">Educação avançada focada em escala</span>
+                  <span className="font-semibold text-zinc-50">Educação avançada focada em escala</span>
                 </div>
               </CardContent>
             </Card>
@@ -269,11 +238,7 @@ const SoudropPro = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl blur-2xl opacity-20" />
-              <img
-                src={renanPhoto}
-                alt="Renan Ferreira"
-                className="relative rounded-3xl shadow-2xl border-8 border-white w-full"
-              />
+              <img src={renanPhoto} alt="Renan Ferreira" className="relative rounded-3xl shadow-2xl border-8 border-white w-full" />
             </div>
             
             <div className="space-y-6">
@@ -310,16 +275,14 @@ const SoudropPro = () => {
           </div>
           
           <div className="space-y-6 max-w-4xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="border-2 border-gray-200 hover:border-blue-500 transition-all duration-300">
+            {benefits.map((benefit, index) => <Card key={index} className="border-2 border-gray-200 hover:border-blue-500 transition-all duration-300">
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Zap className="h-6 w-6 text-blue-600" />
                   </div>
-                  <p className="text-gray-700 text-lg font-medium">{benefit}</p>
+                  <p className="text-lg font-medium text-zinc-50">{benefit}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -337,16 +300,14 @@ const SoudropPro = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {bonuses.map((bonus, index) => (
-              <Card key={index} className="border-2 border-purple-200 hover:border-purple-500 transition-all duration-300 hover:shadow-xl text-center">
+            {bonuses.map((bonus, index) => <Card key={index} className="border-2 border-purple-200 hover:border-purple-500 transition-all duration-300 hover:shadow-xl text-center">
                 <CardContent className="p-6 space-y-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto">
                     <bonus.icon className="h-8 w-8 text-purple-600" />
                   </div>
-                  <p className="text-gray-900 font-semibold">{bonus.title}</p>
+                  <p className="font-semibold text-zinc-50">{bonus.title}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -414,11 +375,7 @@ const SoudropPro = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button
-                onClick={handleCTA}
-                size="lg"
-                className="bg-white text-green-600 hover:bg-gray-100 text-xl px-12 py-8 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 font-bold"
-              >
+              <Button onClick={handleCTA} size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-xl px-12 py-8 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 font-bold">
                 QUERO MIGRAR PARA O SOUDROP PRO
                 <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
@@ -442,8 +399,6 @@ const SoudropPro = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default SoudropPro;
