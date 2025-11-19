@@ -1,22 +1,118 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, ShieldCheck, FileText, Users, Calculator } from "lucide-react";
+import { Check, Target, TrendingUp, Shield, Package, Search, Users } from "lucide-react";
 
 const ChecklistImportador = () => {
   const scrollToCTA = () => {
-    window.open('https://pay.hotmart.com/seu-link-aqui', '_blank');
+    window.open('https://pay.kiwify.com.br/20tge9P', '_blank');
   };
+
+  const targetAudience = [
+    "Para quem vende em marketplaces e sente que a margem está cada vez menor",
+    "Para quem quer parar de depender apenas de distribuidores nacionais",
+    "Para quem tem vontade de importar da China, mas não sabe por onde começar",
+    "Para quem não quer perder dinheiro escolhendo produtos errados",
+    "Para quem quer ter um processo claro para analisar oportunidades e produtos"
+  ];
+
+  const learningTopics = [
+    {
+      icon: Target,
+      title: "Impacto da importação no seu negócio",
+      description: "Como entender, na prática, o impacto da importação na sua vida e no seu negócio"
+    },
+    {
+      icon: Search,
+      title: "Sites 'secretos' da China",
+      description: "Quais são os sites 'secretos' que os próprios chineses usam para comprar barato"
+    },
+    {
+      icon: Shield,
+      title: "Fornecedores de confiança",
+      description: "Como encontrar e validar fornecedores de confiança no 1688"
+    },
+    {
+      icon: TrendingUp,
+      title: "Comparação de preços",
+      description: "Como comparar preços entre China e Mercado Livre para achar oportunidades de lucro"
+    },
+    {
+      icon: Package,
+      title: "Validação de demanda",
+      description: "Como usar Pipi Ads + 1688 para validar demanda de produtos"
+    },
+    {
+      icon: Check,
+      title: "Rotina de caça de produtos",
+      description: "Como transformar esse conhecimento em uma rotina simples de caça de produtos lucrativos"
+    }
+  ];
+
+  const courseModules = [
+    {
+      number: "01",
+      title: "Bem-vindo – Quem sou eu e como a importação mudou minha vida",
+      description: "Entenda a visão geral do curso e a mentalidade correta para importar com segurança e lucro."
+    },
+    {
+      number: "02",
+      title: "Os sites 'secretos' que os próprios chineses usam para comprar barato",
+      description: "Descubra plataformas usadas pelos chineses para encontrar preços realmente competitivos."
+    },
+    {
+      number: "03",
+      title: "Como achar um fornecedor de confiança no 1688",
+      description: "Aprenda critérios práticos para analisar fornecedores e reduzir riscos na importação."
+    },
+    {
+      number: "04",
+      title: "Comparando preços e encontrando oportunidades no Mercado Livre",
+      description: "Compare preço de compra x preço de venda real, identificando produtos com boa margem."
+    },
+    {
+      number: "05",
+      title: "Bônus – Pipi Ads + 1688",
+      description: "Aula bônus mostrando como usar Pipi Ads junto com 1688 para validar produtos e demanda."
+    },
+    {
+      number: "06",
+      title: "Encerramento e próximos passos",
+      description: "Orientações finais para você continuar evoluindo como um verdadeiro caçador de produtos."
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Carlos Mendes",
+      role: "Vendedor Mercado Livre • SP",
+      text: "Consegui encontrar melhores produtos e evitar várias furadas. O curso é direto ao ponto e muito prático."
+    },
+    {
+      name: "Patricia Silva",
+      role: "Lojista Shopee • RJ",
+      text: "Ganhei muito mais confiança na escolha de produtos para importar. Vale cada centavo do investimento."
+    },
+    {
+      name: "Felipe Costa",
+      role: "Empreendedor Digital • MG",
+      text: "O método de comparação de preços me abriu os olhos para oportunidades que eu nunca tinha visto antes."
+    },
+    {
+      name: "Gustavo Almeida",
+      role: "Vendedor Amazon • RS",
+      text: "Aprendi a validar produtos antes de importar. Isso evitou muitos prejuízos e aumentou minha margem."
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-[#F9FAFB]">
       {/* Header */}
-      <header className="bg-white border-b border-[#E5E7EB] sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-xl font-bold text-[#111827]">Sua Marca</div>
+      <header className="bg-white border-b border-[#E5E7EB] sticky top-0 z-50 shadow-sm">
+        <div className="container mx-auto px-4 py-4 flex justify-center">
           <Button 
             onClick={scrollToCTA}
-            className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white"
+            className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white font-semibold px-8"
           >
             Quero acessar o Caçador de Produtos
           </Button>
@@ -24,98 +120,110 @@ const ChecklistImportador = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#FF6B35]/5 to-transparent py-12 md:py-20">
+      <section className="bg-gradient-to-r from-[#FF6B35]/5 to-transparent py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
             <div className="space-y-6">
-              <div className="inline-block bg-[#FF6B35]/10 text-[#FF6B35] px-4 py-2 rounded-full text-sm font-semibold mb-2">
+              <div className="inline-block bg-[#FF6B35]/10 text-[#FF6B35] px-4 py-2 rounded-full text-sm font-semibold">
                 Curso online gravado • Acesso pela internet
               </div>
               <h1 className="text-3xl md:text-5xl font-bold text-[#111827] leading-tight">
                 Caçador de Produtos: encontre produtos lucrativos na China mesmo começando do zero
               </h1>
-              <p className="text-lg text-[#6B7280]">
+              <p className="text-lg text-[#6B7280] leading-relaxed">
                 Um curso 100% online, direto ao ponto, que mostra como pesquisar, comparar e escolher produtos com potencial real de lucro para vender em marketplaces como Mercado Livre, Shopee, Amazon e Magalu.
               </p>
               
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-[#FF6B35] mt-1 flex-shrink-0" />
-                  <p className="text-[#111827]">Método prático e direto, sem teoria complicada</p>
+                  <p className="text-[#111827]">Método focado em prática, não em teoria complicada</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-[#FF6B35] mt-1 flex-shrink-0" />
-                  <p className="text-[#111827]">Focado em quem vende em marketplaces e e-commerce</p>
+                  <p className="text-[#111827]">Pensado para quem vende em marketplaces e quer aumentar margem</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-[#FF6B35] mt-1 flex-shrink-0" />
-                  <p className="text-[#111827]">Reduza erros na hora de importar e escolher produtos</p>
+                  <p className="text-[#111827]">Conteúdo para reduzir erros na hora de escolher produtos para importar</p>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-lg border-2 border-[#FF6B35] inline-block">
-                <p className="text-[#6B7280] text-sm mb-2">Investimento</p>
-                <p className="text-4xl font-bold text-[#FF6B35]">R$ 17,90</p>
+              <div className="bg-white p-6 rounded-xl border-2 border-[#FF6B35] shadow-lg inline-block">
+                <p className="text-[#6B7280] text-sm mb-1">Por apenas</p>
+                <p className="text-5xl font-bold text-[#FF6B35]">R$ 17,90</p>
               </div>
 
               <Button 
                 onClick={scrollToCTA}
                 size="lg"
-                className="w-full md:w-auto bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white text-lg px-12 py-6"
+                className="w-full md:w-auto bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white text-lg px-12 py-6 font-semibold shadow-lg hover:shadow-xl transition-all"
               >
                 Quero acessar o Caçador de Produtos
               </Button>
 
               <p className="text-sm text-[#6B7280]">
-                Produto digital, acesso imediato pela internet
+                Curso online, acesso pela internet, conteúdo prático e direto ao ponto.
               </p>
             </div>
 
             <div className="flex justify-center">
-              <div className="bg-white p-8 rounded-2xl shadow-xl border border-[#E5E7EB] w-full max-w-md">
-                <div className="aspect-[3/4] bg-gradient-to-br from-[#FF6B35]/20 to-[#FF6B35]/5 rounded-lg flex items-center justify-center">
-                  <FileText className="w-24 h-24 text-[#FF6B35]" />
+              <div className="bg-white p-8 rounded-2xl shadow-2xl border border-[#E5E7EB] w-full max-w-md">
+                <div className="aspect-[3/4] bg-gradient-to-br from-[#FF6B35]/20 to-[#FF6B35]/5 rounded-xl flex items-center justify-center">
+                  <Package className="w-32 h-32 text-[#FF6B35]" />
                 </div>
-                <p className="text-center mt-4 text-[#111827] font-semibold">Caçador de Produtos</p>
+                <p className="text-center mt-6 text-[#111827] font-bold text-xl">Caçador de Produtos</p>
+                <p className="text-center text-[#6B7280] text-sm mt-2">Curso online completo</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Por que este checklist existe */}
+      {/* Por que o curso é importante */}
       <section className="py-16 md:py-24 bg-[#F9FAFB]">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#111827] text-center mb-6">
-            Por que o Caçador de Produtos pode mudar seu jogo
-          </h2>
-          <p className="text-lg text-[#6B7280] text-center max-w-3xl mx-auto mb-12">
-            Você vende, fatura, mas sente que está escolhendo produtos no escuro? Muitos vendedores perdem tempo e dinheiro porque tentam importar sem método. Este curso mostra o caminho para pesquisar e escolher produtos com potencial real de lucro.
-          </p>
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-6">
+              Por que o Caçador de Produtos pode mudar seu jogo
+            </h2>
+            <p className="text-lg text-[#6B7280] leading-relaxed">
+              Você vende, fatura, mas sente que está escolhendo produtos no escuro? Muitos vendedores perdem tempo e dinheiro porque tentam importar sem método. Este curso mostra o caminho para pesquisar e escolher produtos com potencial real de lucro.
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white border-[#E5E7EB]">
-              <CardContent className="p-6">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="bg-white border-[#E5E7EB] hover:shadow-lg transition-shadow">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-[#FF6B35]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Search className="w-8 h-8 text-[#FF6B35]" />
+                </div>
                 <h3 className="text-xl font-bold text-[#111827] mb-3">Método claro para pesquisar</h3>
-                <p className="text-[#6B7280]">
+                <p className="text-[#6B7280] leading-relaxed">
                   Aprenda a usar plataformas como 1688, Alibaba e AliExpress de forma estratégica para encontrar produtos com potencial de lucro real.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white border-[#E5E7EB]">
-              <CardContent className="p-6">
+            <Card className="bg-white border-[#E5E7EB] hover:shadow-lg transition-shadow">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-[#FF6B35]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-[#FF6B35]" />
+                </div>
                 <h3 className="text-xl font-bold text-[#111827] mb-3">Validação antes de investir</h3>
-                <p className="text-[#6B7280]">
+                <p className="text-[#6B7280] leading-relaxed">
                   Saiba como analisar demanda, concorrência e margem antes de colocar seu dinheiro em um produto que pode não vender.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white border-[#E5E7EB]">
-              <CardContent className="p-6">
+            <Card className="bg-white border-[#E5E7EB] hover:shadow-lg transition-shadow">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-[#FF6B35]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-[#FF6B35]" />
+                </div>
                 <h3 className="text-xl font-bold text-[#111827] mb-3">Redução de erros e retrabalho</h3>
-                <p className="text-[#6B7280]">
+                <p className="text-[#6B7280] leading-relaxed">
                   Evite escolher produtos errados, fornecedores ruins ou calcular mal os custos seguindo um processo testado na prática.
                 </p>
               </CardContent>
@@ -131,14 +239,9 @@ const ChecklistImportador = () => {
             Para quem é o Caçador de Produtos
           </h2>
 
-          <div className="max-w-3xl mx-auto space-y-4">
-            {[
-              "Para quem vende em marketplaces e quer aumentar margem importando produtos lucrativos",
-              "Para quem já tentou importar mas não sabe como escolher produtos com potencial real",
-              "Para quem quer ter um método claro antes de colocar dinheiro em produto",
-              "Para quem sente que pode ganhar mais mas tem medo de errar na escolha de produtos"
-            ].map((item, index) => (
-              <Card key={index} className="bg-[#F9FAFB] border-[#E5E7EB]">
+          <div className="max-w-4xl mx-auto space-y-4">
+            {targetAudience.map((item, index) => (
+              <Card key={index} className="bg-[#F9FAFB] border-[#E5E7EB] hover:border-[#FF6B35]/30 transition-all">
                 <CardContent className="p-6 flex items-start gap-4">
                   <Check className="w-6 h-6 text-[#FF6B35] flex-shrink-0 mt-1" />
                   <p className="text-[#111827] text-lg">{item}</p>
@@ -149,51 +252,53 @@ const ChecklistImportador = () => {
         </div>
       </section>
 
-      {/* O que você vai receber */}
+      {/* O que você vai aprender */}
       <section className="py-16 md:py-24 bg-[#F9FAFB]">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-[#111827] text-center mb-12">
-            O que você vai aprender no curso
+            O que você vai aprender por dentro do curso
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <FileText className="w-8 h-8 text-[#FF6B35]" />,
-                title: "Como pesquisar produtos lucrativos",
-                description: "Método prático para encontrar produtos com potencial real na China usando 1688, Alibaba e AliExpress"
-              },
-              {
-                icon: <Check className="w-8 h-8 text-[#FF6B35]" />,
-                title: "Validação de demanda e concorrência",
-                description: "Como analisar se um produto tem mercado antes de importar e avaliar a concorrência"
-              },
-              {
-                icon: <Users className="w-8 h-8 text-[#FF6B35]" />,
-                title: "Escolha de fornecedores confiáveis",
-                description: "O que olhar para não cair em golpes e fechar com fornecedores seguros"
-              },
-              {
-                icon: <Calculator className="w-8 h-8 text-[#FF6B35]" />,
-                title: "Cálculo de custos e margem real",
-                description: "Todos os custos da importação para você saber sua margem verdadeira antes de comprar"
-              },
-              {
-                icon: <ShieldCheck className="w-8 h-8 text-[#FF6B35]" />,
-                title: "Erros comuns e como evitá-los",
-                description: "O que não fazer na hora de escolher produtos para não perder tempo e dinheiro"
-              },
-              {
-                icon: <FileText className="w-8 h-8 text-[#FF6B35]" />,
-                title: "Processo completo de importação",
-                description: "Do pedido ao recebimento, todos os passos para importar com segurança"
-              }
-            ].map((item, index) => (
-              <Card key={index} className="bg-white border-[#E5E7EB] hover:shadow-lg transition-shadow">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {learningTopics.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <Card key={index} className="bg-white border-[#E5E7EB] hover:shadow-lg hover:border-[#FF6B35]/30 transition-all">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-[#FF6B35]/10 rounded-lg flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-[#FF6B35]" />
+                    </div>
+                    <h3 className="text-lg font-bold text-[#111827] mb-2">{item.title}</h3>
+                    <p className="text-[#6B7280] leading-relaxed">{item.description}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Módulos do curso */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#111827] text-center mb-6">
+            O que você recebe ao entrar no Caçador de Produtos
+          </h2>
+          <p className="text-lg text-[#6B7280] text-center max-w-3xl mx-auto mb-12">
+            Aulas online gravadas, organizadas em módulos práticos e diretos ao ponto
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {courseModules.map((module, index) => (
+              <Card key={index} className="bg-[#F9FAFB] border-[#E5E7EB] hover:shadow-lg hover:border-[#FF6B35]/30 transition-all">
                 <CardContent className="p-6">
-                  <div className="mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-bold text-[#111827] mb-2">{item.title}</h3>
-                  <p className="text-[#6B7280]">{item.description}</p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-[#FF6B35] text-white rounded-lg flex items-center justify-center font-bold text-lg">
+                      {module.number}
+                    </div>
+                    <h3 className="text-lg font-bold text-[#111827] flex-1">{module.title}</h3>
+                  </div>
+                  <p className="text-[#6B7280] leading-relaxed">{module.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -201,8 +306,8 @@ const ChecklistImportador = () => {
         </div>
       </section>
 
-      {/* Como funciona na prática */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* Como funciona o acesso */}
+      <section className="py-16 md:py-24 bg-[#F9FAFB]">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-[#111827] text-center mb-12">
             Como funciona o acesso ao curso
@@ -227,40 +332,40 @@ const ChecklistImportador = () => {
               }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[#FF6B35] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="w-20 h-20 bg-[#FF6B35] text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">
                   {item.step}
                 </div>
-                <h3 className="text-xl font-bold text-[#111827] mb-2">{item.title}</h3>
-                <p className="text-[#6B7280]">{item.description}</p>
+                <h3 className="text-xl font-bold text-[#111827] mb-3">{item.title}</h3>
+                <p className="text-[#6B7280] leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Quem criou */}
-      <section className="py-16 md:py-24 bg-[#F9FAFB]">
+      {/* Quem está por trás */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-[#111827] text-center mb-12">
-            Quem criou o Caçador de Produtos
+            Quem está por trás do Caçador de Produtos
           </h2>
 
-          <Card className="max-w-4xl mx-auto bg-white border-[#E5E7EB]">
-            <CardContent className="p-8">
-              <div className="grid md:grid-cols-[200px_1fr] gap-8 items-start">
-                <div className="w-full aspect-square bg-gradient-to-br from-[#FF6B35]/20 to-[#FF6B35]/5 rounded-lg flex items-center justify-center">
-                  <Users className="w-20 h-20 text-[#FF6B35]" />
+          <Card className="max-w-5xl mx-auto bg-[#F9FAFB] border-[#E5E7EB] shadow-lg">
+            <CardContent className="p-8 md:p-12">
+              <div className="grid md:grid-cols-[250px_1fr] gap-8 items-center">
+                <div className="w-full aspect-square bg-gradient-to-br from-[#FF6B35]/20 to-[#FF6B35]/5 rounded-xl flex items-center justify-center shadow-md">
+                  <Users className="w-24 h-24 text-[#FF6B35]" />
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-[#111827]">Nome do Especialista</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#111827]">Renan Ferreira</h3>
                   <p className="text-[#6B7280] leading-relaxed">
-                    Com anos de experiência em importação direta da China e pesquisa de produtos lucrativos, ajudei centenas de vendedores de marketplaces como Mercado Livre, Shopee, Amazon e Magalu a encontrarem produtos com potencial real de lucro.
+                    Com anos de experiência em importação direta da China e pesquisa de produtos lucrativos para marketplaces, ajudei centenas de vendedores de Mercado Livre, Shopee, Amazon e Magalu a encontrarem produtos com potencial real de lucro.
                   </p>
                   <p className="text-[#6B7280] leading-relaxed">
-                    Minha missão é mostrar que é possível escolher produtos de forma estratégica, sem chutes, usando um método claro que qualquer pessoa pode aplicar na sua operação.
+                    Minha missão é mostrar que é possível escolher produtos de forma estratégica, sem chutes, usando um método claro que qualquer pessoa pode aplicar na sua operação de e-commerce ou marketplace.
                   </p>
                   <p className="text-[#6B7280] leading-relaxed">
-                    Este curso reúne tudo o que aprendi na prática sobre como caçar produtos lucrativos, condensado em aulas diretas e objetivas que você pode aplicar imediatamente no seu negócio.
+                    Este curso reúne tudo o que aprendi na prática sobre como caçar produtos lucrativos na China, condensado em aulas diretas e objetivas que você pode aplicar imediatamente no seu negócio.
                   </p>
                 </div>
               </div>
@@ -269,39 +374,26 @@ const ChecklistImportador = () => {
         </div>
       </section>
 
-      {/* Depoimentos */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* Prova social */}
+      <section className="py-16 md:py-24 bg-[#F9FAFB]">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#111827] text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#111827] text-center mb-6">
             O que dizem os alunos e empreendedores
           </h2>
+          <p className="text-lg text-[#6B7280] text-center max-w-3xl mx-auto mb-12">
+            Depoimentos reais de quem aplicou o método e viu resultados práticos
+          </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Carlos Silva",
-                role: "Vendedor Mercado Livre",
-                text: "O curso me deu muito mais clareza sobre como pesquisar produtos. Agora sei exatamente o que analisar antes de colocar dinheiro."
-              },
-              {
-                name: "Mariana Costa",
-                role: "Lojista Shopee",
-                text: "Eu tentava importar no escuro. Com o método do Caçador de Produtos, finalmente consegui escolher produtos que realmente vendem."
-              },
-              {
-                name: "Rafael Oliveira",
-                role: "Vendedor Amazon",
-                text: "Curso direto e sem enrolação. Me ajudou a evitar produtos furados que poderiam ter custado caro."
-              },
-              {
-                name: "Juliana Martins",
-                role: "E-commerce próprio",
-                text: "Achei que sabia pesquisar produtos, mas o curso me mostrou vários pontos que eu estava ignorando. Valeu muito a pena."
-              }
-            ].map((item, index) => (
-              <Card key={index} className="bg-[#F9FAFB] border-[#E5E7EB]">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {testimonials.map((item, index) => (
+              <Card key={index} className="bg-white border-[#E5E7EB] hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <p className="text-[#6B7280] mb-4 italic">"{item.text}"</p>
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-[#FF6B35]">★</span>
+                    ))}
+                  </div>
+                  <p className="text-[#6B7280] mb-4 italic leading-relaxed">"{item.text}"</p>
                   <div className="border-t border-[#E5E7EB] pt-4">
                     <p className="font-bold text-[#111827]">{item.name}</p>
                     <p className="text-sm text-[#6B7280]">{item.role}</p>
@@ -381,26 +473,26 @@ const ChecklistImportador = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 md:py-24 bg-white">
+      <section id="cta-section" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto bg-[#F9FAFB] border-2 border-[#FF6B35]">
-            <CardContent className="p-8 md:p-12 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-6">
+          <Card className="max-w-5xl mx-auto bg-gradient-to-r from-[#FF6B35]/5 to-transparent border-2 border-[#FF6B35] shadow-2xl">
+            <CardContent className="p-8 md:p-16 text-center">
+              <h2 className="text-3xl md:text-5xl font-bold text-[#111827] mb-6">
                 Pronto para se tornar um Caçador de Produtos?
               </h2>
-              <p className="text-lg text-[#6B7280] mb-8 max-w-2xl mx-auto">
-                Este é o curso Caçador de Produtos, 100% online, com método claro para você encontrar produtos lucrativos na China. Acesso imediato após o pagamento, investimento baixo.
+              <p className="text-lg text-[#6B7280] mb-8 max-w-3xl mx-auto leading-relaxed">
+                Este é o curso Caçador de Produtos, 100% online, focado em ajudar donos de e-commerce e vendedores de marketplaces a escolher produtos com mais segurança. Método claro para você encontrar produtos lucrativos na China. Acesso imediato após o pagamento.
               </p>
 
-              <div className="bg-white p-6 rounded-lg inline-block mb-8">
-                <p className="text-[#6B7280] text-sm mb-2">Investimento</p>
-                <p className="text-5xl font-bold text-[#FF6B35]">R$ 17,90</p>
+              <div className="bg-white p-8 rounded-xl inline-block mb-8 border-2 border-[#FF6B35] shadow-lg">
+                <p className="text-[#6B7280] text-sm mb-2">Por apenas</p>
+                <p className="text-6xl font-bold text-[#FF6B35]">R$ 17,90</p>
               </div>
 
               <Button 
                 onClick={scrollToCTA}
                 size="lg"
-                className="w-full md:w-auto bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white text-xl px-16 py-8 mb-4"
+                className="w-full md:w-auto bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white text-xl px-20 py-8 mb-6 font-bold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
               >
                 Quero acessar o Caçador de Produtos
               </Button>
