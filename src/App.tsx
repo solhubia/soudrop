@@ -17,6 +17,7 @@ import ObrigadoSoudrop from "./pages/ObrigadoSoudrop";
 import ObrigadoCacadorChina from "./pages/ObrigadoCacadorChina";
 import ChecklistImportador from "./pages/ChecklistImportador.tsx";
 import CacadorProdutosEntrada from "./pages/CacadorProdutosEntrada";
+import SoudropStart from "./pages/SoudropStart";
 import { useEffect } from "react";
 import { trackViewContent } from "./lib/fbq";
 
@@ -115,6 +116,7 @@ const App = () => {
             <Route path="/obrigado" element={<Obrigado />} />
             <Route path="/obrigado-soudrop" element={<ObrigadoSoudrop />} />
             <Route path="/obrigado-cacador-china" element={<ObrigadoCacadorChina />} />
+            <Route path="/soudrop-start" element={<SoudropStart />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
