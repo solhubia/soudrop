@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, Target, TrendingUp, Shield, Package, Search, Users, ArrowRight, Play } from "lucide-react";
+import renanFerreira from "@/assets/renan-ferreira.jpg";
 const ChecklistImportador = () => {
   const scrollToCTA = () => {
     window.open('https://pay.kiwify.com.br/7Fkvhm7', '_blank');
@@ -169,14 +170,11 @@ const ChecklistImportador = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-full max-w-lg">
                 <div className="relative aspect-[4/5] bg-gradient-to-br from-[#3F4045]/40 to-[#30292F]/40 rounded-2xl border border-[#5D737E]/20 overflow-hidden shadow-2xl">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center space-y-4 p-8">
-                      <Package className="w-24 h-24 text-[#5D737E]/40 mx-auto" />
-                      <p className="text-[#FCFCFC]/40 text-sm">
-                        Foto do especialista ou mockup do curso
-                      </p>
-                    </div>
-                  </div>
+                  <img 
+                    src={renanFerreira} 
+                    alt="Renan Ferreira - Especialista em Importação" 
+                    className="w-full h-full object-cover"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#02111B]/40 via-transparent to-transparent" />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#5D737E]/10 rounded-full blur-3xl -z-10" />
