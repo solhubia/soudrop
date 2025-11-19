@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Check, Target, TrendingUp, Shield, Package, Search, Users, ArrowRight, Play } from "lucide-react";
 const ChecklistImportador = () => {
   const scrollToCTA = () => {
-    window.open('https://pay.kiwify.com.br/20tge9P', '_blank');
+    window.open('https://pay.kiwify.com.br/7Fkvhm7', '_blank');
   };
   const targetAudience = ["Donos de e-commerce que querem aumentar margem de lucro", "Vendedores de Mercado Livre, Shopee, Amazon e Magalu que sentem a margem apertar", "Empresários que querem parar de depender só de distribuidores nacionais", "Quem quer importar da China, mas ainda não tem segurança para escolher produtos"];
   const learningTopics = [{
