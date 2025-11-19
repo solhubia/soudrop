@@ -176,7 +176,7 @@ const SoudropPro = () => {
                   <CardTitle className="text-xl text-gray-900">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-gray-600 text-base leading-relaxed">
+                  <CardDescription className="text-white text-base leading-relaxed">
                     {item.description}
                   </CardDescription>
                 </CardContent>
