@@ -3,91 +3,68 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Zap, Shield, Users, BookOpen, Trophy, Gift, Clock, TrendingUp, Target, BarChart3, Package } from "lucide-react";
 import renanFerreira from "@/assets/renan-ferreira.jpg";
 import soudropLogo from "@/assets/soudrop-logo-oficial.png";
-
 const SoudropStart = () => {
   const handleCTA = () => {
     window.open('https://pay.kiwify.com.br/2vuuaJJ', '_blank');
   };
-
-  const entregaveis = [
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "3 Integrações Liberadas",
-      description: "Conecte suas principais vendas nos marketplaces"
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Home Personalizada",
-      description: "Dashboard customizado para sua operação"
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Dashboard Limitada",
-      description: "Ideal para iniciantes começarem com segurança"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "120 Dias de Garantia",
-      description: "Garantia operacional completa"
-    },
-    {
-      icon: <BookOpen className="w-8 h-8" />,
-      title: "Treinamento Prático",
-      description: "Direto ao ponto, sem enrolação"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Comunidade Exclusiva",
-      description: "Acesso à rede de importadores ativos"
-    }
-  ];
-
-  const beneficios = [
-    "Comece do jeito certo sem perder dinheiro",
-    "Evite erros que fazem iniciantes quebrarem",
-    "Aprenda a escolher produtos com dados reais",
-    "Evite produtos proibidos e de alto risco",
-    "Aplique processos validados por quem opera no dia a dia",
-    "Tenha suporte + tecnologia para acelerar resultados"
-  ];
-
-  const bonus = [
-    {
-      icon: <CheckCircle2 className="w-6 h-6" />,
-      title: "Checklist Inteligente de Importação",
-      description: "Passo a passo completo para não errar"
-    },
-    {
-      icon: <Package className="w-6 h-6" />,
-      title: "Lista de Fornecedores Reais",
-      description: "Contatos validados de fábricas confiáveis"
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Framework de Validação",
-      description: "Metodologia para escolher produtos vencedores"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Mini Treinamento de Margem",
-      description: "Como calcular preço e lucro corretamente"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-[hsl(var(--cacador-bg-main))] text-[hsl(var(--cacador-text-primary))]">
+  const entregaveis = [{
+    icon: <Zap className="w-8 h-8" />,
+    title: "3 Integrações Liberadas",
+    description: "Conecte suas principais vendas nos marketplaces"
+  }, {
+    icon: <Target className="w-8 h-8" />,
+    title: "Home Personalizada",
+    description: "Dashboard customizado para sua operação"
+  }, {
+    icon: <BarChart3 className="w-8 h-8" />,
+    title: "Dashboard Limitada",
+    description: "Ideal para iniciantes começarem com segurança"
+  }, {
+    icon: <Shield className="w-8 h-8" />,
+    title: "120 Dias de Garantia",
+    description: "Garantia operacional completa"
+  }, {
+    icon: <BookOpen className="w-8 h-8" />,
+    title: "Treinamento Prático",
+    description: "Direto ao ponto, sem enrolação"
+  }, {
+    icon: <Users className="w-8 h-8" />,
+    title: "Comunidade Exclusiva",
+    description: "Acesso à rede de importadores ativos"
+  }];
+  const beneficios = ["Comece do jeito certo sem perder dinheiro", "Evite erros que fazem iniciantes quebrarem", "Aprenda a escolher produtos com dados reais", "Evite produtos proibidos e de alto risco", "Aplique processos validados por quem opera no dia a dia", "Tenha suporte + tecnologia para acelerar resultados"];
+  const bonus = [{
+    icon: <CheckCircle2 className="w-6 h-6" />,
+    title: "Checklist Inteligente de Importação",
+    description: "Passo a passo completo para não errar"
+  }, {
+    icon: <Package className="w-6 h-6" />,
+    title: "Lista de Fornecedores Reais",
+    description: "Contatos validados de fábricas confiáveis"
+  }, {
+    icon: <Target className="w-6 h-6" />,
+    title: "Framework de Validação",
+    description: "Metodologia para escolher produtos vencedores"
+  }, {
+    icon: <TrendingUp className="w-6 h-6" />,
+    title: "Mini Treinamento de Margem",
+    description: "Como calcular preço e lucro corretamente"
+  }];
+  return <div className="min-h-screen bg-[hsl(var(--cacador-bg-main))] text-[hsl(var(--cacador-text-primary))]">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 min-h-screen flex items-center">
         <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(275_38%_2%)_0%,hsl(335_100%_8%)_50%,hsl(275_38%_2%)_100%)]" />
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-[hsl(var(--cacador-pink))] rounded-full blur-[120px] opacity-20 animate-pulse" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--cacador-yellow))] rounded-full blur-[150px] opacity-15 animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(var(--cacador-yellow))] rounded-full blur-[150px] opacity-15 animate-pulse" style={{
+          animationDelay: '1s'
+        }} />
         </div>
         
         <div className="container mx-auto relative z-10 max-w-6xl">
           <div className="text-center space-y-8">
             <div className="inline-block mb-4">
-              <img src={soudropLogo} alt="SouDrop" className="h-16 mx-auto" />
+              
             </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight">
@@ -107,11 +84,7 @@ const SoudropStart = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-              <Button 
-                onClick={handleCTA}
-                size="xl"
-                className="bg-gradient-to-r from-[hsl(var(--cacador-yellow))] to-[hsl(48_100%_45%)] text-black font-bold text-lg px-12 py-8 rounded-2xl hover:scale-105 transition-transform duration-300 shadow-[0_4px_30px_hsl(48_100%_50%/0.4)]"
-              >
+              <Button onClick={handleCTA} size="xl" className="bg-gradient-to-r from-[hsl(var(--cacador-yellow))] to-[hsl(48_100%_45%)] text-black font-bold text-lg px-12 py-8 rounded-2xl hover:scale-105 transition-transform duration-300 shadow-[0_4px_30px_hsl(48_100%_50%/0.4)]">
                 QUERO ENTRAR AGORA
               </Button>
               <div className="text-center sm:text-left">
@@ -145,8 +118,7 @@ const SoudropStart = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {entregaveis.map((item, index) => (
-              <Card key={index} className="bg-[hsl(var(--cacador-dark-card))] border-[hsl(var(--cacador-pink))/20] hover:border-[hsl(var(--cacador-pink))/60] transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_hsl(335_100%_50%/0.2)]">
+            {entregaveis.map((item, index) => <Card key={index} className="bg-[hsl(var(--cacador-dark-card))] border-[hsl(var(--cacador-pink))/20] hover:border-[hsl(var(--cacador-pink))/60] transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_hsl(335_100%_50%/0.2)]">
                 <CardContent className="p-6 space-y-4">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[hsl(var(--cacador-pink))/20] to-[hsl(var(--cacador-pink))/5] flex items-center justify-center text-[hsl(var(--cacador-pink))]">
                     {item.icon}
@@ -154,8 +126,7 @@ const SoudropStart = () => {
                   <h3 className="text-xl font-bold text-white">{item.title}</h3>
                   <p className="text-[hsl(var(--cacador-text-secondary))]">{item.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -170,11 +141,7 @@ const SoudropStart = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-[hsl(var(--cacador-pink))] to-[hsl(var(--cacador-yellow))] rounded-3xl blur-2xl opacity-20" />
-              <img 
-                src={renanFerreira} 
-                alt="Renan Ferreira" 
-                className="relative rounded-3xl shadow-2xl w-full"
-              />
+              <img src={renanFerreira} alt="Renan Ferreira" className="relative rounded-3xl shadow-2xl w-full" />
             </div>
             
             <div className="space-y-6">
@@ -224,15 +191,10 @@ const SoudropStart = () => {
           </div>
 
           <div className="space-y-4">
-            {beneficios.map((beneficio, index) => (
-              <div 
-                key={index}
-                className="flex items-start gap-4 bg-[hsl(var(--cacador-dark-card))] border border-[hsl(var(--cacador-pink))/20] rounded-2xl p-6 hover:border-[hsl(var(--cacador-pink))/60] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_10px_40px_hsl(335_100%_50%/0.2)]"
-              >
+            {beneficios.map((beneficio, index) => <div key={index} className="flex items-start gap-4 bg-[hsl(var(--cacador-dark-card))] border border-[hsl(var(--cacador-pink))/20] rounded-2xl p-6 hover:border-[hsl(var(--cacador-pink))/60] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_10px_40px_hsl(335_100%_50%/0.2)]">
                 <CheckCircle2 className="w-7 h-7 text-[hsl(var(--cacador-pink))] flex-shrink-0 mt-1" />
                 <p className="text-lg font-medium text-white">{beneficio}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -260,8 +222,7 @@ const SoudropStart = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {bonus.map((item, index) => (
-              <Card key={index} className="bg-gradient-to-br from-[hsl(var(--cacador-dark-card))] to-[hsl(var(--cacador-bg-section))] border-[hsl(var(--cacador-yellow))/30] hover:border-[hsl(var(--cacador-yellow))/80] transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_hsl(48_100%_50%/0.2)]">
+            {bonus.map((item, index) => <Card key={index} className="bg-gradient-to-br from-[hsl(var(--cacador-dark-card))] to-[hsl(var(--cacador-bg-section))] border-[hsl(var(--cacador-yellow))/30] hover:border-[hsl(var(--cacador-yellow))/80] transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_hsl(48_100%_50%/0.2)]">
                 <CardContent className="p-6 space-y-4">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[hsl(var(--cacador-yellow))] to-[hsl(48_100%_45%)] flex items-center justify-center text-black">
                     {item.icon}
@@ -269,8 +230,7 @@ const SoudropStart = () => {
                   <h3 className="text-xl font-bold text-white">{item.title}</h3>
                   <p className="text-[hsl(var(--cacador-text-secondary))]">{item.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -343,7 +303,9 @@ const SoudropStart = () => {
         <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(275_38%_2%)_0%,hsl(335_100%_8%)_50%,hsl(275_38%_2%)_100%)]" />
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-[hsl(var(--cacador-pink))] rounded-full blur-[150px] opacity-20 animate-pulse" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[hsl(var(--cacador-yellow))] rounded-full blur-[150px] opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[hsl(var(--cacador-yellow))] rounded-full blur-[150px] opacity-20 animate-pulse" style={{
+          animationDelay: '1s'
+        }} />
         </div>
 
         <div className="container mx-auto max-w-4xl relative z-10 text-center space-y-12">
@@ -379,11 +341,7 @@ const SoudropStart = () => {
           </div>
 
           <div className="space-y-6">
-            <Button 
-              onClick={handleCTA}
-              size="xl"
-              className="bg-gradient-to-r from-[hsl(var(--cacador-yellow))] to-[hsl(48_100%_45%)] text-black font-bold text-xl px-16 py-10 rounded-2xl hover:scale-110 transition-all duration-300 shadow-[0_8px_60px_hsl(48_100%_50%/0.6)] hover:shadow-[0_8px_80px_hsl(48_100%_50%/0.8)] animate-pulse"
-            >
+            <Button onClick={handleCTA} size="xl" className="bg-gradient-to-r from-[hsl(var(--cacador-yellow))] to-[hsl(48_100%_45%)] text-black font-bold text-xl px-16 py-10 rounded-2xl hover:scale-110 transition-all duration-300 shadow-[0_8px_60px_hsl(48_100%_50%/0.6)] hover:shadow-[0_8px_80px_hsl(48_100%_50%/0.8)] animate-pulse">
               GARANTIR POR R$ 49,90/MÊS
             </Button>
 
@@ -417,14 +375,12 @@ const SoudropStart = () => {
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-[hsl(var(--cacador-pink))/20] bg-[hsl(var(--cacador-bg-section))]">
         <div className="container mx-auto text-center">
-          <img src={soudropLogo} alt="SouDrop" className="h-10 mx-auto mb-4 opacity-50" />
+          
           <p className="text-sm text-[hsl(var(--cacador-text-secondary))]">
             © 2024 SouDrop. Todos os direitos reservados.
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default SoudropStart;
