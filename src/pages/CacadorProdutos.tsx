@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, Target, TrendingUp, Shield, Package, Search, Star, PlayCircle, ArrowRight } from "lucide-react";
 import mentorPhoto from "@/assets/renan-ferreira.jpg";
-
 const CacadorProdutos = () => {
   const scrollToCTA = () => {
     const ctaSection = document.getElementById("cta-section");
@@ -13,95 +12,65 @@ const CacadorProdutos = () => {
       });
     }
   };
-
-  const targetAudience = [
-    "Para quem vende em marketplaces e sente que a margem está cada vez menor",
-    "Para quem quer parar de depender apenas de distribuidores nacionais",
-    "Para quem tem vontade de importar da China, mas não sabe por onde começar",
-    "Para quem não quer perder dinheiro escolhendo produtos errados",
-    "Para quem quer ter um processo claro para analisar oportunidades e produtos"
-  ];
-
-  const learningTopics = [
-    {
-      icon: Target,
-      text: "Como entender, na prática, o impacto da importação na sua vida e no seu negócio"
-    },
-    {
-      icon: Search,
-      text: "Quais são os sites 'secretos' que os próprios chineses usam para comprar barato"
-    },
-    {
-      icon: Shield,
-      text: "Como encontrar e validar fornecedores de confiança no 1688"
-    },
-    {
-      icon: TrendingUp,
-      text: "Como comparar preços entre China e Mercado Livre para achar oportunidades de lucro"
-    },
-    {
-      icon: Package,
-      text: "Como usar Pipi Ads + 1688 para validar demanda de produtos"
-    },
-    {
-      icon: CheckCircle2,
-      text: "Como transformar esse conhecimento em uma rotina simples de caça de produtos lucrativos"
-    }
-  ];
-
-  const courseModules = [
-    {
-      number: "01",
-      title: "Bem-vindo – Quem sou eu e como a importação mudou minha vida",
-      description: "Entenda a visão geral do curso e a mentalidade correta para importar com segurança e lucro."
-    },
-    {
-      number: "02",
-      title: "Os sites 'secretos' que os próprios chineses usam para comprar barato",
-      description: "Descubra plataformas usadas pelos chineses para encontrar preços realmente competitivos."
-    },
-    {
-      number: "03",
-      title: "Como achar um fornecedor de confiança no 1688",
-      description: "Aprenda critérios práticos para analisar fornecedores e reduzir riscos na importação."
-    },
-    {
-      number: "04",
-      title: "Comparando preços e encontrando oportunidades no Mercado Livre",
-      description: "Compare preço de compra x preço de venda real, identificando produtos com boa margem."
-    },
-    {
-      number: "05",
-      title: "Bônus – Pipi Ads + 1688",
-      description: "Aula bônus mostrando como usar Pipi Ads junto com 1688 para validar produtos e demanda."
-    },
-    {
-      number: "06",
-      title: "Encerramento e próximos passos",
-      description: "Orientações finais para você continuar evoluindo como um verdadeiro caçador de produtos."
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Carlos Mendes",
-      role: "Vendedor Mercado Livre • SP",
-      text: "Consegui encontrar melhores produtos e evitar várias furadas. O curso é direto ao ponto e muito prático."
-    },
-    {
-      name: "Patricia Silva",
-      role: "Lojista Shopee • RJ",
-      text: "Ganhei muito mais confiança na escolha de produtos para importar. Vale cada centavo do investimento."
-    },
-    {
-      name: "Felipe Costa",
-      role: "Empreendedor Digital • MG",
-      text: "O método de comparação de preços me abriu os olhos para oportunidades que eu nunca tinha visto antes."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-cacador-bg-main overflow-x-hidden">
+  const targetAudience = ["Para quem vende em marketplaces e sente que a margem está cada vez menor", "Para quem quer parar de depender apenas de distribuidores nacionais", "Para quem tem vontade de importar da China, mas não sabe por onde começar", "Para quem não quer perder dinheiro escolhendo produtos errados", "Para quem quer ter um processo claro para analisar oportunidades e produtos"];
+  const learningTopics = [{
+    icon: Target,
+    text: "Como entender, na prática, o impacto da importação na sua vida e no seu negócio"
+  }, {
+    icon: Search,
+    text: "Quais são os sites 'secretos' que os próprios chineses usam para comprar barato"
+  }, {
+    icon: Shield,
+    text: "Como encontrar e validar fornecedores de confiança no 1688"
+  }, {
+    icon: TrendingUp,
+    text: "Como comparar preços entre China e Mercado Livre para achar oportunidades de lucro"
+  }, {
+    icon: Package,
+    text: "Como usar Pipi Ads + 1688 para validar demanda de produtos"
+  }, {
+    icon: CheckCircle2,
+    text: "Como transformar esse conhecimento em uma rotina simples de caça de produtos lucrativos"
+  }];
+  const courseModules = [{
+    number: "01",
+    title: "Bem-vindo – Quem sou eu e como a importação mudou minha vida",
+    description: "Entenda a visão geral do curso e a mentalidade correta para importar com segurança e lucro."
+  }, {
+    number: "02",
+    title: "Os sites 'secretos' que os próprios chineses usam para comprar barato",
+    description: "Descubra plataformas usadas pelos chineses para encontrar preços realmente competitivos."
+  }, {
+    number: "03",
+    title: "Como achar um fornecedor de confiança no 1688",
+    description: "Aprenda critérios práticos para analisar fornecedores e reduzir riscos na importação."
+  }, {
+    number: "04",
+    title: "Comparando preços e encontrando oportunidades no Mercado Livre",
+    description: "Compare preço de compra x preço de venda real, identificando produtos com boa margem."
+  }, {
+    number: "05",
+    title: "Bônus – Pipi Ads + 1688",
+    description: "Aula bônus mostrando como usar Pipi Ads junto com 1688 para validar produtos e demanda."
+  }, {
+    number: "06",
+    title: "Encerramento e próximos passos",
+    description: "Orientações finais para você continuar evoluindo como um verdadeiro caçador de produtos."
+  }];
+  const testimonials = [{
+    name: "Carlos Mendes",
+    role: "Vendedor Mercado Livre • SP",
+    text: "Consegui encontrar melhores produtos e evitar várias furadas. O curso é direto ao ponto e muito prático."
+  }, {
+    name: "Patricia Silva",
+    role: "Lojista Shopee • RJ",
+    text: "Ganhei muito mais confiança na escolha de produtos para importar. Vale cada centavo do investimento."
+  }, {
+    name: "Felipe Costa",
+    role: "Empreendedor Digital • MG",
+    text: "O método de comparação de preços me abriu os olhos para oportunidades que eu nunca tinha visto antes."
+  }];
+  return <div className="min-h-screen bg-cacador-bg-main overflow-x-hidden">
       <header className="fixed top-0 left-0 right-0 z-50 bg-cacador-bg-alt/95 backdrop-blur-sm border-b border-cacador-pink-light/20">
         <div className="container mx-auto px-4 py-4 flex justify-center" />
       </header>
@@ -161,7 +130,7 @@ const CacadorProdutos = () => {
                   <CardContent className="p-6 md:p-8">
                     <div className="space-y-5 md:space-y-6">
                       <div className="text-center py-4">
-                        <span className="text-5xl md:text-6xl font-bold text-white">R$ 37,90</span>
+                        <span className="text-5xl md:text-6xl font-bold text-white">R$ 27,90</span>
                       </div>
 
                       <div className="space-y-3">
@@ -213,16 +182,14 @@ const CacadorProdutos = () => {
             </div>
 
             <div className="grid gap-4 md:gap-6">
-              {targetAudience.map((item, index) => (
-                <Card key={index} className="bg-cacador-dark-card border border-cacador-pink-light/30 hover:border-cacador-pink-light/50 transition-all duration-300">
+              {targetAudience.map((item, index) => <Card key={index} className="bg-cacador-dark-card border border-cacador-pink-light/30 hover:border-cacador-pink-light/50 transition-all duration-300">
                   <CardContent className="p-5 md:p-6">
                     <div className="flex items-start gap-3 md:gap-4">
                       <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-cacador-pink flex-shrink-0 mt-1" />
                       <p className="text-cacador-text-secondary text-base md:text-lg">{item}</p>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -299,8 +266,7 @@ const CacadorProdutos = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {learningTopics.map((topic, index) => (
-                <Card key={index} className="bg-cacador-dark-card border border-cacador-pink-light/30 hover:border-cacador-pink transition-all duration-300 hover:scale-105">
+              {learningTopics.map((topic, index) => <Card key={index} className="bg-cacador-dark-card border border-cacador-pink-light/30 hover:border-cacador-pink transition-all duration-300 hover:scale-105">
                   <CardContent className="p-5 md:p-6">
                     <div className="flex flex-col items-center text-center space-y-4">
                       <div className="p-3 md:p-4 bg-cacador-pink/20 rounded-full">
@@ -309,8 +275,7 @@ const CacadorProdutos = () => {
                       <p className="text-white text-base md:text-lg leading-relaxed">{topic.text}</p>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -330,8 +295,7 @@ const CacadorProdutos = () => {
             </div>
 
             <div className="space-y-4 md:space-y-6">
-              {courseModules.map((module, index) => (
-                <Card key={index} className="bg-cacador-dark-card border border-cacador-pink-light/30 hover:border-cacador-pink transition-all duration-300">
+              {courseModules.map((module, index) => <Card key={index} className="bg-cacador-dark-card border border-cacador-pink-light/30 hover:border-cacador-pink transition-all duration-300">
                   <CardContent className="p-5 md:p-6 lg:p-8">
                     <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
                       <div className="flex-shrink-0">
@@ -345,8 +309,7 @@ const CacadorProdutos = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -368,11 +331,7 @@ const CacadorProdutos = () => {
                   <div className="flex justify-center">
                     <div className="relative">
                       <div className="absolute inset-0 bg-cacador-pink/30 rounded-full blur-2xl" />
-                      <img 
-                        src={mentorPhoto}
-                        alt="Renan Ferreira"
-                        className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-cacador-pink"
-                      />
+                      <img src={mentorPhoto} alt="Renan Ferreira" className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-cacador-pink" />
                     </div>
                   </div>
                   
@@ -421,13 +380,10 @@ const CacadorProdutos = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="bg-cacador-dark-card border border-cacador-pink-light/30 hover:border-cacador-pink transition-all duration-300">
+              {testimonials.map((testimonial, index) => <Card key={index} className="bg-cacador-dark-card border border-cacador-pink-light/30 hover:border-cacador-pink transition-all duration-300">
                   <CardContent className="p-5 md:p-6 space-y-4">
                     <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-cacador-yellow text-cacador-yellow" />
-                      ))}
+                      {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-cacador-yellow text-cacador-yellow" />)}
                     </div>
                     
                     <p className="text-cacador-text-secondary text-base md:text-lg leading-relaxed italic">
@@ -439,8 +395,7 @@ const CacadorProdutos = () => {
                       <p className="text-cacador-text-secondary text-sm md:text-base">{testimonial.role}</p>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -487,11 +442,7 @@ const CacadorProdutos = () => {
                     </div>
                   </div>
 
-                  <Button 
-                    size="lg"
-                    className="w-full bg-cacador-yellow hover:bg-cacador-yellow/90 text-black font-bold text-base md:text-lg py-6 md:py-7 rounded-lg shadow-lg hover:shadow-cacador-pink/20 transition-all duration-300 hover:scale-105"
-                    onClick={() => window.open('https://pay.kiwify.com.br/EaRh3G0', '_blank')}
-                  >
+                  <Button size="lg" className="w-full bg-cacador-yellow hover:bg-cacador-yellow/90 text-black font-bold text-base md:text-lg py-6 md:py-7 rounded-lg shadow-lg hover:shadow-cacador-pink/20 transition-all duration-300 hover:scale-105" onClick={() => window.open('https://pay.kiwify.com.br/EaRh3G0', '_blank')}>
                     Quero começar agora
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -533,8 +484,6 @@ const CacadorProdutos = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default CacadorProdutos;
