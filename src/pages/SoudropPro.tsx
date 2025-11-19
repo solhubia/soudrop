@@ -5,7 +5,7 @@ import renanPhoto from "@/assets/renan-ferreira.jpg";
 import dashboardPreview from "@/assets/dashboard-preview.png";
 const SoudropPro = () => {
   const handleCTA = () => {
-    window.open("https://pay.kiwify.com.br/2vuuaJJ", "_blank");
+    window.open("https://pay.kiwify.com.br/zrBAaMP", "_blank");
   };
   const deliverables = [{
     icon: Rocket,
