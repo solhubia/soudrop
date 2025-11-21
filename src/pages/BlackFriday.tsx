@@ -5,11 +5,18 @@ import { useEffect } from "react";
 const BlackFriday = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Load WebinarJam script
+    const script = document.createElement('script');
+    script.src = "https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=3&buttonText=Register";
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
-  const handleCTAClick = () => {
-    window.open("https://checkout.soudrop.com.br/", "_blank");
-  };
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
@@ -76,15 +83,30 @@ const BlackFriday = () => {
           </p>
 
           {/* CTA Button */}
-          <div className="pt-4">
-            <Button 
-              size="xl"
-              onClick={handleCTAClick}
-              className="bg-primary hover:bg-primary-glow text-black font-black text-xl px-12 py-8 rounded-xl shadow-glow hover:shadow-[0_0_40px_rgba(34,197,94,0.6)] transition-all duration-300 hover:scale-105"
+          <div className="pt-4 text-center">
+            <button 
+              type="button" 
+              className="wj-embed-button" 
+              data-webinarHash="8wgw0kty"
+              style={{
+                border: '2px solid rgba(0, 0, 0, 0.5)',
+                background: 'rgba(41, 182, 246, 0.95)',
+                color: 'rgb(255, 255, 255)',
+                fontSize: '24px',
+                padding: '18px 80px',
+                boxShadow: 'none',
+                borderRadius: '100px',
+                whiteSpace: 'normal',
+                fontWeight: '700',
+                lineHeight: '1.3',
+                cursor: 'pointer',
+                fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                wordBreak: 'break-word',
+                margin: 'auto'
+              }}
             >
               GARANTIR VAGA
-              <ArrowRight className="w-6 h-6 ml-2" />
-            </Button>
+            </button>
           </div>
         </div>
       </section>
@@ -229,14 +251,29 @@ const BlackFriday = () => {
             que vai pagar todas as suas próximas Blacks!
           </h2>
 
-          <Button 
-            size="xl"
-            onClick={handleCTAClick}
-            className="bg-primary hover:bg-primary-glow text-black font-black text-2xl px-16 py-10 rounded-2xl shadow-glow hover:shadow-[0_0_50px_rgba(34,197,94,0.7)] transition-all duration-300 hover:scale-105"
+          <button 
+            type="button" 
+            className="wj-embed-button" 
+            data-webinarHash="8wgw0kty"
+            style={{
+              border: '2px solid rgba(0, 0, 0, 0.5)',
+              background: 'rgba(41, 182, 246, 0.95)',
+              color: 'rgb(255, 255, 255)',
+              fontSize: '24px',
+              padding: '18px 80px',
+              boxShadow: 'none',
+              borderRadius: '100px',
+              whiteSpace: 'normal',
+              fontWeight: '700',
+              lineHeight: '1.3',
+              cursor: 'pointer',
+              fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+              wordBreak: 'break-word',
+              margin: 'auto'
+            }}
           >
             GARANTIR VAGA
-            <ArrowRight className="w-8 h-8 ml-3" />
-          </Button>
+          </button>
         </div>
       </section>
 
