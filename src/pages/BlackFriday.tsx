@@ -43,16 +43,16 @@ const BlackFriday = () => {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8">
-          {/* Tag Superior */}
-          <div className="inline-block">
-            <span className="text-sm md:text-base font-bold tracking-widest text-destructive uppercase">
-              MASTERCLASS DE ANIVERSÁRIO
-            </span>
-          </div>
-
           {/* Logo/Badge Black Friday */}
           <div className="relative inline-block">
             <div className="relative">
+              {/* Tag Superior */}
+              <div className="inline-block mb-4">
+                <span className="text-sm md:text-base font-bold tracking-widest text-destructive uppercase">
+                  Masterclass Sou Drop
+                </span>
+              </div>
+              
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter">
                 <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">
                   BLACK
@@ -126,7 +126,7 @@ const BlackFriday = () => {
               "Pesquisa de produtos em tempo real: do zero até a lista quente.",
               "Catálogo da SouDrop por dentro: o que vende e por que vende.",
               "Comparativos inteligentes: margem, volume, concorrência.",
-              "Ferramenta de IA Precificadora: como definir preços em segundos sem destruir sua margem.",
+              "Ferramentas de Lançamento por IA: como definir preços em segundos sem destruir sua margem.",
               "Condição histórica: a melhor oportunidade já liberada pra você entrar na SouDrop."
             ].map((item, index) => (
               <div 
