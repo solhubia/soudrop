@@ -49,7 +49,7 @@ const LiveImportacao = () => {
       </div>
 
       {/* Header */}
-      <header className="fixed top-8 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border">
+      <header className="fixed top-8 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-muted">
         <div className="container mx-auto px-4 py-4">
           
         </div>
@@ -98,7 +98,7 @@ const LiveImportacao = () => {
 
             {/* Right Side - CTA */}
             <div className="flex justify-center lg:justify-end">
-              <Card className="w-full max-w-md bg-card border-2 border-border shadow-elegant">
+              <Card className="w-full max-w-md bg-card shadow-elegant">
                 <CardContent className="p-8">
                   <div className="text-center space-y-6">
                     <h3 className="text-2xl font-bold text-foreground">
@@ -140,7 +140,7 @@ const LiveImportacao = () => {
             {/* Photo */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <img src={mentorPhoto} alt="Renan Ferreira" className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border-4 border-border shadow-elegant" />
+                <img src={mentorPhoto} alt="Renan Ferreira" className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-elegant" />
               </div>
             </div>
 
@@ -196,7 +196,7 @@ const LiveImportacao = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {learningTopics.map((topic, index) => <Card key={index} className="bg-card border-border hover:border-accent/40 transition-all duration-300 hover:shadow-elegant">
+            {learningTopics.map((topic, index) => <Card key={index} className="bg-card hover:border hover:border-accent/40 transition-all duration-300 hover:shadow-elegant">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
@@ -222,7 +222,7 @@ const LiveImportacao = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => <Card key={index} className="bg-card border-2 border-border hover:border-accent/50 transition-all duration-300 hover:shadow-elegant">
+            {testimonials.map((testimonial, index) => <Card key={index} className="bg-card hover:border hover:border-accent/50 transition-all duration-300 hover:shadow-elegant">
                 <CardContent className="p-8">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
