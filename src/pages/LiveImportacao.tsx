@@ -66,7 +66,7 @@ const LiveImportacao = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
             <div className="text-center lg:text-left space-y-6">
-              <Badge className="bg-accent/20 text-accent border border-accent/30 px-6 py-2 text-sm font-bold inline-flex items-center gap-2">
+              <Badge className="bg-primary/20 text-primary border border-primary/30 px-6 py-2 text-sm font-bold inline-flex items-center gap-2">
                 <Star className="w-4 h-4" />
                 LIVE EXCLUSIVA • ONLINE E GRATUITA
               </Badge>
@@ -82,15 +82,15 @@ const LiveImportacao = () => {
 
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
                 <div className="flex items-center gap-2 text-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
                   <span className="font-medium">100% Online</span>
                 </div>
                 <div className="flex items-center gap-2 text-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
                   <span className="font-medium">Totalmente Gratuito</span>
                 </div>
                 <div className="flex items-center gap-2 text-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
                   <span className="font-medium">Conteúdo Prático</span>
                 </div>
               </div>
@@ -108,12 +108,12 @@ const LiveImportacao = () => {
                       Clique no botão abaixo para se inscrever na live exclusiva
                     </p>
 
-                    <Button onClick={handleCTA} className="w-full bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-base md:text-lg font-bold py-7 px-6 h-auto whitespace-normal leading-tight" size="lg">
+                    <Button onClick={handleCTA} className="w-full bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 text-base md:text-lg font-bold py-7 px-6 h-auto whitespace-normal leading-tight" size="lg">
                       🔥 Quero garantir minha vaga na live exclusiva
                     </Button>
 
                     <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                      <Shield className="w-4 h-4 text-accent" />
+                      <Shield className="w-4 h-4 text-primary" />
                       <span>Inscrição 100% segura</span>
                     </div>
                   </div>
@@ -167,13 +167,13 @@ const LiveImportacao = () => {
               {/* Authority Bullets */}
               <div className="space-y-3 pt-4">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <span className="text-foreground font-medium text-lg">
                     Milhares de produtos importados diretamente de fábricas chinesas
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <span className="text-foreground font-medium text-lg">
                     Operações de importação compartilhada para lojistas de marketplaces
                   </span>
@@ -196,11 +196,11 @@ const LiveImportacao = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {learningTopics.map((topic, index) => <Card key={index} className="bg-card hover:border hover:border-accent/40 transition-all duration-300 hover:shadow-elegant">
+            {learningTopics.map((topic, index) => <Card key={index} className="bg-card hover:border hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                      <topic.icon className="w-6 h-6 text-accent" />
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <topic.icon className="w-6 h-6 text-primary" />
                     </div>
                     <p className="text-foreground font-medium leading-relaxed">
                       {topic.text}
@@ -222,10 +222,10 @@ const LiveImportacao = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => <Card key={index} className="bg-card hover:border hover:border-accent/50 transition-all duration-300 hover:shadow-elegant">
+            {testimonials.map((testimonial, index) => <Card key={index} className="bg-card hover:border hover:border-primary/50 transition-all duration-300 hover:shadow-elegant">
                 <CardContent className="p-8">
                   <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
                   </div>
                   
                   <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -259,15 +259,15 @@ const LiveImportacao = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <Badge className="bg-accent/20 text-accent border border-accent/30 px-6 py-2 text-base">
+              <Badge className="bg-primary/20 text-primary border border-primary/30 px-6 py-2 text-base">
                 Vagas Limitadas
               </Badge>
-              <Badge className="bg-accent/20 text-accent border border-accent/30 px-6 py-2 text-base">
+              <Badge className="bg-primary/20 text-primary border border-primary/30 px-6 py-2 text-base">
                 100% Gratuito
               </Badge>
             </div>
 
-            <Button onClick={handleCTA} className="bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-lg md:text-xl font-bold py-8 px-8 md:px-12 h-auto whitespace-normal leading-tight" size="xl">
+            <Button onClick={handleCTA} className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 text-lg md:text-xl font-bold py-8 px-8 md:px-12 h-auto whitespace-normal leading-tight" size="xl">
               🔥 Quero garantir minha vaga na live exclusiva
             </Button>
           </div>
