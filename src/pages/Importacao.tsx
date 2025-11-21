@@ -26,7 +26,7 @@ const Importacao = () => {
             </div>
 
             {/* Video Section */}
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-8 border border-border shadow-2xl">
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-8 shadow-2xl">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/AFsOl5kf_hM"
@@ -68,7 +68,7 @@ const Importacao = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
@@ -113,7 +113,7 @@ const Importacao = () => {
               ].map((benefit, index) => (
                 <div 
                   key={index}
-                  className="bg-card p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg"
+                  className="bg-card p-6 rounded-xl hover:border hover:border-primary/50 transition-all duration-300 hover:shadow-lg"
                 >
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                     <benefit.icon className="w-6 h-6 text-primary" />
@@ -170,7 +170,7 @@ const Importacao = () => {
               </div>
 
               {/* Bonus/Guarantee */}
-              <div className="grid md:grid-cols-2 gap-4 mt-8 pt-8 border-t border-border">
+              <div className="grid md:grid-cols-2 gap-4 mt-8 pt-8 border-t border-muted">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                   <div>
@@ -192,7 +192,7 @@ const Importacao = () => {
       </section>
 
       {/* What's Included Section */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -209,7 +209,7 @@ const Importacao = () => {
                 "Preços de grande volume mesmo comprando pouco",
                 "Suporte prioritário da equipe"
               ].map((feature, index) => (
-                <div key={index} className="flex items-center gap-3 bg-card p-4 rounded-lg border border-border">
+                <div key={index} className="flex items-center gap-3 bg-card p-4 rounded-lg">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                   <span className="font-medium">{feature}</span>
                 </div>
@@ -247,7 +247,7 @@ const Importacao = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border">
+      <footer className="py-12 border-t border-muted">
         <div className="container mx-auto px-4">
           <div className="text-center text-muted-foreground">
             <p className="text-sm">© 2025 Soudrop. Todos os direitos reservados.</p>
