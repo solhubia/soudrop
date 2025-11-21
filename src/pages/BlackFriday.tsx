@@ -126,7 +126,7 @@ const BlackFriday = () => {
               "Pesquisa de produtos em tempo real: do zero até a lista quente.",
               "Catálogo da SouDrop por dentro: o que vende e por que vende.",
               "Comparativos inteligentes: margem, volume, concorrência.",
-              "Ferramentas de Lançamento por IA: como definir preços em segundos sem destruir sua margem.",
+              "Ferramentas de Lançamento por IA: Como lançar bons anúncios em poucos segundos por IA.",
               "Condição histórica: a melhor oportunidade já liberada pra você entrar na SouDrop."
             ].map((item, index) => (
               <div 
@@ -199,7 +199,9 @@ const BlackFriday = () => {
               { text: "10k em meio mês", subtitle: "Com apenas 15 anos", color: "from-pink-500/20" },
               { text: "15 dias de SouDrop", subtitle: "Obrigado por todo suporte!", color: "from-cyan-500/20" },
               { text: "Meu primeiro mês", subtitle: "vendendo com a SouDrop ❤️", color: "from-red-500/20" },
-              { text: "2 mil de lucro", subtitle: "Melhor decisão que tomei!", color: "from-primary/20" }
+              { text: "2 mil de lucro", subtitle: "Melhor decisão que tomei!", color: "from-primary/20" },
+              { text: "Depoimento", subtitle: "Espaço para depoimento positivo", color: "from-green-500/20", isTestimonial: true },
+              { text: "Depoimento", subtitle: "Espaço para depoimento positivo", color: "from-blue-500/20", isTestimonial: true }
             ].map((proof, index) => (
               <div 
                 key={index}
