@@ -111,7 +111,7 @@ const LiveImportacao = () => {
 
                     <Button 
                       onClick={handleCTA}
-                      className="w-full bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-lg font-bold py-6" 
+                      className="w-full bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-base md:text-lg font-bold py-7 px-6 h-auto whitespace-normal leading-tight" 
                       size="lg"
                     >
                       🔥 Quero garantir minha vaga na live exclusiva
@@ -281,7 +281,7 @@ const LiveImportacao = () => {
 
             <Button 
               onClick={handleCTA}
-              className="bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-xl font-bold py-8 px-12" 
+              className="bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-lg md:text-xl font-bold py-8 px-8 md:px-12 h-auto whitespace-normal leading-tight" 
               size="xl"
             >
               🔥 Quero garantir minha vaga na live exclusiva
