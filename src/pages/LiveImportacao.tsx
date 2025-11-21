@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, Target, TrendingUp, Shield, DollarSign, Users, Star, Package } from "lucide-react";
 import logoSoudrop from "@/assets/soudrop-logo-oficial.png";
 import mentorPhoto from "@/assets/renan-ferreira.jpg";
-
 const LiveImportacao = () => {
   const handleCTA = () => {
     window.open("https://www.even3.com.br/checkout/9639b82f-d6c4-4fb6-a8f0-7f631a2ecb2b?i=63309222&lang=pt", "_blank");
@@ -109,11 +108,7 @@ const LiveImportacao = () => {
                       Clique no botão abaixo para se inscrever na live exclusiva
                     </p>
 
-                    <Button 
-                      onClick={handleCTA}
-                      className="w-full bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-base md:text-lg font-bold py-7 px-6 h-auto whitespace-normal leading-tight" 
-                      size="lg"
-                    >
+                    <Button onClick={handleCTA} className="w-full bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-base md:text-lg font-bold py-7 px-6 h-auto whitespace-normal leading-tight" size="lg">
                       🔥 Quero garantir minha vaga na live exclusiva
                     </Button>
 
@@ -154,7 +149,7 @@ const LiveImportacao = () => {
             <div className="space-y-6">
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Sou Renan Ferreira, empresário e importador há mais de 10 anos, com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo.                       <span className="text-foreground font-semibold">Renan Ferreira</span>, empresário e importador há mais de 10 anos, 
+                  Renan Ferreira, empresário e importador há mais de 10 anos, com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo — sem depender de atravessadores.                       <span className="text-foreground font-semibold">Renan Ferreira</span>, empresário e importador há mais de 10 anos, 
                   com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos 
                   e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo — sem depender de atravessadores.
                 </p>
@@ -279,11 +274,7 @@ const LiveImportacao = () => {
               </Badge>
             </div>
 
-            <Button 
-              onClick={handleCTA}
-              className="bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-lg md:text-xl font-bold py-8 px-8 md:px-12 h-auto whitespace-normal leading-tight" 
-              size="xl"
-            >
+            <Button onClick={handleCTA} className="bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-lg md:text-xl font-bold py-8 px-8 md:px-12 h-auto whitespace-normal leading-tight" size="xl">
               🔥 Quero garantir minha vaga na live exclusiva
             </Button>
           </div>
