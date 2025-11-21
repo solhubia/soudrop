@@ -133,7 +133,7 @@ const Index = () => {
   }, [carouselApi]);
   return <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-border z-50 transition-all duration-300">
+      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-muted z-50 transition-all duration-300">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="relative flex h-16 items-center">
             
@@ -394,7 +394,7 @@ const Index = () => {
                   </div>
                   
                   {/* Conteúdo */}
-                  <div className="bg-card border rounded-2xl p-6 flex-1 group-hover:shadow-elegant transition-all duration-300">
+                  <div className="bg-card rounded-2xl p-6 flex-1 group-hover:shadow-elegant transition-all duration-300">
                     <h3 className="text-xl font-bold mb-3 text-primary">{pedra.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{pedra.description}</p>
                   </div>
@@ -1812,7 +1812,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border py-12">
+      <footer className="bg-card border-t border-muted py-12">
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center text-center space-y-6">
             <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
