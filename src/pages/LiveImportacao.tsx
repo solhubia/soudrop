@@ -49,7 +49,7 @@ const LiveImportacao = () => {
       </div>
 
       {/* Header */}
-      <header className="fixed top-8 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-primary/20">
+      <header className="fixed top-8 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4">
           
         </div>
@@ -66,7 +66,7 @@ const LiveImportacao = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
             <div className="text-center lg:text-left space-y-6">
-              <Badge className="bg-gradient-primary text-primary-foreground px-6 py-2 text-sm font-bold inline-flex items-center gap-2">
+              <Badge className="bg-accent/20 text-accent border border-accent/30 px-6 py-2 text-sm font-bold inline-flex items-center gap-2">
                 <Star className="w-4 h-4" />
                 LIVE EXCLUSIVA • ONLINE E GRATUITA
               </Badge>
@@ -82,15 +82,15 @@ const LiveImportacao = () => {
 
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
                 <div className="flex items-center gap-2 text-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
                   <span className="font-medium">100% Online</span>
                 </div>
                 <div className="flex items-center gap-2 text-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
                   <span className="font-medium">Totalmente Gratuito</span>
                 </div>
                 <div className="flex items-center gap-2 text-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
                   <span className="font-medium">Conteúdo Prático</span>
                 </div>
               </div>
@@ -98,7 +98,7 @@ const LiveImportacao = () => {
 
             {/* Right Side - CTA */}
             <div className="flex justify-center lg:justify-end">
-              <Card className="w-full max-w-md bg-card border-2 border-primary/30 shadow-elegant">
+              <Card className="w-full max-w-md bg-card border-2 border-border shadow-elegant">
                 <CardContent className="p-8">
                   <div className="text-center space-y-6">
                     <h3 className="text-2xl font-bold text-foreground">
@@ -113,7 +113,7 @@ const LiveImportacao = () => {
                     </Button>
 
                     <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                      <Shield className="w-4 h-4 text-primary" />
+                      <Shield className="w-4 h-4 text-accent" />
                       <span>Inscrição 100% segura</span>
                     </div>
                   </div>
@@ -131,7 +131,7 @@ const LiveImportacao = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
               Quem vai te guiar nessa jornada
             </h2>
-            <p className="text-xl text-primary font-semibold">
+            <p className="text-xl text-foreground font-semibold">
               Conheça o mentor do Clube de importação         
             </p>
           </div>
@@ -140,8 +140,7 @@ const LiveImportacao = () => {
             {/* Photo */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-xl rounded-full"></div>
-                <img src={mentorPhoto} alt="Renan Ferreira" className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border-4 border-primary/30 shadow-elegant" />
+                <img src={mentorPhoto} alt="Renan Ferreira" className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border-4 border-border shadow-elegant" />
               </div>
             </div>
 
@@ -168,13 +167,13 @@ const LiveImportacao = () => {
               {/* Authority Bullets */}
               <div className="space-y-3 pt-4">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <span className="text-foreground font-medium text-lg">
                     Milhares de produtos importados diretamente de fábricas chinesas
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <span className="text-foreground font-medium text-lg">
                     Operações de importação compartilhada para lojistas de marketplaces
                   </span>
@@ -197,11 +196,11 @@ const LiveImportacao = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {learningTopics.map((topic, index) => <Card key={index} className="bg-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-elegant">
+            {learningTopics.map((topic, index) => <Card key={index} className="bg-card border-border hover:border-accent/40 transition-all duration-300 hover:shadow-elegant">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <topic.icon className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                      <topic.icon className="w-6 h-6 text-accent" />
                     </div>
                     <p className="text-foreground font-medium leading-relaxed">
                       {topic.text}
@@ -223,7 +222,7 @@ const LiveImportacao = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => <Card key={index} className="bg-card border-2 border-primary/30 hover:border-accent/50 transition-all duration-300 hover:shadow-elegant">
+            {testimonials.map((testimonial, index) => <Card key={index} className="bg-card border-2 border-border hover:border-accent/50 transition-all duration-300 hover:shadow-elegant">
                 <CardContent className="p-8">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
@@ -235,7 +234,7 @@ const LiveImportacao = () => {
                   
                   <div>
                     <p className="text-foreground font-bold">{testimonial.name}</p>
-                    <p className="text-sm text-primary">{testimonial.role}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                   </div>
                 </CardContent>
               </Card>)}
@@ -260,7 +259,7 @@ const LiveImportacao = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <Badge className="bg-primary/20 text-primary border border-primary/30 px-6 py-2 text-base">
+              <Badge className="bg-accent/20 text-accent border border-accent/30 px-6 py-2 text-base">
                 Vagas Limitadas
               </Badge>
               <Badge className="bg-accent/20 text-accent border border-accent/30 px-6 py-2 text-base">
