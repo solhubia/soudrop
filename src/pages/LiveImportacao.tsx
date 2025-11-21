@@ -148,7 +148,7 @@ const LiveImportacao = () => {
             {/* Content */}
             <div className="space-y-6">
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
-                <p>              Renan Ferreira, empresário e importador há mais de 10 anos, com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo — sem depender de atravessadores.<span className="text-foreground font-semibold">Renan Ferreira</span>, empresário e importador há mais de 10 anos, 
+                <p>               Renan Ferreira, empresário e importador há mais de 10 anos, com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo — sem depender de atravessadores.<span className="text-foreground font-semibold">Renan Ferreira</span>, empresário e importador há mais de 10 anos, 
                   com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos 
                   e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo — sem depender de atravessadores.
                 </p>
