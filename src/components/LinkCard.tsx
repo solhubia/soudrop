@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui_link/button";
 import { ExternalLink, Package, TrendingUp, Ship } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface LinkCardProps {
   title: string;
@@ -10,8 +11,14 @@ interface LinkCardProps {
 }
 
 export function LinkCard({ title, description, url, variant, type }: LinkCardProps) {
+  const navigate = useNavigate();
+  
   const handleClick = () => {
-    window.open(url, '_blank', 'noopener,noreferrer');
+    if (url.startsWith('/')) {
+      navigate(url);
+    } else {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
   };
 
   const getIcon = () => {

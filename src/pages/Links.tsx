@@ -42,7 +42,7 @@ const Index = () => {
               <LinkCard
                 title="Aprender a vender no digital"
                 description="Tudo que você precisa para aprender vender online está aqui"
-                url="#"
+                url="/live-importacao"
                 variant="blue"
                 type="course"
               />
