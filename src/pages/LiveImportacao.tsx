@@ -1,32 +1,13 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, Target, TrendingUp, Shield, DollarSign, Users, Star, Package } from "lucide-react";
 import logoSoudrop from "@/assets/soudrop-logo-oficial.png";
 import mentorPhoto from "@/assets/renan-ferreira.jpg";
+
 const LiveImportacao = () => {
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    whatsapp: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-  };
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const handleCTA = () => {
+    window.open("https://www.even3.com.br/checkout/9639b82f-d6c4-4fb6-a8f0-7f631a2ecb2b?i=63309222&lang=pt", "_blank");
   };
   const learningTopics = [{
     icon: Package,
@@ -116,56 +97,31 @@ const LiveImportacao = () => {
               </div>
             </div>
 
-            {/* Right Side - Form */}
+            {/* Right Side - CTA */}
             <div className="flex justify-center lg:justify-end">
               <Card className="w-full max-w-md bg-card border-2 border-primary/30 shadow-elegant">
                 <CardContent className="p-8">
-                  {!isSubmitted ? <>
-                      <div className="text-center mb-6">
-                        <h3 className="text-2xl font-bold text-foreground mb-2">
-                          Garanta Sua Vaga Agora
-                        </h3>
-                        <p className="text-muted-foreground">
-                          Preencha os dados abaixo para participar
-                        </p>
-                      </div>
+                  <div className="text-center space-y-6">
+                    <h3 className="text-2xl font-bold text-foreground">
+                      Garanta Sua Vaga Agora
+                    </h3>
+                    <p className="text-muted-foreground text-lg">
+                      Clique no botão abaixo para se inscrever na live exclusiva
+                    </p>
 
-                      <form onSubmit={handleSubmit} className="space-y-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="nome" className="text-foreground">Nome Completo</Label>
-                          <Input id="nome" name="nome" placeholder="Seu nome completo" value={formData.nome} onChange={handleInputChange} required className="bg-input border-primary/20 focus:border-primary" />
-                        </div>
+                    <Button 
+                      onClick={handleCTA}
+                      className="w-full bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-lg font-bold py-6" 
+                      size="lg"
+                    >
+                      🔥 Quero garantir minha vaga na live exclusiva
+                    </Button>
 
-                        <div className="space-y-2">
-                          <Label htmlFor="email" className="text-foreground">E-mail</Label>
-                          <Input id="email" name="email" type="email" placeholder="seu@email.com" value={formData.email} onChange={handleInputChange} required className="bg-input border-primary/20 focus:border-primary" />
-                        </div>
-
-                        <div className="space-y-2">
-                          <Label htmlFor="whatsapp" className="text-foreground">WhatsApp</Label>
-                          <Input id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" value={formData.whatsapp} onChange={handleInputChange} required className="bg-input border-primary/20 focus:border-primary" />
-                        </div>
-
-                        <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-lg font-bold py-6 mt-6" size="lg">
-                          {isSubmitting ? "Processando..." : "🔥 Quero garantir minha vaga na live exclusiva"}
-                        </Button>
-                      </form>
-
-                      <div className="mt-6 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                        <Shield className="w-4 h-4 text-primary" />
-                        <span>Seus dados estão seguros</span>
-                      </div>
-                    </> : <div className="text-center py-8">
-                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <CheckCircle2 className="w-8 h-8 text-primary" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-foreground mb-2">
-                        Inscrição Confirmada!
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Você receberá todas as informações da live no e-mail cadastrado.
-                      </p>
-                    </div>}
+                    <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+                      <Shield className="w-4 h-4 text-primary" />
+                      <span>Inscrição 100% segura</span>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -323,16 +279,13 @@ const LiveImportacao = () => {
               </Badge>
             </div>
 
-            <Button onClick={() => window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          })} className="bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-xl font-bold py-8 px-12" size="xl">
+            <Button 
+              onClick={handleCTA}
+              className="bg-gradient-yellow text-accent-foreground hover:shadow-yellow-glow transition-all duration-300 text-xl font-bold py-8 px-12" 
+              size="xl"
+            >
               🔥 Quero garantir minha vaga na live exclusiva
             </Button>
-
-            <p className="text-sm text-muted-foreground">
-              Clique no botão acima e preencha seus dados no formulário do topo da página
-            </p>
           </div>
         </div>
       </section>
