@@ -132,7 +132,7 @@ const LiveImportacao = () => {
               Quem vai te guiar nessa jornada
             </h2>
             <p className="text-xl text-primary font-semibold">
-              Conheça o mentor do Clube de importação         
+              Conheça o mentor do Clube de importação         
             </p>
           </div>
 
@@ -148,7 +148,8 @@ const LiveImportacao = () => {
             {/* Content */}
             <div className="space-y-6">
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
-                <p>                Renan Ferreira, empresário e importador há mais de 10 anos, com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo — sem depender de atravessadores.<span className="text-foreground font-semibold">Renan Ferreira</span>, empresário e importador há mais de 10 anos, 
+                <p>
+                  <span className="text-foreground font-semibold">Renan Ferreira</span>, empresário e importador há mais de 10 anos, 
                   com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos 
                   e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo — sem depender de atravessadores.
                 </p>
@@ -166,10 +167,6 @@ const LiveImportacao = () => {
 
               {/* Authority Bullets */}
               <div className="space-y-3 pt-4">
-                <div className="flex items-start gap-3">
-                  
-                  
-                </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <span className="text-foreground font-medium text-lg">
