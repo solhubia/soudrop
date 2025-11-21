@@ -2,43 +2,32 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Users, Target, TrendingUp } from "lucide-react";
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira-bf.jpg";
-
 const BlackFriday = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    
+
     // Load WebinarJam script
     const script = document.createElement('script');
     script.src = "https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=3&buttonText=Register";
     script.async = true;
     document.body.appendChild(script);
-    
     return () => {
       document.body.removeChild(script);
     };
   }, []);
-
-
-  return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+  return <div className="min-h-screen bg-black text-white overflow-hidden">
       {/* Background Pattern */}
-      <div 
-        className="fixed inset-0 opacity-10"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E")`,
-          backgroundSize: '60px 60px'
-        }}
-      />
+      <div className="fixed inset-0 opacity-10" style={{
+      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E")`,
+      backgroundSize: '60px 60px'
+    }} />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
         {/* Background Image with Overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80')",
-          }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80')"
+      }}>
           <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black" />
         </div>
 
@@ -85,27 +74,22 @@ const BlackFriday = () => {
 
           {/* CTA Button */}
           <div className="pt-4 text-center">
-            <button 
-              type="button" 
-              className="wj-embed-button" 
-              data-webinarHash="8wgw0kty"
-              style={{
-                border: '2px solid rgba(0, 0, 0, 0.5)',
-                background: 'rgba(41, 182, 246, 0.95)',
-                color: 'rgb(255, 255, 255)',
-                fontSize: '24px',
-                padding: '18px 80px',
-                boxShadow: 'none',
-                borderRadius: '100px',
-                whiteSpace: 'normal',
-                fontWeight: '700',
-                lineHeight: '1.3',
-                cursor: 'pointer',
-                fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-                wordBreak: 'break-word',
-                margin: 'auto'
-              }}
-            >
+            <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{
+            border: '2px solid rgba(0, 0, 0, 0.5)',
+            background: 'rgba(41, 182, 246, 0.95)',
+            color: 'rgb(255, 255, 255)',
+            fontSize: '24px',
+            padding: '18px 80px',
+            boxShadow: 'none',
+            borderRadius: '100px',
+            whiteSpace: 'normal',
+            fontWeight: '700',
+            lineHeight: '1.3',
+            cursor: 'pointer',
+            fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+            wordBreak: 'break-word',
+            margin: 'auto'
+          }}>
               GARANTIR VAGA
             </button>
           </div>
@@ -121,22 +105,10 @@ const BlackFriday = () => {
           </h2>
 
           <div className="grid gap-6 max-w-4xl mx-auto">
-            {[
-              "SouDrop 3.0 na prática: nada de teoria — tela aberta, mão na massa.",
-              "Pesquisa de produtos em tempo real: do zero até a lista quente.",
-              "Catálogo da SouDrop por dentro: o que vende e por que vende.",
-              "Comparativos inteligentes: margem, volume, concorrência.",
-              "Ferramentas de Lançamento por IA: Como lançar bons anúncios em poucos segundos por IA.",
-              "Condição histórica: a melhor oportunidade já liberada pra você entrar na SouDrop."
-            ].map((item, index) => (
-              <div 
-                key={index}
-                className="flex items-start gap-4 p-6 bg-gradient-to-r from-red-950/20 to-transparent border-l-4 border-destructive rounded-lg hover:from-red-950/30 transition-all duration-300 group"
-              >
+            {["SouDrop 3.0 na prática: nada de teoria — tela aberta, mão na massa.", "Pesquisa de produtos em tempo real: do zero até a lista quente.", "Catálogo da SouDrop por dentro: o que vende e por que vende.", "Comparativos inteligentes: margem, volume, concorrência.", "Ferramentas de Lançamento por IA: Como lançar bons anúncios em poucos segundos por IA.", "Condição histórica: a melhor oportunidade já liberada pra você entrar na SouDrop."].map((item, index) => <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-r from-red-950/20 to-transparent border-l-4 border-destructive rounded-lg hover:from-red-950/30 transition-all duration-300 group">
                 <ArrowRight className="w-6 h-6 text-destructive flex-shrink-0 mt-1 group-hover:translate-x-1 transition-transform" />
                 <p className="text-lg text-gray-300 leading-relaxed">{item}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -149,24 +121,16 @@ const BlackFriday = () => {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <TrendingUp className="w-12 h-12" />,
-                text: "Se você já tentou vender online e não conseguiu resultado."
-              },
-              {
-                icon: <Target className="w-12 h-12" />,
-                text: "Se você nunca vendeu, mas quer começar de forma simples e segura."
-              },
-              {
-                icon: <Users className="w-12 h-12" />,
-                text: "Se você já foi membro da SouDrop, mas não renovou seu acesso."
-              }
-            ].map((card, index) => (
-              <div 
-                key={index}
-                className="relative p-8 bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl hover:border-primary/50 transition-all duration-300 group overflow-hidden"
-              >
+            {[{
+            icon: <TrendingUp className="w-12 h-12" />,
+            text: "Se você já tentou vender online e não conseguiu resultado."
+          }, {
+            icon: <Target className="w-12 h-12" />,
+            text: "Se você nunca vendeu, mas quer começar de forma simples e segura."
+          }, {
+            icon: <Users className="w-12 h-12" />,
+            text: "Se você já foi membro da SouDrop, mas não renovou seu acesso."
+          }].map((card, index) => <div key={index} className="relative p-8 bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl hover:border-primary/50 transition-all duration-300 group overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-destructive to-primary" />
                 <div className="text-destructive mb-6 group-hover:scale-110 transition-transform duration-300">
                   {card.icon}
@@ -174,8 +138,7 @@ const BlackFriday = () => {
                 <p className="text-lg leading-relaxed text-gray-300">
                   {card.text}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -190,31 +153,60 @@ const BlackFriday = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { text: "R$ 150.023,97", subtitle: "em vendas hoje", color: "from-primary/20" },
-              { text: "Primeiro mês", subtitle: "e já estou escalando!", color: "from-green-500/20" },
-              { text: "R$ 507,55", subtitle: "Tendência de vendas hoje", color: "from-yellow-500/20" },
-              { text: "Muita aprendizagem", subtitle: "resultados aparecendo!", color: "from-blue-500/20" },
-              { text: "Bati meu recorde!", subtitle: "De R$ 1.500 para muito mais", color: "from-purple-500/20" },
-              { text: "10k em meio mês", subtitle: "Com apenas 15 anos", color: "from-pink-500/20" },
-              { text: "15 dias de SouDrop", subtitle: "Obrigado por todo suporte!", color: "from-cyan-500/20" },
-              { text: "Meu primeiro mês", subtitle: "vendendo com a SouDrop ❤️", color: "from-red-500/20" },
-              { text: "2 mil de lucro", subtitle: "Melhor decisão que tomei!", color: "from-primary/20" },
-              { text: "Depoimento", subtitle: "Espaço para depoimento positivo", color: "from-green-500/20", isTestimonial: true },
-              { text: "Depoimento", subtitle: "Espaço para depoimento positivo", color: "from-blue-500/20", isTestimonial: true }
-            ].map((proof, index) => (
-              <div 
-                key={index}
-                className={`relative p-6 bg-gradient-to-br ${proof.color} to-black border border-gray-800 rounded-xl hover:border-primary/50 transition-all duration-300 group overflow-hidden min-h-[160px] flex flex-col justify-center`}
-              >
+            {[{
+            text: "R$ 150.023,97",
+            subtitle: "em vendas hoje",
+            color: "from-primary/20"
+          }, {
+            text: "Primeiro mês",
+            subtitle: "e já estou escalando!",
+            color: "from-green-500/20"
+          }, {
+            text: "R$ 507,55",
+            subtitle: "Tendência de vendas hoje",
+            color: "from-yellow-500/20"
+          }, {
+            text: "Muita aprendizagem",
+            subtitle: "resultados aparecendo!",
+            color: "from-blue-500/20"
+          }, {
+            text: "Bati meu recorde!",
+            subtitle: "De R$ 1.500 para muito mais",
+            color: "from-purple-500/20"
+          }, {
+            text: "10k em meio mês",
+            subtitle: "Com apenas 15 anos",
+            color: "from-pink-500/20"
+          }, {
+            text: "15 dias de SouDrop",
+            subtitle: "Obrigado por todo suporte!",
+            color: "from-cyan-500/20"
+          }, {
+            text: "Meu primeiro mês",
+            subtitle: "vendendo com a SouDrop ❤️",
+            color: "from-red-500/20"
+          }, {
+            text: "2 mil de lucro",
+            subtitle: "Melhor decisão que tomei!",
+            color: "from-primary/20"
+          }, {
+            text: "Depoimento",
+            subtitle: "Espaço para depoimento positivo",
+            color: "from-green-500/20",
+            isTestimonial: true
+          }, {
+            text: "Depoimento",
+            subtitle: "Espaço para depoimento positivo",
+            color: "from-blue-500/20",
+            isTestimonial: true
+          }].map((proof, index) => <div key={index} className={`relative p-6 bg-gradient-to-br ${proof.color} to-black border border-gray-800 rounded-xl hover:border-primary/50 transition-all duration-300 group overflow-hidden min-h-[160px] flex flex-col justify-center`}>
                 <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative z-10">
                   <p className="text-2xl font-bold mb-2 text-white">{proof.text}</p>
                   <p className="text-sm text-gray-400">{proof.subtitle}</p>
                   <CheckCircle className="absolute bottom-2 right-2 w-6 h-6 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -224,11 +216,7 @@ const BlackFriday = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="inline-block p-1 bg-gradient-to-r from-primary to-destructive rounded-full">
             <div className="bg-black rounded-full p-2">
-              <img 
-                src={renanPhoto} 
-                alt="Renan Ferreira"
-                className="w-32 h-32 rounded-full object-cover"
-              />
+              <img alt="Renan Ferreira" className="w-32 h-32 rounded-full object-cover" src="/lovable-uploads/1f926195-0aa4-4cb4-ae07-1803732511ce.jpg" />
             </div>
           </div>
           
@@ -256,27 +244,22 @@ const BlackFriday = () => {
             que vai pagar todas as suas próximas Blacks!
           </h2>
 
-          <button 
-            type="button" 
-            className="wj-embed-button" 
-            data-webinarHash="8wgw0kty"
-            style={{
-              border: '2px solid rgba(0, 0, 0, 0.5)',
-              background: 'rgba(41, 182, 246, 0.95)',
-              color: 'rgb(255, 255, 255)',
-              fontSize: '24px',
-              padding: '18px 80px',
-              boxShadow: 'none',
-              borderRadius: '100px',
-              whiteSpace: 'normal',
-              fontWeight: '700',
-              lineHeight: '1.3',
-              cursor: 'pointer',
-              fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-              wordBreak: 'break-word',
-              margin: 'auto'
-            }}
-          >
+          <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{
+          border: '2px solid rgba(0, 0, 0, 0.5)',
+          background: 'rgba(41, 182, 246, 0.95)',
+          color: 'rgb(255, 255, 255)',
+          fontSize: '24px',
+          padding: '18px 80px',
+          boxShadow: 'none',
+          borderRadius: '100px',
+          whiteSpace: 'normal',
+          fontWeight: '700',
+          lineHeight: '1.3',
+          cursor: 'pointer',
+          fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+          wordBreak: 'break-word',
+          margin: 'auto'
+        }}>
             GARANTIR VAGA
           </button>
         </div>
@@ -295,8 +278,6 @@ const BlackFriday = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default BlackFriday;
