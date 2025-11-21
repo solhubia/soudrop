@@ -1075,7 +1075,7 @@ const Index = () => {
             </div>
             
             {/* Process Flow */}
-            <div className="bg-card/50 border border-border rounded-2xl p-8 md:p-12">
+            <div className="bg-card/50 rounded-2xl p-8 md:p-12">
               <div className="text-center mb-12">
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground">
                   Funciona em 4 passos práticos
@@ -1096,7 +1096,7 @@ const Index = () => {
                 
                 {/* Vertical Animated Line 1 */}
                 <div className="flex justify-center">
-                  <div className="relative w-1 h-16 bg-border rounded-full overflow-hidden">
+                  <div className="relative w-1 h-16 bg-muted rounded-full overflow-hidden">
                     <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-fill-sequential-vertical-1"></div>
                   </div>
                 </div>
@@ -1114,7 +1114,7 @@ const Index = () => {
 
                 {/* Vertical Animated Line 2 */}
                 <div className="flex justify-center">
-                  <div className="relative w-1 h-16 bg-border rounded-full overflow-hidden">
+                  <div className="relative w-1 h-16 bg-muted rounded-full overflow-hidden">
                     <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-fill-sequential-vertical-2"></div>
                   </div>
                 </div>
@@ -1132,7 +1132,7 @@ const Index = () => {
 
                 {/* Vertical Animated Line 3 */}
                 <div className="flex justify-center">
-                  <div className="relative w-1 h-16 bg-border rounded-full overflow-hidden">
+                  <div className="relative w-1 h-16 bg-muted rounded-full overflow-hidden">
                     <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-fill-sequential-vertical-3"></div>
                   </div>
                 </div>
@@ -1164,7 +1164,7 @@ const Index = () => {
                 
                 {/* Horizontal Animated Connecting Line 1 */}
                 <div className="flex justify-center items-center">
-                  <div className="relative w-full h-1 bg-border rounded-full overflow-hidden">
+                  <div className="relative w-full h-1 bg-muted rounded-full overflow-hidden">
                     <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-fill-sequential-1"></div>
                   </div>
                 </div>
@@ -1182,7 +1182,7 @@ const Index = () => {
 
                 {/* Horizontal Animated Connecting Line 2 */}
                 <div className="flex justify-center items-center">
-                  <div className="relative w-full h-1 bg-border rounded-full overflow-hidden">
+                  <div className="relative w-full h-1 bg-muted rounded-full overflow-hidden">
                     <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-fill-sequential-2"></div>
                   </div>
                 </div>
@@ -1200,7 +1200,7 @@ const Index = () => {
 
                 {/* Horizontal Animated Connecting Line 3 */}
                 <div className="flex justify-center items-center">
-                  <div className="relative w-full h-1 bg-border rounded-full overflow-hidden">
+                  <div className="relative w-full h-1 bg-muted rounded-full overflow-hidden">
                     <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-fill-sequential-3"></div>
                   </div>
                 </div>
@@ -1218,7 +1218,7 @@ const Index = () => {
               </div>
               
               {/* Result */}
-              <div className="border-t border-border pt-8">
+              <div className="border-t border-muted pt-8">
                 <div className="text-center">
                   <h3 className="text-xl font-bold text-green-500 mb-6 flex items-center justify-center">
                     <Zap className="h-5 w-5 mr-2" />
