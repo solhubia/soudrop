@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Users, Target, TrendingUp } from "lucide-react";
 import { useEffect } from "react";
+import renanPhoto from "@/assets/renan-ferreira-bf.jpg";
 
 const BlackFriday = () => {
   useEffect(() => {
@@ -220,10 +221,12 @@ const BlackFriday = () => {
       <section className="relative py-20 px-4 bg-gradient-to-b from-black via-gray-950 to-black">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="inline-block p-1 bg-gradient-to-r from-primary to-destructive rounded-full">
-            <div className="bg-black rounded-full p-8">
-              <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center text-4xl font-black">
-                RF
-              </div>
+            <div className="bg-black rounded-full p-2">
+              <img 
+                src={renanPhoto} 
+                alt="Renan Ferreira"
+                className="w-32 h-32 rounded-full object-cover"
+              />
             </div>
           </div>
           
