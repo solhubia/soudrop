@@ -65,9 +65,9 @@ const CacadorProdutosChina = () => {
               Oferta Especial de Lançamento
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-[#FFD700]">Descubra os Segredos</span> da Importação Lucrativa Direto da China
+              <span className="text-[#FFD700]">Quer aprender a importar da China</span> com segurança e lucro?
               <span className="block mt-2 bg-gradient-to-r from-[#C41E3A] to-[#FFD700] bg-clip-text text-transparent">
-                Lucros de até 300% — Mesmo Começando do Zero!
+                Eu vou te mostrar como eu faço na prática.
               </span>
             </h1>
             <p className="text-lg md:text-xl text-[#FFF9E6]/80 max-w-2xl mx-auto">
