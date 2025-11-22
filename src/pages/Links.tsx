@@ -1,7 +1,42 @@
 import { LinkCard } from "@/components/LinkCard";
+import { useEffect } from "react";
 import "../index.css"; 
 
 const Index = () => {
+  useEffect(() => {
+    // Inicializar Facebook Pixel
+    if (!window.fbq) {
+      (function(f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    }
+    
+    window.fbq('init', '2423820908020503');
+    window.fbq('track', 'PageView');
+  }, []);
+
+  const trackLinkClick = (linkType: string, linkTitle: string) => {
+    if (window.fbq) {
+      window.fbq('track', 'Lead', {
+        content_name: linkTitle,
+        content_category: linkType,
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen theme-links bg-gradient-links-background font-sans">
       <div className="container mx-auto px-4 py-12">
@@ -25,6 +60,7 @@ const Index = () => {
                 url="https://4k384ufgv64.typeform.com/to/vTnWbUQI"
                 variant="red"
                 type="import"
+                onTrack={() => trackLinkClick('import', 'Importe da China')}
               />
             </div>
 
@@ -35,6 +71,7 @@ const Index = () => {
                 url="https://4k384ufgv64.typeform.com/to/rIQVeImj"
                 variant="soudrop"
                 type="website"
+                onTrack={() => trackLinkClick('soudrop', 'Vender sem estoque')}
               />
             </div>
 
@@ -45,6 +82,7 @@ const Index = () => {
                 url="https://soudrop.com.br/black-friday"
                 variant="blue"
                 type="course"
+                onTrack={() => trackLinkClick('courses', 'Aprender a vender no digital')}
               />
             </div>
           </div>
