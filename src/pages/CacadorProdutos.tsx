@@ -89,12 +89,13 @@ const CacadorProdutos = () => {
 
                 <div className="space-y-4 md:space-y-6">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                    Caçador de Produtos:
-                    <span className="block text-cacador-pink mt-2">Importação da China</span>
+                    Os Segredos da Importação
+                    <span className="block text-cacador-pink mt-2">Que Ninguém Te Contava</span>
                   </h1>
                   
-                  <p className="text-lg md:text-xl text-cacador-text-secondary max-w-2xl mx-auto md:mx-0">
-                    Aprenda a encontrar produtos lucrativos na China, comparar preços e validar fornecedores de forma segura. Sem enrolação, direto ao ponto.
+                  <p className="text-lg md:text-xl text-cacador-text-secondary max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                    Se hoje eu vivo de importação é porque eu aprendi o que ninguém me contava.<br />
+                    <span className="text-white font-semibold">Agora eu vou entregar isso pra você.</span>
                   </p>
                 </div>
 
