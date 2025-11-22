@@ -128,11 +128,12 @@ const ChecklistImportador = () => {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#FCFCFC] leading-tight">
-                Caçador de Produtos: encontre produtos lucrativos na China mesmo começando do zero
+                Dezembro, todo mundo viajando…<br />
+                <span className="text-[#5D737E]">e você aí ainda travado?</span>
               </h1>
 
               <p className="text-lg md:text-xl text-[#FCFCFC]/80 leading-relaxed">
-                Um curso 100% online, direto ao ponto, que mostra como pesquisar, comparar e escolher produtos com potencial real de lucro para vender em marketplaces como Mercado Livre, Shopee, Amazon e Magalu.
+                Eu vou te mostrar <span className="font-semibold text-[#FCFCFC]">como a importação virou meu ponto de virada.</span>
               </p>
 
               <div className="space-y-4">
