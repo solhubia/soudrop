@@ -8,12 +8,15 @@ interface LinkCardProps {
   url: string;
   variant: "soudrop" | "shopee" | "red" | "blue";
   type: "website" | "course" | "import";
+  onTrack?: () => void;
 }
 
-export function LinkCard({ title, description, url, variant, type }: LinkCardProps) {
+export function LinkCard({ title, description, url, variant, type, onTrack }: LinkCardProps) {
   const navigate = useNavigate();
   
   const handleClick = () => {
+    onTrack?.();
+    
     if (url.startsWith('/')) {
       navigate(url);
     } else {
