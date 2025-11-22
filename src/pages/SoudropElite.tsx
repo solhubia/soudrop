@@ -89,6 +89,31 @@ const SoudropElite = () => {
         </div>
       </section>
 
+      {/* Nova Copy de Importação */}
+      <section className="py-16 px-6 bg-gradient-to-b from-elite-black via-elite-gold/5 to-elite-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_hsl(45_100%_51%_/_0.15),_transparent_70%)]" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 border border-elite-gold/40 rounded-full bg-elite-gold/10">
+            <TrendingUp className="w-4 h-4 text-elite-gold" />
+            <span className="text-elite-gold text-xs font-semibold uppercase tracking-wider">Importação da China</span>
+          </div>
+          
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            Quer aprender a <span className="text-elite-gold">importar da China</span><br />
+            com segurança e lucro?
+          </h2>
+          
+          <p className="text-xl md:text-2xl text-elite-white/90 font-medium mb-8 max-w-2xl mx-auto">
+            Eu vou te mostrar <span className="text-elite-gold">como eu faço na prática.</span>
+          </p>
+          
+          <div className="flex items-center justify-center gap-2 text-elite-white/60">
+            <Shield className="w-5 h-5 text-elite-gold" />
+            <span className="text-sm">Método testado e validado no mercado real</span>
+          </div>
+        </div>
+      </section>
+
       {/* O que é o programa */}
       <section className="py-20 px-6 bg-elite-black border-t border-elite-gold/10">
         <div className="max-w-5xl mx-auto text-center">
