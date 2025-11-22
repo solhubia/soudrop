@@ -173,7 +173,10 @@ const CacadorProdutosEntrada = () => {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#E5E7EB] leading-tight">
-                Caçador de Produtos: sua porta de entrada para encontrar produtos lucrativos na China
+                Sabe o que está acontecendo aqui atrás?
+                <span className="block text-[#38BDF8] mt-2">
+                  Vou abrir a caixa preta da minha operação pra você.
+                </span>
               </h1>
 
               <p className="text-lg md:text-xl text-[#9CA3AF] leading-relaxed">
