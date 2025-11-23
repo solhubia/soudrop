@@ -142,7 +142,7 @@ const BlackFriday = () => {
       </section>
 
       {/* Especialista Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-b from-black via-gray-950 to-black">
+      <section className="relative py-16 px-4 bg-gradient-to-b from-black via-gray-950 to-black">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="inline-block p-2 bg-gradient-to-r from-primary to-destructive rounded-full">
             <div className="bg-black rounded-full p-3">
@@ -166,7 +166,7 @@ const BlackFriday = () => {
       </section>
 
       {/* CTA Final Section */}
-      <section className="relative py-32 px-4">
+      <section className="relative py-16 px-4">
         <div className="max-w-5xl mx-auto text-center space-y-12">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight">
             Sua melhor compra de Black Friday é um{" "}
