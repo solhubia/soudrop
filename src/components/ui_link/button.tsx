@@ -19,6 +19,7 @@ const buttonVariants = cva(
         shopee: "bg-gradient-shopee text-white hover:scale-105 hover:brightness-110 transition-all duration-300 border border-destructive/20",
         red: "bg-gradient-to-r from-red-600 to-red-700 text-white hover:scale-105 hover:brightness-110 transition-all duration-300 border border-red-500/20",
         blue: "bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:scale-105 hover:brightness-110 transition-all duration-300 border border-blue-500/20",
+        green: "bg-gradient-to-r from-green-600 to-green-700 text-white hover:scale-105 hover:brightness-110 transition-all duration-300 border border-green-500/20",
       },
       size: {
         default: "h-10 px-4 py-2",

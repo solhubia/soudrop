@@ -6,7 +6,7 @@ interface LinkCardProps {
   title: string;
   description?: string;
   url: string;
-  variant: "soudrop" | "shopee" | "red" | "blue";
+  variant: "soudrop" | "shopee" | "red" | "blue" | "green";
   type: "website" | "course" | "import";
   onTrack?: () => void;
 }
