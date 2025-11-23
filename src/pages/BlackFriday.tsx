@@ -142,7 +142,7 @@ const BlackFriday = () => {
       </section>
 
       {/* Especialista Section */}
-      <section className="relative py-16 px-4 bg-gradient-to-b from-black via-gray-950 to-black">
+      <section className="relative py-8 px-4 bg-gradient-to-b from-black via-gray-950 to-black">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="inline-block p-2 bg-gradient-to-r from-primary to-destructive rounded-full">
             <div className="bg-black rounded-full p-3">
@@ -166,8 +166,8 @@ const BlackFriday = () => {
       </section>
 
       {/* CTA Final Section */}
-      <section className="relative py-16 px-4">
-        <div className="max-w-5xl mx-auto text-center space-y-12">
+      <section className="relative py-8 px-4">
+        <div className="max-w-5xl mx-auto text-center space-y-16">
           <h2 className="text-3xl md:text-5xl font-black leading-tight lg:text-7xl">
             Sua melhor compra de Black Friday é um{" "}
             <span className="text-primary">NEGÓCIO</span>{" "}
@@ -176,7 +176,7 @@ const BlackFriday = () => {
 
           <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{
           border: '2px solid rgba(0, 0, 0, 0.5)',
-          background: 'rgba(41, 182, 246, 0.95)',
+          background: 'rgba(34, 197, 94, 0.95)',
           color: 'rgb(255, 255, 255)',
           fontSize: '24px',
           padding: '18px 80px',
