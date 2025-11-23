@@ -141,80 +141,12 @@ const BlackFriday = () => {
         </div>
       </section>
 
-      {/* Provas Sociais Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16">
-            O que está acontecendo{" "}
-            <span className="text-primary">HOJE</span>{" "}
-            dentro da SouDrop
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[{
-            text: "R$ 150.023,97",
-            subtitle: "em vendas hoje",
-            color: "from-primary/20"
-          }, {
-            text: "Primeiro mês",
-            subtitle: "e já estou escalando!",
-            color: "from-green-500/20"
-          }, {
-            text: "R$ 507,55",
-            subtitle: "Tendência de vendas hoje",
-            color: "from-yellow-500/20"
-          }, {
-            text: "Muita aprendizagem",
-            subtitle: "resultados aparecendo!",
-            color: "from-blue-500/20"
-          }, {
-            text: "Bati meu recorde!",
-            subtitle: "De R$ 1.500 para muito mais",
-            color: "from-purple-500/20"
-          }, {
-            text: "10k em meio mês",
-            subtitle: "Com apenas 15 anos",
-            color: "from-pink-500/20"
-          }, {
-            text: "15 dias de SouDrop",
-            subtitle: "Obrigado por todo suporte!",
-            color: "from-cyan-500/20"
-          }, {
-            text: "Meu primeiro mês",
-            subtitle: "vendendo com a SouDrop ❤️",
-            color: "from-red-500/20"
-          }, {
-            text: "2 mil de lucro",
-            subtitle: "Melhor decisão que tomei!",
-            color: "from-primary/20"
-          }, {
-            text: "Depoimento",
-            subtitle: "Espaço para depoimento positivo",
-            color: "from-green-500/20",
-            isTestimonial: true
-          }, {
-            text: "Depoimento",
-            subtitle: "Espaço para depoimento positivo",
-            color: "from-blue-500/20",
-            isTestimonial: true
-          }].map((proof, index) => <div key={index} className={`relative p-6 bg-gradient-to-br ${proof.color} to-black border border-gray-800 rounded-xl hover:border-primary/50 transition-all duration-300 group overflow-hidden min-h-[160px] flex flex-col justify-center`}>
-                <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative z-10">
-                  <p className="text-2xl font-bold mb-2 text-white">{proof.text}</p>
-                  <p className="text-sm text-gray-400">{proof.subtitle}</p>
-                  <CheckCircle className="absolute bottom-2 right-2 w-6 h-6 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-              </div>)}
-          </div>
-        </div>
-      </section>
-
       {/* Especialista Section */}
       <section className="relative py-20 px-4 bg-gradient-to-b from-black via-gray-950 to-black">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="inline-block p-1 bg-gradient-to-r from-primary to-destructive rounded-full">
-            <div className="bg-black rounded-full p-2">
-              <img alt="Renan Ferreira" className="w-32 h-32 rounded-full object-cover" src="/lovable-uploads/1f926195-0aa4-4cb4-ae07-1803732511ce.jpg" />
+          <div className="inline-block p-2 bg-gradient-to-r from-primary to-destructive rounded-full">
+            <div className="bg-black rounded-full p-3">
+              <img alt="Renan Ferreira" className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover" src="/lovable-uploads/1f926195-0aa4-4cb4-ae07-1803732511ce.jpg" />
             </div>
           </div>
           
