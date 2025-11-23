@@ -168,7 +168,7 @@ const BlackFriday = () => {
       {/* CTA Final Section */}
       <section className="relative py-16 px-4">
         <div className="max-w-5xl mx-auto text-center space-y-12">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight">
+          <h2 className="text-3xl md:text-5xl font-black leading-tight lg:text-7xl">
             Sua melhor compra de Black Friday é um{" "}
             <span className="text-primary">NEGÓCIO</span>{" "}
             que vai pagar todas as suas próximas Blacks!
