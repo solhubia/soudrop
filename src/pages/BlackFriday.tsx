@@ -37,13 +37,13 @@ const BlackFriday = () => {
             <div className="relative">
               {/* Tag Superior */}
               <div className="inline-block mb-4">
-                <span className="text-sm md:text-base font-bold tracking-widest text-destructive uppercase">
+                <span className="text-sm font-bold tracking-widest uppercase text-slate-50 md:text-2xl">
                   Masterclass Sou Drop
                 </span>
               </div>
               
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter">
-                <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">
+                <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)] text-9xl font-extrabold">
                   BLACK
                 </span>
                 <br />
@@ -51,14 +51,12 @@ const BlackFriday = () => {
                   FRIDAY
                 </span>
               </h1>
-              <div className="absolute -top-4 -right-4 md:-right-8 bg-primary text-black px-4 py-2 rounded-lg rotate-12 shadow-glow">
-                <span className="text-xs md:text-sm font-black">SOUDROP</span>
-              </div>
+              
             </div>
           </div>
 
           {/* Headline */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl leading-tight max-w-4xl mx-auto px-4 font-sans font-extrabold lg:text-5xl">
             A aula que vai mostrar como fazer parte do{" "}
             <span className="text-primary">1% das pessoas</span> que ganham dinheiro na Black Friday, 
             com uma{" "}
