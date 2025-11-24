@@ -71,8 +71,7 @@ const SoudropPro = () => {
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                Agora não é mais só sobre começar. É sobre escalar com automação, dados e estrutura de verdade.
-                Para quem já opera e quer profissionalizar.
+                Enquanto a maioria vende "mais do mesmo", tem gente lucrando com produtos diferentes como esse
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
