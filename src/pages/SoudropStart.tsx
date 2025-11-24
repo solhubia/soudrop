@@ -68,17 +68,13 @@ const SoudropStart = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight">
-              <span className="bg-gradient-to-r from-[hsl(var(--cacador-pink))] to-[hsl(var(--cacador-pink-light))] bg-clip-text text-transparent">
-                EU TE ENTREGO O SISTEMA.
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-[hsl(var(--cacador-yellow))] to-[hsl(48_100%_60%)] bg-clip-text text-transparent">
-                VOCÊ TRANSFORMA EM VENDA.
+              <span className="bg-gradient-to-r from-[hsl(var(--cacador-pink))] via-[hsl(var(--cacador-yellow))] to-[hsl(var(--cacador-pink-light))] bg-clip-text text-transparent">
+                Como lucrar com os produtos da SouDrop mesmo sem ter estoque.
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-[hsl(var(--cacador-text-secondary))] max-w-3xl mx-auto font-medium">
-              Como lucrar com os produtos da SouDrop mesmo sem ter estoque.
+              Não é só um adaptador de serra. É uma máquina de gerar pedidos na mão de quem sabe vender
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
