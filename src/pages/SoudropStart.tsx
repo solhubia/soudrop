@@ -104,7 +104,7 @@ const SoudropStart = () => {
                   size="lg" 
                   className="w-full bg-gradient-to-r from-ice-blue-primary to-ice-cyan hover:from-ice-blue-secondary hover:to-ice-blue-primary text-white font-bold text-sm md:text-lg px-6 md:px-10 py-5 md:py-7 rounded-xl md:rounded-2xl hover:scale-[1.02] active:scale-95 transition-all duration-300 shadow-ice-glow hover:shadow-ice-cyan"
                 >
-                  Começar minha operação automática
+                  Começar agora
                 </Button>
                 
                 <div className="flex items-center justify-center gap-2 pt-2">
@@ -314,7 +314,7 @@ const SoudropStart = () => {
 
             <div className="flex flex-col gap-3 md:gap-4 justify-center pt-4 md:pt-6 px-4">
               <Button onClick={handleCTA} size="lg" className="w-full sm:w-auto sm:mx-auto bg-gradient-to-r from-ice-blue-primary to-ice-cyan hover:from-ice-cyan hover:to-ice-blue-primary text-white font-bold text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 rounded-2xl shadow-ice-cyan hover:shadow-ice-glow transition-all duration-300 transform hover:scale-105">
-                COMEÇAR MINHA OPERAÇÃO AUTOMÁTICA
+                COMEÇAR AGORA
               </Button>
             </div>
 
