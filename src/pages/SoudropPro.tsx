@@ -98,10 +98,6 @@ const SoudropPro = () => {
               <div className="flex items-center gap-6 pt-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="text-sm text-gray-600">12x de R$ 97,90</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
                   <span className="text-sm text-gray-600">120 dias de garantia</span>
                 </div>
               </div>
@@ -185,7 +181,6 @@ const SoudropPro = () => {
             <Card className="border-2 border-gray-300">
               <CardHeader className="bg-gray-50 border-b-2 border-gray-200">
                 <CardTitle className="text-3xl text-gray-900">SouDrop START</CardTitle>
-                <CardDescription className="text-2xl font-bold text-gray-700">R$ 499,90</CardDescription>
               </CardHeader>
               <CardContent className="p-8 space-y-4">
                 <div className="flex items-center gap-3">
@@ -216,7 +211,6 @@ const SoudropPro = () => {
                 <CardTitle className="text-3xl bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">
                   SouDrop PRO
                 </CardTitle>
-                <CardDescription className="text-2xl font-bold text-gray-900">R$ 997,90</CardDescription>
               </CardHeader>
               <CardContent className="p-8 space-y-4">
                 <div className="flex items-center gap-3">
@@ -372,8 +366,6 @@ const SoudropPro = () => {
             
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border-2 border-white/20">
               <div className="space-y-3">
-                <div className="text-4xl lg:text-5xl font-bold">R$ 997,90</div>
-                <div className="text-xl lg:text-2xl">ou 12x de R$ 97,90</div>
                 <div className="flex items-center justify-center gap-2 text-green-200">
                   <Shield className="h-5 w-5" />
                   <span>120 dias de garantia</span>
