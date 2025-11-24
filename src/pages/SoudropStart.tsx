@@ -29,7 +29,7 @@ const SoudropStart = () => {
     description: "Dashboard customizado para sua operação"
   }, {
     icon: <BarChart3 className="w-8 h-8" />,
-    title: "Dashboard Limitada",
+    title: "Dashboard",
     description: "Ideal para iniciantes começarem com segurança"
   }, {
     icon: <Shield className="w-8 h-8" />,
