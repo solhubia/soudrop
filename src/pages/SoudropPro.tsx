@@ -47,7 +47,7 @@ const SoudropPro = () => {
     title: "Mini treinamento de leitura e interpretação dos relatórios"
   }];
   const forWho = ["Já fez vendas e quer escalar", "Quer organizar e profissionalizar", "Cansou de trabalhar no manual", "Busca visão clara dos números", "Precisa de tecnologia para crescer"];
-  return <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+  return <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-16 pb-24 px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-purple-50 to-blue-50 opacity-60" />
@@ -63,15 +63,15 @@ const SoudropPro = () => {
                 </span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
                 Fórmula mágica 10K em Vendas
               </h1>
               
-              <p className="text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed">
+              <p className="text-xl lg:text-2xl text-white font-medium leading-relaxed">
                 O método simples para vender sem estoque
               </p>
 
-              <p className="text-base lg:text-lg text-gray-600 leading-relaxed max-w-2xl">
+              <p className="text-base lg:text-lg text-white/90 leading-relaxed max-w-2xl">
                 Passo a passo prático para encontrar produtos certos, anunciar do jeito certo e vender todos os dias usando marketplaces — sem investir em estoque.
               </p>
               
@@ -84,12 +84,12 @@ const SoudropPro = () => {
               
               <div className="flex items-center gap-6 pt-4">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="text-sm text-gray-600">12x de R$ 97,90</span>
+                  <CheckCircle2 className="h-5 w-5 text-white" />
+                  <span className="text-sm text-white">12x de R$ 97,90</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="text-sm text-gray-600">120 dias de garantia</span>
+                  <CheckCircle2 className="h-5 w-5 text-white" />
+                  <span className="text-sm text-white">120 dias de garantia</span>
                 </div>
               </div>
             </div>
@@ -103,22 +103,22 @@ const SoudropPro = () => {
       </section>
 
       {/* Para Quem É */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-gray-900">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
               Para quem é?
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-white/90">
               Esse plano é para você se:
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {forWho.map((item, index) => <Card key={index} className="border-2 border-gray-200 hover:border-green-500 transition-all duration-300 hover:shadow-lg">
+            {forWho.map((item, index) => <Card key={index} className="border-2 border-white/20 hover:border-green-500 transition-all duration-300 hover:shadow-lg bg-white/10 backdrop-blur-sm">
                 <CardContent className="p-6 flex items-start gap-4">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
-                  <p className="text-gray-900">{item}</p>
+                  <CheckCircle2 className="h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
+                  <p className="text-white">{item}</p>
                 </CardContent>
               </Card>)}
           </div>
@@ -126,27 +126,27 @@ const SoudropPro = () => {
       </section>
 
       {/* Entregáveis */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-gray-800 to-gray-900">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              O que você <span className="text-purple-600">recebe</span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
+              O que você <span className="text-purple-400">recebe</span>
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-white/90">
               Tecnologia + Automação + Educação
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {deliverables.map((item, index) => <Card key={index} className="border-2 border-gray-200 hover:border-purple-500 transition-all duration-300 hover:shadow-xl group">
+            {deliverables.map((item, index) => <Card key={index} className="border-2 border-white/20 hover:border-purple-400 transition-all duration-300 hover:shadow-xl group bg-white/10 backdrop-blur-sm">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-purple-100 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <item.icon className="h-8 w-8 text-purple-600" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-purple-400/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <item.icon className="h-8 w-8 text-purple-400" />
                   </div>
-                  <CardTitle className="text-xl text-purple-600">{item.title}</CardTitle>
+                  <CardTitle className="text-xl text-white">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-gray-700 text-base leading-relaxed">
+                  <CardDescription className="text-white/80 text-base leading-relaxed">
                     {item.description}
                   </CardDescription>
                 </CardContent>
@@ -156,75 +156,75 @@ const SoudropPro = () => {
       </section>
 
       {/* Comparativo START x PRO */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-gray-900">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              START vs <span className="text-green-600">PRO</span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
+              START vs <span className="text-green-400">PRO</span>
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-white/90">
               Compare os planos
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* START */}
-            <Card className="border-2 border-gray-300">
-              <CardHeader className="bg-gray-50 border-b-2 border-gray-200">
-                <CardTitle className="text-3xl text-gray-900">SouDrop START</CardTitle>
-                <CardDescription className="text-2xl font-bold text-gray-700">R$ 499,90</CardDescription>
+            <Card className="border-2 border-white/20 bg-white/5 backdrop-blur-sm">
+              <CardHeader className="bg-white/10 border-b-2 border-white/20">
+                <CardTitle className="text-3xl text-white">SouDrop START</CardTitle>
+                <CardDescription className="text-2xl font-bold text-white/90">R$ 499,90</CardDescription>
               </CardHeader>
               <CardContent className="p-8 space-y-4">
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">3 integrações</span>
+                  <CheckCircle2 className="h-5 w-5 text-white/70" />
+                  <span className="text-white/80">3 integrações</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">Dashboard limitada</span>
+                  <CheckCircle2 className="h-5 w-5 text-white/70" />
+                  <span className="text-white/80">Dashboard limitada</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">Estrutura para começar</span>
+                  <CheckCircle2 className="h-5 w-5 text-white/70" />
+                  <span className="text-white/80">Estrutura para começar</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">Educação para iniciantes</span>
+                  <CheckCircle2 className="h-5 w-5 text-white/70" />
+                  <span className="text-white/80">Educação para iniciantes</span>
                 </div>
               </CardContent>
             </Card>
 
             {/* PRO */}
-            <Card className="border-4 border-green-500 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+            <Card className="border-4 border-green-400 shadow-2xl relative overflow-hidden bg-white/10 backdrop-blur-sm">
+              <div className="absolute top-4 right-4 bg-green-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold">
                 RECOMENDADO
               </div>
-              <CardHeader className="bg-gradient-to-r from-green-50 to-purple-50 border-b-4 border-green-500">
-                <CardTitle className="text-3xl bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">
+              <CardHeader className="bg-gradient-to-r from-green-400/20 to-purple-400/20 border-b-4 border-green-400">
+                <CardTitle className="text-3xl text-white">
                   SouDrop PRO
                 </CardTitle>
-                <CardDescription className="text-2xl font-bold text-gray-900">R$ 997,90</CardDescription>
+                <CardDescription className="text-2xl font-bold text-white">R$ 997,90</CardDescription>
               </CardHeader>
               <CardContent className="p-8 space-y-4">
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-gray-900">6 integrações</span>
+                  <CheckCircle2 className="h-5 w-5 text-green-400" />
+                  <span className="font-semibold text-white">6 integrações</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-gray-900">Lançador automático</span>
+                  <CheckCircle2 className="h-5 w-5 text-green-400" />
+                  <span className="font-semibold text-white">Lançador automático</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-gray-900">Dashboards + relatórios completos</span>
+                  <CheckCircle2 className="h-5 w-5 text-green-400" />
+                  <span className="font-semibold text-white">Dashboards + relatórios completos</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-gray-900">Gerador de títulos e descrições</span>
+                  <CheckCircle2 className="h-5 w-5 text-green-400" />
+                  <span className="font-semibold text-white">Gerador de títulos e descrições</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-gray-900">Educação avançada focada em escala</span>
+                  <CheckCircle2 className="h-5 w-5 text-green-400" />
+                  <span className="font-semibold text-white">Educação avançada focada em escala</span>
                 </div>
               </CardContent>
             </Card>
@@ -233,7 +233,7 @@ const SoudropPro = () => {
       </section>
 
       {/* Apresentação Renan */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-gray-800 to-gray-900">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
@@ -243,17 +243,17 @@ const SoudropPro = () => {
             
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Renan Ferreira</h3>
-                <p className="text-lg text-green-600 font-semibold">
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">Renan Ferreira</h3>
+                <p className="text-lg text-green-400 font-semibold">
                   Especialista em Importação e Marketplaces
                 </p>
               </div>
               
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-white/80 leading-relaxed">
                 <p>
                   Anos de experiência com importação direta da China e vendas nos principais marketplaces: Mercado Livre, Shopee, Amazon e Magalu.
                 </p>
-                <p className="font-semibold text-gray-900">
+                <p className="font-semibold text-white">
                   Meu objetivo: ajudar você a organizar, profissionalizar e escalar sua operação com tecnologia e processos que funcionam.
                 </p>
               </div>
@@ -263,21 +263,21 @@ const SoudropPro = () => {
       </section>
 
       {/* Benefícios */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-gray-900">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              Por que escolher o <span className="text-blue-600">PRO</span>?
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
+              Por que escolher o <span className="text-blue-400">PRO</span>?
             </h2>
           </div>
           
           <div className="space-y-6 max-w-4xl mx-auto">
-            {benefits.map((benefit, index) => <Card key={index} className="border-2 border-gray-200 hover:border-blue-500 transition-all duration-300">
+            {benefits.map((benefit, index) => <Card key={index} className="border-2 border-white/20 hover:border-blue-400 transition-all duration-300 bg-white/10 backdrop-blur-sm">
                 <CardContent className="p-6 flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Zap className="h-6 w-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Zap className="h-6 w-6 text-blue-400" />
                   </div>
-                  <p className="text-lg font-medium text-gray-900">{benefit}</p>
+                  <p className="text-lg font-medium text-white">{benefit}</p>
                 </CardContent>
               </Card>)}
           </div>
@@ -285,21 +285,21 @@ const SoudropPro = () => {
       </section>
 
       {/* Bônus */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-gray-800 to-gray-900">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              Bônus <span className="text-purple-600">Exclusivos</span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
+              Bônus <span className="text-purple-400">Exclusivos</span>
             </h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {bonuses.map((bonus, index) => <Card key={index} className="border-2 border-purple-200 hover:border-purple-500 transition-all duration-300 hover:shadow-xl text-center">
+            {bonuses.map((bonus, index) => <Card key={index} className="border-2 border-white/20 hover:border-purple-400 transition-all duration-300 hover:shadow-xl text-center bg-white/10 backdrop-blur-sm">
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto">
-                    <bonus.icon className="h-8 w-8 text-purple-600" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-2xl flex items-center justify-center mx-auto">
+                    <bonus.icon className="h-8 w-8 text-purple-400" />
                   </div>
-                  <p className="font-semibold text-gray-900">{bonus.title}</p>
+                  <p className="font-semibold text-white">{bonus.title}</p>
                 </CardContent>
               </Card>)}
           </div>
@@ -307,38 +307,38 @@ const SoudropPro = () => {
       </section>
 
       {/* Prova Social */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-gray-900">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-4 gap-6 text-center">
-            <Card className="border-2 border-green-200 bg-gradient-to-br from-green-50 to-white">
+            <Card className="border-2 border-green-400/30 bg-gradient-to-br from-green-400/10 to-white/5 backdrop-blur-sm">
               <CardContent className="p-6">
-                <Users className="h-10 w-10 text-green-600 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">+500</div>
-                <p className="text-sm text-gray-600">Vendedores ativos</p>
+                <Users className="h-10 w-10 text-green-400 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white mb-1">+500</div>
+                <p className="text-sm text-white/80">Vendedores ativos</p>
               </CardContent>
             </Card>
             
-            <Card className="border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-white">
+            <Card className="border-2 border-purple-400/30 bg-gradient-to-br from-purple-400/10 to-white/5 backdrop-blur-sm">
               <CardContent className="p-6">
-                <Activity className="h-10 w-10 text-purple-600 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">+1000</div>
-                <p className="text-sm text-gray-600">Operações rodando</p>
+                <Activity className="h-10 w-10 text-purple-400 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white mb-1">+1000</div>
+                <p className="text-sm text-white/80">Operações rodando</p>
               </CardContent>
             </Card>
             
-            <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white">
+            <Card className="border-2 border-blue-400/30 bg-gradient-to-br from-blue-400/10 to-white/5 backdrop-blur-sm">
               <CardContent className="p-6">
-                <Link2 className="h-10 w-10 text-blue-600 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">+3000</div>
-                <p className="text-sm text-gray-600">Integrações ativas</p>
+                <Link2 className="h-10 w-10 text-blue-400 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white mb-1">+3000</div>
+                <p className="text-sm text-white/80">Integrações ativas</p>
               </CardContent>
             </Card>
             
-            <Card className="border-2 border-pink-200 bg-gradient-to-br from-pink-50 to-white">
+            <Card className="border-2 border-pink-400/30 bg-gradient-to-br from-pink-400/10 to-white/5 backdrop-blur-sm">
               <CardContent className="p-6">
-                <Award className="h-10 w-10 text-pink-600 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">100%</div>
-                <p className="text-sm text-gray-600">Tecnologia própria</p>
+                <Award className="h-10 w-10 text-pink-400 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white mb-1">100%</div>
+                <p className="text-sm text-white/80">Tecnologia própria</p>
               </CardContent>
             </Card>
           </div>
@@ -379,7 +379,7 @@ const SoudropPro = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-8 px-4">
+      <footer className="bg-gray-900 text-white/60 py-8 px-4">
         <div className="container mx-auto max-w-6xl text-center">
           <p className="text-sm">
             © 2024 SouDrop. Todos os direitos reservados.
