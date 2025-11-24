@@ -5,98 +5,72 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import renanFerreira from "@/assets/renan-ferreira.jpg";
 import dashboardPreview from "@/assets/dashboard-preview.png";
-
 const SoudropStart = () => {
   const navigate = useNavigate();
-  
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=Register&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=2&formColor=1';
     script.async = true;
     document.body.appendChild(script);
-    
     return () => {
       document.body.removeChild(script);
     };
   }, []);
-  
   const handleCTA = () => {
     window.open('https://event.webinarjam.com/register/8wgw0kty', '_blank');
   };
-
-  const entregaveis = [
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "3 Integrações Liberadas",
-      description: "Conecte suas principais vendas nos marketplaces"
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Home Personalizada",
-      description: "Dashboard customizado para sua operação"
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Dashboard Limitada",
-      description: "Ideal para iniciantes começarem com segurança"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "120 Dias de Garantia",
-      description: "Garantia operacional completa"
-    },
-    {
-      icon: <BookOpen className="w-8 h-8" />,
-      title: "Treinamento Prático",
-      description: "Direto ao ponto, sem enrolação"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Comunidade Exclusiva",
-      description: "Acesso à rede de importadores ativos"
-    }
-  ];
-
-  const beneficios = [
-    "Comece do jeito certo sem perder dinheiro",
-    "Evite erros que fazem iniciantes quebrarem",
-    "Aprenda a escolher produtos com dados reais",
-    "Evite produtos proibidos e de alto risco",
-    "Aplique processos validados por quem opera no dia a dia",
-    "Tenha suporte + tecnologia para acelerar resultados"
-  ];
-
-  const bonus = [
-    {
-      icon: <CheckCircle2 className="w-6 h-6" />,
-      title: "Checklist Inteligente de Importação",
-      description: "Passo a passo completo para não errar"
-    },
-    {
-      icon: <Package className="w-6 h-6" />,
-      title: "Lista de Fornecedores Reais",
-      description: "Contatos validados de fábricas confiáveis"
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Framework de Validação",
-      description: "Metodologia para escolher produtos vencedores"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Mini Treinamento de Margem",
-      description: "Como calcular preço e lucro corretamente"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-ice-bg-main text-ice-text-primary">
+  const entregaveis = [{
+    icon: <Zap className="w-8 h-8" />,
+    title: "3 Integrações Liberadas",
+    description: "Conecte suas principais vendas nos marketplaces"
+  }, {
+    icon: <Target className="w-8 h-8" />,
+    title: "Home Personalizada",
+    description: "Dashboard customizado para sua operação"
+  }, {
+    icon: <BarChart3 className="w-8 h-8" />,
+    title: "Dashboard Limitada",
+    description: "Ideal para iniciantes começarem com segurança"
+  }, {
+    icon: <Shield className="w-8 h-8" />,
+    title: "120 Dias de Garantia",
+    description: "Garantia operacional completa"
+  }, {
+    icon: <BookOpen className="w-8 h-8" />,
+    title: "Treinamento Prático",
+    description: "Direto ao ponto, sem enrolação"
+  }, {
+    icon: <Users className="w-8 h-8" />,
+    title: "Comunidade Exclusiva",
+    description: "Acesso à rede de importadores ativos"
+  }];
+  const beneficios = ["Comece do jeito certo sem perder dinheiro", "Evite erros que fazem iniciantes quebrarem", "Aprenda a escolher produtos com dados reais", "Evite produtos proibidos e de alto risco", "Aplique processos validados por quem opera no dia a dia", "Tenha suporte + tecnologia para acelerar resultados"];
+  const bonus = [{
+    icon: <CheckCircle2 className="w-6 h-6" />,
+    title: "Checklist Inteligente de Importação",
+    description: "Passo a passo completo para não errar"
+  }, {
+    icon: <Package className="w-6 h-6" />,
+    title: "Lista de Fornecedores Reais",
+    description: "Contatos validados de fábricas confiáveis"
+  }, {
+    icon: <Target className="w-6 h-6" />,
+    title: "Framework de Validação",
+    description: "Metodologia para escolher produtos vencedores"
+  }, {
+    icon: <TrendingUp className="w-6 h-6" />,
+    title: "Mini Treinamento de Margem",
+    description: "Como calcular preço e lucro corretamente"
+  }];
+  return <div className="min-h-screen bg-ice-bg-main text-ice-text-primary">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-ice-hero" />
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-ice-blue-primary rounded-full blur-[120px] opacity-20 animate-pulse" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-ice-cyan rounded-full blur-[150px] opacity-15 animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-ice-cyan rounded-full blur-[150px] opacity-15 animate-pulse" style={{
+          animationDelay: '1s'
+        }} />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-ice-purple rounded-full blur-[200px] opacity-10" />
         </div>
         
@@ -125,20 +99,10 @@ const SoudropStart = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                <Button 
-                  onClick={handleCTA} 
-                  size="lg" 
-                  className="bg-gradient-to-r from-ice-blue-primary to-ice-cyan hover:from-ice-blue-secondary hover:to-ice-blue-primary text-white font-bold text-lg px-10 py-7 rounded-2xl hover:scale-105 transition-all duration-300 shadow-ice-glow hover:shadow-ice-cyan"
-                >
+                <Button onClick={handleCTA} size="lg" className="bg-gradient-to-r from-ice-blue-primary to-ice-cyan hover:from-ice-blue-secondary hover:to-ice-blue-primary text-white font-bold text-lg px-10 py-7 rounded-2xl hover:scale-105 transition-all duration-300 shadow-ice-glow hover:shadow-ice-cyan">
                   Começar minha operação automática
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-2 border-ice-blue-primary text-ice-blue-primary hover:bg-ice-blue-primary hover:text-white font-bold text-lg px-10 py-7 rounded-2xl transition-all duration-300"
-                >
-                  Ver como a SouDrop funciona
-                </Button>
+                
               </div>
 
               <div className="flex flex-wrap items-center gap-6 pt-4">
@@ -151,11 +115,7 @@ const SoudropStart = () => {
             
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-ice-blue-primary to-ice-cyan rounded-3xl blur-3xl opacity-20 animate-pulse" />
-              <img 
-                src={dashboardPreview} 
-                alt="Dashboard SouDrop" 
-                className="relative rounded-3xl shadow-2xl border-4 border-ice-border" 
-              />
+              <img src={dashboardPreview} alt="Dashboard SouDrop" className="relative rounded-3xl shadow-2xl border-4 border-ice-border" />
             </div>
           </div>
         </div>
@@ -176,11 +136,7 @@ const SoudropStart = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {entregaveis.map((item, index) => (
-              <Card 
-                key={index} 
-                className="bg-ice-bg-card border border-ice-border hover:border-ice-blue-primary transition-all duration-300 hover:scale-105 hover:shadow-ice-glow"
-              >
+            {entregaveis.map((item, index) => <Card key={index} className="bg-ice-bg-card border border-ice-border hover:border-ice-blue-primary transition-all duration-300 hover:scale-105 hover:shadow-ice-glow">
                 <CardContent className="p-6 space-y-4">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-ice-blue-primary/20 to-ice-cyan/10 flex items-center justify-center text-ice-blue-primary">
                     {item.icon}
@@ -188,8 +144,7 @@ const SoudropStart = () => {
                   <h3 className="text-xl font-bold text-ice-text-primary">{item.title}</h3>
                   <p className="text-ice-text-secondary">{item.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -204,11 +159,7 @@ const SoudropStart = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-ice-blue-primary to-ice-cyan rounded-3xl blur-2xl opacity-20" />
-              <img 
-                src={renanFerreira} 
-                alt="Renan Ferreira" 
-                className="relative rounded-3xl shadow-2xl w-full border-2 border-ice-border" 
-              />
+              <img src={renanFerreira} alt="Renan Ferreira" className="relative rounded-3xl shadow-2xl w-full border-2 border-ice-border" />
             </div>
             
             <div className="space-y-6">
@@ -258,15 +209,10 @@ const SoudropStart = () => {
           </div>
 
           <div className="space-y-4">
-            {beneficios.map((beneficio, index) => (
-              <div 
-                key={index} 
-                className="flex items-start gap-4 bg-ice-bg-card border border-ice-border rounded-2xl p-6 hover:border-ice-blue-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-ice-glow"
-              >
+            {beneficios.map((beneficio, index) => <div key={index} className="flex items-start gap-4 bg-ice-bg-card border border-ice-border rounded-2xl p-6 hover:border-ice-blue-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-ice-glow">
                 <CheckCircle2 className="w-7 h-7 text-ice-blue-primary flex-shrink-0 mt-1" />
                 <p className="text-lg font-medium text-ice-text-primary">{beneficio}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -294,11 +240,7 @@ const SoudropStart = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {bonus.map((item, index) => (
-              <Card 
-                key={index} 
-                className="bg-ice-bg-card border border-ice-cyan/30 hover:border-ice-cyan transition-all duration-300 hover:scale-105 hover:shadow-ice-cyan"
-              >
+            {bonus.map((item, index) => <Card key={index} className="bg-ice-bg-card border border-ice-cyan/30 hover:border-ice-cyan transition-all duration-300 hover:scale-105 hover:shadow-ice-cyan">
                 <CardContent className="p-6 space-y-4">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-ice-cyan to-ice-blue-primary flex items-center justify-center text-ice-bg-main">
                     {item.icon}
@@ -306,8 +248,7 @@ const SoudropStart = () => {
                   <h3 className="text-xl font-bold text-ice-text-primary">{item.title}</h3>
                   <p className="text-ice-text-secondary">{item.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -380,7 +321,9 @@ const SoudropStart = () => {
         <div className="absolute inset-0 bg-gradient-ice-hero" />
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-ice-blue-primary rounded-full blur-[150px] opacity-20 animate-pulse" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-ice-cyan rounded-full blur-[150px] opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-ice-cyan rounded-full blur-[150px] opacity-20 animate-pulse" style={{
+          animationDelay: '1s'
+        }} />
         </div>
 
         <div className="container mx-auto max-w-4xl relative z-10 text-center space-y-12">
@@ -409,11 +352,7 @@ const SoudropStart = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button 
-                onClick={handleCTA} 
-                size="lg" 
-                className="bg-gradient-to-r from-ice-blue-primary to-ice-cyan hover:from-ice-cyan hover:to-ice-blue-primary text-white font-bold text-xl px-12 py-8 rounded-2xl shadow-ice-cyan hover:shadow-ice-glow transition-all duration-300 transform hover:scale-105"
-              >
+              <Button onClick={handleCTA} size="lg" className="bg-gradient-to-r from-ice-blue-primary to-ice-cyan hover:from-ice-cyan hover:to-ice-blue-primary text-white font-bold text-xl px-12 py-8 rounded-2xl shadow-ice-cyan hover:shadow-ice-glow transition-all duration-300 transform hover:scale-105">
                 COMEÇAR MINHA OPERAÇÃO AUTOMÁTICA
               </Button>
             </div>
@@ -444,8 +383,6 @@ const SoudropStart = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default SoudropStart;
