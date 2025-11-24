@@ -78,15 +78,19 @@ const SoudropPro = () => {
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Fórmula mágica 10K em Vendas
+                ATENÇÃO: existe uma fórmula simples (quase injusta) que está fazendo pessoas comuns baterem 10K/mês — e ninguém quer que você saiba.
               </h1>
               
               <p className="text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed">
-                O método simples para vender sem estoque
+                Enquanto os "especialistas" complicam, quem aprende isso aqui… vende todos os dias.
               </p>
 
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed max-w-2xl">
-                Passo a passo prático para encontrar produtos certos, anunciar do jeito certo e vender todos os dias usando marketplaces — sem investir em estoque.
+                É simples. É direto. É lucrativo. E você vai aprender AO VIVO.
+              </p>
+
+              <p className="text-base lg:text-lg text-gray-700 font-semibold leading-relaxed max-w-2xl">
+                👉 Participe da aula e veja você mesmo essa "fórmula mágica" funcionando.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
