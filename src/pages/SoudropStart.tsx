@@ -80,7 +80,7 @@ const SoudropStart = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-[hsl(var(--cacador-text-secondary))] max-w-3xl mx-auto font-medium">
-              Estrutura completa + educação aplicada para você começar a importar e vender com segurança
+              Não é só um adaptador de serra. É uma máquina de gerar pedidos na mão de quem sabe vender
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
