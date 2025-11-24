@@ -69,13 +69,11 @@ const SoudropStart = () => {
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight">
               <span className="bg-gradient-to-r from-[hsl(var(--cacador-pink))] to-[hsl(var(--cacador-pink-light))] bg-clip-text text-transparent">
-                EU TE ENTREGO
+                EU TE ENTREGO O SISTEMA.
               </span>
               <br />
-              <span className="text-white">A RECEITA.</span>
-              <br />
               <span className="bg-gradient-to-r from-[hsl(var(--cacador-yellow))] to-[hsl(48_100%_60%)] bg-clip-text text-transparent">
-                VOCÊ FAZ O BOLO.
+                VOCÊ TRANSFORMA EM VENDA.
               </span>
             </h1>
             
