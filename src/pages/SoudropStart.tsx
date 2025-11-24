@@ -22,29 +22,29 @@ const SoudropStart = () => {
   const entregaveis = [{
     icon: <Zap className="w-8 h-8" />,
     title: "3 Integrações Liberadas",
-    description: "Conecte suas principais vendas nos marketplaces"
+    description: "Conecte seus marketplaces"
   }, {
     icon: <Target className="w-8 h-8" />,
     title: "Home Personalizada",
-    description: "Dashboard customizado para sua operação"
+    description: "Dashboard sob medida"
   }, {
     icon: <BarChart3 className="w-8 h-8" />,
-    title: "Dashboard",
-    description: "Ideal para iniciantes começarem com segurança"
+    title: "Dashboard Completo",
+    description: "Controle total das vendas"
   }, {
     icon: <Shield className="w-8 h-8" />,
     title: "120 Dias de Garantia",
-    description: "Garantia operacional completa"
+    description: "Risco zero"
   }, {
     icon: <BookOpen className="w-8 h-8" />,
     title: "Treinamento Prático",
-    description: "Direto ao ponto, sem enrolação"
+    description: "Zero enrolação"
   }, {
     icon: <Users className="w-8 h-8" />,
     title: "Comunidade Exclusiva",
-    description: "Acesso à rede de importadores ativos"
+    description: "Rede de importadores"
   }];
-  const beneficios = ["Comece do jeito certo sem perder dinheiro", "Evite erros que fazem iniciantes quebrarem", "Aprenda a escolher produtos com dados reais", "Evite produtos proibidos e de alto risco", "Aplique processos validados por quem opera no dia a dia", "Tenha suporte + tecnologia para acelerar resultados"];
+  const beneficios = ["Comece certo, sem erros caros", "Escolha produtos com dados reais", "Evite produtos proibidos", "Processos validados na prática", "Suporte + tecnologia inclusos"];
   const bonus = [{
     icon: <CheckCircle2 className="w-6 h-6" />,
     title: "Checklist Inteligente de Importação",
@@ -86,16 +86,16 @@ const SoudropStart = () => {
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
                 <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                  Enquanto você se diverte, suas vendas não param
+                  Suas vendas não param. Você sim.
                 </span>
               </h1>
               
               <p className="text-xl sm:text-2xl md:text-3xl text-ice-text-primary font-semibold">
-                Seu negócio continua rodando, mesmo quando você está longe de casa.
+                Negócio automático que roda sozinho.
               </p>
 
               <p className="text-base md:text-lg text-ice-text-secondary leading-relaxed">
-                A proposta da SouDrop é simples: você monta sua operação uma vez e deixa a estrutura trabalhar por você. Com automações de anúncios, integração com marketplaces e logística organizada, você não precisa estar "no computador o dia inteiro" pra faturar. Seja esquiando, viajando ou descansando, sua loja continua online, recebendo pedidos e gerando resultados.
+                Monte uma vez. Automatize tudo. Venda dormindo.
               </p>
 
               <div className="flex flex-col gap-3 md:gap-4 pt-4 md:pt-6">
@@ -178,17 +178,13 @@ const SoudropStart = () => {
               </h2>
               
               <p className="text-base md:text-lg text-ice-text-secondary leading-relaxed">
-                Especialista em Importação e Operação Real de E-commerce. Há anos trabalho com importação direta da China, lidando diariamente com fábricas, fornecedores, containers e toda a operação logística necessária para trazer produtos do outro lado do mundo.
-              </p>
-              
-              <p className="text-base md:text-lg text-ice-text-secondary leading-relaxed">
-                Também tenho experiência prática com vendas nos principais marketplaces do Brasil: <span className="text-ice-blue-primary font-semibold">Mercado Livre, Shopee, Amazon e Magalu</span>.
+                Anos importando da China e vendendo nos principais marketplaces: <span className="text-ice-blue-primary font-semibold">Mercado Livre, Shopee, Amazon e Magalu</span>.
               </p>
 
               <div className="bg-ice-bg-card border border-ice-blue-primary rounded-xl md:rounded-2xl p-5 md:p-6">
-                <p className="text-lg md:text-xl font-bold text-ice-text-primary mb-2">Meu Compromisso:</p>
+                <p className="text-lg md:text-xl font-bold text-ice-text-primary mb-2">Compromisso:</p>
                 <p className="text-sm md:text-base text-ice-text-secondary">
-                  Não ensino teoria — ensino <span className="text-ice-cyan font-bold">prática. Processo. Método</span>. O que funciona na vida real.
+                  Zero teoria. <span className="text-ice-cyan font-bold">100% prática validada</span>.
                 </p>
               </div>
             </div>
@@ -267,12 +263,12 @@ const SoudropStart = () => {
               </h2>
               
               <p className="text-base sm:text-lg md:text-xl text-ice-text-secondary max-w-2xl mx-auto px-4">
-                Se dentro de 120 dias você não conseguir resultados aplicando nosso método, devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.
+                Não deu resultado em 120 dias? Devolvemos 100%. Sem enrolação.
               </p>
 
               <div className="pt-2 md:pt-4">
                 <p className="text-base md:text-lg font-bold text-ice-text-primary">
-                  Você não tem <span className="text-ice-blue-primary">NADA</span> a perder.
+                  Risco <span className="text-ice-blue-primary">ZERO</span>.
                 </p>
               </div>
             </div>
