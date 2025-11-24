@@ -281,7 +281,7 @@ const SoudropPro = () => {
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Zap className="h-6 w-6 text-blue-600" />
                   </div>
-                  <p className="text-lg font-medium text-gray-900">{benefit}</p>
+                  <p className="text-lg font-medium text-slate-50">{benefit}</p>
                 </CardContent>
               </Card>)}
           </div>
