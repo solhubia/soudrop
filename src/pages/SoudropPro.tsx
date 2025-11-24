@@ -185,19 +185,19 @@ const SoudropPro = () => {
               <CardContent className="p-8 space-y-4">
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">3 integrações</span>
+                  <span className="text-gray-900">3 integrações</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">Dashboard limitada</span>
+                  <span className="text-gray-900">Dashboard limitada</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">Estrutura para começar</span>
+                  <span className="text-gray-900">Estrutura para começar</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-700">Educação para iniciantes</span>
+                  <span className="text-gray-900">Educação para iniciantes</span>
                 </div>
               </CardContent>
             </Card>
@@ -321,7 +321,7 @@ const SoudropPro = () => {
               <CardContent className="p-6">
                 <Users className="h-10 w-10 text-green-600 mx-auto mb-3" />
                 <div className="text-3xl font-bold text-gray-900 mb-1">+500</div>
-                <p className="text-sm text-gray-600">Vendedores ativos</p>
+                <p className="text-sm text-gray-700">Vendedores ativos</p>
               </CardContent>
             </Card>
             
@@ -329,7 +329,7 @@ const SoudropPro = () => {
               <CardContent className="p-6">
                 <Activity className="h-10 w-10 text-purple-600 mx-auto mb-3" />
                 <div className="text-3xl font-bold text-gray-900 mb-1">+1000</div>
-                <p className="text-sm text-gray-600">Operações rodando</p>
+                <p className="text-sm text-gray-700">Operações rodando</p>
               </CardContent>
             </Card>
             
@@ -337,7 +337,7 @@ const SoudropPro = () => {
               <CardContent className="p-6">
                 <Link2 className="h-10 w-10 text-blue-600 mx-auto mb-3" />
                 <div className="text-3xl font-bold text-gray-900 mb-1">+3000</div>
-                <p className="text-sm text-gray-600">Integrações ativas</p>
+                <p className="text-sm text-gray-700">Integrações ativas</p>
               </CardContent>
             </Card>
             
@@ -345,7 +345,7 @@ const SoudropPro = () => {
               <CardContent className="p-6">
                 <Award className="h-10 w-10 text-pink-600 mx-auto mb-3" />
                 <div className="text-3xl font-bold text-gray-900 mb-1">100%</div>
-                <p className="text-sm text-gray-600">Tecnologia própria</p>
+                <p className="text-sm text-gray-700">Tecnologia própria</p>
               </CardContent>
             </Card>
           </div>
