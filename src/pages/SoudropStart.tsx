@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Zap, Shield, Users, BookOpen, Trophy, Gift, TrendingUp, Target, BarChart3, Package, Snowflake, Mountain } from "lucide-react";
 import renanFerreira from "@/assets/renan-ferreira.jpg";
+import dashboardPreview from "@/assets/dashboard-preview.png";
 
 const SoudropStart = () => {
   const handleCTA = () => {
@@ -139,12 +140,11 @@ const SoudropStart = () => {
             
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-ice-blue-primary to-ice-cyan rounded-3xl blur-3xl opacity-20 animate-pulse" />
-              <div className="relative bg-ice-bg-card border-2 border-ice-border rounded-3xl p-8 shadow-ice-cyan">
-                <Mountain className="w-full h-64 text-ice-cyan opacity-20" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Snowflake className="w-32 h-32 text-ice-blue-primary opacity-30 animate-spin" style={{ animationDuration: '20s' }} />
-                </div>
-              </div>
+              <img 
+                src={dashboardPreview} 
+                alt="Dashboard SouDrop" 
+                className="relative rounded-3xl shadow-2xl border-4 border-ice-border" 
+              />
             </div>
           </div>
         </div>
