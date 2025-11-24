@@ -350,7 +350,7 @@ const SoudropElite = () => {
                 </div>
 
                 <Button onClick={handleCTA} className="w-full bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-xl px-12 py-8 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
-                  QUERO COMEÇAR A VENDER DE CASA
+                  COMEÇAR AGORA
                 </Button>
 
                 <p className="mt-6 text-elite-white/50 text-sm">
@@ -378,7 +378,7 @@ const SoudropElite = () => {
           </p>
           
           <Button onClick={handleCTA} className="bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-xl px-16 py-8 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
-            QUERO COMEÇAR AGORA
+            COMEÇAR AGORA
           </Button>
 
           <p className="mt-8 text-elite-gold font-semibold text-lg">
