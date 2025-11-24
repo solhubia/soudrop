@@ -12,13 +12,20 @@ const SoudropStart = () => {
     script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=Register&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=2&formColor=1';
     script.async = true;
     document.body.appendChild(script);
+    
+    // Script do botão embed
+    const embedScript = document.createElement('script');
+    embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
+    embedScript.async = true;
+    document.body.appendChild(embedScript);
+    
     return () => {
       document.body.removeChild(script);
+      if (document.body.contains(embedScript)) {
+        document.body.removeChild(embedScript);
+      }
     };
   }, []);
-  const handleCTA = () => {
-    window.open('https://event.webinarjam.com/register/8wgw0kty', '_blank');
-  };
   const entregaveis = [{
     icon: <Zap className="w-8 h-8" />,
     title: "3 Integrações Liberadas",
@@ -99,13 +106,32 @@ const SoudropStart = () => {
               </p>
 
               <div className="flex flex-col gap-3 pt-2 md:pt-6">
-                <Button 
-                  onClick={handleCTA} 
-                  size="lg" 
-                  className="w-full bg-gradient-to-r from-ice-blue-primary to-ice-cyan hover:from-ice-blue-secondary hover:to-ice-blue-primary text-white font-bold text-sm md:text-lg px-6 md:px-10 py-5 md:py-7 rounded-xl md:rounded-2xl hover:scale-[1.02] active:scale-95 transition-all duration-300 shadow-ice-glow hover:shadow-ice-cyan"
-                >
-                  Começar agora
-                </Button>
+                <div style={{ textAlign: 'center', width: '100%' }}>
+                  <button 
+                    type="button" 
+                    className="wj-embed-button" 
+                    data-webinarHash="8wgw0kty" 
+                    style={{
+                      border: '2px solid rgba(0, 0, 0, 0.5)',
+                      background: 'rgba(41, 182, 246, 0.95)',
+                      color: 'rgb(255, 255, 255)',
+                      fontSize: '24px',
+                      padding: '18px 80px',
+                      boxShadow: 'none',
+                      borderRadius: '4px',
+                      whiteSpace: 'normal',
+                      fontWeight: '700',
+                      lineHeight: '1.3',
+                      cursor: 'pointer',
+                      fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                      wordBreak: 'break-word',
+                      margin: 'auto',
+                      width: '100%'
+                    }}
+                  >
+                    Começar agora
+                  </button>
+                </div>
                 
                 <div className="flex items-center justify-center gap-2 pt-2">
                   <Shield className="w-4 h-4 text-ice-cyan flex-shrink-0" />
@@ -313,9 +339,33 @@ const SoudropStart = () => {
             </div>
 
             <div className="flex flex-col gap-3 md:gap-4 justify-center pt-4 md:pt-6 px-4">
-              <Button onClick={handleCTA} size="lg" className="w-full sm:w-auto sm:mx-auto bg-gradient-to-r from-ice-blue-primary to-ice-cyan hover:from-ice-cyan hover:to-ice-blue-primary text-white font-bold text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 rounded-2xl shadow-ice-cyan hover:shadow-ice-glow transition-all duration-300 transform hover:scale-105">
-                COMEÇAR AGORA
-              </Button>
+              <div style={{ textAlign: 'center', width: '100%' }}>
+                <button 
+                  type="button" 
+                  className="wj-embed-button" 
+                  data-webinarHash="8wgw0kty" 
+                  style={{
+                    border: '2px solid rgba(0, 0, 0, 0.5)',
+                    background: 'rgba(41, 182, 246, 0.95)',
+                    color: 'rgb(255, 255, 255)',
+                    fontSize: '24px',
+                    padding: '18px 80px',
+                    boxShadow: 'none',
+                    borderRadius: '4px',
+                    whiteSpace: 'normal',
+                    fontWeight: '700',
+                    lineHeight: '1.3',
+                    cursor: 'pointer',
+                    fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                    wordBreak: 'break-word',
+                    margin: 'auto',
+                    width: '100%',
+                    maxWidth: '600px'
+                  }}
+                >
+                  COMEÇAR AGORA
+                </button>
+              </div>
             </div>
 
             <div className="pt-6 md:pt-8 space-y-3 md:space-y-4 px-4">
