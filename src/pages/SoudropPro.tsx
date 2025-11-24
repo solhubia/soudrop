@@ -102,7 +102,7 @@ const SoudropPro = () => {
             
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-purple-400 rounded-3xl blur-2xl opacity-30 animate-pulse" />
-              <img src={dashboardPreview} alt="Dashboard SouDrop PRO" className="relative rounded-3xl shadow-2xl border-8 border-white" />
+              
             </div>
           </div>
         </div>
