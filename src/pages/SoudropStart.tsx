@@ -217,41 +217,6 @@ const SoudropStart = () => {
         </div>
       </section>
 
-      {/* Bônus Section */}
-      <section className="py-20 px-4 bg-ice-bg-card-alt relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-ice-cyan rounded-full blur-[150px] opacity-10" />
-        </div>
-
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4">
-              <div className="flex items-center gap-2 bg-ice-bg-card px-6 py-3 rounded-full border border-ice-cyan">
-                <Gift className="w-6 h-6 text-ice-cyan" />
-                <span className="text-lg font-bold text-ice-text-primary">BÔNUS EXCLUSIVOS</span>
-              </div>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-black">
-              <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                VOCÊ AINDA LEVA ISSO
-              </span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {bonus.map((item, index) => <Card key={index} className="bg-ice-bg-card border border-ice-cyan/30 hover:border-ice-cyan transition-all duration-300 hover:scale-105 hover:shadow-ice-cyan">
-                <CardContent className="p-6 space-y-4">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-ice-cyan to-ice-blue-primary flex items-center justify-center text-ice-bg-main">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-ice-text-primary">{item.title}</h3>
-                  <p className="text-ice-text-secondary">{item.description}</p>
-                </CardContent>
-              </Card>)}
-          </div>
-        </div>
-      </section>
 
       {/* Prova Social / Números */}
       <section className="py-20 px-4">
