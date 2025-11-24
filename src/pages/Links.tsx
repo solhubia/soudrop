@@ -58,7 +58,7 @@ const Index = () => {
                 title="Importe da China"
                 description="Clique aqui para fazer importação"
                 url="https://4k384ufgv64.typeform.com/to/vTnWbUQI"
-                variant="green"
+                variant="red"
                 type="import"
                 onTrack={() => trackLinkClick('import', 'Importe da China')}
               />
@@ -68,7 +68,7 @@ const Index = () => {
               <LinkCard
                 title="Vender sem estoque"
                 description="Acesse o site da Soudrop"
-                url="https://4k384ufgv64.typeform.com/to/rIQVeImj"
+                url="https://soudrop.com.br/black-friday"
                 variant="green"
                 type="website"
                 onTrack={() => trackLinkClick('soudrop', 'Vender sem estoque')}
@@ -80,7 +80,7 @@ const Index = () => {
                 title="Aprender a vender no digital"
                 description="Tudo que você precisa para aprender vender online está aqui"
                 url="https://soudrop.com.br/black-friday"
-                variant="green"
+                variant="blue"
                 type="course"
                 onTrack={() => trackLinkClick('courses', 'Aprender a vender no digital')}
               />
