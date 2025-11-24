@@ -64,10 +64,7 @@ const SoudropPro = () => {
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                Escale sua operação com{" "}
-                <span className="bg-gradient-to-r from-green-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  automação e dados
-                </span>
+                Como vender no Mercado Livre sem ter nenhum estoque.
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
