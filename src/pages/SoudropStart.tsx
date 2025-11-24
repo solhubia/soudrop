@@ -64,57 +64,58 @@ const SoudropStart = () => {
   }];
   return <div className="min-h-screen bg-ice-bg-main text-ice-text-primary">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-12 md:py-20 px-4 min-h-screen flex items-center">
+      <section className="relative overflow-hidden py-16 md:py-20 px-4 min-h-[85vh] md:min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-ice-hero" />
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-ice-blue-primary rounded-full blur-[120px] opacity-20 animate-pulse" />
-          <div className="absolute bottom-20 right-10 w-64 h-64 md:w-96 md:h-96 bg-ice-cyan rounded-full blur-[150px] opacity-15 animate-pulse" style={{
+          <div className="absolute top-10 left-5 w-40 h-40 md:w-72 md:h-72 bg-ice-blue-primary rounded-full blur-[100px] md:blur-[120px] opacity-20 animate-pulse" />
+          <div className="absolute bottom-10 right-5 w-48 h-48 md:w-96 md:h-96 bg-ice-cyan rounded-full blur-[120px] md:blur-[150px] opacity-15 animate-pulse" style={{
           animationDelay: '1s'
         }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-ice-purple rounded-full blur-[200px] opacity-10" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-ice-purple rounded-full blur-[150px] md:blur-[200px] opacity-10" />
         </div>
         
         <div className="container mx-auto relative z-10 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="space-y-6 md:space-y-8">
+            <div className="space-y-5 md:space-y-8">
               <div className="inline-block">
-                <span className="px-4 py-2 md:px-6 md:py-3 bg-ice-bg-card border border-ice-border rounded-full text-xs md:text-sm font-bold text-ice-cyan uppercase tracking-wider">
-                  <Snowflake className="w-3 h-3 md:w-4 md:h-4 inline-block mr-2 -mt-1" />
+                <span className="px-3 py-1.5 md:px-6 md:py-3 bg-ice-bg-card border border-ice-border rounded-full text-[10px] md:text-sm font-bold text-ice-cyan uppercase tracking-wider shadow-lg">
+                  <Snowflake className="w-3 h-3 md:w-4 md:h-4 inline-block mr-1.5 md:mr-2 -mt-1" />
                   Negócio Automatizado
                 </span>
               </div>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
+              <h1 className="text-[32px] leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black">
                 <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
                   Suas vendas não param. Você sim.
                 </span>
               </h1>
               
-              <p className="text-xl sm:text-2xl md:text-3xl text-ice-text-primary font-semibold">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-ice-text-primary font-bold leading-tight">
                 Negócio automático que roda sozinho.
               </p>
 
-              <p className="text-base md:text-lg text-ice-text-secondary leading-relaxed">
+              <p className="text-sm md:text-base lg:text-lg text-ice-text-secondary leading-relaxed max-w-xl">
                 Monte uma vez. Automatize tudo. Venda dormindo.
               </p>
 
-              <div className="flex flex-col gap-3 md:gap-4 pt-4 md:pt-6">
-                <Button onClick={handleCTA} size="lg" className="w-full sm:w-auto bg-gradient-to-r from-ice-blue-primary to-ice-cyan hover:from-ice-blue-secondary hover:to-ice-blue-primary text-white font-bold text-base md:text-lg px-8 md:px-10 py-6 md:py-7 rounded-2xl hover:scale-105 transition-all duration-300 shadow-ice-glow hover:shadow-ice-cyan">
+              <div className="flex flex-col gap-3 pt-2 md:pt-6">
+                <Button 
+                  onClick={handleCTA} 
+                  size="lg" 
+                  className="w-full bg-gradient-to-r from-ice-blue-primary to-ice-cyan hover:from-ice-blue-secondary hover:to-ice-blue-primary text-white font-bold text-sm md:text-lg px-6 md:px-10 py-5 md:py-7 rounded-xl md:rounded-2xl hover:scale-[1.02] active:scale-95 transition-all duration-300 shadow-ice-glow hover:shadow-ice-cyan"
+                >
                   Começar minha operação automática
                 </Button>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-4 md:gap-6 pt-2 md:pt-4">
-                <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4 md:w-5 md:h-5 text-ice-cyan" />
-                  <span className="text-xs md:text-sm text-ice-text-secondary">120 dias de garantia</span>
+                
+                <div className="flex items-center justify-center gap-2 pt-2">
+                  <Shield className="w-4 h-4 text-ice-cyan flex-shrink-0" />
+                  <span className="text-xs md:text-sm text-ice-text-secondary font-medium">120 dias de garantia total</span>
                 </div>
               </div>
             </div>
             
             <div className="relative hidden lg:block">
               <div className="absolute inset-0 bg-gradient-to-r from-ice-blue-primary to-ice-cyan rounded-3xl blur-3xl opacity-20 animate-pulse" />
-              
             </div>
           </div>
         </div>
