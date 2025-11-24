@@ -196,7 +196,7 @@ const SoudropPro = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              Por que escolher o <span className="text-blue-600">PRO</span>?
+              Por que escolher  <span className="text-blue-600">​</span>?
             </h2>
           </div>
           
