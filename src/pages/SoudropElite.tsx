@@ -70,8 +70,7 @@ const SoudropElite = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-elite-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Você não precisa de mais tarefa.<br />
-            Você precisa de <span className="text-elite-gold font-semibold">direção, gestão e estrutura.</span>
+            Não é só sobre produtos, é sobre o sistema por trás de quem vende todo dia
           </p>
 
           <div className="mb-12">
