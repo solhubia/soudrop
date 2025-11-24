@@ -2,14 +2,26 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Zap, Shield, Users, BookOpen, Trophy, Gift, TrendingUp, Target, BarChart3, Package, Snowflake, Mountain } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import renanFerreira from "@/assets/renan-ferreira.jpg";
 import dashboardPreview from "@/assets/dashboard-preview.png";
 
 const SoudropStart = () => {
   const navigate = useNavigate();
   
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=Register&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=2&formColor=1';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+  
   const handleCTA = () => {
-    navigate('/live-importacao');
+    window.open('https://event.webinarjam.com/register/8wgw0kty', '_blank');
   };
 
   const entregaveis = [
