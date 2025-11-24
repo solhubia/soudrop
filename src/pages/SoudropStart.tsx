@@ -115,7 +115,7 @@ const SoudropStart = () => {
             
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-ice-blue-primary to-ice-cyan rounded-3xl blur-3xl opacity-20 animate-pulse" />
-              <img src={heroSoudrop} alt="SouDrop - Negócio Automatizado" className="relative rounded-3xl shadow-2xl border-4 border-ice-border" />
+              
             </div>
           </div>
         </div>
