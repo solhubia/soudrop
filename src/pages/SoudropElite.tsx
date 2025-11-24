@@ -9,46 +9,46 @@ const SoudropElite = () => {
   };
   const pilares = [{
     icon: TrendingUp,
-    title: "Estrutura para FULL e FLEX",
-    description: "Direção estratégica para operar nos modelos Full e Flex. Como usar essas modalidades com inteligência para escalar vendas sem virar refém da logística. Educação e estratégia, não promessa operacional."
-  }, {
-    icon: Award,
-    title: "0 Taxa de Gestão de Vendas",
-    description: "Não cobro taxa de gestão separada. O programa inclui orientação de gestão de vendas. Aqui, a gestão entra como parte da formação, não como mensalidade eterna."
+    title: "Como encontrar produtos para vender",
+    description: "Aprenda a identificar produtos com demanda, que vendem bem e têm margem de lucro interessante. Sem chute, com método."
   }, {
     icon: Target,
-    title: "Gestão de Vendas",
-    description: "Frameworks sobre mix de produtos, precificação prática, giro de estoque, análise de anúncios e campanhas. Faça o aluno enxergar o que dá dinheiro e o que trava o caixa."
+    title: "Onde e como anunciar",
+    description: "Domine os principais marketplaces (Mercado Livre, Shopee, etc) e aprenda a criar anúncios que convertem em vendas."
   }, {
     icon: Briefcase,
-    title: "Gestão de Negócio",
-    description: "Mentalidade de dono. Organização de rotina, processos e indicadores. Saia do modo 'apagar incêndio' e entre no modo 'construir algo escalável'. Ferramentas simples para clareza de decisão."
+    title: "Gestão de pedidos sem estoque",
+    description: "Entenda como funciona o dropshipping e como gerenciar pedidos sem precisar ter produtos em casa."
   }, {
     icon: Calculator,
-    title: "Contabilidade e Estrutura Empresarial",
-    description: "Entendimento de CNPJ, regime tributário adequado, organização fiscal. Educação contábil aplicada para você parar de ser refém da contabilidade e conversar melhor com seu contador."
+    title: "Precificação e lucro real",
+    description: "Calcule corretamente seus custos, defina preços competitivos e garanta que você está lucrando de verdade."
+  }, {
+    icon: Shield,
+    title: "Evite os erros mais comuns",
+    description: "Produtos proibidos, fornecedores ruins, anúncios bloqueados - aprenda o que NÃO fazer para economizar tempo e dinheiro."
   }, {
     icon: GraduationCap,
-    title: "Educação Premium e Acompanhamento",
-    description: "Aulas gravadas + encontros ao vivo. Espaço para dúvidas estratégicas. Materiais de apoio completos. Tudo focado em transformar o dono no gestor do próprio negócio."
+    title: "Suporte e comunidade",
+    description: "Acesso a materiais de apoio, tirando dúvidas e uma comunidade de pessoas que estão no mesmo caminho que você."
   }];
-  const paraQuemE = ["Já vende (ou quer vender) com importação, marketplaces ou e-commerce", "Sente que o problema não é mais só produto, é gestão", "Está cansado de não saber se está realmente ganhando dinheiro", "Faz tudo sozinho, na correria, e sente que o negócio não se sustenta assim", "Quer parar de ser 'eu-presa' e estruturar uma empresa com visão de longo prazo"];
+  const paraQuemE = ["Quer ter uma renda extra trabalhando de casa", "Busca uma fonte de renda principal sem sair de casa", "Não tem capital para investir em estoque", "Quer flexibilidade de horários para trabalhar quando puder", "Tem disposição para aprender algo novo e aplicar"];
   const bonus = [{
     icon: Target,
-    title: "Modelo de Painel de Indicadores",
-    description: "Tenha visibilidade total do seu negócio"
+    title: "Lista de produtos validados",
+    description: "Produtos com boa demanda para você começar"
   }, {
     icon: Calculator,
-    title: "Roteiro para Conversa com Contador",
-    description: "Saiba exatamente o que perguntar e cobrar"
+    title: "Planilha de controle financeiro",
+    description: "Organize suas vendas e lucros facilmente"
   }, {
     icon: TrendingUp,
-    title: "Modelo de Estrutura de Custos",
-    description: "Entenda sua margem real de lucro"
+    title: "Modelos de anúncios prontos",
+    description: "Copie e adapte para seus produtos"
   }, {
     icon: Crown,
-    title: "Checklist de Migração",
-    description: "De eu-presa para empresa de verdade"
+    title: "Checklist do iniciante",
+    description: "Passo a passo do zero até a primeira venda"
   }];
   return <div className="min-h-screen bg-elite-black text-elite-white">
       {/* Hero Premium */}
@@ -62,15 +62,20 @@ const SoudropElite = () => {
           
           <div className="mb-6 inline-flex items-center gap-2 px-6 py-2 border border-elite-gold/30 rounded-full bg-elite-gold/5">
             <Crown className="w-5 h-5 text-elite-gold" />
-            <span className="text-elite-gold text-sm font-medium uppercase tracking-wider">Programa Elite</span>
+            <span className="text-elite-gold text-sm font-medium uppercase tracking-wider">Trabalhe de Casa</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            De <span className="text-elite-gold">Eu-presa</span><br />para <span className="text-elite-gold">Empresa</span>
+            Comece a <span className="text-elite-gold">vender da sua casa</span>,<br />sem estoque e sem complicação
           </h1>
 
           <p className="text-xl md:text-2xl text-elite-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Não é só sobre produtos, é sobre o sistema por trás de quem vende todo dia
+            Transforme um cantinho da sua casa na sua operação de vendas online.
+          </p>
+
+          <p className="text-base md:text-lg text-elite-white/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Se você tem um celular, internet e disposição pra aprender, já tem o básico pra virar vendedor online.
+            Com a SouDrop, você aprende a vender sem precisar comprar produtos antes, sem precisar alugar espaço e sem ter que investir alto.
           </p>
 
           <div className="mb-12">
@@ -79,11 +84,11 @@ const SoudropElite = () => {
           </div>
 
           <Button onClick={handleCTA} className="bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-lg px-12 py-7 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
-            QUERO PARAR DE SER "EU-PRESA"
+            QUERO COMEÇAR A VENDER DE CASA
           </Button>
 
           <p className="mt-6 text-elite-white/50 text-sm">
-            Vagas limitadas • Formação exclusiva
+            Ideal para renda extra ou principal
           </p>
         </div>
       </section>
@@ -91,13 +96,12 @@ const SoudropElite = () => {
       {/* O que é o programa */}
       <section className="py-20 px-6 bg-elite-black border-t border-elite-gold/10">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Transforme sua Operação em <span className="text-elite-gold">Negócio Real</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
+            Como você vai <span className="text-elite-gold">começar a vender</span>
           </h2>
           <p className="text-xl text-elite-white/70 leading-relaxed max-w-3xl mx-auto">
-            Este não é mais um curso de produto. É um programa de <span className="text-elite-gold font-semibold">formação empresarial</span> 
-            focado em gestão, organização e estrutura para você construir um negócio que escala, 
-            não uma operação que te escraviza.
+            Com o método SouDrop, você aprende tudo que precisa para montar sua operação de vendas online,
+            mesmo começando do zero. É prático, direto e funciona.
           </p>
         </div>
       </section>
@@ -106,7 +110,7 @@ const SoudropElite = () => {
       <section className="py-20 px-6 bg-gradient-elite-bg">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            Este Programa é <span className="text-elite-gold">Para Você</span> Se:
+            É ideal para <span className="text-elite-gold">quem quer:</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -122,10 +126,10 @@ const SoudropElite = () => {
       <section className="py-20 px-6 bg-elite-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-            Os 6 Pilares da <span className="text-elite-gold">Formação Elite</span>
+            O que você vai <span className="text-elite-gold">aprender</span>
           </h2>
           <p className="text-center text-elite-white/60 mb-16 text-lg">
-            Educação, estratégia e direção para estruturar seu negócio
+            Tudo que você precisa para começar a vender online
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -150,27 +154,27 @@ const SoudropElite = () => {
         <div className="max-w-4xl mx-auto text-center">
           <Crown className="w-16 h-16 text-elite-gold mx-auto mb-8" />
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            A Transformação que Você Vai Viver
+            Veja como você pode transformar sua realidade
           </h2>
           <div className="grid md:grid-cols-2 gap-8 text-left">
             <div className="p-8 bg-elite-black/50 border border-red-500/30 rounded-xl">
-              <p className="text-red-400 font-bold mb-4 text-lg">❌ ANTES (Eu-presa)</p>
+              <p className="text-red-400 font-bold mb-4 text-lg">❌ ANTES</p>
               <ul className="space-y-3 text-elite-white/70">
-                <li>• Apagando incêndios todo dia</li>
-                <li>• Sem saber se está lucrando</li>
-                <li>• Fazendo tudo sozinho</li>
-                <li>• Refém da operação</li>
-                <li>• Sem clareza de direção</li>
+                <li>• Sem renda extra</li>
+                <li>• Preso ao escritório ou emprego</li>
+                <li>• Sem flexibilidade de horários</li>
+                <li>• Dependendo de um salário fixo</li>
+                <li>• Sem controle da própria agenda</li>
               </ul>
             </div>
             <div className="p-8 bg-elite-gold/10 border border-elite-gold/50 rounded-xl">
-              <p className="text-elite-gold font-bold mb-4 text-lg">✓ DEPOIS (Empresa)</p>
+              <p className="text-elite-gold font-bold mb-4 text-lg">✓ DEPOIS</p>
               <ul className="space-y-3 text-elite-white/90">
-                <li>• Visão clara de números</li>
-                <li>• Gestão de vendas estruturada</li>
-                <li>• Processos organizados</li>
-                <li>• Negócio escalável</li>
-                <li>• Dono com mentalidade empresarial</li>
+                <li>• Vendendo de casa</li>
+                <li>• Trabalhando no seu horário</li>
+                <li>• Renda extra ou principal</li>
+                <li>• Sem precisar de estoque</li>
+                <li>• Mais liberdade e flexibilidade</li>
               </ul>
             </div>
           </div>
@@ -187,31 +191,31 @@ const SoudropElite = () => {
             <div>
               <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 border border-elite-gold/30 rounded-full bg-elite-gold/5">
                 <Crown className="w-4 h-4 text-elite-gold" />
-                <span className="text-elite-gold text-sm font-medium uppercase tracking-wider">Mentor Elite</span>
+                <span className="text-elite-gold text-sm font-medium uppercase tracking-wider">Seu Instrutor</span>
               </div>
               
               <h2 className="text-4xl font-bold mb-6">
                 Renan Ferreira
               </h2>
               <p className="text-xl text-elite-gold mb-6 font-semibold">
-                Mentor em Importação, Operação e Gestão de Negócios
+                Especialista em Vendas Online e Marketplaces
               </p>
               
               <div className="space-y-4 text-elite-white/80 leading-relaxed">
                 <p>
-                  Há anos atuo com <span className="text-elite-gold font-semibold">importação direta da China</span>, 
-                  lidando com fábricas, fornecedores, containers e toda a operação para trazer produtos do outro lado do mundo.
+                  Anos de experiência com <span className="text-elite-gold font-semibold">vendas em marketplaces</span> e 
+                  operação prática nos principais canais: Mercado Livre, Shopee, Amazon e Magalu.
                 </p>
                 <p>
-                  Além disso, tenho experiência prática operando e escalando vendas em 
-                  <span className="text-elite-gold font-semibold"> Mercado Livre, Shopee, Amazon e Magalu</span>.
+                  Também trabalho com <span className="text-elite-gold font-semibold">importação direta da China</span>, 
+                  o que me dá uma visão completa de toda a cadeia.
                 </p>
                 <p className="text-elite-white font-semibold text-lg">
-                  Hoje, meu foco neste programa é formar empresários de verdade:
+                  Meu objetivo é ensinar você do jeito mais prático possível:
                 </p>
                 <p>
-                  Pessoas que entendem números, sabem gerir equipes, estruturam processos e 
-                  <span className="text-elite-gold font-semibold"> constroem negócios que podem crescer</span>.
+                  Sem enrolação, sem teoria demais. Foco em fazer você começar a vender de verdade, 
+                  <span className="text-elite-gold font-semibold"> aplicando o que funciona na prática</span>.
                 </p>
               </div>
             </div>
@@ -224,18 +228,18 @@ const SoudropElite = () => {
         <div className="max-w-4xl mx-auto text-center">
           <Shield className="w-20 h-20 text-elite-gold mx-auto mb-8" />
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Programa de Formação <span className="text-elite-gold">Exclusivo</span>
+            Método <span className="text-elite-gold">Validado</span>
           </h2>
           <div className="space-y-4 text-xl text-elite-white/70 leading-relaxed">
-            <p>Vagas limitadas</p>
-            <p>Formação em gestão para poucos</p>
+            <p>Método testado e comprovado</p>
+            <p>Foco em resultados práticos</p>
             <p className="text-elite-gold font-semibold">
-              Seleção de pessoas dispostas a tratar o negócio como empresa
+              Aprenda com quem já vendeu e continua vendendo todos os dias
             </p>
           </div>
           <div className="mt-12 inline-flex items-center gap-3 px-8 py-4 bg-elite-gold/10 border-2 border-elite-gold rounded-xl">
             <Crown className="w-8 h-8 text-elite-gold" />
-            <span className="text-elite-gold font-bold text-xl uppercase tracking-wide">Acesso Master</span>
+            <span className="text-elite-gold font-bold text-xl uppercase tracking-wide">Acesso Completo</span>
           </div>
         </div>
       </section>
@@ -244,10 +248,10 @@ const SoudropElite = () => {
       <section className="py-20 px-6 bg-elite-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-            Bônus <span className="text-elite-gold">Exclusivos</span>
+            Bônus <span className="text-elite-gold">Inclusos</span>
           </h2>
           <p className="text-center text-elite-white/60 mb-16 text-lg">
-            Ferramentas práticas para acelerar sua transformação
+            Materiais práticos para você começar mais rápido
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -271,23 +275,23 @@ const SoudropElite = () => {
       <section className="py-20 px-6 bg-gradient-elite-bg border-y border-elite-gold/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            Números que Comprovam a <span className="text-elite-gold">Experiência</span>
+            Por que confiar no <span className="text-elite-gold">Método</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 bg-elite-black/50 border border-elite-gold/20 rounded-xl">
               <Users className="w-12 h-12 text-elite-gold mx-auto mb-4" />
               <p className="text-4xl font-bold text-elite-gold mb-2">500+</p>
-              <p className="text-elite-white/60">Alunos Formados</p>
+              <p className="text-elite-white/60">Alunos Ativos</p>
             </div>
             <div className="p-8 bg-elite-black/50 border border-elite-gold/20 rounded-xl">
               <TrendingUp className="w-12 h-12 text-elite-gold mx-auto mb-4" />
               <p className="text-4xl font-bold text-elite-gold mb-2">5+ Anos</p>
-              <p className="text-elite-white/60">Atuando com Importação</p>
+              <p className="text-elite-white/60">de Experiência Prática</p>
             </div>
             <div className="p-8 bg-elite-black/50 border border-elite-gold/20 rounded-xl">
               <Award className="w-12 h-12 text-elite-gold mx-auto mb-4" />
-              <p className="text-4xl font-bold text-elite-gold mb-2">SouDrop</p>
-              <p className="text-elite-white/60">Empresa de Tecnologia</p>
+              <p className="text-4xl font-bold text-elite-gold mb-2">100%</p>
+              <p className="text-elite-white/60">Foco em Prática</p>
             </div>
           </div>
         </div>
@@ -298,10 +302,10 @@ const SoudropElite = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Invista na Sua <span className="text-elite-gold">Formação Empresarial</span>
+              Comece Seu <span className="text-elite-gold">Negócio Online</span>
             </h2>
             <p className="text-xl text-elite-white/60">
-              Programa completo de gestão e estruturação de negócio
+              Tudo que você precisa para vender de casa
             </p>
           </div>
 
@@ -310,12 +314,12 @@ const SoudropElite = () => {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-2 px-6 py-2 bg-elite-gold/10 border border-elite-gold/30 rounded-full mb-6">
                   <Crown className="w-5 h-5 text-elite-gold" />
-                  <span className="text-elite-gold font-bold uppercase tracking-wider">Formação Elite</span>
+                  <span className="text-elite-gold font-bold uppercase tracking-wider">Trabalhe de Casa</span>
                 </div>
                 
                 <h3 className="text-3xl font-bold mb-8">
-                  De Eu-presa para Empresa:<br />
-                  <span className="text-elite-gold">Organização, Gestão e Estrutura</span>
+                  Aprenda a vender online<br />
+                  <span className="text-elite-gold">sem estoque e sem complicação</span>
                 </h3>
 
                 <div className="mb-8">
@@ -330,28 +334,28 @@ const SoudropElite = () => {
                 <div className="space-y-4 mb-8 text-left max-w-md mx-auto">
                   <div className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-elite-gold flex-shrink-0 mt-1" />
-                    <p className="text-elite-white/80">Sem taxa de gestão à parte</p>
+                    <p className="text-elite-white/80">Método completo para iniciantes</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-elite-gold flex-shrink-0 mt-1" />
-                    <p className="text-elite-white/80">6 pilares de formação empresarial</p>
+                    <p className="text-elite-white/80">6 módulos de conteúdo prático</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-elite-gold flex-shrink-0 mt-1" />
-                    <p className="text-elite-white/80">Bônus exclusivos inclusos</p>
+                    <p className="text-elite-white/80">Bônus e materiais inclusos</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-elite-gold flex-shrink-0 mt-1" />
-                    <p className="text-elite-white/80">Domínio total do seu negócio</p>
+                    <p className="text-elite-white/80">Suporte e comunidade exclusiva</p>
                   </div>
                 </div>
 
                 <Button onClick={handleCTA} className="w-full bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-xl px-12 py-8 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
-                  QUERO ESTRUTURAR MEU NEGÓCIO
+                  QUERO COMEÇAR A VENDER DE CASA
                 </Button>
 
                 <p className="mt-6 text-elite-white/50 text-sm">
-                  🔒 Pagamento 100% Seguro • Vagas Limitadas
+                  🔒 Pagamento 100% Seguro
                 </p>
               </div>
             </CardContent>
@@ -364,22 +368,22 @@ const SoudropElite = () => {
         <div className="max-w-4xl mx-auto text-center">
           <Crown className="w-20 h-20 text-elite-gold mx-auto mb-8" />
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Você Não Está Comprando um Curso
+            Está Pronto para Começar?
           </h2>
           <p className="text-2xl text-elite-white/80 mb-8 leading-relaxed">
-            Você está entrando para uma <span className="text-elite-gold font-bold">mesa de negócios</span>
+            Comece hoje a construir sua <span className="text-elite-gold font-bold">renda extra ou principal</span>
           </p>
           <p className="text-xl text-elite-white/60 mb-12 max-w-2xl mx-auto">
-            Um grupo seleto de pessoas dispostas a transformar sua operação em empresa real,
-            com gestão, estrutura e visão de longo prazo.
+            Junte-se a centenas de pessoas que estão aprendendo a vender online de casa,
+            sem estoque e com método validado.
           </p>
           
           <Button onClick={handleCTA} className="bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-xl px-16 py-8 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
-            QUERO ENTRAR PARA ESSE GRUPO
+            QUERO COMEÇAR AGORA
           </Button>
 
           <p className="mt-8 text-elite-gold font-semibold text-lg">
-            ⚡ Vagas Extremamente Limitadas
+            ⚡ Comece hoje mesmo
           </p>
         </div>
       </section>
