@@ -4,19 +4,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import dashboardPreview from "@/assets/dashboard-preview.png";
-
 const SoudropPro = () => {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=Register&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=2&formColor=1';
     script.async = true;
     document.body.appendChild(script);
-    
     return () => {
       document.body.removeChild(script);
     };
   }, []);
-
   const handleCTA = () => {
     window.open('https://event.webinarjam.com/register/8wgw0kty', '_blank');
   };
@@ -127,7 +124,7 @@ const SoudropPro = () => {
             {forWho.map((item, index) => <Card key={index} className="border-2 border-gray-200 hover:border-green-500 transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-6 flex items-start gap-4">
                   <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
-                  <p className="text-gray-900">{item}</p>
+                  <p className="text-slate-50">{item}</p>
                 </CardContent>
               </Card>)}
           </div>
@@ -185,15 +182,15 @@ const SoudropPro = () => {
               <CardContent className="p-8 space-y-4">
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-900">3 integrações</span>
+                  <span className="text-slate-50">3 integrações</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-900">Dashboard limitada</span>
+                  <span className="text-slate-50">Dashboard limitada</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-900">Estrutura para começar</span>
+                  <span className="text-slate-50">Estrutura para começar</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
@@ -215,23 +212,23 @@ const SoudropPro = () => {
               <CardContent className="p-8 space-y-4">
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-gray-900">6 integrações</span>
+                  <span className="font-semibold text-slate-50">6 integrações</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-gray-900">Lançador automático</span>
+                  <span className="font-semibold text-slate-50">Lançador automático</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-gray-900">Dashboards + relatórios completos</span>
+                  <span className="font-semibold text-slate-50">Dashboards + relatórios completos</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-gray-900">Gerador de títulos e descrições</span>
+                  <span className="font-semibold text-slate-50">Gerador de títulos e descrições</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-gray-900">Educação avançada focada em escala</span>
+                  <span className="font-semibold text-slate-50">Educação avançada focada em escala</span>
                 </div>
               </CardContent>
             </Card>
@@ -306,7 +303,7 @@ const SoudropPro = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto">
                     <bonus.icon className="h-8 w-8 text-purple-600" />
                   </div>
-                  <p className="font-semibold text-gray-900">{bonus.title}</p>
+                  <p className="font-semibold text-slate-50">{bonus.title}</p>
                 </CardContent>
               </Card>)}
           </div>
