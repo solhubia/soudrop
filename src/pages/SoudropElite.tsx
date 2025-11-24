@@ -12,14 +12,19 @@ const SoudropElite = () => {
     script.async = true;
     document.body.appendChild(script);
     
+    // Script do botão embed
+    const embedScript = document.createElement('script');
+    embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
+    embedScript.async = true;
+    document.body.appendChild(embedScript);
+    
     return () => {
       document.body.removeChild(script);
+      if (document.body.contains(embedScript)) {
+        document.body.removeChild(embedScript);
+      }
     };
   }, []);
-
-  const handleCTA = () => {
-    window.open('https://event.webinarjam.com/register/8wgw0kty', '_blank');
-  };
   const pilares = [{
     icon: TrendingUp,
     title: "Como encontrar produtos para vender",
@@ -91,9 +96,31 @@ const SoudropElite = () => {
             <p className="mt-4 text-elite-white/60 text-sm">Com Renan Ferreira</p>
           </div>
 
-          <Button onClick={handleCTA} className="bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-lg px-12 py-7 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
-            COMEÇAR AGORA
-          </Button>
+          <div style={{ textAlign: 'center' }}>
+            <button 
+              type="button" 
+              className="wj-embed-button" 
+              data-webinarHash="8wgw0kty" 
+              style={{
+                border: '2px solid rgba(0, 0, 0, 0.5)',
+                background: 'rgba(41, 182, 246, 0.95)',
+                color: 'rgb(255, 255, 255)',
+                fontSize: '24px',
+                padding: '18px 80px',
+                boxShadow: 'none',
+                borderRadius: '4px',
+                whiteSpace: 'normal',
+                fontWeight: '700',
+                lineHeight: '1.3',
+                cursor: 'pointer',
+                fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                wordBreak: 'break-word',
+                margin: 'auto'
+              }}
+            >
+              COMEÇAR AGORA
+            </button>
+          </div>
 
           <p className="mt-6 text-elite-white/50 text-sm">
             Renda extra ou principal
@@ -349,9 +376,32 @@ const SoudropElite = () => {
                   </div>
                 </div>
 
-                <Button onClick={handleCTA} className="w-full bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-xl px-12 py-8 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
-                  COMEÇAR AGORA
-                </Button>
+                <div style={{ textAlign: 'center' }}>
+                  <button 
+                    type="button" 
+                    className="wj-embed-button" 
+                    data-webinarHash="8wgw0kty" 
+                    style={{
+                      border: '2px solid rgba(0, 0, 0, 0.5)',
+                      background: 'rgba(41, 182, 246, 0.95)',
+                      color: 'rgb(255, 255, 255)',
+                      fontSize: '24px',
+                      padding: '18px 80px',
+                      boxShadow: 'none',
+                      borderRadius: '4px',
+                      whiteSpace: 'normal',
+                      fontWeight: '700',
+                      lineHeight: '1.3',
+                      cursor: 'pointer',
+                      fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                      wordBreak: 'break-word',
+                      margin: 'auto',
+                      width: '100%'
+                    }}
+                  >
+                    COMEÇAR AGORA
+                  </button>
+                </div>
 
                 <p className="mt-6 text-elite-white/50 text-sm">
                   🔒 Pagamento 100% Seguro
@@ -377,9 +427,31 @@ const SoudropElite = () => {
             sem estoque e com método validado.
           </p>
           
-          <Button onClick={handleCTA} className="bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-xl px-16 py-8 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
-            COMEÇAR AGORA
-          </Button>
+          <div style={{ textAlign: 'center' }}>
+            <button 
+              type="button" 
+              className="wj-embed-button" 
+              data-webinarHash="8wgw0kty" 
+              style={{
+                border: '2px solid rgba(0, 0, 0, 0.5)',
+                background: 'rgba(41, 182, 246, 0.95)',
+                color: 'rgb(255, 255, 255)',
+                fontSize: '24px',
+                padding: '18px 80px',
+                boxShadow: 'none',
+                borderRadius: '4px',
+                whiteSpace: 'normal',
+                fontWeight: '700',
+                lineHeight: '1.3',
+                cursor: 'pointer',
+                fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                wordBreak: 'break-word',
+                margin: 'auto'
+              }}
+            >
+              COMEÇAR AGORA
+            </button>
+          </div>
 
           <p className="mt-8 text-elite-gold font-semibold text-lg">
             ⚡ Comece hoje mesmo
