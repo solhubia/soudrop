@@ -4,7 +4,7 @@ import { CheckCircle2, Zap, Shield, Users, BookOpen, Trophy, Gift, TrendingUp, T
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import renanFerreira from "@/assets/renan-ferreira.jpg";
-import dashboardPreview from "@/assets/dashboard-preview.png";
+import heroSoudrop from "@/assets/hero-soudrop.jpg";
 const SoudropStart = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -115,7 +115,7 @@ const SoudropStart = () => {
             
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-ice-blue-primary to-ice-cyan rounded-3xl blur-3xl opacity-20 animate-pulse" />
-              <img src={dashboardPreview} alt="Dashboard SouDrop" className="relative rounded-3xl shadow-2xl border-4 border-ice-border" />
+              <img src={heroSoudrop} alt="SouDrop - Negócio Automatizado" className="relative rounded-3xl shadow-2xl border-4 border-ice-border" />
             </div>
           </div>
         </div>
