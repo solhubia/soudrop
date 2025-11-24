@@ -63,15 +63,15 @@ const SoudropPro = () => {
                 </span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Fórmula mágica 10K em Vendas
               </h1>
               
-              <p className="text-xl lg:text-2xl text-white font-medium leading-relaxed">
+              <p className="text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed">
                 O método simples para vender sem estoque
               </p>
 
-              <p className="text-base lg:text-lg text-white/90 leading-relaxed max-w-2xl">
+              <p className="text-base lg:text-lg text-gray-600 leading-relaxed max-w-2xl">
                 Passo a passo prático para encontrar produtos certos, anunciar do jeito certo e vender todos os dias usando marketplaces — sem investir em estoque.
               </p>
               
@@ -84,12 +84,12 @@ const SoudropPro = () => {
               
               <div className="flex items-center gap-6 pt-4">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-white" />
-                  <span className="text-sm text-white">12x de R$ 97,90</span>
+                  <CheckCircle2 className="h-5 w-5 text-green-600" />
+                  <span className="text-sm text-gray-600">12x de R$ 97,90</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-white" />
-                  <span className="text-sm text-white">120 dias de garantia</span>
+                  <CheckCircle2 className="h-5 w-5 text-green-600" />
+                  <span className="text-sm text-gray-600">120 dias de garantia</span>
                 </div>
               </div>
             </div>
