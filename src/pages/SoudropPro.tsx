@@ -64,7 +64,7 @@ const SoudropPro = () => {
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Fórmula 10K em Vendas
+                Fórmula mágica 10K em Vendas
               </h1>
               
               <p className="text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed">
