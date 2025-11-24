@@ -161,81 +161,6 @@ const SoudropPro = () => {
         </div>
       </section>
 
-      {/* Comparativo START x PRO */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              START vs <span className="text-green-600">PRO</span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              Compare os planos
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* START */}
-            <Card className="border-2 border-gray-300">
-              <CardHeader className="bg-gray-50 border-b-2 border-gray-200">
-                <CardTitle className="text-3xl text-gray-900">SouDrop START</CardTitle>
-              </CardHeader>
-              <CardContent className="p-8 space-y-4">
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-slate-50">3 integrações</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-slate-50">Dashboard limitada</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-slate-50">Estrutura para começar</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-900">Educação para iniciantes</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* PRO */}
-            <Card className="border-4 border-green-500 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
-                RECOMENDADO
-              </div>
-              <CardHeader className="bg-gradient-to-r from-green-50 to-purple-50 border-b-4 border-green-500">
-                <CardTitle className="text-3xl bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">
-                  SouDrop PRO
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-8 space-y-4">
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-slate-50">6 integrações</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-slate-50">Lançador automático</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-slate-50">Dashboards + relatórios completos</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-slate-50">Gerador de títulos e descrições</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-slate-50">Educação avançada focada em escala</span>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Apresentação Renan */}
       <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto max-w-6xl">
@@ -345,37 +270,6 @@ const SoudropPro = () => {
                 <p className="text-sm text-gray-700">Tecnologia própria</p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Oferta Final */}
-      <section className="py-16 px-4 bg-gradient-to-br from-green-600 via-purple-600 to-blue-600 text-white">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl lg:text-5xl font-bold">
-              Comece agora
-            </h2>
-            
-            <p className="text-xl lg:text-2xl opacity-90">
-              SouDrop PRO - Plano Completo
-            </p>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border-2 border-white/20">
-              <div className="space-y-3">
-                <div className="flex items-center justify-center gap-2 text-green-200">
-                  <Shield className="h-5 w-5" />
-                  <span>120 dias de garantia</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button onClick={handleCTA} size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg lg:text-xl px-10 py-6 lg:py-8 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 font-bold">
-                Começar Agora
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
           </div>
         </div>
       </section>
