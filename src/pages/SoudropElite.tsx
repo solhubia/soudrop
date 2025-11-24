@@ -66,16 +66,11 @@ const SoudropElite = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Comece a <span className="text-elite-gold">vender da sua casa</span>,<br />sem estoque e sem complicação
+            Venda <span className="text-elite-gold">de casa</span>,<br />sem estoque
           </h1>
 
           <p className="text-xl md:text-2xl text-elite-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transforme um cantinho da sua casa na sua operação de vendas online.
-          </p>
-
-          <p className="text-base md:text-lg text-elite-white/70 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Se você tem um celular, internet e disposição pra aprender, já tem o básico pra virar vendedor online.
-            Com a SouDrop, você aprende a vender sem precisar comprar produtos antes, sem precisar alugar espaço e sem ter que investir alto.
+            Aprenda a vender online usando marketplaces
           </p>
 
           <div className="mb-12">
@@ -84,11 +79,11 @@ const SoudropElite = () => {
           </div>
 
           <Button onClick={handleCTA} className="bg-gradient-elite-gold hover:opacity-90 text-elite-black font-bold text-lg px-12 py-7 rounded-xl shadow-elite-gold-strong transition-all hover:scale-105">
-            QUERO COMEÇAR A VENDER DE CASA
+            COMEÇAR AGORA
           </Button>
 
           <p className="mt-6 text-elite-white/50 text-sm">
-            Ideal para renda extra ou principal
+            Renda extra ou principal
           </p>
         </div>
       </section>
