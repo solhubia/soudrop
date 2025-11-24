@@ -143,10 +143,6 @@ const SoudropStart = () => {
 
               <div className="flex flex-wrap items-center gap-6 pt-4">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-ice-cyan" />
-                  <span className="text-sm text-ice-text-secondary">12x de R$ 49,90</span>
-                </div>
-                <div className="flex items-center gap-2">
                   <Shield className="w-5 h-5 text-ice-cyan" />
                   <span className="text-sm text-ice-text-secondary">120 dias de garantia</span>
                 </div>
@@ -405,11 +401,6 @@ const SoudropStart = () => {
 
             <div className="bg-ice-bg-card border-2 border-ice-blue-primary rounded-3xl p-8 max-w-md mx-auto shadow-ice-glow">
               <div className="space-y-4">
-                <p className="text-sm text-ice-text-secondary uppercase tracking-wider">Investimento</p>
-                <div className="space-y-2">
-                  <p className="text-5xl font-black text-ice-text-primary">R$ 499,90</p>
-                  <p className="text-2xl font-semibold text-ice-cyan">ou 12x de R$ 49,90</p>
-                </div>
                 <div className="flex items-center justify-center gap-2 text-ice-text-secondary pt-2">
                   <Shield className="w-5 h-5 text-ice-cyan" />
                   <span className="text-sm">120 dias de garantia operacional</span>
