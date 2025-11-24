@@ -203,7 +203,7 @@ const SoudropStart = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-4">
               <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                POR QUE SOUDROP START?
+                POR QUE SOUDROP?
               </span>
             </h2>
           </div>
