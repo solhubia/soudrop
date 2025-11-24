@@ -23,44 +23,44 @@ const SoudropPro = () => {
   };
   const deliverables = [{
     icon: Rocket,
-    title: "Lançador Automático",
-    description: "Automatize publicações em múltiplos marketplaces com velocidade profissional."
+    title: "O Produto Certo",
+    description: "Como encontrar produtos que vendem sem precisar de sorte ou achismo."
   }, {
     icon: BarChart3,
-    title: "Plataforma Completa",
-    description: "Dashboards avançadas com visão clara de faturamento, pedidos e performance."
+    title: "O Anúncio Magnético",
+    description: "A estrutura exata que faz o cliente comprar na hora (sem enrolação)."
   }, {
     icon: FileText,
-    title: "Gerador de Títulos IA",
-    description: "Títulos e descrições otimizadas para conversão em segundos."
+    title: "O Marketplace Certo",
+    description: "Onde publicar pra vender rápido e escalar sem travar no caminho."
   }, {
     icon: TrendingUp,
-    title: "Educação Avançada",
-    description: "Conteúdo focado em escala, margem e estruturação operacional."
+    title: "O Preço Ideal",
+    description: "Como precificar pra vender todo dia E ter margem de verdade."
   }, {
     icon: Link2,
-    title: "6 Integrações",
-    description: "Conecte múltiplos marketplaces e canais de venda simultaneamente."
+    title: "A Operação Enxuta",
+    description: "Como fazer isso tudo sem equipe, sem estoque, sem complicação."
   }, {
     icon: Shield,
-    title: "Garantia 120 dias",
-    description: "Teste sem risco e sinta a diferença na sua operação."
+    title: "Os Erros Fatais",
+    description: "O que NÃO fazer se você quer vender com consistência."
   }];
-  const benefits = ["Abandone planilhas e organize tudo em uma plataforma", "Veja claramente quais produtos dão lucro real", "Publique anúncios com velocidade profissional", "Transforme seu negócio em operação escalável", "Automatize processos sem precisar programar"];
+  const benefits = ["Sem enrolação: direto ao ponto, sem blá blá blá", "Sem pegadinhas: você vê tudo funcionando ao vivo", "Sem promessas impossíveis: só o que realmente funciona", "Sem complicação: até quem nunca vendeu online consegue aplicar", "Sem risco: se não gostar, é só sair — mas garanto que você vai ficar"];
   const bonuses = [{
     icon: Target,
-    title: "Playbook de Escala em Marketplaces"
+    title: "Checklist de validação de produto"
   }, {
     icon: Sparkles,
-    title: "Modelos prontos de títulos de alta performance"
+    title: "Template de anúncio que converte"
   }, {
     icon: FileText,
-    title: "Modelos de descrições voltadas para conversão"
+    title: "Passo a passo visual de publicação"
   }, {
     icon: BarChart3,
-    title: "Mini treinamento de leitura e interpretação dos relatórios"
+    title: "Planilha de controle simples e eficaz"
   }];
-  const forWho = ["Já fez vendas e quer escalar", "Quer organizar e profissionalizar", "Cansou de trabalhar no manual", "Busca visão clara dos números", "Precisa de tecnologia para crescer"];
+  const forWho = ["Quer vender online mas não sabe por onde começar", "Já tentou mas travou no meio do caminho", "Tá cansado de gastar dinheiro com curso que não funciona", "Quer um método simples que funcione de verdade", "Precisa de resultado rápido sem enrolação"];
   return <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-16 pb-24 px-4">
@@ -142,10 +142,10 @@ const SoudropPro = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              Para quem é?
+              Isso é pra você?
             </h2>
             <p className="text-lg text-gray-600">
-              Esse plano é para você se:
+              Se você se identifica com pelo menos 1 desses pontos, essa aula foi feita pra você:
             </p>
           </div>
           
@@ -165,10 +165,10 @@ const SoudropPro = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              O que você <span className="text-purple-600">recebe</span>
+              O que você vai <span className="text-purple-600">descobrir</span> na aula
             </h2>
             <p className="text-lg text-gray-600">
-              Tecnologia + Automação + Educação
+              A fórmula completa revelada em detalhes
             </p>
           </div>
           
@@ -201,18 +201,21 @@ const SoudropPro = () => {
             
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Renan Ferreira</h3>
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Quem vai ensinar isso pra você?</h3>
                 <p className="text-lg text-green-600 font-semibold">
-                  Especialista em Importação e Marketplaces
+                  Renan Ferreira
                 </p>
               </div>
               
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Anos de experiência com importação direta da China e vendas nos principais marketplaces: Mercado Livre, Shopee, Amazon e Magalu.
+                  Eu vendo online há anos. Testei tudo. Errei muito. Acertei depois.
+                </p>
+                <p>
+                  Hoje, ajudo centenas de pessoas a venderem usando essa mesma fórmula que funciona comigo desde o começo.
                 </p>
                 <p className="font-semibold text-gray-900">
-                  Meu objetivo: ajudar você a organizar, profissionalizar e escalar sua operação com tecnologia e processos que funcionam.
+                  E nessa aula, vou te mostrar exatamente como você pode aplicar isso — do zero ou pra escalar o que já faz.
                 </p>
               </div>
             </div>
@@ -225,8 +228,11 @@ const SoudropPro = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              Por que escolher  <span className="text-blue-600">​</span>?
+              Por que essa aula <span className="text-blue-600">não é mais uma promessa vazia</span>
             </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Porque não é teoria. É o que funciona de verdade.
+            </p>
           </div>
           
           <div className="space-y-6 max-w-4xl mx-auto">
@@ -247,8 +253,11 @@ const SoudropPro = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              Bônus <span className="text-purple-600">Exclusivos</span>
+              E ainda tem <span className="text-purple-600">bônus</span>
             </h2>
+            <p className="text-lg text-gray-600">
+              Pra você sair da aula pronto pra aplicar
+            </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
