@@ -1,12 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Zap, Shield, Users, BookOpen, Trophy, Gift, TrendingUp, Target, BarChart3, Package, Snowflake, Mountain } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import renanFerreira from "@/assets/renan-ferreira.jpg";
 import dashboardPreview from "@/assets/dashboard-preview.png";
 
 const SoudropStart = () => {
+  const navigate = useNavigate();
+  
   const handleCTA = () => {
-    window.open('https://pay.kiwify.com.br/RIqama1', '_blank');
+    navigate('/live-importacao');
   };
 
   const entregaveis = [
