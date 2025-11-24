@@ -10,8 +10,18 @@ const SoudropPro = () => {
     script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=Register&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=2&formColor=1';
     script.async = true;
     document.body.appendChild(script);
+    
+    // Script do botão embed
+    const embedScript = document.createElement('script');
+    embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
+    embedScript.async = true;
+    document.body.appendChild(embedScript);
+    
     return () => {
       document.body.removeChild(script);
+      if (document.body.contains(embedScript)) {
+        document.body.removeChild(embedScript);
+      }
     };
   }, []);
   const handleCTA = () => {
@@ -86,10 +96,31 @@ const SoudropPro = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={handleCTA} size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white text-base lg:text-lg px-8 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                  Quero Começar Agora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <div style={{ textAlign: 'center' }}>
+                  <button 
+                    type="button" 
+                    className="wj-embed-button" 
+                    data-webinarHash="8wgw0kty" 
+                    style={{
+                      border: '2px solid rgba(0, 0, 0, 0.5)',
+                      background: 'rgba(41, 182, 246, 0.95)',
+                      color: 'rgb(255, 255, 255)',
+                      fontSize: '24px',
+                      padding: '18px 80px',
+                      boxShadow: 'none',
+                      borderRadius: '4px',
+                      whiteSpace: 'normal',
+                      fontWeight: '700',
+                      lineHeight: '1.3',
+                      cursor: 'pointer',
+                      fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                      wordBreak: 'break-word',
+                      margin: 'auto'
+                    }}
+                  >
+                    Quero Começar Agora
+                  </button>
+                </div>
               </div>
               
               <div className="flex items-center gap-6 pt-4">
