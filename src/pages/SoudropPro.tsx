@@ -9,30 +9,30 @@ const SoudropPro = () => {
   };
   const deliverables = [{
     icon: Rocket,
-    title: "Lançador Automático de Produtos",
-    description: "Ferramenta que automatiza o que antes era manual. Ideal para quem já tem mais de 3 operações rodando. Ajuda a lançar, organizar e distribuir produtos com muito mais velocidade."
+    title: "Lançador Automático",
+    description: "Automatize publicações em múltiplos marketplaces com velocidade profissional."
   }, {
     icon: BarChart3,
-    title: "Plataforma Completa SouDrop",
-    description: "Dashboards avançadas, relatórios de performance e visão clara de faturamento, pedidos, integrações e operação. Tudo aquilo que era básico no plano de 499, agora turbinado para escala."
+    title: "Plataforma Completa",
+    description: "Dashboards avançadas com visão clara de faturamento, pedidos e performance."
   }, {
     icon: FileText,
-    title: "Gerador de Títulos e Descrições",
-    description: "Gera títulos otimizados para marketplace e cria descrições pensadas para conversão. Ajuda a publicar mais rápido com mais qualidade."
+    title: "Gerador de Títulos IA",
+    description: "Títulos e descrições otimizadas para conversão em segundos."
   }, {
     icon: TrendingUp,
     title: "Educação Avançada",
-    description: "Conteúdo para quem já está jogando o jogo. Foco em escala, margem, mix de produtos, operação e processo. Não é 'curso para iniciante', é estruturação de operação."
+    description: "Conteúdo focado em escala, margem e estruturação operacional."
   }, {
     icon: Link2,
-    title: "6 Integrações Liberadas",
-    description: "Mais integrações do que o plano de entrada. Conexão com múltiplos marketplaces e canais. Base para escalar vendas em vários pontos ao mesmo tempo."
+    title: "6 Integrações",
+    description: "Conecte múltiplos marketplaces e canais de venda simultaneamente."
   }, {
     icon: Shield,
-    title: "120 dias de Garantia Operacional",
-    description: "Tempo suficiente para testar, operar e sentir a diferença. Dá segurança para quem está em fase de profissionalização."
+    title: "Garantia 120 dias",
+    description: "Teste sem risco e sinta a diferença na sua operação."
   }];
-  const benefits = ["Pare de depender de planilha improvisada e anotações soltas", "Tenha uma visão clara dos produtos que dão lucro e dos que drenam sua margem", "Publique anúncios com mais velocidade e qualidade", "Tire seu negócio do modo 'amador' e leve para o modo 'empresa de verdade'", "Use tecnologia e automação a seu favor, sem precisar ser programador"];
+  const benefits = ["Abandone planilhas e organize tudo em uma plataforma", "Veja claramente quais produtos dão lucro real", "Publique anúncios com velocidade profissional", "Transforme seu negócio em operação escalável", "Automatize processos sem precisar programar"];
   const bonuses = [{
     icon: Target,
     title: "Playbook de Escala em Marketplaces"
@@ -46,39 +46,38 @@ const SoudropPro = () => {
     icon: BarChart3,
     title: "Mini treinamento de leitura e interpretação dos relatórios"
   }];
-  const forWho = ["Você já fez pelo menos 3 operações de importação", "Já conhece um pouco do jogo e agora quer organizar e escalar", "Está cansado de fazer tudo na mão e sentir que não domina os números", "Quer tratar sua operação como empresa de verdade, não como 'rolezinho de vendas'", "Quer ter ferramenta, dados e processo para dar o próximo passo"];
+  const forWho = ["Já fez vendas e quer escalar", "Quer organizar e profissionalizar", "Cansou de trabalhar no manual", "Busca visão clara dos números", "Precisa de tecnologia para crescer"];
   return <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-32 px-4">
+      <section className="relative overflow-hidden pt-16 pb-24 px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-purple-50 to-blue-50 opacity-60" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-green-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
         <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000" />
         
         <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-6">
               <div className="inline-block">
                 <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
                   🚀 PLANO AVANÇADO
                 </span>
               </div>
               
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                Descubra a Fórmula 10K em Vendas — o método simples pra vender sem estoque
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Fórmula 10K em Vendas
               </h1>
               
-              <p className="text-2xl text-gray-700 font-semibold leading-relaxed">
-                Uma rota prática que qualquer pessoa pode seguir para montar um negócio online lucrativo, mesmo começando do zero.
+              <p className="text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed">
+                O método simples para vender sem estoque
               </p>
 
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Enquanto muita gente procura atalhos, truques e "segredos", o que funciona mesmo é método.
-                A Fórmula 10K em Vendas é o passo a passo que mostra como encontrar produtos certos, anunciar do jeito certo e vender todos os dias usando marketplaces — tudo isso sem investir em estoque.
+              <p className="text-base lg:text-lg text-gray-600 leading-relaxed max-w-2xl">
+                Passo a passo prático para encontrar produtos certos, anunciar do jeito certo e vender todos os dias usando marketplaces — sem investir em estoque.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={handleCTA} size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white text-lg px-8 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                  QUERO ESCALAR MINHA OPERAÇÃO
+                <Button onClick={handleCTA} size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white text-base lg:text-lg px-8 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                  Quero Começar Agora
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
@@ -104,13 +103,13 @@ const SoudropPro = () => {
       </section>
 
       {/* Para Quem É */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Para quem é o <span className="text-green-600">SouDrop PRO</span>?
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+              Para quem é?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600">
               Esse plano é para você se:
             </p>
           </div>
@@ -119,7 +118,7 @@ const SoudropPro = () => {
             {forWho.map((item, index) => <Card key={index} className="border-2 border-gray-200 hover:border-green-500 transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-6 flex items-start gap-4">
                   <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
-                  <p className="text-white text-lg">{item}</p>
+                  <p className="text-gray-900">{item}</p>
                 </CardContent>
               </Card>)}
           </div>
@@ -127,14 +126,14 @@ const SoudropPro = () => {
       </section>
 
       {/* Entregáveis */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
               O que você <span className="text-purple-600">recebe</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tecnologia, automação e educação para profissionalizar sua operação
+            <p className="text-lg text-gray-600">
+              Tecnologia + Automação + Educação
             </p>
           </div>
           
@@ -147,7 +146,7 @@ const SoudropPro = () => {
                   <CardTitle className="text-xl text-purple-600">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-white text-base leading-relaxed">
+                  <CardDescription className="text-gray-700 text-base leading-relaxed">
                     {item.description}
                   </CardDescription>
                 </CardContent>
@@ -157,14 +156,14 @@ const SoudropPro = () => {
       </section>
 
       {/* Comparativo START x PRO */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
               START vs <span className="text-green-600">PRO</span>
             </h2>
-            <p className="text-xl text-gray-600">
-              O próximo passo natural para quem já validou o jogo
+            <p className="text-lg text-gray-600">
+              Compare os planos
             </p>
           </div>
           
@@ -178,19 +177,19 @@ const SoudropPro = () => {
               <CardContent className="p-8 space-y-4">
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-zinc-50">3 integrações</span>
+                  <span className="text-gray-700">3 integrações</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-zinc-50">Dashboard limitada</span>
+                  <span className="text-gray-700">Dashboard limitada</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-zinc-50">Estrutura para começar</span>
+                  <span className="text-gray-700">Estrutura para começar</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-gray-600" />
-                  <span className="text-gray-50">Educação para iniciantes</span>
+                  <span className="text-gray-700">Educação para iniciantes</span>
                 </div>
               </CardContent>
             </Card>
@@ -209,23 +208,23 @@ const SoudropPro = () => {
               <CardContent className="p-8 space-y-4">
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-zinc-50">6 integrações</span>
+                  <span className="font-semibold text-gray-900">6 integrações</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-zinc-50">Lançador automático</span>
+                  <span className="font-semibold text-gray-900">Lançador automático</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-zinc-50">Dashboards + relatórios completos</span>
+                  <span className="font-semibold text-gray-900">Dashboards + relatórios completos</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-zinc-50">Gerador de títulos e descrições</span>
+                  <span className="font-semibold text-gray-900">Gerador de títulos e descrições</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-zinc-50">Educação avançada focada em escala</span>
+                  <span className="font-semibold text-gray-900">Educação avançada focada em escala</span>
                 </div>
               </CardContent>
             </Card>
@@ -234,7 +233,7 @@ const SoudropPro = () => {
       </section>
 
       {/* Apresentação Renan */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
@@ -244,21 +243,18 @@ const SoudropPro = () => {
             
             <div className="space-y-6">
               <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-2">Renan Ferreira</h3>
-                <p className="text-xl text-green-600 font-semibold">
-                  Especialista em Importação, Operação e Escala em Marketplaces
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Renan Ferreira</h3>
+                <p className="text-lg text-green-600 font-semibold">
+                  Especialista em Importação e Marketplaces
                 </p>
               </div>
               
-              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+              <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Trabalho há anos com importação direta da China, lidando com fábricas, fornecedores, containers e toda a operação logística que existe por trás de trazer produtos do outro lado do mundo.
-                </p>
-                <p>
-                  Além disso, tenho experiência real vendendo nos maiores marketplaces do Brasil: Mercado Livre, Shopee, Amazon e Magalu.
+                  Anos de experiência com importação direta da China e vendas nos principais marketplaces: Mercado Livre, Shopee, Amazon e Magalu.
                 </p>
                 <p className="font-semibold text-gray-900">
-                  Aqui no SouDrop PRO, meu objetivo não é só te ensinar a importar: é te ajudar a organizar, profissionalizar e escalar sua operação usando tecnologia, dados e processos que funcionam na prática.
+                  Meu objetivo: ajudar você a organizar, profissionalizar e escalar sua operação com tecnologia e processos que funcionam.
                 </p>
               </div>
             </div>
@@ -267,11 +263,11 @@ const SoudropPro = () => {
       </section>
 
       {/* Benefícios */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Por que escolher o <span className="text-blue-600">SouDrop PRO</span>?
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+              Por que escolher o <span className="text-blue-600">PRO</span>?
             </h2>
           </div>
           
@@ -281,7 +277,7 @@ const SoudropPro = () => {
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Zap className="h-6 w-6 text-blue-600" />
                   </div>
-                  <p className="text-lg font-medium text-zinc-50">{benefit}</p>
+                  <p className="text-lg font-medium text-gray-900">{benefit}</p>
                 </CardContent>
               </Card>)}
           </div>
@@ -289,15 +285,12 @@ const SoudropPro = () => {
       </section>
 
       {/* Bônus */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
               Bônus <span className="text-purple-600">Exclusivos</span>
             </h2>
-            <p className="text-xl text-gray-600">
-              Além de tudo que você já recebe, ganhe mais:
-            </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -306,7 +299,7 @@ const SoudropPro = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto">
                     <bonus.icon className="h-8 w-8 text-purple-600" />
                   </div>
-                  <p className="font-semibold text-zinc-50">{bonus.title}</p>
+                  <p className="font-semibold text-gray-900">{bonus.title}</p>
                 </CardContent>
               </Card>)}
           </div>
@@ -314,38 +307,38 @@ const SoudropPro = () => {
       </section>
 
       {/* Prova Social */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="grid md:grid-cols-4 gap-6 text-center">
             <Card className="border-2 border-green-200 bg-gradient-to-br from-green-50 to-white">
-              <CardContent className="p-8">
-                <Users className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <div className="text-4xl font-bold text-gray-900 mb-2">+500</div>
-                <p className="text-gray-600">Vendedores ativos</p>
+              <CardContent className="p-6">
+                <Users className="h-10 w-10 text-green-600 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-gray-900 mb-1">+500</div>
+                <p className="text-sm text-gray-600">Vendedores ativos</p>
               </CardContent>
             </Card>
             
             <Card className="border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-white">
-              <CardContent className="p-8">
-                <Activity className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <div className="text-4xl font-bold text-gray-900 mb-2">+1000</div>
-                <p className="text-gray-600">Operações rodando</p>
+              <CardContent className="p-6">
+                <Activity className="h-10 w-10 text-purple-600 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-gray-900 mb-1">+1000</div>
+                <p className="text-sm text-gray-600">Operações rodando</p>
               </CardContent>
             </Card>
             
             <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white">
-              <CardContent className="p-8">
-                <Link2 className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <div className="text-4xl font-bold text-gray-900 mb-2">+3000</div>
-                <p className="text-gray-600">Integrações ativas</p>
+              <CardContent className="p-6">
+                <Link2 className="h-10 w-10 text-blue-600 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-gray-900 mb-1">+3000</div>
+                <p className="text-sm text-gray-600">Integrações ativas</p>
               </CardContent>
             </Card>
             
             <Card className="border-2 border-pink-200 bg-gradient-to-br from-pink-50 to-white">
-              <CardContent className="p-8">
-                <Award className="h-12 w-12 text-pink-600 mx-auto mb-4" />
-                <div className="text-4xl font-bold text-gray-900 mb-2">100%</div>
-                <p className="text-gray-600">Tecnologia própria</p>
+              <CardContent className="p-6">
+                <Award className="h-10 w-10 text-pink-600 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-gray-900 mb-1">100%</div>
+                <p className="text-sm text-gray-600">Tecnologia própria</p>
               </CardContent>
             </Card>
           </div>
@@ -353,50 +346,43 @@ const SoudropPro = () => {
       </section>
 
       {/* Oferta Final */}
-      <section className="py-20 px-4 bg-gradient-to-br from-green-600 via-purple-600 to-blue-600 text-white">
+      <section className="py-16 px-4 bg-gradient-to-br from-green-600 via-purple-600 to-blue-600 text-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <div className="space-y-8">
-            <h2 className="text-4xl lg:text-6xl font-bold">
-              Profissionalize sua operação agora
+          <div className="space-y-6">
+            <h2 className="text-3xl lg:text-5xl font-bold">
+              Comece agora
             </h2>
             
-            <p className="text-2xl opacity-90">
+            <p className="text-xl lg:text-2xl opacity-90">
               SouDrop PRO - Plano Completo
             </p>
             
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border-2 border-white/20">
-              <div className="space-y-4">
-                <div className="text-5xl font-bold">R$ 997,90</div>
-                <div className="text-2xl">ou 12x de R$ 97,90</div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border-2 border-white/20">
+              <div className="space-y-3">
+                <div className="text-4xl lg:text-5xl font-bold">R$ 997,90</div>
+                <div className="text-xl lg:text-2xl">ou 12x de R$ 97,90</div>
                 <div className="flex items-center justify-center gap-2 text-green-200">
-                  <Shield className="h-6 w-6" />
-                  <span className="text-lg">120 dias de garantia operacional</span>
+                  <Shield className="h-5 w-5" />
+                  <span>120 dias de garantia</span>
                 </div>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button onClick={handleCTA} size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-xl px-12 py-8 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 font-bold">
-                QUERO MIGRAR PARA O SOUDROP PRO
-                <ArrowRight className="ml-2 h-6 w-6" />
+              <Button onClick={handleCTA} size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg lg:text-xl px-10 py-6 lg:py-8 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 font-bold">
+                Começar Agora
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
-            
-            <p className="text-sm opacity-80 pt-4">
-              ⚡ Próximas ativações com acompanhamento de onboarding personalizado
-            </p>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12 px-4">
+      <footer className="bg-gray-900 text-gray-400 py-8 px-4">
         <div className="container mx-auto max-w-6xl text-center">
           <p className="text-sm">
             © 2024 SouDrop. Todos os direitos reservados.
-          </p>
-          <p className="text-xs mt-4">
-            SouDrop PRO - Escale sua operação com tecnologia e automação
           </p>
         </div>
       </footer>
