@@ -64,7 +64,7 @@ const SoudropPro = () => {
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                Como vender no Mercado Livre sem ter nenhum estoque.
+                Fórmula 10K em Vendas decubra o segredo dos grandes players antes de começar
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
