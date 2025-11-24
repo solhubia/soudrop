@@ -330,15 +330,6 @@ const SoudropElite = () => {
                   <span className="text-elite-gold">sem estoque e sem complicação</span>
                 </h3>
 
-                <div className="mb-8">
-                  <p className="text-5xl md:text-6xl font-bold text-elite-gold mb-4">
-                    12x de R$ 166
-                  </p>
-                  <p className="text-2xl text-elite-white/70">
-                    ou R$ 1.997,90 à vista
-                  </p>
-                </div>
-
                 <div className="space-y-4 mb-8 text-left max-w-md mx-auto">
                   <div className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-elite-gold flex-shrink-0 mt-1" />
