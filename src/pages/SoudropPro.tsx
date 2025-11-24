@@ -6,11 +6,6 @@ import renanPhoto from "@/assets/renan-ferreira.jpg";
 import dashboardPreview from "@/assets/dashboard-preview.png";
 const SoudropPro = () => {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=Register&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=2&formColor=1';
-    script.async = true;
-    document.body.appendChild(script);
-    
     // Script do botão embed
     const embedScript = document.createElement('script');
     embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
@@ -18,7 +13,6 @@ const SoudropPro = () => {
     document.body.appendChild(embedScript);
     
     return () => {
-      document.body.removeChild(script);
       if (document.body.contains(embedScript)) {
         document.body.removeChild(embedScript);
       }
