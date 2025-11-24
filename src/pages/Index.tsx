@@ -44,7 +44,6 @@ const Index = () => {
     }
   }, []);
   const mouseFollowerRef = useRef<HTMLDivElement>(null);
-  const [isAnnual, setIsAnnual] = useState(true);
   const [carouselApi, setCarouselApi] = useState<any>(null);
 
   // Scroll animations
@@ -56,54 +55,28 @@ const Index = () => {
   const pricingAnimation = useScrollAnimation();
   const faqAnimation = useScrollAnimation();
   const planData = {
-    monthly: {
-      basic: {
-        price: "R$ 297",
-        period: "/mês",
-        originalPrice: null,
-        savings: null,
-        link: "https://pay.kiwify.com.br/iX6YTpV"
-      },
-      pro: {
-        price: "R$ 549",
-        period: "/mês",
-        originalPrice: null,
-        savings: null,
-        link: "https://pay.kiwify.com.br/4U6QDHh"
-      },
-      premium: {
-        price: "R$ 1.299",
-        period: "/mês",
-        originalPrice: null,
-        savings: null,
-        link: "https://pay.kiwify.com.br/yJ381De"
-      }
+    basic: {
+      price: "12x de 197",
+      period: "/ano",
+      originalPrice: "R$ 3.564",
+      savings: "33%",
+      link: "https://pay.kiwify.com.br/ugbezvy"
     },
-    annual: {
-      basic: {
-        price: "12x de 197",
-        period: "/ano",
-        originalPrice: "R$ 3.564",
-        savings: "33%",
-        link: "https://pay.kiwify.com.br/ugbezvy"
-      },
-      pro: {
-        price: "12x de 397",
-        period: "/ano",
-        originalPrice: "R$ 6.588",
-        savings: "27%",
-        link: "https://pay.kiwify.com.br/eNU8PpO"
-      },
-      premium: {
-        price: "12x de 797",
-        period: "/ano",
-        originalPrice: "R$ 15.588",
-        savings: "38%",
-        link: "https://pay.kiwify.com.br/Mf2g854"
-      }
+    pro: {
+      price: "12x de 397",
+      period: "/ano",
+      originalPrice: "R$ 6.588",
+      savings: "27%",
+      link: "https://pay.kiwify.com.br/eNU8PpO"
+    },
+    premium: {
+      price: "12x de 797",
+      period: "/ano",
+      originalPrice: "R$ 15.588",
+      savings: "38%",
+      link: "https://pay.kiwify.com.br/Mf2g854"
     }
   };
-  const currentPlan = isAnnual ? planData.annual : planData.monthly;
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (mouseFollowerRef.current) {
@@ -1330,37 +1303,27 @@ const Index = () => {
               <span className="bg-gradient-primary bg-clip-text text-transparent">atende suas necessidades</span>
             </h2>
             
-            {/* Toggle Buttons */}
-            <div className="flex items-center justify-center gap-2 bg-gradient-card rounded-lg p-1 w-fit mx-auto border border-primary/20">
-              <button onClick={() => setIsAnnual(false)} className={`px-6 py-2 rounded-md text-sm font-medium transition-all ${!isAnnual ? 'bg-primary text-primary-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>
-                Mensal
-              </button>
-              <button onClick={() => setIsAnnual(true)} className={`px-6 py-2 rounded-md text-sm font-medium transition-all ${isAnnual ? 'bg-primary text-primary-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>
-                Anual
-              </button>
+            <div className="mt-4">
+              <Badge variant="secondary" className="bg-green-500/20 text-green-400 border-green-500/30">
+                💰 Economize até 38% com o plano anual
+              </Badge>
             </div>
-            
-            {isAnnual && <div className="mt-4">
-                <Badge variant="secondary" className="bg-green-500/20 text-green-400 border-green-500/30">
-                  💰 Economize até 38% no plano anual
-                </Badge>
-              </div>}
           </div>
 
           <div className="grid gap-8 max-w-6xl mx-auto md:grid-cols-3">
             {/* Basic Plan */}
             <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300">
                 <CardHeader>
-                  <div className="text-center">
-                    <CardTitle className="text-2xl mb-2">Basic</CardTitle>
-                    <div className="space-y-1">
-                      {isAnnual && currentPlan.basic.originalPrice && <div className="text-lg text-muted-foreground line-through">
-                        {currentPlan.basic.originalPrice}
-                      </div>}
-                      <div className="text-4xl font-bold text-primary">{currentPlan.basic.price}</div>
-                      <div className="text-muted-foreground">{currentPlan.basic.period}</div>
-                    </div>
+                <div className="text-center">
+                  <CardTitle className="text-2xl mb-2">Basic</CardTitle>
+                  <div className="space-y-1">
+                    {planData.basic.originalPrice && <div className="text-lg text-muted-foreground line-through">
+                      {planData.basic.originalPrice}
+                    </div>}
+                    <div className="text-4xl font-bold text-primary">{planData.basic.price}</div>
+                    <div className="text-muted-foreground">{planData.basic.period}</div>
                   </div>
+                </div>
                 </CardHeader>
                  <CardContent className="space-y-4">
                    <ul className="space-y-3">
@@ -1430,9 +1393,9 @@ const Index = () => {
                      </li>
                    </ul>
                    <Button variant="glow" size="lg" className="w-full mt-6">
-                      <a href={currentPlan.basic.link} target="_blank" rel="noopener noreferrer" 
+                      <a href={planData.basic.link} target="_blank" rel="noopener noreferrer" 
                         onClick={() => trackEventOnce('basic_checkout', () => {
-                          trackInitiateCheckout("soudrop", isAnnual ? 197 * 12 : 297);
+                          trackInitiateCheckout("soudrop", 197 * 12);
                         })}
                       >
                        Começar Agora
@@ -1452,12 +1415,11 @@ const Index = () => {
                 <div className="text-center">
                   <CardTitle className="text-2xl mb-2 text-primary-foreground">Pro</CardTitle>
                   <div className="space-y-1">
-                    {isAnnual && currentPlan.pro.originalPrice && <div className="text-lg text-primary-foreground/60 line-through">
-                        {currentPlan.pro.originalPrice}
+                    {planData.pro.originalPrice && <div className="text-lg text-primary-foreground/60 line-through">
+                        {planData.pro.originalPrice}
                       </div>}
-                    <div className="text-4xl font-bold text-primary-foreground">{currentPlan.pro.price}</div>
-                    <div className="text-primary-foreground/80">{currentPlan.pro.period}</div>
-                    {/* {isAnnual && <div className="text-sm text-primary-foreground/80">equivalente a R$ 241/mês</div>} */}
+                    <div className="text-4xl font-bold text-primary-foreground">{planData.pro.price}</div>
+                    <div className="text-primary-foreground/80">{planData.pro.period}</div>
                   </div>
                 </div>
               </CardHeader>
@@ -1530,9 +1492,9 @@ const Index = () => {
                    </li>
                  </ul>
                 <Button variant="secondary" size="lg" className="w-full mt-6" asChild>
-                  <a href={currentPlan.pro.link} target="_blank" rel="noopener noreferrer" 
+                  <a href={planData.pro.link} target="_blank" rel="noopener noreferrer" 
                     onClick={() => trackEventOnce('pro_checkout', () => {
-                      trackInitiateCheckout("soudrop", isAnnual ? 397 * 12 : 549);
+                      trackInitiateCheckout("soudrop", 397 * 12);
                     })}
                   >
                     Começar Agora
@@ -1547,12 +1509,11 @@ const Index = () => {
                 <div className="text-center">
                   <CardTitle className="text-2xl mb-2">Premium</CardTitle>
                   <div className="space-y-1">
-                    {isAnnual && currentPlan.premium.originalPrice && <div className="text-lg text-muted-foreground line-through">
-                        {currentPlan.premium.originalPrice}
+                    {planData.premium.originalPrice && <div className="text-lg text-muted-foreground line-through">
+                        {planData.premium.originalPrice}
                       </div>}
-                    <div className="text-4xl font-bold text-primary">{currentPlan.premium.price}</div>
-                    <div className="text-muted-foreground">{currentPlan.premium.period}</div>
-                    {/* {isAnnual && <div className="text-sm text-muted-foreground">equivalente a R$ 358/mês</div>} */}
+                    <div className="text-4xl font-bold text-primary">{planData.premium.price}</div>
+                    <div className="text-muted-foreground">{planData.premium.period}</div>
                   </div>
                 </div>
               </CardHeader>
@@ -1625,9 +1586,9 @@ const Index = () => {
                    </li>
                  </ul>
                 <Button variant="glow" size="lg" className="w-full mt-6">
-                  <a href={currentPlan.premium.link} target="_blank" rel="noopener noreferrer" 
+                  <a href={planData.premium.link} target="_blank" rel="noopener noreferrer" 
                     onClick={() => trackEventOnce('premium_checkout', () => {
-                      trackInitiateCheckout("soudrop", isAnnual ? 797 * 12 : 1299);
+                      trackInitiateCheckout("soudrop", 797 * 12);
                     })}
                   >
                     Começar Agora
@@ -1639,7 +1600,7 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <p className="text-lg text-muted-foreground mb-6">
-              {isAnnual ? "Aproveite um desconto de até 38% no plano anual e economize ainda mais!" : "Comece com flexibilidade no plano mensal!"}
+              Aproveite um desconto de até 38% no plano anual e economize ainda mais!
             </p>
           </div>
         </div>
