@@ -1,11 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield } from "lucide-react";
+import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import soudropLogo from "@/assets/soudrop-logo-oficial.png";
+
 const SoudropElite = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=Register&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=2&formColor=1';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const handleCTA = () => {
-    window.open("https://pay.kiwify.com.br/dfkyoMp", "_blank");
+    window.open('https://event.webinarjam.com/register/8wgw0kty', '_blank');
   };
   const pilares = [{
     icon: TrendingUp,
