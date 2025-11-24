@@ -64,11 +64,16 @@ const SoudropPro = () => {
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                Fórmula 10K em Vendas decubra o segredo dos grandes players antes de começar
+                Descubra a Fórmula 10K em Vendas — o método simples pra vender sem estoque
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Enquanto a maioria vende "mais do mesmo", tem gente lucrando com produtos diferentes como esse
+              <p className="text-2xl text-gray-700 font-semibold leading-relaxed">
+                Uma rota prática que qualquer pessoa pode seguir para montar um negócio online lucrativo, mesmo começando do zero.
+              </p>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Enquanto muita gente procura atalhos, truques e "segredos", o que funciona mesmo é método.
+                A Fórmula 10K em Vendas é o passo a passo que mostra como encontrar produtos certos, anunciar do jeito certo e vender todos os dias usando marketplaces — tudo isso sem investir em estoque.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
