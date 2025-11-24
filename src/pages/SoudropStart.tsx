@@ -67,10 +67,8 @@ const SoudropStart = () => {
               
             </div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight">
-              <span className="bg-gradient-to-r from-[hsl(var(--cacador-pink))] via-[hsl(var(--cacador-yellow))] to-[hsl(var(--cacador-pink-light))] bg-clip-text text-transparent">
-                Como lucrar com os produtos da SouDrop mesmo sem ter estoque.
-              </span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight text-white">
+              Como <span className="text-emerald-400">lucrar</span> com os <span className="text-emerald-400">produtos</span> da SouDrop <span className="text-emerald-400">mesmo</span> sem ter estoque.
             </h1>
             
             <p className="text-xl md:text-2xl text-[hsl(var(--cacador-text-secondary))] max-w-3xl mx-auto font-medium">
