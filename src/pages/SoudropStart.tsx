@@ -68,7 +68,7 @@ const SoudropStart = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight text-white">
-              Como <span className="text-emerald-400">lucrar</span> com os <span className="text-emerald-400">produtos</span> da SouDrop <span className="text-emerald-400">mesmo</span> sem ter estoque.
+              Como <span className="text-green-500">lucrar</span> com os <span className="text-green-500">produtos</span> da SouDrop <span className="text-green-500">mesmo</span> sem ter estoque.
             </h1>
             
             <p className="text-xl md:text-2xl text-[hsl(var(--cacador-text-secondary))] max-w-3xl mx-auto font-medium">
