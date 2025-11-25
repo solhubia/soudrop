@@ -9,14 +9,6 @@ const ObrigadoSoudrop = () => {
   return <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
-          {/* Success Icon */}
-          <div className="flex justify-center mb-8 animate-fade-in">
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl animate-pulse"></div>
-              <CheckCircle className="w-24 h-24 text-primary relative" strokeWidth={1.5} />
-            </div>
-          </div>
-
           {/* Progress Bar */}
           <div className="max-w-2xl mx-auto mb-8 animate-fade-in" style={{
           animationDelay: '0.15s'
@@ -41,29 +33,20 @@ const ObrigadoSoudrop = () => {
           animationDelay: '0.3s'
         }}>
             <h2 className="text-2xl md:text-3xl font-bold">
-              Antes de seguir, este vídeo é OBRIGATÓRIO.
+              Antes de seguir, este vídeo é obrigatório.
             </h2>
-            <div className="text-base md:text-lg text-muted-foreground space-y-3 leading-relaxed">
+            <div className="text-base md:text-lg text-muted-foreground space-y-4 leading-relaxed">
               <p>
-                Você acabou de dar um passo importante, mas o processo não termina aqui.
+                Neste vídeo eu vou te mostrar, em poucos minutos, o que você precisa fazer agora para ativar seu acesso e começar a usar a Soudrop do jeito certo.
               </p>
               <p>
-                No vídeo abaixo, eu vou mostrar <strong className="text-foreground">exatamente o que você precisa fazer agora</strong>, quais são os <strong className="text-foreground">próximos passos</strong> e como <strong className="text-foreground">aproveitar 100% do potencial</strong> do que você acabou de liberar.
-              </p>
-              <p>
-                Se você pular este vídeo, pode perder oportunidades que <strong className="text-foreground">só quem assiste conhece</strong>.
-              </p>
-              <p>
-                <strong className="text-foreground">Assista agora</strong> e siga as instruções com atenção.
-              </p>
-              <p className="text-lg font-semibold text-foreground mt-4">
-                É aqui que começa a diferença entre quem só compra e quem <strong>realmente tem resultado</strong>.
+                Assista até o final para entender os próximos passos e evitar erros que podem travar seus resultados.
               </p>
             </div>
           </div>
 
           {/* Video Section */}
-          <div className="mb-12 animate-fade-in" style={{
+          <div className="mb-8 animate-fade-in" style={{
           animationDelay: '0.4s'
         }}>
             <div className="relative w-full max-w-4xl mx-auto">
@@ -86,6 +69,17 @@ const ObrigadoSoudrop = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Upsell CTA Button */}
+          <div className="mb-12 flex justify-center animate-fade-in" style={{
+          animationDelay: '0.5s'
+        }}>
+            <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" asChild>
+              <a href="#upsell-checkout">
+                Quero entrar no Grupo Vip e Mentoria
+              </a>
+            </Button>
           </div>
 
           {/* Cards with Buttons */}
