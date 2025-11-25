@@ -47,19 +47,6 @@ const SoudropPro = () => {
     description: "O que NÃO fazer se você quer vender com consistência."
   }];
   const benefits = ["Sem enrolação: direto ao ponto, sem blá blá blá", "Sem pegadinhas: você vê tudo funcionando ao vivo", "Sem promessas impossíveis: só o que realmente funciona", "Sem complicação: até quem nunca vendeu online consegue aplicar", "Sem risco: se não gostar, é só sair — mas garanto que você vai ficar"];
-  const bonuses = [{
-    icon: Target,
-    title: "Checklist de validação de produto"
-  }, {
-    icon: Sparkles,
-    title: "Template de anúncio que converte"
-  }, {
-    icon: FileText,
-    title: "Passo a passo visual de publicação"
-  }, {
-    icon: BarChart3,
-    title: "Planilha de controle simples e eficaz"
-  }];
   const forWho = ["Quer vender online mas não sabe por onde começar", "Já tentou mas travou no meio do caminho", "Tá cansado de gastar dinheiro com curso que não funciona", "Quer um método simples que funcione de verdade", "Precisa de resultado rápido sem enrolação"];
   return <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
@@ -216,31 +203,6 @@ const SoudropPro = () => {
                     <Zap className="h-6 w-6 text-blue-600" />
                   </div>
                   <p className="text-lg font-medium text-slate-50">{benefit}</p>
-                </CardContent>
-              </Card>)}
-          </div>
-        </div>
-      </section>
-
-      {/* Bônus */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              E você ainda ganha <span className="text-purple-600">materiais bônus</span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              Durante a aula, vou liberar materiais exclusivos para você aplicar imediatamente
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {bonuses.map((bonus, index) => <Card key={index} className="border-2 border-purple-200 hover:border-purple-500 transition-all duration-300 hover:shadow-xl text-center">
-                <CardContent className="p-6 space-y-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto">
-                    <bonus.icon className="h-8 w-8 text-purple-600" />
-                  </div>
-                  <p className="font-semibold text-slate-50">{bonus.title}</p>
                 </CardContent>
               </Card>)}
           </div>
