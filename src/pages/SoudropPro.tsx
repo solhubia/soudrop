@@ -80,17 +80,19 @@ const SoudropPro = () => {
               ATENÇÃO: existe uma fórmula simples (quase injusta) que está fazendo pessoas comuns baterem 10K/mês — e ninguém quer que você saiba.
             </h1>
             
-            <p className="text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed px-4">
-              Enquanto os "especialistas" complicam, quem aprende isso aqui… vende todos os dias.
-            </p>
+            <div className="space-y-4 text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto px-4">
+              <p className="font-medium">
+                Enquanto os "especialistas" complicam, quem aprende isso aqui… vende todos os dias.
+              </p>
 
-            <p className="text-base lg:text-lg text-gray-600 leading-relaxed px-4">
-              É simples. É direto. É lucrativo. E você vai aprender AO VIVO.
-            </p>
+              <p className="text-base lg:text-lg text-gray-600">
+                Na aula ao vivo, eu vou revelar o passo a passo completo dessa fórmula que está mudando a vida de vendedores comuns.
+              </p>
 
-            <p className="text-base lg:text-lg text-gray-700 font-semibold leading-relaxed px-4">
-              👉 Participe da aula e veja você mesmo essa "fórmula mágica" funcionando.
-            </p>
+              <p className="text-base lg:text-lg font-bold text-gray-900">
+                👉 Participe da aula gratuita e veja você mesmo como aplicar essa fórmula no seu negócio.
+              </p>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <div style={{textAlign:"center"}}>
@@ -114,10 +116,10 @@ const SoudropPro = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              Isso é pra você?
+              Essa aula é pra você?
             </h2>
             <p className="text-lg text-gray-600">
-              Se você se identifica com pelo menos 1 desses pontos, essa aula foi feita pra você:
+              Se você se identifica com pelo menos 1 desses pontos, você precisa participar dessa aula:
             </p>
           </div>
           
@@ -200,10 +202,10 @@ const SoudropPro = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              Por que essa aula <span className="text-blue-600">não é mais uma promessa vazia</span>
+              Por que essa aula <span className="text-blue-600">é diferente</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Porque não é teoria. É o que funciona de verdade.
+              Porque não é teoria. É o que eu aplico todos os dias e vou te mostrar ao vivo.
             </p>
           </div>
           
@@ -225,10 +227,10 @@ const SoudropPro = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              E ainda tem <span className="text-purple-600">bônus</span>
+              E você ainda ganha <span className="text-purple-600">materiais bônus</span>
             </h2>
             <p className="text-lg text-gray-600">
-              Pra você sair da aula pronto pra aplicar
+              Durante a aula, vou liberar materiais exclusivos para você aplicar imediatamente
             </p>
           </div>
           

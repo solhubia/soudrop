@@ -128,15 +128,15 @@ const SoudropElite = () => {
         </div>
       </section>
 
-      {/* O que é o programa */}
+      {/* O que é a aula */}
       <section className="py-20 px-6 bg-elite-black border-t border-elite-gold/10">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-            Como você vai <span className="text-elite-gold">começar a vender</span>
+            O que você vai <span className="text-elite-gold">aprender na aula</span>
           </h2>
           <p className="text-xl text-elite-white/70 leading-relaxed max-w-3xl mx-auto">
-            Com o método SouDrop, você aprende tudo que precisa para montar sua operação de vendas online,
-            mesmo começando do zero. É prático, direto e funciona.
+            Na aula ao vivo, vou te mostrar exatamente como transformar produtos simples em uma operação lucrativa.
+            Sem enrolação, sem teoria — só o que funciona na prática.
           </p>
         </div>
       </section>
@@ -145,7 +145,7 @@ const SoudropElite = () => {
       <section className="py-20 px-6 bg-gradient-elite-bg">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            É ideal para <span className="text-elite-gold">quem quer:</span>
+            Essa aula é para <span className="text-elite-gold">quem quer:</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -157,14 +157,14 @@ const SoudropElite = () => {
         </div>
       </section>
 
-      {/* Pilares do Programa */}
+      {/* Conteúdo da Aula */}
       <section className="py-20 px-6 bg-elite-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-            O que você vai <span className="text-elite-gold">aprender</span>
+            O que vou revelar <span className="text-elite-gold">na aula</span>
           </h2>
           <p className="text-center text-elite-white/60 mb-16 text-lg">
-            Tudo que você precisa para começar a vender online
+            A estratégia completa para faturar com produtos simples
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -189,7 +189,7 @@ const SoudropElite = () => {
         <div className="max-w-4xl mx-auto text-center">
           <Crown className="w-16 h-16 text-elite-gold mx-auto mb-8" />
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Veja como você pode transformar sua realidade
+            O que muda depois dessa aula
           </h2>
           <div className="grid md:grid-cols-2 gap-8 text-left">
             <div className="p-8 bg-elite-black/50 border border-red-500/30 rounded-xl">
@@ -283,10 +283,10 @@ const SoudropElite = () => {
       <section className="py-20 px-6 bg-elite-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-            Bônus <span className="text-elite-gold">Inclusos</span>
+            Materiais <span className="text-elite-gold">Bônus</span>
           </h2>
           <p className="text-center text-elite-white/60 mb-16 text-lg">
-            Materiais práticos para você começar mais rápido
+            Durante a aula, vou liberar materiais exclusivos para você aplicar na hora
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -332,15 +332,15 @@ const SoudropElite = () => {
         </div>
       </section>
 
-      {/* Oferta */}
+      {/* CTA Final */}
       <section className="py-20 px-6 bg-elite-black">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Comece Seu <span className="text-elite-gold">Negócio Online</span>
+              Garanta Sua Vaga <span className="text-elite-gold">Na Aula</span>
             </h2>
             <p className="text-xl text-elite-white/60">
-              Tudo que você precisa para vender de casa
+              Aula gratuita e ao vivo — vagas limitadas
             </p>
           </div>
 
@@ -353,26 +353,26 @@ const SoudropElite = () => {
                 </div>
                 
                 <h3 className="text-3xl font-bold mb-8">
-                  Aprenda a vender online<br />
-                  <span className="text-elite-gold">sem estoque e sem complicação</span>
+                  Descubra como faturar alto<br />
+                  <span className="text-elite-gold">vendendo produtos simples</span>
                 </h3>
 
                 <div className="space-y-4 mb-8 text-left max-w-md mx-auto">
                   <div className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-elite-gold flex-shrink-0 mt-1" />
-                    <p className="text-elite-white/80">Método completo para iniciantes</p>
+                    <p className="text-elite-white/80">Aula 100% gratuita e ao vivo</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-elite-gold flex-shrink-0 mt-1" />
-                    <p className="text-elite-white/80">6 módulos de conteúdo prático</p>
+                    <p className="text-elite-white/80">Estratégia completa revelada</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-elite-gold flex-shrink-0 mt-1" />
-                    <p className="text-elite-white/80">Bônus e materiais inclusos</p>
+                    <p className="text-elite-white/80">Materiais bônus durante a aula</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-elite-gold flex-shrink-0 mt-1" />
-                    <p className="text-elite-white/80">Suporte e comunidade exclusiva</p>
+                    <p className="text-elite-white/80">Tire suas dúvidas em tempo real</p>
                   </div>
                 </div>
 
