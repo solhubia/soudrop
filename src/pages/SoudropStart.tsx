@@ -63,9 +63,7 @@ const SoudropStart = () => {
             
             <div className="space-y-4 md:space-y-5 max-w-3xl">
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-ice-text-primary font-bold leading-tight px-4">
-                Eu mesmo estou aplicando isso agora.
-                <br />
-                Estou no Chile, na neve, enquanto meu negócio continua faturando sozinho.
+                Já viajei pro Chile e pra vários outros países. Em todos eles, meu negócio continuou faturando enquanto eu aproveitava a viagem. Hoje, posso trabalhar de onde eu quiser porque montei uma estrutura que não depende de mim o tempo todo.
               </p>
 
               <p className="text-sm sm:text-base md:text-lg text-ice-text-secondary leading-relaxed px-4">
