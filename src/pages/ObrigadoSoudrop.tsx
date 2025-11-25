@@ -26,6 +26,25 @@ const ObrigadoSoudrop = () => {
             </p>
           </div>
 
+          {/* Video Section */}
+          <div className="mb-12 animate-fade-in" style={{
+          animationDelay: '0.3s'
+        }}>
+            <div className="relative w-full max-w-4xl mx-auto">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card">
+                <div className="aspect-video">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Vídeo de Boas-Vindas"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Cards with Buttons */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* WhatsApp Card */}
