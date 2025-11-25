@@ -57,7 +57,7 @@ const SoudropStart = () => {
           <div className="flex flex-col items-center text-center space-y-6 md:space-y-8">
             <h1 className="text-[28px] leading-[1.15] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black max-w-4xl px-2">
               <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                Existe um código simples que permite que pessoas comuns  possam faturarem todos os dias enquanto vivem experiências que antes pareciam impossíveis.
+                Existe um código simples que permite que pessoas comuns  possam faturar todos os dias enquanto vivem experiências que antes pareciam impossíveis.
               </span>
             </h1>
             
