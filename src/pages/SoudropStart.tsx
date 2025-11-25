@@ -106,7 +106,7 @@ const SoudropStart = () => {
                 width: '100%',
                 maxWidth: '500px'
               }}>
-                  Começar agora
+                  Quero Participar da Aula
                 </button>
               </div>
             </div>
