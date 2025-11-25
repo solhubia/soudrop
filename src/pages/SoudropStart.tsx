@@ -323,6 +323,34 @@ const SoudropStart = () => {
                 Suporte e comunidade exclusiva
               </p>
             </div>
+
+            <div className="w-full max-w-2xl px-4 pt-6 md:pt-8">
+              <div style={{
+              textAlign: 'center',
+              width: '100%'
+            }}>
+                <button type="button" className="wj-embed-button hover:scale-105 transition-transform duration-300" data-webinarHash="8wgw0kty" style={{
+                border: '2px solid rgba(0, 0, 0, 0.5)',
+                background: 'rgba(41, 182, 246, 0.95)',
+                color: 'rgb(255, 255, 255)',
+                fontSize: '22px',
+                padding: '18px 70px',
+                boxShadow: '0 10px 40px rgba(41, 182, 246, 0.3)',
+                borderRadius: '12px',
+                whiteSpace: 'normal',
+                fontWeight: '700',
+                lineHeight: '1.3',
+                cursor: 'pointer',
+                fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                wordBreak: 'break-word',
+                margin: 'auto',
+                width: '100%',
+                maxWidth: '600px'
+              }}>
+                  Começar agora
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
