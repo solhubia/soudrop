@@ -77,17 +77,23 @@ const SoudropElite = () => {
             <span className="text-elite-gold text-sm font-medium uppercase tracking-wider">Trabalhe de Casa</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Venda <span className="text-elite-gold">de casa</span>,<br />sem estoque
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            ATENÇÃO: se você acha que precisa de um "produto genial" para faturar alto, você está perdendo dinheiro.
           </h1>
 
-          <p className="text-xl md:text-2xl text-elite-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Aprenda a vender online usando marketplaces
-          </p>
+          <div className="space-y-6 text-xl md:text-2xl text-elite-white/90 mb-8 max-w-4xl mx-auto">
+            <p className="font-bold">
+              Eu cheguei a 100 mil reais vendendo tomada.<br />
+              Sim, tomada. Nada mirabolante.
+            </p>
 
-          <div className="mb-12">
-            <img src={renanPhoto} alt="Renan Ferreira" className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-elite-gold shadow-elite-gold-strong" />
-            <p className="mt-4 text-elite-white/60 text-sm">Com Renan Ferreira</p>
+            <p className="text-lg md:text-xl text-elite-white/80">
+              Na aula, eu vou abrir o jogo e te mostrar como pensar produto, preço, anúncio e escala para transformar um item simples em uma operação lucrativa.
+            </p>
+
+            <p className="text-lg md:text-xl font-bold text-elite-gold">
+              👉 Entre na aula e descubra como buscar seus primeiros 100K com produtos comuns.
+            </p>
           </div>
 
           <div style={{ textAlign: 'center' }}>
