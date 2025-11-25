@@ -68,16 +68,25 @@ const ObrigadoSoudrop = () => {
         }}>
             <div className="relative w-full max-w-4xl mx-auto">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card">
-                <div className="aspect-video relative">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=0&controls=0&modestbranding=1&showinfo=0&rel=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&playlist=RdT2ExTPB7o"
-                    title="Vídeo de Boas-Vindas"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    style={{ pointerEvents: 'none' }}
-                  ></iframe>
+                <div className="aspect-video relative bg-black">
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    playsInline
+                    muted={false}
+                    controls={false}
+                    onContextMenu={(e) => e.preventDefault()}
+                    src="/video-upsell.mp4"
+                  >
+                    Seu navegador não suporta reprodução de vídeo.
+                  </video>
                   {/* Overlay to prevent interaction */}
-                  <div className="absolute inset-0 bg-transparent" style={{ pointerEvents: 'auto' }} onClick={(e) => e.preventDefault()}></div>
+                  <div 
+                    className="absolute inset-0 bg-transparent cursor-default" 
+                    onClick={(e) => e.preventDefault()}
+                    onDoubleClick={(e) => e.preventDefault()}
+                  ></div>
                 </div>
               </div>
             </div>
