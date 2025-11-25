@@ -76,7 +76,7 @@ const SoudropPro = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight px-4">
+            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight px-4">
               ATENÇÃO: existe uma fórmula simples (quase injusta) que está fazendo pessoas comuns baterem 10K/mês — e ninguém quer que você saiba.
             </h1>
             
