@@ -351,11 +351,10 @@ const SoudropElite = () => {
                       cursor: 'pointer',
                       fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
                       wordBreak: 'break-word',
-                      margin: 'auto',
-                      width: '100%'
+                      margin: 'auto'
                     }}
                   >
-                    COMEÇAR AGORA
+                    Register
                   </button>
                 </div>
 
