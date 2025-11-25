@@ -65,7 +65,7 @@ const SoudropStart = () => {
   }];
   return <div className="min-h-screen bg-ice-bg-main text-ice-text-primary">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-16 md:py-20 px-4 min-h-[85vh] md:min-h-screen flex items-center">
+      <section className="relative overflow-hidden py-12 md:py-16 lg:py-20 px-4 min-h-screen flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-ice-hero" />
         <div className="absolute inset-0">
           <div className="absolute top-10 left-5 w-40 h-40 md:w-72 md:h-72 bg-ice-blue-primary rounded-full blur-[100px] md:blur-[120px] opacity-20 animate-pulse" />
@@ -75,72 +75,69 @@ const SoudropStart = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-ice-purple rounded-full blur-[150px] md:blur-[200px] opacity-10" />
         </div>
         
-        <div className="container mx-auto relative z-10 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="space-y-5 md:space-y-8 text-center max-w-4xl mx-auto">
-              <h1 className="text-[32px] leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black">
-                <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                  existe um código simples que permite que pessoas comuns faturarem todos os dias enquanto vivem experiências que antes pareciam impossíveis.
-                </span>
-              </h1>
-              
-              <p className="text-lg sm:text-xl md:text-2xl text-ice-text-primary font-bold leading-tight">
+        <div className="container mx-auto relative z-10 max-w-5xl">
+          <div className="flex flex-col items-center text-center space-y-6 md:space-y-8">
+            <h1 className="text-[28px] leading-[1.15] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black max-w-4xl px-2">
+              <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
+                Existe um código simples que permite que pessoas comuns faturarem todos os dias enquanto vivem experiências que antes pareciam impossíveis.
+              </span>
+            </h1>
+            
+            <div className="space-y-4 md:space-y-5 max-w-3xl">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-ice-text-primary font-bold leading-tight px-4">
                 Eu mesmo estou aplicando isso agora.
                 <br />
                 Estou no Chile, na neve, enquanto meu negócio continua faturando sozinho.
               </p>
 
-              <p className="text-base md:text-lg lg:text-xl text-ice-text-secondary leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-ice-text-secondary leading-relaxed px-4">
                 Na aula especial, eu vou te ensinar como montar sua operação automatizada de dropshipping e ativar um sistema que trabalha enquanto você vive.
               </p>
 
-              <div className="space-y-3 text-base md:text-lg text-ice-text-primary font-semibold">
+              <div className="space-y-2 text-sm sm:text-base md:text-lg text-ice-text-primary font-semibold px-4">
                 <p>Zero enrolação.</p>
                 <p>Zero promessas vazias.</p>
                 <p>Somente o passo a passo real.</p>
               </div>
 
-              <p className="text-lg md:text-xl text-ice-text-primary font-bold">
+              <p className="text-base sm:text-lg md:text-xl text-ice-text-primary font-bold px-4 pt-2">
                 👉 Participe da aula e entenda como destravar sua liberdade digital.
               </p>
-
-              <div className="flex flex-col gap-3 pt-2 md:pt-6">
-                <div style={{ textAlign: 'center', width: '100%' }}>
-                  <button 
-                    type="button" 
-                    className="wj-embed-button" 
-                    data-webinarHash="8wgw0kty" 
-                    style={{
-                      border: '2px solid rgba(0, 0, 0, 0.5)',
-                      background: 'rgba(41, 182, 246, 0.95)',
-                      color: 'rgb(255, 255, 255)',
-                      fontSize: '24px',
-                      padding: '18px 80px',
-                      boxShadow: 'none',
-                      borderRadius: '4px',
-                      whiteSpace: 'normal',
-                      fontWeight: '700',
-                      lineHeight: '1.3',
-                      cursor: 'pointer',
-                      fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-                      wordBreak: 'break-word',
-                      margin: 'auto',
-                      width: '100%'
-                    }}
-                  >
-                    Começar agora
-                  </button>
-                </div>
-                
-                <div className="flex items-center justify-center gap-2 pt-2">
-                  <Shield className="w-4 h-4 text-ice-cyan flex-shrink-0" />
-                  <span className="text-xs md:text-sm text-ice-text-secondary font-medium">120 dias de garantia total</span>
-                </div>
-              </div>
             </div>
-            
-            <div className="relative hidden lg:block">
-              <div className="absolute inset-0 bg-gradient-to-r from-ice-blue-primary to-ice-cyan rounded-3xl blur-3xl opacity-20 animate-pulse" />
+
+            <div className="flex flex-col gap-4 pt-4 md:pt-6 w-full max-w-2xl px-4">
+              <div style={{ textAlign: 'center', width: '100%' }}>
+                <button 
+                  type="button" 
+                  className="wj-embed-button hover:scale-105 transition-transform duration-300" 
+                  data-webinarHash="8wgw0kty" 
+                  style={{
+                    border: '2px solid rgba(0, 0, 0, 0.5)',
+                    background: 'rgba(41, 182, 246, 0.95)',
+                    color: 'rgb(255, 255, 255)',
+                    fontSize: '20px',
+                    padding: '16px 60px',
+                    boxShadow: '0 10px 40px rgba(41, 182, 246, 0.3)',
+                    borderRadius: '12px',
+                    whiteSpace: 'normal',
+                    fontWeight: '700',
+                    lineHeight: '1.3',
+                    cursor: 'pointer',
+                    fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                    wordBreak: 'break-word',
+                    margin: 'auto',
+                    width: '100%',
+                    maxWidth: '500px'
+                  }}
+                >
+                  Começar agora
+                </button>
+              </div>
+              
+              <div className="flex items-center justify-center gap-2">
+                <Shield className="w-5 h-5 text-ice-cyan flex-shrink-0" />
+                <span className="text-sm md:text-base text-ice-text-secondary font-medium">120 dias de garantia total</span>
+              </div>
             </div>
           </div>
         </div>
@@ -303,7 +300,7 @@ const SoudropStart = () => {
       </section>
 
       {/* Oferta Final + CTA */}
-      <section className="py-12 md:py-20 px-4 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-ice-hero" />
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-ice-blue-primary rounded-full blur-[150px] opacity-20 animate-pulse" />
@@ -312,45 +309,45 @@ const SoudropStart = () => {
         }} />
         </div>
 
-        <div className="container mx-auto max-w-4xl relative z-10 text-center space-y-8 md:space-y-12">
-          <div className="space-y-5 md:space-y-6">
-            <div className="inline-block">
-              <div className="flex items-center gap-2 bg-ice-bg-card px-4 py-2 md:px-6 md:py-3 rounded-full border border-ice-cyan">
-                <Snowflake className="w-5 h-5 md:w-6 md:h-6 text-ice-cyan" />
-                <span className="text-base md:text-lg font-bold text-ice-text-primary">OFERTA ESPECIAL</span>
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="flex flex-col items-center text-center space-y-8 md:space-y-12">
+            <div className="space-y-6 md:space-y-8">
+              <div className="inline-block">
+                <div className="flex items-center gap-2 bg-ice-bg-card px-4 py-2 md:px-6 md:py-3 rounded-full border border-ice-cyan shadow-lg">
+                  <Snowflake className="w-5 h-5 md:w-6 md:h-6 text-ice-cyan" />
+                  <span className="text-sm md:text-lg font-bold text-ice-text-primary">OFERTA ESPECIAL</span>
+                </div>
               </div>
-            </div>
 
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black px-4">
-              <span className="text-ice-text-primary">COMECE</span>{" "}
-              <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                AGORA
-              </span>
-            </h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black px-4">
+                <span className="text-ice-text-primary">COMECE</span>{" "}
+                <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
+                  AGORA
+                </span>
+              </h2>
 
-            <div className="bg-ice-bg-card border-2 border-ice-blue-primary rounded-2xl md:rounded-3xl p-6 md:p-8 max-w-md mx-auto shadow-ice-glow">
-              <div className="space-y-3 md:space-y-4">
-                <div className="flex items-center justify-center gap-2 text-ice-text-secondary pt-2">
-                  <Shield className="w-4 h-4 md:w-5 md:h-5 text-ice-cyan" />
-                  <span className="text-xs md:text-sm">120 dias de garantia operacional</span>
+              <div className="bg-ice-bg-card border-2 border-ice-blue-primary rounded-2xl md:rounded-3xl p-6 md:p-8 max-w-md mx-auto shadow-ice-glow">
+                <div className="flex items-center justify-center gap-2 text-ice-text-secondary">
+                  <Shield className="w-5 h-5 text-ice-cyan" />
+                  <span className="text-sm md:text-base">120 dias de garantia operacional</span>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 md:gap-4 justify-center pt-4 md:pt-6 px-4">
+            <div className="w-full max-w-2xl px-4">
               <div style={{ textAlign: 'center', width: '100%' }}>
                 <button 
                   type="button" 
-                  className="wj-embed-button" 
+                  className="wj-embed-button hover:scale-105 transition-transform duration-300" 
                   data-webinarHash="8wgw0kty" 
                   style={{
                     border: '2px solid rgba(0, 0, 0, 0.5)',
                     background: 'rgba(41, 182, 246, 0.95)',
                     color: 'rgb(255, 255, 255)',
-                    fontSize: '24px',
-                    padding: '18px 80px',
-                    boxShadow: 'none',
-                    borderRadius: '4px',
+                    fontSize: '22px',
+                    padding: '18px 70px',
+                    boxShadow: '0 10px 40px rgba(41, 182, 246, 0.3)',
+                    borderRadius: '12px',
                     whiteSpace: 'normal',
                     fontWeight: '700',
                     lineHeight: '1.3',
@@ -367,15 +364,18 @@ const SoudropStart = () => {
               </div>
             </div>
 
-            <div className="pt-6 md:pt-8 space-y-3 md:space-y-4 px-4">
-              <p className="text-base md:text-lg font-bold text-ice-text-primary">
-                ✓ Acesso imediato após confirmação do pagamento
+            <div className="space-y-3 md:space-y-4 px-4 max-w-2xl">
+              <p className="text-sm sm:text-base md:text-lg font-bold text-ice-text-primary flex items-center justify-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-ice-cyan flex-shrink-0" />
+                Acesso imediato após confirmação do pagamento
               </p>
-              <p className="text-base md:text-lg font-bold text-ice-text-primary">
-                ✓ Suporte e comunidade exclusiva
+              <p className="text-sm sm:text-base md:text-lg font-bold text-ice-text-primary flex items-center justify-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-ice-cyan flex-shrink-0" />
+                Suporte e comunidade exclusiva
               </p>
-              <p className="text-base md:text-lg font-bold text-ice-text-primary">
-                ✓ 120 dias de garantia total
+              <p className="text-sm sm:text-base md:text-lg font-bold text-ice-text-primary flex items-center justify-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-ice-cyan flex-shrink-0" />
+                120 dias de garantia total
               </p>
             </div>
           </div>
