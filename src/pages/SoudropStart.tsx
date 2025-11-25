@@ -13,7 +13,6 @@ const SoudropStart = () => {
     embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
     embedScript.async = true;
     document.body.appendChild(embedScript);
-    
     return () => {
       if (document.body.contains(embedScript)) {
         document.body.removeChild(embedScript);
@@ -79,7 +78,7 @@ const SoudropStart = () => {
           <div className="flex flex-col items-center text-center space-y-6 md:space-y-8">
             <h1 className="text-[28px] leading-[1.15] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black max-w-4xl px-2">
               <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                Existe um código simples que permite que pessoas comuns faturarem todos os dias enquanto vivem experiências que antes pareciam impossíveis.
+                Existe um código simples que permite que pessoas comuns  possam faturarem todos os dias enquanto vivem experiências que antes pareciam impossíveis.
               </span>
             </h1>
             
@@ -106,30 +105,28 @@ const SoudropStart = () => {
             </div>
 
             <div className="flex flex-col gap-4 pt-4 md:pt-6 w-full max-w-2xl px-4">
-              <div style={{ textAlign: 'center', width: '100%' }}>
-                <button 
-                  type="button" 
-                  className="wj-embed-button hover:scale-105 transition-transform duration-300" 
-                  data-webinarHash="8wgw0kty" 
-                  style={{
-                    border: '2px solid rgba(0, 0, 0, 0.5)',
-                    background: 'rgba(41, 182, 246, 0.95)',
-                    color: 'rgb(255, 255, 255)',
-                    fontSize: '20px',
-                    padding: '16px 60px',
-                    boxShadow: '0 10px 40px rgba(41, 182, 246, 0.3)',
-                    borderRadius: '12px',
-                    whiteSpace: 'normal',
-                    fontWeight: '700',
-                    lineHeight: '1.3',
-                    cursor: 'pointer',
-                    fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-                    wordBreak: 'break-word',
-                    margin: 'auto',
-                    width: '100%',
-                    maxWidth: '500px'
-                  }}
-                >
+              <div style={{
+              textAlign: 'center',
+              width: '100%'
+            }}>
+                <button type="button" className="wj-embed-button hover:scale-105 transition-transform duration-300" data-webinarHash="8wgw0kty" style={{
+                border: '2px solid rgba(0, 0, 0, 0.5)',
+                background: 'rgba(41, 182, 246, 0.95)',
+                color: 'rgb(255, 255, 255)',
+                fontSize: '20px',
+                padding: '16px 60px',
+                boxShadow: '0 10px 40px rgba(41, 182, 246, 0.3)',
+                borderRadius: '12px',
+                whiteSpace: 'normal',
+                fontWeight: '700',
+                lineHeight: '1.3',
+                cursor: 'pointer',
+                fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                wordBreak: 'break-word',
+                margin: 'auto',
+                width: '100%',
+                maxWidth: '500px'
+              }}>
                   Começar agora
                 </button>
               </div>
@@ -335,30 +332,28 @@ const SoudropStart = () => {
             </div>
 
             <div className="w-full max-w-2xl px-4">
-              <div style={{ textAlign: 'center', width: '100%' }}>
-                <button 
-                  type="button" 
-                  className="wj-embed-button hover:scale-105 transition-transform duration-300" 
-                  data-webinarHash="8wgw0kty" 
-                  style={{
-                    border: '2px solid rgba(0, 0, 0, 0.5)',
-                    background: 'rgba(41, 182, 246, 0.95)',
-                    color: 'rgb(255, 255, 255)',
-                    fontSize: '22px',
-                    padding: '18px 70px',
-                    boxShadow: '0 10px 40px rgba(41, 182, 246, 0.3)',
-                    borderRadius: '12px',
-                    whiteSpace: 'normal',
-                    fontWeight: '700',
-                    lineHeight: '1.3',
-                    cursor: 'pointer',
-                    fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-                    wordBreak: 'break-word',
-                    margin: 'auto',
-                    width: '100%',
-                    maxWidth: '600px'
-                  }}
-                >
+              <div style={{
+              textAlign: 'center',
+              width: '100%'
+            }}>
+                <button type="button" className="wj-embed-button hover:scale-105 transition-transform duration-300" data-webinarHash="8wgw0kty" style={{
+                border: '2px solid rgba(0, 0, 0, 0.5)',
+                background: 'rgba(41, 182, 246, 0.95)',
+                color: 'rgb(255, 255, 255)',
+                fontSize: '22px',
+                padding: '18px 70px',
+                boxShadow: '0 10px 40px rgba(41, 182, 246, 0.3)',
+                borderRadius: '12px',
+                whiteSpace: 'normal',
+                fontWeight: '700',
+                lineHeight: '1.3',
+                cursor: 'pointer',
+                fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                wordBreak: 'break-word',
+                margin: 'auto',
+                width: '100%',
+                maxWidth: '600px'
+              }}>
                   COMEÇAR AGORA
                 </button>
               </div>
