@@ -76,8 +76,8 @@ const ObrigadoSoudrop = () => {
           animationDelay: '0.5s'
         }}>
             <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" asChild>
-              <a href="#upsell-checkout">
-                Quero entrar no Grupo Vip e Mentoria
+              <a href="https://pay.kiwify.com.br/zrBAaMP" target="_blank" rel="noopener noreferrer">
+                Quero dar o próximo passo!
               </a>
             </Button>
           </div>
