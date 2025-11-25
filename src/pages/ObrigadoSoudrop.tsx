@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 import { CheckCircle, MessageCircle, Package } from "lucide-react";
 import { useEffect } from "react";
 const ObrigadoSoudrop = () => {
@@ -17,7 +18,7 @@ const ObrigadoSoudrop = () => {
           </div>
 
           {/* Main Content */}
-          <div className="text-center space-y-6 mb-12 animate-fade-in" style={{
+          <div className="text-center space-y-6 mb-8 animate-fade-in" style={{
           animationDelay: '0.2s'
         }}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Bem-vindo a Soudrop! 🎉</h1>
@@ -26,20 +27,62 @@ const ObrigadoSoudrop = () => {
             </p>
           </div>
 
+          {/* Progress Bar */}
+          <div className="max-w-2xl mx-auto mb-12 animate-fade-in" style={{
+          animationDelay: '0.25s'
+        }}>
+            <div className="space-y-3">
+              <p className="text-center text-sm md:text-base font-medium">
+                Etapa 2 de 2 – Assista ao vídeo para liberar seus próximos passos
+              </p>
+              <Progress value={75} className="h-3 bg-muted" />
+            </div>
+          </div>
+
+          {/* Video Instruction Text */}
+          <div className="max-w-3xl mx-auto mb-8 text-center space-y-4 animate-fade-in" style={{
+          animationDelay: '0.3s'
+        }}>
+            <h2 className="text-2xl md:text-3xl font-bold">
+              Antes de seguir… este vídeo é OBRIGATÓRIO.
+            </h2>
+            <div className="text-base md:text-lg text-muted-foreground space-y-3">
+              <p>
+                Você acabou de dar um passo importante — mas não para por aqui.
+              </p>
+              <p>
+                No vídeo abaixo, eu vou te mostrar <strong className="text-foreground">exatamente o que fazer agora</strong>, quais são os <strong className="text-foreground">próximos passos</strong>, e como <strong className="text-foreground">aproveitar 100% do potencial</strong> do que você acabou de liberar.
+              </p>
+              <p className="flex items-center justify-center gap-2">
+                <span className="text-xl">⚠️</span>
+                <span>Se você pular esse vídeo, você pode perder oportunidades que <strong className="text-foreground">só quem assiste fica sabendo</strong>.</span>
+              </p>
+              <p className="flex items-center justify-center gap-2">
+                <span className="text-xl">👉</span>
+                <span><strong className="text-foreground">Assista agora</strong> e siga as instruções com atenção.</span>
+              </p>
+              <p className="text-lg font-semibold text-foreground mt-4">
+                É aqui que começa a diferença entre quem só compra… e quem <strong>realmente tem resultado</strong>.
+              </p>
+            </div>
+          </div>
+
           {/* Video Section */}
           <div className="mb-12 animate-fade-in" style={{
-          animationDelay: '0.3s'
+          animationDelay: '0.4s'
         }}>
             <div className="relative w-full max-w-4xl mx-auto">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card">
-                <div className="aspect-video">
+                <div className="aspect-video relative">
                   <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=0"
+                    src="https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=0&controls=0&modestbranding=1&showinfo=0&rel=0&disablekb=1&fs=0&iv_load_policy=3"
                     title="Vídeo de Boas-Vindas"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
+                    style={{ pointerEvents: 'none' }}
                   ></iframe>
+                  {/* Overlay to prevent interaction */}
+                  <div className="absolute inset-0 bg-transparent" style={{ pointerEvents: 'auto' }} onClick={(e) => e.preventDefault()}></div>
                 </div>
               </div>
             </div>
