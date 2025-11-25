@@ -77,26 +77,31 @@ const SoudropStart = () => {
         
         <div className="container mx-auto relative z-10 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="space-y-5 md:space-y-8">
-              <div className="inline-block">
-                <span className="px-3 py-1.5 md:px-6 md:py-3 bg-ice-bg-card border border-ice-border rounded-full text-[10px] md:text-sm font-bold text-ice-cyan uppercase tracking-wider shadow-lg">
-                  <Snowflake className="w-3 h-3 md:w-4 md:h-4 inline-block mr-1.5 md:mr-2 -mt-1" />
-                  Negócio Automatizado
-                </span>
-              </div>
-              
+            <div className="space-y-5 md:space-y-8 text-center max-w-4xl mx-auto">
               <h1 className="text-[32px] leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black">
                 <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                  Suas vendas não param. Você sim.
+                  existe um código simples que permite que pessoas comuns faturarem todos os dias enquanto vivem experiências que antes pareciam impossíveis.
                 </span>
               </h1>
               
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-ice-text-primary font-bold leading-tight">
-                Negócio automático que roda sozinho.
+              <p className="text-lg sm:text-xl md:text-2xl text-ice-text-primary font-bold leading-tight">
+                Eu mesmo estou aplicando isso agora.
+                <br />
+                Estou no Chile, na neve, enquanto meu negócio continua faturando sozinho.
               </p>
 
-              <p className="text-sm md:text-base lg:text-lg text-ice-text-secondary leading-relaxed max-w-xl">
-                Monte uma vez. Automatize tudo. Venda dormindo.
+              <p className="text-base md:text-lg lg:text-xl text-ice-text-secondary leading-relaxed">
+                Na aula especial, eu vou te ensinar como montar sua operação automatizada de dropshipping e ativar um sistema que trabalha enquanto você vive.
+              </p>
+
+              <div className="space-y-3 text-base md:text-lg text-ice-text-primary font-semibold">
+                <p>Zero enrolação.</p>
+                <p>Zero promessas vazias.</p>
+                <p>Somente o passo a passo real.</p>
+              </div>
+
+              <p className="text-lg md:text-xl text-ice-text-primary font-bold">
+                👉 Participe da aula e entenda como destravar sua liberdade digital.
               </p>
 
               <div className="flex flex-col gap-3 pt-2 md:pt-6">
