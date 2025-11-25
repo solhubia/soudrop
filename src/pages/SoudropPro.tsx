@@ -284,6 +284,28 @@ const SoudropPro = () => {
         </div>
       </section>
 
+      {/* CTA Final */}
+      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto max-w-4xl text-center space-y-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+            Pronto pra começar a <span className="text-green-600">vender de verdade</span>?
+          </h2>
+          
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Participe da aula gratuita e descubra a fórmula simples que está fazendo pessoas comuns faturarem 10K/mês
+          </p>
+
+          <div style={{textAlign:"center"}}>
+            <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "2px solid rgba(0, 0, 0, 0.5)", background: "rgba(41, 182, 246, 0.95)", color: "rgb(255, 255, 255)", fontSize: "24px", padding: "18px 80px", boxShadow: "none", borderRadius: "4px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif", wordBreak: "break-word", margin: "auto"}}>Quero Participar da Aula</button>
+          </div>
+
+          <div className="flex items-center justify-center gap-2 pt-4">
+            <CheckCircle2 className="h-5 w-5 text-green-600" />
+            <span className="text-sm text-gray-600">Vagas limitadas • Aula 100% gratuita</span>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-8 px-4">
         <div className="container mx-auto max-w-6xl text-center">
