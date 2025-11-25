@@ -32,10 +32,6 @@ const SoudropStart = () => {
     title: "Dashboard Completo",
     description: "Controle total das vendas"
   }, {
-    icon: <Shield className="w-8 h-8" />,
-    title: "120 Dias de Garantia",
-    description: "Risco zero"
-  }, {
     icon: <BookOpen className="w-8 h-8" />,
     title: "Treinamento Prático",
     description: "Zero enrolação"
@@ -129,11 +125,6 @@ const SoudropStart = () => {
               }}>
                   Começar agora
                 </button>
-              </div>
-              
-              <div className="flex items-center justify-center gap-2">
-                <Shield className="w-5 h-5 text-ice-cyan flex-shrink-0" />
-                <span className="text-sm md:text-base text-ice-text-secondary font-medium">120 dias de garantia total</span>
               </div>
             </div>
           </div>
@@ -265,37 +256,6 @@ const SoudropStart = () => {
         </div>
       </section>
 
-      {/* Garantia Section */}
-      <section className="py-12 md:py-20 px-4 bg-ice-bg-card-alt">
-        <div className="container mx-auto max-w-4xl">
-          <div className="bg-ice-bg-card border-2 border-ice-blue-primary rounded-2xl md:rounded-3xl p-6 md:p-12 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-ice-blue-primary/5 to-ice-cyan/5" />
-            
-            <div className="relative z-10 space-y-4 md:space-y-6">
-              <div className="w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full bg-gradient-to-br from-ice-blue-primary to-ice-cyan flex items-center justify-center">
-                <Shield className="w-8 h-8 md:w-10 md:h-10 text-white" />
-              </div>
-              
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black px-4">
-                <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                  120 DIAS DE GARANTIA
-                </span>
-              </h2>
-              
-              <p className="text-base sm:text-lg md:text-xl text-ice-text-secondary max-w-2xl mx-auto px-4">
-                Não deu resultado em 120 dias? Devolvemos 100%. Sem enrolação.
-              </p>
-
-              <div className="pt-2 md:pt-4">
-                <p className="text-base md:text-lg font-bold text-ice-text-primary">
-                  Risco <span className="text-ice-blue-primary">ZERO</span>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Oferta Final + CTA */}
       <section className="py-16 md:py-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-ice-hero" />
@@ -323,12 +283,6 @@ const SoudropStart = () => {
                 </span>
               </h2>
 
-              <div className="bg-ice-bg-card border-2 border-ice-blue-primary rounded-2xl md:rounded-3xl p-6 md:p-8 max-w-md mx-auto shadow-ice-glow">
-                <div className="flex items-center justify-center gap-2 text-ice-text-secondary">
-                  <Shield className="w-5 h-5 text-ice-cyan" />
-                  <span className="text-sm md:text-base">120 dias de garantia operacional</span>
-                </div>
-              </div>
             </div>
 
             <div className="w-full max-w-2xl px-4">
@@ -367,10 +321,6 @@ const SoudropStart = () => {
               <p className="text-sm sm:text-base md:text-lg font-bold text-ice-text-primary flex items-center justify-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-ice-cyan flex-shrink-0" />
                 Suporte e comunidade exclusiva
-              </p>
-              <p className="text-sm sm:text-base md:text-lg font-bold text-ice-text-primary flex items-center justify-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-ice-cyan flex-shrink-0" />
-                120 dias de garantia total
               </p>
             </div>
           </div>
