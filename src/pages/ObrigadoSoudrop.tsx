@@ -68,22 +68,21 @@ const ObrigadoSoudrop = () => {
         }}>
             <div className="relative w-full max-w-4xl mx-auto">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card">
-                <div className="aspect-video relative bg-black">
+                <div className="aspect-video relative bg-black overflow-hidden">
                   <iframe
                     id="upsell-video"
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&controls=0&modestbranding=1&rel=0&fs=0&showinfo=0&loop=1&playlist=RdT2ExTPB7o&mute=0&disablekb=1&iv_load_policy=3"
+                    src="https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&controls=0&modestbranding=1&rel=0&fs=0&showinfo=0&loop=1&playlist=RdT2ExTPB7o&mute=0"
                     frameBorder="0"
                     allow="autoplay; encrypted-media"
-                    allowFullScreen={false}
                     title="Vídeo de Boas-Vindas"
                   ></iframe>
-                  {/* Overlay to prevent interaction */}
-                  <div 
-                    className="absolute inset-0 bg-transparent cursor-default pointer-events-none" 
-                    onClick={(e) => e.preventDefault()}
-                    onDoubleClick={(e) => e.preventDefault()}
-                  ></div>
+                  
+                  {/* Camada para bloquear clique/pause */}
+                  <div className="absolute inset-0 pointer-events-auto bg-transparent"></div>
+                  
+                  {/* Camada para cobrir a área do logo do YouTube */}
+                  <div className="absolute right-0 bottom-0 w-20 h-10 bg-gradient-to-l from-black/90 to-black/0"></div>
                 </div>
               </div>
             </div>
