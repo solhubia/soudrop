@@ -35,7 +35,7 @@ const ObrigadoSoudrop = () => {
                 <div className="aspect-video">
                   <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    src="https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=0"
                     title="Vídeo de Boas-Vindas"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
