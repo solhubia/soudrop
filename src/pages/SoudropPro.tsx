@@ -94,7 +94,7 @@ const SoudropPro = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <div style={{textAlign:"center"}}>
-                <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "2px solid rgba(0, 0, 0, 0.5)", background: "rgba(41, 182, 246, 0.95)", color: "rgb(255, 255, 255)", fontSize: "24px", padding: "18px 80px", boxShadow: "none", borderRadius: "4px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif", wordBreak: "break-word", margin: "auto"}}>Register</button>
+                <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "2px solid rgba(0, 0, 0, 0.5)", background: "rgba(41, 182, 246, 0.95)", color: "rgb(255, 255, 255)", fontSize: "24px", padding: "18px 80px", boxShadow: "none", borderRadius: "4px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif", wordBreak: "break-word", margin: "auto"}}>Quero Participar da Aula</button>
                 <script src="https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register"></script>
               </div>
             </div>
