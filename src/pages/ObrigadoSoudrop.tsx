@@ -17,26 +17,23 @@ const ObrigadoSoudrop = () => {
             </div>
           </div>
 
+          {/* Progress Bar */}
+          <div className="max-w-2xl mx-auto mb-8 animate-fade-in" style={{
+          animationDelay: '0.15s'
+        }}>
+            <div className="space-y-3">
+              <p className="text-center text-sm md:text-base font-medium text-muted-foreground">
+                Etapa 2 de 2 · Assista ao vídeo para liberar seus próximos passos
+              </p>
+              <Progress value={75} className="h-3 bg-muted" />
+            </div>
+          </div>
+
           {/* Main Content */}
           <div className="text-center space-y-6 mb-8 animate-fade-in" style={{
           animationDelay: '0.2s'
         }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Bem-vindo a Soudrop! 🎉</h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-              Parabéns! Agora você faz parte da plataforma de dropshipping mais completa do Brasil.
-            </p>
-          </div>
-
-          {/* Progress Bar */}
-          <div className="max-w-2xl mx-auto mb-12 animate-fade-in" style={{
-          animationDelay: '0.25s'
-        }}>
-            <div className="space-y-3">
-              <p className="text-center text-sm md:text-base font-medium">
-                Etapa 2 de 2 – Assista ao vídeo para liberar seus próximos passos
-              </p>
-              <Progress value={75} className="h-3 bg-muted" />
-            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Bem-vindo a Soudrop!</h1>
           </div>
 
           {/* Video Instruction Text */}
@@ -44,25 +41,23 @@ const ObrigadoSoudrop = () => {
           animationDelay: '0.3s'
         }}>
             <h2 className="text-2xl md:text-3xl font-bold">
-              Antes de seguir… este vídeo é OBRIGATÓRIO.
+              Antes de seguir, este vídeo é OBRIGATÓRIO.
             </h2>
-            <div className="text-base md:text-lg text-muted-foreground space-y-3">
+            <div className="text-base md:text-lg text-muted-foreground space-y-3 leading-relaxed">
               <p>
-                Você acabou de dar um passo importante — mas não para por aqui.
+                Você acabou de dar um passo importante, mas o processo não termina aqui.
               </p>
               <p>
-                No vídeo abaixo, eu vou te mostrar <strong className="text-foreground">exatamente o que fazer agora</strong>, quais são os <strong className="text-foreground">próximos passos</strong>, e como <strong className="text-foreground">aproveitar 100% do potencial</strong> do que você acabou de liberar.
+                No vídeo abaixo, eu vou mostrar <strong className="text-foreground">exatamente o que você precisa fazer agora</strong>, quais são os <strong className="text-foreground">próximos passos</strong> e como <strong className="text-foreground">aproveitar 100% do potencial</strong> do que você acabou de liberar.
               </p>
-              <p className="flex items-center justify-center gap-2">
-                <span className="text-xl">⚠️</span>
-                <span>Se você pular esse vídeo, você pode perder oportunidades que <strong className="text-foreground">só quem assiste fica sabendo</strong>.</span>
+              <p>
+                Se você pular este vídeo, pode perder oportunidades que <strong className="text-foreground">só quem assiste conhece</strong>.
               </p>
-              <p className="flex items-center justify-center gap-2">
-                <span className="text-xl">👉</span>
-                <span><strong className="text-foreground">Assista agora</strong> e siga as instruções com atenção.</span>
+              <p>
+                <strong className="text-foreground">Assista agora</strong> e siga as instruções com atenção.
               </p>
               <p className="text-lg font-semibold text-foreground mt-4">
-                É aqui que começa a diferença entre quem só compra… e quem <strong>realmente tem resultado</strong>.
+                É aqui que começa a diferença entre quem só compra e quem <strong>realmente tem resultado</strong>.
               </p>
             </div>
           </div>
@@ -76,7 +71,7 @@ const ObrigadoSoudrop = () => {
                 <div className="aspect-video relative">
                   <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=0&controls=0&modestbranding=1&showinfo=0&rel=0&disablekb=1&fs=0&iv_load_policy=3"
+                    src="https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=0&controls=0&modestbranding=1&showinfo=0&rel=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&playlist=RdT2ExTPB7o"
                     title="Vídeo de Boas-Vindas"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     style={{ pointerEvents: 'none' }}
