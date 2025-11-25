@@ -45,23 +45,6 @@ const SoudropElite = () => {
     description: "Acesso a materiais de apoio, tirando dúvidas e uma comunidade de pessoas que estão no mesmo caminho que você."
   }];
   const paraQuemE = ["Quer ter uma renda extra trabalhando de casa", "Busca uma fonte de renda principal sem sair de casa", "Não tem capital para investir em estoque", "Quer flexibilidade de horários para trabalhar quando puder", "Tem disposição para aprender algo novo e aplicar"];
-  const bonus = [{
-    icon: Target,
-    title: "Lista de produtos validados",
-    description: "Produtos com boa demanda para você começar"
-  }, {
-    icon: Calculator,
-    title: "Planilha de controle financeiro",
-    description: "Organize suas vendas e lucros facilmente"
-  }, {
-    icon: TrendingUp,
-    title: "Modelos de anúncios prontos",
-    description: "Copie e adapte para seus produtos"
-  }, {
-    icon: Crown,
-    title: "Checklist do iniciante",
-    description: "Passo a passo do zero até a primeira venda"
-  }];
   return <div className="min-h-screen bg-elite-black text-elite-white">
       {/* Hero Premium */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-elite-bg px-6 py-20">
@@ -275,33 +258,6 @@ const SoudropElite = () => {
           <div className="mt-12 inline-flex items-center gap-3 px-8 py-4 bg-elite-gold/10 border-2 border-elite-gold rounded-xl">
             <Crown className="w-8 h-8 text-elite-gold" />
             <span className="text-elite-gold font-bold text-xl uppercase tracking-wide">Acesso Completo</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Bônus */}
-      <section className="py-20 px-6 bg-elite-black">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-            Materiais <span className="text-elite-gold">Bônus</span>
-          </h2>
-          <p className="text-center text-elite-white/60 mb-16 text-lg">
-            Durante a aula, vou liberar materiais exclusivos para você aplicar na hora
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {bonus.map((item, index) => {
-            const Icon = item.icon;
-            return <Card key={index} className="bg-gradient-elite-gold border-0 text-elite-black hover:scale-105 transition-all">
-                  <CardContent className="p-6 text-center">
-                    <div className="mb-4 w-14 h-14 rounded-full bg-elite-black/10 flex items-center justify-center mx-auto">
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                    <p className="text-sm text-elite-black/70">{item.description}</p>
-                  </CardContent>
-                </Card>;
-          })}
           </div>
         </div>
       </section>

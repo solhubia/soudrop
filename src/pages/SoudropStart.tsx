@@ -41,23 +41,6 @@ const SoudropStart = () => {
     description: "Rede de importadores"
   }];
   const beneficios = ["Comece certo, sem erros caros", "Escolha produtos com dados reais", "Evite produtos proibidos", "Processos validados na prática", "Suporte + tecnologia inclusos"];
-  const bonus = [{
-    icon: <CheckCircle2 className="w-6 h-6" />,
-    title: "Checklist Inteligente de Importação",
-    description: "Passo a passo completo para não errar"
-  }, {
-    icon: <Package className="w-6 h-6" />,
-    title: "Lista de Fornecedores Reais",
-    description: "Contatos validados de fábricas confiáveis"
-  }, {
-    icon: <Target className="w-6 h-6" />,
-    title: "Framework de Validação",
-    description: "Metodologia para escolher produtos vencedores"
-  }, {
-    icon: <TrendingUp className="w-6 h-6" />,
-    title: "Mini Treinamento de Margem",
-    description: "Como calcular preço e lucro corretamente"
-  }];
   return <div className="min-h-screen bg-ice-bg-main text-ice-text-primary">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-12 md:py-16 lg:py-20 px-4 min-h-screen flex items-center justify-center">
