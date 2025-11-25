@@ -68,70 +68,63 @@ const SoudropPro = () => {
         <div className="absolute top-20 left-10 w-72 h-72 bg-green-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
         <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000" />
         
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-6">
-              <div className="inline-block">
-                <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
-                  🚀 PLANO AVANÇADO
-                </span>
-              </div>
-              
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                ATENÇÃO: existe uma fórmula simples (quase injusta) que está fazendo pessoas comuns baterem 10K/mês — e ninguém quer que você saiba.
-              </h1>
-              
-              <p className="text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed">
-                Enquanto os "especialistas" complicam, quem aprende isso aqui… vende todos os dias.
-              </p>
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="text-center space-y-6 max-w-5xl mx-auto">
+            <div className="inline-block">
+              <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
+                🚀 PLANO AVANÇADO
+              </span>
+            </div>
+            
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight px-4">
+              ATENÇÃO: existe uma fórmula simples (quase injusta) que está fazendo pessoas comuns baterem 10K/mês — e ninguém quer que você saiba.
+            </h1>
+            
+            <p className="text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed px-4">
+              Enquanto os "especialistas" complicam, quem aprende isso aqui… vende todos os dias.
+            </p>
 
-              <p className="text-base lg:text-lg text-gray-600 leading-relaxed max-w-2xl">
-                É simples. É direto. É lucrativo. E você vai aprender AO VIVO.
-              </p>
+            <p className="text-base lg:text-lg text-gray-600 leading-relaxed px-4">
+              É simples. É direto. É lucrativo. E você vai aprender AO VIVO.
+            </p>
 
-              <p className="text-base lg:text-lg text-gray-700 font-semibold leading-relaxed max-w-2xl">
-                👉 Participe da aula e veja você mesmo essa "fórmula mágica" funcionando.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div style={{ textAlign: 'center' }}>
-                  <button 
-                    type="button" 
-                    className="wj-embed-button" 
-                    data-webinarHash="8wgw0kty" 
-                    style={{
-                      border: '2px solid rgba(0, 0, 0, 0.5)',
-                      background: 'rgba(41, 182, 246, 0.95)',
-                      color: 'rgb(255, 255, 255)',
-                      fontSize: '24px',
-                      padding: '18px 80px',
-                      boxShadow: 'none',
-                      borderRadius: '4px',
-                      whiteSpace: 'normal',
-                      fontWeight: '700',
-                      lineHeight: '1.3',
-                      cursor: 'pointer',
-                      fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-                      wordBreak: 'break-word',
-                      margin: 'auto'
-                    }}
-                  >
-                    Quero Começar Agora
-                  </button>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-6 pt-4">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-green-600" />
-                  <span className="text-sm text-gray-600">120 dias de garantia</span>
-                </div>
+            <p className="text-base lg:text-lg text-gray-700 font-semibold leading-relaxed px-4">
+              👉 Participe da aula e veja você mesmo essa "fórmula mágica" funcionando.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <div style={{ textAlign: 'center' }}>
+                <button 
+                  type="button" 
+                  className="wj-embed-button" 
+                  data-webinarHash="8wgw0kty" 
+                  style={{
+                    border: '2px solid rgba(0, 0, 0, 0.5)',
+                    background: 'rgba(41, 182, 246, 0.95)',
+                    color: 'rgb(255, 255, 255)',
+                    fontSize: '24px',
+                    padding: '18px 80px',
+                    boxShadow: 'none',
+                    borderRadius: '4px',
+                    whiteSpace: 'normal',
+                    fontWeight: '700',
+                    lineHeight: '1.3',
+                    cursor: 'pointer',
+                    fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                    wordBreak: 'break-word',
+                    margin: 'auto'
+                  }}
+                >
+                  Quero Começar Agora
+                </button>
               </div>
             </div>
             
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-purple-400 rounded-3xl blur-2xl opacity-30 animate-pulse" />
-              
+            <div className="flex items-center justify-center gap-6 pt-4">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-5 w-5 text-green-600" />
+                <span className="text-sm text-gray-600">120 dias de garantia</span>
+              </div>
             </div>
           </div>
         </div>
