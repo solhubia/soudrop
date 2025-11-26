@@ -57,30 +57,30 @@ const ObrigadoClubeImportacao = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+    <div className="min-h-screen bg-clube-black">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
           {/* Progress Bar */}
           <div className="max-w-2xl mx-auto mb-8 animate-fade-in" style={{ animationDelay: '0.15s' }}>
             <div className="space-y-3">
-              <p className="text-center text-sm md:text-base font-medium text-muted-foreground">
+              <p className="text-center text-sm md:text-base font-medium text-clube-gray">
                 Etapa 2 de 2 · Assista ao vídeo para liberar seus próximos passos
               </p>
-              <Progress value={75} className="h-3 bg-muted" />
+              <Progress value={75} className="h-3 bg-clube-black-alt" />
             </div>
           </div>
 
           {/* Main Content */}
           <div className="text-center space-y-6 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Bem-vindo ao Clube de Importação!</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-clube-white">Bem-vindo ao Clube de Importação!</h1>
           </div>
 
           {/* Video Instruction Text */}
           <div className="max-w-3xl mx-auto mb-8 text-center space-y-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <h2 className="text-2xl md:text-3xl font-bold">
+            <h2 className="text-2xl md:text-3xl font-bold text-clube-white">
               Antes de seguir, este vídeo é obrigatório.
             </h2>
-            <div className="text-base md:text-lg text-muted-foreground space-y-4 leading-relaxed">
+            <div className="text-base md:text-lg text-clube-gray space-y-4 leading-relaxed">
               <p>
                 Neste vídeo eu vou te mostrar, em poucos minutos, como funciona o Clube de Importação e o que você precisa fazer agora para ativar seu acesso e aproveitar o programa do jeito certo.
               </p>
@@ -130,18 +130,27 @@ const ObrigadoClubeImportacao = () => {
                     left: '50%',
                     top: '50%',
                     transform: 'translate(-50%, -50%)',
-                    padding: '10px 24px',
+                    padding: '12px 28px',
                     borderRadius: '999px',
-                    border: 'none',
+                    border: '2px solid hsl(0 76% 52%)',
                     fontSize: '16px',
-                    fontWeight: '500',
-                    background: '#FFFFFF',
-                    color: '#000000',
+                    fontWeight: '600',
+                    background: 'hsl(0 76% 52%)',
+                    color: 'hsl(0 0% 100%)',
                     cursor: 'pointer',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '8px',
-                    zIndex: 10
+                    zIndex: 10,
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'hsl(0 76% 39%)';
+                    e.currentTarget.style.borderColor = 'hsl(0 76% 39%)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'hsl(0 76% 52%)';
+                    e.currentTarget.style.borderColor = 'hsl(0 76% 52%)';
                   }}
                 >
                   🔊 Clique para ativar o som
@@ -155,9 +164,21 @@ const ObrigadoClubeImportacao = () => {
                     bottom: 0,
                     width: '90px',
                     height: '40px',
-                    background: 'linear-gradient(to left, rgba(0,0,0,0.9), rgba(0,0,0,0))',
+                    background: 'linear-gradient(to left, rgba(0,0,0,0.95), rgba(0,0,0,0))',
                     pointerEvents: 'none',
                     zIndex: 5
+                  }}
+                ></div>
+                
+                {/* Borda vermelha no vídeo */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    border: '2px solid hsl(0 76% 52%)',
+                    borderRadius: '16px',
+                    pointerEvents: 'none',
+                    zIndex: 6
                   }}
                 ></div>
               </div>
@@ -166,23 +187,23 @@ const ObrigadoClubeImportacao = () => {
 
           {/* Transition Text */}
           <div className="max-w-3xl mx-auto mb-8 text-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base md:text-lg text-clube-gray leading-relaxed">
               Agora que você entendeu como funciona o Clube de Importação, preciso te conhecer melhor para saber se você realmente tem perfil para participar do nosso grupo seletivo.
             </p>
           </div>
 
           {/* Qualification Form */}
           {!formSubmitted ? (
-            <div className="bg-card border border-border rounded-2xl p-8 mb-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <h3 className="text-2xl font-bold text-center mb-8">Formulário de Qualificação</h3>
+            <div className="bg-clube-black-alt border-2 border-clube-border rounded-2xl p-8 mb-8 animate-fade-in shadow-clube-red" style={{ animationDelay: '0.6s' }}>
+              <h3 className="text-2xl font-bold text-center mb-8 text-clube-white">Formulário de Qualificação</h3>
               
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Dados Básicos */}
                 <div className="space-y-6">
-                  <h4 className="text-xl font-semibold text-primary">Dados Básicos</h4>
+                  <h4 className="text-xl font-semibold text-clube-red-primary">Dados Básicos</h4>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="nome">Nome completo</Label>
+                    <Label htmlFor="nome" className="text-clube-white">Nome completo</Label>
                     <Input
                       id="nome"
                       type="text"
@@ -190,11 +211,12 @@ const ObrigadoClubeImportacao = () => {
                       value={formData.nome}
                       onChange={(e) => handleInputChange("nome", e.target.value)}
                       placeholder="Digite seu nome completo"
+                      className="bg-clube-input-bg border-clube-border text-clube-white placeholder:text-clube-gray focus:border-clube-red-primary"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="whatsapp">WhatsApp</Label>
+                    <Label htmlFor="whatsapp" className="text-clube-white">WhatsApp</Label>
                     <Input
                       id="whatsapp"
                       type="tel"
@@ -202,11 +224,12 @@ const ObrigadoClubeImportacao = () => {
                       value={formData.whatsapp}
                       onChange={(e) => handleInputChange("whatsapp", e.target.value)}
                       placeholder="(00) 00000-0000"
+                      className="bg-clube-input-bg border-clube-border text-clube-white placeholder:text-clube-gray focus:border-clube-red-primary"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">E-mail</Label>
+                    <Label htmlFor="email" className="text-clube-white">E-mail</Label>
                     <Input
                       id="email"
                       type="email"
@@ -214,130 +237,131 @@ const ObrigadoClubeImportacao = () => {
                       value={formData.email}
                       onChange={(e) => handleInputChange("email", e.target.value)}
                       placeholder="seu@email.com"
+                      className="bg-clube-input-bg border-clube-border text-clube-white placeholder:text-clube-gray focus:border-clube-red-primary"
                     />
                   </div>
                 </div>
 
                 {/* Qualificação */}
                 <div className="space-y-6">
-                  <h4 className="text-xl font-semibold text-primary">Qualificação</h4>
+                  <h4 className="text-xl font-semibold text-clube-red-primary">Qualificação</h4>
                   
                   <div className="space-y-3">
-                    <Label>Você já vende algum produto hoje?</Label>
+                    <Label className="text-clube-white">Você já vende algum produto hoje?</Label>
                     <RadioGroup
                       required
                       value={formData.vendeProduto}
                       onValueChange={(value) => handleInputChange("vendeProduto", value)}
                     >
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="sim" id="vende-sim" />
-                        <Label htmlFor="vende-sim" className="font-normal cursor-pointer">Sim</Label>
+                        <RadioGroupItem value="sim" id="vende-sim" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="vende-sim" className="font-normal cursor-pointer text-clube-gray">Sim</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="nao" id="vende-nao" />
-                        <Label htmlFor="vende-nao" className="font-normal cursor-pointer">Não</Label>
+                        <RadioGroupItem value="nao" id="vende-nao" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="vende-nao" className="font-normal cursor-pointer text-clube-gray">Não</Label>
                       </div>
                     </RadioGroup>
                   </div>
 
                   <div className="space-y-3">
-                    <Label>Qual é o seu faturamento mensal atual?</Label>
+                    <Label className="text-clube-white">Qual é o seu faturamento mensal atual?</Label>
                     <RadioGroup
                       required
                       value={formData.faturamento}
                       onValueChange={(value) => handleInputChange("faturamento", value)}
                     >
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="nao-vende" id="fat-nao" />
-                        <Label htmlFor="fat-nao" className="font-normal cursor-pointer">Não vendo ainda</Label>
+                        <RadioGroupItem value="nao-vende" id="fat-nao" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="fat-nao" className="font-normal cursor-pointer text-clube-gray">Não vendo ainda</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="ate-5k" id="fat-5k" />
-                        <Label htmlFor="fat-5k" className="font-normal cursor-pointer">Até R$ 5.000</Label>
+                        <RadioGroupItem value="ate-5k" id="fat-5k" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="fat-5k" className="font-normal cursor-pointer text-clube-gray">Até R$ 5.000</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="5k-20k" id="fat-20k" />
-                        <Label htmlFor="fat-20k" className="font-normal cursor-pointer">De R$ 5.000 a R$ 20.000</Label>
+                        <RadioGroupItem value="5k-20k" id="fat-20k" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="fat-20k" className="font-normal cursor-pointer text-clube-gray">De R$ 5.000 a R$ 20.000</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="20k-50k" id="fat-50k" />
-                        <Label htmlFor="fat-50k" className="font-normal cursor-pointer">De R$ 20.000 a R$ 50.000</Label>
+                        <RadioGroupItem value="20k-50k" id="fat-50k" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="fat-50k" className="font-normal cursor-pointer text-clube-gray">De R$ 20.000 a R$ 50.000</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="acima-50k" id="fat-mais" />
-                        <Label htmlFor="fat-mais" className="font-normal cursor-pointer">Acima de R$ 50.000</Label>
+                        <RadioGroupItem value="acima-50k" id="fat-mais" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="fat-mais" className="font-normal cursor-pointer text-clube-gray">Acima de R$ 50.000</Label>
                       </div>
                     </RadioGroup>
                   </div>
 
                   <div className="space-y-3">
-                    <Label>Você tem capital disponível para investir em importação e estoque?</Label>
+                    <Label className="text-clube-white">Você tem capital disponível para investir em importação e estoque?</Label>
                     <RadioGroup
                       required
                       value={formData.capital}
                       onValueChange={(value) => handleInputChange("capital", value)}
                     >
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="ate-2k" id="cap-2k" />
-                        <Label htmlFor="cap-2k" className="font-normal cursor-pointer">Até R$ 2.000</Label>
+                        <RadioGroupItem value="ate-2k" id="cap-2k" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="cap-2k" className="font-normal cursor-pointer text-clube-gray">Até R$ 2.000</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="ate-5k" id="cap-5k" />
-                        <Label htmlFor="cap-5k" className="font-normal cursor-pointer">Até R$ 5.000</Label>
+                        <RadioGroupItem value="ate-5k" id="cap-5k" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="cap-5k" className="font-normal cursor-pointer text-clube-gray">Até R$ 5.000</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="5k-15k" id="cap-15k" />
-                        <Label htmlFor="cap-15k" className="font-normal cursor-pointer">De R$ 5.000 a R$ 15.000</Label>
+                        <RadioGroupItem value="5k-15k" id="cap-15k" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="cap-15k" className="font-normal cursor-pointer text-clube-gray">De R$ 5.000 a R$ 15.000</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="15k-mais" id="cap-mais" />
-                        <Label htmlFor="cap-mais" className="font-normal cursor-pointer">R$ 15.000 ou mais</Label>
+                        <RadioGroupItem value="15k-mais" id="cap-mais" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="cap-mais" className="font-normal cursor-pointer text-clube-gray">R$ 15.000 ou mais</Label>
                       </div>
                     </RadioGroup>
                   </div>
 
                   <div className="space-y-3">
-                    <Label>Você está buscando principalmente:</Label>
+                    <Label className="text-clube-white">Você está buscando principalmente:</Label>
                     <RadioGroup
                       required
                       value={formData.objetivo}
                       onValueChange={(value) => handleInputChange("objetivo", value)}
                     >
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="renda-extra" id="obj-extra" />
-                        <Label htmlFor="obj-extra" className="font-normal cursor-pointer">Renda extra</Label>
+                        <RadioGroupItem value="renda-extra" id="obj-extra" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="obj-extra" className="font-normal cursor-pointer text-clube-gray">Renda extra</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="negocio-solido" id="obj-solido" />
-                        <Label htmlFor="obj-solido" className="font-normal cursor-pointer">Construir um negócio sólido</Label>
+                        <RadioGroupItem value="negocio-solido" id="obj-solido" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="obj-solido" className="font-normal cursor-pointer text-clube-gray">Construir um negócio sólido</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="escalar" id="obj-escalar" />
-                        <Label htmlFor="obj-escalar" className="font-normal cursor-pointer">Escalar uma operação que já existe</Label>
+                        <RadioGroupItem value="escalar" id="obj-escalar" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="obj-escalar" className="font-normal cursor-pointer text-clube-gray">Escalar uma operação que já existe</Label>
                       </div>
                     </RadioGroup>
                   </div>
 
                   <div className="space-y-3">
-                    <Label>Você já tentou importar da China?</Label>
+                    <Label className="text-clube-white">Você já tentou importar da China?</Label>
                     <RadioGroup
                       required
                       value={formData.jaImportou}
                       onValueChange={(value) => handleInputChange("jaImportou", value)}
                     >
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="sim" id="imp-sim" />
-                        <Label htmlFor="imp-sim" className="font-normal cursor-pointer">Sim</Label>
+                        <RadioGroupItem value="sim" id="imp-sim" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="imp-sim" className="font-normal cursor-pointer text-clube-gray">Sim</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="nao" id="imp-nao" />
-                        <Label htmlFor="imp-nao" className="font-normal cursor-pointer">Não</Label>
+                        <RadioGroupItem value="nao" id="imp-nao" className="border-clube-border text-clube-red-primary" />
+                        <Label htmlFor="imp-nao" className="font-normal cursor-pointer text-clube-gray">Não</Label>
                       </div>
                     </RadioGroup>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="desafio">O que mais está travando o seu crescimento hoje?</Label>
+                    <Label htmlFor="desafio" className="text-clube-white">O que mais está travando o seu crescimento hoje?</Label>
                     <Textarea
                       id="desafio"
                       required
@@ -345,55 +369,56 @@ const ObrigadoClubeImportacao = () => {
                       onChange={(e) => handleInputChange("desafio", e.target.value)}
                       placeholder="Conte-nos sobre seus principais desafios..."
                       rows={4}
+                      className="bg-clube-input-bg border-clube-border text-clube-white placeholder:text-clube-gray focus:border-clube-red-primary"
                     />
                   </div>
                 </div>
 
-                <Button type="submit" size="lg" className="w-full">
+                <Button type="submit" size="lg" className="w-full bg-clube-red-primary hover:bg-clube-red-dark text-clube-white font-semibold shadow-clube-red-strong">
                   Enviar minhas informações
                 </Button>
               </form>
             </div>
           ) : (
-            <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center mb-8 animate-fade-in">
-              <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Recebemos suas respostas!</h3>
-              <p className="text-lg text-muted-foreground">
+            <div className="bg-clube-black-alt border-2 border-clube-red-primary rounded-2xl p-8 text-center mb-8 animate-fade-in shadow-clube-red-strong">
+              <CheckCircle className="w-16 h-16 text-clube-red-primary mx-auto mb-4" />
+              <h3 className="text-2xl font-bold mb-4 text-clube-white">Recebemos suas respostas!</h3>
+              <p className="text-lg text-clube-gray">
                 A equipe do Renan vai analisar seu perfil e te chamar no WhatsApp para falar sobre os próximos passos.
               </p>
             </div>
           )}
 
           {/* Benefits Section */}
-          <div className="bg-card border border-border rounded-2xl p-8 mb-8 animate-fade-in" style={{ animationDelay: '0.8s' }}>
-            <h3 className="text-2xl font-bold text-center mb-6">O que você recebe dentro do Clube de Importação</h3>
-            <ul className="space-y-3 text-left max-w-xl mx-auto text-muted-foreground">
+          <div className="bg-clube-black-alt border-2 border-clube-border rounded-2xl p-8 mb-8 animate-fade-in shadow-clube-red" style={{ animationDelay: '0.8s' }}>
+            <h3 className="text-2xl font-bold text-center mb-6 text-clube-white">O que você recebe dentro do Clube de Importação</h3>
+            <ul className="space-y-3 text-left max-w-xl mx-auto text-clube-gray">
               <li className="flex items-start">
-                <span className="text-primary mr-2 mt-1">✓</span>
+                <span className="text-clube-red-primary mr-2 mt-1 font-bold">✓</span>
                 <span>Acompanhamento de 6 semanas com Renan e o time</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2 mt-1">✓</span>
+                <span className="text-clube-red-primary mr-2 mt-1 font-bold">✓</span>
                 <span>Importação compartilhada para reduzir riscos e custos</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2 mt-1">✓</span>
+                <span className="text-clube-red-primary mr-2 mt-1 font-bold">✓</span>
                 <span>Análise de produtos e orientação na escolha do mix</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2 mt-1">✓</span>
+                <span className="text-clube-red-primary mr-2 mt-1 font-bold">✓</span>
                 <span>Estratégia completa para escalar com margem e previsibilidade</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2 mt-1">✓</span>
+                <span className="text-clube-red-primary mr-2 mt-1 font-bold">✓</span>
                 <span>Suporte direto do time de CS</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2 mt-1">✓</span>
+                <span className="text-clube-red-primary mr-2 mt-1 font-bold">✓</span>
                 <span>Acesso a planilhas, DRE, estrutura de custos e ferramentas</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2 mt-1">✓</span>
+                <span className="text-clube-red-primary mr-2 mt-1 font-bold">✓</span>
                 <span>Possibilidade de se tornar Fornecedor SouDrop</span>
               </li>
             </ul>

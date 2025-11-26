@@ -151,6 +151,25 @@
     --shadow-ice-glow: 0 0 24px hsl(199 89% 48% / 0.25);
     --shadow-ice-cyan: 0 0 32px hsl(186 94% 65% / 0.3);
     --shadow-ice-purple: 0 0 28px hsl(243 75% 59% / 0.25);
+    
+    /* --- TEMA CLUBE (VERMELHO + PRETO) --- */
+    --clube-black: 0 0% 0%;
+    --clube-black-alt: 0 0% 4%;
+    --clube-red-primary: 0 76% 52%;
+    --clube-red-dark: 0 76% 39%;
+    --clube-gray: 0 0% 70%;
+    --clube-white: 0 0% 100%;
+    --clube-input-bg: 0 0% 6%;
+    --clube-border: 0 0% 15%;
+    
+    /* Gradientes Tema Clube */
+    --gradient-clube-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 76% 10%) 50%, hsl(0 0% 2%) 100%);
+    --gradient-clube-red: linear-gradient(135deg, hsl(0 76% 52%) 0%, hsl(0 76% 39%) 100%);
+    --gradient-clube-card: linear-gradient(145deg, hsl(0 0% 2%), hsl(0 0% 5%));
+    
+    /* Sombras Tema Clube */
+    --shadow-clube-red: 0 10px 40px hsl(0 76% 52% / 0.3);
+    --shadow-clube-red-strong: 0 0 40px hsl(0 76% 52% / 0.5), 0 0 20px hsl(0 76% 52% / 0.3);
   }
 
   .dark {

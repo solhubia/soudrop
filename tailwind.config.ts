@@ -60,6 +60,16 @@ export default {
           "text-secondary": "hsl(var(--ice-text-secondary))",
           "border": "hsl(var(--ice-border))",
         },
+        clube: {
+          black: "hsl(var(--clube-black))",
+          "black-alt": "hsl(var(--clube-black-alt))",
+          "red-primary": "hsl(var(--clube-red-primary))",
+          "red-dark": "hsl(var(--clube-red-dark))",
+          gray: "hsl(var(--clube-gray))",
+          white: "hsl(var(--clube-white))",
+          "input-bg": "hsl(var(--clube-input-bg))",
+          border: "hsl(var(--clube-border))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -109,6 +119,9 @@ export default {
         "gradient-ice-primary": "var(--gradient-ice-primary)",
         "gradient-ice-card": "var(--gradient-ice-card)",
         "gradient-ice-subtle": "var(--gradient-ice-subtle)",
+        "gradient-clube-hero": "var(--gradient-clube-hero)",
+        "gradient-clube-red": "var(--gradient-clube-red)",
+        "gradient-clube-card": "var(--gradient-clube-card)",
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
@@ -123,6 +136,8 @@ export default {
         'ice-glow': 'var(--shadow-ice-glow)',
         'ice-cyan': 'var(--shadow-ice-cyan)',
         'ice-purple': 'var(--shadow-ice-purple)',
+        'clube-red': 'var(--shadow-clube-red)',
+        'clube-red-strong': 'var(--shadow-clube-red-strong)',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
