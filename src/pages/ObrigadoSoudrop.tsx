@@ -1,18 +1,72 @@
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle, MessageCircle, Package } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 const ObrigadoSoudrop = () => {
-  const [isMuted, setIsMuted] = useState(false); // Iniciar com som
+  const [isMuted, setIsMuted] = useState(false);
   const [showSecondFold, setShowSecondFold] = useState(false);
+  const [showButtons, setShowButtons] = useState(false);
+  const [videoWatched, setVideoWatched] = useState(false);
+  const [progress, setProgress] = useState(70);
+  const playerRef = useRef<any>(null);
+  const intervalRef = useRef<any>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Animação suave da barra de progresso de 70% para 80%
+    const progressInterval = setInterval(() => {
+      setProgress(prev => {
+        if (prev >= 80) return 80;
+        return prev + 0.1;
+      });
+    }, 100);
+
+    // Carregar YouTube IFrame API
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
+
+    // @ts-ignore
+    window.onYouTubeIframeAPIReady = () => {
+      // @ts-ignore
+      playerRef.current = new YT.Player('webinar-video', {
+        events: {
+          onStateChange: onPlayerStateChange,
+        },
+      });
+    };
+
+    return () => {
+      clearInterval(progressInterval);
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
   }, []);
 
+  const onPlayerStateChange = (event: any) => {
+    // @ts-ignore
+    if (event.data === YT.PlayerState.PLAYING) {
+      // Verificar tempo do vídeo a cada segundo
+      intervalRef.current = setInterval(() => {
+        if (playerRef.current && playerRef.current.getCurrentTime) {
+          const currentTime = playerRef.current.getCurrentTime();
+          if (currentTime >= 170 && !videoWatched) {
+            setVideoWatched(true);
+            setShowButtons(true);
+            clearInterval(intervalRef.current);
+          }
+        }
+      }, 1000);
+    }
+  };
+
   const handleShowSecondFold = () => {
+    if (!videoWatched) {
+      alert('Por favor, assista ao vídeo até o final para desbloquear o acesso.');
+      return;
+    }
     setShowSecondFold(true);
-    // Scroll suave até a segunda dobra
     setTimeout(() => {
       const secondFold = document.getElementById('second-fold');
       if (secondFold) {
@@ -23,15 +77,26 @@ const ObrigadoSoudrop = () => {
   return <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
-          {/* Progress Bar */}
+          {/* Progress Bar - Loading Style */}
           <div className="max-w-2xl mx-auto mb-8 animate-fade-in" style={{
           animationDelay: '0.15s'
         }}>
             <div className="space-y-3">
               <p className="text-center text-sm md:text-base font-medium text-muted-foreground">
-                Etapa 2 de 2 · Assista ao vídeo para liberar seu bônus exclusivo
+                Carregando seu bônus exclusivo…
               </p>
-              <Progress value={80} className="h-3 bg-muted animate-pulse" />
+              <div className="relative h-3 bg-muted rounded-full overflow-hidden">
+                <div 
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"
+                  style={{
+                    backgroundSize: '200% 100%',
+                  }}
+                />
+                <Progress 
+                  value={progress} 
+                  className="h-full bg-transparent [&>div]:bg-primary [&>div]:relative [&>div]:overflow-hidden [&>div]:after:content-[''] [&>div]:after:absolute [&>div]:after:inset-0 [&>div]:after:bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.1)_10px,rgba(255,255,255,0.1)_20px)] [&>div]:after:animate-[slide_1s_linear_infinite]" 
+                />
+              </div>
             </div>
           </div>
 
@@ -67,7 +132,7 @@ const ObrigadoSoudrop = () => {
                   <iframe
                     id="webinar-video"
                     className="w-full h-full"
-                    src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=${isMuted ? '1' : '0'}&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1&volume=100`}
+                    src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=${isMuted ? '1' : '0'}&enablejsapi=1&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1&volume=100`}
                     title="Webinário Soudrop"
                     frameBorder="0"
                     allow="autoplay; encrypted-media; picture-in-picture"
@@ -96,30 +161,30 @@ const ObrigadoSoudrop = () => {
             </div>
           </div>
 
-          {/* Upsell Buttons */}
-          <div className="mb-12 flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in" style={{
-          animationDelay: '0.5s'
-        }}>
-            {/* Botão Verde - Upsell */}
-            <Button 
-              size="lg" 
-              className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" 
-              asChild
-            >
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                SIM, quero liberar meu bônus exclusivo
-              </a>
-            </Button>
+          {/* Upsell Buttons - Aparecem após 2:50 do vídeo */}
+          {showButtons && (
+            <div className="mb-12 flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in">
+              {/* Botão Verde - Upsell */}
+              <Button 
+                size="lg" 
+                className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" 
+                asChild
+              >
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  SIM, quero liberar meu bônus exclusivo
+                </a>
+              </Button>
 
-            {/* Botão Vermelho - Seguir sem bônus */}
-            <Button 
-              size="lg" 
-              onClick={handleShowSecondFold}
-              className="w-full md:w-auto bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              Não, quero seguir sem o bônus
-            </Button>
-          </div>
+              {/* Botão Vermelho - Seguir sem bônus */}
+              <Button 
+                size="lg" 
+                onClick={handleShowSecondFold}
+                className="w-full md:w-auto bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                Não, quero seguir sem o bônus
+              </Button>
+            </div>
+          )}
 
           {/* Segunda Dobra - Obrigado / Acesso */}
           {showSecondFold && (
