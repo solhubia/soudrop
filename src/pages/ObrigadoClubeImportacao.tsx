@@ -78,10 +78,10 @@ const ObrigadoClubeImportacao = () => {
                   <iframe
                     id="clube-video"
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/LYoT691VW-M?autoplay=1&mute=1&loop=1&playlist=LYoT691VW-M&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1"
+                    src="https://www.youtube.com/embed/LYoT691VW-M?controls=0&rel=0&modestbranding=1&playsinline=1"
                     title="Clube de Importação"
                     frameBorder="0"
-                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allow="encrypted-media; picture-in-picture"
                     allowFullScreen
                   ></iframe>
                   
