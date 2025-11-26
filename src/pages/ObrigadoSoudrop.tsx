@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle, MessageCircle, Package } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 const ObrigadoSoudrop = () => {
+  const [isMuted, setIsMuted] = useState(true);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -55,12 +57,24 @@ const ObrigadoSoudrop = () => {
                   <iframe
                     id="webinar-video"
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=1&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1"
+                    src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=${isMuted ? '1' : '0'}&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1`}
                     title="Webinário Soudrop"
                     frameBorder="0"
                     allow="autoplay; encrypted-media; picture-in-picture"
                     allowFullScreen
                   ></iframe>
+                  
+                  {/* Overlay para ativar o som */}
+                  {isMuted && (
+                    <div 
+                      onClick={() => setIsMuted(false)}
+                      className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/40 transition-colors z-10"
+                    >
+                      <div className="bg-white/90 hover:bg-white text-black px-6 py-3 rounded-lg font-semibold text-lg shadow-lg transition-all hover:scale-105">
+                        🔊 Clique para ativar o som
+                      </div>
+                    </div>
+                  )}
                   
                   {/* Camada para bloquear clique/pause */}
                   <div className="absolute inset-0 pointer-events-auto bg-transparent"></div>
