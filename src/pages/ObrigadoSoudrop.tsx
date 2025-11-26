@@ -51,14 +51,15 @@ const ObrigadoSoudrop = () => {
         }}>
             <div className="relative w-full max-w-4xl mx-auto">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card">
-                <div className="aspect-video relative bg-black overflow-hidden">
+                <div className="aspect-video relative bg-black overflow-hidden webinar-wrapper">
                   <iframe
-                    id="upsell-video"
+                    id="webinar-video"
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&controls=0&modestbranding=1&rel=0&fs=0&showinfo=0&loop=1&playlist=RdT2ExTPB7o&mute=0"
+                    src="https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=1&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1"
+                    title="Webinário Soudrop"
                     frameBorder="0"
-                    allow="autoplay; encrypted-media"
-                    title="Vídeo de Boas-Vindas"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
                   ></iframe>
                   
                   {/* Camada para bloquear clique/pause */}
