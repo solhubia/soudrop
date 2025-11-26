@@ -165,15 +165,15 @@ const ObrigadoSoudrop = () => {
           {showButtons && (
             <div className="mb-12 flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in">
               {/* Botão Verde - Upsell */}
-              <Button 
-                size="lg" 
-                className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" 
-                asChild
-              >
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  SIM, quero liberar meu bônus exclusivo
-                </a>
-              </Button>
+            <Button 
+              size="lg" 
+              className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" 
+              asChild
+            >
+              <a href="https://pay.kiwify.com.br/zrBAaMP" target="_blank" rel="noopener noreferrer">
+                Eu Quero Lucrar mais Rápido!
+              </a>
+            </Button>
 
               {/* Botão Vermelho - Seguir sem bônus */}
               <Button 
