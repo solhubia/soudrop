@@ -14,6 +14,7 @@ import FontesSecretasDetalhes from "./pages/FontesSecretasDetalhes";
 import LiveImportacao from "./pages/LiveImportacao";
 import Obrigado from "./pages/Obrigado";
 import ObrigadoSoudrop from "./pages/ObrigadoSoudrop";
+import ObrigadoClubeImportacao from "./pages/ObrigadoClubeImportacao";
 import ObrigadoCacadorChina from "./pages/ObrigadoCacadorChina";
 import ChecklistImportador from "./pages/ChecklistImportador.tsx";
 import CacadorProdutosEntrada from "./pages/CacadorProdutosEntrada";
@@ -118,6 +119,7 @@ const App = () => {
             <Route path="/live-importacao" element={<LiveImportacao />} />
             <Route path="/obrigado" element={<Obrigado />} />
             <Route path="/obrigado-soudrop" element={<ObrigadoSoudrop />} />
+            <Route path="/obrigado-clube-importacao" element={<ObrigadoClubeImportacao />} />
             <Route path="/obrigado-cacador-china" element={<ObrigadoCacadorChina />} />
             <Route path="/soudrop-start" element={<SoudropStart />} />
             <Route path="/soudrop-pro" element={<SoudropPro />} />
