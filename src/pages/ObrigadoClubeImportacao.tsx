@@ -162,11 +162,11 @@ const ObrigadoClubeImportacao = () => {
                     position: 'absolute',
                     right: 0,
                     bottom: 0,
-                    width: '90px',
-                    height: '40px',
-                    background: 'linear-gradient(to left, rgba(0,0,0,0.95), rgba(0,0,0,0))',
+                    width: '100px',
+                    height: '50px',
+                    background: 'linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0.8) 50%, rgba(0,0,0,0))',
                     pointerEvents: 'none',
-                    zIndex: 5
+                    zIndex: 999
                   }}
                 ></div>
               </div>
