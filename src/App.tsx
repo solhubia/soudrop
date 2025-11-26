@@ -16,6 +16,7 @@ import Obrigado from "./pages/Obrigado";
 import ObrigadoSoudrop from "./pages/ObrigadoSoudrop";
 import ObrigadoClubeImportacao from "./pages/ObrigadoClubeImportacao";
 import ObrigadoCacadorChina from "./pages/ObrigadoCacadorChina";
+import OperacaoTiktok from "./pages/OperacaoTiktok";
 import ChecklistImportador from "./pages/ChecklistImportador.tsx";
 import CacadorProdutosEntrada from "./pages/CacadorProdutosEntrada";
 import SoudropStart from "./pages/SoudropStart";
@@ -125,6 +126,7 @@ const App = () => {
             <Route path="/soudrop-pro" element={<SoudropPro />} />
             <Route path="/soudrop-elite" element={<SoudropElite />} />
             <Route path="/black-friday" element={<BlackFriday />} />
+            <Route path="/operacao-tiktok-de-lucro" element={<OperacaoTiktok />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
