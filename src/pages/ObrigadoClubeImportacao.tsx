@@ -25,6 +25,26 @@ const ObrigadoClubeImportacao = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    const btn = document.getElementById('video-unmute-btn');
+    const iframe = document.getElementById('video-clube');
+
+    if (btn && iframe) {
+      const handleClick = () => {
+        const url = iframe.getAttribute('src') || "";
+        let newUrl = url.replace('mute=1', 'mute=0');
+        if (!newUrl.includes('autoplay=1')) {
+          newUrl += (newUrl.includes('?') ? '&' : '?') + 'autoplay=1';
+        }
+        iframe.setAttribute('src', newUrl);
+        btn.style.display = 'none';
+      };
+      
+      btn.addEventListener('click', handleClick);
+      return () => btn.removeEventListener('click', handleClick);
+    }
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormSubmitted(true);
@@ -72,25 +92,74 @@ const ObrigadoClubeImportacao = () => {
 
           {/* Video Section */}
           <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <div className="relative w-full max-w-4xl mx-auto">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card">
-                <div className="aspect-video relative bg-black overflow-hidden webinar-wrapper">
-                  <iframe
-                    id="clube-video"
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/LYoT691VW-M?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1"
-                    title="Clube de Importação"
-                    frameBorder="0"
-                    allow="autoplay; encrypted-media; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                  
-                  {/* Camada para bloquear clique/pause */}
-                  <div className="absolute inset-0 pointer-events-auto bg-transparent"></div>
-                  
-                  {/* Camada para cobrir a área do logo do YouTube */}
-                  <div className="absolute right-0 bottom-0 w-20 h-10 bg-gradient-to-l from-black/90 to-black/0"></div>
-                </div>
+            <div 
+              className="video-wrapper-clube"
+              style={{
+                position: 'relative',
+                width: '100%',
+                maxWidth: '900px',
+                margin: '0 auto',
+                borderRadius: '16px',
+                overflow: 'hidden'
+              }}
+            >
+              <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                <iframe
+                  id="video-clube"
+                  src="https://www.youtube.com/embed/LYoT691VW-M?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=LYoT691VW-M"
+                  title="Clube de Importação"
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    minHeight: '400px',
+                    pointerEvents: 'auto'
+                  }}
+                ></iframe>
+
+                <button
+                  id="video-unmute-btn"
+                  className="video-unmute-overlay"
+                  style={{
+                    position: 'absolute',
+                    left: '50%',
+                    top: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    padding: '10px 24px',
+                    borderRadius: '999px',
+                    border: 'none',
+                    fontSize: '16px',
+                    fontWeight: '500',
+                    background: '#FFFFFF',
+                    color: '#000000',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    zIndex: 10
+                  }}
+                >
+                  🔊 Clique para ativar o som
+                </button>
+
+                {/* Máscara para esconder a logo do YouTube */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    right: 0,
+                    bottom: 0,
+                    width: '90px',
+                    height: '40px',
+                    background: 'linear-gradient(to left, rgba(0,0,0,0.9), rgba(0,0,0,0))',
+                    pointerEvents: 'none',
+                    zIndex: 5
+                  }}
+                ></div>
               </div>
             </div>
           </div>
