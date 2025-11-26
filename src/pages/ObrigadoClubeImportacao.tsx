@@ -66,7 +66,7 @@ const ObrigadoClubeImportacao = () => {
               <p className="text-center text-sm md:text-base font-medium text-clube-gray">
                 Etapa 2 de 2 · Assista ao vídeo para liberar seus próximos passos
               </p>
-              <Progress value={75} className="h-3 bg-clube-black-alt" />
+              <Progress value={75} className="h-3 bg-clube-black-alt [&>div]:bg-clube-red-primary" />
             </div>
           </div>
 
@@ -167,18 +167,6 @@ const ObrigadoClubeImportacao = () => {
                     background: 'linear-gradient(to left, rgba(0,0,0,0.95), rgba(0,0,0,0))',
                     pointerEvents: 'none',
                     zIndex: 5
-                  }}
-                ></div>
-                
-                {/* Borda vermelha no vídeo */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    border: '2px solid hsl(0 76% 52%)',
-                    borderRadius: '16px',
-                    pointerEvents: 'none',
-                    zIndex: 6
                   }}
                 ></div>
               </div>
