@@ -3,11 +3,23 @@ import { Progress } from "@/components/ui/progress";
 import { CheckCircle, MessageCircle, Package } from "lucide-react";
 import { useEffect, useState } from "react";
 const ObrigadoSoudrop = () => {
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false); // Iniciar com som
+  const [showSecondFold, setShowSecondFold] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleShowSecondFold = () => {
+    setShowSecondFold(true);
+    // Scroll suave até a segunda dobra
+    setTimeout(() => {
+      const secondFold = document.getElementById('second-fold');
+      if (secondFold) {
+        secondFold.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
   return <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
@@ -17,9 +29,9 @@ const ObrigadoSoudrop = () => {
         }}>
             <div className="space-y-3">
               <p className="text-center text-sm md:text-base font-medium text-muted-foreground">
-                Etapa 2 de 2 · Assista ao vídeo para liberar seus próximos passos
+                Etapa 2 de 2 · Assista ao vídeo para liberar seu bônus exclusivo
               </p>
-              <Progress value={75} className="h-3 bg-muted" />
+              <Progress value={80} className="h-3 bg-muted animate-pulse" />
             </div>
           </div>
 
@@ -27,24 +39,22 @@ const ObrigadoSoudrop = () => {
           <div className="text-center space-y-6 mb-8 animate-fade-in" style={{
           animationDelay: '0.2s'
         }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Bem-vindo a Soudrop!</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Você está quase lá!</h1>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+              Assista ao vídeo abaixo para liberar um bônus exclusivo para novos membros.
+            </p>
+            <p className="text-lg md:text-xl font-semibold text-primary max-w-2xl mx-auto">
+              São poucos minutos que podem multiplicar seus resultados com a Soudrop.
+            </p>
           </div>
 
           {/* Video Instruction Text */}
-          <div className="max-w-3xl mx-auto mb-8 text-center space-y-4 animate-fade-in" style={{
+          <div className="max-w-3xl mx-auto mb-6 text-center animate-fade-in" style={{
           animationDelay: '0.3s'
         }}>
-            <h2 className="text-2xl md:text-3xl font-bold">
-              Antes de seguir, este vídeo é obrigatório.
-            </h2>
-            <div className="text-base md:text-lg text-muted-foreground space-y-4 leading-relaxed">
-              <p>
-                Neste vídeo eu vou te mostrar, em poucos minutos, o que você precisa fazer agora para ativar seu acesso e começar a usar a Soudrop do jeito certo.
-              </p>
-              <p>
-                Assista até o final para entender os próximos passos e evitar erros que podem travar seus resultados.
-              </p>
-            </div>
+            <p className="text-sm md:text-base text-muted-foreground italic">
+              Assista até o final para desbloquear sua condição especial.
+            </p>
           </div>
 
           {/* Video Section */}
@@ -57,7 +67,7 @@ const ObrigadoSoudrop = () => {
                   <iframe
                     id="webinar-video"
                     className="w-full h-full"
-                    src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=${isMuted ? '1' : '0'}&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1`}
+                    src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=${isMuted ? '1' : '0'}&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1&volume=100`}
                     title="Webinário Soudrop"
                     frameBorder="0"
                     allow="autoplay; encrypted-media; picture-in-picture"
@@ -86,19 +96,36 @@ const ObrigadoSoudrop = () => {
             </div>
           </div>
 
-          {/* Upsell CTA Button */}
-          <div className="mb-12 flex justify-center animate-fade-in" style={{
+          {/* Upsell Buttons */}
+          <div className="mb-12 flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in" style={{
           animationDelay: '0.5s'
         }}>
-            <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" asChild>
-              <a href="https://pay.kiwify.com.br/zrBAaMP" target="_blank" rel="noopener noreferrer">
-                Quero dar o próximo passo!
+            {/* Botão Verde - Upsell */}
+            <Button 
+              size="lg" 
+              className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" 
+              asChild
+            >
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                SIM, quero liberar meu bônus exclusivo
               </a>
+            </Button>
+
+            {/* Botão Vermelho - Seguir sem bônus */}
+            <Button 
+              size="lg" 
+              onClick={handleShowSecondFold}
+              className="w-full md:w-auto bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Não, quero seguir sem o bônus
             </Button>
           </div>
 
-          {/* Cards with Buttons */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {/* Segunda Dobra - Obrigado / Acesso */}
+          {showSecondFold && (
+            <div id="second-fold" className="animate-fade-in">
+              {/* Cards with Buttons */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* WhatsApp Card */}
             <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{
             animationDelay: '0.4s'
@@ -162,6 +189,8 @@ const ObrigadoSoudrop = () => {
               </li>
             </ul>
           </div>
+            </div>
+          )}
         </div>
       </div>
     </div>;
