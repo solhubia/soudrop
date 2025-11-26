@@ -10,10 +10,9 @@ const ObrigadoSoudrop = () => {
   const [progress, setProgress] = useState(70);
   const playerRef = useRef<any>(null);
   const intervalRef = useRef<any>(null);
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    
+
     // Animação suave da barra de progresso de 70% para 80%
     const progressInterval = setInterval(() => {
       setProgress(prev => {
@@ -33,17 +32,15 @@ const ObrigadoSoudrop = () => {
       // @ts-ignore
       playerRef.current = new YT.Player('webinar-video', {
         events: {
-          onStateChange: onPlayerStateChange,
-        },
+          onStateChange: onPlayerStateChange
+        }
       });
     };
-
     return () => {
       clearInterval(progressInterval);
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
   }, []);
-
   const onPlayerStateChange = (event: any) => {
     // @ts-ignore
     if (event.data === YT.PlayerState.PLAYING) {
@@ -60,7 +57,6 @@ const ObrigadoSoudrop = () => {
       }, 1000);
     }
   };
-
   const handleShowSecondFold = () => {
     if (!videoWatched) {
       alert('Por favor, assista ao vídeo até o final para desbloquear o acesso.');
@@ -70,7 +66,10 @@ const ObrigadoSoudrop = () => {
     setTimeout(() => {
       const secondFold = document.getElementById('second-fold');
       if (secondFold) {
-        secondFold.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        secondFold.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       }
     }, 100);
   };
@@ -86,16 +85,10 @@ const ObrigadoSoudrop = () => {
                 Carregando seu bônus exclusivo…
               </p>
               <div className="relative h-3 bg-muted rounded-full overflow-hidden">
-                <div 
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"
-                  style={{
-                    backgroundSize: '200% 100%',
-                  }}
-                />
-                <Progress 
-                  value={progress} 
-                  className="h-full bg-transparent [&>div]:bg-primary [&>div]:relative [&>div]:overflow-hidden [&>div]:after:content-[''] [&>div]:after:absolute [&>div]:after:inset-0 [&>div]:after:bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.1)_10px,rgba(255,255,255,0.1)_20px)] [&>div]:after:animate-[slide_1s_linear_infinite]" 
-                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]" style={{
+                backgroundSize: '200% 100%'
+              }} />
+                <Progress value={progress} className="h-full bg-transparent [&>div]:bg-primary [&>div]:relative [&>div]:overflow-hidden [&>div]:after:content-[''] [&>div]:after:absolute [&>div]:after:inset-0 [&>div]:after:bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.1)_10px,rgba(255,255,255,0.1)_20px)] [&>div]:after:animate-[slide_1s_linear_infinite]" />
               </div>
             </div>
           </div>
@@ -129,27 +122,14 @@ const ObrigadoSoudrop = () => {
             <div className="relative w-full max-w-4xl mx-auto">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card">
                 <div className="aspect-video relative bg-black overflow-hidden webinar-wrapper">
-                  <iframe
-                    id="webinar-video"
-                    className="w-full h-full"
-                    src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=${isMuted ? '1' : '0'}&enablejsapi=1&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1&volume=100`}
-                    title="Webinário Soudrop"
-                    frameBorder="0"
-                    allow="autoplay; encrypted-media; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                  <iframe id="webinar-video" className="w-full h-full" src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=${isMuted ? '1' : '0'}&enablejsapi=1&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1&volume=100`} title="Webinário Soudrop" frameBorder="0" allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen></iframe>
                   
                   {/* Overlay para ativar o som */}
-                  {isMuted && (
-                    <div 
-                      onClick={() => setIsMuted(false)}
-                      className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/40 transition-colors z-10"
-                    >
+                  {isMuted && <div onClick={() => setIsMuted(false)} className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/40 transition-colors z-10">
                       <div className="bg-white/90 hover:bg-white text-black px-6 py-3 rounded-lg font-semibold text-lg shadow-lg transition-all hover:scale-105">
                         🔊 Clique para ativar o som
                       </div>
-                    </div>
-                  )}
+                    </div>}
                   
                   {/* Camada para bloquear clique/pause */}
                   <div className="absolute inset-0 pointer-events-auto bg-transparent"></div>
@@ -162,39 +142,28 @@ const ObrigadoSoudrop = () => {
           </div>
 
           {/* Upsell Buttons - Aparecem após 2:50 do vídeo */}
-          {showButtons && (
-            <div className="mb-12 flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in">
+          {showButtons && <div className="mb-12 flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in">
               {/* Botão Verde - Upsell */}
-            <Button 
-              size="lg" 
-              className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" 
-              asChild
-            >
+            <Button size="lg" className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" asChild>
               <a href="https://pay.kiwify.com.br/zrBAaMP" target="_blank" rel="noopener noreferrer">
                 Eu Quero Lucrar mais Rápido!
               </a>
             </Button>
 
               {/* Botão Vermelho - Seguir sem bônus */}
-              <Button 
-                size="lg" 
-                onClick={handleShowSecondFold}
-                className="w-full md:w-auto bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              >
-                Não, quero seguir sem o bônus
+              <Button size="lg" onClick={handleShowSecondFold} className="w-full md:w-auto bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                Quero acessar a Plataforma.     
               </Button>
-            </div>
-          )}
+            </div>}
 
           {/* Segunda Dobra - Obrigado / Acesso */}
-          {showSecondFold && (
-            <div id="second-fold" className="animate-fade-in">
+          {showSecondFold && <div id="second-fold" className="animate-fade-in">
               {/* Cards with Buttons */}
               <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* WhatsApp Card */}
             <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{
-            animationDelay: '0.4s'
-          }}>
+              animationDelay: '0.4s'
+            }}>
               <div className="flex justify-center">
                 <div className="p-4 bg-green-500/10 rounded-full">
                   <MessageCircle className="w-8 h-8 text-green-500" />
@@ -214,8 +183,8 @@ const ObrigadoSoudrop = () => {
 
             {/* Soudrop Platform Card */}
             <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{
-            animationDelay: '0.6s'
-          }}>
+              animationDelay: '0.6s'
+            }}>
               <div className="flex justify-center">
                 <div className="p-4 bg-primary/10 rounded-full">
                   <Package className="w-8 h-8 text-primary" />
@@ -236,8 +205,8 @@ const ObrigadoSoudrop = () => {
 
           {/* Additional Info */}
           <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center space-y-4 animate-fade-in" style={{
-          animationDelay: '0.8s'
-        }}>
+            animationDelay: '0.8s'
+          }}>
             <h3 className="text-2xl font-bold">Próximos Passos</h3>
             <ul className="space-y-3 text-left max-w-xl mx-auto text-muted-foreground">
               <li className="flex items-start">
@@ -254,8 +223,7 @@ const ObrigadoSoudrop = () => {
               </li>
             </ul>
           </div>
-            </div>
-          )}
+            </div>}
         </div>
       </div>
     </div>;
