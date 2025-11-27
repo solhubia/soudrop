@@ -3,7 +3,7 @@ import { Progress } from "@/components/ui/progress";
 import { CheckCircle, MessageCircle, Package } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 const ObrigadoSoudrop = () => {
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const [showSecondFold, setShowSecondFold] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
   const [videoWatched, setVideoWatched] = useState(false);
@@ -122,7 +122,7 @@ const ObrigadoSoudrop = () => {
             <div className="relative w-full max-w-4xl mx-auto">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card">
                 <div className="aspect-video relative bg-black overflow-hidden webinar-wrapper">
-                  <iframe id="webinar-video" className="w-full h-full" src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=${isMuted ? '1' : '0'}&enablejsapi=1&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1&volume=100`} title="Webinário Soudrop" frameBorder="0" allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen></iframe>
+                  <iframe id="webinar-video" className="w-full h-full" src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=1&enablejsapi=1&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1`} title="Webinário Soudrop" frameBorder="0" allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen></iframe>
                   
                   {/* Overlay para ativar o som */}
                   {isMuted && <div onClick={() => setIsMuted(false)} className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/40 transition-colors z-10">
