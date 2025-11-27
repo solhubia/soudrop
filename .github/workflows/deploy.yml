@@ -17,7 +17,7 @@ jobs:
       
     - name: Deploy via SSH with password
       run: |
-        sshpass -p '${{ secrets.FTP_PASSWORD }}' ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+        sshpass -p '${{ secrets.FTP_PASSWORD }}' ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
           cd www
           npm run build
         EOF
