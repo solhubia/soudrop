@@ -106,7 +106,7 @@ const Index = () => {
   }, [carouselApi]);
   return <div className="min-h-screen bg-black">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-muted z-50 transition-all duration-300">
+      <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-lg border-b border-muted z-50 transition-all duration-300">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="relative flex h-16 items-center">
             
@@ -296,7 +296,7 @@ const Index = () => {
       </section>
 
       {/* 7 Pedras Section */}
-      <section className="py-20 bg-gradient-subtle relative overflow-hidden">
+      <section className="py-20 bg-black relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl"></div>
@@ -397,7 +397,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-1 lg:order-1">
@@ -428,7 +428,7 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section ref={benefitsAnimation.ref as any} className={`py-20 bg-gradient-subtle transition-all duration-700 ${benefitsAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
+      <section ref={benefitsAnimation.ref as any} className={`py-20 bg-black transition-all duration-700 ${benefitsAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -525,7 +525,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section ref={featuresAnimation.ref as any} id="funcionalidades" className={`py-20 transition-all duration-700 ${featuresAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
+      <section ref={featuresAnimation.ref as any} id="funcionalidades" className={`py-20 bg-black transition-all duration-700 ${featuresAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -644,7 +644,7 @@ const Index = () => {
       <MarketplaceMarquee />
 
       {/* Sales Management Dashboard Section */}
-      <section ref={dashboardAnimation.ref as any} className={`py-20 bg-gradient-subtle transition-all duration-700 ${dashboardAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
+      <section ref={dashboardAnimation.ref as any} className={`py-20 bg-black transition-all duration-700 ${dashboardAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -807,7 +807,7 @@ const Index = () => {
       </section>
 
       {/* Comparison Section */}
-      <section ref={comparisonAnimation.ref as any} className={`py-20 bg-background transition-all duration-700 ${comparisonAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
+      <section ref={comparisonAnimation.ref as any} className={`py-20 bg-black transition-all duration-700 ${comparisonAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -912,7 +912,7 @@ const Index = () => {
       </section>
 
       {/* Video Cases Section */}
-      <section ref={videoCasesAnimation.ref as any} className={`py-20 bg-gradient-subtle transition-all duration-700 ${videoCasesAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
+      <section ref={videoCasesAnimation.ref as any} className={`py-20 bg-black transition-all duration-700 ${videoCasesAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -1033,7 +1033,7 @@ const Index = () => {
       </section>
 
       {/* Unique Differential Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
@@ -1223,7 +1223,7 @@ const Index = () => {
       </section>
 
       {/* Security Section */}
-      <section className="py-20 bg-background relative overflow-hidden">
+      <section className="py-20 bg-black relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-6">
@@ -1295,7 +1295,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section ref={pricingAnimation.ref as any} id="planos" className={`py-20 transition-all duration-700 ${pricingAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
+      <section ref={pricingAnimation.ref as any} id="planos" className={`py-20 bg-black transition-all duration-700 ${pricingAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -1607,7 +1607,7 @@ const Index = () => {
       </section>
 
       {/* Guarantee Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 to-primary-glow/10">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center justify-center p-3 bg-primary/20 rounded-full mb-6">
@@ -1685,7 +1685,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section ref={faqAnimation.ref as any} id="faq" className={`py-20 bg-gradient-subtle transition-all duration-700 ${faqAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
+      <section ref={faqAnimation.ref as any} id="faq" className={`py-20 bg-black transition-all duration-700 ${faqAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -1773,7 +1773,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-muted py-12">
+      <footer className="bg-black border-t border-muted py-12">
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center text-center space-y-6">
             <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
