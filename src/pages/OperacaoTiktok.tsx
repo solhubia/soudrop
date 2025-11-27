@@ -52,8 +52,8 @@ const OperacaoTiktok = () => {
 
           {/* Título Principal */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-center mb-6 leading-tight">
-            OPERAÇÃO TIKTOK<br />
-            <span className="text-primary">DE LUCRO</span>
+            MÁQUINA DE VENDAS<br />
+            <span className="text-primary">NO TIKTOK</span>
           </h1>
 
           {/* Subtítulo */}
@@ -109,7 +109,7 @@ const OperacaoTiktok = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
-              O que você vai aprender na Operação TikTok de Lucro?
+              O que você vai aprender na Máquina de Vendas no TikTok?
             </h2>
             <p className="text-lg md:text-xl text-gray-600">
               Um método completo e atualizado para você começar a vender hoje mesmo
@@ -265,7 +265,7 @@ const OperacaoTiktok = () => {
                 É de graça mesmo? Não tem pegadinha?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300">
-                Sim, é 100% gratuito! A Operação TikTok de Lucro é um treinamento completo oferecido pela Sou Drop para capacitar novos afiliados. Nosso objetivo é criar uma rede de vendedores bem-sucedidos que promovam nossos produtos de forma profissional.
+                Sim, é 100% gratuito! A Máquina de Vendas no TikTok é um treinamento completo oferecido pela Sou Drop para capacitar novos afiliados. Nosso objetivo é criar uma rede de vendedores bem-sucedidos que promovam nossos produtos de forma profissional.
               </AccordionContent>
             </AccordionItem>
 
