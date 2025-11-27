@@ -164,7 +164,7 @@ const OperacaoTiktok = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
             <div className="bg-card-dark border border-gray-700 rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
               <BookOpen className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-bold text-white mb-3">Aulas Passo a Passo</h3>
