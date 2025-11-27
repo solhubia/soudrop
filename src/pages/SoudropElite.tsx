@@ -45,7 +45,7 @@ const SoudropElite = () => {
   const paraQuemE = ["Quer ter uma renda extra trabalhando de casa", "Busca uma fonte de renda principal sem sair de casa", "Não tem capital para investir em estoque", "Quer flexibilidade de horários para trabalhar quando puder", "Tem disposição para aprender algo novo e aplicar"];
   return <div className="min-h-screen bg-elite-black text-elite-white">
       {/* Hero Premium */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-elite-bg px-6 py-20">
+      <section className="relative min-h-screen flex items-center justify-center bg-black px-6 py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_hsl(45_100%_51%_/_0.1),_transparent_50%)]" />
         
         <div className="relative z-10 max-w-6xl mx-auto text-center">
@@ -120,7 +120,7 @@ const SoudropElite = () => {
       </section>
 
       {/* Para quem é */}
-      <section className="py-20 px-6 bg-gradient-elite-bg">
+      <section className="py-20 px-6 bg-black">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             Essa aula é para <span className="text-elite-gold">quem quer:</span>
@@ -163,7 +163,7 @@ const SoudropElite = () => {
       </section>
 
       {/* Transformação */}
-      <section className="py-20 px-6 bg-gradient-elite-bg border-y border-elite-gold/10">
+      <section className="py-20 px-6 bg-black border-y border-elite-gold/10">
         <div className="max-w-4xl mx-auto text-center">
           <Crown className="w-16 h-16 text-elite-gold mx-auto mb-8" />
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
@@ -237,7 +237,7 @@ const SoudropElite = () => {
       </section>
 
       {/* Acesso Exclusivo */}
-      <section className="py-20 px-6 bg-gradient-elite-bg">
+      <section className="py-20 px-6 bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <Shield className="w-20 h-20 text-elite-gold mx-auto mb-8" />
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -258,7 +258,7 @@ const SoudropElite = () => {
       </section>
 
       {/* Posicionamento / Prova */}
-      <section className="py-20 px-6 bg-gradient-elite-bg border-y border-elite-gold/10">
+      <section className="py-20 px-6 bg-black border-y border-elite-gold/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
             Por que confiar no <span className="text-elite-gold">Método</span>
@@ -359,7 +359,7 @@ const SoudropElite = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-20 px-6 bg-gradient-elite-bg border-t border-elite-gold/10">
+      <section className="py-20 px-6 bg-black border-t border-elite-gold/10">
         <div className="max-w-4xl mx-auto text-center">
           <Crown className="w-20 h-20 text-elite-gold mx-auto mb-8" />
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
