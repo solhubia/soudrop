@@ -12,7 +12,7 @@ const Importacao = () => {
     trackViewContent("club", { content_name: document.title });
   }, []);
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-primary/5">
+    <div className="min-h-screen bg-black">
       {/* Hero Section with Video */}
       <section className="relative overflow-hidden py-12 md:py-20">
         <div className="container mx-auto px-4">
@@ -68,7 +68,7 @@ const Importacao = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
@@ -192,7 +192,7 @@ const Importacao = () => {
       </section>
 
       {/* What's Included Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
