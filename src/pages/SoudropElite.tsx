@@ -295,7 +295,7 @@ const SoudropElite = () => {
             </p>
           </div>
 
-          <Card className="bg-gradient-elite-bg border-4 border-elite-gold/50 shadow-elite-gold-strong">
+          <Card className="bg-black border-4 border-elite-gold/50 shadow-elite-gold-strong">
             <CardContent className="p-12">
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-2 px-6 py-2 bg-elite-gold/10 border border-elite-gold/30 rounded-full mb-6">
