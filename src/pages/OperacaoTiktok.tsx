@@ -152,42 +152,6 @@ const OperacaoTiktok = () => {
         </div>
       </section>
 
-      {/* SEÇÃO 3 - RESULTADO DOS AFILIADOS */}
-      <section className="bg-muted py-16 md:py-24 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
-              Resultado dos Afiliados!
-            </h2>
-            <p className="text-lg md:text-xl text-gray-600">
-              A Operação TikTok de Lucro funciona e já tem gente fazendo dar certo!
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {[
-              { name: "Alânia", color: "from-orange-400 to-orange-600" },
-              { name: "Lethicia", color: "from-pink-400 to-pink-600" },
-              { name: "Joan", color: "from-green-400 to-green-600" },
-              { name: "Danilow", color: "from-blue-400 to-blue-600" }
-            ].map((person, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
-                <div className={`bg-gradient-to-br ${person.color} aspect-video flex items-center justify-center relative`}>
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <div className="relative bg-white/90 rounded-full p-4">
-                    <Play className="w-8 h-8 text-gray-900" fill="currentColor" />
-                  </div>
-                </div>
-                <div className="p-4 text-center">
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">{person.name}</h3>
-                  <p className="text-sm text-gray-600">GMV Total: 300K+</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* SEÇÃO 4 - POR QUE ESTE CURSO É DIFERENTE */}
       <section className="bg-gradient-to-b from-dark-gradient-from to-dark-gradient-to py-16 md:py-24 px-4">
         <div className="container mx-auto max-w-6xl">
