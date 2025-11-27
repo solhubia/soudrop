@@ -40,7 +40,7 @@ const LiveImportacao = () => {
     role: "Empreendedor Digital • MG",
     text: "O passo a passo de validação de fornecedor me poupou de cair em golpes. Hoje importo com segurança e previsibilidade."
   }];
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-black">
       {/* Warning Banner */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-red-600 py-2 px-4">
         <p className="text-white text-center font-bold uppercase text-sm md:text-base">
@@ -49,7 +49,7 @@ const LiveImportacao = () => {
       </div>
 
       {/* Header */}
-      <header className="fixed top-8 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-muted">
+      <header className="fixed top-8 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-b border-muted">
         <div className="container mx-auto px-4 py-4">
           
         </div>
@@ -71,25 +71,25 @@ const LiveImportacao = () => {
                 LIVE EXCLUSIVA • ONLINE E GRATUITA
               </Badge>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Como Importar da China e{" "}
                 <span className="text-primary">Lucrar nos Marketplaces</span>
               </h1>
               
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
+              <p className="text-lg md:text-xl text-white max-w-2xl">
                 Descubra o passo a passo completo para aumentar sua margem de lucro, ter acesso direto a fornecedores chineses e importar com segurança mesmo sendo iniciante.
               </p>
 
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
-                <div className="flex items-center gap-2 text-foreground">
+                <div className="flex items-center gap-2 text-white">
                   <CheckCircle2 className="w-5 h-5 text-primary" />
                   <span className="font-medium">100% Online</span>
                 </div>
-                <div className="flex items-center gap-2 text-foreground">
+                <div className="flex items-center gap-2 text-white">
                   <CheckCircle2 className="w-5 h-5 text-primary" />
                   <span className="font-medium">Totalmente Gratuito</span>
                 </div>
-                <div className="flex items-center gap-2 text-foreground">
+                <div className="flex items-center gap-2 text-white">
                   <CheckCircle2 className="w-5 h-5 text-primary" />
                   <span className="font-medium">Conteúdo Prático</span>
                 </div>
@@ -101,10 +101,10 @@ const LiveImportacao = () => {
               <Card className="w-full max-w-md bg-card shadow-elegant">
                 <CardContent className="p-8">
                   <div className="text-center space-y-6">
-                    <h3 className="text-2xl font-bold text-foreground">
+                    <h3 className="text-2xl font-bold text-white">
                       Garanta Sua Vaga Agora
                     </h3>
-                    <p className="text-muted-foreground text-lg">
+                    <p className="text-white text-lg">
                       Clique no botão abaixo para se inscrever na live exclusiva
                     </p>
 
@@ -128,10 +128,10 @@ const LiveImportacao = () => {
       <section className="py-16 md:py-24 bg-card/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Quem vai te guiar nessa jornada
             </h2>
-            <p className="text-xl text-foreground font-semibold">
+            <p className="text-xl text-white font-semibold">
               Conheça o mentor do Clube de importação         
             </p>
           </div>
@@ -146,9 +146,9 @@ const LiveImportacao = () => {
 
             {/* Content */}
             <div className="space-y-6">
-              <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+              <div className="space-y-4 text-white text-lg leading-relaxed">
                 <p>
-                  <span className="text-foreground font-semibold">Renan Ferreira</span>, empresário e importador há mais de 10 anos, 
+                  <span className="text-white font-semibold">Renan Ferreira</span>, empresário e importador há mais de 10 anos,
                   com experiência direta dentro de fábricas e escritórios na China. Já importei milhares de produtos 
                   e ensino, de forma prática, como qualquer pessoa pode fazer o mesmo — sem depender de atravessadores.
                 </p>
@@ -168,13 +168,13 @@ const LiveImportacao = () => {
               <div className="space-y-3 pt-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-foreground font-medium text-lg">
+                  <span className="text-white font-medium text-lg">
                     Milhares de produtos importados diretamente de fábricas chinesas
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-foreground font-medium text-lg">
+                  <span className="text-white font-medium text-lg">
                     Operações de importação compartilhada para lojistas de marketplaces
                   </span>
                 </div>
@@ -190,7 +190,7 @@ const LiveImportacao = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               O que você vai aprender nessa live
             </h2>
           </div>
@@ -202,7 +202,7 @@ const LiveImportacao = () => {
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <topic.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <p className="text-foreground font-medium leading-relaxed">
+                    <p className="text-white font-medium leading-relaxed">
                       {topic.text}
                     </p>
                   </div>
@@ -216,7 +216,7 @@ const LiveImportacao = () => {
       <section className="py-16 md:py-24 bg-card/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Prova real de quem já está no jogo
             </h2>
           </div>
@@ -228,13 +228,13 @@ const LiveImportacao = () => {
                     {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
                   </div>
                   
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-white mb-6 leading-relaxed">
                     "{testimonial.text}"
                   </p>
                   
                   <div>
-                    <p className="text-foreground font-bold">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <p className="text-white font-bold">{testimonial.name}</p>
+                    <p className="text-sm text-white">{testimonial.role}</p>
                   </div>
                 </CardContent>
               </Card>)}
@@ -249,11 +249,11 @@ const LiveImportacao = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               Não Perca Essa Oportunidade
             </h2>
             
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-white">
               As vagas são limitadas e essa live pode mudar completamente a forma 
               como você trabalha com marketplaces. Garanta sua presença agora!
             </p>
