@@ -104,7 +104,7 @@ const Index = () => {
 
     return () => clearInterval(interval);
   }, [carouselApi]);
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-black">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-muted z-50 transition-all duration-300">
         <div className="container mx-auto px-4 sm:px-6">
