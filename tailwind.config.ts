@@ -70,6 +70,18 @@ export default {
           "input-bg": "hsl(var(--clube-input-bg))",
           border: "hsl(var(--clube-border))",
         },
+        "dark-gradient": {
+          from: "hsl(var(--dark-gradient-from))",
+          to: "hsl(var(--dark-gradient-to))",
+        },
+        "card-dark": {
+          DEFAULT: "hsl(var(--card-dark))",
+          foreground: "hsl(var(--card-dark-foreground))",
+        },
+        badge: {
+          success: "hsl(var(--badge-success))",
+          "success-foreground": "hsl(var(--badge-success-foreground))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -140,7 +152,7 @@ export default {
         'clube-red-strong': 'var(--shadow-clube-red-strong)',
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'sans': ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
         'mono': ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       borderRadius: {

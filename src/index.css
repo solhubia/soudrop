@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,9 +7,37 @@
 
 @layer base {
   :root {
+    /* --- OPERAÇÃO TIKTOK (AMARELO + AZUL ESCURO) --- */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    
+    --primary: 45 100% 51%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 220 40% 12%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 40%;
+    
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 100%;
+    
+    --border: 220 15% 90%;
+    --ring: 45 100% 51%;
+    
+    --dark-gradient-from: 0 0% 18%;
+    --dark-gradient-to: 0 0% 10%;
+    
+    --card-dark: 220 40% 12%;
+    --card-dark-foreground: 0 0% 100%;
+    
+    --badge-success: 0 0% 100%;
+    --badge-success-foreground: 0 0% 0%;
+    
     /* --- TEMA CAÇADOR (REFINADO - PRETO + ROSA + AMARELO) --- */
-    --background: 275 38% 2%;
-    --foreground: 0 0% 100%;
+    --cacador-background: 275 38% 2%;
+    --cacador-foreground: 0 0% 100%;
     --card: 0 0% 7%;
     --card-foreground: 0 0% 100%;
     --popover: 0 0% 7%;
