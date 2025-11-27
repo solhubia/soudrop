@@ -5,7 +5,7 @@ const Obrigado = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+  return <div className="min-h-screen bg-black">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
           {/* Success Icon */}
@@ -20,10 +20,10 @@ const Obrigado = () => {
           <div className="text-center space-y-6 mb-12 animate-fade-in" style={{
           animationDelay: '0.2s'
         }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
               Bem-vindo ao Clube! 🎉
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-white max-w-2xl mx-auto">
               Parabéns por dar esse passo importante! Agora você faz parte de um grupo exclusivo de importadores.
             </p>
           </div>
@@ -39,8 +39,8 @@ const Obrigado = () => {
                   <MessageCircle className="w-8 h-8 text-green-500" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-center">Grupo WhatsApp</h3>
-              <p className="text-muted-foreground text-center">
+              <h3 className="text-2xl font-bold text-center text-white">Grupo WhatsApp</h3>
+              <p className="text-white text-center">
                 Entre no nosso grupo exclusivo e conecte-se com outros membros do clube
               </p>
               <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white" asChild>
@@ -60,8 +60,8 @@ const Obrigado = () => {
                   <GraduationCap className="w-8 h-8 text-primary" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-center">Treinamento</h3>
-              <p className="text-muted-foreground text-center">
+              <h3 className="text-2xl font-bold text-center text-white">Treinamento</h3>
+              <p className="text-white text-center">
                 Acesse agora o treinamento completo sobre importação
               </p>
               <Button size="lg" className="w-full" asChild>
@@ -77,8 +77,8 @@ const Obrigado = () => {
           <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center space-y-4 animate-fade-in" style={{
           animationDelay: '0.8s'
         }}>
-            <h3 className="text-2xl font-bold">Próximos Passos</h3>
-            <ul className="space-y-3 text-left max-w-xl mx-auto text-muted-foreground">
+            <h3 className="text-2xl font-bold text-white">Próximos Passos</h3>
+            <ul className="space-y-3 text-left max-w-xl mx-auto text-white">
               <li className="flex items-start">
                 <span className="text-primary mr-2 mt-1">✓</span>
                 <span>Entre no grupo do WhatsApp para receber atualizações e suporte</span>
