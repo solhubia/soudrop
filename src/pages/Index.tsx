@@ -120,13 +120,13 @@ const Index = () => {
             {/* Center: Navigation Links (Absolutely Centered) */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="hidden md:flex items-center space-x-8">
-                <a href="#funcionalidades" className="text-muted-foreground hover:text-primary font-medium transition-colors">
+                <a href="#funcionalidades" className="text-white hover:text-primary font-medium transition-colors">
                   Funcionalidades
                 </a>
-                <a href="#planos" className="text-muted-foreground hover:text-primary font-medium transition-colors">
+                <a href="#planos" className="text-white hover:text-primary font-medium transition-colors">
                   Planos
                 </a>
-                <a href="#faq" className="text-muted-foreground hover:text-primary font-medium transition-colors">
+                <a href="#faq" className="text-white hover:text-primary font-medium transition-colors">
                   FAQ
                 </a>
               </div>
@@ -265,7 +265,7 @@ const Index = () => {
                     <span className="text-2xl font-bold text-primary">1</span>
                   </div>
                   <h4 className="text-xl font-semibold text-white mb-2">Iniciante</h4>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-white text-sm">
                     Comece do zero com nosso catálogo pronto e suporte dedicado
                   </p>
                 </div>
@@ -275,7 +275,7 @@ const Index = () => {
                     <span className="text-2xl font-bold text-primary">2</span>
                   </div>
                   <h4 className="text-xl font-semibold text-white mb-2">Vendedor</h4>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-white text-sm">
                     Escale suas vendas com integração automática em múltiplos marketplaces
                   </p>
                 </div>
@@ -285,7 +285,7 @@ const Index = () => {
                     <span className="text-2xl font-bold text-primary">3</span>
                   </div>
                   <h4 className="text-xl font-semibold text-white mb-2">Empresário</h4>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-white text-sm">
                     Gerencie seu negócio com dashboards completos e crescimento exponencial
                   </p>
                 </div>
@@ -305,10 +305,10 @@ const Index = () => {
         
         <div className="container mx-auto px-6 relative">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               O Caminho das <span className="gradient-dynamic-text">7 Pedras</span> para Vender Online
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-white max-w-2xl mx-auto">
               Um método testado e aprovado que guia você passo a passo desde o início até se tornar um empresário de sucesso
             </p>
           </div>
@@ -369,7 +369,7 @@ const Index = () => {
                   {/* Conteúdo */}
                   <div className="bg-card rounded-2xl p-6 flex-1 group-hover:shadow-elegant transition-all duration-300">
                     <h3 className="text-xl font-bold mb-3 text-primary">{pedra.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{pedra.description}</p>
+                    <p className="text-white leading-relaxed">{pedra.description}</p>
                   </div>
                 </div>)}
             </div>
@@ -410,10 +410,10 @@ const Index = () => {
                 Conheça a{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">Soudrop</span>
               </h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg text-white mb-6">
                 A Soudrop é a plataforma que revoluciona o e-commerce brasileiro. Criamos uma solução completa para sellers que querem vender mais, com menos esforço e maior eficiência.
               </p>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-white mb-8">
                 Nossa tecnologia integra múltiplos marketplaces, oferece catálogo pronto e cuida de toda a logística, permitindo que você foque apenas no que realmente importa: vender.
               </p>
               <Button variant="hero" size="lg" asChild>
@@ -431,7 +431,7 @@ const Index = () => {
       <section ref={benefitsAnimation.ref as any} className={`py-20 bg-black transition-all duration-700 ${benefitsAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Uma estrutura <span className="bg-gradient-primary bg-clip-text text-transparent">feita para você</span>
             </h2>
           </div>
@@ -445,7 +445,7 @@ const Index = () => {
                 <CardTitle className="text-xl">Integração Facilitada</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base text-white">
                   Integre rapidamente suas lojas com Magalu, Shopee, Mercado Livre, Bling e mais — tudo em um único painel.
                 </CardDescription>
               </CardContent>
@@ -459,7 +459,7 @@ const Index = () => {
                 <CardTitle className="text-xl">Produtos Validados</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base text-white">
                   Acesse mais de 1400 produtos prontos para venda, com anúncios, imagens, títulos e descrições configurados automaticamente.
                 </CardDescription>
               </CardContent>
@@ -473,7 +473,7 @@ const Index = () => {
                 <CardTitle className="text-xl">Logística Automatizada</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base text-white">
                   Estocamos, embalamos e enviamos diretamente para seus clientes. Você só se preocupa com as vendas.
                 </CardDescription>
               </CardContent>
@@ -487,7 +487,7 @@ const Index = () => {
                 <CardTitle className="text-xl">Dashboard Intuitivo</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base text-white">
                   Acompanhe todas as métricas de vendas, status de envio, lucro, taxas de marketplace, frete e cupons em tempo real.
                 </CardDescription>
               </CardContent>
@@ -501,7 +501,7 @@ const Index = () => {
                 <CardTitle className="text-xl">Alta Margem de Lucro</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base text-white">
                   Participe de importações em container compartilhado e aumente sua margem de lucro com produtos direto da China.
                 </CardDescription>
               </CardContent>
@@ -515,7 +515,7 @@ const Index = () => {
                 <CardTitle className="text-xl">Suporte Dedicado</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base text-white">
                   Nossa equipe está pronta para ajudar em todas as etapas, desde o envio até a gestão de devoluções.
                 </CardDescription>
               </CardContent>
@@ -528,7 +528,7 @@ const Index = () => {
       <section ref={featuresAnimation.ref as any} id="funcionalidades" className={`py-20 bg-black transition-all duration-700 ${featuresAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Tudo que você precisa para{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">vender com eficiência</span>
             </h2>
@@ -539,22 +539,22 @@ const Index = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <Badge variant="secondary" className="mb-4">Integração</Badge>
-                <h3 className="text-3xl font-bold mb-6">Integração com Marketplaces</h3>
-                <p className="text-lg text-muted-foreground mb-6">
+                <h3 className="text-3xl font-bold mb-6 text-white">Integração com Marketplaces</h3>
+                <p className="text-lg text-white mb-6">
                   Conecte suas lojas na Soudrop de forma rápida e fácil. Com apenas alguns cliques, seus produtos são sincronizados, sem dores de cabeça.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                    <span>Magalu, Shopee, Mercado Livre...</span>
+                    <span className="text-white">Magalu, Shopee, Mercado Livre...</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                    <span>Sincronização automática de produtos</span>
+                    <span className="text-white">Sincronização automática de produtos</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                    <span>Configuração em poucos cliques</span>
+                    <span className="text-white">Configuração em poucos cliques</span>
                   </li>
                 </ul>
               </div>
@@ -595,8 +595,8 @@ const Index = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
                 <Badge variant="secondary" className="mb-4">Catálogo</Badge>
-                <h3 className="text-3xl font-bold mb-6">Catálogo Completo e Pronto para Vender</h3>
-                <p className="text-lg text-muted-foreground mb-6">
+                <h3 className="text-3xl font-bold mb-6 text-white">Catálogo Completo e Pronto para Vender</h3>
+                <p className="text-lg text-white mb-6">
                   Acesse mais de 1400 produtos de diversas categorias, todos prontos para serem listados. Cada item já vem com título, descrição, imagens, EAN, SKU e preço de custo configurados automaticamente.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
@@ -647,11 +647,11 @@ const Index = () => {
       <section ref={dashboardAnimation.ref as any} className={`py-20 bg-black transition-all duration-700 ${dashboardAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Gestão Completa de{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">Vendas</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Visualize todas as métricas de todos os marketplaces em um só lugar, 
               direto da nossa dashboard inteligente
             </p>
@@ -676,8 +676,8 @@ const Index = () => {
                     <BarChart3 className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold">Dashboard de Vendas Unificada</h3>
-                    <p className="text-muted-foreground">Todas as métricas em tempo real</p>
+                    <h3 className="text-2xl font-bold text-white">Dashboard de Vendas Unificada</h3>
+                    <p className="text-white">Todas as métricas em tempo real</p>
                   </div>
                 </div>
               </div>
@@ -686,34 +686,34 @@ const Index = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <Truck className="h-6 w-6 text-green-600 mx-auto mb-2" />
-                  <div className="text-sm font-medium text-muted-foreground">Status de Envio</div>
+                  <div className="text-sm font-medium text-white">Status de Envio</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <div className="w-6 h-6 bg-primary/20 rounded mx-auto mb-2 flex items-center justify-center">
                     <div className="w-2 h-2 bg-green-600 rounded"></div>
                   </div>
-                  <div className="text-sm font-medium text-muted-foreground">Data</div>
+                  <div className="text-sm font-medium text-white">Data</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <DollarSign className="h-6 w-6 text-green-600 mx-auto mb-2" />
-                  <div className="text-sm font-medium text-muted-foreground">Valor Pago pelo Cliente</div>
+                  <div className="text-sm font-medium text-white">Valor Pago pelo Cliente</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <Package className="h-6 w-6 text-green-600 mx-auto mb-2" />
-                  <div className="text-sm font-medium text-muted-foreground">Valor do Produto</div>
+                  <div className="text-sm font-medium text-white">Valor do Produto</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <DollarSign className="h-6 w-6 text-green-600 mx-auto mb-2" />
-                  <div className="text-sm font-medium text-muted-foreground">Valor Recebido</div>
+                  <div className="text-sm font-medium text-white">Valor Recebido</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <BarChart3 className="h-6 w-6 text-green-600 mx-auto mb-2" />
-                  <div className="text-sm font-medium text-muted-foreground">Taxa de Marketplace</div>
+                  <div className="text-sm font-medium text-white">Taxa de Marketplace</div>
                 </div>
               </div>
 
@@ -721,35 +721,35 @@ const Index = () => {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <DollarSign className="h-6 w-6 text-green-600 mx-auto mb-2" />
-                  <div className="text-sm font-medium text-muted-foreground">Valor de Custo</div>
+                  <div className="text-sm font-medium text-white">Valor de Custo</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <TrendingUp className="h-6 w-6 text-green-600 mx-auto mb-2" />
-                  <div className="text-sm font-medium text-muted-foreground">Lucro</div>
+                  <div className="text-sm font-medium text-white">Lucro</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <Truck className="h-6 w-6 text-green-600 mx-auto mb-2" />
-                  <div className="text-sm font-medium text-muted-foreground">Frete</div>
+                  <div className="text-sm font-medium text-white">Frete</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <div className="w-6 h-6 bg-green-600/20 rounded mx-auto mb-2 flex items-center justify-center">
                     <div className="w-3 h-3 bg-green-600 rounded"></div>
                   </div>
-                  <div className="text-sm font-medium text-muted-foreground">Cupons</div>
+                  <div className="text-sm font-medium text-white">Cupons</div>
                 </div>
 
                 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 text-center">
                   <BarChart3 className="h-6 w-6 text-green-600 mx-auto mb-2" />
-                  <div className="text-sm font-medium text-muted-foreground">Margem</div>
+                  <div className="text-sm font-medium text-white">Margem</div>
                 </div>
               </div>
 
               {/* Marketplace Indicators */}
               <div className="flex items-center justify-center gap-4 mt-8 pt-6 border-t border-primary/10">
-                <div className="text-center text-muted-foreground">
+                <div className="text-center text-white">
                   Veja todas essas informações, de todos os seus marketplaces no nosso DashBoard
                 </div>
               </div>
@@ -763,13 +763,13 @@ const Index = () => {
                     <BarChart3 className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="text-xl">Métricas Detalhadas</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    Acompanhe status de envio, valores pagos, recebidos, custos, lucros e margens 
-                    de todos os seus pedidos em tempo real.
-                  </CardDescription>
-                </CardContent>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base text-white">
+                  Acompanhe status de envio, valores pagos, recebidos, custos, lucros e margens 
+                  de todos os seus pedidos em tempo real.
+                </CardDescription>
+              </CardContent>
               </Card>
 
               <Card className="bg-gradient-card border-primary/20 hover:shadow-elegant transition-all duration-300">
@@ -778,13 +778,13 @@ const Index = () => {
                     <Globe className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="text-xl">Visão Unificada</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    Todos os marketplaces em um só lugar. Não precisa mais ficar alternando 
-                    entre diferentes plataformas para controlar suas vendas.
-                  </CardDescription>
-                </CardContent>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base text-white">
+                  Todos os marketplaces em um só lugar. Não precisa mais ficar alternando 
+                  entre diferentes plataformas para controlar suas vendas.
+                </CardDescription>
+              </CardContent>
               </Card>
 
               <Card className="bg-gradient-card border-primary/20 hover:shadow-elegant transition-all duration-300">
@@ -793,13 +793,13 @@ const Index = () => {
                     <TrendingUp className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="text-xl">Análise de Rentabilidade</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    Veja exatamente quanto você está ganhando com cada venda, incluindo 
-                    taxas de marketplace, fretes, cupons e custos reais.
-                  </CardDescription>
-                </CardContent>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base text-white">
+                  Veja exatamente quanto você está ganhando com cada venda, incluindo 
+                  taxas de marketplace, fretes, cupons e custos reais.
+                </CardDescription>
+              </CardContent>
               </Card>
             </div>
           </div>
@@ -810,7 +810,7 @@ const Index = () => {
       <section ref={comparisonAnimation.ref as any} className={`py-20 bg-black transition-all duration-700 ${comparisonAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               O caminho nunca foi <span className="bg-gradient-primary bg-clip-text text-transparent">tão fácil</span>
             </h2>
           </div>
@@ -915,7 +915,7 @@ const Index = () => {
       <section ref={videoCasesAnimation.ref as any} className={`py-20 bg-black transition-all duration-700 ${videoCasesAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Quem faz parte, <span className="bg-gradient-primary bg-clip-text text-transparent">aprova</span>
             </h2>
           </div>
@@ -1038,11 +1038,11 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
                 Importe seus produtos da{" "}
                 <span className="text-green-500">China</span>
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white">
                 Mesmo sem saber como fazer isso
               </p>
             </div>
@@ -1050,7 +1050,7 @@ const Index = () => {
             {/* Process Flow */}
             <div className="bg-card/50 rounded-2xl p-8 md:p-12">
               <div className="text-center mb-12">
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                <h3 className="text-2xl md:text-3xl font-bold text-white">
                   Funciona em 4 passos práticos
                 </h3>
               </div>
@@ -1062,9 +1062,9 @@ const Index = () => {
                     <Search className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 1</h3>
-                  <p className="text-muted-foreground font-medium">Escolha o produto</p>
-                  <p className="text-muted-foreground text-sm mt-1">Você escolhe o produto que deseja importar.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Passo 1</h3>
+                  <p className="text-white font-medium">Escolha o produto</p>
+                  <p className="text-white text-sm mt-1">Você escolhe o produto que deseja importar.</p>
                 </div>
                 
                 {/* Vertical Animated Line 1 */}
@@ -1080,9 +1080,9 @@ const Index = () => {
                     <CreditCard className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 2</h3>
-                  <p className="text-muted-foreground font-medium">Preço transparente</p>
-                  <p className="text-muted-foreground text-sm mt-1">Mostramos o custo real até chegar no Brasil.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Passo 2</h3>
+                  <p className="text-white font-medium">Preço transparente</p>
+                  <p className="text-white text-sm mt-1">Mostramos o custo real até chegar no Brasil.</p>
                 </div>
 
                 {/* Vertical Animated Line 2 */}
@@ -1098,9 +1098,9 @@ const Index = () => {
                     <Settings className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 3</h3>
-                  <p className="text-muted-foreground font-medium">Importação sem dor de cabeça</p>
-                  <p className="text-muted-foreground text-sm mt-1">Nós cuidamos de todo o processo.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Passo 3</h3>
+                  <p className="text-white font-medium">Importação sem dor de cabeça</p>
+                  <p className="text-white text-sm mt-1">Nós cuidamos de todo o processo.</p>
                 </div>
 
                 {/* Vertical Animated Line 3 */}
@@ -1116,9 +1116,9 @@ const Index = () => {
                     <CheckSquare className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 4</h3>
-                  <p className="text-muted-foreground font-medium">Você recebe pronto pra vender</p>
-                  <p className="text-muted-foreground text-sm mt-1">Chega direto no seu estoque, sem burocracia.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Passo 4</h3>
+                  <p className="text-white font-medium">Você recebe pronto pra vender</p>
+                  <p className="text-white text-sm mt-1">Chega direto no seu estoque, sem burocracia.</p>
                 </div>
               </div>
 
@@ -1130,9 +1130,9 @@ const Index = () => {
                     <Search className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 1</h3>
-                  <p className="text-muted-foreground font-medium">Escolha o produto</p>
-                  <p className="text-muted-foreground text-sm">Você escolhe o produto que deseja importar.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Passo 1</h3>
+                  <p className="text-white font-medium">Escolha o produto</p>
+                  <p className="text-white text-sm">Você escolhe o produto que deseja importar.</p>
                 </div>
                 
                 {/* Horizontal Animated Connecting Line 1 */}
@@ -1148,9 +1148,9 @@ const Index = () => {
                     <CreditCard className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 2</h3>
-                  <p className="text-muted-foreground font-medium">Preço transparente</p>
-                  <p className="text-muted-foreground text-sm">Mostramos o custo real até chegar no Brasil.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Passo 2</h3>
+                  <p className="text-white font-medium">Preço transparente</p>
+                  <p className="text-white text-sm">Mostramos o custo real até chegar no Brasil.</p>
                 </div>
 
                 {/* Horizontal Animated Connecting Line 2 */}
@@ -1166,9 +1166,9 @@ const Index = () => {
                     <Settings className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 3</h3>
-                  <p className="text-muted-foreground font-medium">Importação sem dor de cabeça</p>
-                  <p className="text-muted-foreground text-sm">Nós cuidamos de todo o processo.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Passo 3</h3>
+                  <p className="text-white font-medium">Importação sem dor de cabeça</p>
+                  <p className="text-white text-sm">Nós cuidamos de todo o processo.</p>
                 </div>
 
                 {/* Horizontal Animated Connecting Line 3 */}
@@ -1184,9 +1184,9 @@ const Index = () => {
                     <CheckSquare className="h-10 w-10 text-green-500" />
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Passo 4</h3>
-                  <p className="text-muted-foreground font-medium">Você recebe pronto pra vender</p>
-                  <p className="text-muted-foreground text-sm">Chega direto no seu estoque, sem burocracia.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Passo 4</h3>
+                  <p className="text-white font-medium">Você recebe pronto pra vender</p>
+                  <p className="text-white text-sm">Chega direto no seu estoque, sem burocracia.</p>
                 </div>
               </div>
               
@@ -1200,11 +1200,11 @@ const Index = () => {
                   <div className="grid md:grid-cols-2 gap-6 max-w-md mx-auto mb-6">
                     <div className="flex items-center justify-center">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                      <span className="text-foreground">Sem quantidade mínima</span>
+                      <span className="text-white">Sem quantidade mínima</span>
                     </div>
                     <div className="flex items-center justify-center">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                      <span className="text-foreground">Preços transparentes</span>
+                      <span className="text-white">Preços transparentes</span>
                     </div>
                   </div>
                   
@@ -1232,7 +1232,7 @@ const Index = () => {
               </Badge>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
               Seus dados e vendas sempre{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">protegidos</span>
             </h2>
@@ -1257,10 +1257,10 @@ const Index = () => {
                 </div>
                 
                 <div>
-                  <h3 className="text-3xl font-bold mb-6">
+                  <h3 className="text-3xl font-bold mb-6 text-white">
                     Segurança. Confiabilidade. Transparência.
                   </h3>
-                  <p className="text-lg text-muted-foreground mb-6">
+                  <p className="text-lg text-white mb-6">
                     Na Soudrop, seus dados comerciais são protegidos com os mais altos padrões de segurança. 
                     Utilizamos criptografia de ponta e protocolos seguros para todas as transações.
                   </p>
@@ -1268,22 +1268,22 @@ const Index = () => {
                     <div className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1" />
                       <div>
-                        <div className="font-semibold text-foreground">Dados Criptografados</div>
-                        <div className="text-sm text-muted-foreground">Todas as informações são protegidas com criptografia AES-256</div>
+                        <div className="font-semibold text-white">Dados Criptografados</div>
+                        <div className="text-sm text-white">Todas as informações são protegidas com criptografia AES-256</div>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1" />
                       <div>
-                        <div className="font-semibold text-foreground">Integrações Seguras</div>
-                        <div className="text-sm text-muted-foreground">Conexões certificadas com todos os marketplaces parceiros</div>
+                        <div className="font-semibold text-white">Integrações Seguras</div>
+                        <div className="text-sm text-white">Conexões certificadas com todos os marketplaces parceiros</div>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1" />
                       <div>
-                        <div className="font-semibold text-foreground">Monitoramento 24/7</div>
-                        <div className="text-sm text-muted-foreground">Sistema de segurança ativo com alertas em tempo real</div>
+                        <div className="font-semibold text-white">Monitoramento 24/7</div>
+                        <div className="text-sm text-white">Sistema de segurança ativo com alertas em tempo real</div>
                       </div>
                     </div>
                   </div>
@@ -1298,7 +1298,7 @@ const Index = () => {
       <section ref={pricingAnimation.ref as any} id="planos" className={`py-20 bg-black transition-all duration-700 ${pricingAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Escolha o plano que melhor{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">atende suas necessidades</span>
             </h2>
@@ -1315,7 +1315,7 @@ const Index = () => {
             <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300">
                 <CardHeader>
                 <div className="text-center">
-                  <CardTitle className="text-2xl mb-2">Basic</CardTitle>
+                  <CardTitle className="text-2xl mb-2 text-white">Basic</CardTitle>
                   <div className="space-y-1">
                     {planData.basic.originalPrice && <div className="text-lg text-muted-foreground line-through">
                       {planData.basic.originalPrice}
@@ -1329,39 +1329,39 @@ const Index = () => {
                    <ul className="space-y-3">
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Integrações com 2 marketplaces</span>
+                       <span className="text-sm text-white">Integrações com 2 marketplaces</span>
                      </li>
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Logística completa</span>
+                       <span className="text-sm text-white">Logística completa</span>
                      </li>
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Catálogo de 1400+ produtos</span>
+                       <span className="text-sm text-white">Catálogo de 1400+ produtos</span>
                      </li>
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Suporte logístico dedicado</span>
+                       <span className="text-sm text-white">Suporte logístico dedicado</span>
                      </li>
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Acompanhamento em tempo real</span>
+                       <span className="text-sm text-white">Acompanhamento em tempo real</span>
                      </li>
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Publicação de anúncios em massa</span>
+                       <span className="text-sm text-white">Publicação de anúncios em massa</span>
                      </li>
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Suporte completo</span>
+                       <span className="text-sm text-white">Suporte completo</span>
                      </li>
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Gestão de devoluções</span>
+                       <span className="text-sm text-white">Gestão de devoluções</span>
                      </li>
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                        <span className="text-sm">Lives semanais</span>
+                        <span className="text-sm text-white">Lives semanais</span>
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
@@ -1507,7 +1507,7 @@ const Index = () => {
             <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300">
               <CardHeader>
                 <div className="text-center">
-                  <CardTitle className="text-2xl mb-2">Premium</CardTitle>
+                  <CardTitle className="text-2xl mb-2 text-white">Premium</CardTitle>
                   <div className="space-y-1">
                     {planData.premium.originalPrice && <div className="text-lg text-muted-foreground line-through">
                         {planData.premium.originalPrice}
@@ -1519,71 +1519,71 @@ const Index = () => {
               </CardHeader>
                <CardContent className="space-y-4">
                  <ul className="space-y-3">
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                     <span className="text-sm">Integrações ILIMITADAS com marketplaces</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                     <span className="text-sm">Logística completa</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                     <span className="text-sm">Catálogo de 1400+ produtos</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                     <span className="text-sm">Suporte logístico dedicado</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                     <span className="text-sm">Acompanhamento em tempo real</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                     <span className="text-sm">Publicação de anúncios em massa</span>
-                   </li>
-                   
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                      <span className="text-sm">Suporte completo</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                      <span className="text-sm">Gestão de devoluções</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Lives semanais</span>
-                     </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                      <span className="text-sm">Contabilidade</span>
-                    </li>
-                    <li className="flex items-center">
+                     <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Mentoria em grupo quinzenal</span>
+                       <span className="text-sm text-white">Integrações ILIMITADAS com marketplaces</span>
                      </li>
                      <li className="flex items-center">
                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm">Possibilidade de SKU próprio</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                      <span className="text-sm">Importação direta da China</span>
-                    </li>
-                    <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                     <span className="text-sm">Catálogo exclusivo</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                     <span className="text-sm">3 meses de consultoria</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                     <span className="text-sm">Gerente de contas</span>
-                   </li>
+                       <span className="text-sm text-white">Logística completa</span>
+                     </li>
+                     <li className="flex items-center">
+                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                       <span className="text-sm text-white">Catálogo de 1400+ produtos</span>
+                     </li>
+                     <li className="flex items-center">
+                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                       <span className="text-sm text-white">Suporte logístico dedicado</span>
+                     </li>
+                     <li className="flex items-center">
+                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                       <span className="text-sm text-white">Acompanhamento em tempo real</span>
+                     </li>
+                     <li className="flex items-center">
+                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                       <span className="text-sm text-white">Publicação de anúncios em massa</span>
+                     </li>
+                     
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                        <span className="text-sm text-white">Suporte completo</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                        <span className="text-sm text-white">Gestão de devoluções</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                         <span className="text-sm text-white">Lives semanais</span>
+                       </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                        <span className="text-sm text-white">Contabilidade</span>
+                      </li>
+                      <li className="flex items-center">
+                         <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                         <span className="text-sm text-white">Mentoria em grupo quinzenal</span>
+                       </li>
+                       <li className="flex items-center">
+                         <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                         <span className="text-sm text-white">Possibilidade de SKU próprio</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                        <span className="text-sm text-white">Importação direta da China</span>
+                      </li>
+                      <li className="flex items-center">
+                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                       <span className="text-sm text-white">Catálogo exclusivo</span>
+                     </li>
+                     <li className="flex items-center">
+                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                       <span className="text-sm text-white">3 meses de consultoria</span>
+                     </li>
+                     <li className="flex items-center">
+                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                       <span className="text-sm text-white">Gerente de contas</span>
+                     </li>
                  </ul>
                 <Button variant="glow" size="lg" className="w-full mt-6">
                   <a href={planData.premium.link} target="_blank" rel="noopener noreferrer" 
@@ -1599,7 +1599,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-lg text-muted-foreground mb-6">
+            <p className="text-lg text-white mb-6">
               Aproveite um desconto de até 38% no plano anual e economize ainda mais!
             </p>
           </div>
@@ -1618,7 +1618,7 @@ const Index = () => {
               Garantia Incondicional de 7 Dias
             </h2>
             
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-white mb-8 leading-relaxed">
               Acreditamos tanto na qualidade dos nossos produtos e serviços que oferecemos uma 
               <strong className="text-primary"> garantia total de 7 dias</strong>. Se por qualquer motivo você não estiver 
               completamente satisfeito, devolvemos 100% do seu investimento, sem perguntas.
@@ -1629,8 +1629,8 @@ const Index = () => {
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">7 Dias Completos</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-2 text-white">7 Dias Completos</h3>
+                <p className="text-white">
                   Uma semana inteira para testar nossos produtos e serviços
                 </p>
               </div>
@@ -1639,8 +1639,8 @@ const Index = () => {
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CreditCard className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Reembolso Total</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-2 text-white">Reembolso Total</h3>
+                <p className="text-white">
                   100% do valor pago devolvido diretamente na sua conta
                 </p>
               </div>
@@ -1649,15 +1649,15 @@ const Index = () => {
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MessageCircle className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Sem Perguntas</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-semibold mb-2 text-white">Sem Perguntas</h3>
+                <p className="text-white">
                   Não precisa explicar o motivo, seu reembolso é garantido
                 </p>
               </div>
             </div>
             
             <div className="mt-12 p-8 bg-gradient-card border border-primary/20 rounded-2xl">
-              <p className="text-lg text-center mb-6">
+              <p className="text-lg text-center mb-6 text-white">
                 <strong className="text-primary">Seu sucesso é nossa prioridade.</strong> Comece hoje mesmo com a tranquilidade 
                 de saber que seu investimento está completamente protegido.
               </p>
@@ -1688,7 +1688,7 @@ const Index = () => {
       <section ref={faqAnimation.ref as any} id="faq" className={`py-20 bg-black transition-all duration-700 ${faqAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Perguntas{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">Frequentes</span>
             </h2>
@@ -1698,72 +1698,72 @@ const Index = () => {
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="item-1" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="text-lg font-semibold">Como funciona a integração com marketplaces?</span>
+                  <span className="text-lg font-semibold text-white">Como funciona a integração com marketplaces?</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground pt-2">
+                <AccordionContent className="text-base text-white pt-2">
                   A integração é feita de forma automática, conectando sua loja a marketplaces como Magalu, Shopee, Mercado Livre e outros. Após a configuração, seus produtos são sincronizados de forma rápida e você pode começar a vender imediatamente.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-2" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="text-lg font-semibold">Posso importar produtos diretamente da China?</span>
+                  <span className="text-lg font-semibold text-white">Posso importar produtos diretamente da China?</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground pt-2">
+                <AccordionContent className="text-base text-white pt-2">
                   Sim! No plano Premium, você pode importar produtos diretamente da China por meio dos nossos grupos de compra, garantindo os melhores preços.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-3" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="text-lg font-semibold">O que está incluso no suporte logístico?</span>
+                  <span className="text-lg font-semibold text-white">O que está incluso no suporte logístico?</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground pt-2">
+                <AccordionContent className="text-base text-white pt-2">
                   O suporte logístico inclui armazenamento, embalagem e envio direto para seus clientes. Caso haja devolução, também cuidamos de todo o processo.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-4" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="text-lg font-semibold">Quais são as formas de pagamento?</span>
+                  <span className="text-lg font-semibold text-white">Quais são as formas de pagamento?</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground pt-2">
+                <AccordionContent className="text-base text-white pt-2">
                   Aceitamos pagamentos por cartão de crédito, boleto bancário e transferências. A cobrança é feita mensal ou anualmente, dependendo do plano escolhido.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="text-lg font-semibold">Sou iniciante, a Soudrop serve pra mim?</span>
+                  <span className="text-lg font-semibold text-white">Sou iniciante, a Soudrop serve pra mim?</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground pt-2">
+                <AccordionContent className="text-base text-white pt-2">
                   Sim! A Soudrop foi criada pensando especialmente em iniciantes no e-commerce. Nossa plataforma oferece todo o suporte necessário para você começar do zero, com produtos prontos, integrações automáticas e suporte especializado.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-6" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="text-lg font-semibold">Sou empresário, a Soudrop me atende?</span>
+                  <span className="text-lg font-semibold text-white">Sou empresário, a Soudrop me atende?</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground pt-2">
+                <AccordionContent className="text-base text-white pt-2">
                   Perfeitamente! Nossos planos são escaláveis e atendem desde iniciantes até empresários experientes. Oferecemos soluções robustas de gestão, múltiplas integrações e suporte logístico completo para expandir seu negócio.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-7" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="text-lg font-semibold">Quero só fornecedor, como funciona?</span>
+                  <span className="text-lg font-semibold text-white">Quero só fornecedor, como funciona?</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground pt-2">
+                <AccordionContent className="text-base text-white pt-2">
                   Você pode acessar nossa rede de fornecedores através dos planos superiores. Temos catálogos completos com produtos nacionais e importados, incluindo acesso direto a fornecedores da China com preços diferenciados.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-8" className="bg-gradient-card border border-primary/20 rounded-lg px-6">
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="text-lg font-semibold">Posso cadastrar meus próprios SKUs?</span>
+                  <span className="text-lg font-semibold text-white">Posso cadastrar meus próprios SKUs?</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground pt-2">
+                <AccordionContent className="text-base text-white pt-2">
                   Sim! Além do nosso catálogo, você pode cadastrar seus próprios produtos e SKUs. A plataforma permite gestão completa do seu inventário pessoal junto com os produtos do nosso catálogo.
                 </AccordionContent>
               </AccordionItem>
@@ -1780,12 +1780,12 @@ const Index = () => {
               Soudrop
             </div>
             
-            <a href="https://www.instagram.com/soudropbrasil" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-2">
+            <a href="https://www.instagram.com/soudropbrasil" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors flex items-center space-x-2">
               <Instagram className="h-5 w-5" />
               <span>Instagram</span>
             </a>
             
-            <div className="text-muted-foreground">
+            <div className="text-white">
               <p>&copy; 2025 Soudrop. Todos os direitos reservados.</p>
             </div>
           </div>
