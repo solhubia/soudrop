@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -13,7 +14,8 @@ import {
   MessageCircle,
   UsersRound,
   Award,
-  Lock
+  Lock,
+  X
 } from "lucide-react";
 import {
   Accordion,
@@ -21,9 +23,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import creatorsLogo from "@/assets/creators-logo.png";
 
 const OperacaoTiktok = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const scrollToCTA = () => {
     const ctaButton = document.getElementById('cta-button');
     ctaButton?.scrollIntoView({ behavior: 'smooth' });
@@ -69,6 +79,7 @@ const OperacaoTiktok = () => {
           <div className="flex justify-center mb-12" id="cta-button">
             <Button 
               size="lg"
+              onClick={() => setIsModalOpen(true)}
               className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300"
             >
               QUERO ME INSCREVER GRÁTIS AGORA
@@ -202,7 +213,7 @@ const OperacaoTiktok = () => {
           <div className="flex justify-center">
             <Button 
               size="lg"
-              onClick={scrollToCTA}
+              onClick={() => setIsModalOpen(true)}
               className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300"
             >
               QUERO ME INSCREVER GRÁTIS AGORA
@@ -301,7 +312,7 @@ const OperacaoTiktok = () => {
           <div className="flex justify-center mt-12">
             <Button 
               size="lg"
-              onClick={scrollToCTA}
+              onClick={() => setIsModalOpen(true)}
               className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300"
             >
               QUERO ME INSCREVER GRÁTIS AGORA
@@ -309,6 +320,28 @@ const OperacaoTiktok = () => {
           </div>
         </div>
       </section>
+
+      {/* Modal de Inscrição */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="max-w-3xl max-h-[90vh] p-0 bg-white">
+          <DialogHeader className="p-6 pb-4">
+            <DialogTitle className="text-2xl font-bold text-gray-900 text-center">
+              Preencha seus dados para liberar o acesso
+            </DialogTitle>
+          </DialogHeader>
+          <div className="px-6 pb-6 overflow-y-auto">
+            <iframe 
+              src="https://forms.gle/ZMMKGNPB27BX767d9"
+              width="100%"
+              height="600"
+              className="border-0 rounded-lg"
+              title="Formulário de Inscrição"
+            >
+              Carregando…
+            </iframe>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
