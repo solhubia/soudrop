@@ -73,7 +73,7 @@ const ObrigadoSoudrop = () => {
       }
     }, 100);
   };
-  return <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+  return <div className="min-h-screen bg-black">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
           {/* Progress Bar - Loading Style */}
@@ -81,7 +81,7 @@ const ObrigadoSoudrop = () => {
           animationDelay: '0.15s'
         }}>
             <div className="space-y-3">
-              <p className="text-center text-sm md:text-base font-medium text-muted-foreground">
+              <p className="text-center text-sm md:text-base font-medium text-white">
                 Carregando seu bônus exclusivo…
               </p>
               <div className="relative h-3 bg-muted rounded-full overflow-hidden">
@@ -97,8 +97,8 @@ const ObrigadoSoudrop = () => {
           <div className="text-center space-y-6 mb-8 animate-fade-in" style={{
           animationDelay: '0.2s'
         }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Você está quase lá!</h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">Você está quase lá!</h1>
+            <p className="text-xl md:text-2xl text-white max-w-2xl mx-auto">
               Assista ao vídeo abaixo para liberar um bônus exclusivo para novos membros.
             </p>
             <p className="text-lg md:text-xl font-semibold text-primary max-w-2xl mx-auto">
@@ -110,7 +110,7 @@ const ObrigadoSoudrop = () => {
           <div className="max-w-3xl mx-auto mb-6 text-center animate-fade-in" style={{
           animationDelay: '0.3s'
         }}>
-            <p className="text-sm md:text-base text-muted-foreground italic">
+            <p className="text-sm md:text-base text-white italic">
               Assista até o final para desbloquear sua condição especial.
             </p>
           </div>
@@ -169,8 +169,8 @@ const ObrigadoSoudrop = () => {
                   <MessageCircle className="w-8 h-8 text-green-500" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-center">Grupo WhatsApp</h3>
-              <p className="text-muted-foreground text-center">
+              <h3 className="text-2xl font-bold text-center text-white">Grupo WhatsApp</h3>
+              <p className="text-white text-center">
                 Entre no nosso grupo exclusivo e conecte-se com outros membros
               </p>
               <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white" asChild>
@@ -190,8 +190,8 @@ const ObrigadoSoudrop = () => {
                   <Package className="w-8 h-8 text-primary" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-center">Plataforma Soudrop</h3>
-              <p className="text-muted-foreground text-center">
+              <h3 className="text-2xl font-bold text-center text-white">Plataforma Soudrop</h3>
+              <p className="text-white text-center">
                 Acesse agora a plataforma e comece a vender
               </p>
               <Button size="lg" className="w-full" asChild>
@@ -207,8 +207,8 @@ const ObrigadoSoudrop = () => {
           <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center space-y-4 animate-fade-in" style={{
             animationDelay: '0.8s'
           }}>
-            <h3 className="text-2xl font-bold">Próximos Passos</h3>
-            <ul className="space-y-3 text-left max-w-xl mx-auto text-muted-foreground">
+            <h3 className="text-2xl font-bold text-white">Próximos Passos</h3>
+            <ul className="space-y-3 text-left max-w-xl mx-auto text-white">
               <li className="flex items-start">
                 <span className="text-primary mr-2 mt-1">✓</span>
                 <span>Entre no grupo do WhatsApp para receber atualizações e suporte</span>
