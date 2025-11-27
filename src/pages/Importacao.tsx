@@ -37,11 +37,11 @@ const Importacao = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-6 leading-tight">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-6 leading-tight text-white">
               Importe direto da fábrica com preço de atacado mesmo comprando pouco — sem atravessador e dentro da lei.
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground text-center mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white text-center mb-8 max-w-3xl mx-auto leading-relaxed">
               A gente junta vários compradores menores, negocia como se fosse um grande e divide custo de importação. Você paga preço de quem traz container mesmo começando pequeno.
             </p>
 
@@ -71,10 +71,10 @@ const Importacao = () => {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
               O Que Você Ganha no Clube
             </h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-white mb-12 max-w-2xl mx-auto">
               Todos os benefícios para você escalar suas importações pagando muito menos
             </p>
             
@@ -118,8 +118,8 @@ const Importacao = () => {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                     <benefit.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                  <p className="text-muted-foreground">{benefit.description}</p>
+                  <h3 className="text-xl font-bold mb-2 text-white">{benefit.title}</h3>
+                  <p className="text-white">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -133,19 +133,19 @@ const Importacao = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background p-8 md:p-12 rounded-2xl border-2 border-primary/20 shadow-2xl">
               <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-5xl font-black mb-4">
+                <h2 className="text-3xl md:text-5xl font-black mb-4 text-white">
                   Entre para o Clube Agora
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6">
+                <p className="text-lg text-white mb-6">
                   Investimento único para acesso vitalício
                 </p>
                 
                 {/* Price */}
                 <div className="mb-8">
                   <div className="inline-block">
-                    <p className="text-sm text-muted-foreground mb-2">De R$ 997 por apenas</p>
+                    <p className="text-sm text-white mb-2">De R$ 997 por apenas</p>
                     <div className="flex items-baseline justify-center gap-2">
-                      <span className="text-2xl font-bold">R$</span>
+                      <span className="text-2xl font-bold text-white">R$</span>
                       <span className="text-6xl md:text-7xl font-black bg-gradient-primary bg-clip-text text-transparent">297</span>
                     </div>
                     <p className="text-sm text-primary font-semibold mt-2">ou 12x de R$ 29,19</p>
@@ -164,7 +164,7 @@ const Importacao = () => {
                   </a>
                 </Button>
 
-                <p className="text-sm text-muted-foreground mt-4">
+                <p className="text-sm text-white mt-4">
                   🔒 Pagamento 100% seguro
                 </p>
               </div>
@@ -174,15 +174,15 @@ const Importacao = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold mb-1">Garantia de 7 dias</h4>
-                    <p className="text-sm text-muted-foreground">Se não gostar, devolvemos 100% do seu dinheiro</p>
+                    <h4 className="font-bold mb-1 text-white">Garantia de 7 dias</h4>
+                    <p className="text-sm text-white">Se não gostar, devolvemos 100% do seu dinheiro</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold mb-1">Acesso vitalício</h4>
-                    <p className="text-sm text-muted-foreground">Pague uma vez e aproveite para sempre</p>
+                    <h4 className="font-bold mb-1 text-white">Acesso vitalício</h4>
+                    <p className="text-sm text-white">Pague uma vez e aproveite para sempre</p>
                   </div>
                 </div>
               </div>
@@ -195,7 +195,7 @@ const Importacao = () => {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
               Tudo que você recebe ao entrar
             </h2>
             
@@ -211,7 +211,7 @@ const Importacao = () => {
               ].map((feature, index) => (
                 <div key={index} className="flex items-center gap-3 bg-card p-4 rounded-lg">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="font-medium">{feature}</span>
+                  <span className="font-medium text-white">{feature}</span>
                 </div>
               ))}
             </div>
@@ -223,10 +223,10 @@ const Importacao = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center bg-gradient-to-br from-primary/10 to-primary/5 p-12 rounded-2xl border border-primary/20">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Última Chance para Entrar com Desconto
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white mb-8">
               Garanta sua vaga no clube exclusivo por apenas R$ 297 e comece a importar com preços de atacado
             </p>
             <Button size="xl" className="text-lg px-12 w-full md:w-auto group" asChild>
@@ -239,7 +239,7 @@ const Importacao = () => {
                 <Ship className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <p className="text-sm text-muted-foreground mt-4">
+            <p className="text-sm text-white mt-4">
               ⏰ Oferta por tempo limitado
             </p>
           </div>
@@ -249,7 +249,7 @@ const Importacao = () => {
       {/* Footer */}
       <footer className="py-12 border-t border-muted">
         <div className="container mx-auto px-4">
-          <div className="text-center text-muted-foreground">
+          <div className="text-center text-white">
             <p className="text-sm">© 2025 Soudrop. Todos os direitos reservados.</p>
           </div>
         </div>
