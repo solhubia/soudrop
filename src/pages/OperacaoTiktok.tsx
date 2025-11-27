@@ -21,6 +21,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import creatorsLogo from "@/assets/creators-logo.png";
 
 const OperacaoTiktok = () => {
   const scrollToCTA = () => {
@@ -36,8 +37,8 @@ const OperacaoTiktok = () => {
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <img 
-              src="/lovable-uploads/creators-logo.png" 
-              alt="Logo" 
+              src={creatorsLogo} 
+              alt="CREATORS Logo" 
               className="h-16 md:h-20 object-contain"
             />
           </div>
