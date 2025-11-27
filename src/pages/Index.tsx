@@ -563,30 +563,30 @@ const Index = () => {
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
                     <div className="bg-primary/10 p-4 rounded-lg">
                       <img src={magaluLogo} alt="Magalu" className="h-8 w-8 mx-auto mb-2 object-contain" />
-                      <div className="text-sm">Magalu</div>
+                      <div className="text-sm text-white">Magalu</div>
                     </div>
                     <div className="bg-primary/10 p-4 rounded-lg">
                       <img src={shopeeLogo} alt="Shopee" className="h-8 w-8 mx-auto mb-2 object-contain" />
-                      <div className="text-sm">Shopee</div>
+                      <div className="text-sm text-white">Shopee</div>
                     </div>
                     <div className="bg-primary/10 p-4 rounded-lg">
                       <img src={amazonLogo} alt="TikTok Shop" className="h-8 w-8 mx-auto mb-2 object-contain" />
-                      <div className="text-sm">TikTok Shop</div>
+                      <div className="text-sm text-white">TikTok Shop</div>
                     </div>
                     <div className="bg-primary/10 p-4 rounded-lg">
                       <img src={mlLogo} alt="Mercado Livre" className="h-8 w-8 mx-auto mb-2 object-contain" />
-                      <div className="text-sm">Mercado Livre</div>
+                      <div className="text-sm text-white">Mercado Livre</div>
                     </div>
                     <div className="bg-primary/10 p-4 rounded-lg">
                       <img src={madeiraMadeiraLogo} alt="MadeiraMadeira" className="h-8 w-8 mx-auto mb-2 object-contain" />
-                      <div className="text-sm">MadeiraMadeira</div>
+                      <div className="text-sm text-white">MadeiraMadeira</div>
                     </div>
                     <div className="bg-primary/10 p-4 rounded-lg">
                       <img src={newLogo} alt="Bling" className="h-12 w-12 mx-auto mb-2 object-contain" />
-                      <div className="text-sm">Bling</div>
+                      <div className="text-sm text-white">Bling</div>
                     </div>
                   </div>
-                  <div className="text-center text-primary font-semibold">Todos Conectados</div>
+                  <div className="text-center text-primary font-semibold text-white">Todos Conectados</div>
                 </div>
               </div>
             </div>
@@ -602,11 +602,11 @@ const Index = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-primary">1400+</div>
-                    <div className="text-sm text-muted-foreground">Produtos</div>
+                    <div className="text-sm text-white">Produtos</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-primary">100%</div>
-                    <div className="text-sm text-muted-foreground">Configurados</div>
+                    <div className="text-sm text-white">Configurados</div>
                   </div>
                 </div>
               </div>
@@ -615,21 +615,21 @@ const Index = () => {
                   <div className="flex items-center justify-between p-3 bg-primary/10 rounded-lg">
                     <div className="flex items-center">
                       <Package className="h-5 w-5 text-primary mr-3" />
-                      <span className="text-sm">Produto configurado</span>
+                      <span className="text-sm text-white">Produto configurado</span>
                     </div>
                     <CheckCircle className="h-5 w-5 text-primary" />
                   </div>
                   <div className="flex items-center justify-between p-3 bg-primary/10 rounded-lg">
                     <div className="flex items-center">
                       <Package className="h-5 w-5 text-primary mr-3" />
-                      <span className="text-sm">Imagens otimizadas</span>
+                      <span className="text-sm text-white">Imagens otimizadas</span>
                     </div>
                     <CheckCircle className="h-5 w-5 text-primary" />
                   </div>
                   <div className="flex items-center justify-between p-3 bg-primary/10 rounded-lg">
                     <div className="flex items-center">
                       <Package className="h-5 w-5 text-primary mr-3" />
-                      <span className="text-sm">Preços atualizados</span>
+                      <span className="text-sm text-white">Preços atualizados</span>
                     </div>
                     <CheckCircle className="h-5 w-5 text-primary" />
                   </div>
@@ -829,29 +829,29 @@ const Index = () => {
               <CardContent className="space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
-                    <span className="text-sm">Galpão para estoque</span>
+                    <span className="text-sm text-white">Galpão para estoque</span>
                     <span className="text-lg font-bold text-destructive">R$ 10.000+/mês</span>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
-                    <span className="text-sm">Gasto com logística</span>
+                    <span className="text-sm text-white">Gasto com logística</span>
                     <span className="text-lg font-bold text-destructive">R$ 1.800/mês</span>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
-                    <span className="text-sm">Funcionários para embalar</span>
+                    <span className="text-sm text-white">Funcionários para embalar</span>
                     <span className="text-lg font-bold text-destructive">R$ 3.200/mês</span>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
-                    <span className="text-sm">Sistema de gestão</span>
+                    <span className="text-sm text-white">Sistema de gestão</span>
                     <span className="text-lg font-bold text-destructive">R$ 3.700/mês</span>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-destructive/10 rounded-lg">
-                    <span className="text-sm">Tempo operacional</span>
+                    <span className="text-sm text-white">Tempo operacional</span>
                     <span className="text-lg font-bold text-destructive">74h/semana</span>
                   </div>
                 </div>
                 <div className="border-t border-destructive/20 pt-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-lg font-semibold">Total mensal:</span>
+                    <span className="text-lg font-semibold text-white">Total mensal:</span>
                     <span className="text-2xl font-bold text-destructive">R$ 18.700+</span>
                   </div>
                 </div>
@@ -1317,11 +1317,11 @@ const Index = () => {
                 <div className="text-center">
                   <CardTitle className="text-2xl mb-2 text-white">Basic</CardTitle>
                   <div className="space-y-1">
-                    {planData.basic.originalPrice && <div className="text-lg text-muted-foreground line-through">
-                      {planData.basic.originalPrice}
-                    </div>}
+                     {planData.basic.originalPrice && <div className="text-lg text-white line-through">
+                       {planData.basic.originalPrice}
+                     </div>}
                     <div className="text-4xl font-bold text-primary">{planData.basic.price}</div>
-                    <div className="text-muted-foreground">{planData.basic.period}</div>
+                    <div className="text-white">{planData.basic.period}</div>
                   </div>
                 </div>
                 </CardHeader>
@@ -1365,31 +1365,31 @@ const Index = () => {
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-muted-foreground">Contabilidade</span>
+                       <span className="text-sm text-white">Contabilidade</span>
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-muted-foreground">Mentoria em grupo quinzenal</span>
+                       <span className="text-sm text-white">Mentoria em grupo quinzenal</span>
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-muted-foreground">Possibilidade de SKU próprio</span>
+                       <span className="text-sm text-white">Possibilidade de SKU próprio</span>
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-muted-foreground">Importação direta da China</span>
+                       <span className="text-sm text-white">Importação direta da China</span>
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-muted-foreground">Catálogo exclusivo</span>
+                       <span className="text-sm text-white">Catálogo exclusivo</span>
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-muted-foreground">3 meses de consultoria</span>
+                       <span className="text-sm text-white">3 meses de consultoria</span>
                      </li>
                      <li className="flex items-center">
                        <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-muted-foreground">Gerente de contas</span>
+                       <span className="text-sm text-white">Gerente de contas</span>
                      </li>
                    </ul>
                    <Button variant="glow" size="lg" className="w-full mt-6">
@@ -1509,11 +1509,11 @@ const Index = () => {
                 <div className="text-center">
                   <CardTitle className="text-2xl mb-2 text-white">Premium</CardTitle>
                   <div className="space-y-1">
-                    {planData.premium.originalPrice && <div className="text-lg text-muted-foreground line-through">
-                        {planData.premium.originalPrice}
-                      </div>}
+                     {planData.premium.originalPrice && <div className="text-lg text-white line-through">
+                         {planData.premium.originalPrice}
+                       </div>}
                     <div className="text-4xl font-bold text-primary">{planData.premium.price}</div>
-                    <div className="text-muted-foreground">{planData.premium.period}</div>
+                    <div className="text-white">{planData.premium.period}</div>
                   </div>
                 </div>
               </CardHeader>
