@@ -131,7 +131,7 @@ const Importacao = () => {
       <section id="oferta" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background p-8 md:p-12 rounded-2xl border-2 border-primary/20 shadow-2xl">
+            <div className="bg-muted/10 p-8 md:p-12 rounded-2xl border-2 border-primary/20 shadow-2xl">
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-5xl font-black mb-4 text-white">
                   Entre para o Clube Agora
@@ -222,7 +222,7 @@ const Importacao = () => {
       {/* Final CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center bg-gradient-to-br from-primary/10 to-primary/5 p-12 rounded-2xl border border-primary/20">
+          <div className="max-w-3xl mx-auto text-center bg-muted/10 p-12 rounded-2xl border border-primary/20">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Última Chance para Entrar com Desconto
             </h2>
