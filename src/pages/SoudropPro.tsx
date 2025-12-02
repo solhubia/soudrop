@@ -1,12 +1,11 @@
-import { ArrowRight, CheckCircle2, Zap, TrendingUp, BarChart3, FileText, Link2, Shield, Rocket, Target, Users, Activity, Award, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Zap, TrendingUp, BarChart3, FileText, Link2, Shield, Rocket, Target, Users, Activity, Award, Sparkles, Package, Store, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
-import dashboardPreview from "@/assets/dashboard-preview.png";
+
 const SoudropPro = () => {
   useEffect(() => {
-    // Script do botão embed
     const embedScript = document.createElement('script');
     embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
     embedScript.async = true;
@@ -18,80 +17,101 @@ const SoudropPro = () => {
       }
     };
   }, []);
-  const handleCTA = () => {
-    window.open('https://event.webinarjam.com/register/8wgw0kty', '_blank');
-  };
-  const deliverables = [{
-    icon: Rocket,
-    title: "O Produto Certo",
-    description: "Como encontrar produtos que vendem sem precisar de sorte ou achismo."
-  }, {
-    icon: BarChart3,
-    title: "O Anúncio Magnético",
-    description: "A estrutura exata que faz o cliente comprar na hora (sem enrolação)."
-  }, {
-    icon: FileText,
-    title: "O Marketplace Certo",
-    description: "Onde publicar pra vender rápido e escalar sem travar no caminho."
-  }, {
-    icon: TrendingUp,
-    title: "O Preço Ideal",
-    description: "Como precificar pra vender todo dia E ter margem de verdade."
-  }, {
-    icon: Link2,
-    title: "A Operação Enxuta",
-    description: "Como fazer isso tudo sem equipe, sem estoque, sem complicação."
-  }, {
-    icon: Shield,
-    title: "Os Erros Fatais",
-    description: "O que NÃO fazer se você quer vender com consistência."
-  }];
-  const benefits = ["Sem enrolação: direto ao ponto, sem blá blá blá", "Sem pegadinhas: você vê tudo funcionando ao vivo", "Sem promessas impossíveis: só o que realmente funciona", "Sem complicação: até quem nunca vendeu online consegue aplicar", "Sem risco: se não gostar, é só sair — mas garanto que você vai ficar"];
-  const forWho = ["Quer vender online mas não sabe por onde começar", "Já tentou mas travou no meio do caminho", "Tá cansado de gastar dinheiro com curso que não funciona", "Quer um método simples que funcione de verdade", "Precisa de resultado rápido sem enrolação"];
-  return <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+
+  const deliverables = [
+    {
+      icon: Package,
+      title: "Dropshipping de Verdade em 2025",
+      description: "Como funciona o modelo de dropshipping atualizado e o que realmente dá resultado hoje."
+    },
+    {
+      icon: Users,
+      title: "Fornecedores Confiáveis",
+      description: "Como encontrar e validar fornecedores que entregam rápido e com qualidade."
+    },
+    {
+      icon: Target,
+      title: "Produtos com Alta Chance de Venda",
+      description: "Como validar produtos antes de investir e identificar os que realmente vendem."
+    },
+    {
+      icon: Store,
+      title: "Operação Leve e Lucrativa",
+      description: "Como montar sua estrutura de dropshipping sem complicação e com margem real."
+    },
+    {
+      icon: DollarSign,
+      title: "Começar com Pouco Dinheiro",
+      description: "Como iniciar sua operação mesmo com capital reduzido e escalar aos poucos."
+    },
+    {
+      icon: Rocket,
+      title: "Sistema que Vende Todo Dia",
+      description: "Como ativar uma operação consistente que gera vendas diárias no piloto automático."
+    }
+  ];
+
+  const benefits = [
+    "Método real: sem promessas milagrosas ou atalhos falsos",
+    "Passo a passo prático: aprenda fazendo, não só assistindo",
+    "Operação estruturada: tudo organizado para você replicar",
+    "Fornecedores validados: acesso a fontes confiáveis",
+    "Suporte contínuo: tire dúvidas e evolua com acompanhamento"
+  ];
+
+  const forWho = [
+    "Quer começar no dropshipping mas não sabe por onde iniciar",
+    "Já tentou vender online mas não conseguiu ter consistência",
+    "Está cansado de táticas antigas que não funcionam mais",
+    "Busca um método claro, aplicável e realista",
+    "Quer montar uma operação de verdade e vender todos os dias"
+  ];
+
+  return (
+    <div className="min-h-screen bg-black">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-16 pb-24 px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-purple-50 to-blue-50 opacity-60" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-green-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A1A3A] to-black opacity-90" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" />
+        <div className="absolute top-40 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse delay-1000" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6 max-w-5xl mx-auto">
             <div className="inline-block">
-              <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
-                🚀 PLANO AVANÇADO
+              <span className="px-4 py-2 bg-blue-900/50 text-blue-300 rounded-full text-sm font-semibold border border-blue-700/50">
+                🚀 AULA GRATUITA DE DROPSHIPPING
               </span>
             </div>
             
-            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight px-4">
-              ATENÇÃO: existe uma fórmula simples (quase injusta) que está fazendo pessoas comuns baterem 10K/mês — e ninguém quer que você saiba.
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight px-4">
+              Aprenda o método real para montar sua operação de dropshipping e vender todos os dias — mesmo começando do zero.
             </h1>
             
-            <div className="space-y-4 text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto px-4">
+            <div className="space-y-4 text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto px-4">
               <p className="font-medium">
-                Enquanto os "especialistas" complicam, quem aprende isso aqui… vende todos os dias.
+                Na aula gratuita, vou te mostrar como encontrar produtos certos, criar estrutura, ativar a operação e começar a vender no dropshipping de forma simples e realista.
               </p>
 
-              <p className="text-base lg:text-lg text-gray-600">
-                Na aula ao vivo, eu vou revelar o passo a passo completo dessa fórmula que está mudando a vida de vendedores comuns.
+              <p className="text-base lg:text-lg text-gray-400">
+                Sem promessas milagrosas. Método testado e aplicável para quem quer resultados de verdade.
               </p>
 
-              <p className="text-base lg:text-lg font-bold text-gray-900">
-                👉 Participe da aula gratuita e veja você mesmo como aplicar essa fórmula no seu negócio.
+              <p className="text-base lg:text-lg font-bold text-white">
+                👉 Participe da aula gratuita e aprenda a montar sua operação de dropshipping.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <div style={{textAlign:"center"}}>
-                <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "2px solid rgba(0, 0, 0, 0.5)", background: "rgba(41, 182, 246, 0.95)", color: "rgb(255, 255, 255)", fontSize: "24px", padding: "18px 80px", boxShadow: "none", borderRadius: "4px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif", wordBreak: "break-word", margin: "auto"}}>Quero Participar da Aula</button>
+                <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "24px", padding: "18px 80px", boxShadow: "0 4px 20px rgba(59, 130, 246, 0.4)", borderRadius: "8px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease"}}>Quero Participar da Aula</button>
                 <script src="https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register"></script>
               </div>
             </div>
             
             <div className="flex items-center justify-center gap-6 pt-4">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-green-600" />
-                <span className="text-sm text-gray-600">120 dias de garantia</span>
+                <CheckCircle2 className="h-5 w-5 text-blue-400" />
+                <span className="text-sm text-gray-400">Aula 100% gratuita</span>
               </div>
             </div>
           </div>
@@ -99,84 +119,88 @@ const SoudropPro = () => {
       </section>
 
       {/* Para Quem É */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-black to-[#0A1A3A]/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
               Essa aula é pra você?
             </h2>
-            <p className="text-lg text-gray-600">
-              Se você se identifica com pelo menos 1 desses pontos, você precisa participar dessa aula:
+            <p className="text-lg text-gray-400">
+              Se você se identifica com pelo menos 1 desses pontos, você precisa participar:
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {forWho.map((item, index) => <Card key={index} className="border-2 border-gray-200 hover:border-green-500 transition-all duration-300 hover:shadow-lg">
+            {forWho.map((item, index) => (
+              <Card key={index} className="bg-[#0A1A3A]/50 border border-blue-900/30 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
                 <CardContent className="p-6 flex items-start gap-4">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
-                  <p className="text-slate-50">{item}</p>
+                  <CheckCircle2 className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
+                  <p className="text-white">{item}</p>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Entregáveis */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-[#0A1A3A]/30 to-black">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              O que você vai <span className="text-purple-600">descobrir</span> na aula
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
+              O que você vai <span className="text-blue-400">aprender</span> na aula
             </h2>
-            <p className="text-lg text-gray-600">
-              A fórmula completa revelada em detalhes
+            <p className="text-lg text-gray-400">
+              Conteúdo prático e direto ao ponto sobre dropshipping
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {deliverables.map((item, index) => <Card key={index} className="border-2 border-gray-200 hover:border-purple-500 transition-all duration-300 hover:shadow-xl group">
+            {deliverables.map((item, index) => (
+              <Card key={index} className="bg-[#0A1A3A]/50 border border-blue-900/30 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 group">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-purple-100 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <item.icon className="h-8 w-8 text-purple-600" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600/20 to-blue-400/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border border-blue-500/30">
+                    <item.icon className="h-8 w-8 text-blue-400" />
                   </div>
-                  <CardTitle className="text-xl text-purple-600">{item.title}</CardTitle>
+                  <CardTitle className="text-xl text-white">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-gray-700 text-base leading-relaxed">
+                  <CardDescription className="text-gray-400 text-base leading-relaxed">
                     {item.description}
                   </CardDescription>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Apresentação Renan */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-black to-[#0A1A3A]/30">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl blur-2xl opacity-20" />
-              <img src={renanPhoto} alt="Renan Ferreira" className="relative rounded-3xl shadow-2xl border-8 border-white w-full" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 rounded-3xl blur-2xl opacity-20" />
+              <img src={renanPhoto} alt="Renan Ferreira" className="relative rounded-3xl shadow-2xl border-4 border-blue-900/50 w-full" />
             </div>
             
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Quem vai ensinar isso pra você?</h3>
-                <p className="text-lg text-green-600 font-semibold">
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">Quem vai te ensinar?</h3>
+                <p className="text-lg text-blue-400 font-semibold">
                   Renan Ferreira
                 </p>
               </div>
               
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  Eu vendo online há anos. Testei tudo. Errei muito. Acertei depois.
+                  Trabalho com dropshipping há anos. Testei dezenas de produtos, fornecedores e estratégias. Errei muito no começo, mas encontrei o método que funciona.
                 </p>
                 <p>
-                  Hoje, ajudo centenas de pessoas a venderem usando essa mesma fórmula que funciona comigo desde o começo.
+                  Hoje, ajudo centenas de pessoas a montarem suas operações de dropshipping de forma estruturada e realista.
                 </p>
-                <p className="font-semibold text-gray-900">
-                  E nessa aula, vou te mostrar exatamente como você pode aplicar isso — do zero ou pra escalar o que já faz.
+                <p className="font-semibold text-white">
+                  Nessa aula, vou te mostrar exatamente como você pode aplicar esse método — do zero ou para melhorar o que já faz.
                 </p>
               </div>
             </div>
@@ -185,63 +209,65 @@ const SoudropPro = () => {
       </section>
 
       {/* Benefícios */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-[#0A1A3A]/30 to-black">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              Por que essa aula <span className="text-blue-600">é diferente</span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
+              Por que esse método <span className="text-blue-400">é diferente</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Porque não é teoria. É o que eu aplico todos os dias e vou te mostrar ao vivo.
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+              Porque não é teoria. É o que aplico na prática e vou te mostrar ao vivo.
             </p>
           </div>
           
           <div className="space-y-6 max-w-4xl mx-auto">
-            {benefits.map((benefit, index) => <Card key={index} className="border-2 border-gray-200 hover:border-blue-500 transition-all duration-300">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="bg-[#0A1A3A]/50 border border-blue-900/30 hover:border-blue-500/50 transition-all duration-300">
                 <CardContent className="p-6 flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Zap className="h-6 w-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600/20 to-blue-400/20 rounded-full flex items-center justify-center flex-shrink-0 border border-blue-500/30">
+                    <Zap className="h-6 w-6 text-blue-400" />
                   </div>
-                  <p className="text-lg font-medium text-slate-50">{benefit}</p>
+                  <p className="text-lg font-medium text-white">{benefit}</p>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Prova Social */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-black to-[#0A1A3A]/30">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-4 gap-6 text-center">
-            <Card className="border-2 border-green-200 bg-gradient-to-br from-green-50 to-white">
+            <Card className="bg-[#0A1A3A]/50 border border-blue-900/30">
               <CardContent className="p-6">
-                <Users className="h-10 w-10 text-green-600 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">+500</div>
-                <p className="text-sm text-gray-700">Vendedores ativos</p>
+                <Users className="h-10 w-10 text-blue-400 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white mb-1">+500</div>
+                <p className="text-sm text-gray-400">Alunos ativos</p>
               </CardContent>
             </Card>
             
-            <Card className="border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-white">
+            <Card className="bg-[#0A1A3A]/50 border border-blue-900/30">
               <CardContent className="p-6">
-                <Activity className="h-10 w-10 text-purple-600 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">+1000</div>
-                <p className="text-sm text-gray-700">Operações rodando</p>
+                <Activity className="h-10 w-10 text-blue-400 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white mb-1">+1000</div>
+                <p className="text-sm text-gray-400">Operações rodando</p>
               </CardContent>
             </Card>
             
-            <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white">
+            <Card className="bg-[#0A1A3A]/50 border border-blue-900/30">
               <CardContent className="p-6">
-                <Link2 className="h-10 w-10 text-blue-600 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">+3000</div>
-                <p className="text-sm text-gray-700">Integrações ativas</p>
+                <Package className="h-10 w-10 text-blue-400 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white mb-1">+50K</div>
+                <p className="text-sm text-gray-400">Produtos validados</p>
               </CardContent>
             </Card>
             
-            <Card className="border-2 border-pink-200 bg-gradient-to-br from-pink-50 to-white">
+            <Card className="bg-[#0A1A3A]/50 border border-blue-900/30">
               <CardContent className="p-6">
-                <Award className="h-10 w-10 text-pink-600 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">100%</div>
-                <p className="text-sm text-gray-700">Tecnologia própria</p>
+                <Award className="h-10 w-10 text-blue-400 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white mb-1">100%</div>
+                <p className="text-sm text-gray-400">Método prático</p>
               </CardContent>
             </Card>
           </div>
@@ -249,35 +275,37 @@ const SoudropPro = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-[#0A1A3A]/30 to-black">
         <div className="container mx-auto max-w-4xl text-center space-y-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-            Pronto pra começar a <span className="text-green-600">vender de verdade</span>?
+          <h2 className="text-3xl lg:text-4xl font-bold text-white">
+            Pronto para montar sua <span className="text-blue-400">operação de dropshipping</span>?
           </h2>
           
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Participe da aula gratuita e descubra a fórmula simples que está fazendo pessoas comuns faturarem 10K/mês
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Participe da aula gratuita e aprenda o método real para começar a vender todos os dias
           </p>
 
           <div style={{textAlign:"center"}}>
-            <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "2px solid rgba(0, 0, 0, 0.5)", background: "rgba(41, 182, 246, 0.95)", color: "rgb(255, 255, 255)", fontSize: "24px", padding: "18px 80px", boxShadow: "none", borderRadius: "4px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif", wordBreak: "break-word", margin: "auto"}}>Quero Participar da Aula</button>
+            <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "24px", padding: "18px 80px", boxShadow: "0 4px 20px rgba(59, 130, 246, 0.4)", borderRadius: "8px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease"}}>Quero Participar da Aula</button>
           </div>
 
           <div className="flex items-center justify-center gap-2 pt-4">
-            <CheckCircle2 className="h-5 w-5 text-green-600" />
-            <span className="text-sm text-gray-600">Vagas limitadas • Aula 100% gratuita</span>
+            <CheckCircle2 className="h-5 w-5 text-blue-400" />
+            <span className="text-sm text-gray-400">Vagas limitadas • Aula 100% gratuita</span>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-8 px-4">
+      <footer className="bg-black border-t border-blue-900/30 text-gray-500 py-8 px-4">
         <div className="container mx-auto max-w-6xl text-center">
           <p className="text-sm">
-            © 2024 SouDrop. Todos os direitos reservados.
+            © 2025 SouDrop. Todos os direitos reservados.
           </p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default SoudropPro;
