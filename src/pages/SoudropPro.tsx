@@ -144,31 +144,6 @@ const SoudropPro = () => {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="py-24 px-4 bg-gradient-to-b from-[#0A1124]/50 to-black">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center space-y-8">
-            <p className="text-blue-400 font-semibold text-lg tracking-wide">
-              ⚠️ Assista antes de entrar: isso aqui NÃO é sobre ficar rico rápido. É sobre estruturar um negócio real.
-            </p>
-            
-            <div className="aspect-video bg-[#0A1124] rounded-2xl border border-blue-900/50 flex items-center justify-center overflow-hidden relative group cursor-pointer hover:border-blue-700/60 transition-all duration-500">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="relative z-10 text-center">
-                <div className="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-blue-500/40 group-hover:scale-110 group-hover:bg-blue-600/30 transition-all duration-300">
-                  <PlayCircle className="h-10 w-10 text-blue-400" />
-                </div>
-                <p className="text-gray-400 text-sm">Clique para assistir</p>
-              </div>
-            </div>
-            
-            <p className="text-gray-400 text-base max-w-2xl mx-auto leading-relaxed">
-              Esse vídeo resume o método que ensino na aula — simples, direto e focado em quem quer resultado de verdade nesse mercado.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Para Quem É - Filtragem Agressiva */}
       <section className="py-24 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
         <div className="container mx-auto max-w-5xl">
