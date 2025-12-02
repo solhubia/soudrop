@@ -1,4 +1,4 @@
-import { CheckCircle2, Zap, TrendingUp, BarChart3, Shield, Rocket, Users, Activity, Award, Package, Store, DollarSign, X, PlayCircle } from "lucide-react";
+import { CheckCircle2, TrendingUp, BarChart3, Shield, Rocket, Users, Activity, Award, Package, Store, DollarSign, X, PlayCircle, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
@@ -20,52 +20,57 @@ const SoudropPro = () => {
   const deliverables = [
     {
       icon: TrendingUp,
-      title: "O Modelo Real de 2025",
-      description: "O dropshipping que funciona hoje — sem táticas ultrapassadas ou promessas vazias."
+      title: "O modelo de dropshipping real",
+      description: "O que eu uso hoje para vender todos os dias — sem teoria, só prática."
     },
     {
       icon: BarChart3,
-      title: "Validação com Dados",
-      description: "Como validar produtos com dados reais, não achismo ou \"feeling\"."
+      title: "Como escolher produtos certos",
+      description: "Produtos com mais chance de girar, sem depender de viral ou sorte."
     },
     {
       icon: Shield,
-      title: "Fornecedores Confiáveis",
-      description: "Como encontrar fornecedores sérios e evitar golpes que quebram iniciantes."
+      title: "Fornecedores confiáveis",
+      description: "Como encontrar bons fornecedores e fugir de roubada."
     },
     {
       icon: Store,
-      title: "Operação Simples e Lucrativa",
-      description: "Como montar uma estrutura leve, organizada e com margem de verdade."
+      title: "Operação leve e funcional",
+      description: "Como montar uma estrutura que você consegue tocar no dia a dia."
     },
     {
       icon: DollarSign,
-      title: "Começar com Pouco",
-      description: "Como iniciar mesmo com capital reduzido e estruturar o crescimento."
+      title: "Começar com pouco",
+      description: "Como iniciar com pouco dinheiro e ir escalando com segurança."
     },
     {
       icon: Rocket,
-      title: "Sistema de Vendas Diárias",
-      description: "Como ativar o sistema que gera vendas consistentes todos os dias."
+      title: "Sistema de vendas diárias",
+      description: "Como ativar o sistema que faz as vendas acontecerem todo dia."
     }
   ];
 
   const forWho = [
-    "Você quer montar uma operação de dropshipping séria e vender todos os dias",
-    "Já tentou vender online, mas não conseguiu consistência",
-    "Não aguenta mais conteúdo raso, desatualizado e sem prática",
-    "Busca método direto, aplicável e sem papo furado",
-    "Quer parar de depender de \"produto viral\" e aprender estratégia de verdade"
+    "Quer entender, de forma séria, como começar nesse mercado que eu mostro no anúncio",
+    "Já tentou ganhar dinheiro online e está cansado de promessa vazia",
+    "Prefere ouvir a verdade: que existe caminho, mas exige método e execução",
+    "Quer um passo a passo aplicável, e não mais um vídeo motivacional"
+  ];
+
+  const behindFormula = [
+    "Como transformar essa ideia em uma operação que vende todos os dias",
+    "O que você precisa ter (e o que não precisa) para começar nesse mercado",
+    "Por que a maioria faz errado e desiste antes de enxergar resultado"
   ];
 
   const testimonials = [
     {
       name: "Felipe M.",
-      text: "Eu já tinha tentado de tudo. Depois dessa aula finalmente aprendi dropshipping de verdade e validei meu primeiro produto."
+      text: "Achei que era mais uma promessa. Depois da aula entendi o passo a passo e fiz minhas primeiras vendas."
     },
     {
       name: "Amanda S.",
-      text: "Conteúdo direto, zero enrolação. Fiz minhas primeiras vendas na mesma semana."
+      text: "O Renan mostra o que funciona na prática, sem enrolação. Foi a primeira vez que alguém explicou esse mercado de forma clara pra mim."
     },
     {
       name: "Lucas T.",
@@ -85,23 +90,26 @@ const SoudropPro = () => {
           <div className="text-center space-y-10">
             <div className="inline-block">
               <span className="px-6 py-3 bg-blue-950/70 text-blue-400 rounded-full text-sm font-semibold border border-blue-800/60 tracking-wider uppercase">
-                Aula Gratuita de Dropshipping
+                Aula Gratuita
               </span>
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-[1.2] tracking-tight max-w-4xl mx-auto">
-              Aprenda a montar uma operação de dropshipping que{" "}
-              <span className="text-blue-400">realmente vende</span> — sem promessas, sem mágica e sem enrolação.
+              A tal "fórmula mágica" pra fazer 10 mil por mês na internet…{" "}
+              <span className="text-blue-400">sem mágica nenhuma.</span>
             </h1>
             
-            <p className="text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Se você quer um método real, atualizado e direto ao ponto para validar produtos, encontrar fornecedores e vender todos os dias, essa aula é pra você.{" "}
-              <span className="text-gray-500 font-medium">Se busca fórmula mágica, nem perca tempo.</span>
+            <p className="text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Se você veio do meu anúncio, é isso que eu vou te mostrar: o passo a passo real que eu uso para construir uma operação que vende todos os dias. Nada de truque, nada de esquema. É um método claro, que qualquer pessoa dedicada consegue aplicar para começar nesse mercado do zero.
+            </p>
+
+            <p className="text-base text-gray-500 max-w-2xl mx-auto">
+              Se você quer dinheiro fácil, essa página não é pra você. Se quer entender o caminho real, continua lendo.
             </p>
             
             <div className="pt-6">
               <div style={{textAlign:"center"}}>
-                <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "18px", padding: "22px 56px", boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)", borderRadius: "14px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "system-ui, -apple-system, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease", letterSpacing: "0.01em"}}>Quero aprender dropshipping do jeito certo</button>
+                <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "18px", padding: "22px 56px", boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)", borderRadius: "14px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "system-ui, -apple-system, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease", letterSpacing: "0.01em"}}>Quero ver como essa "fórmula" realmente funciona</button>
                 <script src="https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register"></script>
               </div>
               <p className="text-sm text-gray-500 mt-5 tracking-wide">Aula gratuita • Vagas limitadas • Não fica gravada</p>
@@ -110,8 +118,34 @@ const SoudropPro = () => {
         </div>
       </section>
 
-      {/* Video Section */}
+      {/* O que tem por trás da "fórmula" */}
       <section className="py-24 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center space-y-8">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5">
+              O que tem por trás dessa <span className="text-blue-400">"fórmula"</span> que eu falei no anúncio?
+            </h2>
+            
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Aqui não tem segredo escondido: por trás dessa "fórmula" está um modelo de negócio chamado <span className="text-white font-semibold">dropshipping</span>. É uma forma de vender produtos pela internet sem ter estoque em casa, usando fornecedores e uma estrutura simples. O que eu vou te mostrar na aula é exatamente COMO fazer isso do jeito certo, sem ilusão e sem depender de sorte.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-5 pt-8">
+              {behindFormula.map((item, index) => (
+                <Card key={index} className="bg-[#0A1124]/80 border border-blue-900/40 hover:border-blue-600/60 transition-all duration-300">
+                  <CardContent className="p-7 flex items-start gap-4">
+                    <CheckCircle2 className="h-6 w-6 text-blue-400 flex-shrink-0 mt-0.5" />
+                    <p className="text-white text-base leading-relaxed">{item}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-24 px-4 bg-gradient-to-b from-[#0A1124]/50 to-black">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center space-y-8">
             <p className="text-blue-400 font-semibold text-lg tracking-wide">
@@ -129,14 +163,14 @@ const SoudropPro = () => {
             </div>
             
             <p className="text-gray-400 text-base max-w-2xl mx-auto leading-relaxed">
-              Esse vídeo resume o método que ensino na aula — simples, direto e focado em quem quer resultado de verdade no dropshipping.
+              Esse vídeo resume o método que ensino na aula — simples, direto e focado em quem quer resultado de verdade nesse mercado.
             </p>
           </div>
         </div>
       </section>
 
       {/* Para Quem É - Filtragem Agressiva */}
-      <section className="py-24 px-4 bg-gradient-to-b from-[#0A1124]/50 to-black">
+      <section className="py-24 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5">
@@ -162,7 +196,7 @@ const SoudropPro = () => {
             <CardContent className="p-7 flex items-center gap-5 justify-center">
               <X className="h-6 w-6 text-red-400 flex-shrink-0" />
               <p className="text-red-300 font-medium text-center">
-                Se você quer ganhar dinheiro rápido ou fórmula mágica, essa aula NÃO é pra você.
+                Se você só quer dinheiro rápido e fácil, essa aula NÃO é pra você.
               </p>
             </CardContent>
           </Card>
@@ -170,14 +204,14 @@ const SoudropPro = () => {
       </section>
 
       {/* O Que Você Vai Aprender */}
-      <section className="py-24 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
+      <section className="py-24 px-4 bg-gradient-to-b from-[#0A1124]/50 to-black">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5">
-              O que você vai <span className="text-blue-400">aprender</span>
+              O que você vai <span className="text-blue-400">aprender na aula</span>
             </h2>
             <p className="text-gray-400 text-lg">
-              Conteúdo direto, sem enrolação. Só o que funciona.
+              O passo a passo real, sem enrolação.
             </p>
           </div>
           
@@ -202,7 +236,7 @@ const SoudropPro = () => {
       </section>
 
       {/* Depoimentos */}
-      <section className="py-24 px-4 bg-gradient-to-b from-[#0A1124]/50 to-black">
+      <section className="py-24 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5">
@@ -231,11 +265,23 @@ const SoudropPro = () => {
               </Card>
             ))}
           </div>
+
+          {/* Escassez */}
+          <div className="mt-16 text-center">
+            <Card className="bg-[#0A1124]/60 border border-blue-900/40 max-w-2xl mx-auto">
+              <CardContent className="p-6 flex items-center gap-4 justify-center">
+                <AlertTriangle className="h-5 w-5 text-yellow-500 flex-shrink-0" />
+                <p className="text-gray-300 text-sm">
+                  Para manter a qualidade, as vagas dessa aula são limitadas. <span className="text-white font-medium">As aulas não ficam gravadas.</span>
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
       {/* Autoridade - Renan */}
-      <section className="py-24 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
+      <section className="py-24 px-4 bg-gradient-to-b from-[#0A1124]/50 to-black">
         <div className="container mx-auto max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative order-2 lg:order-1">
@@ -251,7 +297,7 @@ const SoudropPro = () => {
               
               <div className="space-y-5 text-gray-300 leading-relaxed text-[16px]">
                 <p>
-                  Testei dezenas de produtos, estratégias e fornecedores. Demorei anos para descobrir o que realmente funciona no dropshipping.
+                  Testei dezenas de produtos, estratégias e fornecedores. Demorei anos para descobrir o que realmente funciona nesse mercado.
                 </p>
                 <p>
                   Hoje ajudo pessoas comuns a montar operações reais, lucrativas e consistentes.
@@ -266,7 +312,7 @@ const SoudropPro = () => {
       </section>
 
       {/* Prova Social - Números */}
-      <section className="py-20 px-4 bg-gradient-to-b from-[#0A1124]/50 to-black">
+      <section className="py-20 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
         <div className="container mx-auto max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             <Card className="bg-[#0A1124]/80 border border-blue-900/40">
@@ -305,31 +351,22 @@ const SoudropPro = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-24 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
+      <section className="py-24 px-4 bg-gradient-to-b from-[#0A1124]/50 to-black">
         <div className="container mx-auto max-w-3xl text-center space-y-10">
           <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight">
-            Pronto para aprender <span className="text-blue-400">dropshipping de verdade</span>?
+            Pronto pra ver, de verdade, o que está por trás dessa <span className="text-blue-400">"fórmula"</span>?
           </h2>
           
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Participe da aula gratuita e descubra o método real para montar sua operação e vender todos os dias.
+            Clique no botão abaixo, garanta sua vaga e eu vou te mostrar ao vivo como funciona esse mercado e como você pode dar os primeiros passos com segurança.
           </p>
 
           <div className="pt-4">
             <div style={{textAlign:"center"}}>
-              <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "18px", padding: "22px 56px", boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)", borderRadius: "14px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "system-ui, -apple-system, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease", letterSpacing: "0.01em"}}>Quero aprender dropshipping do jeito certo</button>
+              <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "18px", padding: "22px 56px", boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)", borderRadius: "14px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "system-ui, -apple-system, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease", letterSpacing: "0.01em"}}>Quero participar da aula e entender esse mercado</button>
             </div>
             <p className="text-sm text-gray-500 mt-5 tracking-wide">Aula gratuita • Vagas limitadas • Não fica gravada</p>
           </div>
-        </div>
-      </section>
-
-      {/* Escassez */}
-      <section className="py-12 px-4 bg-black">
-        <div className="container mx-auto max-w-2xl text-center">
-          <p className="text-gray-500 text-sm leading-relaxed">
-            ⚠️ <span className="text-gray-400">Vagas realmente limitadas:</span> para manter a qualidade, só aceito um número reduzido de alunos por aula. A aula NÃO fica gravada.
-          </p>
         </div>
       </section>
 
