@@ -1,5 +1,4 @@
-import { ArrowRight, CheckCircle2, Zap, TrendingUp, BarChart3, FileText, Link2, Shield, Rocket, Target, Users, Activity, Award, Sparkles, Package, Store, DollarSign } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { CheckCircle2, Zap, TrendingUp, BarChart3, Shield, Rocket, Users, Activity, Award, Package, Store, DollarSign, X, PlayCircle } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
@@ -20,152 +19,179 @@ const SoudropPro = () => {
 
   const deliverables = [
     {
-      icon: Package,
-      title: "Dropshipping de Verdade em 2025",
-      description: "Como funciona o modelo de dropshipping atualizado e o que realmente dá resultado hoje."
+      icon: TrendingUp,
+      title: "O Modelo Real de 2025",
+      description: "O dropshipping que funciona hoje — sem táticas ultrapassadas ou promessas vazias."
     },
     {
-      icon: Users,
+      icon: BarChart3,
+      title: "Validação com Dados",
+      description: "Como validar produtos com dados reais, não achismo ou \"feeling\"."
+    },
+    {
+      icon: Shield,
       title: "Fornecedores Confiáveis",
-      description: "Como encontrar e validar fornecedores que entregam rápido e com qualidade."
-    },
-    {
-      icon: Target,
-      title: "Produtos com Alta Chance de Venda",
-      description: "Como validar produtos antes de investir e identificar os que realmente vendem."
+      description: "Como encontrar fornecedores sérios e evitar golpes que quebram iniciantes."
     },
     {
       icon: Store,
-      title: "Operação Leve e Lucrativa",
-      description: "Como montar sua estrutura de dropshipping sem complicação e com margem real."
+      title: "Operação Simples e Lucrativa",
+      description: "Como montar uma estrutura leve, organizada e com margem de verdade."
     },
     {
       icon: DollarSign,
-      title: "Começar com Pouco Dinheiro",
-      description: "Como iniciar sua operação mesmo com capital reduzido e escalar aos poucos."
+      title: "Começar com Pouco",
+      description: "Como iniciar mesmo com capital reduzido e estruturar o crescimento."
     },
     {
       icon: Rocket,
-      title: "Sistema que Vende Todo Dia",
-      description: "Como ativar uma operação consistente que gera vendas diárias no piloto automático."
+      title: "Sistema de Vendas Diárias",
+      description: "Como ativar o sistema que gera vendas consistentes todos os dias."
     }
   ];
 
-  const benefits = [
-    "Método real: sem promessas milagrosas ou atalhos falsos",
-    "Passo a passo prático: aprenda fazendo, não só assistindo",
-    "Operação estruturada: tudo organizado para você replicar",
-    "Fornecedores validados: acesso a fontes confiáveis",
-    "Suporte contínuo: tire dúvidas e evolua com acompanhamento"
+  const forWho = [
+    "Você quer montar uma operação de dropshipping séria e vender todos os dias",
+    "Já tentou vender online, mas não conseguiu consistência",
+    "Não aguenta mais conteúdo raso, desatualizado e sem prática",
+    "Busca método direto, aplicável e sem papo furado",
+    "Quer parar de depender de \"produto viral\" e aprender estratégia de verdade"
   ];
 
-  const forWho = [
-    "Quer começar no dropshipping mas não sabe por onde iniciar",
-    "Já tentou vender online mas não conseguiu ter consistência",
-    "Está cansado de táticas antigas que não funcionam mais",
-    "Busca um método claro, aplicável e realista",
-    "Quer montar uma operação de verdade e vender todos os dias"
+  const testimonials = [
+    {
+      name: "Felipe M.",
+      text: "Eu já tinha tentado de tudo. Depois dessa aula finalmente aprendi dropshipping de verdade e validei meu primeiro produto."
+    },
+    {
+      name: "Amanda S.",
+      text: "Conteúdo direto, zero enrolação. Fiz minhas primeiras vendas na mesma semana."
+    },
+    {
+      name: "Lucas T.",
+      text: "Parecia impossível até entender o método. Hoje tenho minha operação rodando diariamente."
+    }
   ];
 
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-24 px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A1A3A] to-black opacity-90" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" />
-        <div className="absolute top-40 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse delay-1000" />
+      <section className="relative overflow-hidden pt-24 pb-32 px-4">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A1124] to-black" />
+        <div className="absolute top-20 left-10 w-[500px] h-[500px] bg-blue-600 rounded-full mix-blend-multiply filter blur-[150px] opacity-10" />
+        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-blue-500 rounded-full mix-blend-multiply filter blur-[150px] opacity-8" />
         
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center space-y-6 max-w-5xl mx-auto">
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <div className="text-center space-y-10">
             <div className="inline-block">
-              <span className="px-4 py-2 bg-blue-900/50 text-blue-300 rounded-full text-sm font-semibold border border-blue-700/50">
-                🚀 AULA GRATUITA DE DROPSHIPPING
+              <span className="px-6 py-3 bg-blue-950/70 text-blue-400 rounded-full text-sm font-semibold border border-blue-800/60 tracking-wider uppercase">
+                Aula Gratuita de Dropshipping
               </span>
             </div>
             
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight px-4">
-              Aprenda o método real para montar sua operação de dropshipping e vender todos os dias — mesmo começando do zero.
+            <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-[1.2] tracking-tight max-w-4xl mx-auto">
+              Aprenda a montar uma operação de dropshipping que{" "}
+              <span className="text-blue-400">realmente vende</span> — sem promessas, sem mágica e sem enrolação.
             </h1>
             
-            <div className="space-y-4 text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto px-4">
-              <p className="font-medium">
-                Na aula gratuita, vou te mostrar como encontrar produtos certos, criar estrutura, ativar a operação e começar a vender no dropshipping de forma simples e realista.
-              </p>
-
-              <p className="text-base lg:text-lg text-gray-400">
-                Sem promessas milagrosas. Método testado e aplicável para quem quer resultados de verdade.
-              </p>
-
-              <p className="text-base lg:text-lg font-bold text-white">
-                👉 Participe da aula gratuita e aprenda a montar sua operação de dropshipping.
-              </p>
-            </div>
+            <p className="text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              Se você quer um método real, atualizado e direto ao ponto para validar produtos, encontrar fornecedores e vender todos os dias, essa aula é pra você.{" "}
+              <span className="text-gray-500 font-medium">Se busca fórmula mágica, nem perca tempo.</span>
+            </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <div className="pt-6">
               <div style={{textAlign:"center"}}>
-                <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "24px", padding: "18px 80px", boxShadow: "0 4px 20px rgba(59, 130, 246, 0.4)", borderRadius: "8px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease"}}>Quero Participar da Aula</button>
+                <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "18px", padding: "22px 56px", boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)", borderRadius: "14px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "system-ui, -apple-system, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease", letterSpacing: "0.01em"}}>Quero aprender dropshipping do jeito certo</button>
                 <script src="https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register"></script>
               </div>
-            </div>
-            
-            <div className="flex items-center justify-center gap-6 pt-4">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-blue-400" />
-                <span className="text-sm text-gray-400">Aula 100% gratuita</span>
-              </div>
+              <p className="text-sm text-gray-500 mt-5 tracking-wide">Aula gratuita • Vagas limitadas • Não fica gravada</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Para Quem É */}
-      <section className="py-16 px-4 bg-gradient-to-b from-black to-[#0A1A3A]/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
-              Essa aula é pra você?
+      {/* Video Section */}
+      <section className="py-24 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center space-y-8">
+            <p className="text-blue-400 font-semibold text-lg tracking-wide">
+              ⚠️ Assista antes de entrar: isso aqui NÃO é sobre ficar rico rápido. É sobre estruturar um negócio real.
+            </p>
+            
+            <div className="aspect-video bg-[#0A1124] rounded-2xl border border-blue-900/50 flex items-center justify-center overflow-hidden relative group cursor-pointer hover:border-blue-700/60 transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="relative z-10 text-center">
+                <div className="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-blue-500/40 group-hover:scale-110 group-hover:bg-blue-600/30 transition-all duration-300">
+                  <PlayCircle className="h-10 w-10 text-blue-400" />
+                </div>
+                <p className="text-gray-400 text-sm">Clique para assistir</p>
+              </div>
+            </div>
+            
+            <p className="text-gray-400 text-base max-w-2xl mx-auto leading-relaxed">
+              Esse vídeo resume o método que ensino na aula — simples, direto e focado em quem quer resultado de verdade no dropshipping.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Para Quem É - Filtragem Agressiva */}
+      <section className="py-24 px-4 bg-gradient-to-b from-[#0A1124]/50 to-black">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5">
+              Essa aula é <span className="text-blue-400">pra você</span>?
             </h2>
-            <p className="text-lg text-gray-400">
-              Se você se identifica com pelo menos 1 desses pontos, você precisa participar:
+            <p className="text-gray-400 text-lg">
+              Seja honesto consigo mesmo antes de entrar.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto mb-12">
             {forWho.map((item, index) => (
-              <Card key={index} className="bg-[#0A1A3A]/50 border border-blue-900/30 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
-                <CardContent className="p-6 flex items-start gap-4">
-                  <CheckCircle2 className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
-                  <p className="text-white">{item}</p>
+              <Card key={index} className="bg-[#0A1124]/80 border border-blue-900/40 hover:border-blue-600/60 transition-all duration-300">
+                <CardContent className="p-7 flex items-start gap-5">
+                  <CheckCircle2 className="h-6 w-6 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-white text-base leading-relaxed">{item}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
+          
+          <Card className="bg-red-950/30 border border-red-900/40 max-w-2xl mx-auto">
+            <CardContent className="p-7 flex items-center gap-5 justify-center">
+              <X className="h-6 w-6 text-red-400 flex-shrink-0" />
+              <p className="text-red-300 font-medium text-center">
+                Se você quer ganhar dinheiro rápido ou fórmula mágica, essa aula NÃO é pra você.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      {/* Entregáveis */}
-      <section className="py-16 px-4 bg-gradient-to-b from-[#0A1A3A]/30 to-black">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
-              O que você vai <span className="text-blue-400">aprender</span> na aula
+      {/* O Que Você Vai Aprender */}
+      <section className="py-24 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5">
+              O que você vai <span className="text-blue-400">aprender</span>
             </h2>
-            <p className="text-lg text-gray-400">
-              Conteúdo prático e direto ao ponto sobre dropshipping
+            <p className="text-gray-400 text-lg">
+              Conteúdo direto, sem enrolação. Só o que funciona.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {deliverables.map((item, index) => (
-              <Card key={index} className="bg-[#0A1A3A]/50 border border-blue-900/30 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 group">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600/20 to-blue-400/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border border-blue-500/30">
-                    <item.icon className="h-8 w-8 text-blue-400" />
+              <Card key={index} className="bg-[#0A1124]/80 border border-blue-900/40 hover:border-blue-600/70 transition-all duration-300 group">
+                <CardHeader className="pb-4">
+                  <div className="w-14 h-14 bg-blue-950/70 rounded-xl flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300 border border-blue-800/50">
+                    <item.icon className="h-7 w-7 text-blue-400" />
                   </div>
-                  <CardTitle className="text-xl text-white">{item.title}</CardTitle>
+                  <CardTitle className="text-lg text-white font-semibold">{item.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-400 text-base leading-relaxed">
+                <CardContent className="pt-0">
+                  <CardDescription className="text-gray-400 text-sm leading-relaxed">
                     {item.description}
                   </CardDescription>
                 </CardContent>
@@ -175,59 +201,32 @@ const SoudropPro = () => {
         </div>
       </section>
 
-      {/* Apresentação Renan */}
-      <section className="py-16 px-4 bg-gradient-to-b from-black to-[#0A1A3A]/30">
+      {/* Depoimentos */}
+      <section className="py-24 px-4 bg-gradient-to-b from-[#0A1124]/50 to-black">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 rounded-3xl blur-2xl opacity-20" />
-              <img src={renanPhoto} alt="Renan Ferreira" className="relative rounded-3xl shadow-2xl border-4 border-blue-900/50 w-full" />
-            </div>
-            
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">Quem vai te ensinar?</h3>
-                <p className="text-lg text-blue-400 font-semibold">
-                  Renan Ferreira
-                </p>
-              </div>
-              
-              <div className="space-y-4 text-gray-300 leading-relaxed">
-                <p>
-                  Trabalho com dropshipping há anos. Testei dezenas de produtos, fornecedores e estratégias. Errei muito no começo, mas encontrei o método que funciona.
-                </p>
-                <p>
-                  Hoje, ajudo centenas de pessoas a montarem suas operações de dropshipping de forma estruturada e realista.
-                </p>
-                <p className="font-semibold text-white">
-                  Nessa aula, vou te mostrar exatamente como você pode aplicar esse método — do zero ou para melhorar o que já faz.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefícios */}
-      <section className="py-16 px-4 bg-gradient-to-b from-[#0A1A3A]/30 to-black">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
-              Por que esse método <span className="text-blue-400">é diferente</span>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5">
+              O que dizem os <span className="text-blue-400">alunos</span>
             </h2>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Porque não é teoria. É o que aplico na prática e vou te mostrar ao vivo.
+            <p className="text-gray-400 text-lg">
+              Resultados reais de pessoas comuns.
             </p>
           </div>
           
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="bg-[#0A1A3A]/50 border border-blue-900/30 hover:border-blue-500/50 transition-all duration-300">
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600/20 to-blue-400/20 rounded-full flex items-center justify-center flex-shrink-0 border border-blue-500/30">
-                    <Zap className="h-6 w-6 text-blue-400" />
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="bg-[#0A1124]/80 border border-blue-800/50 hover:border-blue-600/70 transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-4 mb-7">
+                    <div className="w-14 h-14 bg-blue-950/80 rounded-full flex items-center justify-center border border-blue-700/60">
+                      <Users className="h-6 w-6 text-blue-400" />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">{testimonial.name}</p>
+                      <p className="text-blue-400 text-sm">Aluno</p>
+                    </div>
                   </div>
-                  <p className="text-lg font-medium text-white">{benefit}</p>
+                  <p className="text-gray-300 leading-relaxed italic text-[15px]">"{testimonial.text}"</p>
                 </CardContent>
               </Card>
             ))}
@@ -235,39 +234,70 @@ const SoudropPro = () => {
         </div>
       </section>
 
-      {/* Prova Social */}
-      <section className="py-16 px-4 bg-gradient-to-b from-black to-[#0A1A3A]/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-6 text-center">
-            <Card className="bg-[#0A1A3A]/50 border border-blue-900/30">
-              <CardContent className="p-6">
-                <Users className="h-10 w-10 text-blue-400 mx-auto mb-3" />
+      {/* Autoridade - Renan */}
+      <section className="py-24 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative order-2 lg:order-1">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl blur-[60px] opacity-15" />
+              <img src={renanPhoto} alt="Renan Ferreira" className="relative rounded-2xl shadow-2xl border border-blue-900/50 w-full" />
+            </div>
+            
+            <div className="space-y-7 order-1 lg:order-2">
+              <div>
+                <h3 className="text-3xl font-bold text-white mb-3">Quem vai te ensinar?</h3>
+                <p className="text-xl text-blue-400 font-semibold">Renan Ferreira</p>
+              </div>
+              
+              <div className="space-y-5 text-gray-300 leading-relaxed text-[16px]">
+                <p>
+                  Testei dezenas de produtos, estratégias e fornecedores. Demorei anos para descobrir o que realmente funciona no dropshipping.
+                </p>
+                <p>
+                  Hoje ajudo pessoas comuns a montar operações reais, lucrativas e consistentes.
+                </p>
+                <p className="text-white font-semibold border-l-2 border-blue-500 pl-5 py-1">
+                  Na aula, eu vou te mostrar exatamente o caminho que aplico na prática — sem teorias, sem atalhos falsos e sem fórmulas mágicas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Prova Social - Números */}
+      <section className="py-20 px-4 bg-gradient-to-b from-[#0A1124]/50 to-black">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+            <Card className="bg-[#0A1124]/80 border border-blue-900/40">
+              <CardContent className="p-7 text-center">
+                <Users className="h-9 w-9 text-blue-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-white mb-1">+500</div>
-                <p className="text-sm text-gray-400">Alunos ativos</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider">Alunos ativos</p>
               </CardContent>
             </Card>
             
-            <Card className="bg-[#0A1A3A]/50 border border-blue-900/30">
-              <CardContent className="p-6">
-                <Activity className="h-10 w-10 text-blue-400 mx-auto mb-3" />
+            <Card className="bg-[#0A1124]/80 border border-blue-900/40">
+              <CardContent className="p-7 text-center">
+                <Activity className="h-9 w-9 text-blue-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-white mb-1">+1000</div>
-                <p className="text-sm text-gray-400">Operações rodando</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider">Operações rodando</p>
               </CardContent>
             </Card>
             
-            <Card className="bg-[#0A1A3A]/50 border border-blue-900/30">
-              <CardContent className="p-6">
-                <Package className="h-10 w-10 text-blue-400 mx-auto mb-3" />
+            <Card className="bg-[#0A1124]/80 border border-blue-900/40">
+              <CardContent className="p-7 text-center">
+                <Package className="h-9 w-9 text-blue-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-white mb-1">+50K</div>
-                <p className="text-sm text-gray-400">Produtos validados</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider">Produtos validados</p>
               </CardContent>
             </Card>
             
-            <Card className="bg-[#0A1A3A]/50 border border-blue-900/30">
-              <CardContent className="p-6">
-                <Award className="h-10 w-10 text-blue-400 mx-auto mb-3" />
+            <Card className="bg-[#0A1124]/80 border border-blue-900/40">
+              <CardContent className="p-7 text-center">
+                <Award className="h-9 w-9 text-blue-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-white mb-1">100%</div>
-                <p className="text-sm text-gray-400">Método prático</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider">Método prático</p>
               </CardContent>
             </Card>
           </div>
@@ -275,30 +305,37 @@ const SoudropPro = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 px-4 bg-gradient-to-b from-[#0A1A3A]/30 to-black">
-        <div className="container mx-auto max-w-4xl text-center space-y-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">
-            Pronto para montar sua <span className="text-blue-400">operação de dropshipping</span>?
+      <section className="py-24 px-4 bg-gradient-to-b from-black to-[#0A1124]/50">
+        <div className="container mx-auto max-w-3xl text-center space-y-10">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight">
+            Pronto para aprender <span className="text-blue-400">dropshipping de verdade</span>?
           </h2>
           
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Participe da aula gratuita e aprenda o método real para começar a vender todos os dias
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            Participe da aula gratuita e descubra o método real para montar sua operação e vender todos os dias.
           </p>
 
-          <div style={{textAlign:"center"}}>
-            <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "24px", padding: "18px 80px", boxShadow: "0 4px 20px rgba(59, 130, 246, 0.4)", borderRadius: "8px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease"}}>Quero Participar da Aula</button>
-          </div>
-
-          <div className="flex items-center justify-center gap-2 pt-4">
-            <CheckCircle2 className="h-5 w-5 text-blue-400" />
-            <span className="text-sm text-gray-400">Vagas limitadas • Aula 100% gratuita</span>
+          <div className="pt-4">
+            <div style={{textAlign:"center"}}>
+              <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "18px", padding: "22px 56px", boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)", borderRadius: "14px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "system-ui, -apple-system, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease", letterSpacing: "0.01em"}}>Quero aprender dropshipping do jeito certo</button>
+            </div>
+            <p className="text-sm text-gray-500 mt-5 tracking-wide">Aula gratuita • Vagas limitadas • Não fica gravada</p>
           </div>
         </div>
       </section>
 
+      {/* Escassez */}
+      <section className="py-12 px-4 bg-black">
+        <div className="container mx-auto max-w-2xl text-center">
+          <p className="text-gray-500 text-sm leading-relaxed">
+            ⚠️ <span className="text-gray-400">Vagas realmente limitadas:</span> para manter a qualidade, só aceito um número reduzido de alunos por aula. A aula NÃO fica gravada.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-black border-t border-blue-900/30 text-gray-500 py-8 px-4">
-        <div className="container mx-auto max-w-6xl text-center">
+      <footer className="bg-black border-t border-blue-950/60 text-gray-600 py-10 px-4">
+        <div className="container mx-auto max-w-5xl text-center">
           <p className="text-sm">
             © 2025 SouDrop. Todos os direitos reservados.
           </p>
