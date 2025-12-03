@@ -75,7 +75,9 @@ const SoudropElite = () => {
 
             <AnimatedSection delay={300}>
               <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto">
-                Garanta sua vaga e faça suas primeiras vendas com produtos comuns.
+                clique no botão abaixo e escolha um horário
+
+
               </p>
             </AnimatedSection>
             
