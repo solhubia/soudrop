@@ -95,9 +95,9 @@ const SoudropPro = () => {
             </div>
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-[1.2] tracking-tight max-w-4xl mx-auto px-2">
-              Descubra como vender sem estoque no método que fazem até iniciantes{" "}
-              <span className="text-blue-400">lucrarem mais de 10 mil reais por mês</span>{" "}
-              sem investir em estoque
+              Descubra como <span className="text-blue-400">vender sem estoque</span> no método que fazem até iniciantes lucrarem{" "}
+              <span className="text-blue-400">mais de 10 mil reais por mês</span>{" "}
+              sem <span className="text-blue-400">investir em estoque</span>
             </h1>
             
             <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
