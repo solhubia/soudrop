@@ -56,8 +56,12 @@ const SoudropPro = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-16 sm:pt-20 md:pt-28 pb-20 sm:pb-24 md:pb-36 px-5 sm:px-6 md:px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A1124] to-black" />
-        <div className="absolute top-20 left-10 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-blue-600 rounded-full mix-blend-screen filter blur-[150px] opacity-15 animate-pulse" style={{ animationDuration: '4s' }} />
-        <div className="absolute bottom-20 right-10 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-blue-400 rounded-full mix-blend-screen filter blur-[150px] opacity-10 animate-pulse" style={{ animationDuration: '6s' }} />
+        <div className="absolute top-20 left-10 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-blue-600 rounded-full mix-blend-screen filter blur-[150px] opacity-15 animate-pulse" style={{
+        animationDuration: '4s'
+      }} />
+        <div className="absolute bottom-20 right-10 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-blue-400 rounded-full mix-blend-screen filter blur-[150px] opacity-10 animate-pulse" style={{
+        animationDuration: '6s'
+      }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-blue-500 rounded-full mix-blend-screen filter blur-[200px] opacity-5" />
         
         <div className="container mx-auto max-w-5xl relative z-10">
@@ -85,39 +89,41 @@ const SoudropPro = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={300}>
-              <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto">
+              <p className="text-sm md:text-base max-w-2xl mx-auto text-primary-foreground">
                 Se você quer entender na prática como esse método funciona, dá o próximo passo.
               </p>
             </AnimatedSection>
             
             <AnimatedSection delay={400}>
               <div className="pt-4 sm:pt-6 md:pt-8">
-                <div style={{ textAlign: "center" }}>
+                <div style={{
+                textAlign: "center"
+              }}>
                   <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
-                    border: "none",
-                    background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)",
-                    color: "rgb(255, 255, 255)",
-                    fontSize: "16px",
-                    padding: "18px 32px",
-                    boxShadow: "0 15px 50px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2)",
-                    borderRadius: "16px",
-                    whiteSpace: "normal",
-                    fontWeight: "700",
-                    lineHeight: "1.4",
-                    cursor: "pointer",
-                    fontFamily: "system-ui, -apple-system, sans-serif",
-                    wordBreak: "break-word",
-                    margin: "auto",
-                    transition: "all 0.3s ease",
-                    letterSpacing: "0.02em",
-                    maxWidth: "100%"
-                  }}>ACESSAR AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
+                  border: "none",
+                  background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)",
+                  color: "rgb(255, 255, 255)",
+                  fontSize: "16px",
+                  padding: "18px 32px",
+                  boxShadow: "0 15px 50px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2)",
+                  borderRadius: "16px",
+                  whiteSpace: "normal",
+                  fontWeight: "700",
+                  lineHeight: "1.4",
+                  cursor: "pointer",
+                  fontFamily: "system-ui, -apple-system, sans-serif",
+                  wordBreak: "break-word",
+                  margin: "auto",
+                  transition: "all 0.3s ease",
+                  letterSpacing: "0.02em",
+                  maxWidth: "100%"
+                }}>ACESSAR AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
                   <script src="https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register"></script>
                 </div>
                 <p className="text-xs md:text-sm text-gray-500 mt-5 md:mt-6 tracking-wide flex items-center justify-center gap-3">
                   <span className="flex items-center gap-1.5"><span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>Aula ao vivo</span>
                   <span>·</span>
-                  <span>Vagas limitadas</span>
+                  <span className="text-primary-foreground">Vagas limitadas</span>
                   <span>·</span>
                   <span>Não fica gravada</span>
                 </p>
@@ -144,8 +150,7 @@ const SoudropPro = () => {
             </AnimatedSection>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 pt-6 sm:pt-8 md:pt-10">
-              {behindFormula.map((item, index) => (
-                <AnimatedSection key={index} delay={200 + index * 100}>
+              {behindFormula.map((item, index) => <AnimatedSection key={index} delay={200 + index * 100}>
                   <Card className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-900/40 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300 h-full backdrop-blur-sm">
                     <CardContent className="p-5 sm:p-6 md:p-8 flex items-start gap-4">
                       <div className="w-10 h-10 bg-blue-950/80 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-800/50">
@@ -154,8 +159,7 @@ const SoudropPro = () => {
                       <p className="text-white text-[15px] sm:text-base md:text-lg leading-relaxed text-left">{item}</p>
                     </CardContent>
                   </Card>
-                </AnimatedSection>
-              ))}
+                </AnimatedSection>)}
             </div>
           </div>
         </div>
@@ -176,8 +180,7 @@ const SoudropPro = () => {
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6 max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-14">
-            {forWho.map((item, index) => (
-              <AnimatedSection key={index} delay={100 + index * 100}>
+            {forWho.map((item, index) => <AnimatedSection key={index} delay={100 + index * 100}>
                 <Card className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-900/40 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300 h-full backdrop-blur-sm">
                   <CardContent className="p-5 sm:p-6 md:p-8 flex items-start gap-4 md:gap-5">
                     <div className="w-10 h-10 bg-green-950/60 rounded-lg flex items-center justify-center flex-shrink-0 border border-green-700/40">
@@ -186,8 +189,7 @@ const SoudropPro = () => {
                     <p className="text-white text-[15px] sm:text-base md:text-lg leading-relaxed">{item}</p>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
           
           <AnimatedSection delay={500}>
@@ -220,8 +222,7 @@ const SoudropPro = () => {
           </AnimatedSection>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
-            {deliverables.map((item, index) => (
-              <AnimatedSection key={index} delay={100 + index * 80}>
+            {deliverables.map((item, index) => <AnimatedSection key={index} delay={100 + index * 80}>
                 <Card className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-900/40 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300 group h-full backdrop-blur-sm">
                   <CardHeader className="pb-3 md:pb-4 p-5 sm:p-6 md:p-7">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-950/80 to-blue-900/60 rounded-xl flex items-center justify-center mb-4 md:mb-5 group-hover:scale-110 transition-transform duration-300 border border-blue-700/50 shadow-lg shadow-blue-900/30">
@@ -235,8 +236,7 @@ const SoudropPro = () => {
                     </CardDescription>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
         </div>
       </section>
@@ -256,8 +256,7 @@ const SoudropPro = () => {
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
-            {testimonials.map((testimonial, index) => (
-              <AnimatedSection key={index} delay={100 + index * 100}>
+            {testimonials.map((testimonial, index) => <AnimatedSection key={index} delay={100 + index * 100}>
                 <Card className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-800/50 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300 h-full backdrop-blur-sm">
                   <CardContent className="p-5 sm:p-6 md:p-8">
                     <div className="flex items-center gap-4 md:gap-5 mb-5 sm:mb-6 md:mb-8">
@@ -272,8 +271,7 @@ const SoudropPro = () => {
                     <p className="text-gray-300 leading-relaxed italic text-[15px] sm:text-base md:text-lg">"{testimonial.text}"</p>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
 
           {/* Escassez */}
@@ -335,13 +333,23 @@ const SoudropPro = () => {
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-              {[
-                { icon: Users, value: "+500", label: "Alunos ativos" },
-                { icon: Activity, value: "+1000", label: "Operações rodando" },
-                { icon: Package, value: "+50K", label: "Produtos validados" },
-                { icon: Award, value: "100%", label: "Método prático" }
-              ].map((stat, index) => (
-                <Card key={index} className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-900/40 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300 backdrop-blur-sm group">
+              {[{
+              icon: Users,
+              value: "+500",
+              label: "Alunos ativos"
+            }, {
+              icon: Activity,
+              value: "+1000",
+              label: "Operações rodando"
+            }, {
+              icon: Package,
+              value: "+50K",
+              label: "Produtos validados"
+            }, {
+              icon: Award,
+              value: "100%",
+              label: "Método prático"
+            }].map((stat, index) => <Card key={index} className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-900/40 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300 backdrop-blur-sm group">
                   <CardContent className="p-4 sm:p-5 md:p-8 text-center">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-950/80 to-blue-900/60 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 md:mb-5 border border-blue-700/50 shadow-lg shadow-blue-900/30 group-hover:scale-110 transition-transform duration-300">
                       <stat.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-blue-400" />
@@ -349,8 +357,7 @@ const SoudropPro = () => {
                     <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.value}</div>
                     <p className="text-[10px] sm:text-xs md:text-sm text-gray-500 uppercase tracking-wider">{stat.label}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </AnimatedSection>
         </div>
@@ -373,26 +380,28 @@ const SoudropPro = () => {
               </p>
 
               <div className="pt-4 sm:pt-6 md:pt-8">
-                <div style={{ textAlign: "center" }}>
+                <div style={{
+                textAlign: "center"
+              }}>
                   <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
-                    border: "none",
-                    background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)",
-                    color: "rgb(255, 255, 255)",
-                    fontSize: "17px",
-                    padding: "20px 40px",
-                    boxShadow: "0 20px 60px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2)",
-                    borderRadius: "16px",
-                    whiteSpace: "normal",
-                    fontWeight: "700",
-                    lineHeight: "1.4",
-                    cursor: "pointer",
-                    fontFamily: "system-ui, -apple-system, sans-serif",
-                    wordBreak: "break-word",
-                    margin: "auto",
-                    transition: "all 0.3s ease",
-                    letterSpacing: "0.02em",
-                    maxWidth: "100%"
-                  }}>ACESSAR AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
+                  border: "none",
+                  background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)",
+                  color: "rgb(255, 255, 255)",
+                  fontSize: "17px",
+                  padding: "20px 40px",
+                  boxShadow: "0 20px 60px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2)",
+                  borderRadius: "16px",
+                  whiteSpace: "normal",
+                  fontWeight: "700",
+                  lineHeight: "1.4",
+                  cursor: "pointer",
+                  fontFamily: "system-ui, -apple-system, sans-serif",
+                  wordBreak: "break-word",
+                  margin: "auto",
+                  transition: "all 0.3s ease",
+                  letterSpacing: "0.02em",
+                  maxWidth: "100%"
+                }}>ACESSAR AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
                 </div>
                 <p className="text-xs md:text-sm text-gray-500 mt-5 md:mt-6 tracking-wide flex items-center justify-center gap-3">
                   <span className="flex items-center gap-1.5"><span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>Aula ao vivo</span>
