@@ -374,49 +374,7 @@ const SoudropElite = () => {
       </section>
 
       {/* CTA Final 2 */}
-      <section className="py-16 sm:py-20 px-5 sm:px-6 md:px-4 bg-[#050A18] border-t border-elite-gold/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <Crown className="w-14 h-14 sm:w-20 sm:h-20 text-elite-gold mx-auto mb-6 sm:mb-8" />
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-white">
-            Está Pronto para Começar?
-          </h2>
-          <p className="text-lg sm:text-2xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-            Comece hoje a construir sua <span className="text-elite-gold font-bold">renda extra ou principal</span>
-          </p>
-          <p className="text-base sm:text-xl text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto">
-            Junte-se a centenas de pessoas que estão aprendendo a vender online de casa,
-            sem estoque e com método validado.
-          </p>
-          
-          <div style={{
-          textAlign: 'center'
-        }}>
-            <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{
-            border: "none",
-            background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
-            color: "rgb(0, 0, 0)",
-            fontSize: "16px",
-            padding: "18px 32px",
-            boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
-            borderRadius: "16px",
-            whiteSpace: "normal",
-            fontWeight: "700",
-            lineHeight: "1.4",
-            cursor: "pointer",
-            fontFamily: "system-ui, -apple-system, sans-serif",
-            wordBreak: "break-word",
-            margin: "auto",
-            transition: "all 0.3s ease",
-            letterSpacing: "0.02em",
-            maxWidth: "100%"
-          }}>GARANTIR MINHA VAGA AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
-          </div>
-
-          <p className="mt-6 sm:mt-8 text-elite-gold font-semibold text-base sm:text-lg">
-            ⚡ Comece hoje mesmo
-          </p>
-        </div>
-      </section>
+      
 
       {/* Footer */}
       <footer className="py-8 sm:py-12 px-5 sm:px-6 md:px-4 bg-black border-t border-elite-gold/10">
