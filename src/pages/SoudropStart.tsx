@@ -1,14 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Zap, Shield, Users, BookOpen, Trophy, Gift, TrendingUp, Target, BarChart3, Package, Snowflake, Mountain } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { CheckCircle2, Zap, Shield, Users, BookOpen, Trophy, TrendingUp, Target, BarChart3, Store, DollarSign, Rocket, ArrowRight, X, AlertTriangle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import renanFerreira from "@/assets/renan-ferreira.jpg";
-import heroSoudrop from "@/assets/hero-soudrop.jpg";
+import { AnimatedSection } from "@/components/AnimatedSection";
+
 const SoudropStart = () => {
   const navigate = useNavigate();
+  
   useEffect(() => {
-    // Script do botão embed
     const embedScript = document.createElement('script');
     embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
     embedScript.async = true;
@@ -19,305 +20,357 @@ const SoudropStart = () => {
       }
     };
   }, []);
-  const entregaveis = [{
-    icon: <Zap className="w-8 h-8" />,
-    title: "3 Integrações Liberadas",
-    description: "Conecte seus marketplaces"
-  }, {
-    icon: <Target className="w-8 h-8" />,
-    title: "Home Personalizada",
-    description: "Dashboard sob medida"
-  }, {
-    icon: <BarChart3 className="w-8 h-8" />,
-    title: "Dashboard Completo",
-    description: "Controle total das vendas"
-  }, {
-    icon: <BookOpen className="w-8 h-8" />,
-    title: "Treinamento Prático",
-    description: "Zero enrolação"
-  }, {
-    icon: <Users className="w-8 h-8" />,
-    title: "Comunidade Exclusiva",
-    description: "Rede de importadores"
-  }];
-  const beneficios = ["Comece certo, sem erros caros", "Escolha produtos com dados reais", "Evite produtos proibidos", "Processos validados na prática", "Suporte + tecnologia inclusos"];
-  return <div className="min-h-screen bg-ice-bg-main text-ice-text-primary">
+
+  const deliverables = [
+    { icon: TrendingUp, title: "O modelo de dropshipping real", description: "O que eu uso hoje para vender todos os dias — sem teoria, só prática." },
+    { icon: BarChart3, title: "Como escolher produtos certos", description: "Produtos com mais chance de girar, sem depender de viral ou sorte." },
+    { icon: Shield, title: "Fornecedores confiáveis", description: "Como encontrar bons fornecedores e fugir de roubada." },
+    { icon: Store, title: "Operação leve e funcional", description: "Como montar uma estrutura que você consegue tocar no dia a dia." },
+    { icon: DollarSign, title: "Começar com pouco", description: "Como iniciar com pouco dinheiro e ir escalando com segurança." },
+    { icon: Rocket, title: "Sistema de vendas diárias", description: "Como ativar o sistema que faz as vendas acontecerem todo dia." },
+  ];
+
+  const forWho = [
+    "Quer entender, de forma séria, como começar nesse mercado",
+    "Já tentou ganhar dinheiro online e está cansado de promessa vazia",
+    "Prefere ouvir a verdade: que existe caminho, mas exige método",
+    "Quer um passo a passo aplicável, e não mais um vídeo motivacional"
+  ];
+
+  const behindMethod = [
+    "Como transformar esse método em uma operação que vende todos os dias",
+    "O que você realmente precisa (e o que não precisa) para começar",
+    "Os erros que fazem a maioria desistir antes de ver resultado"
+  ];
+
+  return (
+    <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-12 md:py-16 lg:py-20 px-4 min-h-screen flex items-center justify-center">
-        <div className="absolute inset-0 bg-gradient-ice-hero" />
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-5 w-40 h-40 md:w-72 md:h-72 bg-ice-blue-primary rounded-full blur-[100px] md:blur-[120px] opacity-20 animate-pulse" />
-          <div className="absolute bottom-10 right-5 w-48 h-48 md:w-96 md:h-96 bg-ice-cyan rounded-full blur-[120px] md:blur-[150px] opacity-15 animate-pulse" style={{
-          animationDelay: '1s'
-        }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-ice-purple rounded-full blur-[150px] md:blur-[200px] opacity-10" />
-        </div>
+      <section className="relative overflow-hidden pt-12 sm:pt-16 md:pt-20 pb-16 sm:pb-20 md:pb-28 px-5 sm:px-6 md:px-4">
+        <div className="absolute inset-0 bg-gradient-forest-hero" />
+        <div className="absolute top-20 left-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-green-primary rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute bottom-20 right-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-lime rounded-full mix-blend-screen filter blur-[120px] opacity-10 animate-pulse" style={{ animationDuration: '6s' }} />
         
-        <div className="container mx-auto relative z-10 max-w-5xl">
-          <div className="flex flex-col items-center text-center space-y-6 md:space-y-8">
-            <h1 className="text-[28px] leading-[1.15] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black max-w-4xl px-2">
-              <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                descubra como vender sem estoque no método que fazem até iniciantes lucrarem mais de 10 mil reais por mês e viajarem para onde quiser enquanto tem uma operação que trabalha sozinha sem investir em estoque
-              </span>
-            </h1>
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="text-center space-y-5 sm:space-y-6 md:space-y-8">
+            <AnimatedSection delay={0}>
+              <div className="inline-block">
+                <span className="px-4 md:px-6 py-2 md:py-2.5 bg-forest-bg-card text-forest-green-primary rounded-full text-xs md:text-sm font-semibold border border-forest-green-primary/30 tracking-wider uppercase backdrop-blur-sm">
+                  🔴 Aula Gratuita Ao Vivo
+                </span>
+              </div>
+            </AnimatedSection>
             
-            <div className="space-y-4 md:space-y-5 max-w-3xl">
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-ice-text-primary font-bold leading-tight px-4">
+            <AnimatedSection delay={100}>
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-forest-text-primary leading-[1.25] tracking-tight max-w-3xl mx-auto">
+                descubra como <span className="bg-gradient-forest-text bg-clip-text text-transparent">vender sem estoque</span> no método que fazem até iniciantes{" "}
+                <span className="text-forest-lime">lucrarem mais de 10 mil reais por mês</span>{" "}
+                e viajarem para onde quiser enquanto tem uma operação que trabalha sozinha{" "}
+                <span className="bg-gradient-forest-text bg-clip-text text-transparent">sem investir em estoque</span>
+              </h1>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={200}>
+              <p className="text-sm sm:text-base md:text-lg text-forest-text-secondary max-w-2xl mx-auto leading-relaxed">
                 Eu não nasci sabendo fazer isso. Aprendi passo a passo como usar a internet para vender produtos sem ter estoque parado, sem investir pesado e sem depender de sorte. Hoje, consigo rodar uma operação enxuta, que gera vendas todos os dias enquanto eu sigo vivendo minha vida normalmente.
               </p>
+            </AnimatedSection>
 
-              <p className="text-sm sm:text-base md:text-lg text-ice-text-secondary leading-relaxed px-4">
+            <AnimatedSection delay={300}>
+              <p className="text-xs sm:text-sm md:text-base text-forest-text-secondary/80 max-w-xl mx-auto">
                 Na aula ao vivo, eu vou te mostrar como esse método funciona na prática, para que você possa aplicar no seu ritmo e construir uma renda real vendendo sem estoque. Zero promessa milagrosa, só estratégia que funciona.
               </p>
-            </div>
-
-            <div className="flex flex-col gap-4 pt-4 md:pt-6 w-full max-w-2xl px-4">
-              <div style={{
-              textAlign: 'center',
-              width: '100%'
-            }}>
-                <button type="button" className="wj-embed-button hover:scale-105 transition-transform duration-300" data-webinarHash="8wgw0kty" style={{
-                border: '2px solid rgba(0, 0, 0, 0.5)',
-                background: 'rgba(41, 182, 246, 0.95)',
-                color: 'rgb(255, 255, 255)',
-                fontSize: '20px',
-                padding: '16px 60px',
-                boxShadow: '0 10px 40px rgba(41, 182, 246, 0.3)',
-                borderRadius: '12px',
-                whiteSpace: 'normal',
-                fontWeight: '700',
-                lineHeight: '1.3',
-                cursor: 'pointer',
-                fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-                wordBreak: 'break-word',
-                margin: 'auto',
-                width: '100%',
-                maxWidth: '500px'
-              }}>
-                  GARANTIR VAGA
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Entregáveis Section */}
-      <section className="py-12 md:py-20 px-4 relative">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-3 md:mb-4">
-              <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                O QUE VOCÊ RECEBE
-              </span>
-            </h2>
-            <p className="text-lg md:text-xl text-ice-text-secondary px-4">
-              Tudo que você precisa para começar do jeito certo
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {entregaveis.map((item, index) => <Card key={index} className="bg-ice-bg-card border border-ice-border hover:border-ice-blue-primary transition-all duration-300 hover:scale-105 hover:shadow-ice-glow">
-                <CardContent className="p-5 md:p-6 space-y-3 md:space-y-4">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-ice-blue-primary/20 to-ice-cyan/10 flex items-center justify-center text-ice-blue-primary">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-lg md:text-xl font-bold text-ice-text-primary">{item.title}</h3>
-                  <p className="text-sm md:text-base text-ice-text-secondary">{item.description}</p>
-                </CardContent>
-              </Card>)}
-          </div>
-        </div>
-      </section>
-
-      {/* Seção de Autoridade - Renan */}
-      <section className="py-12 md:py-20 px-4 relative bg-ice-bg-card-alt">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-ice-purple rounded-full blur-[150px] opacity-10" />
-        </div>
-        
-        <div className="container mx-auto max-w-5xl relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="relative order-2 md:order-1">
-              <div className="absolute -inset-4 bg-gradient-to-r from-ice-blue-primary to-ice-cyan rounded-3xl blur-2xl opacity-20" />
-              <img src={renanFerreira} alt="Renan Ferreira" className="relative rounded-2xl md:rounded-3xl shadow-2xl w-full border-2 border-ice-border" />
-            </div>
+            </AnimatedSection>
             
-            <div className="space-y-5 md:space-y-6 order-1 md:order-2">
-              <div className="inline-block">
-                <div className="flex items-center gap-2 bg-ice-bg-card px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-ice-blue-primary">
-                  <Trophy className="w-4 h-4 md:w-5 md:h-5 text-ice-cyan" />
-                  <span className="text-xs md:text-sm font-bold text-ice-text-primary">MENTOR & ESPECIALISTA</span>
+            <AnimatedSection delay={400}>
+              <div className="pt-3 sm:pt-4 md:pt-6">
+                <div style={{ textAlign: "center" }}>
+                  <button 
+                    type="button" 
+                    className="wj-embed-button w-full sm:w-auto group" 
+                    data-webinarHash="8wgw0kty" 
+                    style={{
+                      border: "none",
+                      background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
+                      color: "rgb(255, 255, 255)",
+                      fontSize: "14px",
+                      padding: "14px 28px",
+                      boxShadow: "0 15px 50px rgba(34, 197, 94, 0.35)",
+                      borderRadius: "12px",
+                      whiteSpace: "normal",
+                      fontWeight: "700",
+                      lineHeight: "1.4",
+                      cursor: "pointer",
+                      fontFamily: "system-ui, -apple-system, sans-serif",
+                      wordBreak: "break-word",
+                      margin: "auto",
+                      transition: "all 0.3s ease",
+                      letterSpacing: "0.02em",
+                      maxWidth: "100%"
+                    }}
+                  >
+                    GARANTIR VAGA <ArrowRight className="inline-block ml-2 h-4 w-4" />
+                  </button>
                 </div>
-              </div>
-
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black">
-                <span className="text-ice-text-primary">RENAN</span>
-                <br />
-                <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                  FERREIRA
-                </span>
-              </h2>
-              
-              <p className="text-base md:text-lg text-ice-text-secondary leading-relaxed">
-                Anos importando da China e vendendo nos principais marketplaces: <span className="text-ice-blue-primary font-semibold">Mercado Livre, Shopee, Amazon e Magalu</span>.
-              </p>
-
-              <div className="bg-ice-bg-card border border-ice-blue-primary rounded-xl md:rounded-2xl p-5 md:p-6">
-                <p className="text-lg md:text-xl font-bold text-ice-text-primary mb-2">Compromisso:</p>
-                <p className="text-sm md:text-base text-ice-text-secondary">
-                  Zero teoria. <span className="text-ice-cyan font-bold">100% prática validada</span>.
+                <p className="text-xs text-forest-text-secondary mt-4 tracking-wide flex items-center justify-center gap-2 flex-wrap">
+                  <span className="flex items-center gap-1.5"><span className="w-2 h-2 bg-forest-green-primary rounded-full animate-pulse"></span>Ao vivo</span>
+                  <span>·</span>
+                  <span>Vagas limitadas</span>
+                  <span>·</span>
+                  <span>Não fica gravada</span>
                 </p>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Benefícios Section */}
-      <section className="py-12 md:py-20 px-4">
+      {/* O que tem por trás do método */}
+      <section className="py-12 sm:py-16 md:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-3 md:mb-4 px-4">
-              <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                POR QUE SOUDROP?
-              </span>
-            </h2>
-          </div>
+          <div className="text-center space-y-5 sm:space-y-6 md:space-y-8">
+            <AnimatedSection>
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-forest-text-primary">
+                O que tem por trás desse <span className="bg-gradient-forest-text bg-clip-text text-transparent">método de vender sem estoque</span>?
+              </h2>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={100}>
+              <p className="text-sm sm:text-base md:text-lg text-forest-text-secondary max-w-2xl mx-auto leading-relaxed">
+                Aqui não tem truque escondido. Por trás desse método existe um modelo de negócio em que você vende produtos pela internet sem precisar ter estoque em casa. Na aula, eu vou te mostrar passo a passo COMO aplicar isso do jeito certo.
+              </p>
+            </AnimatedSection>
 
-          <div className="space-y-3 md:space-y-4">
-            {beneficios.map((beneficio, index) => <div key={index} className="flex items-start gap-3 md:gap-4 bg-ice-bg-card border border-ice-border rounded-xl md:rounded-2xl p-4 md:p-6 hover:border-ice-blue-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-ice-glow">
-                <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-ice-blue-primary flex-shrink-0 mt-0.5 md:mt-1" />
-                <p className="text-base md:text-lg font-medium text-ice-text-primary">{beneficio}</p>
-              </div>)}
-          </div>
-        </div>
-      </section>
-
-
-      {/* Prova Social / Números */}
-      <section className="py-12 md:py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
-            <div className="space-y-1.5 md:space-y-2">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-ice-primary bg-clip-text text-transparent">
-                500+
-              </div>
-              <p className="text-xs sm:text-sm md:text-base text-ice-text-secondary font-medium">Vendedores Ativos</p>
-            </div>
-            <div className="space-y-1.5 md:space-y-2">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-ice-primary bg-clip-text text-transparent">
-                1000+
-              </div>
-              <p className="text-xs sm:text-sm md:text-base text-ice-text-secondary font-medium">Integrações Ativas</p>
-            </div>
-            <div className="space-y-1.5 md:space-y-2">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-ice-primary bg-clip-text text-transparent">
-                100%
-              </div>
-              <p className="text-xs sm:text-sm md:text-base text-ice-text-secondary font-medium">Tecnologia Própria</p>
-            </div>
-            <div className="space-y-1.5 md:space-y-2">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-ice-primary bg-clip-text text-transparent">
-                24/7
-              </div>
-              <p className="text-xs sm:text-sm md:text-base text-ice-text-secondary font-medium">Suporte Disponível</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 pt-4 sm:pt-6">
+              {behindMethod.map((item, index) => (
+                <AnimatedSection key={index} delay={200 + index * 100}>
+                  <Card className="bg-forest-bg-card border border-forest-border hover:border-forest-green-primary/50 hover:shadow-forest-glow transition-all duration-300 h-full">
+                    <CardContent className="p-4 sm:p-5 flex items-start gap-3">
+                      <div className="w-8 h-8 bg-forest-green-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-forest-green-primary/30">
+                        <CheckCircle2 className="h-4 w-4 text-forest-green-primary" />
+                      </div>
+                      <p className="text-forest-text-primary text-sm sm:text-base leading-relaxed text-left">{item}</p>
+                    </CardContent>
+                  </Card>
+                </AnimatedSection>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Oferta Final + CTA */}
-      <section className="py-16 md:py-24 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-ice-hero" />
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-ice-blue-primary rounded-full blur-[150px] opacity-20 animate-pulse" />
-          <div className="absolute bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-ice-cyan rounded-full blur-[150px] opacity-20 animate-pulse" style={{
-          animationDelay: '1s'
-        }} />
+      {/* Para Quem É */}
+      <section className="py-12 sm:py-16 md:py-20 px-5 sm:px-6 md:px-4 bg-forest-bg-card-alt">
+        <div className="container mx-auto max-w-4xl">
+          <AnimatedSection>
+            <div className="text-center mb-8 sm:mb-10">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-forest-text-primary mb-3">
+                Essa aula é <span className="bg-gradient-forest-text bg-clip-text text-transparent">pra você</span>?
+              </h2>
+              <p className="text-forest-text-secondary text-sm sm:text-base">
+                Seja honesto consigo mesmo antes de entrar.
+              </p>
+            </div>
+          </AnimatedSection>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto mb-6 sm:mb-8">
+            {forWho.map((item, index) => (
+              <AnimatedSection key={index} delay={100 + index * 100}>
+                <Card className="bg-forest-bg-card border border-forest-border hover:border-forest-green-primary/50 hover:shadow-forest-glow transition-all duration-300 h-full">
+                  <CardContent className="p-4 sm:p-5 flex items-start gap-3">
+                    <div className="w-8 h-8 bg-forest-lime/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-forest-lime/30">
+                      <CheckCircle2 className="h-4 w-4 text-forest-lime" />
+                    </div>
+                    <p className="text-forest-text-primary text-sm sm:text-base leading-relaxed">{item}</p>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
+          
+          <AnimatedSection delay={500}>
+            <Card className="bg-red-950/30 border border-red-900/50 max-w-xl mx-auto">
+              <CardContent className="p-4 sm:p-5 flex items-center gap-3 justify-center">
+                <div className="w-8 h-8 bg-red-950/60 rounded-lg flex items-center justify-center flex-shrink-0 border border-red-800/50">
+                  <X className="h-4 w-4 text-red-400" />
+                </div>
+                <p className="text-red-300 font-medium text-center text-sm sm:text-base">
+                  Se você só quer dinheiro rápido e fácil, essa aula NÃO é pra você.
+                </p>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
         </div>
+      </section>
 
-        <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="flex flex-col items-center text-center space-y-8 md:space-y-12">
-            <div className="space-y-6 md:space-y-8">
+      {/* O Que Você Vai Aprender */}
+      <section className="py-12 sm:py-16 md:py-20 px-5 sm:px-6 md:px-4 bg-forest-bg-main">
+        <div className="container mx-auto max-w-5xl">
+          <AnimatedSection>
+            <div className="text-center mb-8 sm:mb-10">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-forest-text-primary mb-3">
+                O que você vai <span className="bg-gradient-forest-text bg-clip-text text-transparent">aprender na aula</span>
+              </h2>
+              <p className="text-forest-text-secondary text-sm sm:text-base">
+                O passo a passo real, sem enrolação.
+              </p>
+            </div>
+          </AnimatedSection>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+            {deliverables.map((item, index) => (
+              <AnimatedSection key={index} delay={100 + index * 80}>
+                <Card className="bg-forest-bg-card border border-forest-border hover:border-forest-green-primary/50 hover:shadow-forest-glow transition-all duration-300 group h-full">
+                  <CardHeader className="pb-2 p-4 sm:p-5">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-forest-primary rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                    </div>
+                    <CardTitle className="text-sm sm:text-base text-forest-text-primary font-semibold">{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-0 px-4 pb-4 sm:px-5 sm:pb-5">
+                    <CardDescription className="text-forest-text-secondary text-xs sm:text-sm leading-relaxed">
+                      {item.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Seção Renan */}
+      <section className="py-12 sm:py-16 md:py-20 px-5 sm:px-6 md:px-4 bg-forest-bg-card-alt">
+        <div className="container mx-auto max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
+            <AnimatedSection className="order-2 md:order-1">
+              <div className="relative">
+                <div className="absolute -inset-3 bg-gradient-forest-primary rounded-2xl blur-xl opacity-20" />
+                <img 
+                  src={renanFerreira} 
+                  alt="Renan Ferreira" 
+                  className="relative rounded-xl shadow-2xl w-full border border-forest-border" 
+                />
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={200} className="space-y-4 order-1 md:order-2">
               <div className="inline-block">
-                <div className="flex items-center gap-2 bg-ice-bg-card px-4 py-2 md:px-6 md:py-3 rounded-full border border-ice-cyan shadow-lg">
-                  <Snowflake className="w-5 h-5 md:w-6 md:h-6 text-ice-cyan" />
-                  <span className="text-sm md:text-lg font-bold text-ice-text-primary">OFERTA ESPECIAL</span>
+                <div className="flex items-center gap-2 bg-forest-bg-card px-3 py-1.5 rounded-full border border-forest-green-primary/30">
+                  <Trophy className="w-4 h-4 text-forest-lime" />
+                  <span className="text-xs font-bold text-forest-text-primary">MENTOR & ESPECIALISTA</span>
                 </div>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black px-4">
-                <span className="text-ice-text-primary">COMECE</span>{" "}
-                <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                  AGORA
-                </span>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
+                <span className="text-forest-text-primary">RENAN</span>
+                <br />
+                <span className="bg-gradient-forest-text bg-clip-text text-transparent">FERREIRA</span>
               </h2>
+              
+              <p className="text-sm sm:text-base text-forest-text-secondary leading-relaxed">
+                Anos importando da China e vendendo nos principais marketplaces: <span className="text-forest-green-primary font-semibold">Mercado Livre, Shopee, Amazon e Magalu</span>.
+              </p>
 
-            </div>
+              <div className="bg-forest-bg-card border border-forest-green-primary/30 rounded-xl p-4">
+                <p className="text-sm sm:text-base font-bold text-forest-text-primary mb-1">Compromisso:</p>
+                <p className="text-xs sm:text-sm text-forest-text-secondary">
+                  Zero teoria. <span className="text-forest-lime font-bold">100% prática validada</span>.
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
 
-            <div className="w-full max-w-2xl px-4">
-              <div style={{
-              textAlign: 'center',
-              width: '100%'
-            }}>
-                <button type="button" className="wj-embed-button hover:scale-105 transition-transform duration-300" data-webinarHash="8wgw0kty" style={{
-                border: '2px solid rgba(0, 0, 0, 0.5)',
-                background: 'rgba(41, 182, 246, 0.95)',
-                color: 'rgb(255, 255, 255)',
-                fontSize: '22px',
-                padding: '18px 70px',
-                boxShadow: '0 10px 40px rgba(41, 182, 246, 0.3)',
-                borderRadius: '12px',
-                whiteSpace: 'normal',
-                fontWeight: '700',
-                lineHeight: '1.3',
-                cursor: 'pointer',
-                fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-                wordBreak: 'break-word',
-                margin: 'auto',
-                width: '100%',
-                maxWidth: '600px'
-              }}>
-                  Quero Participar da Aula
+      {/* Escassez + CTA Final */}
+      <section className="py-12 sm:py-16 md:py-20 px-5 sm:px-6 md:px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-forest-hero" />
+        <div className="absolute top-0 left-0 w-64 h-64 md:w-80 md:h-80 bg-forest-green-primary rounded-full blur-[120px] opacity-15 animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-64 h-64 md:w-80 md:h-80 bg-forest-lime rounded-full blur-[120px] opacity-10 animate-pulse" style={{ animationDelay: '1s' }} />
+
+        <div className="container mx-auto max-w-3xl relative z-10">
+          <div className="text-center space-y-6 sm:space-y-8">
+            <AnimatedSection>
+              <Card className="bg-yellow-950/30 border border-yellow-700/40 max-w-xl mx-auto mb-6">
+                <CardContent className="p-4 flex flex-col sm:flex-row items-center gap-3 justify-center">
+                  <div className="w-8 h-8 bg-yellow-950/60 rounded-lg flex items-center justify-center flex-shrink-0 border border-yellow-700/50">
+                    <AlertTriangle className="h-4 w-4 text-yellow-500" />
+                  </div>
+                  <p className="text-gray-300 text-xs sm:text-sm text-center sm:text-left">
+                    Para manter a qualidade, as vagas são limitadas. <span className="text-yellow-400 font-medium">As aulas não ficam gravadas.</span>
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection delay={100}>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
+                <span className="text-forest-text-primary">GARANTA SUA</span>{" "}
+                <span className="bg-gradient-forest-text bg-clip-text text-transparent">VAGA AGORA</span>
+              </h2>
+            </AnimatedSection>
+
+            <AnimatedSection delay={200}>
+              <div style={{ textAlign: "center" }}>
+                <button 
+                  type="button" 
+                  className="wj-embed-button w-full sm:w-auto group" 
+                  data-webinarHash="8wgw0kty" 
+                  style={{
+                    border: "none",
+                    background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
+                    color: "rgb(255, 255, 255)",
+                    fontSize: "16px",
+                    padding: "16px 40px",
+                    boxShadow: "0 15px 50px rgba(34, 197, 94, 0.4)",
+                    borderRadius: "12px",
+                    whiteSpace: "normal",
+                    fontWeight: "700",
+                    lineHeight: "1.4",
+                    cursor: "pointer",
+                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    wordBreak: "break-word",
+                    margin: "auto",
+                    transition: "all 0.3s ease",
+                    letterSpacing: "0.02em",
+                    maxWidth: "100%"
+                  }}
+                >
+                  GARANTIR VAGA <ArrowRight className="inline-block ml-2 h-5 w-5" />
                 </button>
               </div>
-            </div>
+            </AnimatedSection>
 
-            <div className="space-y-3 md:space-y-4 px-4 max-w-2xl">
-              <p className="text-sm sm:text-base md:text-lg font-bold text-ice-text-primary flex items-center justify-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-ice-cyan flex-shrink-0" />
-                Acesso imediato após confirmação do pagamento
-              </p>
-              <p className="text-sm sm:text-base md:text-lg font-bold text-ice-text-primary flex items-center justify-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-ice-cyan flex-shrink-0" />
-                Suporte e comunidade exclusiva
-              </p>
-            </div>
-
-            <div className="w-full max-w-2xl px-4 pt-6 md:pt-8">
-              <div style={{
-              textAlign: 'center',
-              width: '100%'
-            }}>
-                
+            <AnimatedSection delay={300}>
+              <div className="space-y-2 max-w-md mx-auto">
+                <p className="text-xs sm:text-sm text-forest-text-primary flex items-center justify-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-forest-green-primary flex-shrink-0" />
+                  Aula 100% online e gratuita
+                </p>
+                <p className="text-xs sm:text-sm text-forest-text-primary flex items-center justify-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-forest-green-primary flex-shrink-0" />
+                  Conteúdo prático e aplicável
+                </p>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-ice-bg-card border-t border-ice-border py-8 md:py-12 px-4">
+      <footer className="bg-forest-bg-card border-t border-forest-border py-6 sm:py-8 px-4">
         <div className="container mx-auto max-w-6xl text-center">
-          <p className="text-xs md:text-sm text-ice-text-secondary">
+          <p className="text-xs text-forest-text-secondary">
             © 2024 SouDrop. Todos os direitos reservados.
           </p>
-          <p className="text-xs text-ice-text-secondary mt-3 md:mt-4 px-4">
-            SouDrop START - Monte sua operação automática e venda enquanto descansa
+          <p className="text-xs text-forest-text-secondary/70 mt-2">
+            SouDrop START - Monte sua operação e venda enquanto descansa
           </p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default SoudropStart;
