@@ -57,27 +57,17 @@ const SoudropStart = () => {
           <div className="flex flex-col items-center text-center space-y-6 md:space-y-8">
             <h1 className="text-[28px] leading-[1.15] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black max-w-4xl px-2">
               <span className="bg-gradient-ice-primary bg-clip-text text-transparent">
-                Existe um código simples que permite que pessoas comuns  possam faturar todos os dias enquanto vivem experiências que antes pareciam impossíveis.
+                descubra como vender sem estoque no método que fazem até iniciantes lucrarem mais de 10 mil reais por mês e viajarem para onde quiser enquanto tem uma operação que trabalha sozinha sem investir em estoque
               </span>
             </h1>
             
             <div className="space-y-4 md:space-y-5 max-w-3xl">
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-ice-text-primary font-bold leading-tight px-4">
-                Já viajei pra vários outros países. Em todos eles, meu negócio continuou faturando enquanto eu aproveitava a viagem. Hoje, posso trabalhar de onde eu quiser porque montei uma estrutura que não depende de mim o tempo todo.
+                Eu não nasci sabendo fazer isso. Aprendi passo a passo como usar a internet para vender produtos sem ter estoque parado, sem investir pesado e sem depender de sorte. Hoje, consigo rodar uma operação enxuta, que gera vendas todos os dias enquanto eu sigo vivendo minha vida normalmente.
               </p>
 
               <p className="text-sm sm:text-base md:text-lg text-ice-text-secondary leading-relaxed px-4">
-                Na aula especial, eu vou te ensinar como montar sua operação automatizada de dropshipping e ativar um sistema que trabalha enquanto você vive.
-              </p>
-
-              <div className="space-y-2 text-sm sm:text-base md:text-lg text-ice-text-primary font-semibold px-4">
-                <p>Zero enrolação.</p>
-                <p>Zero promessas vazias.</p>
-                <p>Somente o passo a passo real.</p>
-              </div>
-
-              <p className="text-base sm:text-lg md:text-xl text-ice-text-primary font-bold px-4 pt-2">
-                👉 Participe da aula e entenda como destravar sua liberdade digital.
+                Na aula ao vivo, eu vou te mostrar como esse método funciona na prática, para que você possa aplicar no seu ritmo e construir uma renda real vendendo sem estoque. Zero promessa milagrosa, só estratégia que funciona.
               </p>
             </div>
 
@@ -104,7 +94,7 @@ const SoudropStart = () => {
                 width: '100%',
                 maxWidth: '500px'
               }}>
-                  Quero Participar da Aula
+                  Quero garantir minha vaga na aula ao vivo
                 </button>
               </div>
             </div>
