@@ -5,10 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import renanFerreira from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
-
 const SoudropStart = () => {
   const navigate = useNavigate();
-  
   useEffect(() => {
     const embedScript = document.createElement('script');
     embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
@@ -20,36 +18,43 @@ const SoudropStart = () => {
       }
     };
   }, []);
-
-  const deliverables = [
-    { icon: TrendingUp, title: "O modelo de dropshipping real", description: "O que eu uso hoje para vender todos os dias — sem teoria, só prática." },
-    { icon: BarChart3, title: "Como escolher produtos certos", description: "Produtos com mais chance de girar, sem depender de viral ou sorte." },
-    { icon: Shield, title: "Fornecedores confiáveis", description: "Como encontrar bons fornecedores e fugir de roubada." },
-    { icon: Store, title: "Operação leve e funcional", description: "Como montar uma estrutura que você consegue tocar no dia a dia." },
-    { icon: DollarSign, title: "Começar com pouco", description: "Como iniciar com pouco dinheiro e ir escalando com segurança." },
-    { icon: Rocket, title: "Sistema de vendas diárias", description: "Como ativar o sistema que faz as vendas acontecerem todo dia." },
-  ];
-
-  const forWho = [
-    "Quer entender, de forma séria, como começar nesse mercado",
-    "Já tentou ganhar dinheiro online e está cansado de promessa vazia",
-    "Prefere ouvir a verdade: que existe caminho, mas exige método",
-    "Quer um passo a passo aplicável, e não mais um vídeo motivacional"
-  ];
-
-  const behindMethod = [
-    "Como transformar esse método em uma operação que vende todos os dias",
-    "O que você realmente precisa (e o que não precisa) para começar",
-    "Os erros que fazem a maioria desistir antes de ver resultado"
-  ];
-
-  return (
-    <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
+  const deliverables = [{
+    icon: TrendingUp,
+    title: "O modelo de dropshipping real",
+    description: "O que eu uso hoje para vender todos os dias — sem teoria, só prática."
+  }, {
+    icon: BarChart3,
+    title: "Como escolher produtos certos",
+    description: "Produtos com mais chance de girar, sem depender de viral ou sorte."
+  }, {
+    icon: Shield,
+    title: "Fornecedores confiáveis",
+    description: "Como encontrar bons fornecedores e fugir de roubada."
+  }, {
+    icon: Store,
+    title: "Operação leve e funcional",
+    description: "Como montar uma estrutura que você consegue tocar no dia a dia."
+  }, {
+    icon: DollarSign,
+    title: "Começar com pouco",
+    description: "Como iniciar com pouco dinheiro e ir escalando com segurança."
+  }, {
+    icon: Rocket,
+    title: "Sistema de vendas diárias",
+    description: "Como ativar o sistema que faz as vendas acontecerem todo dia."
+  }];
+  const forWho = ["Quer entender, de forma séria, como começar nesse mercado", "Já tentou ganhar dinheiro online e está cansado de promessa vazia", "Prefere ouvir a verdade: que existe caminho, mas exige método", "Quer um passo a passo aplicável, e não mais um vídeo motivacional"];
+  const behindMethod = ["Como transformar esse método em uma operação que vende todos os dias", "O que você realmente precisa (e o que não precisa) para começar", "Os erros que fazem a maioria desistir antes de ver resultado"];
+  return <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
         <div className="absolute inset-0 bg-gradient-forest-hero" />
-        <div className="absolute top-20 left-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-green-primary rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-pulse" style={{ animationDuration: '4s' }} />
-        <div className="absolute bottom-20 right-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-lime rounded-full mix-blend-screen filter blur-[120px] opacity-10 animate-pulse" style={{ animationDuration: '6s' }} />
+        <div className="absolute top-20 left-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-green-primary rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-pulse" style={{
+        animationDuration: '4s'
+      }} />
+        <div className="absolute bottom-20 right-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-lime rounded-full mix-blend-screen filter blur-[120px] opacity-10 animate-pulse" style={{
+        animationDuration: '6s'
+      }} />
         
         <div className="relative z-10 w-full max-w-3xl mx-auto">
           <AnimatedSection delay={0}>
@@ -68,40 +73,33 @@ const SoudropStart = () => {
                   <span className="bg-gradient-forest-text bg-clip-text text-transparent">sem investir em estoque</span>
                 </h1>
                 
-                <p className="text-sm sm:text-base md:text-lg text-forest-text-secondary leading-relaxed max-w-2xl mx-auto">
-                  Eu não nasci sabendo fazer isso. Aprendi passo a passo como usar a internet para vender produtos sem ter estoque parado, sem investir pesado e sem depender de sorte. Hoje, consigo rodar uma operação enxuta, que gera vendas todos os dias enquanto eu sigo vivendo minha vida normalmente.
-                </p>
+                
 
-                <p className="text-xs sm:text-sm md:text-base text-forest-text-secondary/80 max-w-xl mx-auto">
-                  Na aula ao vivo, eu vou te mostrar como esse método funciona na prática, para que você possa aplicar no seu ritmo e construir uma renda real vendendo sem estoque. Zero promessa milagrosa, só estratégia que funciona.
-                </p>
+                <p className="text-xs sm:text-sm md:text-base text-forest-text-secondary/80 max-w-xl mx-auto">Descubra o método simples que revela a estratégia usada por iniciantes para vender online sem investir em estoque e 1er um lucro de mais de R$10.000 Por mês.</p>
                 
                 <div className="pt-2 sm:pt-4">
-                  <div style={{ textAlign: "center" }}>
-                    <button 
-                      type="button" 
-                      className="wj-embed-button w-full sm:w-auto group" 
-                      data-webinarHash="8wgw0kty" 
-                      style={{
-                        border: "none",
-                        background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
-                        color: "rgb(255, 255, 255)",
-                        fontSize: "14px",
-                        padding: "14px 28px",
-                        boxShadow: "0 15px 50px rgba(34, 197, 94, 0.35)",
-                        borderRadius: "12px",
-                        whiteSpace: "normal",
-                        fontWeight: "700",
-                        lineHeight: "1.4",
-                        cursor: "pointer",
-                        fontFamily: "system-ui, -apple-system, sans-serif",
-                        wordBreak: "break-word",
-                        margin: "auto",
-                        transition: "all 0.3s ease",
-                        letterSpacing: "0.02em",
-                        maxWidth: "100%"
-                      }}
-                    >
+                  <div style={{
+                  textAlign: "center"
+                }}>
+                    <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
+                    border: "none",
+                    background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
+                    color: "rgb(255, 255, 255)",
+                    fontSize: "14px",
+                    padding: "14px 28px",
+                    boxShadow: "0 15px 50px rgba(34, 197, 94, 0.35)",
+                    borderRadius: "12px",
+                    whiteSpace: "normal",
+                    fontWeight: "700",
+                    lineHeight: "1.4",
+                    cursor: "pointer",
+                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    wordBreak: "break-word",
+                    margin: "auto",
+                    transition: "all 0.3s ease",
+                    letterSpacing: "0.02em",
+                    maxWidth: "100%"
+                  }}>
                       GARANTIR VAGA <ArrowRight className="inline-block ml-2 h-4 w-4" />
                     </button>
                   </div>
@@ -136,8 +134,7 @@ const SoudropStart = () => {
             </AnimatedSection>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 pt-4 sm:pt-6">
-              {behindMethod.map((item, index) => (
-                <AnimatedSection key={index} delay={200 + index * 100}>
+              {behindMethod.map((item, index) => <AnimatedSection key={index} delay={200 + index * 100}>
                   <Card className="bg-forest-bg-card border border-forest-border hover:border-forest-green-primary/50 hover:shadow-forest-glow transition-all duration-300 h-full">
                     <CardContent className="p-4 sm:p-5 flex items-start gap-3">
                       <div className="w-8 h-8 bg-forest-green-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-forest-green-primary/30">
@@ -146,8 +143,7 @@ const SoudropStart = () => {
                       <p className="text-forest-text-primary text-sm sm:text-base leading-relaxed text-left">{item}</p>
                     </CardContent>
                   </Card>
-                </AnimatedSection>
-              ))}
+                </AnimatedSection>)}
             </div>
           </div>
         </div>
@@ -168,8 +164,7 @@ const SoudropStart = () => {
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto mb-6 sm:mb-8">
-            {forWho.map((item, index) => (
-              <AnimatedSection key={index} delay={100 + index * 100}>
+            {forWho.map((item, index) => <AnimatedSection key={index} delay={100 + index * 100}>
                 <Card className="bg-forest-bg-card border border-forest-border hover:border-forest-green-primary/50 hover:shadow-forest-glow transition-all duration-300 h-full">
                   <CardContent className="p-4 sm:p-5 flex items-start gap-3">
                     <div className="w-8 h-8 bg-forest-lime/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-forest-lime/30">
@@ -178,8 +173,7 @@ const SoudropStart = () => {
                     <p className="text-forest-text-primary text-sm sm:text-base leading-relaxed">{item}</p>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
           
           <AnimatedSection delay={500}>
@@ -212,8 +206,7 @@ const SoudropStart = () => {
           </AnimatedSection>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-            {deliverables.map((item, index) => (
-              <AnimatedSection key={index} delay={100 + index * 80}>
+            {deliverables.map((item, index) => <AnimatedSection key={index} delay={100 + index * 80}>
                 <Card className="bg-forest-bg-card border border-forest-border hover:border-forest-green-primary/50 hover:shadow-forest-glow transition-all duration-300 group h-full">
                   <CardHeader className="pb-2 p-4 sm:p-5">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-forest-primary rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
@@ -227,8 +220,7 @@ const SoudropStart = () => {
                     </CardDescription>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
         </div>
       </section>
@@ -240,11 +232,7 @@ const SoudropStart = () => {
             <AnimatedSection className="order-2 md:order-1">
               <div className="relative">
                 <div className="absolute -inset-3 bg-gradient-forest-primary rounded-2xl blur-xl opacity-20" />
-                <img 
-                  src={renanFerreira} 
-                  alt="Renan Ferreira" 
-                  className="relative rounded-xl shadow-2xl w-full border border-forest-border" 
-                />
+                <img src={renanFerreira} alt="Renan Ferreira" className="relative rounded-xl shadow-2xl w-full border border-forest-border" />
               </div>
             </AnimatedSection>
             
@@ -281,7 +269,9 @@ const SoudropStart = () => {
       <section className="py-12 sm:py-16 md:py-20 px-5 sm:px-6 md:px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-forest-hero" />
         <div className="absolute top-0 left-0 w-64 h-64 md:w-80 md:h-80 bg-forest-green-primary rounded-full blur-[120px] opacity-15 animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-64 h-64 md:w-80 md:h-80 bg-forest-lime rounded-full blur-[120px] opacity-10 animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-0 right-0 w-64 h-64 md:w-80 md:h-80 bg-forest-lime rounded-full blur-[120px] opacity-10 animate-pulse" style={{
+        animationDelay: '1s'
+      }} />
 
         <div className="container mx-auto max-w-3xl relative z-10">
           <div className="text-center space-y-6 sm:space-y-8">
@@ -306,31 +296,28 @@ const SoudropStart = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={200}>
-              <div style={{ textAlign: "center" }}>
-                <button 
-                  type="button" 
-                  className="wj-embed-button w-full sm:w-auto group" 
-                  data-webinarHash="8wgw0kty" 
-                  style={{
-                    border: "none",
-                    background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
-                    color: "rgb(255, 255, 255)",
-                    fontSize: "16px",
-                    padding: "16px 40px",
-                    boxShadow: "0 15px 50px rgba(34, 197, 94, 0.4)",
-                    borderRadius: "12px",
-                    whiteSpace: "normal",
-                    fontWeight: "700",
-                    lineHeight: "1.4",
-                    cursor: "pointer",
-                    fontFamily: "system-ui, -apple-system, sans-serif",
-                    wordBreak: "break-word",
-                    margin: "auto",
-                    transition: "all 0.3s ease",
-                    letterSpacing: "0.02em",
-                    maxWidth: "100%"
-                  }}
-                >
+              <div style={{
+              textAlign: "center"
+            }}>
+                <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
+                border: "none",
+                background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
+                color: "rgb(255, 255, 255)",
+                fontSize: "16px",
+                padding: "16px 40px",
+                boxShadow: "0 15px 50px rgba(34, 197, 94, 0.4)",
+                borderRadius: "12px",
+                whiteSpace: "normal",
+                fontWeight: "700",
+                lineHeight: "1.4",
+                cursor: "pointer",
+                fontFamily: "system-ui, -apple-system, sans-serif",
+                wordBreak: "break-word",
+                margin: "auto",
+                transition: "all 0.3s ease",
+                letterSpacing: "0.02em",
+                maxWidth: "100%"
+              }}>
                   GARANTIR VAGA <ArrowRight className="inline-block ml-2 h-5 w-5" />
                 </button>
               </div>
@@ -363,8 +350,6 @@ const SoudropStart = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default SoudropStart;
