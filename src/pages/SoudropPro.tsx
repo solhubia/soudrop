@@ -2,84 +2,56 @@ import { CheckCircle2, TrendingUp, BarChart3, Shield, Rocket, Users, Activity, A
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
-
 const SoudropPro = () => {
   useEffect(() => {
     const embedScript = document.createElement('script');
     embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
     embedScript.async = true;
     document.body.appendChild(embedScript);
-    
     return () => {
       if (document.body.contains(embedScript)) {
         document.body.removeChild(embedScript);
       }
     };
   }, []);
-
-  const deliverables = [
-    {
-      icon: TrendingUp,
-      title: "O modelo de dropshipping real",
-      description: "O que eu uso hoje para vender todos os dias — sem teoria, só prática."
-    },
-    {
-      icon: BarChart3,
-      title: "Como escolher produtos certos",
-      description: "Produtos com mais chance de girar, sem depender de viral ou sorte."
-    },
-    {
-      icon: Shield,
-      title: "Fornecedores confiáveis",
-      description: "Como encontrar bons fornecedores e fugir de roubada."
-    },
-    {
-      icon: Store,
-      title: "Operação leve e funcional",
-      description: "Como montar uma estrutura que você consegue tocar no dia a dia."
-    },
-    {
-      icon: DollarSign,
-      title: "Começar com pouco",
-      description: "Como iniciar com pouco dinheiro e ir escalando com segurança."
-    },
-    {
-      icon: Rocket,
-      title: "Sistema de vendas diárias",
-      description: "Como ativar o sistema que faz as vendas acontecerem todo dia."
-    }
-  ];
-
-  const forWho = [
-    "Quer entender, de forma séria, como começar nesse mercado que eu mostro no anúncio",
-    "Já tentou ganhar dinheiro online e está cansado de promessa vazia",
-    "Prefere ouvir a verdade: que existe caminho, mas exige método e execução",
-    "Quer um passo a passo aplicável, e não mais um vídeo motivacional"
-  ];
-
-  const behindFormula = [
-    "Como transformar esse método em uma operação que vende todos os dias",
-    "O que você realmente precisa (e o que não precisa) para começar nesse mercado",
-    "Os erros que fazem a maioria desistir antes de enxergar resultado"
-  ];
-
-  const testimonials = [
-    {
-      name: "Felipe M.",
-      text: "Achei que era mais uma promessa. Depois da aula entendi o passo a passo e fiz minhas primeiras vendas."
-    },
-    {
-      name: "Amanda S.",
-      text: "O Renan mostra o que funciona na prática, sem enrolação. Foi a primeira vez que alguém explicou esse mercado de forma clara pra mim."
-    },
-    {
-      name: "Lucas T.",
-      text: "Parecia impossível até entender o método. Hoje tenho minha operação rodando diariamente."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-black">
+  const deliverables = [{
+    icon: TrendingUp,
+    title: "O modelo de dropshipping real",
+    description: "O que eu uso hoje para vender todos os dias — sem teoria, só prática."
+  }, {
+    icon: BarChart3,
+    title: "Como escolher produtos certos",
+    description: "Produtos com mais chance de girar, sem depender de viral ou sorte."
+  }, {
+    icon: Shield,
+    title: "Fornecedores confiáveis",
+    description: "Como encontrar bons fornecedores e fugir de roubada."
+  }, {
+    icon: Store,
+    title: "Operação leve e funcional",
+    description: "Como montar uma estrutura que você consegue tocar no dia a dia."
+  }, {
+    icon: DollarSign,
+    title: "Começar com pouco",
+    description: "Como iniciar com pouco dinheiro e ir escalando com segurança."
+  }, {
+    icon: Rocket,
+    title: "Sistema de vendas diárias",
+    description: "Como ativar o sistema que faz as vendas acontecerem todo dia."
+  }];
+  const forWho = ["Quer entender, de forma séria, como começar nesse mercado que eu mostro no anúncio", "Já tentou ganhar dinheiro online e está cansado de promessa vazia", "Prefere ouvir a verdade: que existe caminho, mas exige método e execução", "Quer um passo a passo aplicável, e não mais um vídeo motivacional"];
+  const behindFormula = ["Como transformar esse método em uma operação que vende todos os dias", "O que você realmente precisa (e o que não precisa) para começar nesse mercado", "Os erros que fazem a maioria desistir antes de enxergar resultado"];
+  const testimonials = [{
+    name: "Felipe M.",
+    text: "Achei que era mais uma promessa. Depois da aula entendi o passo a passo e fiz minhas primeiras vendas."
+  }, {
+    name: "Amanda S.",
+    text: "O Renan mostra o que funciona na prática, sem enrolação. Foi a primeira vez que alguém explicou esse mercado de forma clara pra mim."
+  }, {
+    name: "Lucas T.",
+    text: "Parecia impossível até entender o método. Hoje tenho minha operação rodando diariamente."
+  }];
+  return <div className="min-h-screen bg-black">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-12 sm:pt-16 md:pt-24 pb-16 sm:pb-20 md:pb-32 px-5 sm:px-6 md:px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A1124] to-black" />
@@ -109,8 +81,28 @@ const SoudropPro = () => {
             </p>
             
             <div className="pt-3 sm:pt-4 md:pt-6">
-              <div style={{textAlign:"center"}}>
-                <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "15px", padding: "16px 20px", boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)", borderRadius: "14px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.4", cursor: "pointer", fontFamily: "system-ui, -apple-system, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease", letterSpacing: "0.01em", maxWidth: "100%"}}>Quero participar da aula gratuita sobre vendas sem estoque</button>
+              <div style={{
+              textAlign: "center"
+            }}>
+                <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{
+                border: "none",
+                background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)",
+                color: "rgb(255, 255, 255)",
+                fontSize: "15px",
+                padding: "16px 20px",
+                boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)",
+                borderRadius: "14px",
+                whiteSpace: "normal",
+                fontWeight: "700",
+                lineHeight: "1.4",
+                cursor: "pointer",
+                fontFamily: "system-ui, -apple-system, sans-serif",
+                wordBreak: "break-word",
+                margin: "auto",
+                transition: "all 0.3s ease",
+                letterSpacing: "0.01em",
+                maxWidth: "100%"
+              }}>Quero descobrir esse método passo a passo</button>
                 <script src="https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register"></script>
               </div>
               <p className="text-xs md:text-sm text-gray-500 mt-4 md:mt-5 tracking-wide">Aula online gratuita · Vagas limitadas · Não fica gravada</p>
@@ -132,14 +124,12 @@ const SoudropPro = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 md:gap-5 pt-4 sm:pt-6 md:pt-8">
-              {behindFormula.map((item, index) => (
-                <Card key={index} className="bg-[#0A1124]/80 border border-blue-900/40 hover:border-blue-600/60 transition-all duration-300">
+              {behindFormula.map((item, index) => <Card key={index} className="bg-[#0A1124]/80 border border-blue-900/40 hover:border-blue-600/60 transition-all duration-300">
                   <CardContent className="p-4 sm:p-5 md:p-7 flex items-start gap-3 sm:gap-4">
                     <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-blue-400 flex-shrink-0 mt-0.5" />
                     <p className="text-white text-[15px] sm:text-sm md:text-base leading-relaxed text-left">{item}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -158,14 +148,12 @@ const SoudropPro = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-5 max-w-4xl mx-auto mb-6 sm:mb-8 md:mb-12">
-            {forWho.map((item, index) => (
-              <Card key={index} className="bg-[#0A1124]/80 border border-blue-900/40 hover:border-blue-600/60 transition-all duration-300">
+            {forWho.map((item, index) => <Card key={index} className="bg-[#0A1124]/80 border border-blue-900/40 hover:border-blue-600/60 transition-all duration-300">
                 <CardContent className="p-4 sm:p-5 md:p-7 flex items-start gap-3 sm:gap-4 md:gap-5">
                   <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-blue-400 flex-shrink-0 mt-0.5" />
                   <p className="text-white text-[15px] sm:text-sm md:text-base leading-relaxed">{item}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
           
           <Card className="bg-red-950/30 border border-red-900/40 max-w-2xl mx-auto">
@@ -192,8 +180,7 @@ const SoudropPro = () => {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
-            {deliverables.map((item, index) => (
-              <Card key={index} className="bg-[#0A1124]/80 border border-blue-900/40 hover:border-blue-600/70 transition-all duration-300 group">
+            {deliverables.map((item, index) => <Card key={index} className="bg-[#0A1124]/80 border border-blue-900/40 hover:border-blue-600/70 transition-all duration-300 group">
                 <CardHeader className="pb-2 sm:pb-3 md:pb-4 p-4 sm:p-5 md:p-6">
                   <div className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-blue-950/70 rounded-xl flex items-center justify-center mb-3 sm:mb-4 md:mb-5 group-hover:scale-105 transition-transform duration-300 border border-blue-800/50">
                     <item.icon className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-blue-400" />
@@ -205,8 +192,7 @@ const SoudropPro = () => {
                     {item.description}
                   </CardDescription>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -224,8 +210,7 @@ const SoudropPro = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-[#0A1124]/80 border border-blue-800/50 hover:border-blue-600/70 transition-all duration-300">
+            {testimonials.map((testimonial, index) => <Card key={index} className="bg-[#0A1124]/80 border border-blue-800/50 hover:border-blue-600/70 transition-all duration-300">
                 <CardContent className="p-4 sm:p-5 md:p-8">
                   <div className="flex items-center gap-3 md:gap-4 mb-4 sm:mb-5 md:mb-7">
                     <div className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-blue-950/80 rounded-full flex items-center justify-center border border-blue-700/60">
@@ -238,8 +223,7 @@ const SoudropPro = () => {
                   </div>
                   <p className="text-gray-300 leading-relaxed italic text-[14px] sm:text-sm md:text-[15px]">"{testimonial.text}"</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* Escassez */}
@@ -338,8 +322,28 @@ const SoudropPro = () => {
           </p>
 
           <div className="pt-2 sm:pt-3 md:pt-4">
-            <div style={{textAlign:"center"}}>
-              <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "15px", padding: "16px 20px", boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)", borderRadius: "14px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.4", cursor: "pointer", fontFamily: "system-ui, -apple-system, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease", letterSpacing: "0.01em", maxWidth: "100%"}}>Quero participar da aula e entender esse mercado</button>
+            <div style={{
+            textAlign: "center"
+          }}>
+              <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{
+              border: "none",
+              background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)",
+              color: "rgb(255, 255, 255)",
+              fontSize: "15px",
+              padding: "16px 20px",
+              boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)",
+              borderRadius: "14px",
+              whiteSpace: "normal",
+              fontWeight: "700",
+              lineHeight: "1.4",
+              cursor: "pointer",
+              fontFamily: "system-ui, -apple-system, sans-serif",
+              wordBreak: "break-word",
+              margin: "auto",
+              transition: "all 0.3s ease",
+              letterSpacing: "0.01em",
+              maxWidth: "100%"
+            }}>Quero participar da aula e entender esse mercado</button>
             </div>
             <p className="text-xs md:text-sm text-gray-500 mt-4 md:mt-5 tracking-wide">Aula gratuita • Vagas limitadas • Não fica gravada</p>
           </div>
@@ -354,8 +358,6 @@ const SoudropPro = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default SoudropPro;
