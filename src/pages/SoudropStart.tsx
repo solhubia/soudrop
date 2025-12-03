@@ -46,82 +46,76 @@ const SoudropStart = () => {
   return (
     <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-12 sm:pt-16 md:pt-20 pb-16 sm:pb-20 md:pb-28 px-5 sm:px-6 md:px-4">
+      <section className="relative overflow-hidden min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
         <div className="absolute inset-0 bg-gradient-forest-hero" />
         <div className="absolute top-20 left-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-green-primary rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-pulse" style={{ animationDuration: '4s' }} />
         <div className="absolute bottom-20 right-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-lime rounded-full mix-blend-screen filter blur-[120px] opacity-10 animate-pulse" style={{ animationDuration: '6s' }} />
         
-        <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="text-center space-y-5 sm:space-y-6 md:space-y-8">
-            <AnimatedSection delay={0}>
-              <div className="inline-block">
-                <span className="px-4 md:px-6 py-2 md:py-2.5 bg-forest-bg-card text-forest-green-primary rounded-full text-xs md:text-sm font-semibold border border-forest-green-primary/30 tracking-wider uppercase backdrop-blur-sm">
-                  🔴 Aula Gratuita Ao Vivo
-                </span>
-              </div>
-            </AnimatedSection>
-            
-            <AnimatedSection delay={100}>
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-forest-text-primary leading-[1.25] tracking-tight max-w-3xl mx-auto">
-                descubra como <span className="bg-gradient-forest-text bg-clip-text text-transparent">vender sem estoque</span> no método que fazem até iniciantes{" "}
-                <span className="text-forest-lime">lucrarem mais de 10 mil reais por mês</span>{" "}
-                e viajarem para onde quiser enquanto tem uma operação que trabalha sozinha{" "}
-                <span className="bg-gradient-forest-text bg-clip-text text-transparent">sem investir em estoque</span>
-              </h1>
-            </AnimatedSection>
-            
-            <AnimatedSection delay={200}>
-              <p className="text-sm sm:text-base md:text-lg text-forest-text-secondary max-w-2xl mx-auto leading-relaxed">
-                Eu não nasci sabendo fazer isso. Aprendi passo a passo como usar a internet para vender produtos sem ter estoque parado, sem investir pesado e sem depender de sorte. Hoje, consigo rodar uma operação enxuta, que gera vendas todos os dias enquanto eu sigo vivendo minha vida normalmente.
-              </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={300}>
-              <p className="text-xs sm:text-sm md:text-base text-forest-text-secondary/80 max-w-xl mx-auto">
-                Na aula ao vivo, eu vou te mostrar como esse método funciona na prática, para que você possa aplicar no seu ritmo e construir uma renda real vendendo sem estoque. Zero promessa milagrosa, só estratégia que funciona.
-              </p>
-            </AnimatedSection>
-            
-            <AnimatedSection delay={400}>
-              <div className="pt-3 sm:pt-4 md:pt-6">
-                <div style={{ textAlign: "center" }}>
-                  <button 
-                    type="button" 
-                    className="wj-embed-button w-full sm:w-auto group" 
-                    data-webinarHash="8wgw0kty" 
-                    style={{
-                      border: "none",
-                      background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
-                      color: "rgb(255, 255, 255)",
-                      fontSize: "14px",
-                      padding: "14px 28px",
-                      boxShadow: "0 15px 50px rgba(34, 197, 94, 0.35)",
-                      borderRadius: "12px",
-                      whiteSpace: "normal",
-                      fontWeight: "700",
-                      lineHeight: "1.4",
-                      cursor: "pointer",
-                      fontFamily: "system-ui, -apple-system, sans-serif",
-                      wordBreak: "break-word",
-                      margin: "auto",
-                      transition: "all 0.3s ease",
-                      letterSpacing: "0.02em",
-                      maxWidth: "100%"
-                    }}
-                  >
-                    GARANTIR VAGA <ArrowRight className="inline-block ml-2 h-4 w-4" />
-                  </button>
+        <div className="relative z-10 w-full max-w-3xl mx-auto">
+          <AnimatedSection delay={0}>
+            <Card className="bg-forest-bg-card/80 backdrop-blur-md border border-forest-border/50 shadow-2xl shadow-forest-green-primary/10 rounded-2xl">
+              <CardContent className="p-6 sm:p-8 md:p-10 lg:p-12 text-center space-y-5 sm:space-y-6">
+                <div className="inline-block">
+                  <span className="px-4 md:px-6 py-2 md:py-2.5 bg-forest-bg-main/50 text-forest-green-primary rounded-full text-xs md:text-sm font-semibold border border-forest-green-primary/30 tracking-wider uppercase backdrop-blur-sm">
+                    🔴 Aula Gratuita Ao Vivo
+                  </span>
                 </div>
-                <p className="text-xs text-forest-text-secondary mt-4 tracking-wide flex items-center justify-center gap-2 flex-wrap">
-                  <span className="flex items-center gap-1.5"><span className="w-2 h-2 bg-forest-green-primary rounded-full animate-pulse"></span>Ao vivo</span>
-                  <span>·</span>
-                  <span>Vagas limitadas</span>
-                  <span>·</span>
-                  <span>Não fica gravada</span>
+                
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-forest-text-primary leading-[1.25] tracking-tight">
+                  descubra como <span className="bg-gradient-forest-text bg-clip-text text-transparent">vender sem estoque</span> no método que fazem até iniciantes{" "}
+                  <span className="text-forest-lime">lucrarem mais de 10 mil reais por mês</span>{" "}
+                  e viajarem para onde quiser enquanto tem uma operação que trabalha sozinha{" "}
+                  <span className="bg-gradient-forest-text bg-clip-text text-transparent">sem investir em estoque</span>
+                </h1>
+                
+                <p className="text-sm sm:text-base md:text-lg text-forest-text-secondary leading-relaxed max-w-2xl mx-auto">
+                  Eu não nasci sabendo fazer isso. Aprendi passo a passo como usar a internet para vender produtos sem ter estoque parado, sem investir pesado e sem depender de sorte. Hoje, consigo rodar uma operação enxuta, que gera vendas todos os dias enquanto eu sigo vivendo minha vida normalmente.
                 </p>
-              </div>
-            </AnimatedSection>
-          </div>
+
+                <p className="text-xs sm:text-sm md:text-base text-forest-text-secondary/80 max-w-xl mx-auto">
+                  Na aula ao vivo, eu vou te mostrar como esse método funciona na prática, para que você possa aplicar no seu ritmo e construir uma renda real vendendo sem estoque. Zero promessa milagrosa, só estratégia que funciona.
+                </p>
+                
+                <div className="pt-2 sm:pt-4">
+                  <div style={{ textAlign: "center" }}>
+                    <button 
+                      type="button" 
+                      className="wj-embed-button w-full sm:w-auto group" 
+                      data-webinarHash="8wgw0kty" 
+                      style={{
+                        border: "none",
+                        background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
+                        color: "rgb(255, 255, 255)",
+                        fontSize: "14px",
+                        padding: "14px 28px",
+                        boxShadow: "0 15px 50px rgba(34, 197, 94, 0.35)",
+                        borderRadius: "12px",
+                        whiteSpace: "normal",
+                        fontWeight: "700",
+                        lineHeight: "1.4",
+                        cursor: "pointer",
+                        fontFamily: "system-ui, -apple-system, sans-serif",
+                        wordBreak: "break-word",
+                        margin: "auto",
+                        transition: "all 0.3s ease",
+                        letterSpacing: "0.02em",
+                        maxWidth: "100%"
+                      }}
+                    >
+                      GARANTIR VAGA <ArrowRight className="inline-block ml-2 h-4 w-4" />
+                    </button>
+                  </div>
+                  <p className="text-xs text-forest-text-secondary mt-4 tracking-wide flex items-center justify-center gap-2 flex-wrap">
+                    <span className="flex items-center gap-1.5"><span className="w-2 h-2 bg-forest-green-primary rounded-full animate-pulse"></span>Ao vivo</span>
+                    <span>·</span>
+                    <span>Vagas limitadas</span>
+                    <span>·</span>
+                    <span>Não fica gravada</span>
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
         </div>
       </section>
 
