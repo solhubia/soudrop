@@ -68,8 +68,8 @@ const SoudropStart = () => {
                 
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-forest-text-primary leading-[1.25] tracking-tight">
                   descubra como <span className="bg-gradient-forest-text bg-clip-text text-transparent">vender sem estoque</span> no método que fazem até iniciantes{" "}
-                  <span className="text-forest-lime">lucrarem mais de 10 mil reais por mês</span>{" "}
-                  e viajarem para onde quiser enquanto tem uma operação que trabalha sozinha{" "}
+                  <span className="text-forest-lime">ganharem mais de 10 mil reais por mês</span>{" "}
+                  e viajar onde quiser com uma operação que trabalha sozinha{" "}
                   <span className="bg-gradient-forest-text bg-clip-text text-transparent">sem investir em estoque</span>
                 </h1>
                 
