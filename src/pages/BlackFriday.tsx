@@ -44,11 +44,11 @@ const BlackFriday = () => {
               
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter">
                 <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)] text-9xl font-extrabold">
-                  BLACK
+                  A VIRADA 
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">
-                  FRIDAY
+                  DE ANO 
                 </span>
               </h1>
               
