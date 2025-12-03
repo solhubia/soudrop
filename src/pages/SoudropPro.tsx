@@ -102,7 +102,7 @@ const SoudropPro = () => {
                 transition: "all 0.3s ease",
                 letterSpacing: "0.01em",
                 maxWidth: "100%"
-              }}>Garantir Vaga</button>
+              }}>Quero garantir minha vaga pra vender sem estoque</button>
                 <script src="https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register"></script>
               </div>
               <p className="text-xs md:text-sm text-gray-500 mt-4 md:mt-5 tracking-wide">Aula online gratuita · Vagas limitadas · Não fica gravada</p>
@@ -343,7 +343,7 @@ const SoudropPro = () => {
               transition: "all 0.3s ease",
               letterSpacing: "0.01em",
               maxWidth: "100%"
-            }}>Garantir Vaga</button>
+            }}>Quero garantir minha vaga pra vender sem estoque</button>
             </div>
             <p className="text-xs md:text-sm text-gray-500 mt-4 md:mt-5 tracking-wide">Aula gratuita • Vagas limitadas • Não fica gravada</p>
           </div>
