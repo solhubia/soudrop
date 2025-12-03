@@ -81,26 +81,28 @@ const SoudropElite = () => {
             
             <AnimatedSection delay={400}>
               <div className="pt-4 sm:pt-6 md:pt-8">
-                <div style={{ textAlign: "center" }}>
+                <div style={{
+                textAlign: "center"
+              }}>
                   <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
-                    border: "none",
-                    background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
-                    color: "rgb(0, 0, 0)",
-                    fontSize: "16px",
-                    padding: "18px 32px",
-                    boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
-                    borderRadius: "16px",
-                    whiteSpace: "normal",
-                    fontWeight: "700",
-                    lineHeight: "1.4",
-                    cursor: "pointer",
-                    fontFamily: "system-ui, -apple-system, sans-serif",
-                    wordBreak: "break-word",
-                    margin: "auto",
-                    transition: "all 0.3s ease",
-                    letterSpacing: "0.02em",
-                    maxWidth: "100%"
-                  }}>GARANTIR MINHA VAGA AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
+                  border: "none",
+                  background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
+                  color: "rgb(0, 0, 0)",
+                  fontSize: "16px",
+                  padding: "18px 32px",
+                  boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
+                  borderRadius: "16px",
+                  whiteSpace: "normal",
+                  fontWeight: "700",
+                  lineHeight: "1.4",
+                  cursor: "pointer",
+                  fontFamily: "system-ui, -apple-system, sans-serif",
+                  wordBreak: "break-word",
+                  margin: "auto",
+                  transition: "all 0.3s ease",
+                  letterSpacing: "0.02em",
+                  maxWidth: "100%"
+                }}>GARANTIR VAGA    <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
                 </div>
                 <p className="text-xs md:text-sm text-gray-500 mt-5 md:mt-6 tracking-wide flex items-center justify-center gap-3">
                   <span className="flex items-center gap-1.5"><span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>Método ao vivo</span>
@@ -336,26 +338,28 @@ const SoudropElite = () => {
                   </div>
                 </div>
 
-                <div style={{ textAlign: 'center' }}>
+                <div style={{
+                textAlign: 'center'
+              }}>
                   <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{
-                    border: "none",
-                    background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
-                    color: "rgb(0, 0, 0)",
-                    fontSize: "16px",
-                    padding: "18px 32px",
-                    boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
-                    borderRadius: "16px",
-                    whiteSpace: "normal",
-                    fontWeight: "700",
-                    lineHeight: "1.4",
-                    cursor: "pointer",
-                    fontFamily: "system-ui, -apple-system, sans-serif",
-                    wordBreak: "break-word",
-                    margin: "auto",
-                    transition: "all 0.3s ease",
-                    letterSpacing: "0.02em",
-                    maxWidth: "100%"
-                  }}>GARANTIR MINHA VAGA AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
+                  border: "none",
+                  background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
+                  color: "rgb(0, 0, 0)",
+                  fontSize: "16px",
+                  padding: "18px 32px",
+                  boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
+                  borderRadius: "16px",
+                  whiteSpace: "normal",
+                  fontWeight: "700",
+                  lineHeight: "1.4",
+                  cursor: "pointer",
+                  fontFamily: "system-ui, -apple-system, sans-serif",
+                  wordBreak: "break-word",
+                  margin: "auto",
+                  transition: "all 0.3s ease",
+                  letterSpacing: "0.02em",
+                  maxWidth: "100%"
+                }}>GARANTIR MINHA VAGA AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
                 </div>
 
                 <p className="mt-5 sm:mt-6 text-gray-500 text-xs sm:text-sm">
@@ -382,26 +386,28 @@ const SoudropElite = () => {
             sem estoque e com método validado.
           </p>
           
-          <div style={{ textAlign: 'center' }}>
+          <div style={{
+          textAlign: 'center'
+        }}>
             <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{
-              border: "none",
-              background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
-              color: "rgb(0, 0, 0)",
-              fontSize: "16px",
-              padding: "18px 32px",
-              boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
-              borderRadius: "16px",
-              whiteSpace: "normal",
-              fontWeight: "700",
-              lineHeight: "1.4",
-              cursor: "pointer",
-              fontFamily: "system-ui, -apple-system, sans-serif",
-              wordBreak: "break-word",
-              margin: "auto",
-              transition: "all 0.3s ease",
-              letterSpacing: "0.02em",
-              maxWidth: "100%"
-            }}>GARANTIR MINHA VAGA AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
+            border: "none",
+            background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
+            color: "rgb(0, 0, 0)",
+            fontSize: "16px",
+            padding: "18px 32px",
+            boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
+            borderRadius: "16px",
+            whiteSpace: "normal",
+            fontWeight: "700",
+            lineHeight: "1.4",
+            cursor: "pointer",
+            fontFamily: "system-ui, -apple-system, sans-serif",
+            wordBreak: "break-word",
+            margin: "auto",
+            transition: "all 0.3s ease",
+            letterSpacing: "0.02em",
+            maxWidth: "100%"
+          }}>GARANTIR MINHA VAGA AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
           </div>
 
           <p className="mt-6 sm:mt-8 text-elite-gold font-semibold text-base sm:text-lg">
