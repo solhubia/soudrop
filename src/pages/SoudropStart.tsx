@@ -251,7 +251,7 @@ const SoudropStart = () => {
               </h2>
               
               <p className="text-sm sm:text-base text-forest-text-secondary leading-relaxed">
-                Anos importando da China e vendendo nos principais marketplaces: <span className="text-forest-green-primary font-semibold">Mercado Livre, Shopee, Amazon e Magalu</span>.
+                Anos construindo operações de dropshipping e vendendo nos principais marketplaces: Mercado Livre, Shopee, Amazon e Magalu — aplicando métodos simples que qualquer iniciante consegue replicar. <span className="text-forest-green-primary font-semibold">Mercado Livre, Shopee, Amazon e Magalu</span>.
               </p>
 
               <div className="bg-forest-bg-card border border-forest-green-primary/30 rounded-xl p-4">
