@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield } from "lucide-react";
+import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import soudropLogo from "@/assets/soudrop-logo-oficial.png";
+import { AnimatedSection } from "@/components/AnimatedSection";
 const SoudropElite = () => {
   useEffect(() => {
     // Script do botão embed
@@ -43,53 +44,77 @@ const SoudropElite = () => {
     description: "Acesso a materiais de apoio, tirando dúvidas e uma comunidade de pessoas que estão no mesmo caminho que você."
   }];
   const paraQuemE = ["Quer ter uma renda extra trabalhando de casa", "Busca uma fonte de renda principal sem sair de casa", "Não tem capital para investir em estoque", "Quer flexibilidade de horários para trabalhar quando puder", "Tem disposição para aprender algo novo e aplicar"];
-  return <div className="min-h-screen bg-elite-black text-elite-white">
-      {/* Hero Premium */}
-      <section className="relative flex items-center justify-center bg-gradient-elite-bg px-5 py-12 md:py-16">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_hsl(45_100%_51%_/_0.1),_transparent_50%)]" />
+  return <div className="min-h-screen bg-black overflow-x-hidden">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden pt-16 sm:pt-20 md:pt-28 pb-20 sm:pb-24 md:pb-36 px-5 sm:px-6 md:px-4">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A1124] to-black" />
+        <div className="absolute top-20 left-10 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-elite-gold rounded-full mix-blend-screen filter blur-[150px] opacity-15 animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute bottom-20 right-10 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-yellow-400 rounded-full mix-blend-screen filter blur-[150px] opacity-10 animate-pulse" style={{ animationDuration: '6s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-elite-gold rounded-full mix-blend-screen filter blur-[200px] opacity-5" />
         
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 border border-elite-gold/30 rounded-full bg-elite-gold/5">
-            <Crown className="w-4 h-4 text-elite-gold" />
-            <span className="text-elite-gold text-xs font-medium uppercase tracking-wider">Método Sem Estoque</span>
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <div className="text-center space-y-6 sm:space-y-8 md:space-y-12">
+            <AnimatedSection delay={0}>
+              <div className="inline-block">
+                <span className="px-5 md:px-7 py-2.5 md:py-3 bg-yellow-950/80 text-elite-gold rounded-full text-xs md:text-sm font-semibold border border-elite-gold/50 tracking-wider uppercase backdrop-blur-sm shadow-lg shadow-yellow-900/20">
+                  🔴 Método Sem Estoque
+                </span>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={100}>
+              <h1 className="text-[1.6rem] sm:text-3xl md:text-4xl lg:text-[3rem] font-bold text-white leading-[1.25] sm:leading-[1.2] tracking-tight max-w-4xl mx-auto">
+                Descubra como <span className="text-elite-gold drop-shadow-[0_0_20px_rgba(251,191,36,0.5)]">vender sem estoque</span> no método que fazem até iniciantes{" "}
+                <span className="text-green-400 drop-shadow-[0_0_20px_rgba(74,222,128,0.5)]">lucrarem mais de 100 mil reais por mês</span>{" "}
+                sem <span className="text-elite-gold drop-shadow-[0_0_20px_rgba(251,191,36,0.5)]">investir em estoque</span>
+              </h1>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={200}>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                O método simples para vender online sem investir em estoque — inclusive produtos comuns, como uma simples tomada — e lucrar mais de R$100.000 por mês.
+              </p>
+            </AnimatedSection>
+
+            <AnimatedSection delay={300}>
+              <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto">
+                Garanta sua vaga e faça suas primeiras vendas com produtos comuns.
+              </p>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={400}>
+              <div className="pt-4 sm:pt-6 md:pt-8">
+                <div style={{ textAlign: "center" }}>
+                  <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
+                    border: "none",
+                    background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
+                    color: "rgb(0, 0, 0)",
+                    fontSize: "16px",
+                    padding: "18px 32px",
+                    boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
+                    borderRadius: "16px",
+                    whiteSpace: "normal",
+                    fontWeight: "700",
+                    lineHeight: "1.4",
+                    cursor: "pointer",
+                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    wordBreak: "break-word",
+                    margin: "auto",
+                    transition: "all 0.3s ease",
+                    letterSpacing: "0.02em",
+                    maxWidth: "100%"
+                  }}>GARANTIR MINHA VAGA AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
+                </div>
+                <p className="text-xs md:text-sm text-gray-500 mt-5 md:mt-6 tracking-wide flex items-center justify-center gap-3">
+                  <span className="flex items-center gap-1.5"><span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>Método ao vivo</span>
+                  <span>·</span>
+                  <span>Vagas limitadas</span>
+                  <span>·</span>
+                  <span>Não fica disponível depois</span>
+                </p>
+              </div>
+            </AnimatedSection>
           </div>
-
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-            Descubra como vender sem estoque no método que fazem até iniciantes lucrarem mais de 100 mil reais por mês
-          </h1>
-
-          <p className="text-base md:text-lg text-elite-white/80 mb-4 max-w-3xl mx-auto">
-            O método simples para vender online sem investir em estoque — inclusive produtos comuns, como uma simples tomada — e lucrar mais de R$100.000 por mês.
-          </p>
-
-          <p className="text-sm md:text-base text-elite-gold font-semibold mb-6">
-            👉 Garanta sua vaga e faça suas primeiras vendas com produtos comuns.
-          </p>
-
-          <div style={{ textAlign: 'center' }}>
-            <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{
-              border: '2px solid rgba(0, 0, 0, 0.5)',
-              background: 'rgba(41, 182, 246, 0.95)',
-              color: 'rgb(255, 255, 255)',
-              fontSize: '18px',
-              padding: '14px 50px',
-              boxShadow: 'none',
-              borderRadius: '4px',
-              whiteSpace: 'normal',
-              fontWeight: '700',
-              lineHeight: '1.3',
-              cursor: 'pointer',
-              fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-              wordBreak: 'break-word',
-              margin: 'auto'
-            }}>
-              GARANTIR MINHA VAGA AGORA
-            </button>
-          </div>
-
-          <p className="mt-4 text-elite-white/50 text-xs">
-            • Método ao vivo · Vagas limitadas · Não fica disponível depois
-          </p>
         </div>
       </section>
 
