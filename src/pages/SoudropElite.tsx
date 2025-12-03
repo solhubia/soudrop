@@ -55,25 +55,24 @@ const SoudropElite = () => {
           
           <div className="mb-6 inline-flex items-center gap-2 px-6 py-2 border border-elite-gold/30 rounded-full bg-elite-gold/5">
             <Crown className="w-5 h-5 text-elite-gold" />
-            <span className="text-elite-gold text-sm font-medium uppercase tracking-wider">Trabalhe de Casa</span>
+            <span className="text-elite-gold text-sm font-medium uppercase tracking-wider">Método Sem Estoque</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            ATENÇÃO: se você acha que precisa de um "produto genial" para faturar alto, você está perdendo dinheiro.
+            descubra como vender sem estoque no método que fazem até iniciantes lucrarem mais de 100 mil reais por mês sem investir em estoque
           </h1>
 
           <div className="space-y-6 text-xl md:text-2xl text-elite-white/90 mb-8 max-w-4xl mx-auto">
             <p className="font-bold">
-              Eu cheguei a 100 mil reais vendendo tomada.<br />
-              Sim, tomada. Nada mirabolante.
+              Descubra o método simples que iniciantes usam para vender online sem investir em estoque — inclusive produtos comuns, como uma simples tomada — e ter um lucro de mais de R$100.000 por mês.
             </p>
 
             <p className="text-lg md:text-xl text-elite-white/80">
-              Na aula, eu vou abrir o jogo e te mostrar como pensar produto, preço, anúncio e escala para transformar um item simples em uma operação lucrativa.
+              Vou te mostrar, na prática, como escolher produtos simples, estruturar preço, criar anúncios que vendem todos os dias e montar uma operação enxuta de vendas sem estoque — mesmo começando do zero.
             </p>
 
             <p className="text-lg md:text-xl font-bold text-elite-gold">
-              👉 Entre na aula e descubra como buscar seus primeiros 100K com produtos comuns.
+              👉 Garanta sua vaga e descubra como usar esse método para fazer suas primeiras vendas com produtos comuns.
             </p>
           </div>
 
@@ -96,12 +95,12 @@ const SoudropElite = () => {
             wordBreak: 'break-word',
             margin: 'auto'
           }}>
-              COMEÇAR AGORA
+              GARANTIR MINHA VAGA AGORA
             </button>
           </div>
 
           <p className="mt-6 text-elite-white/50 text-sm">
-            Renda extra ou principal
+            • Método ao vivo · Vagas limitadas · Não fica disponível depois
           </p>
         </div>
       </section>
