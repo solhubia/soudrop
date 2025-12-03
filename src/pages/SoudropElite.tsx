@@ -47,7 +47,7 @@ const SoudropElite = () => {
   return <div className="min-h-screen bg-black overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-16 sm:pt-20 md:pt-28 pb-20 sm:pb-24 md:pb-36 px-5 sm:px-6 md:px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A1124] to-black" />
+        <div className="absolute inset-0 bg-black" />
         <div className="absolute top-20 left-10 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-elite-gold rounded-full mix-blend-screen filter blur-[150px] opacity-15 animate-pulse" style={{ animationDuration: '4s' }} />
         <div className="absolute bottom-20 right-10 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-yellow-400 rounded-full mix-blend-screen filter blur-[150px] opacity-10 animate-pulse" style={{ animationDuration: '6s' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-elite-gold rounded-full mix-blend-screen filter blur-[200px] opacity-5" />
