@@ -68,9 +68,7 @@ const SoudropElite = () => {
             </AnimatedSection>
             
             <AnimatedSection delay={200}>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                O método simples para vender online sem investir em estoque — inclusive produtos comuns, como uma simples tomada — e lucrar mais de R$100.000 por mês.
-              </p>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">O método simples para vender online sem investir em estoque inclusive produtos comuns, como uma simples tomada e lucrar mais de R$100.000 por mês.</p>
             </AnimatedSection>
 
             <AnimatedSection delay={300}>
