@@ -58,7 +58,7 @@ const BlackFriday = () => {
           {/* Headline */}
           <h2 className="text-2xl md:text-3xl leading-tight max-w-4xl mx-auto px-4 font-sans font-extrabold lg:text-5xl">
             A aula que vai mostrar como fazer parte do{" "}
-            <span className="text-primary">1% das pessoas</span> que vão lucrar com as oportunidades do Ano Novo, 
+            <span className="text-primary">1% das pessoas</span> que ganham dinheiro na Black Friday, 
             com uma{" "}
             <span className="text-destructive">condição histórica</span>{" "}
             (a melhor já liberada) de acesso à SouDrop.
