@@ -94,7 +94,7 @@ const SoudropStart = () => {
                 width: '100%',
                 maxWidth: '500px'
               }}>
-                  Quero garantir minha vaga na aula ao vivo
+                  GARANTIR VAGA
                 </button>
               </div>
             </div>
