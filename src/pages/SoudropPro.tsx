@@ -58,9 +58,9 @@ const SoudropPro = () => {
   ];
 
   const behindFormula = [
-    "Como transformar essa ideia em uma operação que vende todos os dias",
-    "O que você precisa ter (e o que não precisa) para começar nesse mercado",
-    "Por que a maioria faz errado e desiste antes de enxergar resultado"
+    "Como transformar esse método em uma operação que vende todos os dias",
+    "O que você realmente precisa (e o que não precisa) para começar nesse mercado",
+    "Os erros que fazem a maioria desistir antes de enxergar resultado"
   ];
 
   const testimonials = [
@@ -105,15 +105,15 @@ const SoudropPro = () => {
             </p>
 
             <p className="text-base text-gray-500 max-w-2xl mx-auto">
-              Se você quer dinheiro fácil, essa página não é pra você. Se quer entender o caminho real, continua lendo.
+              Se você quer entender na prática como esse método funciona, dá o próximo passo.
             </p>
             
             <div className="pt-6">
               <div style={{textAlign:"center"}}>
-                <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "18px", padding: "22px 56px", boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)", borderRadius: "14px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "system-ui, -apple-system, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease", letterSpacing: "0.01em"}}>Quero ver como essa "fórmula" realmente funciona</button>
+                <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{border: "none", background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)", color: "rgb(255, 255, 255)", fontSize: "18px", padding: "22px 56px", boxShadow: "0 12px 40px rgba(59, 130, 246, 0.35)", borderRadius: "14px", whiteSpace: "normal", fontWeight: "700", lineHeight: "1.3", cursor: "pointer", fontFamily: "system-ui, -apple-system, sans-serif", wordBreak: "break-word", margin: "auto", transition: "all 0.3s ease", letterSpacing: "0.01em"}}>Quero participar da aula gratuita sobre vendas sem estoque</button>
                 <script src="https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register"></script>
               </div>
-              <p className="text-sm text-gray-500 mt-5 tracking-wide">Aula gratuita • Vagas limitadas • Não fica gravada</p>
+              <p className="text-sm text-gray-500 mt-5 tracking-wide">Aula online gratuita · Vagas limitadas · Não fica gravada</p>
             </div>
           </div>
         </div>
@@ -124,11 +124,11 @@ const SoudropPro = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center space-y-8">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5">
-              O que tem por trás dessa <span className="text-blue-400">"fórmula"</span> que eu falei no anúncio?
+              O que tem por trás desse <span className="text-blue-400">método de vender sem estoque</span>?
             </h2>
             
             <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Aqui não tem segredo escondido: por trás dessa "fórmula" está um modelo de negócio chamado <span className="text-white font-semibold">dropshipping</span>. É uma forma de vender produtos pela internet sem ter estoque em casa, usando fornecedores e uma estrutura simples. O que eu vou te mostrar na aula é exatamente COMO fazer isso do jeito certo, sem ilusão e sem depender de sorte.
+              Aqui não tem truque escondido. Por trás desse método existe um modelo de negócio em que você vende produtos pela internet sem precisar ter estoque em casa, usando fornecedores e uma estrutura simples. Na aula, eu vou te mostrar passo a passo COMO aplicar isso do jeito certo, sem ilusão e sem depender de sorte.
             </p>
 
             <div className="grid md:grid-cols-3 gap-5 pt-8">
