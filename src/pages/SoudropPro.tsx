@@ -90,7 +90,9 @@ const SoudropPro = () => {
 
             <AnimatedSection delay={300}>
               <p className="text-sm md:text-base max-w-2xl mx-auto text-primary-foreground">
-                Se você quer entender na prática como esse método funciona, dá o próximo passo.
+                clique no botão abaixo e escolha um horário
+
+
               </p>
             </AnimatedSection>
             
