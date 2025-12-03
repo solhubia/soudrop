@@ -77,7 +77,10 @@ const SoudropStart = () => {
 
                 <p className="text-xs sm:text-sm md:text-base text-forest-text-secondary/80 max-w-xl mx-auto">Descubra o método simples que revela a estratégia usada por iniciantes para vender online sem investir em estoque e 1er um lucro de mais de R$10.000 Por mês.</p>
                 
-                <div className="pt-2 sm:pt-4">
+              <div className="pt-2 sm:pt-4">
+                  <p className="text-white text-sm sm:text-base font-medium mb-3 text-center">
+                    clique no botão abaixo e escolha um horário
+                  </p>
                   <div style={{
                   textAlign: "center"
                 }}>
