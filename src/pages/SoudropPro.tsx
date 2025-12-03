@@ -95,12 +95,13 @@ const SoudropPro = () => {
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-[1.2] tracking-tight max-w-4xl mx-auto">
-              A tal "fórmula mágica" pra fazer 10 mil por mês na internet…{" "}
-              <span className="text-blue-400">sem mágica nenhuma.</span>
+              Descubra como vender sem estoque no método que fazem até iniciantes{" "}
+              <span className="text-blue-400">lucrarem mais de 10 mil reais por mês</span>{" "}
+              sem investir em estoque
             </h1>
             
             <p className="text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Se você veio do meu anúncio, é isso que eu vou te mostrar: o passo a passo real que eu uso para construir uma operação que vende todos os dias. Nada de truque, nada de esquema. É um método claro, que qualquer pessoa dedicada consegue aplicar para começar nesse mercado do zero.
+              Descubra o método simples que revela a estratégia usada por iniciantes para vender online sem investir em estoque e ter um lucro de mais de R$10.000 por mês.
             </p>
 
             <p className="text-base text-gray-500 max-w-2xl mx-auto">
