@@ -45,61 +45,49 @@ const SoudropElite = () => {
   const paraQuemE = ["Quer ter uma renda extra trabalhando de casa", "Busca uma fonte de renda principal sem sair de casa", "Não tem capital para investir em estoque", "Quer flexibilidade de horários para trabalhar quando puder", "Tem disposição para aprender algo novo e aplicar"];
   return <div className="min-h-screen bg-elite-black text-elite-white">
       {/* Hero Premium */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-elite-bg px-6 py-20">
+      <section className="relative flex items-center justify-center bg-gradient-elite-bg px-5 py-12 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_hsl(45_100%_51%_/_0.1),_transparent_50%)]" />
         
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <div className="mb-8 flex justify-center">
-            
-          </div>
-          
-          <div className="mb-6 inline-flex items-center gap-2 px-6 py-2 border border-elite-gold/30 rounded-full bg-elite-gold/5">
-            <Crown className="w-5 h-5 text-elite-gold" />
-            <span className="text-elite-gold text-sm font-medium uppercase tracking-wider">Método Sem Estoque</span>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <div className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 border border-elite-gold/30 rounded-full bg-elite-gold/5">
+            <Crown className="w-4 h-4 text-elite-gold" />
+            <span className="text-elite-gold text-xs font-medium uppercase tracking-wider">Método Sem Estoque</span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            descubra como vender sem estoque no método que fazem até iniciantes lucrarem mais de 100 mil reais por mês sem investir em estoque
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+            Descubra como vender sem estoque no método que fazem até iniciantes lucrarem mais de 100 mil reais por mês
           </h1>
 
-          <div className="space-y-6 text-xl md:text-2xl text-elite-white/90 mb-8 max-w-4xl mx-auto">
-            <p className="font-bold">
-              Descubra o método simples que iniciantes usam para vender online sem investir em estoque — inclusive produtos comuns, como uma simples tomada — e ter um lucro de mais de R$100.000 por mês.
-            </p>
+          <p className="text-base md:text-lg text-elite-white/80 mb-4 max-w-3xl mx-auto">
+            O método simples para vender online sem investir em estoque — inclusive produtos comuns, como uma simples tomada — e lucrar mais de R$100.000 por mês.
+          </p>
 
-            <p className="text-lg md:text-xl text-elite-white/80">
-              Vou te mostrar, na prática, como escolher produtos simples, estruturar preço, criar anúncios que vendem todos os dias e montar uma operação enxuta de vendas sem estoque — mesmo começando do zero.
-            </p>
+          <p className="text-sm md:text-base text-elite-gold font-semibold mb-6">
+            👉 Garanta sua vaga e faça suas primeiras vendas com produtos comuns.
+          </p>
 
-            <p className="text-lg md:text-xl font-bold text-elite-gold">
-              👉 Garanta sua vaga e descubra como usar esse método para fazer suas primeiras vendas com produtos comuns.
-            </p>
-          </div>
-
-          <div style={{
-          textAlign: 'center'
-        }}>
+          <div style={{ textAlign: 'center' }}>
             <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{
-            border: '2px solid rgba(0, 0, 0, 0.5)',
-            background: 'rgba(41, 182, 246, 0.95)',
-            color: 'rgb(255, 255, 255)',
-            fontSize: '24px',
-            padding: '18px 80px',
-            boxShadow: 'none',
-            borderRadius: '4px',
-            whiteSpace: 'normal',
-            fontWeight: '700',
-            lineHeight: '1.3',
-            cursor: 'pointer',
-            fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-            wordBreak: 'break-word',
-            margin: 'auto'
-          }}>
+              border: '2px solid rgba(0, 0, 0, 0.5)',
+              background: 'rgba(41, 182, 246, 0.95)',
+              color: 'rgb(255, 255, 255)',
+              fontSize: '18px',
+              padding: '14px 50px',
+              boxShadow: 'none',
+              borderRadius: '4px',
+              whiteSpace: 'normal',
+              fontWeight: '700',
+              lineHeight: '1.3',
+              cursor: 'pointer',
+              fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+              wordBreak: 'break-word',
+              margin: 'auto'
+            }}>
               GARANTIR MINHA VAGA AGORA
             </button>
           </div>
 
-          <p className="mt-6 text-elite-white/50 text-sm">
+          <p className="mt-4 text-elite-white/50 text-xs">
             • Método ao vivo · Vagas limitadas · Não fica disponível depois
           </p>
         </div>
