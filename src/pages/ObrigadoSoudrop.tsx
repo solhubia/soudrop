@@ -8,9 +8,8 @@ const ObrigadoSoudrop = () => {
   const [showButtons, setShowButtons] = useState(false);
   const [videoWatched, setVideoWatched] = useState(false);
   const [progress, setProgress] = useState(70);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const playerRef = useRef<any>(null);
   const intervalRef = useRef<any>(null);
-
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -22,36 +21,40 @@ const ObrigadoSoudrop = () => {
       });
     }, 100);
 
-    // Tentar reproduzir o vídeo com som
-    const video = videoRef.current;
-    if (video) {
-      video.muted = false;
-      video.play().catch(() => {
-        // Se falhar (bloqueio do navegador), inicia mutado
-        video.muted = true;
-        video.play();
-      });
-    }
+    // Carregar YouTube IFrame API
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
 
+    // @ts-ignore
+    window.onYouTubeIframeAPIReady = () => {
+      // @ts-ignore
+      playerRef.current = new YT.Player('webinar-video', {
+        events: {
+          onStateChange: onPlayerStateChange
+        }
+      });
+    };
     return () => {
       clearInterval(progressInterval);
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
   }, []);
-
-  const handleTimeUpdate = () => {
-    const video = videoRef.current;
-    if (video && video.currentTime >= 170 && !videoWatched) {
-      setVideoWatched(true);
-      setShowButtons(true);
-    }
-  };
-
-  const handleUnmute = () => {
-    const video = videoRef.current;
-    if (video) {
-      video.muted = false;
-      setIsMuted(false);
+  const onPlayerStateChange = (event: any) => {
+    // @ts-ignore
+    if (event.data === YT.PlayerState.PLAYING) {
+      // Verificar tempo do vídeo a cada segundo
+      intervalRef.current = setInterval(() => {
+        if (playerRef.current && playerRef.current.getCurrentTime) {
+          const currentTime = playerRef.current.getCurrentTime();
+          if (currentTime >= 170 && !videoWatched) {
+            setVideoWatched(true);
+            setShowButtons(true);
+            clearInterval(intervalRef.current);
+          }
+        }
+      }, 1000);
     }
   };
   const handleShowSecondFold = () => {
@@ -119,29 +122,20 @@ const ObrigadoSoudrop = () => {
             <div className="relative w-full max-w-4xl mx-auto">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card">
                 <div className="aspect-video relative bg-black overflow-hidden webinar-wrapper">
-                  <video
-                    ref={videoRef}
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    playsInline
-                    loop
-                    onTimeUpdate={handleTimeUpdate}
-                  >
-                    <source src="URL_DO_SEU_VIDEO" type="video/mp4" />
-                    Seu navegador não suporta a tag de vídeo.
-                  </video>
+                  <iframe id="webinar-video" className="w-full h-full" src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=1&enablejsapi=1&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1`} title="Webinário Soudrop" frameBorder="0" allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen></iframe>
                   
                   {/* Overlay para ativar o som */}
-                  {isMuted && (
-                    <div 
-                      onClick={handleUnmute} 
-                      className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/40 transition-colors z-10"
-                    >
+                  {isMuted && <div onClick={() => setIsMuted(false)} className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/40 transition-colors z-10">
                       <div className="bg-white/90 hover:bg-white text-black px-6 py-3 rounded-lg font-semibold text-lg shadow-lg transition-all hover:scale-105">
                         🔊 Clique para ativar o som
                       </div>
-                    </div>
-                  )}
+                    </div>}
+                  
+                  {/* Camada para bloquear clique/pause */}
+                  <div className="absolute inset-0 pointer-events-auto bg-transparent"></div>
+                  
+                  {/* Camada para cobrir a área do logo do YouTube */}
+                  <div className="absolute right-0 bottom-0 w-20 h-10 bg-gradient-to-l from-black/90 to-black/0"></div>
                 </div>
               </div>
             </div>
