@@ -125,7 +125,13 @@ const ObrigadoSoudrop = () => {
                   <iframe id="webinar-video" className="w-full h-full" src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=1&enablejsapi=1&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1`} title="Webinário Soudrop" frameBorder="0" allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen></iframe>
                   
                   {/* Overlay para ativar o som */}
-                  {isMuted && <div onClick={() => setIsMuted(false)} className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/40 transition-colors z-10">
+                  {isMuted && <div onClick={() => {
+                      if (playerRef.current && playerRef.current.unMute) {
+                        playerRef.current.unMute();
+                        playerRef.current.setVolume(100);
+                      }
+                      setIsMuted(false);
+                    }} className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/40 transition-colors z-10">
                       <div className="bg-white/90 hover:bg-white text-black px-6 py-3 rounded-lg font-semibold text-lg shadow-lg transition-all hover:scale-105">
                         🔊 Clique para ativar o som
                       </div>
