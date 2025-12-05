@@ -5,10 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import renanFerreira from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
-
 const SoudropStart = () => {
   const navigate = useNavigate();
-  
   useEffect(() => {
     const embedScript = document.createElement('script');
     embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
@@ -20,55 +18,48 @@ const SoudropStart = () => {
       }
     };
   }, []);
-
-  const deliverables = [
-    {
-      icon: Target,
-      title: "Produtos de alto giro",
-      description: "Como escolher produtos de alto giro pra dropshipping, sem depender de achismo ou produto da moda que morre rápido."
-    },
-    {
-      icon: Package,
-      title: "Fornecedores China e Brasil",
-      description: "O passo a passo pra fechar parceria com fornecedores (China e Brasil) de um jeito que você não fique refém de um só."
-    },
-    {
-      icon: TrendingUp,
-      title: "Estrutura de anúncios",
-      description: "Como montar uma estrutura simples de anúncios pra atrair clientes todos os dias, mesmo que você nunca tenha feito tráfego pago."
-    },
-    {
-      icon: Calculator,
-      title: "Cálculo de preço correto",
-      description: "O jeito certo de calcular preço de venda no drop: produto, frete, taxa do gateway/marketplace, imposto e margem — sem descobrir depois que vendeu e tomou prejuízo."
-    },
-    {
-      icon: Calendar,
-      title: "Primeiros 90 dias",
-      description: "Como planejar seus primeiros 90 dias de operação, saindo do zero até caminhar para seus primeiros R$5.000 a R$10.000/mês com dropshipping sem estoque."
-    }
-  ];
-
-  const forWho = [
-    "Quer entender, de forma séria, como começar nesse mercado",
-    "Já tentou ganhar dinheiro online e está cansado de promessa vazia",
-    "Prefere ouvir a verdade: que existe caminho, mas exige método",
-    "Quer um passo a passo aplicável, e não mais um vídeo motivacional"
-  ];
-
-  const heroBenefits = [
-    { icon: Package, text: "Vender sem comprar estoque antecipado" },
-    { icon: Users, text: "Modelo pensado para iniciantes" },
-    { icon: Store, text: "Estratégia testada em marketplaces e loja própria" }
-  ];
-
-  return (
-    <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
+  const deliverables = [{
+    icon: Target,
+    title: "Produtos de alto giro",
+    description: "Como escolher produtos de alto giro pra dropshipping, sem depender de achismo ou produto da moda que morre rápido."
+  }, {
+    icon: Package,
+    title: "Fornecedores China e Brasil",
+    description: "O passo a passo pra fechar parceria com fornecedores (China e Brasil) de um jeito que você não fique refém de um só."
+  }, {
+    icon: TrendingUp,
+    title: "Estrutura de anúncios",
+    description: "Como montar uma estrutura simples de anúncios pra atrair clientes todos os dias, mesmo que você nunca tenha feito tráfego pago."
+  }, {
+    icon: Calculator,
+    title: "Cálculo de preço correto",
+    description: "O jeito certo de calcular preço de venda no drop: produto, frete, taxa do gateway/marketplace, imposto e margem — sem descobrir depois que vendeu e tomou prejuízo."
+  }, {
+    icon: Calendar,
+    title: "Primeiros 90 dias",
+    description: "Como planejar seus primeiros 90 dias de operação, saindo do zero até caminhar para seus primeiros R$5.000 a R$10.000/mês com dropshipping sem estoque."
+  }];
+  const forWho = ["Quer entender, de forma séria, como começar nesse mercado", "Já tentou ganhar dinheiro online e está cansado de promessa vazia", "Prefere ouvir a verdade: que existe caminho, mas exige método", "Quer um passo a passo aplicável, e não mais um vídeo motivacional"];
+  const heroBenefits = [{
+    icon: Package,
+    text: "Vender sem comprar estoque antecipado"
+  }, {
+    icon: Users,
+    text: "Modelo pensado para iniciantes"
+  }, {
+    icon: Store,
+    text: "Estratégia testada em marketplaces e loja própria"
+  }];
+  return <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
         <div className="absolute inset-0 bg-gradient-forest-hero" />
-        <div className="absolute top-20 left-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-green-primary rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-pulse" style={{ animationDuration: '4s' }} />
-        <div className="absolute bottom-20 right-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-lime rounded-full mix-blend-screen filter blur-[120px] opacity-10 animate-pulse" style={{ animationDuration: '6s' }} />
+        <div className="absolute top-20 left-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-green-primary rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-pulse" style={{
+        animationDuration: '4s'
+      }} />
+        <div className="absolute bottom-20 right-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-lime rounded-full mix-blend-screen filter blur-[120px] opacity-10 animate-pulse" style={{
+        animationDuration: '6s'
+      }} />
         
         <div className="relative z-10 w-full max-w-4xl mx-auto">
           <AnimatedSection delay={0}>
@@ -94,34 +85,34 @@ const SoudropStart = () => {
 
                     {/* Benefits */}
                     <div className="flex flex-col gap-2 pt-2">
-                      {heroBenefits.map((benefit, index) => (
-                        <div key={index} className="flex items-center gap-2 text-forest-text-primary text-xs sm:text-sm">
+                      {heroBenefits.map((benefit, index) => <div key={index} className="flex items-center gap-2 text-forest-text-primary text-xs sm:text-sm">
                           <benefit.icon className="w-4 h-4 text-forest-green-primary flex-shrink-0" />
                           <span>{benefit.text}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                     
                     <div className="pt-2 sm:pt-4">
-                      <div style={{ textAlign: "center" }} className="lg:text-left">
+                      <div style={{
+                      textAlign: "center"
+                    }} className="lg:text-left">
                         <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
-                          border: "none",
-                          background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
-                          color: "rgb(255, 255, 255)",
-                          fontSize: "14px",
-                          padding: "14px 28px",
-                          boxShadow: "0 15px 50px rgba(34, 197, 94, 0.35)",
-                          borderRadius: "12px",
-                          whiteSpace: "normal",
-                          fontWeight: "700",
-                          lineHeight: "1.4",
-                          cursor: "pointer",
-                          fontFamily: "system-ui, -apple-system, sans-serif",
-                          wordBreak: "break-word",
-                          transition: "all 0.3s ease",
-                          letterSpacing: "0.02em",
-                          maxWidth: "100%"
-                        }}>
+                        border: "none",
+                        background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
+                        color: "rgb(255, 255, 255)",
+                        fontSize: "14px",
+                        padding: "14px 28px",
+                        boxShadow: "0 15px 50px rgba(34, 197, 94, 0.35)",
+                        borderRadius: "12px",
+                        whiteSpace: "normal",
+                        fontWeight: "700",
+                        lineHeight: "1.4",
+                        cursor: "pointer",
+                        fontFamily: "system-ui, -apple-system, sans-serif",
+                        wordBreak: "break-word",
+                        transition: "all 0.3s ease",
+                        letterSpacing: "0.02em",
+                        maxWidth: "100%"
+                      }}>
                           GARANTIR MINHA VAGA GRATUITA <ArrowRight className="inline-block ml-2 h-4 w-4" />
                         </button>
                       </div>
@@ -144,11 +135,7 @@ const SoudropStart = () => {
                   <div className="order-1 lg:order-2 hidden lg:block">
                     <div className="relative">
                       <div className="absolute -inset-4 bg-gradient-forest-primary rounded-2xl blur-2xl opacity-30" />
-                      <img 
-                        src={renanFerreira} 
-                        alt="Renan Ferreira" 
-                        className="relative rounded-xl shadow-2xl w-full max-w-sm mx-auto border border-forest-border"
-                      />
+                      <img alt="Renan Ferreira" className="relative rounded-xl shadow-2xl w-full max-w-sm mx-auto border border-forest-border" src="/lovable-uploads/b6cc0b8d-bbc9-4d6a-8c36-b8366fc2ad75.png" />
                     </div>
                   </div>
                 </div>
@@ -218,8 +205,7 @@ const SoudropStart = () => {
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto mb-6 sm:mb-8">
-            {forWho.map((item, index) => (
-              <AnimatedSection key={index} delay={100 + index * 100}>
+            {forWho.map((item, index) => <AnimatedSection key={index} delay={100 + index * 100}>
                 <Card className="bg-forest-bg-card border border-forest-border hover:border-forest-green-primary/50 hover:shadow-forest-glow transition-all duration-300 h-full">
                   <CardContent className="p-4 sm:p-5 flex items-start gap-3">
                     <div className="w-8 h-8 bg-forest-lime/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-forest-lime/30">
@@ -228,8 +214,7 @@ const SoudropStart = () => {
                     <p className="text-forest-text-primary text-sm sm:text-base leading-relaxed">{item}</p>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
           
           <AnimatedSection delay={500}>
@@ -262,8 +247,7 @@ const SoudropStart = () => {
           </AnimatedSection>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-            {deliverables.map((item, index) => (
-              <AnimatedSection key={index} delay={100 + index * 80}>
+            {deliverables.map((item, index) => <AnimatedSection key={index} delay={100 + index * 80}>
                 <Card className="bg-forest-bg-card border border-forest-border hover:border-forest-green-primary/50 hover:shadow-forest-glow transition-all duration-300 group h-full">
                   <CardHeader className="pb-2 p-4 sm:p-5">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-forest-primary rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
@@ -277,31 +261,30 @@ const SoudropStart = () => {
                     </CardDescription>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
 
           {/* CTA after deliverables */}
           <AnimatedSection delay={500}>
             <div className="text-center mt-8 sm:mt-10">
               <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
-                border: "none",
-                background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
-                color: "rgb(255, 255, 255)",
-                fontSize: "14px",
-                padding: "14px 28px",
-                boxShadow: "0 15px 50px rgba(34, 197, 94, 0.35)",
-                borderRadius: "12px",
-                whiteSpace: "normal",
-                fontWeight: "700",
-                lineHeight: "1.4",
-                cursor: "pointer",
-                fontFamily: "system-ui, -apple-system, sans-serif",
-                wordBreak: "break-word",
-                transition: "all 0.3s ease",
-                letterSpacing: "0.02em",
-                maxWidth: "100%"
-              }}>
+              border: "none",
+              background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
+              color: "rgb(255, 255, 255)",
+              fontSize: "14px",
+              padding: "14px 28px",
+              boxShadow: "0 15px 50px rgba(34, 197, 94, 0.35)",
+              borderRadius: "12px",
+              whiteSpace: "normal",
+              fontWeight: "700",
+              lineHeight: "1.4",
+              cursor: "pointer",
+              fontFamily: "system-ui, -apple-system, sans-serif",
+              wordBreak: "break-word",
+              transition: "all 0.3s ease",
+              letterSpacing: "0.02em",
+              maxWidth: "100%"
+            }}>
                 QUERO PARTICIPAR DA MASTERCLASS <ArrowRight className="inline-block ml-2 h-4 w-4" />
               </button>
             </div>
@@ -313,7 +296,9 @@ const SoudropStart = () => {
       <section className="py-12 sm:py-16 md:py-20 px-5 sm:px-6 md:px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-forest-hero" />
         <div className="absolute top-0 left-0 w-64 h-64 md:w-80 md:h-80 bg-forest-green-primary rounded-full blur-[120px] opacity-15 animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-64 h-64 md:w-80 md:h-80 bg-forest-lime rounded-full blur-[120px] opacity-10 animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-0 right-0 w-64 h-64 md:w-80 md:h-80 bg-forest-lime rounded-full blur-[120px] opacity-10 animate-pulse" style={{
+        animationDelay: '1s'
+      }} />
 
         <div className="container mx-auto max-w-3xl relative z-10">
           <div className="text-center space-y-6 sm:space-y-8">
@@ -338,26 +323,28 @@ const SoudropStart = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={200}>
-              <div style={{ textAlign: "center" }}>
+              <div style={{
+              textAlign: "center"
+            }}>
                 <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
-                  border: "none",
-                  background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
-                  color: "rgb(255, 255, 255)",
-                  fontSize: "16px",
-                  padding: "16px 40px",
-                  boxShadow: "0 15px 50px rgba(34, 197, 94, 0.4)",
-                  borderRadius: "12px",
-                  whiteSpace: "normal",
-                  fontWeight: "700",
-                  lineHeight: "1.4",
-                  cursor: "pointer",
-                  fontFamily: "system-ui, -apple-system, sans-serif",
-                  wordBreak: "break-word",
-                  margin: "auto",
-                  transition: "all 0.3s ease",
-                  letterSpacing: "0.02em",
-                  maxWidth: "100%"
-                }}>
+                border: "none",
+                background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
+                color: "rgb(255, 255, 255)",
+                fontSize: "16px",
+                padding: "16px 40px",
+                boxShadow: "0 15px 50px rgba(34, 197, 94, 0.4)",
+                borderRadius: "12px",
+                whiteSpace: "normal",
+                fontWeight: "700",
+                lineHeight: "1.4",
+                cursor: "pointer",
+                fontFamily: "system-ui, -apple-system, sans-serif",
+                wordBreak: "break-word",
+                margin: "auto",
+                transition: "all 0.3s ease",
+                letterSpacing: "0.02em",
+                maxWidth: "100%"
+              }}>
                   GARANTIR MINHA VAGA GRATUITA <ArrowRight className="inline-block ml-2 h-5 w-5" />
                 </button>
               </div>
@@ -390,8 +377,6 @@ const SoudropStart = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default SoudropStart;
