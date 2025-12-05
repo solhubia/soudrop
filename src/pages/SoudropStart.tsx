@@ -169,8 +169,8 @@ const SoudropStart = () => {
       </section>
 
       {/* Autoridade Section */}
-      <section className="pt-6 pb-12 sm:pt-0 sm:pb-16 md:pt-0 md:pb-20 lg:-mt-8 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main">
-        <div className="container mx-auto max-w-4xl">
+      <section className="pt-6 pb-12 sm:pt-0 sm:pb-16 md:pt-0 md:pb-20 lg:-mt-24 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main">
+        <div className="container mx-auto max-w-4xl lg:-mt-8">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
             <AnimatedSection className="order-2 md:order-1">
               <div className="relative">
