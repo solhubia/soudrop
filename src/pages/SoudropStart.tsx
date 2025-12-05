@@ -43,7 +43,7 @@ const SoudropStart = () => {
   const heroBenefits = ["Sem comprar estoque antes", "Passo a passo pra iniciantes", "Funciona em marketplaces e loja própria"];
   return <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
       {/* Hero Section - G4 Style */}
-      <section className="relative w-full min-h-screen flex items-center overflow-hidden">
+      <section className="relative w-full min-h-[auto] lg:min-h-screen flex items-center overflow-hidden">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#020805] via-[#051310] to-[#030907]" />
         
@@ -169,7 +169,7 @@ const SoudropStart = () => {
       </section>
 
       {/* Autoridade Section */}
-      <section className="pt-0 pb-12 sm:py-16 md:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main">
+      <section className="pt-6 pb-12 sm:pt-16 sm:pb-16 md:pt-20 md:pb-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main">
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
             <AnimatedSection className="order-2 md:order-1">
