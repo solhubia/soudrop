@@ -145,13 +145,16 @@ const SoudropStart = () => {
             {/* RIGHT COLUMN - Photo */}
             <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-center relative mt-6 lg:mt-0">
               <AnimatedSection delay={100} className="relative">
-                {/* Subtle glow behind photo */}
+                {/* Strong green glow behind photo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-[280px] h-[350px] sm:w-[350px] sm:h-[450px] lg:w-[550px] lg:h-[720px] bg-gradient-to-t from-forest-green-primary/30 via-forest-green-primary/10 to-transparent rounded-[50%] blur-[80px] lg:blur-[100px] transform translate-y-4 lg:translate-y-8" />
+                  {/* Main glow */}
+                  <div className="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-forest-green-primary/40 rounded-full blur-[100px] lg:blur-[120px]" />
+                  {/* Secondary glow for depth */}
+                  <div className="absolute w-[200px] h-[250px] sm:w-[280px] sm:h-[350px] lg:w-[350px] lg:h-[450px] bg-forest-lime/30 rounded-full blur-[80px] lg:blur-[100px]" />
                 </div>
                 
                 {/* Photo - Large on desktop, reduced on mobile */}
-                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.5)] lg:drop-shadow-[0_30px_80px_rgba(0,0,0,0.6)]" src="/lovable-uploads/68d13401-0ad7-4992-a8cb-7d468641c8ee.png" />
+                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(34,197,94,0.4)] lg:drop-shadow-[0_0_60px_rgba(34,197,94,0.5)]" src="/lovable-uploads/68d13401-0ad7-4992-a8cb-7d468641c8ee.png" />
               </AnimatedSection>
             </div>
             
