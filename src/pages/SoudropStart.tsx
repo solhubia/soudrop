@@ -60,46 +60,59 @@ const SoudropStart = () => {
             {/* LEFT COLUMN - Text Content */}
             <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-6 pt-6 lg:pt-0">
               
-              {/* Event Tag */}
+              {/* Event Tag with decorative line */}
               <AnimatedSection delay={0}>
-                <span className="inline-block text-forest-green-primary text-[10px] sm:text-xs lg:text-sm font-medium tracking-[0.15em] lg:tracking-[0.2em] uppercase">
-                  MASTERCLASS GRATUITA • OPERAÇÃO SEM ESTOQUE
-                </span>
+                <div className="space-y-3">
+                  <span className="inline-block text-forest-green-primary text-[10px] sm:text-xs lg:text-sm font-semibold tracking-[0.15em] lg:tracking-[0.25em] uppercase">
+                    MASTERCLASS GRATUITA • OPERAÇÃO SEM ESTOQUE
+                  </span>
+                  {/* Decorative line - G4 style */}
+                  <div className="flex items-center gap-3 lg:max-w-[280px]">
+                    <div className="h-[1px] flex-1 bg-gradient-to-r from-forest-green-primary/60 via-forest-lime/40 to-transparent" />
+                    <div className="w-1.5 h-1.5 bg-forest-lime rounded-full" />
+                  </div>
+                </div>
               </AnimatedSection>
               
-              {/* Headline */}
+              {/* Headline - Refined */}
               <AnimatedSection delay={100}>
-                <h1 className="text-[1.4rem] sm:text-2xl md:text-3xl lg:text-[2.75rem] xl:text-5xl font-black text-forest-text-primary leading-[1.15] tracking-tight uppercase">
-                  <span className="block">Descubra como <span className="text-forest-text-primary/90">vender todos os dias</span></span>
-                  <span className="block"><span className="text-forest-green-primary">sem estoque</span> e chegar aos seus primeiros</span>
-                  <span className="block"><span className="text-forest-lime">R$10.000/mês</span> mesmo começando do zero</span>
+                <h1 className="text-[1.5rem] sm:text-2xl md:text-3xl lg:text-[2.75rem] xl:text-5xl font-black text-forest-text-primary leading-[1.1] tracking-tight">
+                  <span className="block">Venda todos os dias <span className="text-forest-green-primary">sem estoque</span></span>
+                  <span className="block">e chegue aos seus primeiros</span>
+                  <span className="block"><span className="text-forest-lime">R$10.000/mês</span> começando do zero</span>
                 </h1>
               </AnimatedSection>
               
               {/* Subheadline - shorter on mobile */}
               <AnimatedSection delay={200}>
-                <p className="text-sm lg:text-lg text-forest-text-secondary/80 leading-relaxed lg:max-w-[90%] max-w-[340px] mx-auto lg:mx-0">
-                  <span className="lg:hidden">Aula gratuita onde eu abro a <span className="text-forest-green-primary font-medium">Operação Sem Estoque</span>, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.</span>
-                  <span className="hidden lg:inline">Uma aula 100% online onde eu vou abrir a <span className="text-forest-green-primary font-medium">Operação Sem Estoque</span>, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.</span>
-                </p>
+                <div className="space-y-3">
+                  <p className="text-sm lg:text-lg text-forest-text-secondary/80 leading-relaxed lg:max-w-[90%] max-w-[340px] mx-auto lg:mx-0">
+                    <span className="lg:hidden">Aula gratuita onde eu abro a <span className="text-forest-green-primary font-medium">Operação Sem Estoque</span>, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.</span>
+                    <span className="hidden lg:inline">Uma aula 100% online onde eu vou abrir a <span className="text-forest-green-primary font-medium">Operação Sem Estoque</span>, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.</span>
+                  </p>
+                  {/* Social proof */}
+                  <p className="text-xs lg:text-sm text-forest-text-secondary/60 lg:max-w-[85%] max-w-[320px] mx-auto lg:mx-0">
+                    Mais de <span className="text-forest-text-primary font-medium">500 alunos</span> já aplicaram a Operação Sem Estoque em marketplaces e lojas próprias pelo Brasil inteiro.
+                  </p>
+                </div>
               </AnimatedSection>
 
               {/* Benefits - Only show on desktop */}
               <AnimatedSection delay={300} className="hidden lg:block">
-                <div className="flex flex-row items-start gap-0 pt-2">
+                <div className="flex flex-row items-center gap-0 pt-2">
                   <div className="flex items-center gap-2">
-                    <Package className="w-5 h-5 text-forest-green-primary" />
-                    <span className="text-sm text-forest-text-primary">Sem comprar estoque antes</span>
+                    <Package className="w-4 h-4 text-forest-green-primary" />
+                    <span className="text-sm text-forest-text-primary font-semibold">Sem comprar estoque</span>
                   </div>
                   <span className="text-forest-text-secondary/30 mx-4">|</span>
                   <div className="flex items-center gap-2">
-                    <Users className="w-5 h-5 text-forest-green-primary" />
-                    <span className="text-sm text-forest-text-primary">Passo a passo pra iniciantes</span>
+                    <Users className="w-4 h-4 text-forest-green-primary" />
+                    <span className="text-sm text-forest-text-primary font-semibold">Passo a passo pra iniciantes</span>
                   </div>
                   <span className="text-forest-text-secondary/30 mx-4">|</span>
                   <div className="flex items-center gap-2">
-                    <Store className="w-5 h-5 text-forest-green-primary" />
-                    <span className="text-sm text-forest-text-primary">Funciona em marketplaces e loja própria</span>
+                    <Store className="w-4 h-4 text-forest-green-primary" />
+                    <span className="text-sm text-forest-text-primary font-semibold">Marketplaces e loja própria</span>
                   </div>
                 </div>
               </AnimatedSection>
