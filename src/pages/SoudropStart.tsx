@@ -54,7 +54,7 @@ const SoudropStart = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-forest-lime/5 blur-[120px]" />
         
         {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 py-8 lg:py-0">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-8 pb-0 lg:py-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-center lg:min-h-[90vh]">
             
             {/* LEFT COLUMN - Text Content */}
@@ -149,7 +149,7 @@ const SoudropStart = () => {
             </div>
 
             {/* RIGHT COLUMN - Photo */}
-            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-center relative mt-6 lg:mt-0">
+            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-center relative mt-6 mb-0 lg:mt-0">
               <AnimatedSection delay={100} className="relative">
                 {/* Strong green glow behind photo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
