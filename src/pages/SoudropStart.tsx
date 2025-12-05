@@ -54,22 +54,22 @@ const SoudropStart = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-forest-lime/5 blur-[120px]" />
         
         {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16 py-12 lg:py-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 items-center min-h-[90vh]">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 py-8 lg:py-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-center lg:min-h-[90vh]">
             
             {/* LEFT COLUMN - Text Content */}
-            <div className="order-2 lg:order-1 text-center lg:text-left space-y-6">
+            <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-6 pt-6 lg:pt-0">
               
               {/* Event Tag */}
               <AnimatedSection delay={0}>
-                <span className="inline-block text-forest-green-primary text-xs sm:text-sm font-medium tracking-[0.2em] uppercase">
+                <span className="inline-block text-forest-green-primary text-[10px] sm:text-xs lg:text-sm font-medium tracking-[0.15em] lg:tracking-[0.2em] uppercase">
                   MASTERCLASS GRATUITA • OPERAÇÃO SEM ESTOQUE
                 </span>
               </AnimatedSection>
               
               {/* Headline */}
               <AnimatedSection delay={100}>
-                <h1 className="text-[1.75rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl font-black text-forest-text-primary leading-[1.1] tracking-tight uppercase">
+                <h1 className="text-[1.4rem] sm:text-2xl md:text-3xl lg:text-[2.75rem] xl:text-5xl font-black text-forest-text-primary leading-[1.15] tracking-tight uppercase">
                   <span className="block">Descubra como</span>
                   <span className="block text-forest-text-primary/90">vender todos os dias</span>
                   <span className="block">em dropshipping</span>
@@ -78,26 +78,27 @@ const SoudropStart = () => {
                 </h1>
               </AnimatedSection>
               
-              {/* Subheadline */}
+              {/* Subheadline - shorter on mobile */}
               <AnimatedSection delay={200}>
-                <p className="text-sm sm:text-base lg:text-lg text-forest-text-secondary/80 leading-relaxed lg:max-w-[90%]">
-                  Uma aula 100% online onde eu vou abrir a <span className="text-forest-green-primary font-medium">Operação Sem Estoque</span>, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.
+                <p className="text-sm lg:text-lg text-forest-text-secondary/80 leading-relaxed lg:max-w-[90%] max-w-[340px] mx-auto lg:mx-0">
+                  <span className="lg:hidden">Aula gratuita onde eu abro a <span className="text-forest-green-primary font-medium">Operação Sem Estoque</span>, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.</span>
+                  <span className="hidden lg:inline">Uma aula 100% online onde eu vou abrir a <span className="text-forest-green-primary font-medium">Operação Sem Estoque</span>, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.</span>
                 </p>
               </AnimatedSection>
 
-              {/* Benefits - Horizontal style like G4 */}
-              <AnimatedSection delay={300}>
-                <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 sm:gap-0 pt-2">
+              {/* Benefits - Only show on desktop */}
+              <AnimatedSection delay={300} className="hidden lg:block">
+                <div className="flex flex-row items-start gap-0 pt-2">
                   <div className="flex items-center gap-2">
                     <Package className="w-5 h-5 text-forest-green-primary" />
                     <span className="text-sm text-forest-text-primary">Sem comprar estoque antes</span>
                   </div>
-                  <span className="hidden sm:block text-forest-text-secondary/30 mx-4">|</span>
+                  <span className="text-forest-text-secondary/30 mx-4">|</span>
                   <div className="flex items-center gap-2">
                     <Users className="w-5 h-5 text-forest-green-primary" />
                     <span className="text-sm text-forest-text-primary">Passo a passo pra iniciantes</span>
                   </div>
-                  <span className="hidden sm:block text-forest-text-secondary/30 mx-4">|</span>
+                  <span className="text-forest-text-secondary/30 mx-4">|</span>
                   <div className="flex items-center gap-2">
                     <Store className="w-5 h-5 text-forest-green-primary" />
                     <span className="text-sm text-forest-text-primary">Funciona em marketplaces e loja própria</span>
@@ -107,13 +108,13 @@ const SoudropStart = () => {
               
               {/* CTA Button */}
               <AnimatedSection delay={400}>
-                <div className="pt-4 flex flex-col items-center lg:items-start">
+                <div className="pt-2 lg:pt-4 flex flex-col items-center lg:items-start">
                   <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
                   border: "none",
                   background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(155, 80%, 35%) 100%)",
                   color: "rgb(255, 255, 255)",
-                  fontSize: "15px",
-                  padding: "18px 48px",
+                  fontSize: "14px",
+                  padding: "16px 36px",
                   boxShadow: "0 0 60px rgba(34, 197, 94, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
                   borderRadius: "50px",
                   whiteSpace: "normal",
@@ -125,13 +126,13 @@ const SoudropStart = () => {
                   transition: "all 0.3s ease",
                   letterSpacing: "0.02em"
                 }}>
-                    Garantir minha vaga exclusiva <ArrowRight className="inline-block ml-2 h-5 w-5" />
+                    GARANTIR MINHA VAGA GRATUITA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                   </button>
                   
                   {/* Urgency text */}
-                  <p className="text-xs sm:text-sm text-forest-text-secondary/60 mt-4 flex items-center gap-2 flex-wrap justify-center lg:justify-start">
+                  <p className="text-[11px] sm:text-xs lg:text-sm text-forest-text-secondary/60 mt-3 lg:mt-4 flex items-center gap-2 flex-wrap justify-center lg:justify-start">
                     <span className="flex items-center gap-1.5">
-                      <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" />
+                      <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-yellow-500 rounded-full animate-pulse" />
                       Vagas limitadas
                     </span>
                     <span className="text-forest-text-secondary/40">•</span>
@@ -142,15 +143,15 @@ const SoudropStart = () => {
             </div>
 
             {/* RIGHT COLUMN - Photo */}
-            <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center relative">
+            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-center relative mt-6 lg:mt-0">
               <AnimatedSection delay={100} className="relative">
                 {/* Subtle glow behind photo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-[400px] h-[550px] sm:w-[500px] sm:h-[680px] lg:w-[550px] lg:h-[720px] bg-gradient-to-t from-forest-green-primary/30 via-forest-green-primary/10 to-transparent rounded-[50%] blur-[100px] transform translate-y-8" />
+                  <div className="w-[280px] h-[350px] sm:w-[350px] sm:h-[450px] lg:w-[550px] lg:h-[720px] bg-gradient-to-t from-forest-green-primary/30 via-forest-green-primary/10 to-transparent rounded-[50%] blur-[80px] lg:blur-[100px] transform translate-y-4 lg:translate-y-8" />
                 </div>
                 
-                {/* Photo - Large and integrated */}
-                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[340px] sm:w-[420px] lg:w-[480px] xl:w-[550px] h-auto object-contain drop-shadow-[0_30px_80px_rgba(0,0,0,0.6)]" src="/lovable-uploads/68d13401-0ad7-4992-a8cb-7d468641c8ee.png" />
+                {/* Photo - Large on desktop, reduced on mobile */}
+                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.5)] lg:drop-shadow-[0_30px_80px_rgba(0,0,0,0.6)]" src="/lovable-uploads/68d13401-0ad7-4992-a8cb-7d468641c8ee.png" />
               </AnimatedSection>
             </div>
             
