@@ -57,13 +57,10 @@ const SoudropStart = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-[#030806] via-[#061410] to-[#040a08]" />
         
         {/* Subtle grid pattern */}
-        <div 
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.3) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px'
-          }}
-        />
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.3) 1px, transparent 1px)`,
+        backgroundSize: '60px 60px'
+      }} />
         
         {/* Geometric shapes */}
         <div className="absolute inset-0 overflow-hidden">
@@ -120,43 +117,36 @@ const SoudropStart = () => {
               {/* Benefits List */}
               <AnimatedSection delay={300}>
                 <div className="flex flex-col gap-3 pt-1">
-                  {heroBenefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center gap-3 justify-center lg:justify-start">
+                  {heroBenefits.map((benefit, index) => <div key={index} className="flex items-center gap-3 justify-center lg:justify-start">
                       <div className="w-9 h-9 bg-forest-green-primary/15 rounded-lg flex items-center justify-center border border-forest-green-primary/25 flex-shrink-0">
                         <benefit.icon className="w-4 h-4 text-forest-green-primary" />
                       </div>
                       <span className="text-sm sm:text-base text-forest-text-primary font-medium">{benefit.text}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </AnimatedSection>
               
               {/* CTA Button */}
               <AnimatedSection delay={400}>
                 <div className="pt-3 flex flex-col items-center lg:items-start">
-                  <button 
-                    type="button" 
-                    className="wj-embed-button w-full sm:w-auto" 
-                    data-webinarHash="8wgw0kty" 
-                    style={{
-                      border: "none",
-                      background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(155, 80%, 35%) 100%)",
-                      color: "rgb(255, 255, 255)",
-                      fontSize: "15px",
-                      padding: "18px 40px",
-                      boxShadow: "0 0 40px rgba(34, 197, 94, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3)",
-                      borderRadius: "12px",
-                      whiteSpace: "normal",
-                      fontWeight: "700",
-                      lineHeight: "1.4",
-                      cursor: "pointer",
-                      fontFamily: "system-ui, -apple-system, sans-serif",
-                      wordBreak: "break-word",
-                      transition: "all 0.3s ease",
-                      letterSpacing: "0.03em",
-                      textTransform: "uppercase"
-                    }}
-                  >
+                  <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{
+                  border: "none",
+                  background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(155, 80%, 35%) 100%)",
+                  color: "rgb(255, 255, 255)",
+                  fontSize: "15px",
+                  padding: "18px 40px",
+                  boxShadow: "0 0 40px rgba(34, 197, 94, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3)",
+                  borderRadius: "12px",
+                  whiteSpace: "normal",
+                  fontWeight: "700",
+                  lineHeight: "1.4",
+                  cursor: "pointer",
+                  fontFamily: "system-ui, -apple-system, sans-serif",
+                  wordBreak: "break-word",
+                  transition: "all 0.3s ease",
+                  letterSpacing: "0.03em",
+                  textTransform: "uppercase"
+                }}>
                     GARANTIR MINHA VAGA GRATUITA <ArrowRight className="inline-block ml-2 h-5 w-5" />
                   </button>
                   
@@ -192,11 +182,7 @@ const SoudropStart = () => {
                 <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[300px] h-[100px] bg-forest-lime/30 rounded-full blur-[60px]" />
                 
                 {/* Photo */}
-                <img 
-                  alt="Renan Ferreira - Especialista em Dropshipping" 
-                  className="relative z-10 w-[300px] sm:w-[340px] lg:w-[380px] xl:w-[420px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" 
-                  src="/lovable-uploads/b6cc0b8d-bbc9-4d6a-8c36-b8366fc2ad75.png" 
-                />
+                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[300px] sm:w-[340px] lg:w-[380px] xl:w-[420px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" src="/lovable-uploads/36e41bb5-8421-4782-997e-c3ae036bbf62.png" />
               </AnimatedSection>
             </div>
             
