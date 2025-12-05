@@ -52,57 +52,74 @@ const SoudropStart = () => {
   }];
   return <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
-        <div className="absolute inset-0 bg-gradient-forest-hero" />
-        <div className="absolute top-20 left-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-green-primary rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-pulse" style={{
-        animationDuration: '4s'
-      }} />
-        <div className="absolute bottom-20 right-10 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-forest-lime rounded-full mix-blend-screen filter blur-[120px] opacity-10 animate-pulse" style={{
-        animationDuration: '6s'
-      }} />
+      <section className="relative overflow-hidden min-h-screen flex items-center px-4 sm:px-6 py-16 sm:py-20 md:py-24">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-forest-bg-main via-[#0a1a12] to-forest-bg-main" />
         
-        <div className="relative z-10 w-full max-w-4xl mx-auto">
-          <AnimatedSection delay={0}>
-            <Card className="bg-forest-bg-card/80 backdrop-blur-md border border-forest-border/50 shadow-2xl shadow-forest-green-primary/10 rounded-2xl">
-              <CardContent className="p-6 sm:p-8 md:p-10 lg:p-12">
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                  {/* Text Column */}
-                  <div className="text-center lg:text-left space-y-5 order-2 lg:order-1">
-                    <div className="inline-block">
-                      <span className="px-4 md:px-6 py-2 md:py-2.5 bg-forest-bg-main/50 text-forest-green-primary rounded-full text-xs md:text-sm font-semibold border border-forest-green-primary/30 tracking-wider uppercase backdrop-blur-sm">
-                        MASTERCLASS OPERAÇÃO SEM ESTOQUE • 100% online e gratuita
-                      </span>
-                    </div>
-                    
-                    <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-forest-text-primary leading-[1.25] tracking-tight">
-                      Descubra como <span className="bg-gradient-forest-text bg-clip-text text-transparent">vender todos os dias</span> em dropshipping sem estoque e caminhar para seus primeiros{" "}
-                      <span className="text-forest-lime">R$10.000/mês</span>
-                    </h1>
-                    
-                    <p className="text-xs sm:text-sm md:text-base text-forest-text-secondary/80">
-                      Nesta aula especial, vou te mostrar a Operação Sem Estoque, o método que uso para montar operações de dropshipping com fornecedores da China e do Brasil, sem investir em estoque, com frete calculado do jeito certo e margem de lucro saudável.
-                    </p>
+        {/* Geometric patterns */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-[10%] w-32 h-32 border border-forest-green-primary/30 rotate-45" />
+          <div className="absolute bottom-32 left-[5%] w-24 h-24 border border-forest-lime/20 rotate-12" />
+          <div className="absolute top-40 right-[15%] w-40 h-40 border border-forest-green-primary/20 -rotate-12" />
+          <div className="absolute bottom-20 right-[20%] w-20 h-20 border border-forest-lime/30 rotate-45" />
+        </div>
+        
+        {/* Glow effects */}
+        <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-forest-green-primary rounded-full mix-blend-screen filter blur-[150px] opacity-20" />
+        <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-forest-lime rounded-full mix-blend-screen filter blur-[180px] opacity-15" />
+        
+        <div className="relative z-10 w-full max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Text Column - Left */}
+            <AnimatedSection delay={0} className="order-2 lg:order-1">
+              <div className="space-y-6">
+                {/* Tag */}
+                <div>
+                  <span className="inline-block px-4 py-2 bg-forest-green-primary/10 text-forest-green-primary rounded-full text-xs sm:text-sm font-semibold border border-forest-green-primary/30 tracking-wider uppercase backdrop-blur-sm">
+                    MASTERCLASS OPERAÇÃO SEM ESTOQUE • 100% ONLINE E GRATUITA
+                  </span>
+                </div>
+                
+                {/* Headline */}
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-forest-text-primary leading-[1.15] tracking-tight">
+                  Descubra como{" "}
+                  <span className="bg-gradient-forest-text bg-clip-text text-transparent">vender todos os dias</span>
+                  {" "}em dropshipping sem estoque e caminhar para seus primeiros{" "}
+                  <span className="text-forest-lime">R$10.000/mês</span>
+                </h1>
+                
+                {/* Subheadline */}
+                <p className="text-sm sm:text-base md:text-lg text-forest-text-secondary/90 leading-relaxed max-w-xl">
+                  Nesta aula especial, vou te mostrar a Operação Sem Estoque, o método que uso para montar operações de dropshipping com fornecedores da China e do Brasil, sem investir em estoque, com frete calculado do jeito certo e margem de lucro saudável.
+                </p>
 
-                    {/* Benefits */}
-                    <div className="flex flex-col gap-2 pt-2">
-                      {heroBenefits.map((benefit, index) => <div key={index} className="flex items-center gap-2 text-forest-text-primary text-xs sm:text-sm">
-                          <benefit.icon className="w-4 h-4 text-forest-green-primary flex-shrink-0" />
-                          <span>{benefit.text}</span>
-                        </div>)}
+                {/* Benefits - Vertical List */}
+                <div className="flex flex-col gap-3 pt-2">
+                  {heroBenefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center gap-3 text-forest-text-primary">
+                      <div className="w-8 h-8 bg-forest-green-primary/20 rounded-lg flex items-center justify-center border border-forest-green-primary/30">
+                        <benefit.icon className="w-4 h-4 text-forest-green-primary" />
+                      </div>
+                      <span className="text-sm sm:text-base">{benefit.text}</span>
                     </div>
-                    
-                    <div className="pt-2 sm:pt-4">
-                      <div style={{
-                      textAlign: "center"
-                    }} className="lg:text-left">
-                        <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
+                  ))}
+                </div>
+                
+                {/* CTA Button */}
+                <div className="pt-4">
+                  <div className="flex flex-col items-center lg:items-start">
+                    <button 
+                      type="button" 
+                      className="wj-embed-button w-full sm:w-auto group" 
+                      data-webinarHash="8wgw0kty" 
+                      style={{
                         border: "none",
                         background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
                         color: "rgb(255, 255, 255)",
-                        fontSize: "14px",
-                        padding: "14px 28px",
-                        boxShadow: "0 15px 50px rgba(34, 197, 94, 0.35)",
-                        borderRadius: "12px",
+                        fontSize: "16px",
+                        padding: "18px 36px",
+                        boxShadow: "0 20px 60px rgba(34, 197, 94, 0.4)",
+                        borderRadius: "14px",
                         whiteSpace: "normal",
                         fontWeight: "700",
                         lineHeight: "1.4",
@@ -112,36 +129,45 @@ const SoudropStart = () => {
                         transition: "all 0.3s ease",
                         letterSpacing: "0.02em",
                         maxWidth: "100%"
-                      }}>
-                          GARANTIR MINHA VAGA GRATUITA <ArrowRight className="inline-block ml-2 h-4 w-4" />
-                        </button>
-                      </div>
-                      <p className="text-xs text-forest-text-secondary mt-3 tracking-wide flex items-center justify-center lg:justify-start gap-2 flex-wrap">
-                        <span className="flex items-center gap-1.5">
-                          <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></span>
-                          Vagas limitadas
-                        </span>
-                        <span>·</span>
-                        <span>A aula pode sair do ar a qualquer momento</span>
-                      </p>
-                    </div>
-
-                    <p className="text-xs text-forest-text-secondary/70 pt-2">
-                      Com <span className="text-forest-green-primary font-medium">Renan Ferreira</span>, especialista em importação e dropshipping sem estoque.
+                      }}
+                    >
+                      GARANTIR MINHA VAGA GRATUITA <ArrowRight className="inline-block ml-2 h-5 w-5" />
+                    </button>
+                    
+                    <p className="text-xs sm:text-sm text-forest-text-secondary mt-4 tracking-wide flex items-center gap-2 flex-wrap justify-center lg:justify-start">
+                      <span className="flex items-center gap-1.5">
+                        <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></span>
+                        Vagas limitadas
+                      </span>
+                      <span>·</span>
+                      <span>A aula pode sair do ar a qualquer momento</span>
                     </p>
                   </div>
-
-                  {/* Image Column - Desktop */}
-                  <div className="order-1 lg:order-2 hidden lg:block">
-                    <div className="relative">
-                      <div className="absolute -inset-4 bg-gradient-forest-primary rounded-2xl blur-2xl opacity-30" />
-                      <img alt="Renan Ferreira" className="relative rounded-xl shadow-2xl w-full max-w-sm mx-auto border border-forest-border" src="/lovable-uploads/b6cc0b8d-bbc9-4d6a-8c36-b8366fc2ad75.png" />
-                    </div>
-                  </div>
                 </div>
-              </CardContent>
-            </Card>
-          </AnimatedSection>
+
+                <p className="text-sm text-forest-text-secondary/70 pt-2">
+                  Com <span className="text-forest-green-primary font-medium">Renan Ferreira</span>, especialista em importação e dropshipping sem estoque.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            {/* Image Column - Right */}
+            <AnimatedSection delay={200} className="order-1 lg:order-2">
+              <div className="relative flex justify-center lg:justify-end">
+                {/* Glow behind image */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-[300px] h-[400px] sm:w-[350px] sm:h-[450px] lg:w-[400px] lg:h-[500px] bg-gradient-to-t from-forest-green-primary/40 via-forest-green-primary/20 to-transparent rounded-full blur-3xl" />
+                </div>
+                
+                {/* Photo */}
+                <img 
+                  alt="Renan Ferreira" 
+                  className="relative z-10 w-[280px] sm:w-[320px] lg:w-[400px] xl:w-[450px] h-auto object-contain drop-shadow-2xl" 
+                  src="/lovable-uploads/b6cc0b8d-bbc9-4d6a-8c36-b8366fc2ad75.png" 
+                />
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
