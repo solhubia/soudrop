@@ -70,11 +70,9 @@ const SoudropStart = () => {
               {/* Headline */}
               <AnimatedSection delay={100}>
                 <h1 className="text-[1.4rem] sm:text-2xl md:text-3xl lg:text-[2.75rem] xl:text-5xl font-black text-forest-text-primary leading-[1.15] tracking-tight uppercase">
-                  <span className="block">Descubra como</span>
-                  <span className="block text-forest-text-primary/90">vender todos os dias</span>
-                  <span className="block">em dropshipping</span>
-                  <span className="block"><span className="text-forest-green-primary">sem estoque</span> e com</span>
-                  <span className="block text-forest-lime">margem de verdade</span>
+                  <span className="block">Descubra como <span className="text-forest-text-primary/90">vender todos os dias</span></span>
+                  <span className="block"><span className="text-forest-green-primary">sem estoque</span> e chegar aos seus primeiros</span>
+                  <span className="block"><span className="text-forest-lime">R$10.000/mês</span> mesmo começando do zero</span>
                 </h1>
               </AnimatedSection>
               
