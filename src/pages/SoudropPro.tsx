@@ -101,8 +101,9 @@ const SoudropPro = () => {
               {/* Event Tag with decorative line */}
               <AnimatedSection delay={0}>
                 <div className="space-y-2 lg:space-y-3">
-                  <span className="inline-block text-blue-400 text-[9px] sm:text-xs lg:text-sm font-semibold tracking-[0.12em] lg:tracking-[0.25em] uppercase">
-                    🔴 AULA GRATUITA AO VIVO
+                  <span className="inline-flex items-center gap-2 text-blue-400 text-[9px] sm:text-xs lg:text-sm font-semibold tracking-[0.12em] lg:tracking-[0.2em] uppercase">
+                    <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+                    AULA GRATUITA AO VIVO
                   </span>
                   {/* Decorative line */}
                   <div className="flex items-center gap-3 lg:max-w-[280px] justify-center lg:justify-start">
@@ -112,36 +113,25 @@ const SoudropPro = () => {
                 </div>
               </AnimatedSection>
               
-              {/* Headline - Mobile simplified, Desktop full */}
+              {/* Headline - Short, bold, impactful */}
               <AnimatedSection delay={100}>
                 {/* Mobile headline */}
-                <h1 className="lg:hidden text-[1.35rem] sm:text-2xl font-black text-white leading-[1.25] tracking-tight">
-                  <span className="block">Descubra como</span>
-                  <span className="block text-blue-400 drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">vender sem estoque</span>
-                  <span className="block">no método que faz até iniciantes</span>
-                  <span className="block text-green-400 drop-shadow-[0_0_20px_rgba(74,222,128,0.5)]">lucrarem +10 mil/mês</span>
+                <h1 className="lg:hidden text-[1.5rem] sm:text-[1.75rem] font-black text-white leading-[1.15] tracking-tight">
+                  <span className="block"><span className="text-blue-400 drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">Venda sem estoque</span> e lucre</span>
+                  <span className="block">mais de <span className="text-green-400 drop-shadow-[0_0_20px_rgba(74,222,128,0.5)]">R$10.000 por mês</span></span>
                 </h1>
                 {/* Desktop headline */}
-                <h1 className="hidden lg:block text-[2.5rem] xl:text-[2.75rem] font-black text-white leading-[1.15] tracking-tight">
-                  <span className="block">Descubra como <span className="text-blue-400 drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">vender sem estoque</span></span>
-                  <span className="block">no método que fazem até iniciantes</span>
-                  <span className="block"><span className="text-green-400 drop-shadow-[0_0_20px_rgba(74,222,128,0.5)]">lucrarem mais de 10 mil reais por mês</span></span>
-                  <span className="block">sem <span className="text-blue-400 drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">investir em estoque</span></span>
+                <h1 className="hidden lg:block text-[2.75rem] xl:text-[3.25rem] font-black text-white leading-[1.1] tracking-tight">
+                  <span className="block"><span className="text-blue-400 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]">Venda sem estoque</span> e lucre mais de</span>
+                  <span className="block"><span className="text-green-400 drop-shadow-[0_0_25px_rgba(74,222,128,0.5)]">R$10.000 por mês</span></span>
                 </h1>
               </AnimatedSection>
               
-              {/* Subheadline */}
+              {/* Support paragraph */}
               <AnimatedSection delay={200}>
-                <div className="space-y-3">
-                  <p className="text-[13px] lg:text-lg text-gray-300 leading-relaxed lg:max-w-[90%] max-w-[300px] mx-auto lg:mx-0">
-                    <span className="lg:hidden">O método simples que revela a estratégia para vender online sem estoque e lucrar mais de R$10.000/mês.</span>
-                    <span className="hidden lg:inline">Descubra o método simples que revela a estratégia usada por iniciantes para vender online sem investir em estoque e ter um lucro de mais de R$10.000 por mês.</span>
-                  </p>
-                  {/* Call to action text */}
-                  <p className="text-[11px] lg:text-sm text-gray-500 lg:max-w-[85%] max-w-[280px] mx-auto lg:mx-0">
-                    clique no botão abaixo e escolha um horário
-                  </p>
-                </div>
+                <p className="text-[13px] lg:text-lg text-gray-300 leading-relaxed lg:max-w-[85%] max-w-[300px] mx-auto lg:mx-0">
+                  Aprenda o método simples que até iniciantes usam para vender online sem investir em estoque e construir uma renda recorrente.
+                </p>
               </AnimatedSection>
 
               {/* Benefits - Only show on desktop */}
