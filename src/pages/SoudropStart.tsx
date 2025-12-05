@@ -47,90 +47,94 @@ const SoudropStart = () => {
   ];
 
   return <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
-      {/* Hero Section - Clean & Premium */}
+      {/* Hero Section - G4 Style */}
       <section className="relative w-full min-h-screen flex items-center overflow-hidden">
         {/* Dark gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#030806] via-[#061410] to-[#040a08]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#020805] via-[#051310] to-[#030907]" />
         
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `linear-gradient(rgba(34, 197, 94, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.4) 1px, transparent 1px)`,
-          backgroundSize: '80px 80px'
-        }} />
+        {/* Subtle radial glow from top-right */}
+        <div className="absolute top-0 right-0 w-[70%] h-[80%] bg-gradient-radial from-forest-green-primary/8 via-transparent to-transparent" />
         
-        {/* Ambient glow effects */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-forest-green-primary/15 rounded-full blur-[180px] -translate-x-1/3 -translate-y-1/3" />
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-forest-lime/8 rounded-full blur-[200px] translate-x-1/4 translate-y-1/4" />
+        {/* Bottom glow */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-forest-lime/5 blur-[120px]" />
         
         {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-0">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-6 items-center min-h-[85vh]">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16 py-12 lg:py-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 items-center min-h-[90vh]">
             
             {/* LEFT COLUMN - Text Content */}
-            <div className="order-2 lg:order-1 text-center lg:text-left space-y-5">
+            <div className="order-2 lg:order-1 text-center lg:text-left space-y-6">
               
               {/* Event Tag */}
               <AnimatedSection delay={0}>
-                <span className="inline-block px-4 py-2 bg-forest-green-primary/10 text-forest-green-primary rounded-full text-[10px] sm:text-xs font-bold border border-forest-green-primary/30 tracking-[0.12em] uppercase">
+                <span className="inline-block text-forest-green-primary text-xs sm:text-sm font-medium tracking-[0.2em] uppercase">
                   MASTERCLASS GRATUITA • OPERAÇÃO SEM ESTOQUE
                 </span>
               </AnimatedSection>
               
               {/* Headline */}
               <AnimatedSection delay={100}>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-5xl font-extrabold text-forest-text-primary leading-[1.15] tracking-tight">
-                  Descubra como{" "}
-                  <span className="text-forest-green-primary">vender todos os dias</span>
-                  {" "}em dropshipping sem estoque e com{" "}
-                  <span className="text-forest-lime">margem de verdade</span>
+                <h1 className="text-[1.75rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl font-black text-forest-text-primary leading-[1.1] tracking-tight uppercase">
+                  <span className="block">Descubra como</span>
+                  <span className="block text-forest-text-primary/90">vender todos os dias</span>
+                  <span className="block">em dropshipping</span>
+                  <span className="block"><span className="text-forest-green-primary">sem estoque</span> e com</span>
+                  <span className="block text-forest-lime">margem de verdade</span>
                 </h1>
               </AnimatedSection>
               
               {/* Subheadline */}
               <AnimatedSection delay={200}>
-                <p className="text-sm sm:text-base lg:text-lg text-forest-text-secondary/90 leading-relaxed lg:max-w-[85%]">
-                  Uma aula 100% online onde eu vou abrir a Operação Sem Estoque, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.
+                <p className="text-sm sm:text-base lg:text-lg text-forest-text-secondary/80 leading-relaxed lg:max-w-[90%]">
+                  Uma aula 100% online onde eu vou abrir a <span className="text-forest-green-primary font-medium">Operação Sem Estoque</span>, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.
                 </p>
               </AnimatedSection>
 
-              {/* Benefits List */}
+              {/* Benefits - Horizontal style like G4 */}
               <AnimatedSection delay={300}>
-                <div className="flex flex-col gap-2.5 pt-1">
-                  {heroBenefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center gap-3 justify-center lg:justify-start">
-                      <CheckCircle2 className="w-5 h-5 text-forest-green-primary flex-shrink-0" />
-                      <span className="text-sm sm:text-base text-forest-text-primary">{benefit}</span>
-                    </div>
-                  ))}
+                <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 sm:gap-0 pt-2">
+                  <div className="flex items-center gap-2">
+                    <Package className="w-5 h-5 text-forest-green-primary" />
+                    <span className="text-sm text-forest-text-primary">Sem comprar estoque antes</span>
+                  </div>
+                  <span className="hidden sm:block text-forest-text-secondary/30 mx-4">|</span>
+                  <div className="flex items-center gap-2">
+                    <Users className="w-5 h-5 text-forest-green-primary" />
+                    <span className="text-sm text-forest-text-primary">Passo a passo pra iniciantes</span>
+                  </div>
+                  <span className="hidden sm:block text-forest-text-secondary/30 mx-4">|</span>
+                  <div className="flex items-center gap-2">
+                    <Store className="w-5 h-5 text-forest-green-primary" />
+                    <span className="text-sm text-forest-text-primary">Funciona em marketplaces e loja própria</span>
+                  </div>
                 </div>
               </AnimatedSection>
               
               {/* CTA Button */}
               <AnimatedSection delay={400}>
                 <div className="pt-4 flex flex-col items-center lg:items-start">
-                  <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{
+                  <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
                     border: "none",
                     background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(155, 80%, 35%) 100%)",
                     color: "rgb(255, 255, 255)",
                     fontSize: "15px",
-                    padding: "18px 44px",
-                    boxShadow: "0 0 50px rgba(34, 197, 94, 0.35), 0 8px 25px rgba(0, 0, 0, 0.3)",
-                    borderRadius: "12px",
+                    padding: "18px 48px",
+                    boxShadow: "0 0 60px rgba(34, 197, 94, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
+                    borderRadius: "50px",
                     whiteSpace: "normal",
-                    fontWeight: "700",
+                    fontWeight: "600",
                     lineHeight: "1.4",
                     cursor: "pointer",
                     fontFamily: "system-ui, -apple-system, sans-serif",
                     wordBreak: "break-word",
                     transition: "all 0.3s ease",
-                    letterSpacing: "0.03em",
-                    textTransform: "uppercase"
+                    letterSpacing: "0.02em"
                   }}>
-                    GARANTIR MINHA VAGA GRATUITA <ArrowRight className="inline-block ml-2 h-5 w-5" />
+                    Garantir minha vaga gratuita <ArrowRight className="inline-block ml-2 h-5 w-5" />
                   </button>
                   
                   {/* Urgency text */}
-                  <p className="text-xs sm:text-sm text-forest-text-secondary/70 mt-4 flex items-center gap-2 flex-wrap justify-center lg:justify-start">
+                  <p className="text-xs sm:text-sm text-forest-text-secondary/60 mt-4 flex items-center gap-2 flex-wrap justify-center lg:justify-start">
                     <span className="flex items-center gap-1.5">
                       <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" />
                       Vagas limitadas
@@ -144,16 +148,16 @@ const SoudropStart = () => {
 
             {/* RIGHT COLUMN - Photo */}
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center relative">
-              <AnimatedSection delay={150} className="relative">
-                {/* Glow behind photo */}
+              <AnimatedSection delay={100} className="relative">
+                {/* Subtle glow behind photo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-[380px] h-[500px] sm:w-[450px] sm:h-[600px] lg:w-[500px] lg:h-[650px] bg-gradient-to-t from-forest-green-primary/40 via-forest-green-primary/20 to-transparent rounded-[50%] blur-[100px] transform translate-y-10" />
+                  <div className="w-[400px] h-[550px] sm:w-[500px] sm:h-[680px] lg:w-[550px] lg:h-[720px] bg-gradient-to-t from-forest-green-primary/30 via-forest-green-primary/10 to-transparent rounded-[50%] blur-[100px] transform translate-y-8" />
                 </div>
                 
-                {/* Photo - BIGGER */}
+                {/* Photo - Large and integrated */}
                 <img 
                   alt="Renan Ferreira - Especialista em Dropshipping" 
-                  className="relative z-10 w-[320px] sm:w-[380px] lg:w-[440px] xl:w-[500px] h-auto object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.5)]" 
+                  className="relative z-10 w-[340px] sm:w-[420px] lg:w-[480px] xl:w-[550px] h-auto object-contain drop-shadow-[0_30px_80px_rgba(0,0,0,0.6)]" 
                   src="/lovable-uploads/36e41bb5-8421-4782-997e-c3ae036bbf62.png" 
                 />
               </AnimatedSection>
