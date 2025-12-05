@@ -54,8 +54,8 @@ const SoudropStart = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-forest-lime/5 blur-[120px]" />
         
         {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-8 pb-0 lg:py-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-center lg:min-h-[90vh]">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-8 pb-0 lg:pt-0 lg:pb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-center lg:min-h-[85vh]">
             
             {/* LEFT COLUMN - Text Content */}
             <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-6 pt-6 lg:pt-0">
@@ -169,7 +169,7 @@ const SoudropStart = () => {
       </section>
 
       {/* Autoridade Section */}
-      <section className="pt-6 pb-12 sm:pt-16 sm:pb-16 md:pt-20 md:pb-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main">
+      <section className="pt-6 pb-12 sm:pt-0 sm:pb-16 md:pt-0 md:pb-20 lg:-mt-8 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main">
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
             <AnimatedSection className="order-2 md:order-1">
