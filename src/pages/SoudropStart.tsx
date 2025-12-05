@@ -126,7 +126,7 @@ const SoudropStart = () => {
                   transition: "all 0.3s ease",
                   letterSpacing: "0.02em"
                 }}>
-                    GARANTIR MINHA VAGA GRATUITA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
+                    GARANTIR MINHA VAGA EXCLUSIVA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                   </button>
                   
                   {/* Urgency text */}
