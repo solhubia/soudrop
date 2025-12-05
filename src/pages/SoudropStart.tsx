@@ -110,7 +110,9 @@ const SoudropStart = () => {
                   <div className="relative">
                     {/* Glow ring animation */}
                     <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-400 rounded-full opacity-75 blur-lg animate-pulse" />
-                    <div className="absolute -inset-2 bg-yellow-400/30 rounded-full animate-ping" style={{ animationDuration: '2s' }} />
+                    <div className="absolute -inset-2 bg-yellow-400/30 rounded-full animate-ping" style={{
+                    animationDuration: '2s'
+                  }} />
                     <button type="button" className="wj-embed-button w-full sm:w-auto group relative" data-webinarHash="8wgw0kty" style={{
                     border: "none",
                     background: "linear-gradient(135deg, hsl(45, 100%, 55%) 0%, hsl(40, 100%, 50%) 50%, hsl(35, 100%, 45%) 100%)",
@@ -129,7 +131,7 @@ const SoudropStart = () => {
                     letterSpacing: "0.02em",
                     textShadow: "0 1px 2px rgba(255, 255, 255, 0.3)"
                   }}>
-                      GARANTIR MINHA VAGA EXCLUSIVA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
+                      GARANTIR VAGA EXCLUSIVA   <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                     </button>
                   </div>
                   
