@@ -51,122 +51,155 @@ const SoudropStart = () => {
     text: "Estratégia testada em marketplaces e loja própria"
   }];
   return <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-screen flex items-center px-4 sm:px-6 py-16 sm:py-20 md:py-24">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-forest-bg-main via-[#0a1a12] to-forest-bg-main" />
+      {/* Hero Section - G4 Style */}
+      <section className="relative w-full min-h-screen flex items-center overflow-hidden">
+        {/* Dark gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#030806] via-[#061410] to-[#040a08]" />
         
-        {/* Geometric patterns */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-[10%] w-32 h-32 border border-forest-green-primary/30 rotate-45" />
-          <div className="absolute bottom-32 left-[5%] w-24 h-24 border border-forest-lime/20 rotate-12" />
-          <div className="absolute top-40 right-[15%] w-40 h-40 border border-forest-green-primary/20 -rotate-12" />
-          <div className="absolute bottom-20 right-[20%] w-20 h-20 border border-forest-lime/30 rotate-45" />
+        {/* Subtle grid pattern */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.3) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px'
+          }}
+        />
+        
+        {/* Geometric shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Large diagonal line */}
+          <div className="absolute top-0 right-[30%] w-[1px] h-[200%] bg-gradient-to-b from-transparent via-forest-green-primary/10 to-transparent rotate-[25deg] origin-top" />
+          <div className="absolute top-0 right-[45%] w-[1px] h-[200%] bg-gradient-to-b from-transparent via-forest-lime/5 to-transparent rotate-[25deg] origin-top" />
+          
+          {/* Corner accents */}
+          <div className="absolute top-10 left-10 w-20 h-20 border-l-2 border-t-2 border-forest-green-primary/10" />
+          <div className="absolute bottom-10 right-10 w-20 h-20 border-r-2 border-b-2 border-forest-green-primary/10" />
+          
+          {/* Floating geometric elements */}
+          <div className="absolute top-[15%] left-[8%] w-3 h-3 bg-forest-green-primary/30 rotate-45" />
+          <div className="absolute top-[25%] left-[15%] w-2 h-2 bg-forest-lime/20 rotate-45" />
+          <div className="absolute bottom-[30%] left-[5%] w-4 h-4 border border-forest-green-primary/20 rotate-45" />
+          <div className="absolute top-[60%] left-[12%] w-2 h-2 bg-forest-green-primary/15 rounded-full" />
         </div>
         
-        {/* Glow effects */}
-        <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-forest-green-primary rounded-full mix-blend-screen filter blur-[150px] opacity-20" />
-        <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-forest-lime rounded-full mix-blend-screen filter blur-[180px] opacity-15" />
+        {/* Main glow effects */}
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-forest-green-primary/20 rounded-full blur-[200px] -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-[20%] w-[500px] h-[500px] bg-forest-lime/10 rounded-full blur-[180px] translate-y-1/2" />
         
-        <div className="relative z-10 w-full max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Text Column - Left */}
-            <AnimatedSection delay={0} className="order-2 lg:order-1">
-              <div className="space-y-6">
-                {/* Tag */}
-                <div>
-                  <span className="inline-block px-4 py-2 bg-forest-green-primary/10 text-forest-green-primary rounded-full text-xs sm:text-sm font-semibold border border-forest-green-primary/30 tracking-wider uppercase backdrop-blur-sm">
-                    MASTERCLASS OPERAÇÃO SEM ESTOQUE • 100% ONLINE E GRATUITA
-                  </span>
-                </div>
-                
-                {/* Headline */}
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-forest-text-primary leading-[1.15] tracking-tight">
+        {/* Content container */}
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-0">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.7fr] gap-8 lg:gap-4 items-center min-h-screen lg:min-h-0">
+            
+            {/* LEFT COLUMN - Text Content */}
+            <div className="order-2 lg:order-1 text-center lg:text-left space-y-6 lg:space-y-7 lg:pr-8">
+              
+              {/* Event Tag */}
+              <AnimatedSection delay={0}>
+                <span className="inline-block px-5 py-2.5 bg-forest-green-primary/10 text-forest-green-primary rounded-full text-[11px] sm:text-xs font-bold border border-forest-green-primary/30 tracking-[0.15em] uppercase backdrop-blur-sm">
+                  MASTERCLASS OPERAÇÃO SEM ESTOQUE • 100% ONLINE E GRATUITA
+                </span>
+              </AnimatedSection>
+              
+              {/* Headline */}
+              <AnimatedSection delay={100}>
+                <h1 className="text-[1.75rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl font-extrabold text-forest-text-primary leading-[1.12] tracking-tight">
                   Descubra como{" "}
-                  <span className="bg-gradient-forest-text bg-clip-text text-transparent">vender todos os dias</span>
+                  <span className="text-forest-green-primary">vender todos os dias</span>
                   {" "}em dropshipping sem estoque e caminhar para seus primeiros{" "}
                   <span className="text-forest-lime">R$10.000/mês</span>
                 </h1>
-                
-                {/* Subheadline */}
-                <p className="text-sm sm:text-base md:text-lg text-forest-text-secondary/90 leading-relaxed max-w-xl">
+              </AnimatedSection>
+              
+              {/* Subheadline */}
+              <AnimatedSection delay={200}>
+                <p className="text-sm sm:text-base lg:text-lg text-forest-text-secondary/85 leading-relaxed lg:max-w-[90%]">
                   Nesta aula especial, vou te mostrar a Operação Sem Estoque, o método que uso para montar operações de dropshipping com fornecedores da China e do Brasil, sem investir em estoque, com frete calculado do jeito certo e margem de lucro saudável.
                 </p>
+              </AnimatedSection>
 
-                {/* Benefits - Vertical List */}
-                <div className="flex flex-col gap-3 pt-2">
+              {/* Benefits List */}
+              <AnimatedSection delay={300}>
+                <div className="flex flex-col gap-3 pt-1">
                   {heroBenefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center gap-3 text-forest-text-primary">
-                      <div className="w-8 h-8 bg-forest-green-primary/20 rounded-lg flex items-center justify-center border border-forest-green-primary/30">
+                    <div key={index} className="flex items-center gap-3 justify-center lg:justify-start">
+                      <div className="w-9 h-9 bg-forest-green-primary/15 rounded-lg flex items-center justify-center border border-forest-green-primary/25 flex-shrink-0">
                         <benefit.icon className="w-4 h-4 text-forest-green-primary" />
                       </div>
-                      <span className="text-sm sm:text-base">{benefit.text}</span>
+                      <span className="text-sm sm:text-base text-forest-text-primary font-medium">{benefit.text}</span>
                     </div>
                   ))}
                 </div>
-                
-                {/* CTA Button */}
-                <div className="pt-4">
-                  <div className="flex flex-col items-center lg:items-start">
-                    <button 
-                      type="button" 
-                      className="wj-embed-button w-full sm:w-auto group" 
-                      data-webinarHash="8wgw0kty" 
-                      style={{
-                        border: "none",
-                        background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(160, 84%, 39%) 100%)",
-                        color: "rgb(255, 255, 255)",
-                        fontSize: "16px",
-                        padding: "18px 36px",
-                        boxShadow: "0 20px 60px rgba(34, 197, 94, 0.4)",
-                        borderRadius: "14px",
-                        whiteSpace: "normal",
-                        fontWeight: "700",
-                        lineHeight: "1.4",
-                        cursor: "pointer",
-                        fontFamily: "system-ui, -apple-system, sans-serif",
-                        wordBreak: "break-word",
-                        transition: "all 0.3s ease",
-                        letterSpacing: "0.02em",
-                        maxWidth: "100%"
-                      }}
-                    >
-                      GARANTIR MINHA VAGA GRATUITA <ArrowRight className="inline-block ml-2 h-5 w-5" />
-                    </button>
-                    
-                    <p className="text-xs sm:text-sm text-forest-text-secondary mt-4 tracking-wide flex items-center gap-2 flex-wrap justify-center lg:justify-start">
-                      <span className="flex items-center gap-1.5">
-                        <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></span>
-                        Vagas limitadas
-                      </span>
-                      <span>·</span>
-                      <span>A aula pode sair do ar a qualquer momento</span>
-                    </p>
-                  </div>
+              </AnimatedSection>
+              
+              {/* CTA Button */}
+              <AnimatedSection delay={400}>
+                <div className="pt-3 flex flex-col items-center lg:items-start">
+                  <button 
+                    type="button" 
+                    className="wj-embed-button w-full sm:w-auto" 
+                    data-webinarHash="8wgw0kty" 
+                    style={{
+                      border: "none",
+                      background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(155, 80%, 35%) 100%)",
+                      color: "rgb(255, 255, 255)",
+                      fontSize: "15px",
+                      padding: "18px 40px",
+                      boxShadow: "0 0 40px rgba(34, 197, 94, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3)",
+                      borderRadius: "12px",
+                      whiteSpace: "normal",
+                      fontWeight: "700",
+                      lineHeight: "1.4",
+                      cursor: "pointer",
+                      fontFamily: "system-ui, -apple-system, sans-serif",
+                      wordBreak: "break-word",
+                      transition: "all 0.3s ease",
+                      letterSpacing: "0.03em",
+                      textTransform: "uppercase"
+                    }}
+                  >
+                    GARANTIR MINHA VAGA GRATUITA <ArrowRight className="inline-block ml-2 h-5 w-5" />
+                  </button>
+                  
+                  {/* Urgency text */}
+                  <p className="text-xs sm:text-sm text-forest-text-secondary/80 mt-4 tracking-wide flex items-center gap-2 flex-wrap justify-center lg:justify-start">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" />
+                      Vagas limitadas
+                    </span>
+                    <span className="text-forest-text-secondary/40">•</span>
+                    <span>A aula pode sair do ar a qualquer momento</span>
+                  </p>
                 </div>
+              </AnimatedSection>
 
-                <p className="text-sm text-forest-text-secondary/70 pt-2">
-                  Com <span className="text-forest-green-primary font-medium">Renan Ferreira</span>, especialista em importação e dropshipping sem estoque.
+              {/* Authority line */}
+              <AnimatedSection delay={500}>
+                <p className="text-xs sm:text-sm text-forest-text-secondary/60 pt-2">
+                  Com <span className="text-forest-green-primary font-semibold">Renan Ferreira</span>, especialista em importação e dropshipping sem estoque.
                 </p>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            </div>
 
-            {/* Image Column - Right */}
-            <AnimatedSection delay={200} className="order-1 lg:order-2">
-              <div className="relative flex justify-center lg:justify-end">
-                {/* Glow behind image */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-[300px] h-[400px] sm:w-[350px] sm:h-[450px] lg:w-[400px] lg:h-[500px] bg-gradient-to-t from-forest-green-primary/40 via-forest-green-primary/20 to-transparent rounded-full blur-3xl" />
+            {/* RIGHT COLUMN - Photo */}
+            <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center relative">
+              <AnimatedSection delay={200} className="relative">
+                {/* Large glow behind photo */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="w-[350px] h-[450px] sm:w-[400px] sm:h-[520px] lg:w-[450px] lg:h-[580px] bg-gradient-to-t from-forest-green-primary/50 via-forest-green-primary/25 to-forest-lime/10 rounded-[50%] blur-[80px] transform translate-y-10" />
                 </div>
+                
+                {/* Secondary glow accent */}
+                <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[300px] h-[100px] bg-forest-lime/30 rounded-full blur-[60px]" />
                 
                 {/* Photo */}
                 <img 
-                  alt="Renan Ferreira" 
-                  className="relative z-10 w-[280px] sm:w-[320px] lg:w-[400px] xl:w-[450px] h-auto object-contain drop-shadow-2xl" 
+                  alt="Renan Ferreira - Especialista em Dropshipping" 
+                  className="relative z-10 w-[300px] sm:w-[340px] lg:w-[380px] xl:w-[420px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" 
                   src="/lovable-uploads/b6cc0b8d-bbc9-4d6a-8c36-b8366fc2ad75.png" 
                 />
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            </div>
+            
           </div>
         </div>
       </section>
