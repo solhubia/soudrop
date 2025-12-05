@@ -40,12 +40,7 @@ const SoudropStart = () => {
     description: "Como planejar seus primeiros 90 dias de operação, saindo do zero até caminhar para seus primeiros R$5.000 a R$10.000/mês com dropshipping sem estoque."
   }];
   const forWho = ["Quer entender, de forma séria, como começar nesse mercado", "Já tentou ganhar dinheiro online e está cansado de promessa vazia", "Prefere ouvir a verdade: que existe caminho, mas exige método", "Quer um passo a passo aplicável, e não mais um vídeo motivacional"];
-  const heroBenefits = [
-    "Sem comprar estoque antes",
-    "Passo a passo pra iniciantes",
-    "Funciona em marketplaces e loja própria"
-  ];
-
+  const heroBenefits = ["Sem comprar estoque antes", "Passo a passo pra iniciantes", "Funciona em marketplaces e loja própria"];
   return <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
       {/* Hero Section - G4 Style */}
       <section className="relative w-full min-h-screen flex items-center overflow-hidden">
@@ -114,22 +109,22 @@ const SoudropStart = () => {
               <AnimatedSection delay={400}>
                 <div className="pt-4 flex flex-col items-center lg:items-start">
                   <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
-                    border: "none",
-                    background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(155, 80%, 35%) 100%)",
-                    color: "rgb(255, 255, 255)",
-                    fontSize: "15px",
-                    padding: "18px 48px",
-                    boxShadow: "0 0 60px rgba(34, 197, 94, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
-                    borderRadius: "50px",
-                    whiteSpace: "normal",
-                    fontWeight: "600",
-                    lineHeight: "1.4",
-                    cursor: "pointer",
-                    fontFamily: "system-ui, -apple-system, sans-serif",
-                    wordBreak: "break-word",
-                    transition: "all 0.3s ease",
-                    letterSpacing: "0.02em"
-                  }}>
+                  border: "none",
+                  background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(155, 80%, 35%) 100%)",
+                  color: "rgb(255, 255, 255)",
+                  fontSize: "15px",
+                  padding: "18px 48px",
+                  boxShadow: "0 0 60px rgba(34, 197, 94, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
+                  borderRadius: "50px",
+                  whiteSpace: "normal",
+                  fontWeight: "600",
+                  lineHeight: "1.4",
+                  cursor: "pointer",
+                  fontFamily: "system-ui, -apple-system, sans-serif",
+                  wordBreak: "break-word",
+                  transition: "all 0.3s ease",
+                  letterSpacing: "0.02em"
+                }}>
                     Garantir minha vaga gratuita <ArrowRight className="inline-block ml-2 h-5 w-5" />
                   </button>
                   
@@ -155,11 +150,7 @@ const SoudropStart = () => {
                 </div>
                 
                 {/* Photo - Large and integrated */}
-                <img 
-                  alt="Renan Ferreira - Especialista em Dropshipping" 
-                  className="relative z-10 w-[340px] sm:w-[420px] lg:w-[480px] xl:w-[550px] h-auto object-contain drop-shadow-[0_30px_80px_rgba(0,0,0,0.6)]" 
-                  src="/lovable-uploads/36e41bb5-8421-4782-997e-c3ae036bbf62.png" 
-                />
+                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[340px] sm:w-[420px] lg:w-[480px] xl:w-[550px] h-auto object-contain drop-shadow-[0_30px_80px_rgba(0,0,0,0.6)]" src="/lovable-uploads/1385e5eb-b807-4e48-a7ca-fe36bb206c45.jpg" />
               </AnimatedSection>
             </div>
             
