@@ -40,118 +40,97 @@ const SoudropStart = () => {
     description: "Como planejar seus primeiros 90 dias de operação, saindo do zero até caminhar para seus primeiros R$5.000 a R$10.000/mês com dropshipping sem estoque."
   }];
   const forWho = ["Quer entender, de forma séria, como começar nesse mercado", "Já tentou ganhar dinheiro online e está cansado de promessa vazia", "Prefere ouvir a verdade: que existe caminho, mas exige método", "Quer um passo a passo aplicável, e não mais um vídeo motivacional"];
-  const heroBenefits = [{
-    icon: Package,
-    text: "Vender sem comprar estoque antecipado"
-  }, {
-    icon: Users,
-    text: "Modelo pensado para iniciantes"
-  }, {
-    icon: Store,
-    text: "Estratégia testada em marketplaces e loja própria"
-  }];
+  const heroBenefits = [
+    "Sem comprar estoque antes",
+    "Passo a passo pra iniciantes",
+    "Funciona em marketplaces e loja própria"
+  ];
+
   return <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
-      {/* Hero Section - G4 Style */}
+      {/* Hero Section - Clean & Premium */}
       <section className="relative w-full min-h-screen flex items-center overflow-hidden">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#030806] via-[#061410] to-[#040a08]" />
         
         {/* Subtle grid pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.3) 1px, transparent 1px)`,
-        backgroundSize: '60px 60px'
-      }} />
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `linear-gradient(rgba(34, 197, 94, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.4) 1px, transparent 1px)`,
+          backgroundSize: '80px 80px'
+        }} />
         
-        {/* Geometric shapes */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Large diagonal line */}
-          <div className="absolute top-0 right-[30%] w-[1px] h-[200%] bg-gradient-to-b from-transparent via-forest-green-primary/10 to-transparent rotate-[25deg] origin-top" />
-          <div className="absolute top-0 right-[45%] w-[1px] h-[200%] bg-gradient-to-b from-transparent via-forest-lime/5 to-transparent rotate-[25deg] origin-top" />
-          
-          {/* Corner accents */}
-          <div className="absolute top-10 left-10 w-20 h-20 border-l-2 border-t-2 border-forest-green-primary/10" />
-          <div className="absolute bottom-10 right-10 w-20 h-20 border-r-2 border-b-2 border-forest-green-primary/10" />
-          
-          {/* Floating geometric elements */}
-          <div className="absolute top-[15%] left-[8%] w-3 h-3 bg-forest-green-primary/30 rotate-45" />
-          <div className="absolute top-[25%] left-[15%] w-2 h-2 bg-forest-lime/20 rotate-45" />
-          <div className="absolute bottom-[30%] left-[5%] w-4 h-4 border border-forest-green-primary/20 rotate-45" />
-          <div className="absolute top-[60%] left-[12%] w-2 h-2 bg-forest-green-primary/15 rounded-full" />
-        </div>
-        
-        {/* Main glow effects */}
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-forest-green-primary/20 rounded-full blur-[200px] -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-[20%] w-[500px] h-[500px] bg-forest-lime/10 rounded-full blur-[180px] translate-y-1/2" />
+        {/* Ambient glow effects */}
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-forest-green-primary/15 rounded-full blur-[180px] -translate-x-1/3 -translate-y-1/3" />
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-forest-lime/8 rounded-full blur-[200px] translate-x-1/4 translate-y-1/4" />
         
         {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-0">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.7fr] gap-8 lg:gap-4 items-center min-h-screen lg:min-h-0">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-0">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-6 items-center min-h-[85vh]">
             
             {/* LEFT COLUMN - Text Content */}
-            <div className="order-2 lg:order-1 text-center lg:text-left space-y-6 lg:space-y-7 lg:pr-8">
+            <div className="order-2 lg:order-1 text-center lg:text-left space-y-5">
               
               {/* Event Tag */}
               <AnimatedSection delay={0}>
-                <span className="inline-block px-5 py-2.5 bg-forest-green-primary/10 text-forest-green-primary rounded-full text-[11px] sm:text-xs font-bold border border-forest-green-primary/30 tracking-[0.15em] uppercase backdrop-blur-sm">
-                  MASTERCLASS OPERAÇÃO SEM ESTOQUE • 100% ONLINE E GRATUITA
+                <span className="inline-block px-4 py-2 bg-forest-green-primary/10 text-forest-green-primary rounded-full text-[10px] sm:text-xs font-bold border border-forest-green-primary/30 tracking-[0.12em] uppercase">
+                  MASTERCLASS GRATUITA • OPERAÇÃO SEM ESTOQUE
                 </span>
               </AnimatedSection>
               
               {/* Headline */}
               <AnimatedSection delay={100}>
-                <h1 className="text-[1.75rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl font-extrabold text-forest-text-primary leading-[1.12] tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-5xl font-extrabold text-forest-text-primary leading-[1.15] tracking-tight">
                   Descubra como{" "}
                   <span className="text-forest-green-primary">vender todos os dias</span>
-                  {" "}em dropshipping sem estoque e caminhar para seus primeiros{" "}
-                  <span className="text-forest-lime">R$10.000/mês</span>
+                  {" "}em dropshipping sem estoque e com{" "}
+                  <span className="text-forest-lime">margem de verdade</span>
                 </h1>
               </AnimatedSection>
               
               {/* Subheadline */}
               <AnimatedSection delay={200}>
-                <p className="text-sm sm:text-base lg:text-lg text-forest-text-secondary/85 leading-relaxed lg:max-w-[90%]">
-                  Nesta aula especial, vou te mostrar a Operação Sem Estoque, o método que uso para montar operações de dropshipping com fornecedores da China e do Brasil, sem investir em estoque, com frete calculado do jeito certo e margem de lucro saudável.
+                <p className="text-sm sm:text-base lg:text-lg text-forest-text-secondary/90 leading-relaxed lg:max-w-[85%]">
+                  Uma aula 100% online onde eu vou abrir a Operação Sem Estoque, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.
                 </p>
               </AnimatedSection>
 
               {/* Benefits List */}
               <AnimatedSection delay={300}>
-                <div className="flex flex-col gap-3 pt-1">
-                  {heroBenefits.map((benefit, index) => <div key={index} className="flex items-center gap-3 justify-center lg:justify-start">
-                      <div className="w-9 h-9 bg-forest-green-primary/15 rounded-lg flex items-center justify-center border border-forest-green-primary/25 flex-shrink-0">
-                        <benefit.icon className="w-4 h-4 text-forest-green-primary" />
-                      </div>
-                      <span className="text-sm sm:text-base text-forest-text-primary font-medium">{benefit.text}</span>
-                    </div>)}
+                <div className="flex flex-col gap-2.5 pt-1">
+                  {heroBenefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center gap-3 justify-center lg:justify-start">
+                      <CheckCircle2 className="w-5 h-5 text-forest-green-primary flex-shrink-0" />
+                      <span className="text-sm sm:text-base text-forest-text-primary">{benefit}</span>
+                    </div>
+                  ))}
                 </div>
               </AnimatedSection>
               
               {/* CTA Button */}
               <AnimatedSection delay={400}>
-                <div className="pt-3 flex flex-col items-center lg:items-start">
+                <div className="pt-4 flex flex-col items-center lg:items-start">
                   <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{
-                  border: "none",
-                  background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(155, 80%, 35%) 100%)",
-                  color: "rgb(255, 255, 255)",
-                  fontSize: "15px",
-                  padding: "18px 40px",
-                  boxShadow: "0 0 40px rgba(34, 197, 94, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3)",
-                  borderRadius: "12px",
-                  whiteSpace: "normal",
-                  fontWeight: "700",
-                  lineHeight: "1.4",
-                  cursor: "pointer",
-                  fontFamily: "system-ui, -apple-system, sans-serif",
-                  wordBreak: "break-word",
-                  transition: "all 0.3s ease",
-                  letterSpacing: "0.03em",
-                  textTransform: "uppercase"
-                }}>
+                    border: "none",
+                    background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(155, 80%, 35%) 100%)",
+                    color: "rgb(255, 255, 255)",
+                    fontSize: "15px",
+                    padding: "18px 44px",
+                    boxShadow: "0 0 50px rgba(34, 197, 94, 0.35), 0 8px 25px rgba(0, 0, 0, 0.3)",
+                    borderRadius: "12px",
+                    whiteSpace: "normal",
+                    fontWeight: "700",
+                    lineHeight: "1.4",
+                    cursor: "pointer",
+                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    wordBreak: "break-word",
+                    transition: "all 0.3s ease",
+                    letterSpacing: "0.03em",
+                    textTransform: "uppercase"
+                  }}>
                     GARANTIR MINHA VAGA GRATUITA <ArrowRight className="inline-block ml-2 h-5 w-5" />
                   </button>
                   
                   {/* Urgency text */}
-                  <p className="text-xs sm:text-sm text-forest-text-secondary/80 mt-4 tracking-wide flex items-center gap-2 flex-wrap justify-center lg:justify-start">
+                  <p className="text-xs sm:text-sm text-forest-text-secondary/70 mt-4 flex items-center gap-2 flex-wrap justify-center lg:justify-start">
                     <span className="flex items-center gap-1.5">
                       <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" />
                       Vagas limitadas
@@ -161,28 +140,22 @@ const SoudropStart = () => {
                   </p>
                 </div>
               </AnimatedSection>
-
-              {/* Authority line */}
-              <AnimatedSection delay={500}>
-                <p className="text-xs sm:text-sm text-forest-text-secondary/60 pt-2">
-                  Com <span className="text-forest-green-primary font-semibold">Renan Ferreira</span>, especialista em importação e dropshipping sem estoque.
-                </p>
-              </AnimatedSection>
             </div>
 
             {/* RIGHT COLUMN - Photo */}
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center relative">
-              <AnimatedSection delay={200} className="relative">
-                {/* Large glow behind photo */}
+              <AnimatedSection delay={150} className="relative">
+                {/* Glow behind photo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-[350px] h-[450px] sm:w-[400px] sm:h-[520px] lg:w-[450px] lg:h-[580px] bg-gradient-to-t from-forest-green-primary/50 via-forest-green-primary/25 to-forest-lime/10 rounded-[50%] blur-[80px] transform translate-y-10" />
+                  <div className="w-[380px] h-[500px] sm:w-[450px] sm:h-[600px] lg:w-[500px] lg:h-[650px] bg-gradient-to-t from-forest-green-primary/40 via-forest-green-primary/20 to-transparent rounded-[50%] blur-[100px] transform translate-y-10" />
                 </div>
                 
-                {/* Secondary glow accent */}
-                <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[300px] h-[100px] bg-forest-lime/30 rounded-full blur-[60px]" />
-                
-                {/* Photo */}
-                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[300px] sm:w-[340px] lg:w-[380px] xl:w-[420px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" src="/lovable-uploads/36e41bb5-8421-4782-997e-c3ae036bbf62.png" />
+                {/* Photo - BIGGER */}
+                <img 
+                  alt="Renan Ferreira - Especialista em Dropshipping" 
+                  className="relative z-10 w-[320px] sm:w-[380px] lg:w-[440px] xl:w-[500px] h-auto object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.5)]" 
+                  src="/lovable-uploads/36e41bb5-8421-4782-997e-c3ae036bbf62.png" 
+                />
               </AnimatedSection>
             </div>
             
