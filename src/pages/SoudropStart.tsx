@@ -150,7 +150,7 @@ const SoudropStart = () => {
                 </div>
                 
                 {/* Photo - Large and integrated */}
-                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[340px] sm:w-[420px] lg:w-[480px] xl:w-[550px] h-auto object-contain drop-shadow-[0_30px_80px_rgba(0,0,0,0.6)]" src="/lovable-uploads/1385e5eb-b807-4e48-a7ca-fe36bb206c45.jpg" />
+                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[340px] sm:w-[420px] lg:w-[480px] xl:w-[550px] h-auto object-contain drop-shadow-[0_30px_80px_rgba(0,0,0,0.6)]" src="/lovable-uploads/68d13401-0ad7-4992-a8cb-7d468641c8ee.png" />
               </AnimatedSection>
             </div>
             
