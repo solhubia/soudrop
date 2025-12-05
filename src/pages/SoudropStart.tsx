@@ -160,7 +160,7 @@ const SoudropStart = () => {
                 </div>
                 
                 {/* Photo - Large on desktop, reduced on mobile */}
-                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(34,197,94,0.4)] lg:drop-shadow-[0_0_60px_rgba(34,197,94,0.5)]" src="/lovable-uploads/68d13401-0ad7-4992-a8cb-7d468641c8ee.png" />
+                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(34,197,94,0.4)] lg:drop-shadow-[0_0_60px_rgba(34,197,94,0.5)]" src="/lovable-uploads/c311d6e2-5d4d-412f-8357-f24a8d3f20dc.png" />
               </AnimatedSection>
             </div>
             
