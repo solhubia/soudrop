@@ -142,17 +142,23 @@ const SoudropStart = () => {
 
             {/* RIGHT COLUMN - Photo */}
             <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-center relative mt-6 lg:mt-0">
-              <AnimatedSection delay={100} className="relative">
+              <AnimatedSection delay={100} className="relative w-full lg:w-auto">
                 {/* Strong green glow behind photo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   {/* Main glow */}
-                  <div className="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-forest-green-primary/40 rounded-full blur-[100px] lg:blur-[120px]" />
+                  <div className="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[550px] lg:h-[550px] bg-forest-green-primary/40 rounded-full blur-[100px] lg:blur-[120px]" />
                   {/* Secondary glow for depth */}
-                  <div className="absolute w-[200px] h-[250px] sm:w-[280px] sm:h-[350px] lg:w-[350px] lg:h-[450px] bg-forest-lime/30 rounded-full blur-[80px] lg:blur-[100px]" />
+                  <div className="absolute w-[200px] h-[250px] sm:w-[280px] sm:h-[350px] lg:w-[400px] lg:h-[500px] bg-forest-lime/30 rounded-full blur-[80px] lg:blur-[100px]" />
                 </div>
                 
-                {/* Photo - Large on desktop, reduced on mobile */}
-                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(34,197,94,0.4)] lg:drop-shadow-[0_0_60px_rgba(34,197,94,0.5)]" src="/lovable-uploads/68d13401-0ad7-4992-a8cb-7d468641c8ee.png" />
+                {/* Photo container with overflow mask */}
+                <div className="relative z-10 w-[260px] sm:w-[320px] lg:w-[520px] xl:w-[580px] h-[320px] sm:h-[400px] lg:h-[600px] xl:h-[680px] overflow-hidden flex justify-center">
+                  <img 
+                    alt="Renan Ferreira - Especialista em Dropshipping" 
+                    className="w-[115%] h-auto object-cover object-top drop-shadow-[0_0_40px_rgba(34,197,94,0.4)] lg:drop-shadow-[0_0_60px_rgba(34,197,94,0.5)]" 
+                    src="/lovable-uploads/68d13401-0ad7-4992-a8cb-7d468641c8ee.png" 
+                  />
+                </div>
               </AnimatedSection>
             </div>
             
