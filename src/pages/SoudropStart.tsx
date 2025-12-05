@@ -107,25 +107,31 @@ const SoudropStart = () => {
               {/* CTA Button */}
               <AnimatedSection delay={400}>
                 <div className="pt-2 lg:pt-4 flex flex-col items-center lg:items-start">
-                  <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
-                  border: "none",
-                  background: "linear-gradient(135deg, hsl(152, 76%, 42%) 0%, hsl(155, 80%, 35%) 100%)",
-                  color: "rgb(255, 255, 255)",
-                  fontSize: "14px",
-                  padding: "16px 36px",
-                  boxShadow: "0 0 60px rgba(34, 197, 94, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
-                  borderRadius: "50px",
-                  whiteSpace: "normal",
-                  fontWeight: "600",
-                  lineHeight: "1.4",
-                  cursor: "pointer",
-                  fontFamily: "system-ui, -apple-system, sans-serif",
-                  wordBreak: "break-word",
-                  transition: "all 0.3s ease",
-                  letterSpacing: "0.02em"
-                }}>
-                    GARANTIR MINHA VAGA EXCLUSIVA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
-                  </button>
+                  <div className="relative">
+                    {/* Glow ring animation */}
+                    <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-400 rounded-full opacity-75 blur-lg animate-pulse" />
+                    <div className="absolute -inset-2 bg-yellow-400/30 rounded-full animate-ping" style={{ animationDuration: '2s' }} />
+                    <button type="button" className="wj-embed-button w-full sm:w-auto group relative" data-webinarHash="8wgw0kty" style={{
+                    border: "none",
+                    background: "linear-gradient(135deg, hsl(45, 100%, 55%) 0%, hsl(40, 100%, 50%) 50%, hsl(35, 100%, 45%) 100%)",
+                    color: "rgb(0, 0, 0)",
+                    fontSize: "14px",
+                    padding: "16px 36px",
+                    boxShadow: "0 0 60px rgba(251, 191, 36, 0.5), 0 0 100px rgba(251, 191, 36, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
+                    borderRadius: "50px",
+                    whiteSpace: "normal",
+                    fontWeight: "700",
+                    lineHeight: "1.4",
+                    cursor: "pointer",
+                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    wordBreak: "break-word",
+                    transition: "all 0.3s ease",
+                    letterSpacing: "0.02em",
+                    textShadow: "0 1px 2px rgba(255, 255, 255, 0.3)"
+                  }}>
+                      GARANTIR MINHA VAGA EXCLUSIVA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
+                    </button>
+                  </div>
                   
                   {/* Urgency text */}
                   <p className="text-[11px] sm:text-xs lg:text-sm text-forest-text-secondary/60 mt-3 lg:mt-4 flex items-center gap-2 flex-wrap justify-center lg:justify-start">
