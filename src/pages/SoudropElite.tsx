@@ -1,13 +1,11 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight } from "lucide-react";
+import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight, Package, Store } from "lucide-react";
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
-import soudropLogo from "@/assets/soudrop-logo-oficial.png";
 import { AnimatedSection } from "@/components/AnimatedSection";
+
 const SoudropElite = () => {
   useEffect(() => {
-    // Script do botão embed
     const embedScript = document.createElement('script');
     embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
     embedScript.async = true;
@@ -18,210 +16,339 @@ const SoudropElite = () => {
       }
     };
   }, []);
-  const pilares = [{
-    icon: TrendingUp,
-    title: "Como encontrar produtos para vender",
-    description: "Aprenda a identificar produtos com demanda, que vendem bem e têm margem de lucro interessante. Sem chute, com método."
-  }, {
-    icon: Target,
-    title: "Onde e como anunciar",
-    description: "Domine os principais marketplaces (Mercado Livre, Shopee, etc) e aprenda a criar anúncios que convertem em vendas."
-  }, {
-    icon: Briefcase,
-    title: "Gestão de pedidos sem estoque",
-    description: "Entenda como funciona o dropshipping e como gerenciar pedidos sem precisar ter produtos em casa."
-  }, {
-    icon: Calculator,
-    title: "Precificação e lucro real",
-    description: "Calcule corretamente seus custos, defina preços competitivos e garanta que você está lucrando de verdade."
-  }, {
-    icon: Shield,
-    title: "Evite os erros mais comuns",
-    description: "Produtos proibidos, fornecedores ruins, anúncios bloqueados - aprenda o que NÃO fazer para economizar tempo e dinheiro."
-  }, {
-    icon: GraduationCap,
-    title: "Suporte e comunidade",
-    description: "Acesso a materiais de apoio, tirando dúvidas e uma comunidade de pessoas que estão no mesmo caminho que você."
-  }];
-  const paraQuemE = ["Quer ter uma renda extra trabalhando de casa", "Busca uma fonte de renda principal sem sair de casa", "Não tem capital para investir em estoque", "Quer flexibilidade de horários para trabalhar quando puder", "Tem disposição para aprender algo novo e aplicar"];
-  return <div className="min-h-screen bg-black overflow-x-hidden">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 sm:pt-20 md:pt-28 pb-20 sm:pb-24 md:pb-36 px-5 sm:px-6 md:px-4">
-        <div className="absolute inset-0 bg-black" />
+
+  const pilares = [
+    {
+      icon: TrendingUp,
+      title: "Como encontrar produtos para vender",
+      description: "Aprenda a identificar produtos com demanda, que vendem bem e têm margem de lucro interessante. Sem chute, com método."
+    },
+    {
+      icon: Target,
+      title: "Onde e como anunciar",
+      description: "Domine os principais marketplaces (Mercado Livre, Shopee, etc) e aprenda a criar anúncios que convertem em vendas."
+    },
+    {
+      icon: Briefcase,
+      title: "Gestão de pedidos sem estoque",
+      description: "Entenda como funciona o dropshipping e como gerenciar pedidos sem precisar ter produtos em casa."
+    },
+    {
+      icon: Calculator,
+      title: "Precificação e lucro real",
+      description: "Calcule corretamente seus custos, defina preços competitivos e garanta que você está lucrando de verdade."
+    },
+    {
+      icon: Shield,
+      title: "Evite os erros mais comuns",
+      description: "Produtos proibidos, fornecedores ruins, anúncios bloqueados - aprenda o que NÃO fazer para economizar tempo e dinheiro."
+    },
+    {
+      icon: GraduationCap,
+      title: "Suporte e comunidade",
+      description: "Acesso a materiais de apoio, tirando dúvidas e uma comunidade de pessoas que estão no mesmo caminho que você."
+    }
+  ];
+
+  const paraQuemE = [
+    "Quer ter uma renda extra trabalhando de casa",
+    "Busca uma fonte de renda principal sem sair de casa",
+    "Não tem capital para investir em estoque",
+    "Quer flexibilidade de horários para trabalhar quando puder",
+    "Tem disposição para aprender algo novo e aplicar"
+  ];
+
+  return (
+    <div className="min-h-screen bg-black overflow-x-hidden">
+      {/* Hero Section - Two Column Layout */}
+      <section className="relative w-full min-h-[auto] lg:min-h-screen flex items-center overflow-hidden">
+        {/* Dark gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" />
         
-        <div className="container mx-auto max-w-5xl relative z-10">
-          <div className="text-center space-y-6 sm:space-y-8 md:space-y-12">
-            <AnimatedSection delay={0}>
-              <div className="inline-block">
-                <span className="px-5 md:px-7 py-2.5 md:py-3 bg-yellow-950/80 text-elite-gold rounded-full text-xs md:text-sm font-semibold border border-elite-gold/50 tracking-wider uppercase backdrop-blur-sm shadow-lg shadow-yellow-900/20">
-                  🔴 Método Sem Estoque
-                </span>
-              </div>
-            </AnimatedSection>
+        {/* Subtle radial glow from top-right (gold) */}
+        <div className="absolute top-0 right-0 w-[70%] h-[80%] bg-gradient-radial from-elite-gold/8 via-transparent to-transparent" />
+        
+        {/* Bottom glow */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-elite-gold/5 blur-[120px]" />
+        
+        {/* Content container */}
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-8 pb-0 lg:py-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-center lg:min-h-[90vh]">
             
-            <AnimatedSection delay={100}>
-              <h1 className="text-[1.6rem] sm:text-3xl md:text-4xl lg:text-[3rem] font-bold text-white leading-[1.25] sm:leading-[1.2] tracking-tight max-w-4xl mx-auto">
-                Descubra como <span className="text-elite-gold drop-shadow-[0_0_20px_rgba(251,191,36,0.5)]">vender sem estoque</span> no método que fazem até iniciantes{" "}
-                <span className="text-green-400 drop-shadow-[0_0_20px_rgba(74,222,128,0.5)]">lucrarem mais de 100 mil reais por mês</span>{" "}
-                sem <span className="text-elite-gold drop-shadow-[0_0_20px_rgba(251,191,36,0.5)]">investir em estoque</span>
-              </h1>
-            </AnimatedSection>
-            
-            <AnimatedSection delay={200}>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">O método simples para vender online sem investir em estoque inclusive produtos comuns, como uma simples tomada e lucrar mais de R$100.000 por mês.</p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={300}>
-              <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto">
-                clique no botão abaixo e escolha um horário
-
-
-              </p>
-            </AnimatedSection>
-            
-            <AnimatedSection delay={400}>
-              <div className="pt-4 sm:pt-6 md:pt-8">
-                <div style={{
-                textAlign: "center"
-              }}>
-                  <button type="button" className="wj-embed-button w-full sm:w-auto group" data-webinarHash="8wgw0kty" style={{
-                  border: "none",
-                  background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
-                  color: "rgb(0, 0, 0)",
-                  fontSize: "16px",
-                  padding: "18px 32px",
-                  boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
-                  borderRadius: "16px",
-                  whiteSpace: "normal",
-                  fontWeight: "700",
-                  lineHeight: "1.4",
-                  cursor: "pointer",
-                  fontFamily: "system-ui, -apple-system, sans-serif",
-                  wordBreak: "break-word",
-                  margin: "auto",
-                  transition: "all 0.3s ease",
-                  letterSpacing: "0.02em",
-                  maxWidth: "100%"
-                }}>GARANTIR VAGA    <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
+            {/* LEFT COLUMN - Text Content */}
+            <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-6 pt-6 lg:pt-0">
+              
+              {/* Event Tag with decorative line */}
+              <AnimatedSection delay={0}>
+                <div className="space-y-2 lg:space-y-3">
+                  <span className="inline-block text-elite-gold text-[9px] sm:text-xs lg:text-sm font-semibold tracking-[0.12em] lg:tracking-[0.25em] uppercase">
+                    🔴 MÉTODO SEM ESTOQUE • AULA AO VIVO
+                  </span>
+                  {/* Decorative line */}
+                  <div className="flex items-center gap-3 lg:max-w-[280px] justify-center lg:justify-start">
+                    <div className="h-[1px] flex-1 bg-gradient-to-r from-elite-gold/60 via-elite-gold-light/40 to-transparent max-w-[200px]" />
+                    <div className="w-1.5 h-1.5 bg-elite-gold rounded-full" />
+                  </div>
                 </div>
-                <p className="text-xs md:text-sm text-gray-500 mt-5 md:mt-6 tracking-wide flex items-center justify-center gap-3">
-                  <span className="flex items-center gap-1.5"><span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>Método ao vivo</span>
-                  <span>·</span>
-                  <span>Vagas limitadas</span>
-                  <span>·</span>
-                  <span>Não fica disponível depois</span>
-                </p>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+              
+              {/* Headline - Mobile simplified, Desktop full */}
+              <AnimatedSection delay={100}>
+                {/* Mobile headline */}
+                <h1 className="lg:hidden text-[1.35rem] sm:text-2xl font-black text-white leading-[1.25] tracking-tight">
+                  <span className="block">Descubra como</span>
+                  <span className="block text-elite-gold drop-shadow-[0_0_20px_rgba(251,191,36,0.5)]">vender sem estoque</span>
+                  <span className="block">no método que faz até iniciantes</span>
+                  <span className="block text-green-400 drop-shadow-[0_0_20px_rgba(74,222,128,0.5)]">lucrarem +100 mil/mês</span>
+                </h1>
+                {/* Desktop headline */}
+                <h1 className="hidden lg:block text-[2.5rem] xl:text-[2.75rem] font-black text-white leading-[1.15] tracking-tight">
+                  <span className="block">Descubra como <span className="text-elite-gold drop-shadow-[0_0_20px_rgba(251,191,36,0.5)]">vender sem estoque</span></span>
+                  <span className="block">no método que fazem até iniciantes</span>
+                  <span className="block"><span className="text-green-400 drop-shadow-[0_0_20px_rgba(74,222,128,0.5)]">lucrarem mais de 100 mil reais por mês</span></span>
+                  <span className="block">sem <span className="text-elite-gold drop-shadow-[0_0_20px_rgba(251,191,36,0.5)]">investir em estoque</span></span>
+                </h1>
+              </AnimatedSection>
+              
+              {/* Subheadline */}
+              <AnimatedSection delay={200}>
+                <div className="space-y-3">
+                  <p className="text-[13px] lg:text-lg text-gray-300 leading-relaxed lg:max-w-[90%] max-w-[300px] mx-auto lg:mx-0">
+                    <span className="lg:hidden">O método simples para vender online sem investir em estoque inclusive produtos comuns e lucrar mais de R$100.000/mês.</span>
+                    <span className="hidden lg:inline">O método simples para vender online sem investir em estoque inclusive produtos comuns, como uma simples tomada e lucrar mais de R$100.000 por mês.</span>
+                  </p>
+                  {/* Social proof */}
+                  <p className="text-[11px] lg:text-sm text-gray-500 lg:max-w-[85%] max-w-[280px] mx-auto lg:mx-0">
+                    clique no botão abaixo e escolha um horário
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              {/* Benefits - Only show on desktop */}
+              <AnimatedSection delay={300} className="hidden lg:block">
+                <div className="flex flex-row items-center gap-0 pt-2">
+                  <div className="flex items-center gap-2">
+                    <Package className="w-4 h-4 text-elite-gold" />
+                    <span className="text-sm text-white font-semibold">Sem comprar estoque</span>
+                  </div>
+                  <span className="text-gray-600 mx-4">|</span>
+                  <div className="flex items-center gap-2">
+                    <Users className="w-4 h-4 text-elite-gold" />
+                    <span className="text-sm text-white font-semibold">Passo a passo completo</span>
+                  </div>
+                  <span className="text-gray-600 mx-4">|</span>
+                  <div className="flex items-center gap-2">
+                    <Store className="w-4 h-4 text-elite-gold" />
+                    <span className="text-sm text-white font-semibold">Marketplaces e loja própria</span>
+                  </div>
+                </div>
+              </AnimatedSection>
+              
+              {/* CTA Button */}
+              <AnimatedSection delay={400}>
+                <div className="pt-2 lg:pt-4 flex flex-col items-center lg:items-start">
+                  <div className="relative">
+                    {/* Glow ring animation */}
+                    <div className="absolute -inset-1 bg-gradient-to-r from-elite-gold via-yellow-500 to-elite-gold rounded-full opacity-75 blur-lg animate-pulse" />
+                    <div className="absolute -inset-2 bg-elite-gold/30 rounded-full animate-ping" style={{ animationDuration: '2s' }} />
+                    <button
+                      type="button"
+                      className="wj-embed-button w-full sm:w-auto group relative"
+                      data-webinarHash="8wgw0kty"
+                      style={{
+                        border: "none",
+                        background: "linear-gradient(135deg, hsl(45, 100%, 55%) 0%, hsl(40, 100%, 50%) 50%, hsl(35, 100%, 45%) 100%)",
+                        color: "rgb(0, 0, 0)",
+                        fontSize: "14px",
+                        padding: "16px 36px",
+                        boxShadow: "0 0 60px rgba(251, 191, 36, 0.5), 0 0 100px rgba(251, 191, 36, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
+                        borderRadius: "50px",
+                        whiteSpace: "normal",
+                        fontWeight: "700",
+                        lineHeight: "1.4",
+                        cursor: "pointer",
+                        fontFamily: "system-ui, -apple-system, sans-serif",
+                        wordBreak: "break-word",
+                        transition: "all 0.3s ease",
+                        letterSpacing: "0.02em",
+                        textShadow: "0 1px 2px rgba(255, 255, 255, 0.3)"
+                      }}
+                    >
+                      GARANTIR VAGA   <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
+                    </button>
+                  </div>
+                  
+                  {/* Urgency text */}
+                  <p className="text-[11px] sm:text-xs lg:text-sm text-gray-500 mt-3 lg:mt-4 flex items-center gap-2 flex-wrap justify-center lg:justify-start">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-green-500 rounded-full animate-pulse" />
+                      Método ao vivo
+                    </span>
+                    <span className="text-gray-600">·</span>
+                    <span>Vagas limitadas</span>
+                    <span className="text-gray-600">·</span>
+                    <span>Não fica disponível depois</span>
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+
+            {/* RIGHT COLUMN - Photo */}
+            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-center relative mt-6 mb-0 lg:mt-0">
+              <AnimatedSection delay={100} className="relative">
+                {/* Strong gold glow behind photo */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  {/* Main glow */}
+                  <div className="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-elite-gold/30 rounded-full blur-[100px] lg:blur-[120px]" />
+                  {/* Secondary glow for depth */}
+                  <div className="absolute w-[200px] h-[250px] sm:w-[280px] sm:h-[350px] lg:w-[350px] lg:h-[450px] bg-yellow-500/25 rounded-full blur-[80px] lg:blur-[100px]" />
+                </div>
+                
+                {/* Photo */}
+                <img
+                  alt="Renan Ferreira - Especialista em Vendas Online"
+                  className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]"
+                  src="/lovable-uploads/c311d6e2-5d4d-412f-8357-f24a8d3f20dc.png"
+                />
+              </AnimatedSection>
+            </div>
+            
           </div>
         </div>
       </section>
 
       {/* O que é a aula */}
-      <section className="py-16 sm:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-black to-[#050A18]">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-white">
-            O que você vai <span className="text-elite-gold">aprender na aula</span>
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            Na aula ao vivo, vou te mostrar exatamente como transformar produtos simples em uma operação lucrativa.
-            Sem enrolação, sem teoria — só o que funciona na prática.
-          </p>
+      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-black to-[#050A00]">
+        <div className="max-w-4xl mx-auto text-center">
+          <AnimatedSection>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
+              O que você vai <span className="text-elite-gold">aprender na aula</span>
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+              Na aula ao vivo, vou te mostrar exatamente como transformar produtos simples em uma operação lucrativa.
+              Sem enrolação, sem teoria — só o que funciona na prática.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Para quem é */}
-      <section className="py-16 sm:py-20 px-5 sm:px-6 md:px-4 bg-[#050A18]">
+      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center text-white">
-            Essa aula é para <span className="text-elite-gold">quem quer:</span>
-          </h2>
+          <AnimatedSection>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 text-center text-white">
+              Essa aula é para <span className="text-elite-gold">quem quer:</span>
+            </h2>
+          </AnimatedSection>
           
-          <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
-            {paraQuemE.map((item, index) => <div key={index} className="flex items-start gap-4 p-5 sm:p-6 bg-black/50 border border-elite-gold/20 rounded-xl hover:border-elite-gold/40 transition-all">
-                <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
-                <p className="text-gray-200 text-base sm:text-lg">{item}</p>
-              </div>)}
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-5">
+            {paraQuemE.map((item, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
+                <div className="flex items-start gap-4 p-5 sm:p-6 bg-black/50 border border-elite-gold/20 rounded-xl hover:border-elite-gold/40 transition-all">
+                  <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-200 text-sm sm:text-base lg:text-lg">{item}</p>
+                </div>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Conteúdo da Aula */}
-      <section className="py-16 sm:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-[#050A18] to-black">
+      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-[#050A00] to-black">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center text-white">
-            O que vou revelar <span className="text-elite-gold">na aula</span>
-          </h2>
-          <p className="text-center text-gray-400 mb-10 sm:mb-16 text-base sm:text-lg">
-            A estratégia completa para faturar com produtos simples
-          </p>
+          <AnimatedSection>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-center text-white">
+              O que vou revelar <span className="text-elite-gold">na aula</span>
+            </h2>
+            <p className="text-center text-gray-400 mb-10 sm:mb-14 text-sm sm:text-base lg:text-lg">
+              A estratégia completa para faturar com produtos simples
+            </p>
+          </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {pilares.map((pilar, index) => {
-            const Icon = pilar.icon;
-            return <Card key={index} className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-elite-gold/20 hover:border-elite-gold/50 transition-all">
-                  <CardContent className="p-6 sm:p-8">
-                    <div className="mb-4 sm:mb-6 w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-elite-gold to-yellow-600 flex items-center justify-center">
-                      <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-black" />
-                    </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{pilar.title}</h3>
-                    <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{pilar.description}</p>
-                  </CardContent>
-                </Card>;
-          })}
+              const Icon = pilar.icon;
+              return (
+                <AnimatedSection key={index} delay={index * 100}>
+                  <Card className="bg-gradient-to-br from-[#0A0800]/90 to-[#0A0800]/60 border border-elite-gold/20 hover:border-elite-gold/50 transition-all h-full">
+                    <CardContent className="p-5 sm:p-6 lg:p-8">
+                      <div className="mb-4 sm:mb-5 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-elite-gold to-yellow-600 flex items-center justify-center">
+                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-black" />
+                      </div>
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3">{pilar.title}</h3>
+                      <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{pilar.description}</p>
+                    </CardContent>
+                  </Card>
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Transformação */}
-      <section className="py-16 sm:py-20 px-5 sm:px-6 md:px-4 bg-[#050A18] border-y border-elite-gold/10">
+      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-[#050A00] border-y border-elite-gold/10">
         <div className="max-w-4xl mx-auto text-center">
-          <Crown className="w-12 h-12 sm:w-16 sm:h-16 text-elite-gold mx-auto mb-6 sm:mb-8" />
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-white">
-            O que muda depois dessa aula
-          </h2>
-          <div className="grid md:grid-cols-2 gap-5 sm:gap-8 text-left">
-            <div className="p-6 sm:p-8 bg-black/50 border border-red-500/30 rounded-xl">
-              <p className="text-red-400 font-bold mb-3 sm:mb-4 text-base sm:text-lg">❌ ANTES</p>
-              <ul className="space-y-2 sm:space-y-3 text-gray-400 text-sm sm:text-base">
-                <li>• Sem renda extra</li>
-                <li>• Preso ao escritório ou emprego</li>
-                <li>• Sem flexibilidade de horários</li>
-                <li>• Dependendo de um salário fixo</li>
-                <li>• Sem controle da própria agenda</li>
-              </ul>
-            </div>
-            <div className="p-6 sm:p-8 bg-elite-gold/10 border border-elite-gold/50 rounded-xl">
-              <p className="text-elite-gold font-bold mb-3 sm:mb-4 text-base sm:text-lg">✓ DEPOIS</p>
-              <ul className="space-y-2 sm:space-y-3 text-gray-200 text-sm sm:text-base">
-                <li>• Vendendo de casa</li>
-                <li>• Trabalhando no seu horário</li>
-                <li>• Renda extra ou principal</li>
-                <li>• Sem precisar de estoque</li>
-                <li>• Mais liberdade e flexibilidade</li>
-              </ul>
-            </div>
+          <AnimatedSection>
+            <Crown className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-elite-gold mx-auto mb-6 sm:mb-8" />
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 text-white">
+              O que muda depois dessa aula
+            </h2>
+          </AnimatedSection>
+          <div className="grid md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 text-left">
+            <AnimatedSection delay={100}>
+              <div className="p-5 sm:p-6 lg:p-8 bg-black/50 border border-red-500/30 rounded-xl">
+                <p className="text-red-400 font-bold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">❌ ANTES</p>
+                <ul className="space-y-2 sm:space-y-3 text-gray-400 text-sm sm:text-base">
+                  <li>• Sem renda extra</li>
+                  <li>• Preso ao escritório ou emprego</li>
+                  <li>• Sem flexibilidade de horários</li>
+                  <li>• Dependendo de um salário fixo</li>
+                  <li>• Sem controle da própria agenda</li>
+                </ul>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <div className="p-5 sm:p-6 lg:p-8 bg-elite-gold/10 border border-elite-gold/50 rounded-xl">
+                <p className="text-elite-gold font-bold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">✓ DEPOIS</p>
+                <ul className="space-y-2 sm:space-y-3 text-gray-200 text-sm sm:text-base">
+                  <li>• Vendendo de casa</li>
+                  <li>• Trabalhando no seu horário</li>
+                  <li>• Renda extra ou principal</li>
+                  <li>• Sem precisar de estoque</li>
+                  <li>• Mais liberdade e flexibilidade</li>
+                </ul>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Seção do Mentor */}
-      <section className="py-16 sm:py-20 px-5 sm:px-6 md:px-4 bg-black">
+      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-black">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
-            <div>
-              <img src={renanPhoto} alt="Renan Ferreira" className="w-full rounded-2xl border-4 border-elite-gold/30 shadow-[0_0_40px_rgba(251,191,36,0.2)]" />
-            </div>
-            <div>
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+            <AnimatedSection className="order-2 md:order-1">
+              <div className="relative">
+                <div className="absolute -inset-3 bg-gradient-to-br from-elite-gold/30 to-yellow-600/20 rounded-2xl blur-xl opacity-50" />
+                <img
+                  src={renanPhoto}
+                  alt="Renan Ferreira"
+                  className="relative w-full rounded-2xl border-4 border-elite-gold/30 shadow-[0_0_40px_rgba(251,191,36,0.2)]"
+                />
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={200} className="order-1 md:order-2">
               <div className="mb-4 sm:mb-6 inline-flex items-center gap-2 px-4 py-2 border border-elite-gold/30 rounded-full bg-elite-gold/5">
                 <Crown className="w-4 h-4 text-elite-gold" />
                 <span className="text-elite-gold text-xs sm:text-sm font-medium uppercase tracking-wider">Seu Instrutor</span>
               </div>
               
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
                 Renan Ferreira
               </h2>
-              <p className="text-lg sm:text-xl text-elite-gold mb-4 sm:mb-6 font-semibold">
+              <p className="text-base sm:text-lg lg:text-xl text-elite-gold mb-4 sm:mb-6 font-semibold">
                 Especialista em Vendas Online e Marketplaces
               </p>
               
@@ -234,7 +361,7 @@ const SoudropElite = () => {
                   Também trabalho com <span className="text-elite-gold font-semibold">importação direta da China</span>, 
                   o que me dá uma visão completa de toda a cadeia.
                 </p>
-                <p className="text-white font-semibold text-base sm:text-lg">
+                <p className="text-white font-semibold text-sm sm:text-base lg:text-lg">
                   Meu objetivo é ensinar você do jeito mais prático possível:
                 </p>
                 <p>
@@ -242,146 +369,164 @@ const SoudropElite = () => {
                   <span className="text-elite-gold font-semibold"> aplicando o que funciona na prática</span>.
                 </p>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Acesso Exclusivo */}
-      <section className="py-16 sm:py-20 px-5 sm:px-6 md:px-4 bg-[#050A18]">
+      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
         <div className="max-w-4xl mx-auto text-center">
-          <Shield className="w-16 h-16 sm:w-20 sm:h-20 text-elite-gold mx-auto mb-6 sm:mb-8" />
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-white">
-            Método <span className="text-elite-gold">Validado</span>
-          </h2>
-          <div className="space-y-3 sm:space-y-4 text-base sm:text-xl text-gray-300 leading-relaxed">
-            <p>Método testado e comprovado</p>
-            <p>Foco em resultados práticos</p>
-            <p className="text-elite-gold font-semibold">
-              Aprenda com quem já vendeu e continua vendendo todos os dias
-            </p>
-          </div>
-          <div className="mt-8 sm:mt-12 inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-elite-gold/10 border-2 border-elite-gold rounded-xl">
-            <Crown className="w-6 h-6 sm:w-8 sm:h-8 text-elite-gold" />
-            <span className="text-elite-gold font-bold text-base sm:text-xl uppercase tracking-wide">Acesso Completo</span>
-          </div>
+          <AnimatedSection>
+            <Shield className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 text-elite-gold mx-auto mb-6 sm:mb-8" />
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
+              Método <span className="text-elite-gold">Validado</span>
+            </h2>
+            <div className="space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-xl text-gray-300 leading-relaxed">
+              <p>Método testado e comprovado</p>
+              <p>Foco em resultados práticos</p>
+              <p className="text-elite-gold font-semibold">
+                Aprenda com quem já vendeu e continua vendendo todos os dias
+              </p>
+            </div>
+            <div className="mt-8 sm:mt-10 lg:mt-12 inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-elite-gold/10 border-2 border-elite-gold rounded-xl">
+              <Crown className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-elite-gold" />
+              <span className="text-elite-gold font-bold text-sm sm:text-base lg:text-xl uppercase tracking-wide">Acesso Completo</span>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Posicionamento / Prova */}
-      <section className="py-16 sm:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-[#050A18] to-black border-y border-elite-gold/10">
+      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-[#050A00] to-black border-y border-elite-gold/10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-12 text-white">
-            Por que confiar no <span className="text-elite-gold">Método</span>
-          </h2>
-          <div className="grid md:grid-cols-3 gap-5 sm:gap-8">
-            <div className="p-6 sm:p-8 bg-black/50 border border-elite-gold/20 rounded-xl">
-              <Users className="w-10 h-10 sm:w-12 sm:h-12 text-elite-gold mx-auto mb-3 sm:mb-4" />
-              <p className="text-3xl sm:text-4xl font-bold text-elite-gold mb-2">500+</p>
-              <p className="text-gray-400 text-sm sm:text-base">Alunos Ativos</p>
-            </div>
-            <div className="p-6 sm:p-8 bg-black/50 border border-elite-gold/20 rounded-xl">
-              <TrendingUp className="w-10 h-10 sm:w-12 sm:h-12 text-elite-gold mx-auto mb-3 sm:mb-4" />
-              <p className="text-3xl sm:text-4xl font-bold text-elite-gold mb-2">5+ Anos</p>
-              <p className="text-gray-400 text-sm sm:text-base">de Experiência Prática</p>
-            </div>
-            <div className="p-6 sm:p-8 bg-black/50 border border-elite-gold/20 rounded-xl">
-              <Award className="w-10 h-10 sm:w-12 sm:h-12 text-elite-gold mx-auto mb-3 sm:mb-4" />
-              <p className="text-3xl sm:text-4xl font-bold text-elite-gold mb-2">100%</p>
-              <p className="text-gray-400 text-sm sm:text-base">Foco em Prática</p>
-            </div>
+          <AnimatedSection>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-8 sm:mb-10 lg:mb-12 text-white">
+              Por que confiar no <span className="text-elite-gold">Método</span>
+            </h2>
+          </AnimatedSection>
+          <div className="grid md:grid-cols-3 gap-4 sm:gap-5 lg:gap-8">
+            <AnimatedSection delay={100}>
+              <div className="p-5 sm:p-6 lg:p-8 bg-black/50 border border-elite-gold/20 rounded-xl">
+                <Users className="w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 text-elite-gold mx-auto mb-3 sm:mb-4" />
+                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-elite-gold mb-2">500+</p>
+                <p className="text-gray-400 text-sm sm:text-base">Alunos Ativos</p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <div className="p-5 sm:p-6 lg:p-8 bg-black/50 border border-elite-gold/20 rounded-xl">
+                <TrendingUp className="w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 text-elite-gold mx-auto mb-3 sm:mb-4" />
+                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-elite-gold mb-2">5+ Anos</p>
+                <p className="text-gray-400 text-sm sm:text-base">de Experiência Prática</p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={300}>
+              <div className="p-5 sm:p-6 lg:p-8 bg-black/50 border border-elite-gold/20 rounded-xl">
+                <Award className="w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 text-elite-gold mx-auto mb-3 sm:mb-4" />
+                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-elite-gold mb-2">100%</p>
+                <p className="text-gray-400 text-sm sm:text-base">Foco em Prática</p>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 sm:py-20 px-5 sm:px-6 md:px-4 bg-black">
+      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-black">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-white">
-              Garanta Sua Vaga <span className="text-elite-gold">Na Aula</span>
-            </h2>
-            <p className="text-base sm:text-xl text-gray-400">
-              Aula gratuita e ao vivo — vagas limitadas
-            </p>
-          </div>
+          <AnimatedSection>
+            <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-white">
+                Garanta Sua Vaga <span className="text-elite-gold">Na Aula</span>
+              </h2>
+              <p className="text-sm sm:text-base lg:text-xl text-gray-400">
+                Aula gratuita e ao vivo — vagas limitadas
+              </p>
+            </div>
+          </AnimatedSection>
 
-          <Card className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border-2 border-elite-gold/40 shadow-[0_0_60px_rgba(251,191,36,0.15)]">
-            <CardContent className="p-6 sm:p-8 md:p-12">
-              <div className="text-center">
-                <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 bg-elite-gold/10 border border-elite-gold/30 rounded-full mb-4 sm:mb-6">
-                  <Crown className="w-4 h-4 sm:w-5 sm:h-5 text-elite-gold" />
-                  <span className="text-elite-gold font-bold text-xs sm:text-sm uppercase tracking-wider">Método Sem Estoque</span>
+          <AnimatedSection delay={100}>
+            <Card className="bg-gradient-to-br from-[#0A0800]/90 to-[#0A0800]/60 border-2 border-elite-gold/40 shadow-[0_0_60px_rgba(251,191,36,0.15)]">
+              <CardContent className="p-6 sm:p-8 md:p-10 lg:p-12">
+                <div className="text-center">
+                  <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 bg-elite-gold/10 border border-elite-gold/30 rounded-full mb-4 sm:mb-6">
+                    <Crown className="w-4 h-4 sm:w-5 sm:h-5 text-elite-gold" />
+                    <span className="text-elite-gold font-bold text-xs sm:text-sm uppercase tracking-wider">Método Sem Estoque</span>
+                  </div>
+                  
+                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 text-white">
+                    Descubra como faturar alto<br />
+                    <span className="text-elite-gold">vendendo produtos simples</span>
+                  </h3>
+
+                  <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 text-left max-w-md mx-auto">
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
+                      <p className="text-gray-300 text-sm sm:text-base">Aula 100% gratuita e ao vivo</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
+                      <p className="text-gray-300 text-sm sm:text-base">Estratégia completa revelada</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
+                      <p className="text-gray-300 text-sm sm:text-base">Materiais bônus durante a aula</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
+                      <p className="text-gray-300 text-sm sm:text-base">Tire suas dúvidas em tempo real</p>
+                    </div>
+                  </div>
+
+                  <div style={{ textAlign: 'center' }}>
+                    <button
+                      type="button"
+                      className="wj-embed-button w-full sm:w-auto"
+                      data-webinarHash="8wgw0kty"
+                      style={{
+                        border: "none",
+                        background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
+                        color: "rgb(0, 0, 0)",
+                        fontSize: "16px",
+                        padding: "18px 32px",
+                        boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
+                        borderRadius: "50px",
+                        whiteSpace: "normal",
+                        fontWeight: "700",
+                        lineHeight: "1.4",
+                        cursor: "pointer",
+                        fontFamily: "system-ui, -apple-system, sans-serif",
+                        wordBreak: "break-word",
+                        margin: "auto",
+                        transition: "all 0.3s ease",
+                        letterSpacing: "0.02em",
+                        maxWidth: "100%"
+                      }}
+                    >
+                      GARANTIR MINHA VAGA AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" />
+                    </button>
+                  </div>
+
+                  <p className="mt-5 sm:mt-6 text-gray-500 text-xs sm:text-sm">
+                    • Método ao vivo · Vagas limitadas · Não fica disponível depois
+                  </p>
                 </div>
-                
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8 text-white">
-                  Descubra como faturar alto<br />
-                  <span className="text-elite-gold">vendendo produtos simples</span>
-                </h3>
-
-                <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 text-left max-w-md mx-auto">
-                  <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
-                    <p className="text-gray-300 text-sm sm:text-base">Aula 100% gratuita e ao vivo</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
-                    <p className="text-gray-300 text-sm sm:text-base">Estratégia completa revelada</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
-                    <p className="text-gray-300 text-sm sm:text-base">Materiais bônus durante a aula</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
-                    <p className="text-gray-300 text-sm sm:text-base">Tire suas dúvidas em tempo real</p>
-                  </div>
-                </div>
-
-                <div style={{
-                textAlign: 'center'
-              }}>
-                  <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{
-                  border: "none",
-                  background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
-                  color: "rgb(0, 0, 0)",
-                  fontSize: "16px",
-                  padding: "18px 32px",
-                  boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
-                  borderRadius: "16px",
-                  whiteSpace: "normal",
-                  fontWeight: "700",
-                  lineHeight: "1.4",
-                  cursor: "pointer",
-                  fontFamily: "system-ui, -apple-system, sans-serif",
-                  wordBreak: "break-word",
-                  margin: "auto",
-                  transition: "all 0.3s ease",
-                  letterSpacing: "0.02em",
-                  maxWidth: "100%"
-                }}>GARANTIR MINHA VAGA AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" /></button>
-                </div>
-
-                <p className="mt-5 sm:mt-6 text-gray-500 text-xs sm:text-sm">
-                  • Método ao vivo · Vagas limitadas · Não fica disponível depois
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* CTA Final 2 */}
-      
-
       {/* Footer */}
-      <footer className="py-8 sm:py-12 px-5 sm:px-6 md:px-4 bg-black border-t border-elite-gold/10">
+      <footer className="py-6 sm:py-8 lg:py-12 px-5 sm:px-6 md:px-4 bg-black border-t border-elite-gold/10">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-500 text-xs sm:text-sm">
             © 2024 SouDrop. Todos os direitos reservados.
           </p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default SoudropElite;
