@@ -62,8 +62,8 @@ const SoudropStart = () => {
               
               {/* Event Tag with decorative line */}
               <AnimatedSection delay={0}>
-                <div className="space-y-3">
-                  <span className="inline-block text-forest-green-primary text-[10px] sm:text-xs lg:text-sm font-semibold tracking-[0.15em] lg:tracking-[0.25em] uppercase">
+                <div className="space-y-2 lg:space-y-3">
+                  <span className="inline-block text-forest-green-primary text-[9px] sm:text-xs lg:text-sm font-semibold tracking-[0.12em] lg:tracking-[0.25em] uppercase">
                     MASTERCLASS GRATUITA • OPERAÇÃO SEM ESTOQUE
                   </span>
                   {/* Decorative line - G4 style */}
@@ -74,9 +74,16 @@ const SoudropStart = () => {
                 </div>
               </AnimatedSection>
               
-              {/* Headline - Refined */}
+              {/* Headline - Mobile simplified, Desktop full */}
               <AnimatedSection delay={100}>
-                <h1 className="text-[1.5rem] sm:text-2xl md:text-3xl lg:text-[2.75rem] xl:text-5xl font-black text-forest-text-primary leading-[1.1] tracking-tight">
+                {/* Mobile headline - 3 short lines */}
+                <h1 className="lg:hidden text-[1.35rem] sm:text-2xl font-black text-forest-text-primary leading-[1.25] tracking-tight">
+                  <span className="block">Venda <span className="text-forest-green-primary">sem estoque</span></span>
+                  <span className="block">todos os dias</span>
+                  <span className="block">e chegue aos seus primeiros <span className="text-forest-lime">R$10.000/mês</span></span>
+                </h1>
+                {/* Desktop headline */}
+                <h1 className="hidden lg:block text-[2.75rem] xl:text-5xl font-black text-forest-text-primary leading-[1.1] tracking-tight">
                   <span className="block">Venda todos os dias <span className="text-forest-green-primary">sem estoque</span></span>
                   <span className="block">e chegue aos seus primeiros</span>
                   <span className="block"><span className="text-forest-lime">R$10.000/mês</span> começando do zero</span>
@@ -86,12 +93,12 @@ const SoudropStart = () => {
               {/* Subheadline - shorter on mobile */}
               <AnimatedSection delay={200}>
                 <div className="space-y-3">
-                  <p className="text-sm lg:text-lg text-forest-text-secondary/80 leading-relaxed lg:max-w-[90%] max-w-[340px] mx-auto lg:mx-0">
-                    <span className="lg:hidden">Aula gratuita onde eu abro a <span className="text-forest-green-primary font-medium">Operação Sem Estoque</span>, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.</span>
+                  <p className="text-[13px] lg:text-lg text-forest-text-secondary/80 leading-relaxed lg:max-w-[90%] max-w-[300px] mx-auto lg:mx-0">
+                    <span className="lg:hidden">Aula online onde eu te mostro a <span className="text-forest-green-primary font-medium">Operação Sem Estoque</span>, o passo a passo pra montar uma operação lucrativa do zero.</span>
                     <span className="hidden lg:inline">Uma aula 100% online onde eu vou abrir a <span className="text-forest-green-primary font-medium">Operação Sem Estoque</span>, o método que uso pra montar operações de dropshipping lucrativas com fornecedores da China e do Brasil.</span>
                   </p>
                   {/* Social proof */}
-                  <p className="text-xs lg:text-sm text-forest-text-secondary/60 lg:max-w-[85%] max-w-[320px] mx-auto lg:mx-0">
+                  <p className="text-[11px] lg:text-sm text-forest-text-secondary/60 lg:max-w-[85%] max-w-[280px] mx-auto lg:mx-0">
                     Mais de <span className="text-forest-text-primary font-medium">500 alunos</span> já aplicaram a Operação Sem Estoque em marketplaces e lojas próprias pelo Brasil inteiro.
                   </p>
                 </div>
