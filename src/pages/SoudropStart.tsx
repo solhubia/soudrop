@@ -43,7 +43,7 @@ const SoudropStart = () => {
   const heroBenefits = ["Sem comprar estoque antes", "Passo a passo pra iniciantes", "Funciona em marketplaces e loja própria"];
   return <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
       {/* Hero Section - G4 Style */}
-      <section className="relative w-full min-h-[auto] lg:min-h-screen flex items-center overflow-hidden">
+      <section className="relative w-full overflow-hidden">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#020805] via-[#051310] to-[#030907]" />
         
@@ -54,11 +54,11 @@ const SoudropStart = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-forest-lime/5 blur-[120px]" />
         
         {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-8 pb-0 lg:py-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-center lg:min-h-[90vh]">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-16 sm:pt-20 lg:pt-24 pb-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-end">
             
             {/* LEFT COLUMN - Text Content */}
-            <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-6 pt-6 lg:pt-0">
+            <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-6 pb-8 lg:pb-16">
               
               {/* Event Tag with decorative line */}
               <AnimatedSection delay={0}>
@@ -169,7 +169,7 @@ const SoudropStart = () => {
             </div>
 
             {/* RIGHT COLUMN - Photo */}
-            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-center relative mt-6 mb-0 lg:mt-0">
+            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-end relative">
               <AnimatedSection delay={100} className="relative">
                 {/* Strong green glow behind photo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -179,8 +179,12 @@ const SoudropStart = () => {
                   <div className="absolute w-[200px] h-[250px] sm:w-[280px] sm:h-[350px] lg:w-[350px] lg:h-[450px] bg-forest-lime/30 rounded-full blur-[80px] lg:blur-[100px]" />
                 </div>
                 
-                {/* Photo - Large on desktop, reduced on mobile */}
-                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(34,197,94,0.4)] lg:drop-shadow-[0_0_60px_rgba(34,197,94,0.5)]" src="/lovable-uploads/c311d6e2-5d4d-412f-8357-f24a8d3f20dc.png" />
+                {/* Photo with bottom gradient fade */}
+                <div className="relative">
+                  <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(34,197,94,0.4)] lg:drop-shadow-[0_0_60px_rgba(34,197,94,0.5)]" src="/lovable-uploads/c311d6e2-5d4d-412f-8357-f24a8d3f20dc.png" />
+                  {/* Bottom gradient fade */}
+                  <div className="absolute bottom-0 left-0 right-0 h-24 lg:h-32 bg-gradient-to-t from-[#051310] via-[#051310]/60 to-transparent z-20 pointer-events-none" />
+                </div>
               </AnimatedSection>
             </div>
             
