@@ -155,7 +155,7 @@ const mockData: DashboardData = {
   metas: [
     { marcaKpi: "Snel Home", metaFinanceiraMes: 360000, metaGiroPercent: 0.8, metaGiroDias: 45 },
     { marcaKpi: "Snel Ferramentas", metaFinanceiraMes: 40000, metaGiroPercent: 0.8, metaGiroDias: 45 },
-    { marcaKpi: "Snel Camping/Pets", metaFinanceiraMes: 30000, metaGiroPercent: 0.8, metaGiroDias: 45 },
+    { marcaKpi: "Snel Camping/Pets", metaFinanceiraMes: 300000, metaGiroPercent: 0.8, metaGiroDias: 45 },
   ],
 };
 
