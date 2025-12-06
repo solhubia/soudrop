@@ -153,7 +153,7 @@ const mockData: DashboardData = {
     { sku: "26619", dataVenda: "2024-12-02", qtdVendida: 40, valorVenda: 4800, contaMarketplace: "shopee-snel-ferramentas" },
   ],
   metas: [
-    { marcaKpi: "Snel Home", metaFinanceiraMes: 50000, metaGiroPercent: 0.8, metaGiroDias: 45 },
+    { marcaKpi: "Snel Home", metaFinanceiraMes: 360000, metaGiroPercent: 0.8, metaGiroDias: 45 },
     { marcaKpi: "Snel Ferramentas", metaFinanceiraMes: 40000, metaGiroPercent: 0.8, metaGiroDias: 45 },
     { marcaKpi: "Snel Camping/Pets", metaFinanceiraMes: 30000, metaGiroPercent: 0.8, metaGiroDias: 45 },
   ],
