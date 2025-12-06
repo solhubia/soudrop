@@ -188,17 +188,17 @@ const SoudropStart = () => {
       </section>
 
       {/* Autoridade Section */}
-      <section className="pt-6 pb-12 sm:pt-16 sm:pb-16 md:pt-20 md:pb-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main">
-        <div className="container mx-auto max-w-4xl">
+      <section className="pt-6 pb-12 sm:pt-16 sm:pb-16 md:pt-20 md:pb-20 px-0 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main">
+        <div className="container mx-auto max-w-4xl px-0 sm:px-0 md:px-0">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
-            <AnimatedSection className="order-2 md:order-1">
-              <div className="relative">
-                <div className="absolute -inset-3 bg-gradient-forest-primary rounded-2xl blur-xl opacity-20" />
-                <img src={renanFerreira} alt="Renan Ferreira" className="relative rounded-xl shadow-2xl w-full border border-forest-border" />
+            <AnimatedSection className="order-2 md:order-1 px-0 md:px-4">
+              <div className="relative md:px-0">
+                <div className="absolute -inset-3 bg-gradient-forest-primary rounded-2xl blur-xl opacity-20 hidden md:block" />
+                <img src={renanFerreira} alt="Renan Ferreira" className="relative w-full block rounded-none md:rounded-xl shadow-2xl md:border border-forest-border" />
               </div>
             </AnimatedSection>
             
-            <AnimatedSection delay={200} className="space-y-4 order-1 md:order-2">
+            <AnimatedSection delay={200} className="space-y-4 order-1 md:order-2 px-5 md:px-0">
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-forest-text-primary">
                 Quem está por trás da <span className="bg-gradient-forest-text bg-clip-text text-transparent">Operação Sem Estoque</span>
               </h2>
