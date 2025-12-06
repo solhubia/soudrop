@@ -181,8 +181,20 @@ const SoudropElite = () => {
                   <div className="absolute w-[200px] h-[250px] sm:w-[280px] sm:h-[350px] lg:w-[350px] lg:h-[450px] bg-yellow-500/25 rounded-full blur-[80px] lg:blur-[100px]" />
                 </div>
                 
-                {/* Photo */}
-                <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" />
+                {/* Photo container with gradient fade */}
+                <div className="relative">
+                  <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" />
+                  {/* Gradient overlay to fade bottom into background */}
+                  <div 
+                    className="absolute bottom-0 left-0 right-0 h-[35%] z-20 pointer-events-none"
+                    style={{
+                      background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.8) 70%, rgb(0,0,0) 100%)',
+                      filter: 'blur(1px)',
+                      maskImage: 'linear-gradient(to bottom, transparent 0%, black 30%)',
+                      WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 30%)'
+                    }}
+                  />
+                </div>
               </AnimatedSection>
             </div>
             
