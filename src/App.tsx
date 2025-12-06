@@ -23,6 +23,7 @@ import SoudropStart from "./pages/SoudropStart";
 import SoudropPro from "./pages/SoudropPro";
 import SoudropElite from "./pages/SoudropElite";
 import BlackFriday from "./pages/BlackFriday";
+import DashboardGiroEstoque from "./pages/DashboardGiroEstoque";
 import { useEffect } from "react";
 import { trackViewContent } from "./lib/fbq";
 
@@ -127,6 +128,7 @@ const App = () => {
             <Route path="/soudrop-elite" element={<SoudropElite />} />
             <Route path="/black-friday" element={<BlackFriday />} />
             <Route path="/operacao-tiktok-de-lucro" element={<OperacaoTiktok />} />
+            <Route path="/dashboard-giro-estoque" element={<DashboardGiroEstoque />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
