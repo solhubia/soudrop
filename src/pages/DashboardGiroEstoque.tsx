@@ -95,6 +95,38 @@ export default function DashboardGiroEstoque() {
 
         {/* Ranking de Vendedores */}
         <RankingVendedores ranking={data.rankingVendedores} />
+
+        {/* Metas Financeiras Mensais - Estático */}
+        <section className="bg-slate-900 rounded-xl p-6 border border-slate-800">
+          <h2 className="text-lg font-semibold text-white mb-4">Metas financeiras mensais</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+              <p className="text-slate-400 text-sm">Lucas</p>
+              <p className="text-white text-xl font-bold">R$ 450.000,00</p>
+            </div>
+            <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+              <p className="text-slate-400 text-sm">Guilherme</p>
+              <p className="text-white text-xl font-bold">R$ 360.000,00</p>
+            </div>
+            <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+              <p className="text-slate-400 text-sm">Fernando</p>
+              <p className="text-white text-xl font-bold">R$ 300.000,00</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Pedidos Expedidos - Link externo */}
+        <section className="bg-slate-900 rounded-xl p-6 border border-slate-800">
+          <h2 className="text-lg font-semibold text-white mb-4">Pedidos expedidos (consulta)</h2>
+          <a
+            href="https://app2.soudrop.com.br/dashboard/shipping/index2?p=4"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
+          >
+            Ver pedidos expedidos
+          </a>
+        </section>
       </main>
 
       {/* Footer */}
