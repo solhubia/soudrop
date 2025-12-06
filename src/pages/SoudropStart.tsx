@@ -53,9 +53,9 @@ const SoudropStart = () => {
         {/* Bottom glow */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-forest-lime/5 blur-[120px]" />
         
-        {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-16 sm:pt-20 lg:pt-24 pb-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-end">
+        {/* Content container - full width on desktop, no right padding */}
+        <div className="relative z-10 w-full mx-auto px-5 sm:px-8 lg:pl-16 lg:pr-0 pt-16 sm:pt-20 lg:pt-24 pb-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-end lg:max-w-none">
             
             {/* LEFT COLUMN - Text Content */}
             <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-6 pb-8 lg:pb-16">
@@ -167,9 +167,9 @@ const SoudropStart = () => {
               </AnimatedSection>
             </div>
 
-            {/* RIGHT COLUMN - Photo */}
-            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-end relative">
-              <AnimatedSection delay={100} className="relative">
+            {/* RIGHT COLUMN - Photo - flush right on desktop */}
+            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-end relative lg:ml-auto lg:mr-0 lg:pr-0">
+              <AnimatedSection delay={100} className="relative lg:mr-0">
                 {/* Strong green glow behind photo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   {/* Main glow */}
@@ -179,7 +179,7 @@ const SoudropStart = () => {
                 </div>
                 
                 {/* Photo */}
-                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(34,197,94,0.4)] lg:drop-shadow-[0_0_60px_rgba(34,197,94,0.5)]" src="/lovable-uploads/c311d6e2-5d4d-412f-8357-f24a8d3f20dc.png" />
+                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[520px] xl:w-[600px] max-h-[300px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(34,197,94,0.4)] lg:drop-shadow-[0_0_60px_rgba(34,197,94,0.5)]" src="/lovable-uploads/c311d6e2-5d4d-412f-8357-f24a8d3f20dc.png" />
               </AnimatedSection>
             </div>
             
