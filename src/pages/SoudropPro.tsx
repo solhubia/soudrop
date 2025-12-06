@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
-
 const SoudropPro = () => {
   useEffect(() => {
     const embedScript = document.createElement('script');
@@ -16,70 +15,44 @@ const SoudropPro = () => {
       }
     };
   }, []);
-
-  const deliverables = [
-    {
-      icon: TrendingUp,
-      title: "O modelo de dropshipping real",
-      description: "O que eu uso hoje para vender todos os dias — sem teoria, só prática."
-    },
-    {
-      icon: BarChart3,
-      title: "Como escolher produtos certos",
-      description: "Produtos com mais chance de girar, sem depender de viral ou sorte."
-    },
-    {
-      icon: Shield,
-      title: "Fornecedores confiáveis",
-      description: "Como encontrar bons fornecedores e fugir de roubada."
-    },
-    {
-      icon: Store,
-      title: "Operação leve e funcional",
-      description: "Como montar uma estrutura que você consegue tocar no dia a dia."
-    },
-    {
-      icon: DollarSign,
-      title: "Começar com pouco",
-      description: "Como iniciar com pouco dinheiro e ir escalando com segurança."
-    },
-    {
-      icon: Rocket,
-      title: "Sistema de vendas diárias",
-      description: "Como ativar o sistema que faz as vendas acontecerem todo dia."
-    }
-  ];
-
-  const forWho = [
-    "Quer entender, de forma séria, como começar nesse mercado que eu mostro no anúncio",
-    "Já tentou ganhar dinheiro online e está cansado de promessa vazia",
-    "Prefere ouvir a verdade: que existe caminho, mas exige método e execução",
-    "Quer um passo a passo aplicável, e não mais um vídeo motivacional"
-  ];
-
-  const behindFormula = [
-    "Como transformar esse método em uma operação que vende todos os dias",
-    "O que você realmente precisa (e o que não precisa) para começar nesse mercado",
-    "Os erros que fazem a maioria desistir antes de enxergar resultado"
-  ];
-
-  const testimonials = [
-    {
-      name: "Felipe M.",
-      text: "Achei que era mais uma promessa. Depois da aula entendi o passo a passo e fiz minhas primeiras vendas."
-    },
-    {
-      name: "Amanda S.",
-      text: "O Renan mostra o que funciona na prática, sem enrolação. Foi a primeira vez que alguém explicou esse mercado de forma clara pra mim."
-    },
-    {
-      name: "Lucas T.",
-      text: "Parecia impossível até entender o método. Hoje tenho minha operação rodando diariamente."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-black overflow-x-hidden">
+  const deliverables = [{
+    icon: TrendingUp,
+    title: "O modelo de dropshipping real",
+    description: "O que eu uso hoje para vender todos os dias — sem teoria, só prática."
+  }, {
+    icon: BarChart3,
+    title: "Como escolher produtos certos",
+    description: "Produtos com mais chance de girar, sem depender de viral ou sorte."
+  }, {
+    icon: Shield,
+    title: "Fornecedores confiáveis",
+    description: "Como encontrar bons fornecedores e fugir de roubada."
+  }, {
+    icon: Store,
+    title: "Operação leve e funcional",
+    description: "Como montar uma estrutura que você consegue tocar no dia a dia."
+  }, {
+    icon: DollarSign,
+    title: "Começar com pouco",
+    description: "Como iniciar com pouco dinheiro e ir escalando com segurança."
+  }, {
+    icon: Rocket,
+    title: "Sistema de vendas diárias",
+    description: "Como ativar o sistema que faz as vendas acontecerem todo dia."
+  }];
+  const forWho = ["Quer entender, de forma séria, como começar nesse mercado que eu mostro no anúncio", "Já tentou ganhar dinheiro online e está cansado de promessa vazia", "Prefere ouvir a verdade: que existe caminho, mas exige método e execução", "Quer um passo a passo aplicável, e não mais um vídeo motivacional"];
+  const behindFormula = ["Como transformar esse método em uma operação que vende todos os dias", "O que você realmente precisa (e o que não precisa) para começar nesse mercado", "Os erros que fazem a maioria desistir antes de enxergar resultado"];
+  const testimonials = [{
+    name: "Felipe M.",
+    text: "Achei que era mais uma promessa. Depois da aula entendi o passo a passo e fiz minhas primeiras vendas."
+  }, {
+    name: "Amanda S.",
+    text: "O Renan mostra o que funciona na prática, sem enrolação. Foi a primeira vez que alguém explicou esse mercado de forma clara pra mim."
+  }, {
+    name: "Lucas T.",
+    text: "Parecia impossível até entender o método. Hoje tenho minha operação rodando diariamente."
+  }];
+  return <div className="min-h-screen bg-black overflow-x-hidden">
       {/* Hero Section - Two Column Layout */}
       <section className="relative w-full min-h-[auto] lg:min-h-screen flex items-center overflow-hidden">
         {/* Dark gradient background */}
@@ -160,30 +133,27 @@ const SoudropPro = () => {
                   <div className="relative">
                     {/* Glow ring animation */}
                     <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 rounded-full opacity-75 blur-lg animate-pulse" />
-                    <div className="absolute -inset-2 bg-blue-500/30 rounded-full animate-ping" style={{ animationDuration: '2s' }} />
-                    <button
-                      type="button"
-                      className="wj-embed-button w-full sm:w-auto group relative"
-                      data-webinarHash="8wgw0kty"
-                      style={{
-                        border: "none",
-                        background: "linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(217, 91%, 50%) 50%, hsl(217, 91%, 45%) 100%)",
-                        color: "rgb(255, 255, 255)",
-                        fontSize: "14px",
-                        padding: "16px 36px",
-                        boxShadow: "0 0 60px rgba(59, 130, 246, 0.5), 0 0 100px rgba(59, 130, 246, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
-                        borderRadius: "50px",
-                        whiteSpace: "normal",
-                        fontWeight: "700",
-                        lineHeight: "1.4",
-                        cursor: "pointer",
-                        fontFamily: "system-ui, -apple-system, sans-serif",
-                        wordBreak: "break-word",
-                        transition: "all 0.3s ease",
-                        letterSpacing: "0.02em",
-                        textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
-                      }}
-                    >
+                    <div className="absolute -inset-2 bg-blue-500/30 rounded-full animate-ping" style={{
+                    animationDuration: '2s'
+                  }} />
+                    <button type="button" className="wj-embed-button w-full sm:w-auto group relative" data-webinarHash="8wgw0kty" style={{
+                    border: "none",
+                    background: "linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(217, 91%, 50%) 50%, hsl(217, 91%, 45%) 100%)",
+                    color: "rgb(255, 255, 255)",
+                    fontSize: "14px",
+                    padding: "16px 36px",
+                    boxShadow: "0 0 60px rgba(59, 130, 246, 0.5), 0 0 100px rgba(59, 130, 246, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
+                    borderRadius: "50px",
+                    whiteSpace: "normal",
+                    fontWeight: "700",
+                    lineHeight: "1.4",
+                    cursor: "pointer",
+                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    wordBreak: "break-word",
+                    transition: "all 0.3s ease",
+                    letterSpacing: "0.02em",
+                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
+                  }}>
                       ACESSAR AGORA   <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                     </button>
                   </div>
@@ -215,11 +185,7 @@ const SoudropPro = () => {
                 </div>
                 
                 {/* Photo */}
-                <img
-                  alt="Renan Ferreira - Especialista em Vendas Online"
-                  className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(59,130,246,0.4)] lg:drop-shadow-[0_0_60px_rgba(59,130,246,0.5)]"
-                  src="/lovable-uploads/c311d6e2-5d4d-412f-8357-f24a8d3f20dc.png"
-                />
+                <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(59,130,246,0.4)] lg:drop-shadow-[0_0_60px_rgba(59,130,246,0.5)]" src="/lovable-uploads/6fc5d11b-3e0e-4344-b693-70a4499dbf2e.png" />
               </AnimatedSection>
             </div>
             
@@ -244,8 +210,7 @@ const SoudropPro = () => {
             </AnimatedSection>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 pt-6 sm:pt-8">
-              {behindFormula.map((item, index) => (
-                <AnimatedSection key={index} delay={200 + index * 100}>
+              {behindFormula.map((item, index) => <AnimatedSection key={index} delay={200 + index * 100}>
                   <Card className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-900/40 hover:border-blue-500/60 transition-all h-full">
                     <CardContent className="p-5 sm:p-6 flex items-start gap-4">
                       <div className="w-10 h-10 bg-blue-950/80 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-800/50">
@@ -254,8 +219,7 @@ const SoudropPro = () => {
                       <p className="text-white text-sm sm:text-base leading-relaxed text-left">{item}</p>
                     </CardContent>
                   </Card>
-                </AnimatedSection>
-              ))}
+                </AnimatedSection>)}
             </div>
           </div>
         </div>
@@ -276,8 +240,7 @@ const SoudropPro = () => {
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 max-w-4xl mx-auto mb-6 sm:mb-8">
-            {forWho.map((item, index) => (
-              <AnimatedSection key={index} delay={100 + index * 100}>
+            {forWho.map((item, index) => <AnimatedSection key={index} delay={100 + index * 100}>
                 <Card className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-900/40 hover:border-blue-500/60 transition-all h-full">
                   <CardContent className="p-5 sm:p-6 flex items-start gap-4">
                     <div className="w-10 h-10 bg-green-950/60 rounded-lg flex items-center justify-center flex-shrink-0 border border-green-700/40">
@@ -286,8 +249,7 @@ const SoudropPro = () => {
                     <p className="text-white text-sm sm:text-base leading-relaxed">{item}</p>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
           
           <AnimatedSection delay={500}>
@@ -320,8 +282,7 @@ const SoudropPro = () => {
           </AnimatedSection>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-            {deliverables.map((item, index) => (
-              <AnimatedSection key={index} delay={100 + index * 80}>
+            {deliverables.map((item, index) => <AnimatedSection key={index} delay={100 + index * 80}>
                 <Card className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-900/40 hover:border-blue-500/60 transition-all group h-full">
                   <CardHeader className="pb-3 p-5 sm:p-6">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-950/80 to-blue-900/60 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border border-blue-700/50">
@@ -335,8 +296,7 @@ const SoudropPro = () => {
                     </CardDescription>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
         </div>
       </section>
@@ -356,8 +316,7 @@ const SoudropPro = () => {
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
-            {testimonials.map((testimonial, index) => (
-              <AnimatedSection key={index} delay={100 + index * 100}>
+            {testimonials.map((testimonial, index) => <AnimatedSection key={index} delay={100 + index * 100}>
                 <Card className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-800/50 hover:border-blue-500/60 transition-all h-full">
                   <CardContent className="p-5 sm:p-6">
                     <div className="flex items-center gap-4 mb-5">
@@ -372,8 +331,7 @@ const SoudropPro = () => {
                     <p className="text-gray-300 leading-relaxed italic text-sm sm:text-base">"{testimonial.text}"</p>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
 
           {/* Escassez */}
@@ -401,11 +359,7 @@ const SoudropPro = () => {
             <AnimatedSection className="order-2 lg:order-1">
               <div className="relative">
                 <div className="absolute -inset-3 bg-gradient-to-br from-blue-500/30 to-blue-400/20 rounded-2xl blur-xl opacity-50" />
-                <img
-                  src={renanPhoto}
-                  alt="Renan Ferreira"
-                  className="relative rounded-2xl shadow-2xl border border-blue-800/50 w-full max-w-[300px] sm:max-w-sm mx-auto lg:max-w-full"
-                />
+                <img src={renanPhoto} alt="Renan Ferreira" className="relative rounded-2xl shadow-2xl border border-blue-800/50 w-full max-w-[300px] sm:max-w-sm mx-auto lg:max-w-full" />
               </div>
             </AnimatedSection>
             
@@ -438,13 +392,23 @@ const SoudropPro = () => {
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-              {[
-                { icon: Users, value: "+500", label: "Alunos ativos" },
-                { icon: Activity, value: "+1000", label: "Operações rodando" },
-                { icon: Package, value: "+50K", label: "Produtos validados" },
-                { icon: Award, value: "100%", label: "Método prático" }
-              ].map((stat, index) => (
-                <Card key={index} className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-900/40 hover:border-blue-500/60 transition-all group">
+              {[{
+              icon: Users,
+              value: "+500",
+              label: "Alunos ativos"
+            }, {
+              icon: Activity,
+              value: "+1000",
+              label: "Operações rodando"
+            }, {
+              icon: Package,
+              value: "+50K",
+              label: "Produtos validados"
+            }, {
+              icon: Award,
+              value: "100%",
+              label: "Método prático"
+            }].map((stat, index) => <Card key={index} className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-900/40 hover:border-blue-500/60 transition-all group">
                   <CardContent className="p-4 sm:p-5 text-center">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-950/80 to-blue-900/60 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 border border-blue-700/50 group-hover:scale-110 transition-transform duration-300">
                       <stat.icon className="h-6 w-6 sm:h-7 sm:w-7 text-blue-400" />
@@ -452,8 +416,7 @@ const SoudropPro = () => {
                     <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">{stat.value}</div>
                     <p className="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider">{stat.label}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </AnimatedSection>
         </div>
@@ -478,28 +441,23 @@ const SoudropPro = () => {
               <div className="pt-4 sm:pt-6 flex flex-col items-center">
                 <div className="relative">
                   <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 rounded-full opacity-75 blur-lg animate-pulse" />
-                  <button
-                    type="button"
-                    className="wj-embed-button w-full sm:w-auto group relative"
-                    data-webinarHash="8wgw0kty"
-                    style={{
-                      border: "none",
-                      background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)",
-                      color: "rgb(255, 255, 255)",
-                      fontSize: "16px",
-                      padding: "18px 40px",
-                      boxShadow: "0 20px 60px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2)",
-                      borderRadius: "50px",
-                      whiteSpace: "normal",
-                      fontWeight: "700",
-                      lineHeight: "1.4",
-                      cursor: "pointer",
-                      fontFamily: "system-ui, -apple-system, sans-serif",
-                      wordBreak: "break-word",
-                      transition: "all 0.3s ease",
-                      letterSpacing: "0.02em"
-                    }}
-                  >
+                  <button type="button" className="wj-embed-button w-full sm:w-auto group relative" data-webinarHash="8wgw0kty" style={{
+                  border: "none",
+                  background: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)",
+                  color: "rgb(255, 255, 255)",
+                  fontSize: "16px",
+                  padding: "18px 40px",
+                  boxShadow: "0 20px 60px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2)",
+                  borderRadius: "50px",
+                  whiteSpace: "normal",
+                  fontWeight: "700",
+                  lineHeight: "1.4",
+                  cursor: "pointer",
+                  fontFamily: "system-ui, -apple-system, sans-serif",
+                  wordBreak: "break-word",
+                  transition: "all 0.3s ease",
+                  letterSpacing: "0.02em"
+                }}>
                     ACESSAR AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" />
                   </button>
                 </div>
@@ -527,8 +485,6 @@ const SoudropPro = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default SoudropPro;
