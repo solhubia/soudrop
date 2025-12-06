@@ -76,17 +76,16 @@ const SoudropStart = () => {
               
               {/* Headline - Mobile simplified, Desktop full */}
               <AnimatedSection delay={100}>
-                {/* Mobile headline - 3 short lines */}
-                <h1 className="lg:hidden text-[1.35rem] sm:text-2xl font-black text-forest-text-primary leading-[1.25] tracking-tight">
-                  <span className="block">Venda <span className="text-forest-green-primary">sem estoque</span></span>
-                  <span className="block">todos os dias</span>
-                  <span className="block">e chegue aos seus primeiros <span className="text-forest-lime">R$10.000/mês</span></span>
+                {/* Mobile headline */}
+                <h1 className="lg:hidden text-[1.5rem] sm:text-[1.75rem] font-black text-forest-text-primary leading-[1.2] tracking-tight">
+                  <span className="block">Faça seus primeiros</span>
+                  <span className="block"><span className="text-forest-lime">R$10.000/mês</span> vendendo</span>
+                  <span className="block"><span className="text-forest-green-primary">sem estoque</span></span>
                 </h1>
                 {/* Desktop headline */}
-                <h1 className="hidden lg:block text-[2.75rem] xl:text-5xl font-black text-forest-text-primary leading-[1.1] tracking-tight">
-                  <span className="block">Venda todos os dias <span className="text-forest-green-primary">sem estoque</span></span>
-                  <span className="block">e chegue aos seus primeiros</span>
-                  <span className="block"><span className="text-forest-lime">R$10.000/mês</span> começando do zero</span>
+                <h1 className="hidden lg:block text-[2.75rem] xl:text-[3.25rem] font-black text-forest-text-primary leading-[1.1] tracking-tight">
+                  <span className="block">Faça seus primeiros <span className="text-forest-lime">R$10.000/mês</span></span>
+                  <span className="block">vendendo <span className="text-forest-green-primary">sem estoque</span></span>
                 </h1>
               </AnimatedSection>
               
