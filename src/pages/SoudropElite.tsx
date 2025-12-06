@@ -182,7 +182,7 @@ const SoudropElite = () => {
                 </div>
                 
                 {/* Photo */}
-                <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]" src="/lovable-uploads/568da8db-bb34-4764-ab73-97ba71062813.png" />
+                <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]" src="/lovable-uploads/6a974684-d358-4c5b-b346-0e1668b4301c.png" />
               </AnimatedSection>
             </div>
             
