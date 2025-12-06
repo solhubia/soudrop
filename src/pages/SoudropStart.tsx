@@ -188,13 +188,13 @@ const SoudropStart = () => {
       </section>
 
       {/* Autoridade Section */}
-      <section className="pt-0 pb-0 sm:pt-16 sm:pb-16 md:pt-20 md:pb-20 px-0 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main">
-        <div className="container mx-auto max-w-4xl px-0 sm:px-4">
-          <div className="grid md:grid-cols-2 gap-0 sm:gap-8 items-center">
-            <AnimatedSection className="order-2 md:order-1 -mx-0">
-              <div className="relative m-0 p-0">
+      <section className="pt-6 pb-6 sm:pt-16 sm:pb-16 md:pt-20 md:pb-20 pl-4 pr-0 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main">
+        <div className="container mx-auto max-w-4xl pl-0 pr-0 sm:px-4">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-8 items-center">
+            <AnimatedSection className="order-2 md:order-1">
+              <div className="relative m-0 p-0 pr-0">
                 <div className="absolute -inset-3 bg-gradient-forest-primary rounded-2xl blur-xl opacity-20 hidden md:block" />
-                <img src={renanFerreira} alt="Renan Ferreira" className="relative block w-screen sm:w-full max-w-none sm:max-w-full m-0 rounded-none sm:rounded-xl shadow-2xl border-0 sm:border sm:border-forest-border" />
+                <img src={renanFerreira} alt="Renan Ferreira" className="relative block ml-auto mr-0 w-full sm:w-full max-w-full h-auto rounded-none sm:rounded-xl shadow-2xl border-0 sm:border sm:border-forest-border" />
               </div>
             </AnimatedSection>
             
