@@ -184,12 +184,8 @@ const SoudropPro = () => {
                   <div className="absolute w-[200px] h-[250px] sm:w-[280px] sm:h-[350px] lg:w-[350px] lg:h-[450px] bg-blue-400/25 rounded-full blur-[80px] lg:blur-[100px]" />
                 </div>
                 
-                {/* Photo with bottom gradient fade */}
-                <div className="relative">
-                  <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(59,130,246,0.4)] lg:drop-shadow-[0_0_60px_rgba(59,130,246,0.5)]" src="/lovable-uploads/674d5177-343a-4997-b33e-139eca71667c.png" />
-                  {/* Bottom gradient fade */}
-                  <div className="absolute bottom-0 left-0 right-0 h-24 lg:h-32 bg-gradient-to-t from-[#030610] via-[#030610]/60 to-transparent z-20 pointer-events-none" />
-                </div>
+                {/* Photo */}
+                <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(59,130,246,0.4)] lg:drop-shadow-[0_0_60px_rgba(59,130,246,0.5)]" src="/lovable-uploads/674d5177-343a-4997-b33e-139eca71667c.png" />
               </AnimatedSection>
             </div>
             
