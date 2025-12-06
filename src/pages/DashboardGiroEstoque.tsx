@@ -50,14 +50,24 @@ export default function DashboardGiroEstoque() {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800">
         <div className="container mx-auto px-4 lg:px-6 py-4">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-blue-600 rounded-lg">
-              <BarChart3 className="w-6 h-6 text-white" />
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-blue-600 rounded-lg">
+                <BarChart3 className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl lg:text-2xl font-bold text-white">Dashboard de Giro de Estoque</h1>
+                <p className="text-sm text-slate-400">Acompanhe o desempenho de vendas e giro por marca</p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-xl lg:text-2xl font-bold text-white">Dashboard de Giro de Estoque</h1>
-              <p className="text-sm text-slate-400">Acompanhe o desempenho de vendas e giro por marca</p>
-            </div>
+            <a 
+              href="/dashboard/shipping/index2?p=4" 
+              target="_blank" 
+              rel="noreferrer"
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
+            >
+              Ver pedidos expedidos
+            </a>
           </div>
         </div>
       </header>
