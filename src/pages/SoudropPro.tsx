@@ -54,7 +54,7 @@ const SoudropPro = () => {
   }];
   return <div className="min-h-screen bg-black overflow-x-hidden">
       {/* Hero Section - Two Column Layout */}
-      <section className="relative w-full min-h-[auto] lg:min-h-screen flex items-center overflow-hidden">
+      <section className="relative w-full overflow-hidden">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#030610] to-[#020408]" />
         
@@ -65,11 +65,11 @@ const SoudropPro = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-blue-500/5 blur-[120px]" />
         
         {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-8 pb-0 lg:py-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-center lg:min-h-[90vh]">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-16 sm:pt-20 lg:pt-24 pb-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-end">
             
             {/* LEFT COLUMN - Text Content */}
-            <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-6 pt-6 lg:pt-0">
+            <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-6 pb-8 lg:pb-16">
               
               {/* Event Tag with decorative line */}
               <AnimatedSection delay={0}>
@@ -174,7 +174,7 @@ const SoudropPro = () => {
             </div>
 
             {/* RIGHT COLUMN - Photo */}
-            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-center relative mt-6 mb-0 lg:mt-0">
+            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-end relative">
               <AnimatedSection delay={100} className="relative">
                 {/* Strong blue glow behind photo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -184,8 +184,12 @@ const SoudropPro = () => {
                   <div className="absolute w-[200px] h-[250px] sm:w-[280px] sm:h-[350px] lg:w-[350px] lg:h-[450px] bg-blue-400/25 rounded-full blur-[80px] lg:blur-[100px]" />
                 </div>
                 
-                {/* Photo */}
-                <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(59,130,246,0.4)] lg:drop-shadow-[0_0_60px_rgba(59,130,246,0.5)]" src="/lovable-uploads/674d5177-343a-4997-b33e-139eca71667c.png" />
+                {/* Photo with bottom gradient fade */}
+                <div className="relative">
+                  <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(59,130,246,0.4)] lg:drop-shadow-[0_0_60px_rgba(59,130,246,0.5)]" src="/lovable-uploads/674d5177-343a-4997-b33e-139eca71667c.png" />
+                  {/* Bottom gradient fade */}
+                  <div className="absolute bottom-0 left-0 right-0 h-24 lg:h-32 bg-gradient-to-t from-[#030610] via-[#030610]/60 to-transparent z-20 pointer-events-none" />
+                </div>
               </AnimatedSection>
             </div>
             
