@@ -3,7 +3,6 @@ import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, Graduat
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
-
 const SoudropElite = () => {
   useEffect(() => {
     const embedScript = document.createElement('script');
@@ -16,50 +15,33 @@ const SoudropElite = () => {
       }
     };
   }, []);
-
-  const pilares = [
-    {
-      icon: TrendingUp,
-      title: "Como encontrar produtos para vender",
-      description: "Aprenda a identificar produtos com demanda, que vendem bem e têm margem de lucro interessante. Sem chute, com método."
-    },
-    {
-      icon: Target,
-      title: "Onde e como anunciar",
-      description: "Domine os principais marketplaces (Mercado Livre, Shopee, etc) e aprenda a criar anúncios que convertem em vendas."
-    },
-    {
-      icon: Briefcase,
-      title: "Gestão de pedidos sem estoque",
-      description: "Entenda como funciona o dropshipping e como gerenciar pedidos sem precisar ter produtos em casa."
-    },
-    {
-      icon: Calculator,
-      title: "Precificação e lucro real",
-      description: "Calcule corretamente seus custos, defina preços competitivos e garanta que você está lucrando de verdade."
-    },
-    {
-      icon: Shield,
-      title: "Evite os erros mais comuns",
-      description: "Produtos proibidos, fornecedores ruins, anúncios bloqueados - aprenda o que NÃO fazer para economizar tempo e dinheiro."
-    },
-    {
-      icon: GraduationCap,
-      title: "Suporte e comunidade",
-      description: "Acesso a materiais de apoio, tirando dúvidas e uma comunidade de pessoas que estão no mesmo caminho que você."
-    }
-  ];
-
-  const paraQuemE = [
-    "Quer ter uma renda extra trabalhando de casa",
-    "Busca uma fonte de renda principal sem sair de casa",
-    "Não tem capital para investir em estoque",
-    "Quer flexibilidade de horários para trabalhar quando puder",
-    "Tem disposição para aprender algo novo e aplicar"
-  ];
-
-  return (
-    <div className="min-h-screen bg-black overflow-x-hidden">
+  const pilares = [{
+    icon: TrendingUp,
+    title: "Como encontrar produtos para vender",
+    description: "Aprenda a identificar produtos com demanda, que vendem bem e têm margem de lucro interessante. Sem chute, com método."
+  }, {
+    icon: Target,
+    title: "Onde e como anunciar",
+    description: "Domine os principais marketplaces (Mercado Livre, Shopee, etc) e aprenda a criar anúncios que convertem em vendas."
+  }, {
+    icon: Briefcase,
+    title: "Gestão de pedidos sem estoque",
+    description: "Entenda como funciona o dropshipping e como gerenciar pedidos sem precisar ter produtos em casa."
+  }, {
+    icon: Calculator,
+    title: "Precificação e lucro real",
+    description: "Calcule corretamente seus custos, defina preços competitivos e garanta que você está lucrando de verdade."
+  }, {
+    icon: Shield,
+    title: "Evite os erros mais comuns",
+    description: "Produtos proibidos, fornecedores ruins, anúncios bloqueados - aprenda o que NÃO fazer para economizar tempo e dinheiro."
+  }, {
+    icon: GraduationCap,
+    title: "Suporte e comunidade",
+    description: "Acesso a materiais de apoio, tirando dúvidas e uma comunidade de pessoas que estão no mesmo caminho que você."
+  }];
+  const paraQuemE = ["Quer ter uma renda extra trabalhando de casa", "Busca uma fonte de renda principal sem sair de casa", "Não tem capital para investir em estoque", "Quer flexibilidade de horários para trabalhar quando puder", "Tem disposição para aprender algo novo e aplicar"];
+  return <div className="min-h-screen bg-black overflow-x-hidden">
       {/* Hero Section - Two Column Layout */}
       <section className="relative w-full min-h-[auto] lg:min-h-screen flex items-center overflow-hidden">
         {/* Dark gradient background */}
@@ -148,30 +130,27 @@ const SoudropElite = () => {
                   <div className="relative">
                     {/* Glow ring animation */}
                     <div className="absolute -inset-1 bg-gradient-to-r from-elite-gold via-yellow-500 to-elite-gold rounded-full opacity-75 blur-lg animate-pulse" />
-                    <div className="absolute -inset-2 bg-elite-gold/30 rounded-full animate-ping" style={{ animationDuration: '2s' }} />
-                    <button
-                      type="button"
-                      className="wj-embed-button w-full sm:w-auto group relative"
-                      data-webinarHash="8wgw0kty"
-                      style={{
-                        border: "none",
-                        background: "linear-gradient(135deg, hsl(45, 100%, 55%) 0%, hsl(40, 100%, 50%) 50%, hsl(35, 100%, 45%) 100%)",
-                        color: "rgb(0, 0, 0)",
-                        fontSize: "14px",
-                        padding: "16px 36px",
-                        boxShadow: "0 0 60px rgba(251, 191, 36, 0.5), 0 0 100px rgba(251, 191, 36, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
-                        borderRadius: "50px",
-                        whiteSpace: "normal",
-                        fontWeight: "700",
-                        lineHeight: "1.4",
-                        cursor: "pointer",
-                        fontFamily: "system-ui, -apple-system, sans-serif",
-                        wordBreak: "break-word",
-                        transition: "all 0.3s ease",
-                        letterSpacing: "0.02em",
-                        textShadow: "0 1px 2px rgba(255, 255, 255, 0.3)"
-                      }}
-                    >
+                    <div className="absolute -inset-2 bg-elite-gold/30 rounded-full animate-ping" style={{
+                    animationDuration: '2s'
+                  }} />
+                    <button type="button" className="wj-embed-button w-full sm:w-auto group relative" data-webinarHash="8wgw0kty" style={{
+                    border: "none",
+                    background: "linear-gradient(135deg, hsl(45, 100%, 55%) 0%, hsl(40, 100%, 50%) 50%, hsl(35, 100%, 45%) 100%)",
+                    color: "rgb(0, 0, 0)",
+                    fontSize: "14px",
+                    padding: "16px 36px",
+                    boxShadow: "0 0 60px rgba(251, 191, 36, 0.5), 0 0 100px rgba(251, 191, 36, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
+                    borderRadius: "50px",
+                    whiteSpace: "normal",
+                    fontWeight: "700",
+                    lineHeight: "1.4",
+                    cursor: "pointer",
+                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    wordBreak: "break-word",
+                    transition: "all 0.3s ease",
+                    letterSpacing: "0.02em",
+                    textShadow: "0 1px 2px rgba(255, 255, 255, 0.3)"
+                  }}>
                       GARANTIR VAGA   <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                     </button>
                   </div>
@@ -203,11 +182,7 @@ const SoudropElite = () => {
                 </div>
                 
                 {/* Photo */}
-                <img
-                  alt="Renan Ferreira - Especialista em Vendas Online"
-                  className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]"
-                  src="/lovable-uploads/c311d6e2-5d4d-412f-8357-f24a8d3f20dc.png"
-                />
+                <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]" src="/lovable-uploads/568da8db-bb34-4764-ab73-97ba71062813.png" />
               </AnimatedSection>
             </div>
             
@@ -240,14 +215,12 @@ const SoudropElite = () => {
           </AnimatedSection>
           
           <div className="grid md:grid-cols-2 gap-4 sm:gap-5">
-            {paraQuemE.map((item, index) => (
-              <AnimatedSection key={index} delay={index * 100}>
+            {paraQuemE.map((item, index) => <AnimatedSection key={index} delay={index * 100}>
                 <div className="flex items-start gap-4 p-5 sm:p-6 bg-black/50 border border-elite-gold/20 rounded-xl hover:border-elite-gold/40 transition-all">
                   <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
                   <p className="text-gray-200 text-sm sm:text-base lg:text-lg">{item}</p>
                 </div>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
         </div>
       </section>
@@ -266,9 +239,8 @@ const SoudropElite = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {pilares.map((pilar, index) => {
-              const Icon = pilar.icon;
-              return (
-                <AnimatedSection key={index} delay={index * 100}>
+            const Icon = pilar.icon;
+            return <AnimatedSection key={index} delay={index * 100}>
                   <Card className="bg-gradient-to-br from-[#0A0800]/90 to-[#0A0800]/60 border border-elite-gold/20 hover:border-elite-gold/50 transition-all h-full">
                     <CardContent className="p-5 sm:p-6 lg:p-8">
                       <div className="mb-4 sm:mb-5 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-elite-gold to-yellow-600 flex items-center justify-center">
@@ -278,9 +250,8 @@ const SoudropElite = () => {
                       <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{pilar.description}</p>
                     </CardContent>
                   </Card>
-                </AnimatedSection>
-              );
-            })}
+                </AnimatedSection>;
+          })}
           </div>
         </div>
       </section>
@@ -330,11 +301,7 @@ const SoudropElite = () => {
             <AnimatedSection className="order-2 md:order-1">
               <div className="relative">
                 <div className="absolute -inset-3 bg-gradient-to-br from-elite-gold/30 to-yellow-600/20 rounded-2xl blur-xl opacity-50" />
-                <img
-                  src={renanPhoto}
-                  alt="Renan Ferreira"
-                  className="relative w-full rounded-2xl border-4 border-elite-gold/30 shadow-[0_0_40px_rgba(251,191,36,0.2)]"
-                />
+                <img src={renanPhoto} alt="Renan Ferreira" className="relative w-full rounded-2xl border-4 border-elite-gold/30 shadow-[0_0_40px_rgba(251,191,36,0.2)]" />
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200} className="order-1 md:order-2">
@@ -476,31 +443,28 @@ const SoudropElite = () => {
                     </div>
                   </div>
 
-                  <div style={{ textAlign: 'center' }}>
-                    <button
-                      type="button"
-                      className="wj-embed-button w-full sm:w-auto"
-                      data-webinarHash="8wgw0kty"
-                      style={{
-                        border: "none",
-                        background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
-                        color: "rgb(0, 0, 0)",
-                        fontSize: "16px",
-                        padding: "18px 32px",
-                        boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
-                        borderRadius: "50px",
-                        whiteSpace: "normal",
-                        fontWeight: "700",
-                        lineHeight: "1.4",
-                        cursor: "pointer",
-                        fontFamily: "system-ui, -apple-system, sans-serif",
-                        wordBreak: "break-word",
-                        margin: "auto",
-                        transition: "all 0.3s ease",
-                        letterSpacing: "0.02em",
-                        maxWidth: "100%"
-                      }}
-                    >
+                  <div style={{
+                  textAlign: 'center'
+                }}>
+                    <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{
+                    border: "none",
+                    background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
+                    color: "rgb(0, 0, 0)",
+                    fontSize: "16px",
+                    padding: "18px 32px",
+                    boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
+                    borderRadius: "50px",
+                    whiteSpace: "normal",
+                    fontWeight: "700",
+                    lineHeight: "1.4",
+                    cursor: "pointer",
+                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    wordBreak: "break-word",
+                    margin: "auto",
+                    transition: "all 0.3s ease",
+                    letterSpacing: "0.02em",
+                    maxWidth: "100%"
+                  }}>
                       GARANTIR MINHA VAGA AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" />
                     </button>
                   </div>
@@ -523,8 +487,6 @@ const SoudropElite = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default SoudropElite;
