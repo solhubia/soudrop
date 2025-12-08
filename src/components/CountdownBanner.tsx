@@ -49,12 +49,12 @@ export const CountdownBanner = ({ offerName, endDate }: CountdownBannerProps) =>
 
   const TimeBox = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-forest-bg-card border border-forest-green-primary/30 rounded-lg px-2 py-1 sm:px-3 sm:py-2 min-w-[40px] sm:min-w-[56px]">
-        <span className="text-lg sm:text-2xl font-bold text-forest-text-primary tabular-nums">
+      <div className="bg-amber-500/20 border border-amber-400/50 rounded-lg px-2 py-1 sm:px-3 sm:py-2 min-w-[40px] sm:min-w-[56px]">
+        <span className="text-lg sm:text-2xl font-bold text-white tabular-nums">
           {value.toString().padStart(2, "0")}
         </span>
       </div>
-      <span className="text-[10px] sm:text-xs text-forest-text-secondary mt-1 uppercase tracking-wide">
+      <span className="text-[10px] sm:text-xs text-amber-200/80 mt-1 uppercase tracking-wide">
         {label}
       </span>
     </div>
@@ -71,23 +71,23 @@ export const CountdownBanner = ({ offerName, endDate }: CountdownBannerProps) =>
   }
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-forest-bg-card via-forest-bg-main to-forest-bg-card border-b border-forest-green-primary/20">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 border-b border-amber-400/30 shadow-lg shadow-amber-500/20">
       <div className="container mx-auto px-3 sm:px-4 py-2 sm:py-3">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
           {/* Offer text */}
-          <p className="text-xs sm:text-sm text-forest-text-secondary font-medium">
-            A <span className="text-forest-green-primary font-semibold">{offerName}</span> encerra em:
+          <p className="text-xs sm:text-sm text-black/80 font-medium">
+            A <span className="text-black font-bold">{offerName}</span> encerra em:
           </p>
 
           {/* Countdown boxes */}
           {timeLeft && (
             <div className="flex items-center gap-2 sm:gap-3">
               <TimeBox value={timeLeft.days} label="dias" />
-              <span className="text-forest-green-primary font-bold text-lg sm:text-xl">:</span>
+              <span className="text-black/70 font-bold text-lg sm:text-xl">:</span>
               <TimeBox value={timeLeft.hours} label="horas" />
-              <span className="text-forest-green-primary font-bold text-lg sm:text-xl">:</span>
+              <span className="text-black/70 font-bold text-lg sm:text-xl">:</span>
               <TimeBox value={timeLeft.minutes} label="min" />
-              <span className="text-forest-green-primary font-bold text-lg sm:text-xl">:</span>
+              <span className="text-black/70 font-bold text-lg sm:text-xl">:</span>
               <TimeBox value={timeLeft.seconds} label="seg" />
             </div>
           )}
