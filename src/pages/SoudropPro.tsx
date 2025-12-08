@@ -7,7 +7,6 @@ import { CountdownBanner } from "@/components/CountdownBanner";
 
 // Data de fim da oferta - ajuste conforme necessário
 const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
-
 const SoudropPro = () => {
   useEffect(() => {
     const embedScript = document.createElement('script');
@@ -326,7 +325,7 @@ const SoudropPro = () => {
                 <img alt="Resultado de aluno 1" className="w-full h-full object-cover" src="/lovable-uploads/c8940b3d-288a-402a-be8a-2dd0940aa7d5.jpg" />
               </div>
               <div className="overflow-hidden rounded-xl border-2 border-blue-500/50 shadow-lg shadow-blue-500/10 hover:border-blue-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
-                <img alt="Resultado de aluno 2" className="w-full h-full object-cover" src="/lovable-uploads/6a30dae9-7b96-42d3-959f-13e547207f67.jpg" />
+                <img alt="Resultado de aluno 2" className="w-full h-full object-cover" src="/lovable-uploads/be1f7729-b484-49a0-9769-1e6841895df2.jpg" />
               </div>
               <div className="overflow-hidden rounded-xl border-2 border-blue-500/50 shadow-lg shadow-blue-500/10 hover:border-blue-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
                 <img alt="Resultado de aluno 3" src="/lovable-uploads/4e7b4523-407a-48ac-9d8e-f0fdbb8b7ac7.jpg" className="w-full h-full object-fill" />
