@@ -301,52 +301,40 @@ const SoudropPro = () => {
         </div>
       </section>
 
-      {/* Depoimentos */}
+      {/* Prints de Resultados */}
       <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-[#050A18]">
-        <div className="container mx-auto max-w-6xl">
+        <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
-            <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
-                O que dizem os <span className="text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]">alunos</span>
-              </h2>
-              <p className="text-gray-400 text-sm sm:text-base lg:text-lg">
-                Resultados reais de pessoas comuns.
-              </p>
-            </div>
-          </AnimatedSection>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
-            {testimonials.map((testimonial, index) => <AnimatedSection key={index} delay={100 + index * 100}>
-                <Card className="bg-gradient-to-br from-[#0A1124]/90 to-[#0A1124]/60 border border-blue-800/50 hover:border-blue-500/60 transition-all h-full">
-                  <CardContent className="p-5 sm:p-6">
-                    <div className="flex items-center gap-4 mb-5">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-950/80 to-blue-900/60 rounded-full flex items-center justify-center border border-blue-700/60">
-                        <Users className="h-5 w-5 sm:h-6 sm:w-6 text-blue-400" />
-                      </div>
-                      <div>
-                        <p className="text-white font-semibold text-base sm:text-lg">{testimonial.name}</p>
-                        <p className="text-blue-400 text-sm">Aluno</p>
-                      </div>
-                    </div>
-                    <p className="text-gray-300 leading-relaxed italic text-sm sm:text-base">"{testimonial.text}"</p>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>)}
-          </div>
-
-          {/* Escassez */}
-          <AnimatedSection delay={400}>
-            <div className="mt-8 sm:mt-10 lg:mt-12 text-center">
-              <Card className="bg-gradient-to-r from-yellow-950/30 via-yellow-900/20 to-yellow-950/30 border border-yellow-700/40 max-w-2xl mx-auto">
-                <CardContent className="p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-4 justify-center">
-                  <div className="w-10 h-10 bg-yellow-950/60 rounded-lg flex items-center justify-center flex-shrink-0 border border-yellow-700/50">
-                    <AlertTriangle className="h-5 w-5 text-yellow-500" />
-                  </div>
-                  <p className="text-gray-300 text-sm sm:text-base text-center sm:text-left">
-                    Para manter a qualidade, as vagas dessa aula são limitadas. <span className="text-yellow-400 font-medium">As aulas não ficam gravadas.</span>
-                  </p>
-                </CardContent>
-              </Card>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
+              O que está acontecendo <span className="text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]">HOJE</span> na SouDrop
+            </h2>
+            <p className="text-gray-300 text-sm sm:text-base lg:text-lg mb-8 sm:mb-10">
+              Aprenda com quem já vendeu e continua vendendo todos os dias.
+            </p>
+            
+            {/* Prints de Resultados */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+              <div className="overflow-hidden rounded-xl border-2 border-blue-500/40 shadow-lg shadow-blue-500/10 hover:border-blue-400/60 transition-all duration-300">
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Resultado de aluno 1" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-xl border-2 border-blue-500/40 shadow-lg shadow-blue-500/10 hover:border-blue-400/60 transition-all duration-300 md:col-span-1">
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Resultado de aluno 2" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-xl border-2 border-blue-500/40 shadow-lg shadow-blue-500/10 hover:border-blue-400/60 transition-all duration-300 md:col-span-2 lg:col-span-1 md:max-w-[50%] md:mx-auto lg:max-w-full">
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Resultado de aluno 3" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </AnimatedSection>
         </div>
