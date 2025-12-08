@@ -2,13 +2,75 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { CheckCircle2, Zap, Shield, Users, BookOpen, Trophy, TrendingUp, Target, BarChart3, Store, DollarSign, Rocket, ArrowRight, X, AlertTriangle, Package, ShoppingCart, Calculator, Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import renanFerreira from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CountdownBanner } from "@/components/CountdownBanner";
+import depoimentoCarlos from "@/assets/depoimento-carlos.jpeg";
+import depoimentoFelipe from "@/assets/depoimento-felipe.jpeg";
+import depoimentoGustavo from "@/assets/depoimento-gustavo.jpeg";
 
 // Data de fim da oferta - ajuste conforme necessário
 const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
+
+// Componente de carrossel para mobile
+const TestimonialCarousel = ({ images }: { images: string[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  return (
+    <div className="relative">
+      <Card className="bg-forest-bg-card border border-forest-border overflow-hidden">
+        <CardContent className="p-0">
+          <img 
+            src={images[currentIndex]} 
+            alt={`Resultado de aluno ${currentIndex + 1}`}
+            className="w-full h-auto object-contain"
+          />
+        </CardContent>
+      </Card>
+      
+      {/* Navigation arrows */}
+      <button 
+        onClick={prevSlide}
+        className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-forest-bg-card/80 border border-forest-border rounded-full flex items-center justify-center text-forest-text-primary hover:bg-forest-green-primary/20 transition-colors"
+        aria-label="Anterior"
+      >
+        <ArrowRight className="w-5 h-5 rotate-180" />
+      </button>
+      <button 
+        onClick={nextSlide}
+        className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-forest-bg-card/80 border border-forest-border rounded-full flex items-center justify-center text-forest-text-primary hover:bg-forest-green-primary/20 transition-colors"
+        aria-label="Próximo"
+      >
+        <ArrowRight className="w-5 h-5" />
+      </button>
+
+      {/* Dots indicator */}
+      <div className="flex justify-center gap-2 mt-4">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              index === currentIndex 
+                ? 'bg-forest-green-primary' 
+                : 'bg-forest-border hover:bg-forest-text-secondary/50'
+            }`}
+            aria-label={`Ir para slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const SoudropStart = () => {
   const navigate = useNavigate();
@@ -345,6 +407,45 @@ const SoudropStart = () => {
         </div>
       </section>
 
+      {/* Depoimentos Section */}
+      <section className="py-12 sm:py-16 md:py-20 px-5 sm:px-6 md:px-4 bg-forest-bg-card-alt">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-forest-text-primary mb-3">
+                O que está acontecendo <span className="bg-gradient-forest-text bg-clip-text text-transparent">HOJE</span> na SouDrop
+              </h2>
+              <p className="text-forest-text-secondary text-sm sm:text-base max-w-2xl mx-auto">
+                Resultados reais de alunos que aplicam o que ensinamos.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          {/* Desktop: 3 columns, Mobile: Carousel */}
+          <div className="hidden md:grid md:grid-cols-3 gap-4 lg:gap-6">
+            {[depoimentoCarlos, depoimentoFelipe, depoimentoGustavo].map((img, index) => (
+              <AnimatedSection key={index} delay={100 + index * 100}>
+                <Card className="bg-forest-bg-card border border-forest-border hover:border-forest-green-primary/50 hover:shadow-forest-glow transition-all duration-300 overflow-hidden">
+                  <CardContent className="p-0">
+                    <img 
+                      src={img} 
+                      alt={`Resultado de aluno ${index + 1}`}
+                      className="w-full h-auto object-contain"
+                    />
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          {/* Mobile Carousel */}
+          <div className="md:hidden">
+            <TestimonialCarousel 
+              images={[depoimentoCarlos, depoimentoFelipe, depoimentoGustavo]} 
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-forest-bg-card border-t border-forest-border py-6 sm:py-8 px-4">
