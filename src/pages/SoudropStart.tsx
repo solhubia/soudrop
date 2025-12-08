@@ -116,7 +116,7 @@ const SoudropStart = () => {
       <div className="h-[72px] sm:h-[56px]" />
       
       {/* Hero Section - G4 Style */}
-      <section className="relative w-full overflow-hidden">
+      <section className="relative z-10 w-full overflow-visible pb-4 lg:pb-0">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#020805] via-[#051310] to-[#030907]" />
         
@@ -266,7 +266,7 @@ const SoudropStart = () => {
       </section>
 
       {/* Autoridade Section */}
-      <section className="pt-6 pb-6 sm:pt-16 sm:pb-16 md:pt-20 md:pb-20 px-4 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main overflow-hidden">
+      <section className="relative z-0 pt-8 pb-6 sm:pt-16 sm:pb-16 md:pt-20 md:pb-20 px-4 sm:px-6 md:px-4 bg-gradient-to-b from-forest-bg-main via-forest-bg-card to-forest-bg-main overflow-hidden">
         <div className="mx-auto max-w-4xl sm:container sm:px-4">
           <div className="grid md:grid-cols-2 gap-4 sm:gap-8 items-center">
             <AnimatedSection className="order-2 md:order-1">
