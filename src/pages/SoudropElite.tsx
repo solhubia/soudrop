@@ -355,25 +355,13 @@ const SoudropElite = () => {
             {/* Prints de Resultados */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-10">
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Print de resultado 1" 
-                  className="w-full h-48 sm:h-56 lg:h-64 object-cover"
-                />
+                <img alt="Print de resultado 1" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/6362dee9-25a7-4708-a7ce-924ddbf16d89.jpg" />
               </div>
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Print de resultado 2" 
-                  className="w-full h-48 sm:h-56 lg:h-64 object-cover"
-                />
+                <img src="/placeholder.svg" alt="Print de resultado 2" className="w-full h-48 sm:h-56 lg:h-64 object-cover" />
               </div>
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30 md:col-span-2 lg:col-span-1 md:max-w-[50%] md:mx-auto lg:max-w-full">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Print de resultado 3" 
-                  className="w-full h-48 sm:h-56 lg:h-64 object-cover"
-                />
+                <img src="/placeholder.svg" alt="Print de resultado 3" className="w-full h-48 sm:h-56 lg:h-64 object-cover" />
               </div>
             </div>
 
