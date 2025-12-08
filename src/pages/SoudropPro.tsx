@@ -315,25 +315,13 @@ const SoudropPro = () => {
             {/* Prints de Resultados */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
               <div className="overflow-hidden rounded-xl border-2 border-blue-500/40 shadow-lg shadow-blue-500/10 hover:border-blue-400/60 transition-all duration-300">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Resultado de aluno 1" 
-                  className="w-full h-auto object-cover"
-                />
+                <img alt="Resultado de aluno 1" className="w-full h-auto object-cover" src="/lovable-uploads/c8940b3d-288a-402a-be8a-2dd0940aa7d5.jpg" />
               </div>
               <div className="overflow-hidden rounded-xl border-2 border-blue-500/40 shadow-lg shadow-blue-500/10 hover:border-blue-400/60 transition-all duration-300 md:col-span-1">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Resultado de aluno 2" 
-                  className="w-full h-auto object-cover"
-                />
+                <img alt="Resultado de aluno 2" className="w-full h-auto object-cover" src="/lovable-uploads/6a30dae9-7b96-42d3-959f-13e547207f67.jpg" />
               </div>
               <div className="overflow-hidden rounded-xl border-2 border-blue-500/40 shadow-lg shadow-blue-500/10 hover:border-blue-400/60 transition-all duration-300 md:col-span-2 lg:col-span-1 md:max-w-[50%] md:mx-auto lg:max-w-full">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Resultado de aluno 3" 
-                  className="w-full h-auto object-cover"
-                />
+                <img alt="Resultado de aluno 3" className="w-full h-auto object-cover" src="/lovable-uploads/4e7b4523-407a-48ac-9d8e-f0fdbb8b7ac7.jpg" />
               </div>
             </div>
           </AnimatedSection>
