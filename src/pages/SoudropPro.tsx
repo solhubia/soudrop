@@ -64,7 +64,7 @@ const SoudropPro = () => {
       <div className="h-[72px] sm:h-[56px]" />
       
       {/* Hero Section - Two Column Layout */}
-      <section className="relative w-full overflow-hidden">
+      <section className="relative z-10 w-full overflow-visible pb-4 lg:pb-0">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#030610] to-[#020408]" />
         
@@ -209,7 +209,7 @@ const SoudropPro = () => {
       </section>
 
       {/* O que tem por trás da "fórmula" */}
-      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-black to-[#050A18]">
+      <section className="relative z-0 pt-8 pb-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-black to-[#050A18]">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center space-y-6 sm:space-y-8">
             <AnimatedSection>
