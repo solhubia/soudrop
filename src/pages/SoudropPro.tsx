@@ -3,6 +3,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { CountdownBanner } from "@/components/CountdownBanner";
+
+// Data de fim da oferta - ajuste conforme necessário
+const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
+
 const SoudropPro = () => {
   useEffect(() => {
     const embedScript = document.createElement('script');
@@ -53,6 +58,12 @@ const SoudropPro = () => {
     text: "Parecia impossível até entender o método. Hoje tenho minha operação rodando diariamente."
   }];
   return <div className="min-h-screen bg-black overflow-x-hidden">
+      {/* Countdown Banner */}
+      <CountdownBanner offerName="Aula Gratuita" endDate={OFFER_END_DATE} variant="blue" />
+      
+      {/* Spacer for fixed banner */}
+      <div className="h-[72px] sm:h-[56px]" />
+      
       {/* Hero Section - Two Column Layout */}
       <section className="relative w-full overflow-hidden">
         {/* Dark gradient background */}
