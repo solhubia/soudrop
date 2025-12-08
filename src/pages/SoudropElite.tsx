@@ -343,14 +343,9 @@ const SoudropElite = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
         <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
-            <Shield className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 text-elite-gold mx-auto mb-6 sm:mb-8" />
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
-              Método <span className="text-elite-gold">Validado</span>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10 text-white">
+              O que está acontecendo <span className="text-elite-gold">HOJE</span> na SouDrop
             </h2>
-            <div className="space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-xl text-gray-300 leading-relaxed mb-8 sm:mb-10">
-              <p>Método testado e comprovado</p>
-              <p>Foco em resultados práticos</p>
-            </div>
             
             {/* Prints de Resultados */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-10">
