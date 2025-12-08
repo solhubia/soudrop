@@ -129,17 +129,17 @@ const SoudropElite = () => {
                 <div className="pt-2 lg:pt-4 flex flex-col items-center lg:items-start">
                   <div className="relative">
                     {/* Glow ring animation */}
-                    <div className="absolute -inset-1 bg-gradient-to-r from-elite-gold via-yellow-500 to-elite-gold rounded-full opacity-75 blur-lg animate-pulse" />
-                    <div className="absolute -inset-2 bg-elite-gold/30 rounded-full animate-ping" style={{
+                    <div className="absolute -inset-1 bg-gradient-to-r from-green-500 via-green-400 to-green-500 rounded-full opacity-75 blur-lg animate-pulse" />
+                    <div className="absolute -inset-2 bg-green-500/30 rounded-full animate-ping" style={{
                     animationDuration: '2s'
                   }} />
                     <button type="button" className="wj-embed-button w-full sm:w-auto group relative" data-webinarHash="8wgw0kty" style={{
                     border: "none",
-                    background: "linear-gradient(135deg, hsl(45, 100%, 55%) 0%, hsl(40, 100%, 50%) 50%, hsl(35, 100%, 45%) 100%)",
-                    color: "rgb(0, 0, 0)",
+                    background: "linear-gradient(135deg, hsl(142, 76%, 45%) 0%, hsl(142, 76%, 40%) 50%, hsl(142, 76%, 35%) 100%)",
+                    color: "rgb(255, 255, 255)",
                     fontSize: "14px",
                     padding: "16px 36px",
-                    boxShadow: "0 0 60px rgba(251, 191, 36, 0.5), 0 0 100px rgba(251, 191, 36, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
+                    boxShadow: "0 0 60px rgba(34, 197, 94, 0.5), 0 0 100px rgba(34, 197, 94, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
                     borderRadius: "50px",
                     whiteSpace: "normal",
                     fontWeight: "700",
@@ -149,7 +149,7 @@ const SoudropElite = () => {
                     wordBreak: "break-word",
                     transition: "all 0.3s ease",
                     letterSpacing: "0.02em",
-                    textShadow: "0 1px 2px rgba(255, 255, 255, 0.3)"
+                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
                   }}>
                       GARANTIR VAGA   <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                     </button>
