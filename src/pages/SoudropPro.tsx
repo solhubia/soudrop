@@ -318,7 +318,7 @@ const SoudropPro = () => {
                 <img alt="Resultado de aluno 2" className="w-full h-full object-cover" src="/lovable-uploads/6a30dae9-7b96-42d3-959f-13e547207f67.jpg" />
               </div>
               <div className="overflow-hidden rounded-xl border-2 border-blue-500/50 shadow-lg shadow-blue-500/10 hover:border-blue-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
-                <img alt="Resultado de aluno 3" className="w-full h-full object-cover" src="/lovable-uploads/4e7b4523-407a-48ac-9d8e-f0fdbb8b7ac7.jpg" />
+                <img alt="Resultado de aluno 3" src="/lovable-uploads/4e7b4523-407a-48ac-9d8e-f0fdbb8b7ac7.jpg" className="w-full h-full object-fill" />
               </div>
             </div>
             
