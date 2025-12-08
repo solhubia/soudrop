@@ -49,12 +49,12 @@ export const CountdownBanner = ({ offerName, endDate }: CountdownBannerProps) =>
 
   const TimeBox = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-forest-green-primary/20 border border-forest-green-primary/50 rounded-lg px-2 py-1 sm:px-3 sm:py-2 min-w-[40px] sm:min-w-[56px]">
-        <span className="text-lg sm:text-2xl font-bold text-forest-lime tabular-nums">
+      <div className="bg-[#00C853] border border-[#4ADE80] rounded-lg px-2 py-1 sm:px-3 sm:py-2 min-w-[40px] sm:min-w-[56px]">
+        <span className="text-lg sm:text-2xl font-bold text-white tabular-nums">
           {value.toString().padStart(2, "0")}
         </span>
       </div>
-      <span className="text-[10px] sm:text-xs text-forest-text-secondary mt-1 uppercase tracking-wide">
+      <span className="text-[10px] sm:text-xs text-forest-lime mt-1 uppercase tracking-wide font-medium">
         {label}
       </span>
     </div>
