@@ -358,10 +358,10 @@ const SoudropElite = () => {
                 <img alt="Print de resultado 1" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/6362dee9-25a7-4708-a7ce-924ddbf16d89.jpg" />
               </div>
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30">
-                <img alt="Print de resultado 2" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/fc559e25-3d67-4784-a1b2-661dbd41e806.jpg" />
+                <img alt="Print de resultado 2" src="/lovable-uploads/888fc9cb-6f97-41c8-b7e7-87dc12f0e926.jpg" className="w-full h-48 sm:h-56 lg:h-64 object-fill" />
               </div>
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30 md:col-span-2 lg:col-span-1 md:max-w-[50%] md:mx-auto lg:max-w-full">
-                <img alt="Print de resultado 3" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/c199f8ff-91f5-4089-885d-36af0d9d0c75.jpg" />
+                <img alt="Print de resultado 3" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/9d31a4be-19bc-4b25-8957-c4a69b42a88f.jpg" />
               </div>
             </div>
 
