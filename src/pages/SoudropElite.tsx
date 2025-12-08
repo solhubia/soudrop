@@ -50,7 +50,7 @@ const SoudropElite = () => {
       {/* Spacer for fixed banner */}
       <div className="h-[72px] sm:h-[56px]" />
       {/* Hero Section - Two Column Layout */}
-      <section className="relative w-full overflow-hidden">
+      <section className="relative z-10 w-full overflow-visible pb-4 lg:pb-0">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" />
         
@@ -189,7 +189,7 @@ const SoudropElite = () => {
                 </div>
                 
                 {/* Photo */}
-                <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" />
+                <img alt="Renan Ferreira - Especialista em Vendas Online" className="block relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" loading="eager" />
               </AnimatedSection>
             </div>
             
@@ -198,7 +198,7 @@ const SoudropElite = () => {
       </section>
 
       {/* O que é a aula */}
-      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-black to-[#050A00]">
+      <section className="relative z-0 pt-8 pb-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-black to-[#050A00]">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
