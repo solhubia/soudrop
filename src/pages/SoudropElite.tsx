@@ -3,6 +3,10 @@ import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, Graduat
 import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { CountdownBanner } from "@/components/CountdownBanner";
+
+const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
+
 const SoudropElite = () => {
   useEffect(() => {
     const embedScript = document.createElement('script');
@@ -42,6 +46,9 @@ const SoudropElite = () => {
   }];
   const paraQuemE = ["Quer ter uma renda extra trabalhando de casa", "Busca uma fonte de renda principal sem sair de casa", "Não tem capital para investir em estoque", "Quer flexibilidade de horários para trabalhar quando puder", "Tem disposição para aprender algo novo e aplicar"];
   return <div className="min-h-screen bg-black overflow-x-hidden">
+      <CountdownBanner offerName="Oferta Especial" endDate={OFFER_END_DATE} variant="gold" />
+      {/* Spacer for fixed banner */}
+      <div className="h-[72px] sm:h-[56px]" />
       {/* Hero Section - Two Column Layout */}
       <section className="relative w-full overflow-hidden">
         {/* Dark gradient background */}
