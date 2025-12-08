@@ -17,28 +17,28 @@ const SoudropElite = () => {
   }, []);
   const pilares = [{
     icon: TrendingUp,
-    title: "Como encontrar produtos para vender",
-    description: "Aprenda a identificar produtos com demanda, que vendem bem e têm margem de lucro interessante. Sem chute, com método."
+    title: "Como encontrar produtos simples que vendem todo dia",
+    description: "Você vai ver na prática como identificar produtos com demanda real, boa margem de lucro e baixo risco. Sem chute, com método."
   }, {
     icon: Target,
-    title: "Onde e como anunciar",
-    description: "Domine os principais marketplaces (Mercado Livre, Shopee, etc) e aprenda a criar anúncios que convertem em vendas."
+    title: "Onde e como anunciar para vender mais rápido",
+    description: "Vou te mostrar como usar os principais marketplaces (Mercado Livre, Shopee, etc.) e montar anúncios que se destacam e convertem em vendas."
   }, {
     icon: Briefcase,
-    title: "Gestão de pedidos sem estoque",
-    description: "Entenda como funciona o dropshipping e como gerenciar pedidos sem precisar ter produtos em casa."
+    title: "Gestão de pedidos sem ter estoque em casa",
+    description: "Você vai entender, passo a passo, como funciona o modelo sem estoque e como organizar os pedidos do cliente até a entrega, sem bagunça."
   }, {
     icon: Calculator,
-    title: "Precificação e lucro real",
-    description: "Calcule corretamente seus custos, defina preços competitivos e garanta que você está lucrando de verdade."
+    title: "Precificação com lucro real, não no achismo",
+    description: "Na tela, vamos calcular juntos custos, taxas, frete e comissões para você enxergar o lucro limpo de cada venda antes mesmo de anunciar."
   }, {
     icon: Shield,
-    title: "Evite os erros mais comuns",
-    description: "Produtos proibidos, fornecedores ruins, anúncios bloqueados - aprenda o que NÃO fazer para economizar tempo e dinheiro."
+    title: "Os erros que mais fazem iniciante perder dinheiro",
+    description: "Produtos proibidos, fornecedores ruins, anúncios bloqueados e decisões erradas de preço – o que você NUNCA deve fazer se quiser economizar tempo e grana."
   }, {
     icon: GraduationCap,
-    title: "Suporte e comunidade",
-    description: "Acesso a materiais de apoio, tirando dúvidas e uma comunidade de pessoas que estão no mesmo caminho que você."
+    title: "Plano de ação, suporte e comunidade",
+    description: "Você sai da MasterClass com um passo a passo claro para aplicar o que aprendeu e acesso a materiais de apoio e comunidade para não caminhar sozinho."
   }];
   const paraQuemE = ["Quer ter uma renda extra trabalhando de casa", "Busca uma fonte de renda principal sem sair de casa", "Não tem capital para investir em estoque", "Quer flexibilidade de horários para trabalhar quando puder", "Tem disposição para aprender algo novo e aplicar"];
   return <div className="min-h-screen bg-black overflow-x-hidden">
@@ -230,10 +230,10 @@ const SoudropElite = () => {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-center text-white">
-              O que vou revelar <span className="text-elite-gold">na aula</span>
+              O que você vai ver <span className="text-elite-gold">nessa MasterClass:</span>
             </h2>
-            <p className="text-center text-gray-400 mb-10 sm:mb-14 text-sm sm:text-base lg:text-lg">
-              A estratégia completa para faturar com produtos simples
+            <p className="text-center text-gray-400 mb-10 sm:mb-14 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">
+              A estratégia completa para faturar todos os dias com produtos simples nos marketplaces.
             </p>
           </AnimatedSection>
 
