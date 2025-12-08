@@ -361,7 +361,7 @@ const SoudropElite = () => {
                 <img alt="Print de resultado 2" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/fc559e25-3d67-4784-a1b2-661dbd41e806.jpg" />
               </div>
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30 md:col-span-2 lg:col-span-1 md:max-w-[50%] md:mx-auto lg:max-w-full">
-                <img src="/placeholder.svg" alt="Print de resultado 3" className="w-full h-48 sm:h-56 lg:h-64 object-cover" />
+                <img alt="Print de resultado 3" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/c199f8ff-91f5-4089-885d-36af0d9d0c75.jpg" />
               </div>
             </div>
 
@@ -369,10 +369,7 @@ const SoudropElite = () => {
               Aprenda com quem já vendeu e continua vendendo todos os dias
             </p>
             
-            <div className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-elite-gold/10 border-2 border-elite-gold rounded-xl">
-              <Crown className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-elite-gold" />
-              <span className="text-elite-gold font-bold text-sm sm:text-base lg:text-xl uppercase tracking-wide">Acesso Completo</span>
-            </div>
+            
           </AnimatedSection>
         </div>
       </section>
