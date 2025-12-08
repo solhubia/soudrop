@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 interface CountdownBannerProps {
   offerName: string;
   endDate: Date;
-  variant?: "forest" | "blue";
+  variant?: "forest" | "blue" | "gold";
 }
 
 interface TimeLeft {
@@ -70,6 +70,17 @@ export const CountdownBanner = ({ offerName, endDate, variant = "forest" }: Coun
       text: "text-gray-400",
       highlight: "text-blue-400",
       expiredBg: "bg-[#0a0f1a] border-b border-gray-700",
+      expiredText: "text-gray-400",
+    },
+    gold: {
+      banner: "bg-black border-b border-elite-gold/30",
+      box: "bg-elite-gold border-yellow-300",
+      number: "text-black",
+      label: "text-elite-gold-light",
+      separator: "text-elite-gold",
+      text: "text-gray-400",
+      highlight: "text-elite-gold",
+      expiredBg: "bg-black border-b border-gray-700",
       expiredText: "text-gray-400",
     },
   };
