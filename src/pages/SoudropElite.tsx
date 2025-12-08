@@ -57,8 +57,8 @@ const SoudropElite = () => {
         {/* Subtle radial glow from top-right (gold) */}
         <div className="absolute top-0 right-0 w-[70%] h-[80%] bg-gradient-radial from-elite-gold/8 via-transparent to-transparent" />
         
-        {/* Bottom glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-elite-gold/5 blur-[120px]" />
+        {/* Bottom glow - hidden on mobile to avoid covering the photo */}
+        <div className="hidden lg:block absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-elite-gold/5 blur-[120px]" />
         
         {/* Content container */}
         <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-16 sm:pt-20 lg:pt-24 pb-0">
