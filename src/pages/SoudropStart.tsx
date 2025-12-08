@@ -5,6 +5,11 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import renanFerreira from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { CountdownBanner } from "@/components/CountdownBanner";
+
+// Data de fim da oferta - ajuste conforme necessário
+const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
+
 const SoudropStart = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -42,6 +47,12 @@ const SoudropStart = () => {
   const forWho = ["Quer entender, de forma séria, como começar nesse mercado", "Já tentou ganhar dinheiro online e está cansado de promessa vazia", "Prefere ouvir a verdade: que existe caminho, mas exige método", "Quer um passo a passo aplicável, e não mais um vídeo motivacional"];
   const heroBenefits = ["Sem comprar estoque antes", "Passo a passo pra iniciantes", "Funciona em marketplaces e loja própria"];
   return <div className="min-h-screen bg-forest-bg-main overflow-x-hidden">
+      {/* Countdown Banner */}
+      <CountdownBanner offerName="Masterclass Gratuita" endDate={OFFER_END_DATE} />
+      
+      {/* Spacer for fixed banner */}
+      <div className="h-[72px] sm:h-[56px]" />
+      
       {/* Hero Section - G4 Style */}
       <section className="relative w-full overflow-hidden">
         {/* Dark gradient background */}
