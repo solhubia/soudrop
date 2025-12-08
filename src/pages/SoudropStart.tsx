@@ -116,7 +116,7 @@ const SoudropStart = () => {
       <div className="h-[72px] sm:h-[56px]" />
       
       {/* Hero Section - G4 Style */}
-      <section className="relative z-10 w-full overflow-visible pb-0">
+      <section className="relative z-10 w-full overflow-visible flex flex-col justify-end">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#020805] via-[#051310] to-[#030907]" />
         
@@ -127,7 +127,7 @@ const SoudropStart = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-forest-lime/5 blur-[120px]" />
         
         {/* Content container - full width on desktop, no right padding */}
-        <div className="relative z-10 w-full mx-auto pl-5 pr-0 sm:px-8 lg:pl-16 lg:pr-0 pt-16 sm:pt-20 lg:pt-24 pb-0">
+        <div className="relative z-10 w-full mx-auto pl-5 pr-0 sm:px-8 lg:pl-16 lg:pr-0 pt-16 sm:pt-20 lg:pt-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-end lg:max-w-none">
             
             {/* LEFT COLUMN - Text Content */}
