@@ -195,7 +195,7 @@ const SoudropPro = () => {
                 </div>
                 
                 {/* Photo */}
-                <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(59,130,246,0.4)] lg:drop-shadow-[0_0_60px_rgba(59,130,246,0.5)]" src={renanPhoto} />
+                <img alt="Renan Ferreira - Especialista em Vendas Online" className="relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] max-h-[300px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(59,130,246,0.4)] lg:drop-shadow-[0_0_60px_rgba(59,130,246,0.5)]" src="/lovable-uploads/674d5177-343a-4997-b33e-139eca71667c.png" />
               </AnimatedSection>
             </div>
             
