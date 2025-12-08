@@ -303,27 +303,28 @@ const SoudropPro = () => {
 
       {/* Prints de Resultados */}
       <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-[#050A18]">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           <AnimatedSection>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
-              O que está acontecendo <span className="text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]">HOJE</span> na SouDrop
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 text-white">
+              O que está acontecendo <span className="text-yellow-400 drop-shadow-[0_0_15px_rgba(234,179,8,0.4)]">HOJE</span> na SouDrop
             </h2>
-            <p className="text-gray-300 text-sm sm:text-base lg:text-lg mb-8 sm:mb-10">
-              Aprenda com quem já vendeu e continua vendendo todos os dias.
-            </p>
             
             {/* Prints de Resultados */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 items-stretch">
-              <div className="overflow-hidden rounded-xl border-2 border-blue-500/40 shadow-lg shadow-blue-500/10 hover:border-blue-400/60 hover:scale-[1.02] transition-all duration-300 aspect-[9/16] flex items-center justify-center bg-[#0a1628]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-10">
+              <div className="overflow-hidden rounded-xl border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10 hover:border-yellow-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
                 <img alt="Resultado de aluno 1" className="w-full h-full object-cover" src="/lovable-uploads/c8940b3d-288a-402a-be8a-2dd0940aa7d5.jpg" />
               </div>
-              <div className="overflow-hidden rounded-xl border-2 border-blue-500/40 shadow-lg shadow-blue-500/10 hover:border-blue-400/60 hover:scale-[1.02] transition-all duration-300 aspect-[9/16] flex items-center justify-center bg-[#0a1628]">
+              <div className="overflow-hidden rounded-xl border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10 hover:border-yellow-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
                 <img alt="Resultado de aluno 2" className="w-full h-full object-cover" src="/lovable-uploads/6a30dae9-7b96-42d3-959f-13e547207f67.jpg" />
               </div>
-              <div className="overflow-hidden rounded-xl border-2 border-blue-500/40 shadow-lg shadow-blue-500/10 hover:border-blue-400/60 hover:scale-[1.02] transition-all duration-300 aspect-[9/16] flex items-center justify-center bg-[#0a1628] sm:col-span-2 sm:max-w-[50%] sm:mx-auto lg:col-span-1 lg:max-w-full">
+              <div className="overflow-hidden rounded-xl border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10 hover:border-yellow-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
                 <img alt="Resultado de aluno 3" className="w-full h-full object-cover" src="/lovable-uploads/4e7b4523-407a-48ac-9d8e-f0fdbb8b7ac7.jpg" />
               </div>
             </div>
+            
+            <p className="text-yellow-400 text-base sm:text-lg lg:text-xl font-medium">
+              Aprenda com quem já vendeu e continua vendendo todos os dias
+            </p>
           </AnimatedSection>
         </div>
       </section>
