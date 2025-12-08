@@ -252,7 +252,12 @@ const SoudropStart = () => {
                 </div>
                 
                 {/* Photo */}
-                <img alt="Renan Ferreira - Especialista em Dropshipping" className="relative z-10 w-[280px] sm:w-[300px] lg:w-[520px] xl:w-[600px] max-h-[350px] lg:max-h-none h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(34,197,94,0.4)] lg:drop-shadow-[0_0_60px_rgba(34,197,94,0.5)]" src="/lovable-uploads/c311d6e2-5d4d-412f-8357-f24a8d3f20dc.png" />
+                <img 
+                  alt="Renan Ferreira - Especialista em Dropshipping" 
+                  className="block relative z-10 w-[280px] sm:w-[300px] lg:w-[520px] xl:w-[600px] h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(34,197,94,0.4)] lg:drop-shadow-[0_0_60px_rgba(34,197,94,0.5)]" 
+                  src="/lovable-uploads/c311d6e2-5d4d-412f-8357-f24a8d3f20dc.png"
+                  loading="eager"
+                />
               </AnimatedSection>
             </div>
             
