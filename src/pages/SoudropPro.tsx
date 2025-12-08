@@ -306,23 +306,23 @@ const SoudropPro = () => {
         <div className="max-w-6xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 text-white">
-              O que está acontecendo <span className="text-yellow-400 drop-shadow-[0_0_15px_rgba(234,179,8,0.4)]">HOJE</span> na SouDrop
+              O que está acontecendo <span className="text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]">HOJE</span> na SouDrop
             </h2>
             
             {/* Prints de Resultados */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-10">
-              <div className="overflow-hidden rounded-xl border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10 hover:border-yellow-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
+              <div className="overflow-hidden rounded-xl border-2 border-blue-500/50 shadow-lg shadow-blue-500/10 hover:border-blue-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
                 <img alt="Resultado de aluno 1" className="w-full h-full object-cover" src="/lovable-uploads/c8940b3d-288a-402a-be8a-2dd0940aa7d5.jpg" />
               </div>
-              <div className="overflow-hidden rounded-xl border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10 hover:border-yellow-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
+              <div className="overflow-hidden rounded-xl border-2 border-blue-500/50 shadow-lg shadow-blue-500/10 hover:border-blue-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
                 <img alt="Resultado de aluno 2" className="w-full h-full object-cover" src="/lovable-uploads/6a30dae9-7b96-42d3-959f-13e547207f67.jpg" />
               </div>
-              <div className="overflow-hidden rounded-xl border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10 hover:border-yellow-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
+              <div className="overflow-hidden rounded-xl border-2 border-blue-500/50 shadow-lg shadow-blue-500/10 hover:border-blue-400/70 hover:scale-[1.02] transition-all duration-300 aspect-[4/3] bg-[#0a1628]">
                 <img alt="Resultado de aluno 3" className="w-full h-full object-cover" src="/lovable-uploads/4e7b4523-407a-48ac-9d8e-f0fdbb8b7ac7.jpg" />
               </div>
             </div>
             
-            <p className="text-yellow-400 text-base sm:text-lg lg:text-xl font-medium">
+            <p className="text-blue-400 text-base sm:text-lg lg:text-xl font-medium">
               Aprenda com quem já vendeu e continua vendendo todos os dias
             </p>
           </AnimatedSection>
