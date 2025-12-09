@@ -82,52 +82,58 @@ const SoudropElite = () => {
                 </div>
               </AnimatedSection>
               
-              {/* Subtitle line - smaller */}
+              {/* Headline - H1 */}
               <AnimatedSection delay={100}>
-                <p className="text-[11px] sm:text-sm lg:text-base text-gray-400 uppercase tracking-[0.15em] lg:tracking-[0.2em] font-medium">
-                  O método simples para vender online sem estoque
+                {/* Mobile headline */}
+                <h1 className="lg:hidden text-[1.5rem] sm:text-2xl font-black text-white leading-[1.15] tracking-tight">
+                  <span className="block">Venda sem estoque e faça</span>
+                  <span className="block">seus primeiros <span className="text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)]">R$ 10.000 por mês</span></span>
+                </h1>
+                {/* Desktop headline */}
+                <h1 className="hidden lg:block text-[2.8rem] xl:text-[3.2rem] font-black text-white leading-[1.1] tracking-tight">
+                  <span className="block">Venda sem estoque e faça</span>
+                  <span className="block">seus primeiros <span className="text-elite-gold drop-shadow-[0_0_30px_rgba(251,191,36,0.5)]">R$ 10.000 por mês</span></span>
+                </h1>
+              </AnimatedSection>
+              
+              {/* Subtitle */}
+              <AnimatedSection delay={150}>
+                <p className="text-[13px] sm:text-sm lg:text-lg text-gray-200 leading-relaxed lg:max-w-[90%] max-w-[320px] mx-auto lg:mx-0">
+                  Aprenda o método simples que até iniciantes usam para vender online sem investir em estoque e começar a construir uma renda recorrente com produtos físicos.
                 </p>
               </AnimatedSection>
               
-              {/* Headline - G4 Style: Short, bold, impactful */}
-              <AnimatedSection delay={150}>
-                {/* Mobile headline */}
-                <h1 className="lg:hidden text-[1.6rem] sm:text-3xl font-black text-white leading-[1.1] tracking-tight">
-                  <span className="block">Lucre mais de</span>
-                  <span className="block text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)]">R$100.000 por mês</span>
-                  <span className="block">sem investir em estoque</span>
-                </h1>
-                {/* Desktop headline */}
-                <h1 className="hidden lg:block text-[3rem] xl:text-[3.5rem] font-black text-white leading-[1.05] tracking-tight">
-                  <span className="block">Lucre mais de <span className="text-elite-gold drop-shadow-[0_0_30px_rgba(251,191,36,0.5)]">R$100.000 por mês</span></span>
-                  <span className="block">sem investir em estoque</span>
-                </h1>
-              </AnimatedSection>
-              
-              {/* Support paragraph */}
+              {/* Support line */}
               <AnimatedSection delay={200}>
-                <p className="text-[13px] lg:text-lg text-gray-300 leading-relaxed lg:max-w-[85%] max-w-[300px] mx-auto lg:mx-0">
-                  Mesmo começando do zero, vendendo produtos comuns e sem travar dinheiro em mercadoria.
+                <p className="text-[11px] sm:text-xs lg:text-sm text-gray-400 leading-relaxed lg:max-w-[85%] max-w-[300px] mx-auto lg:mx-0">
+                  Masterclass 100% online e gratuita para quem quer vender em marketplaces (Shopee, Mercado Livre, Magalu e outros) sem se enforcar em estoque e boletos.
                 </p>
               </AnimatedSection>
 
-              {/* Benefits - Only show on desktop */}
-              <AnimatedSection delay={300} className="hidden lg:block">
-                <div className="flex flex-row items-center gap-0 pt-2">
-                  <div className="flex items-center gap-2">
-                    <Package className="w-4 h-4 text-elite-gold" />
-                    <span className="text-sm text-white font-semibold">Sem comprar estoque</span>
-                  </div>
-                  <span className="text-gray-600 mx-4">|</span>
-                  <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-elite-gold" />
-                    <span className="text-sm text-white font-semibold">Passo a passo completo</span>
-                  </div>
-                  <span className="text-gray-600 mx-4">|</span>
-                  <div className="flex items-center gap-2">
-                    <Store className="w-4 h-4 text-elite-gold" />
-                    <span className="text-sm text-white font-semibold">Marketplaces e loja própria</span>
-                  </div>
+              {/* Benefits block */}
+              <AnimatedSection delay={250}>
+                <div className="pt-2 lg:pt-3">
+                  <p className="text-[12px] sm:text-sm lg:text-base text-elite-gold font-semibold mb-2 lg:mb-3">
+                    Nessa aula você vai aprender:
+                  </p>
+                  <ul className="space-y-1.5 lg:space-y-2 text-[11px] sm:text-xs lg:text-sm text-gray-300 lg:max-w-[90%]">
+                    <li className="flex items-start gap-2">
+                      <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
+                      <span>Como escolher produtos com alta demanda usando dados, e não só "achismo".</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
+                      <span>Como vender em marketplaces sem comprar estoque antecipado, usando operação de terceiros.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
+                      <span>O passo a passo pra estruturar fornecedor, frete, precificação e anúncios de um jeito simples.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
+                      <span>Um plano inicial pra caminhar rumo aos seus primeiros R$ 10.000 por mês.</span>
+                    </li>
+                  </ul>
                 </div>
               </AnimatedSection>
               
@@ -158,7 +164,7 @@ const SoudropElite = () => {
                     letterSpacing: "0.02em",
                     textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
                   }}>
-                      GARANTIR VAGA   <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
+                      QUERO PARTICIPAR DA MASTERCLASS E FAZER MEUS PRIMEIROS 10K/MÊS <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                     </button>
                   </div>
                   
