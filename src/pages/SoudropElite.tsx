@@ -97,7 +97,7 @@ const SoudropElite = () => {
               {/* Subtitle */}
               <AnimatedSection delay={150}>
                 <p className="text-[13px] sm:text-sm lg:text-lg text-gray-200 leading-relaxed lg:max-w-[90%] max-w-[320px] mx-auto lg:mx-0">
-                  Aprenda o método simples que até iniciantes usam para vender online sem investir em estoque e começar a construir uma renda recorrente com produtos físicos.
+                  Masterclass gratuita onde eu te mostro como vender produtos físicos em marketplaces sem investir em estoque.
                 </p>
               </AnimatedSection>
               
@@ -106,21 +106,20 @@ const SoudropElite = () => {
               <AnimatedSection delay={250}>
                 <div className="pt-2 lg:pt-3">
                   <p className="text-[12px] sm:text-sm lg:text-base text-elite-gold font-semibold mb-2 lg:mb-3">
-                    Nessa aula você vai aprender:
+                    Nessa aula você vai ver:
                   </p>
                   <ul className="space-y-1.5 lg:space-y-2 text-[11px] sm:text-xs lg:text-sm text-gray-300 lg:max-w-[90%]">
                     <li className="flex items-start gap-2">
                       <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>Como escolher produtos com alta demanda usando dados, e não só "achismo".</span>
-                    </li>
-                    
-                    <li className="flex items-start gap-2">
-                      <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>O passo a passo pra estruturar fornecedor, frete, precificação e anúncios de um jeito simples.</span>
+                      <span>Quais produtos escolher pra começar.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>Um plano inicial pra caminhar rumo aos seus primeiros R$ 10.000 por mês.</span>
+                      <span>Como vender em Shopee, Mercado Livre, Magalu etc. sem estoque próprio.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
+                      <span>Um plano simples pra chegar nos seus primeiros R$ 10.000 por mês.</span>
                     </li>
                   </ul>
                 </div>
