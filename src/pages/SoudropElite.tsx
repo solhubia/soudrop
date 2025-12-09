@@ -117,10 +117,7 @@ const SoudropElite = () => {
                       <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
                       <span>Como escolher produtos com alta demanda usando dados, e não só "achismo".</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>Como vender em marketplaces sem comprar estoque antecipado, usando operação de terceiros.</span>
-                    </li>
+                    
                     <li className="flex items-start gap-2">
                       <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
                       <span>O passo a passo pra estruturar fornecedor, frete, precificação e anúncios de um jeito simples.</span>
