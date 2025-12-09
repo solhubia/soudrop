@@ -50,7 +50,7 @@ const SoudropElite = () => {
       {/* Spacer for fixed banner */}
       <div className="h-[72px] sm:h-[56px]" />
       {/* Hero Section - Two Column Layout */}
-      <section className="relative z-10 w-full overflow-visible pb-4 lg:pb-0">
+      <section className="relative z-10 w-full overflow-visible">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" />
         
@@ -198,7 +198,7 @@ const SoudropElite = () => {
       </section>
 
       {/* O que é a aula */}
-      <section className="relative z-0 pt-8 pb-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-black to-[#050A00]">
+      <section className="relative z-0 pt-0 pb-12 sm:pt-0 sm:pb-16 lg:pt-0 lg:pb-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-black to-[#050A00]">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
