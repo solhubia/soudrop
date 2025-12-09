@@ -4,9 +4,7 @@ import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CountdownBanner } from "@/components/CountdownBanner";
-
 const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
-
 const SoudropElite = () => {
   useEffect(() => {
     const embedScript = document.createElement('script');
@@ -105,9 +103,7 @@ const SoudropElite = () => {
               
               {/* Support line */}
               <AnimatedSection delay={200}>
-                <p className="text-[11px] sm:text-xs lg:text-sm text-gray-400 leading-relaxed lg:max-w-[85%] max-w-[300px] mx-auto lg:mx-0">
-                  Masterclass 100% online e gratuita para quem quer vender em marketplaces (Shopee, Mercado Livre, Magalu e outros) sem se enforcar em estoque e boletos.
-                </p>
+                
               </AnimatedSection>
 
               {/* Benefits block */}
