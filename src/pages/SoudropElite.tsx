@@ -101,10 +101,6 @@ const SoudropElite = () => {
                 </p>
               </AnimatedSection>
               
-              {/* Support line */}
-              <AnimatedSection delay={200}>
-                
-              </AnimatedSection>
 
               {/* Benefits block */}
               <AnimatedSection delay={250}>
@@ -157,7 +153,7 @@ const SoudropElite = () => {
                     letterSpacing: "0.02em",
                     textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
                   }}>
-                      QUERO PARTICIPAR DA MASTERCLASS E FAZER MEUS PRIMEIROS 10K/MÊS <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
+                      ACESSE AGORA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                     </button>
                   </div>
                   
