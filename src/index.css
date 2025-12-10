@@ -317,6 +317,24 @@
   }
 }
 
+/* Ocultar o timer do topo */
+.countdown-timer-hidden {
+  display: none !important;
+}
+
+/* Hero section SouDrop Elite - aproximar do topo */
+.hero-soudrop-elite {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .hero-soudrop-elite {
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+}
+
 /* Wrapper da imagem do Renan */
 .renan-image-wrapper {
   position: relative;
@@ -333,10 +351,8 @@
     transform: translateY(-40px);
   }
 
-  /* reduzir o espaço entre o formulário e a imagem */
-  .hero-section-soudrop-elite {
-    padding-bottom: 0;
-    margin-bottom: 0;
+  .hero-soudrop-elite .renan-image-wrapper {
+    margin-top: 16px;
   }
 }
 
