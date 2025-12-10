@@ -100,9 +100,7 @@ const SoudropElite = () => {
                   
                   
                   {/* Microtext below form */}
-                  <p className="text-[10px] sm:text-xs text-gray-500 text-center">
-                    Você vai receber o link do evento no seu e-mail e WhatsApp.
-                  </p>
+                  
                 </div>
               </AnimatedSection>
             </div>
