@@ -59,15 +59,12 @@ const SoudropElite = () => {
       <div className="h-[72px] sm:h-[56px]" />
       
       {/* Hero Section - VENDE-C PRO Style */}
-      <section className="relative z-10 w-full overflow-hidden min-h-[calc(100vh-72px)] lg:min-h-[calc(100vh-56px)] flex items-center pb-0">
+      <section className="relative z-10 w-full overflow-hidden min-h-[calc(100vh-72px)] lg:min-h-[calc(100vh-56px)] flex items-center">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" />
         
         {/* Subtle radial glow from top-right (gold) */}
         <div className="absolute top-0 right-0 w-[70%] h-[80%] bg-gradient-radial from-elite-gold/8 via-transparent to-transparent" />
-        
-        {/* Bottom fade gradient for smooth transition */}
-        <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-t from-[#050A00] via-[#050A00]/60 to-transparent z-[5] pointer-events-none" />
         
         {/* Content container */}
         <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 py-8 lg:py-0">
@@ -133,7 +130,7 @@ const SoudropElite = () => {
       
 
       {/* O que é a aula */}
-      <section className="relative z-20 pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
+      <section className="relative z-20 pt-10 pb-12 sm:pt-10 sm:pb-16 lg:pt-16 lg:pb-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
