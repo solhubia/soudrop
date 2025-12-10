@@ -54,12 +54,13 @@ const SoudropElite = () => {
   const paraQuemE = ["Trabalha registrado ou como autônomo e quer montar uma renda extra pela internet.", "Já pensou em vender na Shopee, Mercado Livre ou Magalu, mas não sabe por onde começar.", "Não tem dinheiro pra comprar estoque e tem medo de ficar com produto parado.", "Quer trabalhar de casa, usando apenas celular ou computador.", "Está disposto a aprender algo novo e aplicar ainda esse mês."];
   const bulletPoints = ["Como escolher produtos simples que têm demanda real e não ficam encalhados.", "Como anunciar nos marketplaces mesmo sem ter experiência com tráfego hoje.", "O passo a passo do modelo sem estoque que usamos todos os dias na SouDrop."];
   return <div className="min-h-screen bg-black overflow-x-hidden">
-      <CountdownBanner offerName="inscrições para essa aula gratuita" endDate={OFFER_END_DATE} variant="gold" />
-      {/* Spacer for fixed banner */}
-      <div className="h-[72px] sm:h-[56px]" />
+      {/* Timer ocultado via CSS */}
+      <div className="countdown-timer-hidden">
+        <CountdownBanner offerName="inscrições para essa aula gratuita" endDate={OFFER_END_DATE} variant="gold" />
+      </div>
       
       {/* Hero Section - VENDE-C PRO Style */}
-      <section className="hero-section-soudrop-elite relative z-10 w-full overflow-hidden pb-0">
+      <section className="hero-soudrop-elite relative z-10 w-full overflow-hidden pb-0">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" />
         
