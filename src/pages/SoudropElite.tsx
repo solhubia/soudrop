@@ -1,33 +1,24 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight, Package, Store, Phone } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight } from "lucide-react";
+import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CountdownBanner } from "@/components/CountdownBanner";
-import { Input } from "@/components/ui/input";
-const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
-const SoudropElite = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    whatsapp: ''
-  });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
+
+const SoudropElite = () => {
   useEffect(() => {
-    const embedScript = document.createElement('script');
-    embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
-    embedScript.async = true;
-    document.body.appendChild(embedScript);
-    return () => {
-      if (document.body.contains(embedScript)) {
-        document.body.removeChild(embedScript);
-      }
-    };
+    // Load WebinarJam embed script
+    const existingScript = document.querySelector('script[src*="webinarjam.com/register/8wgw0kty/embed-form"]');
+    if (!existingScript) {
+      const embedScript = document.createElement('script');
+      embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=INSCREVA-SE+GRATIS&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23e4ff0f&formBgOpacity=1';
+      embedScript.async = true;
+      document.body.appendChild(embedScript);
+    }
   }, []);
+
   const pilares = [{
     icon: TrendingUp,
     title: "Produtos simples que vendem todo dia: como encontrar e validar",
@@ -53,11 +44,20 @@ const SoudropElite = () => {
     title: "Plano de ação, suporte e comunidade pra você não caminhar sozinho",
     description: "Você sai da MasterClass com um passo a passo claro para aplicar o que aprendeu e acesso a materiais de apoio para não caminhar sozinho."
   }];
+
   const paraQuemE = ["Trabalha registrado ou como autônomo e quer montar uma renda extra pela internet.", "Já pensou em vender na Shopee, Mercado Livre ou Magalu, mas não sabe por onde começar.", "Não tem dinheiro pra comprar estoque e tem medo de ficar com produto parado.", "Quer trabalhar de casa, usando apenas celular ou computador.", "Está disposto a aprender algo novo e aplicar ainda esse mês."];
+
+  const bulletPoints = [
+    "Como escolher produtos simples que têm demanda real e não ficam encalhados.",
+    "Como anunciar nos marketplaces mesmo sem ter experiência com tráfego hoje.",
+    "O passo a passo do modelo sem estoque que usamos todos os dias na SouDrop."
+  ];
+
   return <div className="min-h-screen bg-black overflow-x-hidden">
       <CountdownBanner offerName="inscrições para essa aula gratuita" endDate={OFFER_END_DATE} variant="gold" />
       {/* Spacer for fixed banner */}
       <div className="h-[72px] sm:h-[56px]" />
+      
       {/* Hero Section - Two Column Layout */}
       <section className="relative z-10 w-full overflow-hidden min-h-[100vh] lg:min-h-0">
         {/* Dark gradient background */}
@@ -73,15 +73,15 @@ const SoudropElite = () => {
         <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-10 sm:pt-16 lg:pt-20 pb-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end">
             
-            {/* LEFT COLUMN - Text Content + Form */}
+            {/* LEFT COLUMN - Text Content + WebinarJam Form */}
             <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-5 pt-4 lg:pt-0 lg:pb-8">
               
-              {/* Event Tag with decorative line */}
+              {/* Event Tag */}
               <AnimatedSection delay={0}>
                 <div className="space-y-2 lg:space-y-3">
                   <span className="inline-flex items-center gap-2 text-elite-gold text-[9px] sm:text-xs lg:text-sm font-semibold tracking-[0.12em] lg:tracking-[0.2em] uppercase">
                     <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-                    MÉTODO SEM ESTOQUE · AULA AO VIVO
+                    MÉTODO SEM ESTOQUE · EVENTO AO VIVO GRATUITO
                   </span>
                   {/* Decorative line */}
                   <div className="flex items-center gap-3 lg:max-w-[280px] justify-center lg:justify-start">
@@ -105,108 +105,20 @@ const SoudropElite = () => {
                 </h1>
               </AnimatedSection>
               
-              {/* Subtitle */}
-              <AnimatedSection delay={150}>
-                <p className="text-[12px] sm:text-sm lg:text-base text-gray-200 leading-relaxed lg:max-w-[95%] max-w-[320px] mx-auto lg:mx-0">
-                  Aula 100% online e gratuita onde eu te mostro, passo a passo, como vender produtos físicos na Shopee, Mercado Livre, Magalu e outros, mesmo começando do zero e sem investir em estoque.
-                </p>
-                <p className="text-[10px] sm:text-xs lg:text-sm text-elite-gold/80 mt-2 lg:mt-3">
-                  Data: 15/12/2025 · Horário: 20h (Brasília) · Ao vivo, com vagas limitadas
-                </p>
-              </AnimatedSection>
-
-              {/* Benefits block */}
-              <AnimatedSection delay={250}>
-                <div className="pt-1 lg:pt-2">
-                  <p className="text-[11px] sm:text-sm lg:text-sm text-elite-gold font-semibold mb-2 lg:mb-2">
-                    Nessa aula você vai ver:
-                  </p>
-                  <ul className="space-y-1 lg:space-y-1.5 text-[10px] sm:text-xs lg:text-sm text-gray-300 lg:max-w-[95%]">
-                    <li className="flex items-start gap-2">
-                      <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>Como escolher produtos simples que têm demanda real e não ficam encalhados.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>Como anunciar nos marketplaces mesmo sem ter experiência com tráfego hoje.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>O passo a passo do modelo sem estoque que usamos todos os dias na SouDrop.</span>
-                    </li>
-                  </ul>
-                </div>
-              </AnimatedSection>
-              
-              {/* Capture Form */}
-              <AnimatedSection delay={350}>
-                <div className="pt-3 lg:pt-4 max-w-[400px] mx-auto lg:mx-0">
-                  <div className="space-y-3">
-                    <Input
-                      type="text"
-                      name="name"
-                      placeholder="Seu nome"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full bg-white text-black placeholder:text-gray-500 border-0 rounded-lg h-12 lg:h-14 text-sm lg:text-base px-4 focus:ring-2 focus:ring-elite-gold"
-                    />
-                    <Input
-                      type="email"
-                      name="email"
-                      placeholder="Seu melhor e-mail"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full bg-white text-black placeholder:text-gray-500 border-0 rounded-lg h-12 lg:h-14 text-sm lg:text-base px-4 focus:ring-2 focus:ring-elite-gold"
-                    />
-                    <div className="relative">
-                      <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-gray-500 text-sm">
-                        <span className="text-lg">🇧🇷</span>
-                        <span>+55</span>
-                      </div>
-                      <Input
-                        type="tel"
-                        name="whatsapp"
-                        placeholder="11 99999-9999"
-                        value={formData.whatsapp}
-                        onChange={handleInputChange}
-                        className="w-full bg-white text-black placeholder:text-gray-500 border-0 rounded-lg h-12 lg:h-14 text-sm lg:text-base pl-[90px] pr-4 focus:ring-2 focus:ring-elite-gold"
-                      />
-                    </div>
-                    
-                    <div className="relative pt-1">
-                      {/* Glow ring animation */}
-                      <div className="absolute -inset-1 bg-gradient-to-r from-green-500 via-green-400 to-green-500 rounded-lg opacity-60 blur-md animate-pulse" />
-                      <button 
-                        type="button" 
-                        className="wj-embed-button w-full group relative" 
-                        data-webinarHash="8wgw0kty" 
-                        style={{
-                          border: "none",
-                          background: "linear-gradient(135deg, hsl(142, 76%, 45%) 0%, hsl(142, 76%, 40%) 50%, hsl(142, 76%, 35%) 100%)",
-                          color: "rgb(255, 255, 255)",
-                          fontSize: "14px",
-                          padding: "16px 24px",
-                          boxShadow: "0 0 40px rgba(34, 197, 94, 0.4), 0 8px 30px rgba(0, 0, 0, 0.4)",
-                          borderRadius: "8px",
-                          whiteSpace: "normal",
-                          fontWeight: "700",
-                          lineHeight: "1.4",
-                          cursor: "pointer",
-                          fontFamily: "system-ui, -apple-system, sans-serif",
-                          wordBreak: "break-word",
-                          transition: "all 0.3s ease",
-                          letterSpacing: "0.02em",
-                          textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
-                        }}
-                      >
-                        QUERO PARTICIPAR DA AULA GRATUITA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
-                      </button>
-                    </div>
-                  </div>
+              {/* WebinarJam Embed Form */}
+              <AnimatedSection delay={200}>
+                <div className="pt-2 lg:pt-4 max-w-[420px] mx-auto lg:mx-0">
+                  <div 
+                    className="wj-embed-wrapper" 
+                    data-webinar-hash="8wgw0kty"
+                    dangerouslySetInnerHTML={{
+                      __html: `<script src="https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=INSCREVA-SE+GRATIS&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23e4ff0f&formBgOpacity=1"></script>`
+                    }}
+                  />
                   
-                  {/* Urgency text */}
-                  <p className="text-[10px] sm:text-xs lg:text-xs text-gray-400 mt-3 text-center lg:text-left">
-                    Você receberá o link da aula no seu e-mail e WhatsApp.
+                  {/* Microtext below form */}
+                  <p className="text-[10px] sm:text-xs lg:text-sm text-gray-400 mt-3 text-center lg:text-left">
+                    Você vai receber o link do evento no seu e-mail e WhatsApp.
                   </p>
                 </div>
               </AnimatedSection>
@@ -237,8 +149,27 @@ const SoudropElite = () => {
         </div>
       </section>
 
+      {/* O que você vai ver neste evento - NEW SECTION */}
+      <section className="relative z-20 pt-10 pb-12 sm:pt-12 sm:pb-16 lg:pt-16 lg:pb-20 px-5 sm:px-6 md:px-4 bg-black">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 text-center text-white">
+              O que você vai ver <span className="text-elite-gold">neste evento</span>
+            </h2>
+            <ul className="space-y-3 sm:space-y-4 max-w-2xl mx-auto">
+              {bulletPoints.map((bullet, index) => (
+                <li key={index} className="flex items-start gap-3 sm:gap-4">
+                  <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-200 text-sm sm:text-base lg:text-lg">{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* O que é a aula */}
-      <section className="relative z-20 pt-10 pb-12 sm:pt-10 sm:pb-16 lg:pt-20 lg:pb-20 px-5 sm:px-6 md:px-4 bg-black">
+      <section className="relative z-20 pt-10 pb-12 sm:pt-10 sm:pb-16 lg:pt-16 lg:pb-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
