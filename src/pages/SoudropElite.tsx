@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CountdownBanner } from "@/components/CountdownBanner";
@@ -8,14 +8,26 @@ import { CountdownBanner } from "@/components/CountdownBanner";
 const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
 
 const SoudropElite = () => {
+  const formContainerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Load WebinarJam embed script
-    const existingScript = document.querySelector('script[src*="webinarjam.com/register/8wgw0kty/embed-form"]');
-    if (!existingScript) {
-      const embedScript = document.createElement('script');
-      embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=INSCREVA-SE+GRATIS&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23e4ff0f&formBgOpacity=1';
-      embedScript.async = true;
-      document.body.appendChild(embedScript);
+    // Inject WebinarJam script into the container
+    if (formContainerRef.current) {
+      // Clear any existing content
+      formContainerRef.current.innerHTML = '';
+      
+      // Create wrapper div
+      const wrapper = document.createElement('div');
+      wrapper.className = 'wj-embed-wrapper';
+      wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
+      
+      // Create and append script
+      const script = document.createElement('script');
+      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=INSCREVA-SE+GRATIS&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23e4ff0f&formBgOpacity=1';
+      script.async = true;
+      
+      wrapper.appendChild(script);
+      formContainerRef.current.appendChild(wrapper);
     }
   }, []);
 
@@ -108,13 +120,8 @@ const SoudropElite = () => {
               {/* WebinarJam Embed Form */}
               <AnimatedSection delay={200}>
                 <div className="pt-2 lg:pt-4 max-w-[420px] mx-auto lg:mx-0">
-                  <div 
-                    className="wj-embed-wrapper" 
-                    data-webinar-hash="8wgw0kty"
-                    dangerouslySetInnerHTML={{
-                      __html: `<script src="https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=INSCREVA-SE+GRATIS&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23e4ff0f&formBgOpacity=1"></script>`
-                    }}
-                  />
+                  {/* Container for WebinarJam form - script injected via useEffect */}
+                  <div ref={formContainerRef} className="min-h-[200px]" />
                   
                   {/* Microtext below form */}
                   <p className="text-[10px] sm:text-xs lg:text-sm text-gray-400 mt-3 text-center lg:text-left">
