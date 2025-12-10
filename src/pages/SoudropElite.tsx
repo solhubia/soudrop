@@ -1,11 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight, Package, Store } from "lucide-react";
-import { useEffect } from "react";
+import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight, Package, Store, Phone } from "lucide-react";
+import { useEffect, useState } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CountdownBanner } from "@/components/CountdownBanner";
+import { Input } from "@/components/ui/input";
 const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
 const SoudropElite = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    whatsapp: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
   useEffect(() => {
     const embedScript = document.createElement('script');
     embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
@@ -48,7 +59,7 @@ const SoudropElite = () => {
       {/* Spacer for fixed banner */}
       <div className="h-[72px] sm:h-[56px]" />
       {/* Hero Section - Two Column Layout */}
-      <section className="relative z-10 w-full overflow-hidden">
+      <section className="relative z-10 w-full overflow-hidden min-h-[100vh] lg:min-h-0">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" />
         
@@ -59,11 +70,11 @@ const SoudropElite = () => {
         <div className="hidden lg:block absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-elite-gold/5 blur-[120px]" />
         
         {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-16 sm:pt-20 lg:pt-24 pb-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-end">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-10 sm:pt-16 lg:pt-20 pb-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end">
             
-            {/* LEFT COLUMN - Text Content */}
-            <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-6 pt-6 lg:pt-0">
+            {/* LEFT COLUMN - Text Content + Form */}
+            <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-5 pt-4 lg:pt-0 lg:pb-8">
               
               {/* Event Tag with decorative line */}
               <AnimatedSection delay={0}>
@@ -83,12 +94,12 @@ const SoudropElite = () => {
               {/* Headline - H1 */}
               <AnimatedSection delay={100}>
                 {/* Mobile headline */}
-                <h1 className="lg:hidden text-[1.5rem] sm:text-2xl font-black text-white leading-[1.15] tracking-tight">
+                <h1 className="lg:hidden text-[1.4rem] sm:text-2xl font-black text-white leading-[1.15] tracking-tight">
                   <span className="block">Comece a vender em marketplaces</span>
                   <span className="block">sem estoque e busque seus primeiros <span className="text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)]">R$ 10.000 por mês</span></span>
                 </h1>
                 {/* Desktop headline */}
-                <h1 className="hidden lg:block text-[2.8rem] xl:text-[3.2rem] font-black text-white leading-[1.1] tracking-tight">
+                <h1 className="hidden lg:block text-[2.4rem] xl:text-[2.8rem] font-black text-white leading-[1.1] tracking-tight">
                   <span className="block">Comece a vender em marketplaces</span>
                   <span className="block">sem estoque e busque seus primeiros <span className="text-elite-gold drop-shadow-[0_0_30px_rgba(251,191,36,0.5)]">R$ 10.000 por mês</span></span>
                 </h1>
@@ -96,22 +107,21 @@ const SoudropElite = () => {
               
               {/* Subtitle */}
               <AnimatedSection delay={150}>
-                <p className="text-[13px] sm:text-sm lg:text-lg text-gray-200 leading-relaxed lg:max-w-[90%] max-w-[320px] mx-auto lg:mx-0">
+                <p className="text-[12px] sm:text-sm lg:text-base text-gray-200 leading-relaxed lg:max-w-[95%] max-w-[320px] mx-auto lg:mx-0">
                   Aula 100% online e gratuita onde eu te mostro, passo a passo, como vender produtos físicos na Shopee, Mercado Livre, Magalu e outros, mesmo começando do zero e sem investir em estoque.
                 </p>
-                <p className="text-[11px] sm:text-xs lg:text-sm text-elite-gold/80 mt-2 lg:mt-3">
+                <p className="text-[10px] sm:text-xs lg:text-sm text-elite-gold/80 mt-2 lg:mt-3">
                   Data: 15/12/2025 · Horário: 20h (Brasília) · Ao vivo, com vagas limitadas
                 </p>
               </AnimatedSection>
-              
 
               {/* Benefits block */}
               <AnimatedSection delay={250}>
-                <div className="pt-2 lg:pt-3">
-                  <p className="text-[12px] sm:text-sm lg:text-base text-elite-gold font-semibold mb-2 lg:mb-3">
+                <div className="pt-1 lg:pt-2">
+                  <p className="text-[11px] sm:text-sm lg:text-sm text-elite-gold font-semibold mb-2 lg:mb-2">
                     Nessa aula você vai ver:
                   </p>
-                  <ul className="space-y-1.5 lg:space-y-2 text-[11px] sm:text-xs lg:text-sm text-gray-300 lg:max-w-[90%]">
+                  <ul className="space-y-1 lg:space-y-1.5 text-[10px] sm:text-xs lg:text-sm text-gray-300 lg:max-w-[95%]">
                     <li className="flex items-start gap-2">
                       <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
                       <span>Como escolher produtos simples que têm demanda real e não ficam encalhados.</span>
@@ -128,58 +138,98 @@ const SoudropElite = () => {
                 </div>
               </AnimatedSection>
               
-              {/* CTA Button */}
-              <AnimatedSection delay={400}>
-                <div className="pt-2 lg:pt-4 flex flex-col items-center lg:items-start">
-                  <div className="relative">
-                    {/* Glow ring animation */}
-                    <div className="absolute -inset-1 bg-gradient-to-r from-green-500 via-green-400 to-green-500 rounded-full opacity-75 blur-lg animate-pulse" />
-                    <div className="absolute -inset-2 bg-green-500/30 rounded-full animate-ping" style={{
-                    animationDuration: '2s'
-                  }} />
-                    <button type="button" className="wj-embed-button w-full sm:w-auto group relative" data-webinarHash="8wgw0kty" style={{
-                    border: "none",
-                    background: "linear-gradient(135deg, hsl(142, 76%, 45%) 0%, hsl(142, 76%, 40%) 50%, hsl(142, 76%, 35%) 100%)",
-                    color: "rgb(255, 255, 255)",
-                    fontSize: "14px",
-                    padding: "16px 36px",
-                    boxShadow: "0 0 60px rgba(34, 197, 94, 0.5), 0 0 100px rgba(34, 197, 94, 0.3), 0 8px 30px rgba(0, 0, 0, 0.4)",
-                    borderRadius: "50px",
-                    whiteSpace: "normal",
-                    fontWeight: "700",
-                    lineHeight: "1.4",
-                    cursor: "pointer",
-                    fontFamily: "system-ui, -apple-system, sans-serif",
-                    wordBreak: "break-word",
-                    transition: "all 0.3s ease",
-                    letterSpacing: "0.02em",
-                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
-                  }}>
-                      QUERO PARTICIPAR DA AULA GRATUITA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
-                    </button>
+              {/* Capture Form */}
+              <AnimatedSection delay={350}>
+                <div className="pt-3 lg:pt-4 max-w-[400px] mx-auto lg:mx-0">
+                  <div className="space-y-3">
+                    <Input
+                      type="text"
+                      name="name"
+                      placeholder="Seu nome"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full bg-white text-black placeholder:text-gray-500 border-0 rounded-lg h-12 lg:h-14 text-sm lg:text-base px-4 focus:ring-2 focus:ring-elite-gold"
+                    />
+                    <Input
+                      type="email"
+                      name="email"
+                      placeholder="Seu melhor e-mail"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full bg-white text-black placeholder:text-gray-500 border-0 rounded-lg h-12 lg:h-14 text-sm lg:text-base px-4 focus:ring-2 focus:ring-elite-gold"
+                    />
+                    <div className="relative">
+                      <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-gray-500 text-sm">
+                        <span className="text-lg">🇧🇷</span>
+                        <span>+55</span>
+                      </div>
+                      <Input
+                        type="tel"
+                        name="whatsapp"
+                        placeholder="11 99999-9999"
+                        value={formData.whatsapp}
+                        onChange={handleInputChange}
+                        className="w-full bg-white text-black placeholder:text-gray-500 border-0 rounded-lg h-12 lg:h-14 text-sm lg:text-base pl-[90px] pr-4 focus:ring-2 focus:ring-elite-gold"
+                      />
+                    </div>
+                    
+                    <div className="relative pt-1">
+                      {/* Glow ring animation */}
+                      <div className="absolute -inset-1 bg-gradient-to-r from-green-500 via-green-400 to-green-500 rounded-lg opacity-60 blur-md animate-pulse" />
+                      <button 
+                        type="button" 
+                        className="wj-embed-button w-full group relative" 
+                        data-webinarHash="8wgw0kty" 
+                        style={{
+                          border: "none",
+                          background: "linear-gradient(135deg, hsl(142, 76%, 45%) 0%, hsl(142, 76%, 40%) 50%, hsl(142, 76%, 35%) 100%)",
+                          color: "rgb(255, 255, 255)",
+                          fontSize: "14px",
+                          padding: "16px 24px",
+                          boxShadow: "0 0 40px rgba(34, 197, 94, 0.4), 0 8px 30px rgba(0, 0, 0, 0.4)",
+                          borderRadius: "8px",
+                          whiteSpace: "normal",
+                          fontWeight: "700",
+                          lineHeight: "1.4",
+                          cursor: "pointer",
+                          fontFamily: "system-ui, -apple-system, sans-serif",
+                          wordBreak: "break-word",
+                          transition: "all 0.3s ease",
+                          letterSpacing: "0.02em",
+                          textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
+                        }}
+                      >
+                        QUERO PARTICIPAR DA AULA GRATUITA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
+                      </button>
+                    </div>
                   </div>
                   
                   {/* Urgency text */}
-                  <p className="text-[11px] sm:text-xs lg:text-sm text-gray-400 mt-3 lg:mt-4 text-center lg:text-left max-w-[320px] lg:max-w-none mx-auto lg:mx-0">
-                    Você será direcionado para a página de inscrição e recebe o link da aula no seu e-mail e WhatsApp.
+                  <p className="text-[10px] sm:text-xs lg:text-xs text-gray-400 mt-3 text-center lg:text-left">
+                    Você receberá o link da aula no seu e-mail e WhatsApp.
                   </p>
                 </div>
               </AnimatedSection>
             </div>
 
             {/* RIGHT COLUMN - Photo */}
-            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-end relative mt-6 mb-0 lg:mt-0 lg:self-end">
+            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-end relative mt-4 mb-0 lg:mt-0 lg:self-end">
               <AnimatedSection delay={100} className="relative">
                 {/* Strong gold glow behind photo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   {/* Main glow */}
-                  <div className="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-elite-gold/30 rounded-full blur-[100px] lg:blur-[120px]" />
+                  <div className="absolute w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[480px] lg:h-[480px] bg-elite-gold/30 rounded-full blur-[100px] lg:blur-[120px]" />
                   {/* Secondary glow for depth */}
-                  <div className="absolute w-[200px] h-[250px] sm:w-[280px] sm:h-[350px] lg:w-[350px] lg:h-[450px] bg-yellow-500/25 rounded-full blur-[80px] lg:blur-[100px]" />
+                  <div className="absolute w-[180px] h-[230px] sm:w-[260px] sm:h-[330px] lg:w-[320px] lg:h-[420px] bg-yellow-500/25 rounded-full blur-[80px] lg:blur-[100px]" />
                 </div>
                 
                 {/* Photo */}
-                <img alt="Renan Ferreira - Especialista em Vendas Online" className="block relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" loading="eager" />
+                <img 
+                  alt="Renan Ferreira - Especialista em Vendas Online" 
+                  className="block relative z-10 w-[220px] sm:w-[280px] lg:w-[440px] xl:w-[500px] h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]" 
+                  src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" 
+                  loading="eager" 
+                />
               </AnimatedSection>
             </div>
             
