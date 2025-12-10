@@ -318,52 +318,56 @@
 }
 
 /* ========== SOUDROP ELITE HERO ========== */
+
+/* Mobile first - layout padrão (até 1023px) */
 .hero-soudrop-elite {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding-top: 60px;
-  padding-bottom: 0;
   position: relative;
+  min-height: auto;
+}
+
+.hero-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 0;
 }
 
 .hero-left {
-  max-width: 520px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-card-desktop {
+  /* No mobile, sem estilo de card */
 }
 
 .hero-form-wrapper {
-  margin-top: 24px;
+  margin-top: 16px;
+  margin-bottom: 8px;
 }
 
 .hero-right {
+  width: 100%;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
+  margin-top: 8px;
+}
+
+.renan-hero-wrapper {
+  margin-bottom: -8px;
 }
 
 .renan-hero-wrapper img {
-  max-height: 620px;
+  max-height: 420px;
+  max-width: 360px;
   width: auto;
-  max-width: 580px;
+  margin: 0 auto;
   object-fit: contain;
   display: block;
 }
 
-/* Sombra para integrar com a próxima seção */
-.hero-soudrop-elite::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -24px;
-  height: 48px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8), #050A00);
-  pointer-events: none;
-  z-index: 5;
-}
-
-/* Segunda dobra - sem espaço grande no topo */
+/* Segunda dobra */
 .second-section-soudrop {
   padding-top: 16px;
   padding-bottom: 48px;
@@ -377,41 +381,82 @@
   }
 }
 
+/* ========== DESKTOP (1024px+) ========== */
 @media (min-width: 1024px) {
+  .hero-soudrop-elite {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: calc(100vh - 80px);
+  }
+
+  .hero-left {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .hero-card-desktop {
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+  }
+
+  .hero-form-wrapper {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  .hero-right {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 0;
+    height: 100%;
+  }
+
+  .renan-hero-wrapper {
+    margin-bottom: 0;
+  }
+
+  .renan-hero-wrapper img {
+    max-height: 580px;
+    max-width: 520px;
+    width: auto;
+  }
+
   .second-section-soudrop {
     padding-top: 32px;
     padding-bottom: 80px;
   }
 }
 
-/* Mobile layout */
-@media (max-width: 768px) {
-  .hero-soudrop-elite {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 0;
+/* XL screens */
+@media (min-width: 1280px) {
+  .hero-left {
+    max-width: 520px;
   }
 
-  .hero-left,
-  .hero-right {
-    max-width: 100%;
-  }
-
-  .hero-form-wrapper {
-    margin-top: 16px;
-    margin-bottom: 8px;
-  }
-
-  .renan-hero-wrapper {
-    margin-top: 8px;
-    margin-bottom: -8px;
+  .hero-card-desktop {
+    padding: 40px;
   }
 
   .renan-hero-wrapper img {
-    max-height: 420px;
-    max-width: 360px;
-    margin: 0 auto;
+    max-height: 640px;
+    max-width: 580px;
   }
 }
 
