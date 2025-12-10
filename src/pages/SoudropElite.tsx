@@ -1,10 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight, Package, Store } from "lucide-react";
+import { useEffect } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CountdownBanner } from "@/components/CountdownBanner";
 const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
 const SoudropElite = () => {
+  useEffect(() => {
+    const embedScript = document.createElement('script');
+    embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=Register&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=2&formColor=4';
+    embedScript.async = true;
+    document.body.appendChild(embedScript);
+    return () => {
+      if (document.body.contains(embedScript)) {
+        document.body.removeChild(embedScript);
+      }
+    };
+  }, []);
   const pilares = [{
     icon: TrendingUp,
     title: "Como encontrar produtos simples que vendem todo dia",
