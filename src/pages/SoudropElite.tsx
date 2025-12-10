@@ -7,9 +7,8 @@ import { CountdownBanner } from "@/components/CountdownBanner";
 const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
 const SoudropElite = () => {
   useEffect(() => {
-    // Load WebinarJam embed button script
     const embedScript = document.createElement('script');
-    embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=4&buttonText=QUERO%20ME%20INSCREVER';
+    embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
     embedScript.async = true;
     document.body.appendChild(embedScript);
     return () => {
@@ -154,33 +153,6 @@ const SoudropElite = () => {
                     textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
                   }}>
                       ACESSE AGORA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
-                    </button>
-                  </div>
-                  
-                  {/* WebinarJam embed button */}
-                  <div style={{ textAlign: 'center', marginTop: '16px' }}>
-                    <button 
-                      type="button" 
-                      className="wj-embed-button" 
-                      data-webinarHash="8wgw0kty" 
-                      style={{
-                        border: '2px solid rgba(0, 0, 0, 0.5)',
-                        background: 'rgba(240, 255, 56, 0.95)',
-                        color: 'rgb(255, 255, 255)',
-                        fontSize: '24px',
-                        padding: '18px 80px',
-                        boxShadow: 'none',
-                        borderRadius: '100px',
-                        whiteSpace: 'normal',
-                        fontWeight: 700,
-                        lineHeight: 1.3,
-                        cursor: 'pointer',
-                        fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
-                        wordBreak: 'break-word',
-                        margin: 'auto'
-                      }}
-                    >
-                      QUERO ME INSCREVER
                     </button>
                   </div>
                   
