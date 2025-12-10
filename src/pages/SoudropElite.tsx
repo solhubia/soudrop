@@ -152,7 +152,7 @@ const SoudropElite = () => {
                     letterSpacing: "0.02em",
                     textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
                   }}>
-                      ACESSE AGORA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
+                      ​GARANTA A SUA VAGA EXCLUSIVA           <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                     </button>
                   </div>
                   
