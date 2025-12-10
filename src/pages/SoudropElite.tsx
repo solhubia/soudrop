@@ -8,7 +8,7 @@ const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
 const SoudropElite = () => {
   useEffect(() => {
     const embedScript = document.createElement('script');
-    embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
+    embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=Register&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=2&formColor=4';
     embedScript.async = true;
     document.body.appendChild(embedScript);
     return () => {
