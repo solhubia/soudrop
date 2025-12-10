@@ -317,3 +317,21 @@
   }
 }
 
+/* Ajuste da posição da imagem do Renan no desktop */
+.hero-image-renan {
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .hero-image-renan img {
+    transform: translateY(-40px);
+  }
+}
+
+/* No mobile mantém quase igual, só um leve ajuste opcional */
+@media (max-width: 1023px) {
+  .hero-image-renan img {
+    transform: translateY(-10px);
+  }
+}
+
