@@ -317,33 +317,101 @@
   }
 }
 
-/* Wrapper da imagem do Renan */
-.renan-image-wrapper {
+/* ========== SOUDROP ELITE HERO ========== */
+.hero-soudrop-elite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 0;
   position: relative;
 }
 
-/* Ajuste específico para mobile */
-@media (max-width: 768px) {
-  /* subir a imagem do Renan */
-  .renan-image-wrapper img {
-    display: block;
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-    transform: translateY(-40px);
-  }
+.hero-left {
+  max-width: 520px;
+}
 
-  /* reduzir o espaço entre o formulário e a imagem */
-  .hero-section-soudrop-elite {
-    padding-bottom: 0;
-    margin-bottom: 0;
+.hero-form-wrapper {
+  margin-top: 24px;
+}
+
+.hero-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.renan-hero-wrapper img {
+  max-height: 620px;
+  width: auto;
+  max-width: 580px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Sombra para integrar com a próxima seção */
+.hero-soudrop-elite::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -24px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), #050A00);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Segunda dobra - sem espaço grande no topo */
+.second-section-soudrop {
+  padding-top: 16px;
+  padding-bottom: 48px;
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .second-section-soudrop {
+    padding-top: 24px;
+    padding-bottom: 64px;
   }
 }
 
-/* Desktop mantém posição ajustada */
 @media (min-width: 1024px) {
-  .renan-image-wrapper img {
-    transform: translateY(-40px);
+  .second-section-soudrop {
+    padding-top: 32px;
+    padding-bottom: 80px;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .hero-soudrop-elite {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 0;
+  }
+
+  .hero-left,
+  .hero-right {
+    max-width: 100%;
+  }
+
+  .hero-form-wrapper {
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  .renan-hero-wrapper {
+    margin-top: 8px;
+    margin-bottom: -8px;
+  }
+
+  .renan-hero-wrapper img {
+    max-height: 420px;
+    max-width: 360px;
+    margin: 0 auto;
   }
 }
 

@@ -3,8 +3,7 @@ import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, Graduat
 import { useEffect, useRef } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { CountdownBanner } from "@/components/CountdownBanner";
-const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
+
 const SoudropElite = () => {
   const formContainerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -54,76 +53,64 @@ const SoudropElite = () => {
   const paraQuemE = ["Trabalha registrado ou como autônomo e quer montar uma renda extra pela internet.", "Já pensou em vender na Shopee, Mercado Livre ou Magalu, mas não sabe por onde começar.", "Não tem dinheiro pra comprar estoque e tem medo de ficar com produto parado.", "Quer trabalhar de casa, usando apenas celular ou computador.", "Está disposto a aprender algo novo e aplicar ainda esse mês."];
   const bulletPoints = ["Como escolher produtos simples que têm demanda real e não ficam encalhados.", "Como anunciar nos marketplaces mesmo sem ter experiência com tráfego hoje.", "O passo a passo do modelo sem estoque que usamos todos os dias na SouDrop."];
   return <div className="min-h-screen bg-black overflow-x-hidden">
-      <CountdownBanner offerName="inscrições para essa aula gratuita" endDate={OFFER_END_DATE} variant="gold" />
-      {/* Spacer for fixed banner */}
-      <div className="h-[72px] sm:h-[56px]" />
-      
-      {/* Hero Section - VENDE-C PRO Style */}
-      <section className="hero-section-soudrop-elite relative z-10 w-full overflow-hidden pb-0">
+      {/* Hero Section - Two Column Layout */}
+      <section className="hero-soudrop-elite relative z-10 w-full overflow-hidden">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" />
         
         {/* Subtle radial glow from top-right (gold) */}
         <div className="absolute top-0 right-0 w-[70%] h-[80%] bg-gradient-radial from-elite-gold/8 via-transparent to-transparent" />
         
-        {/* Bottom gradient fade to next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 sm:h-40 lg:h-52 bg-gradient-to-t from-[#050A00] via-[#050A00]/60 to-transparent z-20 pointer-events-none" />
-        
         {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 py-8 lg:py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center">
-            
-            {/* LEFT COLUMN - Dark Card with Logo, Headline, Text & Form */}
-            <div className="order-1">
-              <AnimatedSection delay={0}>
-                <div className="bg-black border border-elite-gold/20 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-[0_0_60px_rgba(0,0,0,0.8)] max-w-[520px] mx-auto lg:mx-0">
-                  
-                  {/* Logo SouDrop Elite */}
-                  <div className="mb-5 lg:mb-6">
-                    <div className="flex items-center gap-2">
-                      <span className="text-elite-gold font-black text-xl sm:text-2xl tracking-tight">​MASTERCLASS</span>
-                      <span className="text-white font-light text-xl sm:text-2xl tracking-tight">SOUDROP</span>
-                    </div>
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16">
+          
+          {/* LEFT COLUMN - Text + Form */}
+          <div className="hero-left">
+            <AnimatedSection delay={0}>
+              <div className="hero-copy">
+                {/* Logo */}
+                <div className="mb-5 lg:mb-6">
+                  <div className="flex items-center gap-2">
+                    <span className="text-elite-gold font-black text-xl sm:text-2xl tracking-tight">​MASTERCLASS</span>
+                    <span className="text-white font-light text-xl sm:text-2xl tracking-tight">SOUDROP</span>
                   </div>
-                  
-                  {/* Headline - H1 */}
-                  <h1 className="text-xl sm:text-2xl lg:text-[1.75rem] xl:text-[2rem] font-black leading-[1.15] tracking-tight mb-4 lg:mb-5">
-                    <span className="text-white block">Comece a vender em marketplaces</span>
-                    <span className="text-white block">sem estoque e busque seus primeiros</span>
-                    <span className="text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)] block">R$ 10.000 por mês</span>
-                  </h1>
-                  
-                  {/* WebinarJam Embed Form */}
-                  <div ref={formContainerRef} className="min-h-[200px] mb-4" />
-                  
-                  {/* Short paragraph */}
-                  
-                  
-                  {/* Microtext below form */}
-                  
-                </div>
-              </AnimatedSection>
-            </div>
-
-            {/* RIGHT COLUMN - Large Photo of Renan */}
-            <div className="order-2 flex justify-center lg:justify-end items-center relative">
-              <AnimatedSection delay={100} className="relative">
-                {/* Strong gold glow behind photo */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  {/* Main glow */}
-                  <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] bg-elite-gold/30 rounded-full blur-[80px] lg:blur-[120px]" />
-                  {/* Secondary glow for depth */}
-                  <div className="absolute w-[180px] h-[240px] sm:w-[260px] sm:h-[340px] lg:w-[380px] lg:h-[480px] bg-yellow-500/25 rounded-full blur-[60px] lg:blur-[100px]" />
                 </div>
                 
-              {/* Photo - large, occupying most of the height */}
-                <div className="renan-image-wrapper">
-                  <img alt="Renan Ferreira - Especialista em Vendas Online" className="block relative z-10 w-[280px] sm:w-[340px] lg:w-[500px] xl:w-[580px] h-auto object-contain drop-shadow-[0_0_50px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" loading="eager" />
-                </div>
-              </AnimatedSection>
-            </div>
-            
+                {/* Headline - H1 */}
+                <h1 className="text-xl sm:text-2xl lg:text-[1.75rem] xl:text-[2rem] font-black leading-[1.15] tracking-tight mb-4 lg:mb-5">
+                  <span className="text-white block">Comece a vender em marketplaces</span>
+                  <span className="text-white block">sem estoque e busque seus primeiros</span>
+                  <span className="text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)] block">R$ 10.000 por mês</span>
+                </h1>
+                
+                {/* Supporting text */}
+                <p className="text-gray-300 text-sm sm:text-base mb-4 lg:mb-5">
+                  Aula 100% online e gratuita. Escolha o melhor horário e receba o link no seu e-mail e WhatsApp.
+                </p>
+              </div>
+              
+              {/* WebinarJam Form */}
+              <div className="hero-form-wrapper">
+                <div ref={formContainerRef} className="min-h-[200px]" />
+              </div>
+            </AnimatedSection>
           </div>
+
+          {/* RIGHT COLUMN - Renan Photo */}
+          <div className="hero-right">
+            <AnimatedSection delay={100} className="relative">
+              {/* Strong gold glow behind photo */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] bg-elite-gold/30 rounded-full blur-[80px] lg:blur-[120px]" />
+                <div className="absolute w-[180px] h-[240px] sm:w-[260px] sm:h-[340px] lg:w-[380px] lg:h-[480px] bg-yellow-500/25 rounded-full blur-[60px] lg:blur-[100px]" />
+              </div>
+              
+              <div className="renan-hero-wrapper">
+                <img alt="Renan Ferreira - Especialista em Vendas Online" className="block relative z-10 h-auto object-contain drop-shadow-[0_0_50px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" loading="eager" />
+              </div>
+            </AnimatedSection>
+          </div>
+            
         </div>
       </section>
 
@@ -131,7 +118,7 @@ const SoudropElite = () => {
       
 
       {/* O que é a aula */}
-      <section className="relative z-20 pt-4 pb-12 sm:pt-6 sm:pb-16 lg:pt-8 lg:pb-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
+      <section className="second-section-soudrop relative z-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <p className="text-xs sm:text-sm text-elite-gold/80 mb-3 sm:mb-4">
