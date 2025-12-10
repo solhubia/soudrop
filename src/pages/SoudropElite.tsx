@@ -78,8 +78,8 @@ const SoudropElite = () => {
                   {/* Logo SouDrop Elite */}
                   <div className="mb-5 lg:mb-6">
                     <div className="flex items-center gap-2">
-                      <span className="text-elite-gold font-black text-xl sm:text-2xl tracking-tight">SOUDROP</span>
-                      <span className="text-white font-light text-xl sm:text-2xl tracking-tight">ELITE</span>
+                      <span className="text-elite-gold font-black text-xl sm:text-2xl tracking-tight">​MASTERCLASS</span>
+                      <span className="text-white font-light text-xl sm:text-2xl tracking-tight">SOUDROP</span>
                     </div>
                   </div>
                   
