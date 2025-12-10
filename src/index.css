@@ -384,26 +384,41 @@
 /* ========== DESKTOP (1024px+) ========== */
 @media (min-width: 1024px) {
   .hero-soudrop-elite {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    min-height: auto;
+    display: block;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  /* Degradê suave na parte inferior para o Renan não flutuar */
+  .hero-soudrop-elite::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent 0%, #050A00 100%);
+    pointer-events: none;
+    z-index: 15;
   }
 
   .hero-content-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     gap: 24px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    min-height: calc(100vh - 80px);
+    padding-top: 60px;
+    padding-bottom: 0;
+    min-height: auto;
   }
 
   .hero-left {
     flex: 0 0 auto;
     width: 100%;
     max-width: 500px;
+    padding-bottom: 80px;
   }
 
   .hero-card-desktop {
@@ -425,11 +440,12 @@
     align-items: flex-end;
     justify-content: center;
     margin-top: 0;
-    height: 100%;
   }
 
   .renan-hero-wrapper {
-    margin-bottom: 0;
+    margin-bottom: -40px;
+    position: relative;
+    z-index: 10;
   }
 
   .renan-hero-wrapper img {
@@ -439,8 +455,9 @@
   }
 
   .second-section-soudrop {
-    padding-top: 32px;
+    padding-top: 24px;
     padding-bottom: 80px;
+    margin-top: 0;
   }
 }
 
