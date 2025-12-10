@@ -258,42 +258,7 @@ const SoudropElite = () => {
       </section>
 
       {/* Transformação */}
-      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-[#050A00] border-y border-elite-gold/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <AnimatedSection>
-            <Crown className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-elite-gold mx-auto mb-6 sm:mb-8" />
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 text-white">
-              O que muda depois dessa aula
-            </h2>
-          </AnimatedSection>
-          <div className="grid md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 text-left">
-            <AnimatedSection delay={100}>
-              <div className="p-5 sm:p-6 lg:p-8 bg-black/50 border border-red-500/30 rounded-xl">
-                <p className="text-red-400 font-bold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">❌ ANTES</p>
-                <ul className="space-y-2 sm:space-y-3 text-gray-400 text-sm sm:text-base">
-                  <li>• Sem renda extra</li>
-                  <li>• Preso ao escritório ou emprego</li>
-                  <li>• Sem flexibilidade de horários</li>
-                  <li>• Dependendo de um salário fixo</li>
-                  <li>• Sem controle da própria agenda</li>
-                </ul>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={200}>
-              <div className="p-5 sm:p-6 lg:p-8 bg-elite-gold/10 border border-elite-gold/50 rounded-xl">
-                <p className="text-elite-gold font-bold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">✓ DEPOIS</p>
-                <ul className="space-y-2 sm:space-y-3 text-gray-200 text-sm sm:text-base">
-                  <li>• Vendendo de casa</li>
-                  <li>• Trabalhando no seu horário</li>
-                  <li>• Renda extra ou principal</li>
-                  <li>• Sem precisar de estoque</li>
-                  <li>• Mais liberdade e flexibilidade</li>
-                </ul>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Seção do Mentor */}
       <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-black">
