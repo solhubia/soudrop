@@ -136,6 +136,9 @@ const SoudropElite = () => {
       <section className="relative z-20 pt-4 pb-12 sm:pt-6 sm:pb-16 lg:pt-8 lg:pb-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
+            <p className="text-xs sm:text-sm text-elite-gold/80 mb-3 sm:mb-4">
+              Você vai receber o link do evento no seu e-mail e WhatsApp.
+            </p>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
               O que você vai <span className="text-elite-gold">aprender na aula</span>
             </h2>
