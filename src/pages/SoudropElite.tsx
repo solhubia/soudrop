@@ -18,9 +18,9 @@ const SoudropElite = () => {
       wrapper.className = 'wj-embed-wrapper';
       wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
 
-      // Create and append script
+      // Create and append script - black background version
       const script = document.createElement('script');
-      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=INSCREVA-SE+GRATIS&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23e4ff0f&formBgOpacity=1';
+      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=INSCREVA-SE+GRATIS&formAccentColor=%23ffffff&formAccentOpacity=0.95&formBgColor=%23000000&formBgOpacity=1';
       script.async = true;
       wrapper.appendChild(script);
       formContainerRef.current.appendChild(wrapper);
@@ -58,7 +58,7 @@ const SoudropElite = () => {
       {/* Spacer for fixed banner */}
       <div className="h-[72px] sm:h-[56px]" />
       
-      {/* Hero Section - Two Column Layout */}
+      {/* Hero Section - VENDE-C PRO Style */}
       <section className="relative z-10 w-full overflow-hidden min-h-[calc(100vh-72px)] lg:min-h-[calc(100vh-56px)] flex items-center">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" />
@@ -66,72 +66,64 @@ const SoudropElite = () => {
         {/* Subtle radial glow from top-right (gold) */}
         <div className="absolute top-0 right-0 w-[70%] h-[80%] bg-gradient-radial from-elite-gold/8 via-transparent to-transparent" />
         
-        {/* Bottom glow - hidden on mobile to avoid covering the photo */}
-        <div className="hidden lg:block absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-elite-gold/5 blur-[120px]" />
-        
         {/* Content container */}
         <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 py-8 lg:py-0">
-          <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-6 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center">
             
-            {/* LEFT COLUMN - Text Content + WebinarJam Form */}
-            <div className="order-1 text-center lg:text-left space-y-3 lg:space-y-4 max-w-[500px] mx-auto lg:mx-0">
-              
-              {/* Event Tag */}
+            {/* LEFT COLUMN - Dark Card with Logo, Headline, Text & Form */}
+            <div className="order-1">
               <AnimatedSection delay={0}>
-                <div className="space-y-2">
-                  <span className="inline-flex items-center gap-2 text-elite-gold text-[9px] sm:text-xs lg:text-sm font-semibold tracking-[0.12em] lg:tracking-[0.15em] uppercase">
-                    <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-                    MÉTODO SEM ESTOQUE · EVENTO AO VIVO GRATUITO
-                  </span>
-                  {/* Decorative line */}
-                  <div className="flex items-center gap-3 lg:max-w-[260px] justify-center lg:justify-start">
-                    <div className="h-[1px] flex-1 bg-gradient-to-r from-elite-gold/60 via-elite-gold-light/40 to-transparent max-w-[180px]" />
-                    <div className="w-1.5 h-1.5 bg-elite-gold rounded-full" />
+                <div className="bg-black border border-elite-gold/20 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-[0_0_60px_rgba(0,0,0,0.8)] max-w-[520px] mx-auto lg:mx-0">
+                  
+                  {/* Logo SouDrop Elite */}
+                  <div className="mb-5 lg:mb-6">
+                    <div className="flex items-center gap-2">
+                      <span className="text-elite-gold font-black text-xl sm:text-2xl tracking-tight">SOUDROP</span>
+                      <span className="text-white font-light text-xl sm:text-2xl tracking-tight">ELITE</span>
+                    </div>
                   </div>
-                </div>
-              </AnimatedSection>
-              
-              {/* Headline - H1 */}
-              <AnimatedSection delay={100}>
-                {/* Mobile headline */}
-                <h1 className="lg:hidden text-[1.3rem] sm:text-2xl font-black text-white leading-[1.15] tracking-tight">
-                  <span className="block">Comece a vender em marketplaces</span>
-                  <span className="block">sem estoque e busque seus primeiros <span className="text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)]">R$ 10.000 por mês</span></span>
-                </h1>
-                {/* Desktop headline */}
-                <h1 className="hidden lg:block text-[2rem] xl:text-[2.4rem] font-black text-white leading-[1.1] tracking-tight">
-                  <span className="block">Comece a vender em marketplaces</span>
-                  <span className="block">sem estoque e busque seus primeiros <span className="text-elite-gold drop-shadow-[0_0_30px_rgba(251,191,36,0.5)]">R$ 10.000 por mês</span></span>
-                </h1>
-              </AnimatedSection>
-              
-              {/* WebinarJam Embed Form */}
-              <AnimatedSection delay={200}>
-                <div className="pt-1 lg:pt-2 w-full max-w-[380px] mx-auto lg:mx-0">
-                  {/* Container for WebinarJam form - script injected via useEffect */}
-                  <div ref={formContainerRef} className="min-h-[180px]" />
+                  
+                  {/* Headline - H1 */}
+                  <h1 className="text-xl sm:text-2xl lg:text-[1.75rem] xl:text-[2rem] font-black leading-[1.15] tracking-tight mb-4 lg:mb-5">
+                    <span className="text-white block">Comece a vender em marketplaces</span>
+                    <span className="text-white block">sem estoque e busque seus primeiros</span>
+                    <span className="text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)] block">R$ 10.000 por mês</span>
+                  </h1>
+                  
+                  {/* Short paragraph */}
+                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-5 lg:mb-6">
+                    Neste evento ao vivo e gratuito, você vai conhecer o método que usamos para <span className="text-white font-semibold">vender todos os dias</span> em marketplaces como Mercado Livre, Shopee e Magalu — <span className="text-white font-semibold">sem precisar de estoque</span>.
+                  </p>
+                  
+                  {/* WebinarJam Embed Form - Black background version */}
+                  <div ref={formContainerRef} className="min-h-[200px] mb-3" />
                   
                   {/* Microtext below form */}
-                  <p className="text-[9px] sm:text-[10px] lg:text-xs text-gray-500 mt-2 text-center lg:text-left">
+                  <p className="text-[10px] sm:text-xs text-gray-500 text-center">
                     Você vai receber o link do evento no seu e-mail e WhatsApp.
                   </p>
                 </div>
               </AnimatedSection>
             </div>
 
-            {/* RIGHT COLUMN - Photo */}
-            <div className="order-2 flex justify-center lg:justify-center items-center relative mt-4 lg:mt-0">
+            {/* RIGHT COLUMN - Large Photo of Renan */}
+            <div className="order-2 flex justify-center lg:justify-end items-center relative">
               <AnimatedSection delay={100} className="relative">
                 {/* Strong gold glow behind photo */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   {/* Main glow */}
-                  <div className="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[550px] lg:h-[550px] bg-elite-gold/30 rounded-full blur-[100px] lg:blur-[130px]" />
+                  <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] bg-elite-gold/30 rounded-full blur-[80px] lg:blur-[120px]" />
                   {/* Secondary glow for depth */}
-                  <div className="absolute w-[200px] h-[260px] sm:w-[300px] sm:h-[380px] lg:w-[400px] lg:h-[500px] bg-yellow-500/25 rounded-full blur-[80px] lg:blur-[110px]" />
+                  <div className="absolute w-[180px] h-[240px] sm:w-[260px] sm:h-[340px] lg:w-[380px] lg:h-[480px] bg-yellow-500/25 rounded-full blur-[60px] lg:blur-[100px]" />
                 </div>
                 
-                {/* Photo - larger size */}
-                <img alt="Renan Ferreira - Especialista em Vendas Online" className="block relative z-10 w-[260px] sm:w-[320px] lg:w-[480px] xl:w-[560px] h-auto object-contain drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_70px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" loading="eager" />
+                {/* Photo - large, occupying most of the height */}
+                <img 
+                  alt="Renan Ferreira - Especialista em Vendas Online" 
+                  className="block relative z-10 w-[280px] sm:w-[340px] lg:w-[500px] xl:w-[580px] h-auto object-contain drop-shadow-[0_0_50px_rgba(251,191,36,0.5)]" 
+                  src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" 
+                  loading="eager" 
+                />
               </AnimatedSection>
             </div>
             
