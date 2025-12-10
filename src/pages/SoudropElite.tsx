@@ -47,34 +47,23 @@ const SoudropElite = () => {
       <CountdownBanner offerName="Oferta Especial" endDate={OFFER_END_DATE} variant="gold" />
       {/* Spacer for fixed banner */}
       <div className="h-[72px] sm:h-[56px]" />
-      {/* Hero Section - Background Image Layout */}
-      <section 
-        className="relative z-10 w-full min-h-[600px] sm:min-h-[650px] lg:min-h-[700px]"
-        style={{
-          backgroundImage: `url('/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png')`,
-          backgroundPosition: 'right bottom',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'auto 70%',
-        }}
-      >
+      {/* Hero Section - Two Column Layout */}
+      <section className="relative z-10 w-full overflow-hidden">
         {/* Dark gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" style={{ zIndex: -2 }} />
-        
-        {/* Gradient overlay for text readability - stronger on mobile */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent lg:via-black/70 lg:to-transparent" style={{ zIndex: -1 }} />
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" />
         
         {/* Subtle radial glow from top-right (gold) */}
         <div className="absolute top-0 right-0 w-[70%] h-[80%] bg-gradient-radial from-elite-gold/8 via-transparent to-transparent" />
         
-        {/* Gold glow behind photo area */}
-        <div className="absolute bottom-0 right-0 w-[50%] h-[60%] bg-elite-gold/20 blur-[120px] pointer-events-none" />
+        {/* Bottom glow - hidden on mobile to avoid covering the photo */}
+        <div className="hidden lg:block absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-elite-gold/5 blur-[120px]" />
         
         {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-16">
-          <div className="max-w-xl lg:max-w-2xl">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16 pt-16 sm:pt-20 lg:pt-24 pb-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4 items-end">
             
-            {/* Text Content */}
-            <div className="text-center lg:text-left space-y-4 lg:space-y-6">
+            {/* LEFT COLUMN - Text Content */}
+            <div className="order-1 lg:order-1 text-center lg:text-left space-y-4 lg:space-y-6 pt-6 lg:pt-0">
               
               {/* Event Tag with decorative line */}
               <AnimatedSection delay={0}>
@@ -179,6 +168,22 @@ const SoudropElite = () => {
                     <span>Não fica disponível depois</span>
                   </p>
                 </div>
+              </AnimatedSection>
+            </div>
+
+            {/* RIGHT COLUMN - Photo */}
+            <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-end relative mt-6 mb-0 lg:mt-0 lg:self-end">
+              <AnimatedSection delay={100} className="relative">
+                {/* Strong gold glow behind photo */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  {/* Main glow */}
+                  <div className="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-elite-gold/30 rounded-full blur-[100px] lg:blur-[120px]" />
+                  {/* Secondary glow for depth */}
+                  <div className="absolute w-[200px] h-[250px] sm:w-[280px] sm:h-[350px] lg:w-[350px] lg:h-[450px] bg-yellow-500/25 rounded-full blur-[80px] lg:blur-[100px]" />
+                </div>
+                
+                {/* Photo */}
+                <img alt="Renan Ferreira - Especialista em Vendas Online" className="block relative z-10 w-[240px] sm:w-[300px] lg:w-[480px] xl:w-[550px] h-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_60px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" loading="eager" />
               </AnimatedSection>
             </div>
             
