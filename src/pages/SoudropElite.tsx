@@ -61,48 +61,53 @@ const SoudropElite = () => {
         {/* Subtle radial glow from top-right (gold) */}
         <div className="absolute top-0 right-0 w-[70%] h-[80%] bg-gradient-radial from-elite-gold/8 via-transparent to-transparent" />
         
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 lg:h-32 bg-gradient-to-t from-[#050A00] to-transparent z-20 pointer-events-none" />
+        
         {/* Content container */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16">
+        <div className="hero-content-wrapper relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16">
           
-          {/* LEFT COLUMN - Text + Form */}
+          {/* LEFT COLUMN - Text + Form in Dark Card */}
           <div className="hero-left">
             <AnimatedSection delay={0}>
-              <div className="hero-copy">
-                {/* Logo */}
-                <div className="mb-5 lg:mb-6">
-                  <div className="flex items-center gap-2">
-                    <span className="text-elite-gold font-black text-xl sm:text-2xl tracking-tight">​MASTERCLASS</span>
-                    <span className="text-white font-light text-xl sm:text-2xl tracking-tight">SOUDROP</span>
+              <div className="hero-card-desktop">
+                <div className="hero-copy">
+                  {/* Logo */}
+                  <div className="mb-5 lg:mb-6">
+                    <div className="flex items-center gap-2">
+                      <span className="text-elite-gold font-black text-xl sm:text-2xl tracking-tight">​MASTERCLASS</span>
+                      <span className="text-white font-light text-xl sm:text-2xl tracking-tight">SOUDROP</span>
+                    </div>
                   </div>
+                  
+                  {/* Headline - H1 */}
+                  <h1 className="text-xl sm:text-2xl lg:text-[1.75rem] xl:text-[2rem] font-black leading-[1.15] tracking-tight mb-4 lg:mb-5">
+                    <span className="text-white block">Comece a vender em marketplaces</span>
+                    <span className="text-white block">sem estoque e busque seus primeiros</span>
+                    <span className="text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)] block">R$ 10.000 por mês</span>
+                  </h1>
+                  
+                  {/* Supporting text */}
+                  <p className="text-gray-300 text-sm sm:text-base mb-0 lg:mb-0">
+                    Aula 100% online e gratuita. Escolha o melhor horário e receba o link no seu e-mail e WhatsApp.
+                  </p>
                 </div>
                 
-                {/* Headline - H1 */}
-                <h1 className="text-xl sm:text-2xl lg:text-[1.75rem] xl:text-[2rem] font-black leading-[1.15] tracking-tight mb-4 lg:mb-5">
-                  <span className="text-white block">Comece a vender em marketplaces</span>
-                  <span className="text-white block">sem estoque e busque seus primeiros</span>
-                  <span className="text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)] block">R$ 10.000 por mês</span>
-                </h1>
-                
-                {/* Supporting text */}
-                <p className="text-gray-300 text-sm sm:text-base mb-4 lg:mb-5">
-                  Aula 100% online e gratuita. Escolha o melhor horário e receba o link no seu e-mail e WhatsApp.
-                </p>
-              </div>
-              
-              {/* WebinarJam Form */}
-              <div className="hero-form-wrapper">
-                <div ref={formContainerRef} className="min-h-[200px]" />
+                {/* WebinarJam Form */}
+                <div className="hero-form-wrapper">
+                  <div ref={formContainerRef} className="min-h-[200px]" />
+                </div>
               </div>
             </AnimatedSection>
           </div>
 
           {/* RIGHT COLUMN - Renan Photo */}
           <div className="hero-right">
-            <AnimatedSection delay={100} className="relative">
+            <AnimatedSection delay={100} className="relative h-full flex items-end">
               {/* Strong gold glow behind photo */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] bg-elite-gold/30 rounded-full blur-[80px] lg:blur-[120px]" />
-                <div className="absolute w-[180px] h-[240px] sm:w-[260px] sm:h-[340px] lg:w-[380px] lg:h-[480px] bg-yellow-500/25 rounded-full blur-[60px] lg:blur-[100px]" />
+                <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] bg-elite-gold/30 rounded-full blur-[80px] lg:blur-[100px]" />
+                <div className="absolute w-[180px] h-[240px] sm:w-[260px] sm:h-[340px] lg:w-[350px] lg:h-[420px] bg-yellow-500/25 rounded-full blur-[60px] lg:blur-[80px]" />
               </div>
               
               <div className="renan-hero-wrapper">
