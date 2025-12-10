@@ -59,7 +59,7 @@ const SoudropElite = () => {
       <div className="h-[72px] sm:h-[56px]" />
       
       {/* Hero Section - VENDE-C PRO Style */}
-      <section className="relative z-10 w-full overflow-hidden pb-0">
+      <section className="hero-section-soudrop-elite relative z-10 w-full overflow-hidden pb-0">
         {/* Dark gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" />
         
@@ -116,8 +116,8 @@ const SoudropElite = () => {
                   <div className="absolute w-[180px] h-[240px] sm:w-[260px] sm:h-[340px] lg:w-[380px] lg:h-[480px] bg-yellow-500/25 rounded-full blur-[60px] lg:blur-[100px]" />
                 </div>
                 
-                {/* Photo - large, occupying most of the height */}
-                <div className="hero-image-renan">
+              {/* Photo - large, occupying most of the height */}
+                <div className="renan-image-wrapper">
                   <img alt="Renan Ferreira - Especialista em Vendas Online" className="block relative z-10 w-[280px] sm:w-[340px] lg:w-[500px] xl:w-[580px] h-auto object-contain drop-shadow-[0_0_50px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" loading="eager" />
                 </div>
               </AnimatedSection>

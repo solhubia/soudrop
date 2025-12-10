@@ -317,21 +317,33 @@
   }
 }
 
-/* Ajuste da posição da imagem do Renan no desktop */
-.hero-image-renan {
+/* Wrapper da imagem do Renan */
+.renan-image-wrapper {
   position: relative;
 }
 
-@media (min-width: 1024px) {
-  .hero-image-renan img {
+/* Ajuste específico para mobile */
+@media (max-width: 768px) {
+  /* subir a imagem do Renan */
+  .renan-image-wrapper img {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
     transform: translateY(-40px);
+  }
+
+  /* reduzir o espaço entre o formulário e a imagem */
+  .hero-section-soudrop-elite {
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
-/* No mobile mantém quase igual, só um leve ajuste opcional */
-@media (max-width: 1023px) {
-  .hero-image-renan img {
-    transform: translateY(-10px);
+/* Desktop mantém posição ajustada */
+@media (min-width: 1024px) {
+  .renan-image-wrapper img {
+    transform: translateY(-40px);
   }
 }
 
