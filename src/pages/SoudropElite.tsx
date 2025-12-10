@@ -11,9 +11,18 @@ const SoudropElite = () => {
     embedScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=1&buttonText=Register';
     embedScript.async = true;
     document.body.appendChild(embedScript);
+
+    const embedBarScript = document.createElement('script');
+    embedBarScript.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=Cadastre-se&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%23f3f629&barBgOpacity=0.95&formTemplate=2&formColor=1';
+    embedBarScript.async = true;
+    document.body.appendChild(embedBarScript);
+
     return () => {
       if (document.body.contains(embedScript)) {
         document.body.removeChild(embedScript);
+      }
+      if (document.body.contains(embedBarScript)) {
+        document.body.removeChild(embedBarScript);
       }
     };
   }, []);
