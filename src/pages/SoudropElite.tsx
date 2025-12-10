@@ -4,33 +4,28 @@ import { useEffect, useRef } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CountdownBanner } from "@/components/CountdownBanner";
-
 const OFFER_END_DATE = new Date("2025-12-15T23:59:59");
-
 const SoudropElite = () => {
   const formContainerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     // Inject WebinarJam script into the container
     if (formContainerRef.current) {
       // Clear any existing content
       formContainerRef.current.innerHTML = '';
-      
+
       // Create wrapper div
       const wrapper = document.createElement('div');
       wrapper.className = 'wj-embed-wrapper';
       wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
-      
+
       // Create and append script
       const script = document.createElement('script');
       script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=INSCREVA-SE+GRATIS&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23e4ff0f&formBgOpacity=1';
       script.async = true;
-      
       wrapper.appendChild(script);
       formContainerRef.current.appendChild(wrapper);
     }
   }, []);
-
   const pilares = [{
     icon: TrendingUp,
     title: "Produtos simples que vendem todo dia: como encontrar e validar",
@@ -56,15 +51,8 @@ const SoudropElite = () => {
     title: "Plano de ação, suporte e comunidade pra você não caminhar sozinho",
     description: "Você sai da MasterClass com um passo a passo claro para aplicar o que aprendeu e acesso a materiais de apoio para não caminhar sozinho."
   }];
-
   const paraQuemE = ["Trabalha registrado ou como autônomo e quer montar uma renda extra pela internet.", "Já pensou em vender na Shopee, Mercado Livre ou Magalu, mas não sabe por onde começar.", "Não tem dinheiro pra comprar estoque e tem medo de ficar com produto parado.", "Quer trabalhar de casa, usando apenas celular ou computador.", "Está disposto a aprender algo novo e aplicar ainda esse mês."];
-
-  const bulletPoints = [
-    "Como escolher produtos simples que têm demanda real e não ficam encalhados.",
-    "Como anunciar nos marketplaces mesmo sem ter experiência com tráfego hoje.",
-    "O passo a passo do modelo sem estoque que usamos todos os dias na SouDrop."
-  ];
-
+  const bulletPoints = ["Como escolher produtos simples que têm demanda real e não ficam encalhados.", "Como anunciar nos marketplaces mesmo sem ter experiência com tráfego hoje.", "O passo a passo do modelo sem estoque que usamos todos os dias na SouDrop."];
   return <div className="min-h-screen bg-black overflow-x-hidden">
       <CountdownBanner offerName="inscrições para essa aula gratuita" endDate={OFFER_END_DATE} variant="gold" />
       {/* Spacer for fixed banner */}
@@ -143,12 +131,7 @@ const SoudropElite = () => {
                 </div>
                 
                 {/* Photo - larger size */}
-                <img 
-                  alt="Renan Ferreira - Especialista em Vendas Online" 
-                  className="block relative z-10 w-[260px] sm:w-[320px] lg:w-[480px] xl:w-[560px] h-auto object-contain drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_70px_rgba(251,191,36,0.5)]" 
-                  src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" 
-                  loading="eager" 
-                />
+                <img alt="Renan Ferreira - Especialista em Vendas Online" className="block relative z-10 w-[260px] sm:w-[320px] lg:w-[480px] xl:w-[560px] h-auto object-contain drop-shadow-[0_0_40px_rgba(251,191,36,0.4)] lg:drop-shadow-[0_0_70px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" loading="eager" />
               </AnimatedSection>
             </div>
             
@@ -157,23 +140,7 @@ const SoudropElite = () => {
       </section>
 
       {/* O que você vai ver neste evento - NEW SECTION */}
-      <section className="relative z-20 pt-10 pb-12 sm:pt-12 sm:pb-16 lg:pt-16 lg:pb-20 px-5 sm:px-6 md:px-4 bg-black">
-        <div className="max-w-4xl mx-auto">
-          <AnimatedSection>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 text-center text-white">
-              O que você vai ver <span className="text-elite-gold">neste evento</span>
-            </h2>
-            <ul className="space-y-3 sm:space-y-4 max-w-2xl mx-auto">
-              {bulletPoints.map((bullet, index) => (
-                <li key={index} className="flex items-start gap-3 sm:gap-4">
-                  <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-200 text-sm sm:text-base lg:text-lg">{bullet}</span>
-                </li>
-              ))}
-            </ul>
-          </AnimatedSection>
-        </div>
-      </section>
+      
 
       {/* O que é a aula */}
       <section className="relative z-20 pt-10 pb-12 sm:pt-10 sm:pb-16 lg:pt-16 lg:pb-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
