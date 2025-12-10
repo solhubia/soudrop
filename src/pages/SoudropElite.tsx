@@ -19,30 +19,30 @@ const SoudropElite = () => {
   }, []);
   const pilares = [{
     icon: TrendingUp,
-    title: "Como encontrar produtos simples que vendem todo dia",
-    description: "Você vai ver na prática como identificar produtos com demanda real, boa margem de lucro e baixo risco. Sem chute, com método."
+    title: "Encontrar produtos simples que vendem todo dia",
+    description: "Você vai aprender na prática como identificar produtos com demanda real, boa margem de lucro e baixo risco — com método, sem achismo."
   }, {
     icon: Target,
-    title: "Onde e como anunciar para vender mais rápido",
-    description: "Vou te mostrar como usar os principais marketplaces (Mercado Livre, Shopee, etc.) e montar anúncios que se destacam e convertem em vendas."
+    title: "Onde e como anunciar pra vender mais rápido",
+    description: "Vou te mostrar como usar os principais marketplaces (Mercado Livre, Shopee, Magalu) e montar anúncios que se destacam e geram vendas."
   }, {
     icon: Briefcase,
-    title: "Gestão de pedidos sem ter estoque em casa",
-    description: "Você vai entender, passo a passo, como funciona o modelo sem estoque e como organizar os pedidos do cliente até a entrega, sem bagunça."
+    title: "Gestão de pedidos sem estoque em casa",
+    description: "Você vai entender passo a passo como funciona o modelo sem estoque e como organizar os pedidos do cliente até a entrega, sem complicação."
   }, {
     icon: Calculator,
-    title: "Precificação com lucro real, não no achismo",
-    description: "Na tela, vamos calcular juntos custos, taxas, frete e comissões para você enxergar o lucro limpo de cada venda antes mesmo de anunciar."
+    title: "Precificação com lucro de verdade",
+    description: "Na tela, vamos calcular juntos custos, taxas, frete e comissões para você enxergar o lucro limpo de cada venda antes de anunciar."
   }, {
     icon: Shield,
-    title: "Os erros que mais fazem iniciante perder dinheiro",
-    description: "Produtos proibidos, fornecedores ruins, anúncios bloqueados e decisões erradas de preço – o que você NUNCA deve fazer se quiser economizar tempo e grana."
+    title: "Erros que fazem iniciantes perder dinheiro",
+    description: "Produtos proibidos, fornecedores ruins, anúncios bloqueados e decisões erradas de preço — o que você nunca deve fazer se quiser economizar tempo e dinheiro."
   }, {
     icon: GraduationCap,
-    title: "Plano de ação, suporte e comunidade",
-    description: "Você sai da MasterClass com um passo a passo claro para aplicar o que aprendeu e acesso a materiais de apoio e comunidade para não caminhar sozinho."
+    title: "Plano de ação e próximos passos",
+    description: "Você sai da MasterClass com um passo a passo claro para aplicar o que aprendeu e acesso a materiais de apoio para não caminhar sozinho."
   }];
-  const paraQuemE = ["Quer ter uma renda extra trabalhando de casa", "Busca uma fonte de renda principal sem sair de casa", "Não tem capital para investir em estoque", "Quer flexibilidade de horários para trabalhar quando puder", "Tem disposição para aprender algo novo e aplicar"];
+  const paraQuemE = ["Ter uma renda extra trabalhando de casa", "Construir uma fonte de renda principal sem sair de casa", "Começar sem investir em estoque", "Ter flexibilidade de horários", "Estar disposto a aprender e aplicar o passo a passo"];
   return <div className="min-h-screen bg-black overflow-x-hidden">
       <CountdownBanner offerName="Oferta Especial" endDate={OFFER_END_DATE} variant="gold" />
       {/* Spacer for fixed banner */}
@@ -97,7 +97,7 @@ const SoudropElite = () => {
               {/* Subtitle */}
               <AnimatedSection delay={150}>
                 <p className="text-[13px] sm:text-sm lg:text-lg text-gray-200 leading-relaxed lg:max-w-[90%] max-w-[320px] mx-auto lg:mx-0">
-                  Masterclass gratuita onde eu te mostro como vender produtos físicos em marketplaces sem investir em estoque.
+                  Masterclass gratuita onde eu te mostro, passo a passo, como vender produtos simples em marketplaces (Shopee, Mercado Livre, Magalu etc.) sem investir em estoque.
                 </p>
               </AnimatedSection>
               
@@ -111,15 +111,15 @@ const SoudropElite = () => {
                   <ul className="space-y-1.5 lg:space-y-2 text-[11px] sm:text-xs lg:text-sm text-gray-300 lg:max-w-[90%]">
                     <li className="flex items-start gap-2">
                       <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>Quais produtos escolher pra começar.</span>
+                      <span>Quais tipos de produtos escolher pra começar do jeito certo</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>Como vender em Shopee, Mercado Livre, Magalu etc. sem estoque próprio.</span>
+                      <span>Como vender nos principais marketplaces sem depender de loja física</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>Um plano simples pra chegar nos seus primeiros R$ 10.000 por mês.</span>
+                      <span>Um plano simples pra chegar nos seus primeiros R$ 10.000 por mês vendendo online</span>
                     </li>
                   </ul>
                 </div>
@@ -165,7 +165,7 @@ const SoudropElite = () => {
                     <span className="text-gray-600">·</span>
                     <span>Vagas limitadas</span>
                     <span className="text-gray-600">·</span>
-                    <span>Não fica disponível depois</span>
+                    <span>Não fica gravado depois</span>
                   </p>
                 </div>
               </AnimatedSection>
@@ -199,8 +199,7 @@ const SoudropElite = () => {
               O que você vai <span className="text-elite-gold">aprender na aula</span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              Na aula ao vivo, vou te mostrar exatamente como transformar produtos simples em uma operação lucrativa.
-              Sem enrolação, sem teoria — só o que funciona na prática.
+              Na aula ao vivo, eu vou te mostrar exatamente como transformar produtos simples em uma operação lucrativa, mesmo começando do zero. Sem enrolação, sem teoria demais — só o que funciona na prática.
             </p>
           </AnimatedSection>
         </div>
@@ -285,19 +284,10 @@ const SoudropElite = () => {
               
               <div className="space-y-3 sm:space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base">
                 <p>
-                  Anos de experiência com <span className="text-elite-gold font-semibold">vendas em marketplaces</span> e 
-                  operação prática nos principais canais: Mercado Livre, Shopee, Amazon e Magalu.
+                  Anos de experiência vendendo em <span className="text-elite-gold font-semibold">Mercado Livre, Shopee, Amazon e Magalu</span>, além de operação com importação direta da China.
                 </p>
                 <p>
-                  Também trabalho com <span className="text-elite-gold font-semibold">importação direta da China</span>, 
-                  o que me dá uma visão completa de toda a cadeia.
-                </p>
-                <p className="text-white font-semibold text-sm sm:text-base lg:text-lg">
-                  Meu objetivo é ensinar você do jeito mais prático possível:
-                </p>
-                <p>
-                  Sem enrolação, sem teoria demais. Foco em fazer você começar a vender de verdade, 
-                  <span className="text-elite-gold font-semibold"> aplicando o que funciona na prática</span>.
+                  Meu foco é te ensinar de forma prática, <span className="text-elite-gold font-semibold">sem promessas milagrosas</span>, mostrando o que realmente funciona na vida real.
                 </p>
               </div>
             </AnimatedSection>
