@@ -90,13 +90,13 @@ const SoudropElite = () => {
                     <span className="text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)] block">R$ 10.000 por mês</span>
                   </h1>
                   
+                  {/* WebinarJam Embed Form */}
+                  <div ref={formContainerRef} className="min-h-[200px] mb-4" />
+                  
                   {/* Short paragraph */}
-                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-5 lg:mb-6">
+                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-3">
                     Neste evento ao vivo e gratuito, você vai conhecer o método que usamos para <span className="text-white font-semibold">vender todos os dias</span> em marketplaces como Mercado Livre, Shopee e Magalu  <span className="text-white font-semibold">sem precisar de estoque</span>.
                   </p>
-                  
-                  {/* WebinarJam Embed Form - Black background version */}
-                  <div ref={formContainerRef} className="min-h-[200px] mb-3" />
                   
                   {/* Microtext below form */}
                   <p className="text-[10px] sm:text-xs text-gray-500 text-center">
