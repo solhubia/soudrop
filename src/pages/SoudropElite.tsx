@@ -97,9 +97,7 @@ const SoudropElite = () => {
                   <div ref={formContainerRef} className="min-h-[200px] mb-4" />
                   
                   {/* Short paragraph */}
-                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-3">
-                    Neste evento ao vivo e gratuito, você vai conhecer o método que usamos para <span className="text-white font-semibold">vender todos os dias</span> em marketplaces como Mercado Livre, Shopee e Magalu  <span className="text-white font-semibold">sem precisar de estoque</span>.
-                  </p>
+                  
                   
                   {/* Microtext below form */}
                   <p className="text-[10px] sm:text-xs text-gray-500 text-center">
