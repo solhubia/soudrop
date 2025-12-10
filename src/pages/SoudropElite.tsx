@@ -19,32 +19,32 @@ const SoudropElite = () => {
   }, []);
   const pilares = [{
     icon: TrendingUp,
-    title: "Encontrar produtos simples que vendem todo dia",
+    title: "Produtos simples que vendem todo dia: como encontrar e validar",
     description: "Você vai aprender na prática como identificar produtos com demanda real, boa margem de lucro e baixo risco — com método, sem achismo."
   }, {
     icon: Target,
-    title: "Onde e como anunciar pra vender mais rápido",
+    title: "Anúncios que saem do zero: onde anunciar e como montar anúncios que convertem",
     description: "Vou te mostrar como usar os principais marketplaces (Mercado Livre, Shopee, Magalu) e montar anúncios que se destacam e geram vendas."
   }, {
     icon: Briefcase,
-    title: "Gestão de pedidos sem estoque em casa",
+    title: "Como organizar pedidos e entregas sem ter estoque em casa, sem virar bagunça",
     description: "Você vai entender passo a passo como funciona o modelo sem estoque e como organizar os pedidos do cliente até a entrega, sem complicação."
   }, {
     icon: Calculator,
-    title: "Precificação com lucro de verdade",
+    title: "Precificação com lucro real: como montar preços sem trabalhar no prejuízo",
     description: "Na tela, vamos calcular juntos custos, taxas, frete e comissões para você enxergar o lucro limpo de cada venda antes de anunciar."
   }, {
     icon: Shield,
-    title: "Erros que fazem iniciantes perder dinheiro",
+    title: "Os erros que fazem iniciante perder dinheiro e como evitar cada um deles",
     description: "Produtos proibidos, fornecedores ruins, anúncios bloqueados e decisões erradas de preço — o que você nunca deve fazer se quiser economizar tempo e dinheiro."
   }, {
     icon: GraduationCap,
-    title: "Plano de ação e próximos passos",
+    title: "Plano de ação, suporte e comunidade pra você não caminhar sozinho",
     description: "Você sai da MasterClass com um passo a passo claro para aplicar o que aprendeu e acesso a materiais de apoio para não caminhar sozinho."
   }];
-  const paraQuemE = ["Ter uma renda extra trabalhando de casa", "Construir uma fonte de renda principal sem sair de casa", "Começar sem investir em estoque", "Ter flexibilidade de horários", "Estar disposto a aprender e aplicar o passo a passo"];
+  const paraQuemE = ["Trabalha registrado ou como autônomo e quer montar uma renda extra pela internet.", "Já pensou em vender na Shopee, Mercado Livre ou Magalu, mas não sabe por onde começar.", "Não tem dinheiro pra comprar estoque e tem medo de ficar com produto parado.", "Quer trabalhar de casa, usando apenas celular ou computador.", "Está disposto a aprender algo novo e aplicar ainda esse mês."];
   return <div className="min-h-screen bg-black overflow-x-hidden">
-      <CountdownBanner offerName="Oferta Especial" endDate={OFFER_END_DATE} variant="gold" />
+      <CountdownBanner offerName="inscrições para essa aula gratuita" endDate={OFFER_END_DATE} variant="gold" />
       {/* Spacer for fixed banner */}
       <div className="h-[72px] sm:h-[56px]" />
       {/* Hero Section - Two Column Layout */}
@@ -84,20 +84,23 @@ const SoudropElite = () => {
               <AnimatedSection delay={100}>
                 {/* Mobile headline */}
                 <h1 className="lg:hidden text-[1.5rem] sm:text-2xl font-black text-white leading-[1.15] tracking-tight">
-                  <span className="block">Venda sem estoque e faça</span>
-                  <span className="block">seus primeiros <span className="text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)]">R$ 10.000 por mês</span></span>
+                  <span className="block">Comece a vender em marketplaces</span>
+                  <span className="block">sem estoque e busque seus primeiros <span className="text-elite-gold drop-shadow-[0_0_25px_rgba(251,191,36,0.5)]">R$ 10.000 por mês</span></span>
                 </h1>
                 {/* Desktop headline */}
                 <h1 className="hidden lg:block text-[2.8rem] xl:text-[3.2rem] font-black text-white leading-[1.1] tracking-tight">
-                  <span className="block">Venda sem estoque e faça</span>
-                  <span className="block">seus primeiros <span className="text-elite-gold drop-shadow-[0_0_30px_rgba(251,191,36,0.5)]">R$ 10.000 por mês</span></span>
+                  <span className="block">Comece a vender em marketplaces</span>
+                  <span className="block">sem estoque e busque seus primeiros <span className="text-elite-gold drop-shadow-[0_0_30px_rgba(251,191,36,0.5)]">R$ 10.000 por mês</span></span>
                 </h1>
               </AnimatedSection>
               
               {/* Subtitle */}
               <AnimatedSection delay={150}>
                 <p className="text-[13px] sm:text-sm lg:text-lg text-gray-200 leading-relaxed lg:max-w-[90%] max-w-[320px] mx-auto lg:mx-0">
-                  Masterclass gratuita onde eu te mostro, passo a passo, como vender produtos simples em marketplaces (Shopee, Mercado Livre, Magalu etc.) sem investir em estoque.
+                  Aula 100% online e gratuita onde eu te mostro, passo a passo, como vender produtos físicos na Shopee, Mercado Livre, Magalu e outros, mesmo começando do zero e sem investir em estoque.
+                </p>
+                <p className="text-[11px] sm:text-xs lg:text-sm text-elite-gold/80 mt-2 lg:mt-3">
+                  Data: 15/12/2025 · Horário: 20h (Brasília) · Ao vivo, com vagas limitadas
                 </p>
               </AnimatedSection>
               
@@ -111,15 +114,15 @@ const SoudropElite = () => {
                   <ul className="space-y-1.5 lg:space-y-2 text-[11px] sm:text-xs lg:text-sm text-gray-300 lg:max-w-[90%]">
                     <li className="flex items-start gap-2">
                       <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>Quais tipos de produtos escolher pra começar do jeito certo</span>
+                      <span>Como escolher produtos simples que têm demanda real e não ficam encalhados.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>Como vender nos principais marketplaces sem depender de loja física</span>
+                      <span>Como anunciar nos marketplaces mesmo sem ter experiência com tráfego hoje.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-3 h-3 lg:w-4 lg:h-4 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <span>Um plano simples pra chegar nos seus primeiros R$ 10.000 por mês vendendo online</span>
+                      <span>O passo a passo do modelo sem estoque que usamos todos os dias na SouDrop.</span>
                     </li>
                   </ul>
                 </div>
@@ -152,20 +155,13 @@ const SoudropElite = () => {
                     letterSpacing: "0.02em",
                     textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
                   }}>
-                      ​GARANTA A SUA VAGA EXCLUSIVA           <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
+                      QUERO PARTICIPAR DA AULA GRATUITA <ArrowRight className="inline-block ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                     </button>
                   </div>
                   
                   {/* Urgency text */}
-                  <p className="text-[11px] sm:text-xs lg:text-sm text-gray-500 mt-3 lg:mt-4 flex items-center gap-2 flex-wrap justify-center lg:justify-start">
-                    <span className="flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-green-500 rounded-full animate-pulse" />
-                      Método ao vivo
-                    </span>
-                    <span className="text-gray-600">·</span>
-                    <span>Vagas limitadas</span>
-                    <span className="text-gray-600">·</span>
-                    <span>Não fica gravado depois</span>
+                  <p className="text-[11px] sm:text-xs lg:text-sm text-gray-400 mt-3 lg:mt-4 text-center lg:text-left max-w-[320px] lg:max-w-none mx-auto lg:mx-0">
+                    Você será direcionado para a página de inscrição e recebe o link da aula no seu e-mail e WhatsApp.
                   </p>
                 </div>
               </AnimatedSection>
@@ -199,7 +195,7 @@ const SoudropElite = () => {
               O que você vai <span className="text-elite-gold">aprender na aula</span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              Na aula ao vivo, eu vou te mostrar exatamente como transformar produtos simples em uma operação lucrativa, mesmo começando do zero. Sem enrolação, sem teoria demais — só o que funciona na prática.
+              Na aula ao vivo, vou te mostrar como sair do zero e montar uma operação simples de vendas em marketplaces, mesmo que hoje você não saiba por onde começar, tenha medo de investir em estoque ou já tenha tentado vender online e travou em produto, anúncio ou frete.
             </p>
           </AnimatedSection>
         </div>
@@ -210,7 +206,7 @@ const SoudropElite = () => {
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 text-center text-white">
-              Essa aula é para <span className="text-elite-gold">quem quer:</span>
+              Essa aula é <span className="text-elite-gold">pra você que:</span>
             </h2>
           </AnimatedSection>
           
@@ -299,12 +295,15 @@ const SoudropElite = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
         <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10 text-white">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
               O que está acontecendo <span className="text-elite-gold">HOJE</span> na SouDrop
             </h2>
+            <p className="text-gray-400 text-sm sm:text-base lg:text-lg mb-8 sm:mb-10">
+              Resultados reais de operações que aplicam o mesmo método que você vai conhecer na aula.
+            </p>
             
             {/* Prints de Resultados */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-6 sm:mb-8">
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30">
                 <img alt="Print de resultado 1" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/6362dee9-25a7-4708-a7ce-924ddbf16d89.jpg" />
               </div>
@@ -317,9 +316,24 @@ const SoudropElite = () => {
             </div>
 
             <p className="text-elite-gold font-semibold text-sm sm:text-base lg:text-xl mb-8 sm:mb-10">
-              Aprenda com quem já vendeu e continua vendendo todos os dias
+              Aprenda com quem já vende e continua vendendo todos os dias em marketplaces, usando produtos simples e o modelo sem estoque.
             </p>
             
+            {/* Depoimentos */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+              <div className="p-5 sm:p-6 bg-black/50 border border-elite-gold/20 rounded-xl text-left">
+                <p className="text-gray-300 text-sm sm:text-base italic mb-4">"Eu não tinha dinheiro pra estoque. Comecei com o método sem estoque e em 3 meses bati mais de R$ 7.000 em vendas."</p>
+                <p className="text-elite-gold font-semibold text-sm">— João P.</p>
+              </div>
+              <div className="p-5 sm:p-6 bg-black/50 border border-elite-gold/20 rounded-xl text-left">
+                <p className="text-gray-300 text-sm sm:text-base italic mb-4">"Já tinha tentado vender sozinho e nada andava. Depois da aula e do método, tive meus primeiros pedidos em menos de 30 dias."</p>
+                <p className="text-elite-gold font-semibold text-sm">— Mariana S.</p>
+              </div>
+              <div className="p-5 sm:p-6 bg-black/50 border border-elite-gold/20 rounded-xl text-left md:col-span-2 lg:col-span-1 md:max-w-[50%] md:mx-auto lg:max-w-full">
+                <p className="text-gray-300 text-sm sm:text-base italic mb-4">"O passo a passo é direto ao ponto. Consegui aplicar tudo e hoje já tenho uma renda extra todo mês."</p>
+                <p className="text-elite-gold font-semibold text-sm">— Carlos M.</p>
+              </div>
+            </div>
             
           </AnimatedSection>
         </div>
@@ -329,9 +343,12 @@ const SoudropElite = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-gradient-to-b from-[#050A00] to-black border-y border-elite-gold/10">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-8 sm:mb-10 lg:mb-12 text-white">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 text-white">
               Por que confiar no <span className="text-elite-gold">Método</span>
             </h2>
+            <p className="text-gray-400 text-sm sm:text-base lg:text-lg mb-8 sm:mb-10 lg:mb-12 max-w-3xl mx-auto">
+              Por trás desse método existe uma operação real em marketplaces, com mais de 5 anos de jogo e centenas de alunos aplicando no dia a dia. Não é teoria de quem só vive de curso, é o mesmo modelo que usamos na SouDrop pra vender produtos simples todos os dias.
+            </p>
           </AnimatedSection>
           <div className="grid md:grid-cols-3 gap-4 sm:gap-5 lg:gap-8">
             <AnimatedSection delay={100}>
@@ -365,10 +382,10 @@ const SoudropElite = () => {
           <AnimatedSection>
             <div className="text-center mb-8 sm:mb-10 lg:mb-12">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-white">
-                Garanta Sua Vaga <span className="text-elite-gold">Na Aula</span>
+                Se você leu até aqui, <span className="text-elite-gold">o próximo passo é simples:</span>
               </h2>
-              <p className="text-sm sm:text-base lg:text-xl text-gray-400">
-                Aula gratuita e ao vivo — vagas limitadas
+              <p className="text-sm sm:text-base lg:text-lg text-gray-400 max-w-2xl mx-auto">
+                Clique no botão abaixo, escolha o melhor horário e receba o link da aula no seu e-mail e WhatsApp. A aula é 100% online, gratuita e não fica disponível depois. É a oportunidade de ver o método completo e decidir se faz sentido pra você.
               </p>
             </div>
           </AnimatedSection>
@@ -377,34 +394,12 @@ const SoudropElite = () => {
             <Card className="bg-gradient-to-br from-[#0A0800]/90 to-[#0A0800]/60 border-2 border-elite-gold/40 shadow-[0_0_60px_rgba(251,191,36,0.15)]">
               <CardContent className="p-6 sm:p-8 md:p-10 lg:p-12">
                 <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 bg-elite-gold/10 border border-elite-gold/30 rounded-full mb-4 sm:mb-6">
-                    <Crown className="w-4 h-4 sm:w-5 sm:h-5 text-elite-gold" />
-                    <span className="text-elite-gold font-bold text-xs sm:text-sm uppercase tracking-wider">Método Sem Estoque</span>
-                  </div>
-                  
-                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 text-white">
-                    Descubra como faturar alto<br />
-                    <span className="text-elite-gold">vendendo produtos simples</span>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6 text-white">
+                    Complete sua inscrição em menos de 30 segundos
                   </h3>
-
-                  <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 text-left max-w-md mx-auto">
-                    <div className="flex items-start gap-3">
-                      <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-300 text-sm sm:text-base">Aula 100% gratuita e ao vivo</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-300 text-sm sm:text-base">Estratégia completa revelada</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-300 text-sm sm:text-base">Materiais bônus durante a aula</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-300 text-sm sm:text-base">Tire suas dúvidas em tempo real</p>
-                    </div>
-                  </div>
+                  <p className="text-gray-400 text-sm sm:text-base mb-6 sm:mb-8 max-w-lg mx-auto">
+                    Escolha a data, confirme seus dados e clique no botão para garantir seu acesso à aula gratuita. Se você mora no Brasil, pode deixar o fuso horário como está.
+                  </p>
 
                   <div style={{
                   textAlign: 'center'
@@ -428,12 +423,15 @@ const SoudropElite = () => {
                     letterSpacing: "0.02em",
                     maxWidth: "100%"
                   }}>
-                      GARANTIR MINHA VAGA AGORA <ArrowRight className="inline-block ml-2 h-5 w-5" />
+                      QUERO PARTICIPAR DA AULA GRATUITA <ArrowRight className="inline-block ml-2 h-5 w-5" />
                     </button>
                   </div>
 
-                  <p className="mt-5 sm:mt-6 text-gray-500 text-xs sm:text-sm">
-                    • Método ao vivo · Vagas limitadas · Não fica disponível depois
+                  <p className="mt-4 sm:mt-5 text-gray-500 text-xs sm:text-sm">
+                    Leva menos de 30 segundos pra fazer a inscrição.
+                  </p>
+                  <p className="mt-3 text-gray-600 text-[10px] sm:text-xs">
+                    🔒 Seus dados estão seguros. Nada de spam – você pode sair da lista quando quiser.
                   </p>
                 </div>
               </CardContent>
