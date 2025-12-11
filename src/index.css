@@ -344,6 +344,7 @@
 .hero-soudrop-elite {
   position: relative;
   min-height: auto;
+  overflow: visible;
 }
 
 .hero-content-wrapper {
@@ -351,7 +352,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 32px;
-  padding-bottom: 0;
+  padding-bottom: 24px;
 }
 
 .hero-left {
@@ -375,15 +376,15 @@
   align-items: center;
   margin-top: 0;
   min-height: auto;
-  position: relative;
-  z-index: 20;
+  position: static;
+  z-index: auto;
 }
 
 .renan-hero-wrapper {
   display: block;
   width: 100%;
-  position: relative;
-  z-index: 20;
+  position: static;
+  z-index: auto;
   margin-bottom: 0;
 }
 
@@ -401,8 +402,8 @@
   padding-top: 24px;
   padding-bottom: 48px;
   margin-top: 0;
-  position: relative;
-  z-index: 10;
+  position: static;
+  z-index: auto;
 }
 
 @media (min-width: 768px) {
