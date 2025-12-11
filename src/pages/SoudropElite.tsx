@@ -1,23 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { trackScrollDepth, trackTimeOnPage } from "@/lib/fbq";
 
 const SoudropElite = () => {
   const formContainerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    // Inject WebinarJam script into the container
-    if (formContainerRef.current) {
-      // Clear any existing content
-      formContainerRef.current.innerHTML = '';
+  const [hasTrackedScroll25, setHasTrackedScroll25] = useState(false);
+  const [hasTrackedTime30, setHasTrackedTime30] = useState(false);
 
-      // Create wrapper div
+  // WebinarJam form injection
+  useEffect(() => {
+    if (formContainerRef.current) {
+      formContainerRef.current.innerHTML = '';
       const wrapper = document.createElement('div');
       wrapper.className = 'wj-embed-wrapper';
       wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
-
-      // Create and append script - white background version
       const script = document.createElement('script');
       script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=Register&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1';
       script.async = true;
@@ -25,6 +24,37 @@ const SoudropElite = () => {
       formContainerRef.current.appendChild(wrapper);
     }
   }, []);
+
+  // Scroll Depth tracking - 25%
+  useEffect(() => {
+    const handleScroll = () => {
+      if (hasTrackedScroll25) return;
+      
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      
+      if (scrollPercent >= 25) {
+        trackScrollDepth("soudrop", 25);
+        setHasTrackedScroll25(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [hasTrackedScroll25]);
+
+  // Time on Page tracking - 30 seconds
+  useEffect(() => {
+    if (hasTrackedTime30) return;
+    
+    const timer = setTimeout(() => {
+      trackTimeOnPage("soudrop", 30);
+      setHasTrackedTime30(true);
+    }, 30000);
+
+    return () => clearTimeout(timer);
+  }, [hasTrackedTime30]);
   const pilares = [{
     icon: TrendingUp,
     title: "Produtos simples que vendem todo dia: como encontrar e validar",
