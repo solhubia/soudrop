@@ -443,7 +443,7 @@
   }
 
   .renan-hero-wrapper {
-    margin-bottom: -40px;
+    margin-bottom: 0;
     position: relative;
     z-index: 10;
   }
@@ -455,9 +455,16 @@
   }
 
   .second-section-soudrop {
-    padding-top: 24px;
+    padding-top: 0;
     padding-bottom: 80px;
     margin-top: 0;
+  }
+
+  .second-section-soudrop > .relative:first-child img {
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
+    object-position: bottom;
   }
 }
 
