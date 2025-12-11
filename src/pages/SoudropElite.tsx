@@ -124,6 +124,20 @@ const SoudropElite = () => {
 
       {/* O que é a aula */}
       <section className="second-section-soudrop relative z-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
+        {/* Imagem do Renan acima do texto */}
+        <div className="relative w-full flex justify-center">
+          {/* Gold glow behind photo */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] bg-elite-gold/30 rounded-full blur-[80px] lg:blur-[100px]" />
+          </div>
+          <img 
+            alt="Renan Ferreira - Especialista em Vendas Online" 
+            className="relative z-10 w-full max-w-[400px] lg:max-w-[500px] h-auto object-contain object-bottom drop-shadow-[0_0_50px_rgba(251,191,36,0.5)]" 
+            src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" 
+            loading="eager" 
+          />
+        </div>
+        
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <p className="text-xs sm:text-sm text-elite-gold/80 mb-3 sm:mb-4">
