@@ -103,7 +103,7 @@ const SoudropElite = () => {
 
           {/* RIGHT COLUMN - Renan Photo */}
           <div className="hero-right">
-            <AnimatedSection delay={100} className="relative h-full flex items-end">
+            <AnimatedSection delay={100} className="relative flex items-end lg:h-full">
               {/* Strong gold glow behind photo */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] bg-elite-gold/30 rounded-full blur-[80px] lg:blur-[100px]" />
