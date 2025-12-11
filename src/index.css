@@ -469,28 +469,28 @@
   }
 
   .renan-hero-wrapper {
-    margin-bottom: -60px;
+    margin-bottom: -100px;
     position: relative;
     z-index: 10;
   }
 
-  /* Sombra de chão abaixo do Renan */
+  /* Sombra de chão realista abaixo do Renan */
   .renan-hero-wrapper::after {
     content: "";
     position: absolute;
-    bottom: 40px;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%;
-    height: 30px;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, transparent 70%);
-    filter: blur(12px);
+    width: 90%;
+    height: 60px;
+    background: radial-gradient(ellipse 100% 100% at center, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.25) 50%, transparent 80%);
+    filter: blur(20px);
     z-index: -1;
   }
 
   .renan-hero-wrapper img {
-    max-height: 720px;
-    max-width: 650px;
+    max-height: 820px;
+    max-width: 740px;
     width: auto;
   }
 
@@ -512,7 +512,15 @@
   }
 
   .renan-hero-wrapper img {
-    max-height: 820px;
-    max-width: 740px;
+    max-height: 920px;
+    max-width: 840px;
+  }
+}
+
+/* 1440px+ screens */
+@media (min-width: 1440px) {
+  .renan-hero-wrapper img {
+    max-height: 1000px;
+    max-width: 900px;
   }
 }
