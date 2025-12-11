@@ -104,14 +104,14 @@ const SoudropElite = () => {
           {/* RIGHT COLUMN - Renan Photo */}
           <div className="hero-right">
             <AnimatedSection delay={100} className="relative flex items-end lg:h-full">
-              {/* Strong gold glow behind photo */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] bg-elite-gold/30 rounded-full blur-[80px] lg:blur-[100px]" />
-                <div className="absolute w-[180px] h-[240px] sm:w-[260px] sm:h-[340px] lg:w-[350px] lg:h-[420px] bg-yellow-500/25 rounded-full blur-[60px] lg:blur-[80px]" />
+              {/* Soft gold glow behind photo - more natural gradient */}
+              <div className="absolute inset-0 flex items-end justify-center pointer-events-none lg:pb-20">
+                <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[550px] lg:h-[550px] bg-elite-gold/20 rounded-full blur-[100px] lg:blur-[150px]" />
+                <div className="absolute w-[180px] h-[240px] sm:w-[260px] sm:h-[340px] lg:w-[400px] lg:h-[500px] bg-yellow-400/15 rounded-full blur-[80px] lg:blur-[120px]" />
               </div>
               
               <div className="renan-hero-wrapper">
-                <img alt="Renan Ferreira - Especialista em Vendas Online" className="block relative z-10 h-auto object-contain drop-shadow-[0_0_50px_rgba(251,191,36,0.5)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" loading="eager" />
+                <img alt="Renan Ferreira - Especialista em Vendas Online" className="block relative z-10 h-auto object-contain drop-shadow-[0_0_40px_rgba(251,191,36,0.35)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" loading="eager" />
               </div>
             </AnimatedSection>
           </div>

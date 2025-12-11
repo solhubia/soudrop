@@ -465,17 +465,32 @@
     align-items: flex-end;
     justify-content: center;
     margin-top: 0;
+    position: relative;
   }
 
   .renan-hero-wrapper {
-    margin-bottom: -40px;
+    margin-bottom: -60px;
     position: relative;
     z-index: 10;
   }
 
+  /* Sombra de chão abaixo do Renan */
+  .renan-hero-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 30px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, transparent 70%);
+    filter: blur(12px);
+    z-index: -1;
+  }
+
   .renan-hero-wrapper img {
-    max-height: 580px;
-    max-width: 520px;
+    max-height: 720px;
+    max-width: 650px;
     width: auto;
   }
 
@@ -497,7 +512,7 @@
   }
 
   .renan-hero-wrapper img {
-    max-height: 640px;
-    max-width: 580px;
+    max-height: 820px;
+    max-width: 740px;
   }
 }
