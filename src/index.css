@@ -1,40 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 @layer base {
   :root {
     /* --- OPERAÇÃO TIKTOK (AMARELO + AZUL ESCURO) --- */
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
-    
+
     --primary: 45 100% 51%;
     --primary-foreground: 0 0% 100%;
-    
+
     --secondary: 220 40% 12%;
     --secondary-foreground: 0 0% 100%;
-    
+
     --muted: 220 15% 95%;
     --muted-foreground: 220 10% 40%;
-    
+
     --accent: 45 100% 51%;
     --accent-foreground: 0 0% 100%;
-    
+
     --border: 220 15% 90%;
     --ring: 45 100% 51%;
-    
+
     --dark-gradient-from: 0 0% 18%;
     --dark-gradient-to: 0 0% 10%;
-    
+
     --card-dark: 220 40% 12%;
     --card-dark-foreground: 0 0% 100%;
-    
+
     --badge-success: 0 0% 100%;
     --badge-success-foreground: 0 0% 0%;
-    
+
     /* --- TEMA CAÇADOR (REFINADO - PRETO + ROSA + AMARELO) --- */
     --cacador-background: 275 38% 2%;
     --cacador-foreground: 0 0% 100%;
@@ -46,29 +45,29 @@
     --input: 0 0% 8%;
     --ring: 142 76% 45%;
     --radius: 1rem;
-    
+
     /* Cores SouDrop - Paleta Chamativa e Profissional */
     --soudrop-green: 142 76% 45%;
     --soudrop-yellow: 45 93% 58%;
     --soudrop-black: 220 25% 3%;
-    
+
     --primary: 142 76% 45%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 142 76% 50%;
     --primary-dark: 142 80% 30%;
-    
+
     --secondary: 45 93% 58%;
     --secondary-foreground: 220 25% 10%;
-    
+
     --muted: 220 15% 15%;
     --muted-foreground: 0 0% 65%;
-    
+
     --accent: 45 93% 58%;
     --accent-foreground: 220 25% 10%;
-    
+
     --destructive: 0 84% 50%;
     --destructive-foreground: 0 0% 98%;
-    
+
     /* Gradientes SouDrop - Chamativo e Profissional */
     --gradient-primary: linear-gradient(135deg, hsl(142 76% 45%), hsl(142 80% 35%));
     --gradient-hero: linear-gradient(135deg, hsl(220 25% 3%) 0%, hsl(142 50% 12%) 30%, hsl(220 25% 4%) 100%);
@@ -76,7 +75,7 @@
     --gradient-subtle: linear-gradient(180deg, hsl(220 25% 3%), hsl(220 20% 5%));
     --gradient-yellow: linear-gradient(135deg, hsl(45 93% 58%), hsl(45 90% 52%));
     --gradient-dynamic: linear-gradient(45deg, hsl(142 76% 45%), hsl(142 76% 50%), hsl(142 76% 45%));
-    
+
     /* Sombras SouDrop - Chamativas */
     --shadow-glow: 0 0 40px hsl(142 76% 45% / 0.4), 0 0 20px hsl(142 76% 45% / 0.2);
     --shadow-yellow-glow: 0 0 40px hsl(45 93% 58% / 0.5), 0 0 20px hsl(45 93% 58% / 0.3);
@@ -107,7 +106,7 @@
     --gradient-soudrop: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(168 76% 42%) 100%);
     --gradient-shopee: linear-gradient(135deg, hsl(0 72% 51%) 0%, hsl(14 91% 60%) 100%);
     --gradient-links-background: linear-gradient(135deg, hsl(222 15% 8%) 0%, hsl(222 15% 12%) 100%);
-    
+
     /* --- TEMA CAÇADOR DE PRODUTOS (REFINADO) --- */
     --cacador-bg-main: 275 38% 2%;
     --cacador-bg-alt: 275 38% 5%;
@@ -118,17 +117,17 @@
     --cacador-pink-light: 335 100% 65%;
     --cacador-yellow: 48 100% 50%;
     --cacador-dark-card: 0 0% 7%;
-    
+
     /* Gradientes Caçador Refinado */
     --gradient-cacador-hero: linear-gradient(135deg, hsl(275 38% 2%) 0%, hsl(335 100% 8%) 50%, hsl(275 38% 2%) 100%);
     --gradient-cacador-pink: linear-gradient(135deg, hsl(335 100% 50%) 0%, hsl(335 100% 45%) 100%);
     --gradient-cacador-cta: linear-gradient(135deg, hsl(48 100% 50%) 0%, hsl(48 100% 45%) 100%);
-    
+
     /* Sombras Caçador Refinado */
     --shadow-cacador-pink: 0 10px 60px hsl(335 100% 50% / 0.3);
     --shadow-cacador-yellow: 0 8px 40px hsl(48 100% 50% / 0.3);
     --shadow-cacador-cta: 0 4px 30px hsl(48 100% 50% / 0.4);
-    
+
     /* --- TEMA SOUDROP ELITE (PRETO + BRANCO + DOURADO) --- */
     --elite-black: 0 0% 0%;
     --elite-white: 0 0% 100%;
@@ -136,15 +135,15 @@
     --elite-gold-light: 45 100% 60%;
     --elite-gold-dark: 45 100% 40%;
     --elite-gray: 0 0% 20%;
-    
+
     /* Gradientes Elite */
     --gradient-elite-gold: linear-gradient(135deg, hsl(45 100% 51%) 0%, hsl(45 100% 40%) 100%);
     --gradient-elite-bg: linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(0 0% 5%) 50%, hsl(0 0% 0%) 100%);
-    
+
     /* Sombras Elite */
     --shadow-elite-gold: 0 10px 60px hsl(45 100% 51% / 0.3);
     --shadow-elite-gold-strong: 0 0 40px hsl(45 100% 51% / 0.5), 0 0 20px hsl(45 100% 51% / 0.3);
-    
+
     /* --- TEMA CHINA (PÁGINA ALTERNATIVA) --- */
     --china-background: 0 15% 8%;
     --china-foreground: 45 100% 98%;
@@ -158,7 +157,7 @@
     --gradient-china-hero: linear-gradient(135deg, hsl(0 80% 50%) 0%, hsl(0 70% 40%) 50%, hsl(0 15% 8%) 100%);
     --shadow-china-glow: 0 0 50px hsl(0 80% 50% / 0.4);
     --shadow-gold-glow: 0 0 40px hsl(45 100% 55% / 0.3);
-    
+
     /* --- TEMA FRIO / GELO (SOUDROP START) --- */
     --ice-bg-main: 222 47% 4%;
     --ice-bg-card: 222 45% 5%;
@@ -170,18 +169,18 @@
     --ice-text-primary: 210 40% 98%;
     --ice-text-secondary: 220 9% 66%;
     --ice-border: 217 19% 27%;
-    
+
     /* Gradientes Tema Frio */
     --gradient-ice-hero: linear-gradient(135deg, hsl(222 47% 4%) 0%, hsl(222 45% 8%) 30%, hsl(222 43% 5%) 100%);
     --gradient-ice-primary: linear-gradient(90deg, hsl(199 89% 48%) 0%, hsl(199 89% 48%) 50%, hsl(243 75% 59%) 100%);
     --gradient-ice-card: linear-gradient(145deg, hsl(222 45% 5%), hsl(222 43% 7%));
     --gradient-ice-subtle: linear-gradient(180deg, hsl(222 47% 4%), hsl(222 45% 6%));
-    
+
     /* Sombras Tema Frio */
     --shadow-ice-glow: 0 0 24px hsl(199 89% 48% / 0.25);
     --shadow-ice-cyan: 0 0 32px hsl(186 94% 65% / 0.3);
     --shadow-ice-purple: 0 0 28px hsl(243 75% 59% / 0.25);
-    
+
     /* --- TEMA VERDE FLORESTA (SOUDROP START NOVO) --- */
     --forest-bg-main: 160 30% 3%;
     --forest-bg-card: 160 25% 5%;
@@ -193,18 +192,18 @@
     --forest-text-primary: 150 20% 96%;
     --forest-text-secondary: 150 10% 65%;
     --forest-border: 160 15% 18%;
-    
+
     /* Gradientes Tema Verde Floresta */
     --gradient-forest-hero: linear-gradient(135deg, hsl(160 30% 3%) 0%, hsl(152 40% 8%) 40%, hsl(160 25% 4%) 100%);
     --gradient-forest-primary: linear-gradient(135deg, hsl(152 76% 42%) 0%, hsl(160 84% 39%) 100%);
     --gradient-forest-text: linear-gradient(90deg, hsl(152 76% 42%) 0%, hsl(84 81% 44%) 100%);
     --gradient-forest-card: linear-gradient(145deg, hsl(160 25% 5%), hsl(160 20% 8%));
-    
+
     /* Sombras Tema Verde Floresta */
     --shadow-forest-glow: 0 0 30px hsl(152 76% 42% / 0.3);
     --shadow-forest-lime: 0 0 25px hsl(84 81% 44% / 0.25);
     --shadow-forest-emerald: 0 0 35px hsl(160 84% 39% / 0.3);
-    
+
     /* --- TEMA CLUBE (VERMELHO + PRETO) --- */
     --clube-black: 0 0% 0%;
     --clube-black-alt: 0 0% 4%;
@@ -214,12 +213,12 @@
     --clube-white: 0 0% 100%;
     --clube-input-bg: 0 0% 6%;
     --clube-border: 0 0% 15%;
-    
+
     /* Gradientes Tema Clube */
     --gradient-clube-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 76% 10%) 50%, hsl(0 0% 2%) 100%);
     --gradient-clube-red: linear-gradient(135deg, hsl(0 76% 52%) 0%, hsl(0 76% 39%) 100%);
     --gradient-clube-card: linear-gradient(145deg, hsl(0 0% 2%), hsl(0 0% 5%));
-    
+
     /* Sombras Tema Clube */
     --shadow-clube-red: 0 10px 40px hsl(0 76% 52% / 0.3);
     --shadow-clube-red-strong: 0 0 40px hsl(0 76% 52% / 0.5), 0 0 20px hsl(0 76% 52% / 0.3);
@@ -236,7 +235,7 @@
   body {
     @apply bg-background text-foreground;
   }
-  
+
   /* Otimização de renderização de imagens */
   img {
     content-visibility: auto;
@@ -247,7 +246,7 @@
   .hover-scale {
     @apply transition-transform duration-300 hover:scale-105;
   }
-  
+
   .gradient-dynamic-text {
     background: var(--gradient-dynamic);
     background-size: 300% 100%;
@@ -265,38 +264,60 @@
     animation: fade-in-up 0.6s ease-out forwards;
     opacity: 0;
   }
-  
+
   .shadow-glow {
-    box-shadow: 0 0 40px rgba(0, 200, 83, 0.4), 0 0 20px rgba(0, 200, 83, 0.2);
+    box-shadow:
+      0 0 40px rgba(0, 200, 83, 0.4),
+      0 0 20px rgba(0, 200, 83, 0.2);
   }
-  
+
   .shadow-yellow-glow {
-    box-shadow: 0 0 40px rgba(255, 202, 40, 0.5), 0 0 20px rgba(255, 202, 40, 0.3);
+    box-shadow:
+      0 0 40px rgba(255, 202, 40, 0.5),
+      0 0 20px rgba(255, 202, 40, 0.3);
   }
-  
+
   .shadow-cta {
-    box-shadow: 0 4px 20px rgba(255, 202, 40, 0.4), 0 0 40px rgba(255, 202, 40, 0.2);
+    box-shadow:
+      0 4px 20px rgba(255, 202, 40, 0.4),
+      0 0 40px rgba(255, 202, 40, 0.2);
   }
-  
+
   .drop-shadow-glow {
     filter: drop-shadow(0 0 20px rgba(0, 200, 83, 0.6));
   }
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes shimmer {
@@ -398,7 +419,7 @@
     right: 0;
     bottom: 0;
     height: 120px;
-    background: linear-gradient(to bottom, transparent 0%, #050A00 100%);
+    background: linear-gradient(to bottom, transparent 0%, #050a00 100%);
     pointer-events: none;
     z-index: 15;
   }
@@ -445,7 +466,7 @@
   .renan-hero-wrapper {
     margin-bottom: -40px;
     position: relative;
-    z-index: 10;
+    z-index: 9999;
   }
 
   .renan-hero-wrapper img {
