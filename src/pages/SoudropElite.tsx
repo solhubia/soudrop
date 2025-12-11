@@ -102,12 +102,14 @@ const SoudropElite = () => {
             <AnimatedSection delay={0}>
               <div className="hero-card-desktop">
                 <div className="hero-copy">
-                  {/* Logo */}
+                  {/* Logo/Title */}
                   <div className="mb-5 lg:mb-6">
-                    <div className="flex items-center gap-2">
-                      <span className="text-elite-gold font-black text-xl sm:text-2xl tracking-tight">MASTERCLASS</span>
-                      <span className="text-white font-light text-xl sm:text-2xl tracking-tight">A FÓRMULA DA LIBERDADE</span>
-                    </div>
+                    <span className="inline-block px-3 py-1 bg-elite-gold/20 border border-elite-gold/40 rounded-md text-elite-gold text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">
+                      MASTERCLASS
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight tracking-tight">
+                      A FÓRMULA DA<br className="hidden sm:block" /> LIBERDADE
+                    </h2>
                   </div>
                   
                   {/* Headline - H1 */}
