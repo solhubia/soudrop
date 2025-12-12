@@ -268,38 +268,39 @@ const SoudropElite = () => {
               Resultados reais de operações que aplicam o mesmo método que você vai conhecer na aula.
             </p>
             
-            {/* Prints de Resultados */}
+            {/* Prints de Resultados com Depoimentos */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-6 sm:mb-8">
+              {/* Card 1 - Imagem + Depoimento */}
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30">
                 <img alt="Print de resultado 1" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/6362dee9-25a7-4708-a7ce-924ddbf16d89.jpg" />
+                <div className="p-4 sm:p-5 text-left">
+                  <p className="text-gray-300 text-sm sm:text-base italic mb-3">"Eu não tinha dinheiro pra estoque. Comecei com o método sem estoque e em 3 meses bati mais de R$ 7.000 em vendas."</p>
+                  <p className="text-elite-gold font-semibold text-sm">— João P.</p>
+                </div>
               </div>
+              
+              {/* Card 2 - Imagem + Depoimento */}
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30">
                 <img alt="Print de resultado 2" src="/lovable-uploads/888fc9cb-6f97-41c8-b7e7-87dc12f0e926.jpg" className="w-full h-48 sm:h-56 lg:h-64 object-fill" />
+                <div className="p-4 sm:p-5 text-left">
+                  <p className="text-gray-300 text-sm sm:text-base italic mb-3">"Já tinha tentado vender sozinho e nada andava. Depois da aula e do método, tive meus primeiros pedidos em menos de 30 dias."</p>
+                  <p className="text-elite-gold font-semibold text-sm">— Mariana S.</p>
+                </div>
               </div>
+              
+              {/* Card 3 - Imagem + Depoimento */}
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30 md:col-span-2 lg:col-span-1 md:max-w-[50%] md:mx-auto lg:max-w-full">
                 <img alt="Print de resultado 3" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/3442ca16-45c6-4389-95df-18daca740672.jpg" />
+                <div className="p-4 sm:p-5 text-left">
+                  <p className="text-gray-300 text-sm sm:text-base italic mb-3">"O passo a passo é direto ao ponto. Consegui aplicar tudo e hoje já tenho uma renda extra todo mês."</p>
+                  <p className="text-elite-gold font-semibold text-sm">— Carlos M.</p>
+                </div>
               </div>
             </div>
 
             <p className="text-elite-gold font-semibold text-sm sm:text-base lg:text-xl mb-8 sm:mb-10">
               Aprenda com quem já vende e continua vendendo todos os dias em marketplaces, usando produtos simples e o modelo sem estoque.
             </p>
-            
-            {/* Depoimentos */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-              <div className="p-5 sm:p-6 bg-black/50 border border-elite-gold/20 rounded-xl text-left">
-                <p className="text-gray-300 text-sm sm:text-base italic mb-4">"Eu não tinha dinheiro pra estoque. Comecei com o método sem estoque e em 3 meses bati mais de R$ 7.000 em vendas."</p>
-                <p className="text-elite-gold font-semibold text-sm">— João P.</p>
-              </div>
-              <div className="p-5 sm:p-6 bg-black/50 border border-elite-gold/20 rounded-xl text-left">
-                <p className="text-gray-300 text-sm sm:text-base italic mb-4">"Já tinha tentado vender sozinho e nada andava. Depois da aula e do método, tive meus primeiros pedidos em menos de 30 dias."</p>
-                <p className="text-elite-gold font-semibold text-sm">— Mariana S.</p>
-              </div>
-              <div className="p-5 sm:p-6 bg-black/50 border border-elite-gold/20 rounded-xl text-left md:col-span-2 lg:col-span-1 md:max-w-[50%] md:mx-auto lg:max-w-full">
-                <p className="text-gray-300 text-sm sm:text-base italic mb-4">"O passo a passo é direto ao ponto. Consegui aplicar tudo e hoje já tenho uma renda extra todo mês."</p>
-                <p className="text-elite-gold font-semibold text-sm">— Carlos M.</p>
-              </div>
-            </div>
             
           </AnimatedSection>
         </div>
