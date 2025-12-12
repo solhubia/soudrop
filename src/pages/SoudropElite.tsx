@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { trackScrollDepth, trackTimeOnPage } from "@/lib/fbq";
-
 const SoudropElite = () => {
   const formContainerRef = useRef<HTMLDivElement>(null);
   const [hasTrackedScroll25, setHasTrackedScroll25] = useState(false);
@@ -29,30 +28,27 @@ const SoudropElite = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (hasTrackedScroll25) return;
-      
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      
+      const scrollPercent = scrollTop / docHeight * 100;
       if (scrollPercent >= 25) {
         trackScrollDepth("soudrop", 25);
         setHasTrackedScroll25(true);
       }
     };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, {
+      passive: true
+    });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasTrackedScroll25]);
 
   // Time on Page tracking - 30 seconds
   useEffect(() => {
     if (hasTrackedTime30) return;
-    
     const timer = setTimeout(() => {
       trackTimeOnPage("soudrop", 30);
       setHasTrackedTime30(true);
     }, 30000);
-
     return () => clearTimeout(timer);
   }, [hasTrackedTime30]);
   const pilares = [{
@@ -176,7 +172,7 @@ const SoudropElite = () => {
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 text-center text-white">
-              Essa aula é <span className="text-elite-gold">pra você que:</span>
+              Esse evento é <span className="text-elite-gold">pra você que:</span>
             </h2>
           </AnimatedSection>
           
