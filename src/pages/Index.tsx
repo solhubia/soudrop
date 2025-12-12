@@ -165,7 +165,7 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <div className="mb-4 animate-fade-in">
-              <Badge variant="secondary" className="mb-3 bg-primary/20 text-primary border-primary/30 text-sm px-4 py-2">
+              <Badge variant="secondary" className="mb-3 bg-[#22c55e]/20 text-[#22c55e] border border-[#22c55e]/30 text-sm px-4 py-2 hover:bg-[#16a34a]/30 hover:border-[#16a34a]/40 transition-colors">
                 Tecnologia, produtos exclusivos e crescimento exponencial
               </Badge>
             </div>
