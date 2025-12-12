@@ -1491,7 +1491,7 @@ const Index = () => {
                 <Button variant="secondary" size="lg" className="w-full mt-6" asChild>
                   <a href={planData.pro.link} target="_blank" rel="noopener noreferrer" onClick={() => trackEventOnce('pro_checkout', () => {
                   trackInitiateCheckout("soudrop", 397 * 12);
-                })} className="bg-primary text-primary-foreground">
+                })} className="text-primary-foreground bg-primary">
                     Começar Agora
                   </a>
                 </Button>
