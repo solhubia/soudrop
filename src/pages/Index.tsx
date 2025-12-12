@@ -1488,10 +1488,10 @@ const Index = () => {
                       <span className="text-sm text-primary-foreground/50">Gerente de contas</span>
                    </li>
                  </ul>
-                <Button variant="secondary" size="lg" className="w-full mt-6" asChild>
+                <Button variant="secondary" size="lg" className="w-full mt-6 bg-[#22c55e] hover:bg-[#16a34a] text-white" asChild>
                   <a href={planData.pro.link} target="_blank" rel="noopener noreferrer" onClick={() => trackEventOnce('pro_checkout', () => {
                   trackInitiateCheckout("soudrop", 397 * 12);
-                })} className="text-primary-foreground bg-primary">
+                })} className="text-white">
                     Começar Agora
                   </a>
                 </Button>
