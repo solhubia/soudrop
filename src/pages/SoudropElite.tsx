@@ -1,17 +1,28 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { trackScrollDepth, trackTimeOnPage } from "@/lib/fbq";
 const SoudropElite = () => {
+  const formContainerRef = useRef<HTMLDivElement>(null);
   const [hasTrackedScroll25, setHasTrackedScroll25] = useState(false);
   const [hasTrackedTime30, setHasTrackedTime30] = useState(false);
 
-  // Redirect to WebinarJam registration
-  const handleRegisterClick = () => {
-    window.location.href = 'https://event.webinarjam.com/register/8wgw0kty?country=BR&state=SP&timezone=America/Sao_Paulo';
-  };
+  // WebinarJam form injection
+  useEffect(() => {
+    if (formContainerRef.current) {
+      formContainerRef.current.innerHTML = '';
+      const wrapper = document.createElement('div');
+      wrapper.className = 'wj-embed-wrapper';
+      wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
+      const script = document.createElement('script');
+      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=Register&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1&country=BR&state=SP&timezone=America/Sao_Paulo';
+      script.async = true;
+      wrapper.appendChild(script);
+      formContainerRef.current.appendChild(wrapper);
+    }
+  }, []);
 
   // Scroll Depth tracking - 25%
   useEffect(() => {
@@ -110,14 +121,9 @@ const SoudropElite = () => {
                   </p>
                 </div>
                 
-                {/* Register Button */}
+                {/* WebinarJam Form */}
                 <div className="hero-form-wrapper">
-                  <button 
-                    onClick={handleRegisterClick}
-                    className="w-full py-4 px-8 bg-elite-gold hover:bg-yellow-500 text-black font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-elite-gold/30"
-                  >
-                    Quero Participar da Aula Gratuita
-                  </button>
+                  <div ref={formContainerRef} className="min-h-[200px]" />
                 </div>
               </div>
             </AnimatedSection>
