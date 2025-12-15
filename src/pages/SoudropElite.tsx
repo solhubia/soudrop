@@ -17,7 +17,7 @@ const SoudropElite = () => {
       wrapper.className = 'wj-embed-wrapper';
       wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
       const script = document.createElement('script');
-      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=Register&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1';
+      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=Register&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1&country=BR&state=SP&timezone=America/Sao_Paulo';
       script.async = true;
       wrapper.appendChild(script);
       formContainerRef.current.appendChild(wrapper);
