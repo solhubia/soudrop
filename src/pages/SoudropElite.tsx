@@ -16,57 +16,10 @@ const SoudropElite = () => {
       const wrapper = document.createElement('div');
       wrapper.className = 'wj-embed-wrapper';
       wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
-      
       const script = document.createElement('script');
-      // Força Brasil como padrão e adiciona parâmetro para forçar mobile a usar mesma lógica do desktop
-      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=Register&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1&country=BR&timezone=America/Sao_Paulo';
+      // Removi os parâmetros country, state e timezone para deixar o formulário detectar automaticamente
+      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=Register&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1';
       script.async = true;
-      
-      // Adiciona listener para tentar corrigir o comportamento após o carregamento
-      script.onload = () => {
-        // Aguarda um pouco para o form renderizar completamente
-        setTimeout(() => {
-          try {
-            // Tenta encontrar o iframe do WebinarJam
-            const iframe = formContainerRef.current?.querySelector('iframe');
-            if (iframe) {
-              // Força o iframe a ter largura 100% para melhor responsividade
-              iframe.style.width = '100%';
-              iframe.style.maxWidth = '100%';
-              
-              // Tenta acessar o conteúdo do iframe e manipular os selects
-              // Nota: isso só funciona se o iframe for do mesmo domínio (same-origin)
-              try {
-                const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
-                if (iframeDoc) {
-                  // Procura pelo select de país
-                  const countrySelect = iframeDoc.querySelector('select[name*="country" i], select[id*="country" i]');
-                  const stateSelect = iframeDoc.querySelector('select[name*="state" i], select[id*="state" i]');
-                  
-                  if (countrySelect) {
-                    // Força Brasil como selecionado
-                    const brazilOption = Array.from(countrySelect.options).find(
-                      opt => opt.value === 'BR' || opt.text.includes('Brazil') || opt.text.includes('Brasil')
-                    );
-                    if (brazilOption) {
-                      countrySelect.value = brazilOption.value;
-                      // Dispara evento change para atualizar os estados
-                      const changeEvent = new Event('change', { bubbles: true });
-                      countrySelect.dispatchEvent(changeEvent);
-                    }
-                  }
-                }
-              } catch (e) {
-                // Erro de cross-origin - esperado se o iframe for de outro domínio
-                console.log('WebinarJam iframe é cross-origin, não é possível manipular diretamente');
-              }
-            }
-          } catch (error) {
-            console.log('Erro ao tentar ajustar formulário:', error);
-          }
-        }, 1500);
-      };
-      
       wrapper.appendChild(script);
       formContainerRef.current.appendChild(wrapper);
     }
