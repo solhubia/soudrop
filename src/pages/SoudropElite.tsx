@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import renanPhoto from "@/assets/renan-ferreira.jpg";
+import soudropCreatorsBrasil from "@/assets/soudrop-creators-brasil.png";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { trackScrollDepth, trackTimeOnPage } from "@/lib/fbq";
 const SoudropElite = () => {
@@ -146,6 +147,13 @@ const SoudropElite = () => {
           </div>
             
         </div>
+        
+        {/* Logo Creators SouDrop Brasil - Bottom Right */}
+        <img 
+          src={soudropCreatorsBrasil} 
+          alt="Creators SouDrop Brasil" 
+          className="absolute bottom-4 right-4 lg:bottom-6 lg:right-6 w-[140px] lg:w-[220px] max-w-[260px] opacity-90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] pointer-events-none z-30"
+        />
       </section>
 
       {/* O que você vai ver neste evento - NEW SECTION */}
