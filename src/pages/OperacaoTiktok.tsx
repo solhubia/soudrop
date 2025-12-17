@@ -48,114 +48,93 @@ const OperacaoTiktok = () => {
         </p>
       </div>
 
-      {/* SEÇÃO 1 - HERO */}
-      <section className="bg-gradient-to-br from-[#0a0a0a] via-[#1a1a2e] to-[#16213e] min-h-[90vh] md:min-h-screen py-12 md:py-20 px-4 relative overflow-hidden">
-        {/* Background decorativo */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3"></div>
-        </div>
+      {/* SEÇÃO 1 - HERO CENTRALIZADO */}
+      <section className="relative min-h-[90vh] md:min-h-screen py-16 md:py-24 px-4 overflow-hidden bg-[#030712]">
+        {/* Background degradê azul/preto com vinheta */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] via-[#050a14] to-[#030712]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(0,0,0,0.6)_100%)]"></div>
+        
+        {/* Glow sutil centralizado */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
 
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* COLUNA ESQUERDA - TEXTO */}
-            <div className="order-1 lg:order-1 text-center lg:text-left">
-              {/* Logo */}
-              <div className="mb-6">
-                <img 
-                  src={creatorsLogo} 
-                  alt="Sou Drop CREATORS" 
-                  className="h-16 md:h-20 mx-auto lg:mx-0 object-contain"
-                />
+        <div className="container mx-auto max-w-5xl relative z-10 flex flex-col items-center text-center">
+          {/* Logo SouDrop Creators */}
+          <div className="mb-8">
+            <img 
+              src={creatorsLogo} 
+              alt="Sou Drop CREATORS" 
+              className="h-14 md:h-20 object-contain"
+            />
+          </div>
+
+          {/* Pill branca - MASTERCLASS GRATUITA */}
+          <div className="mb-8">
+            <span className="inline-flex items-center gap-2 bg-white text-gray-900 text-sm md:text-base font-semibold px-5 py-2.5 rounded-full shadow-lg">
+              ✓ MASTERCLASS 100% GRATUITA
+            </span>
+          </div>
+
+          {/* Título H1 gigante em CAPS */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.1] tracking-tight uppercase">
+            APRENDA A VENDER<br />
+            <span className="text-primary">SEM ESTOQUE</span>
+          </h1>
+
+          {/* Subtítulo com valor em negrito */}
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-3 max-w-3xl">
+            Descubra o método que já gerou milhões em vendas e fature de{" "}
+            <strong className="text-white font-bold">R$5.000 a R$30.000/mês</strong>
+          </p>
+
+          {/* Linha menor com opacity baixa */}
+          <p className="text-sm md:text-base text-gray-400 mb-10 max-w-2xl">
+            Mesmo sem seguidores, sem experiência e sem investir em tráfego pago
+          </p>
+
+          {/* Botão CTA amarelo pill */}
+          <div className="mb-12" id="cta-button">
+            <Button 
+              size="lg"
+              onClick={() => setIsModalOpen(true)}
+              className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-lg md:text-xl px-10 md:px-14 py-6 md:py-7 h-auto rounded-full font-black shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide"
+            >
+              QUERO ME INSCREVER GRÁTIS AGORA
+            </Button>
+          </div>
+
+          {/* 3 Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full max-w-4xl">
+            {/* Card 1 */}
+            <div className="bg-gray-900/60 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm">
+              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                <Users className="w-6 h-6 text-primary" />
               </div>
-
-              {/* Badge Gratuito */}
-              <div className="flex justify-center lg:justify-start mb-6">
-                <Badge className="bg-badge-success text-badge-success-foreground text-sm px-5 py-2 rounded-full font-semibold">
-                  ✓ MASTERCLASS 100% GRATUITA
-                </Badge>
-              </div>
-
-              {/* Título Principal */}
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-5 leading-tight">
-                Aprenda a vender{" "}
-                <span className="text-primary">SEM ESTOQUE</span>{" "}
-                e fature de R$5.000 a R$30.000/mês
-              </h1>
-
-              {/* Subtítulo */}
-              <p className="text-base md:text-lg text-gray-300 mb-6 max-w-xl mx-auto lg:mx-0">
-                Descubra o método que já gerou milhões em vendas online, 
-                mesmo para quem está começando do zero.
+              <p className="text-2xl md:text-3xl font-black text-white mb-1">+2.500</p>
+              <p className="text-gray-400 text-sm">
+                Alunos/afiliados já vendem com o catálogo SouDrop
               </p>
-
-              {/* Benefícios com ícones */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
-                <div className="flex items-center gap-2 text-gray-200 text-sm">
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
-                    <TrendingUp className="w-3.5 h-3.5 text-primary" />
-                  </div>
-                  <span>Sem investimento inicial</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-200 text-sm">
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Package className="w-3.5 h-3.5 text-primary" />
-                  </div>
-                  <span>Sem estoque</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-200 text-sm">
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Users className="w-3.5 h-3.5 text-primary" />
-                  </div>
-                  <span>Sem experiência</span>
-                </div>
-              </div>
-
-              {/* Botão CTA */}
-              <div className="flex flex-col items-center lg:items-start gap-3" id="cta-button">
-                <Button 
-                  size="lg"
-                  onClick={() => setIsModalOpen(true)}
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-[0_0_40px_rgba(var(--primary-rgb),0.4)] hover:shadow-[0_0_60px_rgba(var(--primary-rgb),0.5)] hover:scale-105 transition-all duration-300 w-full sm:w-auto"
-                >
-                  GARANTIR MINHA VAGA GRATUITA
-                </Button>
-                
-                {/* Linha de urgência */}
-                <p className="text-gray-400 text-sm flex items-center gap-2">
-                  <span className="inline-block w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                  Vagas limitadas • Pode sair do ar a qualquer momento
-                </p>
-              </div>
             </div>
 
-            {/* COLUNA DIREITA - FOTO */}
-            <div className="order-2 lg:order-2 flex justify-center lg:justify-end">
-              <div className="relative">
-                {/* Gradiente de fundo estilo G4 */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-primary/10 to-transparent rounded-3xl blur-2xl scale-110"></div>
-                <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 via-transparent to-primary/10 rounded-3xl"></div>
-                
-                {/* Container da imagem */}
-                <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-3xl p-2 border border-gray-700/50 backdrop-blur-sm">
-                  <img 
-                    src="/lovable-uploads/1f926195-0aa4-4cb4-ae07-1803732511ce.jpg" 
-                    alt="Renan Ferreira - Especialista em vendas sem estoque" 
-                    className="w-[280px] md:w-[380px] lg:w-[420px] h-auto rounded-2xl object-cover shadow-2xl"
-                  />
-                  
-                  {/* Badge flutuante */}
-                  <div className="absolute -bottom-4 -left-4 bg-card-dark border border-gray-700 rounded-xl p-3 shadow-xl">
-                    <div className="flex items-center gap-2">
-                      <Award className="w-8 h-8 text-primary" />
-                      <div>
-                        <p className="text-white font-bold text-sm">+R$10 milhões</p>
-                        <p className="text-gray-400 text-xs">em vendas geradas</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            {/* Card 2 */}
+            <div className="bg-gray-900/60 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm">
+              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                <Star className="w-6 h-6 text-primary" />
               </div>
+              <p className="text-xl md:text-2xl font-black text-white mb-1">Operação SouDrop</p>
+              <p className="text-gray-400 text-sm">
+                A gente cuida de estoque, separação, embalagem e envio
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-gray-900/60 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm">
+              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                <TrendingUp className="w-6 h-6 text-primary" />
+              </div>
+              <p className="text-xl md:text-2xl font-black text-white mb-1">Resultados na prática</p>
+              <p className="text-gray-400 text-sm">
+                Produtos validados + método simples pra começar
+              </p>
             </div>
           </div>
         </div>
