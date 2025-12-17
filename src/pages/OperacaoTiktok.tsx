@@ -1,46 +1,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Users, 
-  Star,
-  TrendingUp,
-  Play,
-  Package,
-  BarChart3,
-  Gift,
-  BookOpen,
-  Video,
-  MessageCircle,
-  UsersRound,
-  Award,
-  Lock,
-  X
-} from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Users, Star, TrendingUp, Play, Package, BarChart3, Gift, BookOpen, Video, MessageCircle, UsersRound, Award, Lock, X } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import creatorsLogo from "@/assets/creators-logo.png";
-
 const OperacaoTiktok = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const scrollToCTA = () => {
     const ctaButton = document.getElementById('cta-button');
-    ctaButton?.scrollIntoView({ behavior: 'smooth' });
+    ctaButton?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* FAIXA DO EVENTO NO TOPO */}
       <div className="bg-primary text-primary-foreground py-3 px-4 text-center">
         <p className="text-sm md:text-base font-semibold tracking-wide">
@@ -60,17 +33,13 @@ const OperacaoTiktok = () => {
         <div className="container mx-auto max-w-5xl relative z-10 flex flex-col items-center text-center">
           {/* Logo SouDrop Creators */}
           <div className="mb-8">
-            <img 
-              src={creatorsLogo} 
-              alt="Sou Drop CREATORS" 
-              className="h-14 md:h-20 object-contain"
-            />
+            <img src={creatorsLogo} alt="Sou Drop CREATORS" className="h-14 md:h-20 object-contain" />
           </div>
 
           {/* Pill branca - MASTERCLASS GRATUITA */}
           <div className="mb-8">
             <span className="inline-flex items-center gap-2 bg-white text-gray-900 text-sm md:text-base font-semibold px-5 py-2.5 rounded-full shadow-lg">
-              ✓ MASTERCLASS 100% GRATUITA
+              ✓ CURSO 100% GRATUITO
             </span>
           </div>
 
@@ -93,11 +62,7 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA amarelo pill */}
           <div className="mb-12" id="cta-button">
-            <Button 
-              size="lg"
-              onClick={() => setIsModalOpen(true)}
-              className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-lg md:text-xl px-10 md:px-14 py-6 md:py-7 h-auto rounded-full font-black shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide"
-            >
+            <Button size="lg" onClick={() => setIsModalOpen(true)} className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-lg md:text-xl px-10 md:px-14 py-6 md:py-7 h-auto rounded-full font-black shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
               QUERO ME INSCREVER GRÁTIS AGORA
             </Button>
           </div>
@@ -236,11 +201,7 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA */}
           <div className="flex justify-center">
-            <Button 
-              size="lg"
-              onClick={() => setIsModalOpen(true)}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300"
-            >
+            <Button size="lg" onClick={() => setIsModalOpen(true)} className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300">
               QUERO ME INSCREVER GRÁTIS AGORA
             </Button>
           </div>
@@ -335,11 +296,7 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA Final */}
           <div className="flex justify-center mt-12">
-            <Button 
-              size="lg"
-              onClick={() => setIsModalOpen(true)}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300"
-            >
+            <Button size="lg" onClick={() => setIsModalOpen(true)} className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300">
               QUERO ME INSCREVER GRÁTIS AGORA
             </Button>
           </div>
@@ -355,20 +312,12 @@ const OperacaoTiktok = () => {
             </DialogTitle>
           </DialogHeader>
           <div className="px-6 pb-6 overflow-y-auto">
-            <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfz26PKDg764nbjLyvKcG2PuSu4RaSXlNMh18dXAXWeRv0mHg/viewform?embedded=true"
-              width="100%"
-              height="643"
-              className="border-0 rounded-lg"
-              title="Formulário de Inscrição"
-            >
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfz26PKDg764nbjLyvKcG2PuSu4RaSXlNMh18dXAXWeRv0mHg/viewform?embedded=true" width="100%" height="643" className="border-0 rounded-lg" title="Formulário de Inscrição">
               Carregando…
             </iframe>
           </div>
         </DialogContent>
       </Dialog>
-    </div>
-  );
+    </div>;
 };
-
 export default OperacaoTiktok;
