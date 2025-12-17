@@ -15,11 +15,7 @@ const OperacaoTiktok = () => {
   };
   return <div className="min-h-screen">
       {/* FAIXA DO EVENTO NO TOPO */}
-      <div className="bg-primary text-primary-foreground py-3 px-4 text-center">
-        <p className="text-sm md:text-base font-semibold tracking-wide">
-          Masterclass Operação Sem Estoque • 100% online e gratuita
-        </p>
-      </div>
+      
 
       {/* SEÇÃO 1 - HERO CENTRALIZADO */}
       <section className="relative min-h-[90vh] md:min-h-screen py-16 md:py-24 px-4 overflow-hidden bg-[#030712]">
