@@ -45,8 +45,8 @@ const OperacaoTiktok = () => {
 
           {/* Título H1 gigante em CAPS */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.1] tracking-tight uppercase">
-            APRENDA A VENDER<br />
-            <span className="text-primary">SEM ESTOQUE</span>
+            MÉTODO TIKTOK <br />
+            <span className="text-primary">MILIONÁRIO</span>
           </h1>
 
           {/* Subtítulo com valor em negrito */}
