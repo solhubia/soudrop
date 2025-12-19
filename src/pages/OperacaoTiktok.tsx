@@ -58,9 +58,11 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA amarelo pill */}
           <div className="mb-12" id="cta-button">
-            <Button size="lg" onClick={() => setIsModalOpen(true)} className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-lg md:text-xl px-10 md:px-14 py-6 md:py-7 h-auto rounded-full font-black shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
-              QUERO ME INSCREVER GRÁTIS AGORA
-            </Button>
+            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-lg md:text-xl px-10 md:px-14 py-6 md:py-7 h-auto rounded-full font-black shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+                QUERO ME INSCREVER GRÁTIS AGORA
+              </Button>
+            </a>
           </div>
 
           {/* 3 Cards */}
