@@ -118,7 +118,7 @@ const SoudropElite = () => {
                   
                   {/* Supporting text */}
                   <p className="text-gray-300 text-sm sm:text-base mb-0 lg:mb-0">
-                    Aula 100% online e gratuita. Escolha o melhor horário e receba o link no seu e-mail e WhatsApp.
+                    Aula 100% online e gratuita. Escolha o melhor horário e receba o link no seu E-mail      
                   </p>
                 </div>
                 
@@ -151,11 +151,7 @@ const SoudropElite = () => {
         </div>
         
         {/* Logo Creators SouDrop Brasil - Top Right */}
-        <img 
-          src={soudropCreatorsBrasil} 
-          alt="Creators SouDrop Brasil" 
-          className="absolute top-4 right-4 lg:top-6 lg:right-6 w-[140px] lg:w-[220px] max-w-[260px] opacity-90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] pointer-events-none z-30"
-        />
+        <img src={soudropCreatorsBrasil} alt="Creators SouDrop Brasil" className="absolute top-4 right-4 lg:top-6 lg:right-6 w-[140px] lg:w-[220px] max-w-[260px] opacity-90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] pointer-events-none z-30" />
       </section>
 
       {/* O que você vai ver neste evento - NEW SECTION */}
