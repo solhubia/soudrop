@@ -412,25 +412,30 @@ const SoudropElite = () => {
                   <div style={{
                   textAlign: 'center'
                 }}>
-                    <button type="button" className="wj-embed-button w-full sm:w-auto" data-webinarHash="8wgw0kty" style={{
-                    border: "none",
-                    background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
-                    color: "rgb(0, 0, 0)",
-                    fontSize: "16px",
-                    padding: "18px 32px",
-                    boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
-                    borderRadius: "50px",
-                    whiteSpace: "normal",
-                    fontWeight: "700",
-                    lineHeight: "1.4",
-                    cursor: "pointer",
-                    fontFamily: "system-ui, -apple-system, sans-serif",
-                    wordBreak: "break-word",
-                    margin: "auto",
-                    transition: "all 0.3s ease",
-                    letterSpacing: "0.02em",
-                    maxWidth: "100%"
-                  }}>
+                    <button 
+                      type="button" 
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                      className="w-full sm:w-auto"
+                      style={{
+                        border: "none",
+                        background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
+                        color: "rgb(0, 0, 0)",
+                        fontSize: "16px",
+                        padding: "18px 32px",
+                        boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
+                        borderRadius: "50px",
+                        whiteSpace: "normal",
+                        fontWeight: "700",
+                        lineHeight: "1.4",
+                        cursor: "pointer",
+                        fontFamily: "system-ui, -apple-system, sans-serif",
+                        wordBreak: "break-word",
+                        margin: "auto",
+                        transition: "all 0.3s ease",
+                        letterSpacing: "0.02em",
+                        maxWidth: "100%"
+                      }}
+                    >
                       QUERO PARTICIPAR DA AULA GRATUITA <ArrowRight className="inline-block ml-2 h-5 w-5" />
                     </button>
                   </div>
