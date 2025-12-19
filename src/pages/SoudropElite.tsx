@@ -439,7 +439,7 @@ const SoudropElite = () => {
                   </div>
 
                   <p className="mt-4 sm:mt-5 text-gray-500 text-xs sm:text-sm">
-                    Leva menos de 30 segundos pra fazer a inscrição.
+                    Leva menos de 20 segundos pra fazer a inscrição.
                   </p>
                   <p className="mt-3 text-gray-600 text-[10px] sm:text-xs">
                     🔒 Seus dados estão seguros. Nada de spam – você pode sair da lista quando quiser.
