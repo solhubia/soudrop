@@ -163,39 +163,28 @@ const SoudropElite = () => {
                 O que você vai sair <span className="text-elite-gold">fazendo depois da aula</span>
               </h2>
               <p className="text-gray-400 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto">
-                Sem teoria — passo a passo pra começar a vender em marketplaces sem estoque.
+                É mão na massa: produto, preço e anúncio prontos pra rodar.
               </p>
             </div>
 
             {/* Checklist */}
             <div className="max-w-3xl mx-auto space-y-4 sm:space-y-5 mb-10 sm:mb-12">
-              {[
-                "Como vender em marketplace sem estoque (como funciona a SouDrop na prática)",
-                "Como escolher produtos que giram (sem chute)",
-                "Precificação + frete sem tomar prejuízo",
-                "Como criar anúncios/listagens que vendem",
-                "Fluxo do pedido: você vende → SouDrop separa/embala/despacha"
-              ].map((item, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-start gap-4 p-4 sm:p-5 bg-black/50 border border-elite-gold/30 rounded-xl hover:border-elite-gold/50 transition-all"
-                >
+              {["Como vender em marketplace sem estoque (como funciona a SouDrop na prática)", "Como escolher produtos que giram (sem chute)", "Precificação + frete sem tomar prejuízo", "Como criar anúncios/listagens que vendem", "Fluxo do pedido: você vende → SouDrop separa/embala/despacha"].map((item, index) => <div key={index} className="flex items-start gap-4 p-4 sm:p-5 bg-black/50 border border-elite-gold/30 rounded-xl hover:border-elite-gold/50 transition-all">
                   <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-elite-gold flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
                   </div>
                   <p className="text-white text-sm sm:text-base lg:text-lg font-medium">{item}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* CTA Button */}
             <div className="text-center">
-              <button
-                onClick={() => {
-                  formContainerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }}
-                className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
-              >
+              <button onClick={() => {
+              formContainerRef.current?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+              });
+            }} className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105">
                 QUERO ESCOLHER MEU HORÁRIO
               </button>
               <p className="text-gray-400 text-xs sm:text-sm mt-4">
