@@ -128,6 +128,9 @@ const SoudropElite = () => {
                     100% gratuito • sem cartão • leva 20 segundos
                   </p>
                   <div ref={formContainerRef} className="min-h-[200px]" />
+                  <p className="text-center text-xs sm:text-sm text-gray-400 mt-3">
+                    Vagas limitadas por horário (para manter o suporte e a sala organizada). <span className="text-elite-gold font-semibold">Garanta a sua agora.</span>
+                  </p>
                 </div>
               </div>
             </AnimatedSection>
