@@ -154,6 +154,58 @@ const SoudropElite = () => {
         <img src={soudropCreatorsBrasil} alt="Creators SouDrop Brasil" className="absolute top-4 right-4 lg:top-6 lg:right-6 w-[140px] lg:w-[220px] max-w-[260px] opacity-90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] pointer-events-none z-30" />
       </section>
 
+      {/* HERO 2 - O que você vai sair fazendo */}
+      <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-black">
+        <div className="max-w-[1400px] mx-auto">
+          <AnimatedSection>
+            <div className="text-center mb-8 sm:mb-10">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
+                O que você vai sair <span className="text-elite-gold">fazendo depois da aula</span>
+              </h2>
+              <p className="text-gray-400 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto">
+                Sem teoria — passo a passo pra começar a vender em marketplaces sem estoque.
+              </p>
+            </div>
+
+            {/* Checklist */}
+            <div className="max-w-3xl mx-auto space-y-4 sm:space-y-5 mb-10 sm:mb-12">
+              {[
+                "Como vender em marketplace sem estoque (como funciona a SouDrop na prática)",
+                "Como escolher produtos que giram (sem chute)",
+                "Precificação + frete sem tomar prejuízo",
+                "Como criar anúncios/listagens que vendem",
+                "Fluxo do pedido: você vende → SouDrop separa/embala/despacha"
+              ].map((item, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-start gap-4 p-4 sm:p-5 bg-black/50 border border-elite-gold/30 rounded-xl hover:border-elite-gold/50 transition-all"
+                >
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-elite-gold flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
+                  </div>
+                  <p className="text-white text-sm sm:text-base lg:text-lg font-medium">{item}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center">
+              <button
+                onClick={() => {
+                  formContainerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }}
+                className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
+              >
+                QUERO ESCOLHER MEU HORÁRIO
+              </button>
+              <p className="text-gray-400 text-xs sm:text-sm mt-4">
+                100% gratuito • sem cartão • leva 20 segundos
+              </p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* O que você vai ver neste evento - NEW SECTION */}
       
 
