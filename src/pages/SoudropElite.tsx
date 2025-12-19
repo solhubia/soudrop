@@ -160,17 +160,7 @@ const SoudropElite = () => {
       {/* O que é a aula */}
       <section className="second-section-soudrop relative z-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
         <div className="max-w-4xl mx-auto text-center">
-          <AnimatedSection>
-            <p className="text-xs sm:text-sm text-elite-gold/80 mb-3 sm:mb-4">
-              Você vai receber o link do evento no seu e-mail e WhatsApp.
-            </p>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
-              O que você vai <span className="text-elite-gold">aprender?  </span>
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              Na aula ao vivo, vou te mostrar como sair do zero e montar uma operação simples de vendas em marketplaces, mesmo que hoje você não saiba por onde começar, tenha medo de investir em estoque ou já tenha tentado vender online e travou em produto, anúncio ou frete.
-            </p>
-          </AnimatedSection>
+          
         </div>
       </section>
 
