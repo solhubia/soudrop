@@ -403,7 +403,7 @@ const SoudropElite = () => {
               <CardContent className="p-6 sm:p-8 md:p-10 lg:p-12">
                 <div className="text-center">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6 text-white">
-                    Complete sua inscrição em menos de 30 segundos
+                    Complete sua inscrição em menos de 20 segundos
                   </h3>
                   <p className="text-gray-400 text-sm sm:text-base mb-6 sm:mb-8 max-w-lg mx-auto">
                     Escolha a data, confirme seus dados e clique no botão para garantir seu acesso à aula gratuita. Se você mora no Brasil, pode deixar o fuso horário como está.
@@ -412,30 +412,28 @@ const SoudropElite = () => {
                   <div style={{
                   textAlign: 'center'
                 }}>
-                    <button 
-                      type="button" 
-                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                      className="w-full sm:w-auto"
-                      style={{
-                        border: "none",
-                        background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
-                        color: "rgb(0, 0, 0)",
-                        fontSize: "16px",
-                        padding: "18px 32px",
-                        boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
-                        borderRadius: "50px",
-                        whiteSpace: "normal",
-                        fontWeight: "700",
-                        lineHeight: "1.4",
-                        cursor: "pointer",
-                        fontFamily: "system-ui, -apple-system, sans-serif",
-                        wordBreak: "break-word",
-                        margin: "auto",
-                        transition: "all 0.3s ease",
-                        letterSpacing: "0.02em",
-                        maxWidth: "100%"
-                      }}
-                    >
+                    <button type="button" onClick={() => window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                  })} className="w-full sm:w-auto" style={{
+                    border: "none",
+                    background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
+                    color: "rgb(0, 0, 0)",
+                    fontSize: "16px",
+                    padding: "18px 32px",
+                    boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
+                    borderRadius: "50px",
+                    whiteSpace: "normal",
+                    fontWeight: "700",
+                    lineHeight: "1.4",
+                    cursor: "pointer",
+                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    wordBreak: "break-word",
+                    margin: "auto",
+                    transition: "all 0.3s ease",
+                    letterSpacing: "0.02em",
+                    maxWidth: "100%"
+                  }}>
                       QUERO PARTICIPAR DA AULA GRATUITA <ArrowRight className="inline-block ml-2 h-5 w-5" />
                     </button>
                   </div>
