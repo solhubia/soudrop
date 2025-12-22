@@ -160,73 +160,50 @@ const OperacaoTiktok = () => {
               RESULTADOS REAIS
             </Badge>
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
-              Veja quem já está lucrando com o método
+              Resultados dos afiliados
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Pessoas comuns que decidiram agir e hoje faturam todos os dias no TikTok Shop
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {/* Depoimento 1 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-6 italic">
-                "Comecei sem saber nada de TikTok e em 2 semanas já tinha feito minhas primeiras vendas. O método é simples e funciona!"
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">M</span>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">Mariana S.</p>
-                  <p className="text-sm text-gray-500">Fatura R$ 4.500/mês</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+            {/* Video 1 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-[9/16] bg-gray-200 flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <Play className="w-12 h-12 mx-auto mb-2 text-primary" />
+                  <span className="text-sm">Vídeo 1</span>
                 </div>
               </div>
             </div>
 
-            {/* Depoimento 2 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-6 italic">
-                "Eu era cético no início, mas resolvi testar. Hoje ganho mais como afiliado do que no meu antigo emprego. Recomendo demais!"
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">R</span>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">Rafael M.</p>
-                  <p className="text-sm text-gray-500">Fatura R$ 12.000/mês</p>
+            {/* Video 2 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-[9/16] bg-gray-200 flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <Play className="w-12 h-12 mx-auto mb-2 text-primary" />
+                  <span className="text-sm">Vídeo 2</span>
                 </div>
               </div>
             </div>
 
-            {/* Depoimento 3 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-6 italic">
-                "Sou mãe de 2 filhos e consigo trabalhar de casa no meu tempo. O suporte da Sou Drop é incrível, nunca me deixaram na mão."
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">C</span>
+            {/* Video 3 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-[9/16] bg-gray-200 flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <Play className="w-12 h-12 mx-auto mb-2 text-primary" />
+                  <span className="text-sm">Vídeo 3</span>
                 </div>
-                <div>
-                  <p className="font-bold text-gray-900">Carla T.</p>
-                  <p className="text-sm text-gray-500">Fatura R$ 7.800/mês</p>
+              </div>
+            </div>
+
+            {/* Video 4 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-[9/16] bg-gray-200 flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <Play className="w-12 h-12 mx-auto mb-2 text-primary" />
+                  <span className="text-sm">Vídeo 4</span>
                 </div>
               </div>
             </div>
