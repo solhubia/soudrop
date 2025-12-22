@@ -47,9 +47,8 @@ const OperacaoTiktok = () => {
 
           {/* Subtítulo com valor em negrito */}
           <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-3 max-w-3xl">
-            Descubra como pessoas comuns estão ganhando{" "}
-            <strong className="text-white font-bold">R$ 3.000 a R$ 15.000 por mês</strong>{" "}
-            vendendo produtos da Soudrop no TikTok Shop
+            Descubra o método que já gerou milhões em vendas e fature de{" "}
+            <strong className="text-white font-bold">R$5.000 a R$30.000/mês</strong>
           </p>
 
           {/* Linha menor com opacity baixa */}
@@ -109,7 +108,7 @@ const OperacaoTiktok = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
-              O que você vai aprender na Máquina de Vendas no TikTok?
+              O que você vai aprender no Método TikTok Lucrativo?
             </h2>
             <p className="text-lg md:text-xl text-gray-600">
               Um método completo e atualizado para você começar a vender hoje mesmo
