@@ -151,6 +151,97 @@ const OperacaoTiktok = () => {
         </div>
       </section>
 
+      {/* SEÇÃO DEPOIMENTOS */}
+      <section className="bg-gradient-to-b from-gray-100 to-white py-16 md:py-24 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <Badge className="bg-primary/10 text-primary text-sm md:text-base px-6 py-2 rounded-full font-semibold mb-4">
+              RESULTADOS REAIS
+            </Badge>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
+              Veja quem já está lucrando com o método
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+              Pessoas comuns que decidiram agir e hoje faturam todos os dias no TikTok Shop
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {/* Depoimento 1 */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-6 italic">
+                "Comecei sem saber nada de TikTok e em 2 semanas já tinha feito minhas primeiras vendas. O método é simples e funciona!"
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold text-lg">M</span>
+                </div>
+                <div>
+                  <p className="font-bold text-gray-900">Mariana S.</p>
+                  <p className="text-sm text-gray-500">Fatura R$ 4.500/mês</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Depoimento 2 */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-6 italic">
+                "Eu era cético no início, mas resolvi testar. Hoje ganho mais como afiliado do que no meu antigo emprego. Recomendo demais!"
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold text-lg">R</span>
+                </div>
+                <div>
+                  <p className="font-bold text-gray-900">Rafael M.</p>
+                  <p className="text-sm text-gray-500">Fatura R$ 12.000/mês</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Depoimento 3 */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-6 italic">
+                "Sou mãe de 2 filhos e consigo trabalhar de casa no meu tempo. O suporte da Sou Drop é incrível, nunca me deixaram na mão."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold text-lg">C</span>
+                </div>
+                <div>
+                  <p className="font-bold text-gray-900">Carla T.</p>
+                  <p className="text-sm text-gray-500">Fatura R$ 7.800/mês</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="flex justify-center">
+            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-lg md:text-xl px-10 md:px-14 py-6 md:py-7 h-auto rounded-full font-black shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+                QUERO COMEÇAR AGORA
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* SEÇÃO 4 - POR QUE ESTE CURSO É DIFERENTE */}
       <section className="bg-gradient-to-b from-dark-gradient-from to-dark-gradient-to py-16 md:py-24 px-4">
         <div className="container mx-auto max-w-6xl">
