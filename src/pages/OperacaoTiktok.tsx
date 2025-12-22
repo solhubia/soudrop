@@ -163,7 +163,7 @@ const OperacaoTiktok = () => {
               Resultados dos afiliados
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-              Pessoas comuns que decidiram agir e hoje faturam todos os dias no TikTok Shop
+              O método funciona e ja tem gente fazendo dar certo          
             </p>
           </div>
 
