@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import creatorsLogo from "@/assets/creators-logo-tiktok.png";
 
 const ObrigadoTiktokLucrativo = () => {
   useEffect(() => {
@@ -16,11 +17,13 @@ const ObrigadoTiktokLucrativo = () => {
       <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           
-          {/* Logo placeholder */}
+          {/* Logo */}
           <div className="flex justify-center mb-8">
-            <div className="w-48 h-16 bg-white/10 rounded-lg flex items-center justify-center border border-white/20">
-              <span className="text-white/50 text-sm">Sua Logo Aqui</span>
-            </div>
+            <img 
+              src={creatorsLogo} 
+              alt="SouDrop Creators Brasil" 
+              className="h-16 md:h-20 w-auto"
+            />
           </div>
 
           {/* PARABÉNS title */}
