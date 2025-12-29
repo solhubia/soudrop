@@ -50,28 +50,46 @@ const Index = () => {
   const pricingAnimation = useScrollAnimation();
   const faqAnimation = useScrollAnimation();
   const planData = {
-    basic: {
-      price: "12x de 197",
-      period: "/ano",
-      originalPrice: "R$ 3.564",
-      savings: "33%",
-      link: "https://pay.kiwify.com.br/ugbezvy"
-    },
-    pro: {
-      price: "12x de 397",
-      period: "/ano",
-      originalPrice: "R$ 6.588",
-      savings: "27%",
-      link: "https://pay.kiwify.com.br/eNU8PpO"
+    basico: {
+      name: "Soudrop Básico",
+      price: "12x de R$ 49,90",
+      tagline: "Para quem quer começar com baixo investimento",
+      link: "https://pay.kiwify.com.br/RIqama1",
+      popular: false,
     },
     premium: {
-      price: "12x de 797",
-      period: "/ano",
-      originalPrice: "R$ 15.588",
-      savings: "38%",
-      link: "https://pay.kiwify.com.br/Mf2g854"
-    }
+      name: "Soudrop Premium",
+      price: "12x de R$ 97,90",
+      tagline: "A maioria dos vendedores começa por aqui para escalar mais rápido",
+      link: "https://pay.kiwify.com.br/zrBAaMP",
+      popular: true,
+    },
+    pro: {
+      name: "Soudrop Pro",
+      price: "12x de R$ 197,90",
+      tagline: "Ideal para quem já vende todos os dias e quer máxima margem",
+      link: "https://pay.kiwify.com.br/dfkyoMp",
+      popular: false,
+    },
   };
+
+  const benefitsData = [
+    { name: "Home", basico: true, premium: true, pro: true },
+    { name: "Dashboard limitado", basico: true, premium: false, pro: false },
+    { name: "Dashboard com relatórios completos", basico: false, premium: true, pro: true },
+    { name: "Garantia de 120 dias", basico: true, premium: true, pro: true },
+    { name: "Integrações com marketplaces", basico: "3", premium: "6", pro: "Ilimitadas" },
+    { name: "Taxa por pedido", basico: "R$ 1,50", premium: "R$ 0,90", pro: "Sem taxa" },
+    { name: "Lançador automático", basico: false, premium: true, pro: true },
+    { name: "Gerar títulos e descrições por IA", basico: false, premium: true, pro: true },
+    { name: "Acompanhamento do time SouDrop", basico: false, premium: true, pro: true },
+    { name: "Mentoria em grupo", basico: false, premium: true, pro: true },
+    { name: "Encontros em grupo mensais", basico: false, premium: "4/mês", pro: true },
+    { name: "Gestão de vendas", basico: false, premium: false, pro: true },
+    { name: "Envios FULL", basico: false, premium: false, pro: true },
+    { name: "Envios FLEX", basico: false, premium: false, pro: true },
+    { name: "Concorrência de catálogo", basico: false, premium: false, pro: true },
+  ];
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (mouseFollowerRef.current) {
@@ -1294,307 +1312,216 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section ref={pricingAnimation.ref as any} id="planos" className={`py-20 bg-black transition-all duration-700 ${pricingAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Escolha o plano que melhor{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">atende suas necessidades</span>
+      <section ref={pricingAnimation.ref as any} id="planos" className={`py-20 bg-gradient-to-b from-black via-zinc-900 to-black transition-all duration-700 ${pricingAnimation.isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+              Escolha o plano ideal para{" "}
+              <span className="bg-gradient-primary bg-clip-text text-transparent">você</span>
             </h2>
-            
-            <div className="mt-4">
-              <Badge variant="secondary" className="bg-green-500/20 text-green-400 border-green-500/30">
-                💰 Economize até 38% com o plano anual
+            <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+              Compare os benefícios e escolha o plano que vai acelerar suas vendas
+            </p>
+          </div>
+
+          {/* Plans Header Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto mb-8">
+            {/* Básico */}
+            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center">
+              <h3 className="text-xl font-bold text-white mb-2">{planData.basico.name}</h3>
+              <div className="text-3xl font-bold text-primary mb-2">{planData.basico.price}</div>
+              <p className="text-zinc-400 text-sm mb-4">{planData.basico.tagline}</p>
+              <Button 
+                variant="glow" 
+                size="lg" 
+                className="w-full"
+                asChild
+              >
+                <a 
+                  href={planData.basico.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => trackEventOnce('basico_checkout', () => {
+                    trackInitiateCheckout("soudrop", 49.90 * 12);
+                  })}
+                >
+                  Começar Agora
+                </a>
+              </Button>
+            </div>
+
+            {/* Premium - Destacado */}
+            <div className="bg-gradient-to-b from-primary/20 to-zinc-900 border-2 border-primary rounded-2xl p-6 text-center relative transform md:scale-105 z-10">
+              <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground">
+                Mais Popular
               </Badge>
+              <h3 className="text-xl font-bold text-white mb-2 mt-2">{planData.premium.name}</h3>
+              <div className="text-3xl font-bold text-primary mb-2">{planData.premium.price}</div>
+              <p className="text-zinc-300 text-sm mb-4">{planData.premium.tagline}</p>
+              <Button 
+                variant="glow" 
+                size="lg" 
+                className="w-full"
+                asChild
+              >
+                <a 
+                  href={planData.premium.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => trackEventOnce('premium_checkout', () => {
+                    trackInitiateCheckout("soudrop", 97.90 * 12);
+                  })}
+                >
+                  Começar Agora
+                </a>
+              </Button>
+            </div>
+
+            {/* Pro */}
+            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center">
+              <h3 className="text-xl font-bold text-white mb-2">{planData.pro.name}</h3>
+              <div className="text-3xl font-bold text-primary mb-2">{planData.pro.price}</div>
+              <p className="text-zinc-400 text-sm mb-4">{planData.pro.tagline}</p>
+              <Button 
+                variant="glow" 
+                size="lg" 
+                className="w-full"
+                asChild
+              >
+                <a 
+                  href={planData.pro.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => trackEventOnce('pro_checkout', () => {
+                    trackInitiateCheckout("soudrop", 197.90 * 12);
+                  })}
+                >
+                  Começar Agora
+                </a>
+              </Button>
             </div>
           </div>
 
-          <div className="grid gap-8 max-w-6xl mx-auto md:grid-cols-3">
-            {/* Basic Plan */}
-            <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300">
-                <CardHeader>
-                <div className="text-center">
-                  <CardTitle className="text-2xl mb-2 text-white">Basic</CardTitle>
-                  <div className="space-y-1">
-                     {planData.basic.originalPrice && <div className="text-lg text-white line-through">
-                       {planData.basic.originalPrice}
-                     </div>}
-                    <div className="text-4xl font-bold text-primary">{planData.basic.price}</div>
-                    <div className="text-white">{planData.basic.period}</div>
+          {/* Benefits Comparison Table */}
+          <div className="max-w-5xl mx-auto bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden">
+            {/* Table Header - Desktop */}
+            <div className="hidden md:grid grid-cols-4 bg-zinc-800/50 border-b border-zinc-700">
+              <div className="p-4 font-semibold text-white">Benefícios</div>
+              <div className="p-4 font-semibold text-white text-center">Básico</div>
+              <div className="p-4 font-semibold text-primary text-center bg-primary/10">Premium</div>
+              <div className="p-4 font-semibold text-white text-center">Pro</div>
+            </div>
+
+            {/* Benefits Rows */}
+            {benefitsData.map((benefit, index) => (
+              <div 
+                key={benefit.name}
+                className={`grid grid-cols-1 md:grid-cols-4 border-b border-zinc-800 last:border-b-0 ${index % 2 === 0 ? 'bg-zinc-900/30' : 'bg-zinc-900/10'}`}
+              >
+                {/* Benefit Name */}
+                <div className="p-4 text-white font-medium md:font-normal border-b md:border-b-0 border-zinc-800 bg-zinc-800/30 md:bg-transparent">
+                  {benefit.name}
+                </div>
+
+                {/* Mobile: Show all 3 plans in row */}
+                <div className="md:hidden grid grid-cols-3 divide-x divide-zinc-800">
+                  {/* Básico Mobile */}
+                  <div className="p-3 text-center">
+                    <span className="text-xs text-zinc-500 block mb-1">Básico</span>
+                    {typeof benefit.basico === 'boolean' ? (
+                      benefit.basico ? (
+                        <CheckCircle className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                      )
+                    ) : (
+                      <span className="text-sm text-zinc-300">{benefit.basico}</span>
+                    )}
+                  </div>
+                  {/* Premium Mobile */}
+                  <div className="p-3 text-center bg-primary/5">
+                    <span className="text-xs text-primary block mb-1">Premium</span>
+                    {typeof benefit.premium === 'boolean' ? (
+                      benefit.premium ? (
+                        <CheckCircle className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                      )
+                    ) : (
+                      <span className="text-sm text-primary font-medium">{benefit.premium}</span>
+                    )}
+                  </div>
+                  {/* Pro Mobile */}
+                  <div className="p-3 text-center">
+                    <span className="text-xs text-zinc-500 block mb-1">Pro</span>
+                    {typeof benefit.pro === 'boolean' ? (
+                      benefit.pro ? (
+                        <CheckCircle className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                      )
+                    ) : (
+                      <span className="text-sm text-zinc-300">{benefit.pro}</span>
+                    )}
                   </div>
                 </div>
-                </CardHeader>
-                 <CardContent className="space-y-4">
-                   <ul className="space-y-3">
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Integrações com 2 marketplaces</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Logística completa</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Catálogo de 1400+ produtos</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Suporte logístico dedicado</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Acompanhamento em tempo real</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Publicação de anúncios em massa</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Suporte completo</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Gestão de devoluções</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                        <span className="text-sm text-white">Lives semanais</span>
-                     </li>
-                     <li className="flex items-center">
-                       <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-white">Contabilidade</span>
-                     </li>
-                     <li className="flex items-center">
-                       <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-white">Mentoria em grupo quinzenal</span>
-                     </li>
-                     <li className="flex items-center">
-                       <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-white">Possibilidade de SKU próprio</span>
-                     </li>
-                     <li className="flex items-center">
-                       <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-white">Importação direta da China</span>
-                     </li>
-                     <li className="flex items-center">
-                       <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-white">Catálogo exclusivo</span>
-                     </li>
-                     <li className="flex items-center">
-                       <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-white">3 meses de consultoria</span>
-                     </li>
-                     <li className="flex items-center">
-                       <X className="h-5 w-5 text-destructive mr-3" />
-                       <span className="text-sm text-white">Gerente de contas</span>
-                     </li>
-                   </ul>
-                   <Button variant="glow" size="lg" className="w-full mt-6">
-                      <a href={planData.basic.link} target="_blank" rel="noopener noreferrer" onClick={() => trackEventOnce('basic_checkout', () => {
-                  trackInitiateCheckout("soudrop", 197 * 12);
-                })}>
-                       Começar Agora
-                      </a>
-                    </Button>
-                </CardContent>
-              </Card>
 
-            {/* Pro Plan */}
-            <Card className="bg-gradient-primary border-primary shadow-elegant transform scale-105 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge variant="secondary" className="bg-black text-green-500">
-                  Mais Popular
-                </Badge>
+                {/* Desktop: Individual columns */}
+                <div className="hidden md:flex p-4 justify-center items-center">
+                  {typeof benefit.basico === 'boolean' ? (
+                    benefit.basico ? (
+                      <CheckCircle className="h-5 w-5 text-primary" />
+                    ) : (
+                      <X className="h-5 w-5 text-red-500" />
+                    )
+                  ) : (
+                    <span className="text-sm text-zinc-300">{benefit.basico}</span>
+                  )}
+                </div>
+                <div className="hidden md:flex p-4 justify-center items-center bg-primary/5">
+                  {typeof benefit.premium === 'boolean' ? (
+                    benefit.premium ? (
+                      <CheckCircle className="h-5 w-5 text-primary" />
+                    ) : (
+                      <X className="h-5 w-5 text-red-500" />
+                    )
+                  ) : (
+                    <span className="text-sm text-primary font-medium">{benefit.premium}</span>
+                  )}
+                </div>
+                <div className="hidden md:flex p-4 justify-center items-center">
+                  {typeof benefit.pro === 'boolean' ? (
+                    benefit.pro ? (
+                      <CheckCircle className="h-5 w-5 text-primary" />
+                    ) : (
+                      <X className="h-5 w-5 text-red-500" />
+                    )
+                  ) : (
+                    <span className="text-sm text-zinc-300">{benefit.pro}</span>
+                  )}
+                </div>
               </div>
-              <CardHeader>
-                <div className="text-center">
-                  <CardTitle className="text-2xl mb-2 text-primary-foreground">Pro</CardTitle>
-                  <div className="space-y-1">
-                    {planData.pro.originalPrice && <div className="text-lg text-primary-foreground/60 line-through">
-                        {planData.pro.originalPrice}
-                      </div>}
-                    <div className="text-4xl font-bold text-primary-foreground">{planData.pro.price}</div>
-                    <div className="text-primary-foreground/80">{planData.pro.period}</div>
-                  </div>
-                </div>
-              </CardHeader>
-                <CardContent className="space-y-4">
-                 <ul className="space-y-3">
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Integrações com 5 marketplaces</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Logística completa</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Catálogo de 1400+ produtos</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Suporte logístico dedicado</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Acompanhamento em tempo real</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Publicação de anúncios em massa</span>
-                   </li>
-
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Suporte completo</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Gestão de devoluções</span>
-                   </li>
-                   <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                      <span className="text-sm text-primary-foreground">Lives semanais</span>
-                    </li>
-                    <li className="flex items-center">
-                     <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                     <span className="text-sm text-primary-foreground">Contabilidade</span>
-                   </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-primary-foreground mr-3" />
-                      <span className="text-sm text-primary-foreground">Mentoria em grupo quinzenal</span>
-                    </li>
-                    <li className="flex items-center">
-                      <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
-                      <span className="text-sm text-primary-foreground/50">Possibilidade de SKU próprio</span>
-                    </li>
-                    <li className="flex items-center">
-                      <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
-                      <span className="text-sm text-primary-foreground/50">Importação direta da China</span>
-                   </li>
-                   <li className="flex items-center">
-                      <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
-                      <span className="text-sm text-primary-foreground/50">Catálogo exclusivo</span>
-                   </li>
-                   <li className="flex items-center">
-                      <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
-                      <span className="text-sm text-primary-foreground/50">3 meses de consultoria</span>
-                   </li>
-                   <li className="flex items-center">
-                      <X className="h-5 w-5 text-primary-foreground/50 mr-3" />
-                      <span className="text-sm text-primary-foreground/50">Gerente de contas</span>
-                   </li>
-                 </ul>
-                <Button variant="secondary" size="lg" className="w-full mt-6 bg-[#22c55e] hover:bg-[#16a34a] text-white" asChild>
-                  <a href={planData.pro.link} target="_blank" rel="noopener noreferrer" onClick={() => trackEventOnce('pro_checkout', () => {
-                  trackInitiateCheckout("soudrop", 397 * 12);
-                })} className="text-white">
-                    Começar Agora
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Premium Plan */}
-            <Card className="bg-gradient-card border-primary/20 hover:border-primary/40 transition-all duration-300">
-              <CardHeader>
-                <div className="text-center">
-                  <CardTitle className="text-2xl mb-2 text-white">Premium</CardTitle>
-                  <div className="space-y-1">
-                     {planData.premium.originalPrice && <div className="text-lg text-white line-through">
-                         {planData.premium.originalPrice}
-                       </div>}
-                    <div className="text-4xl font-bold text-primary">{planData.premium.price}</div>
-                    <div className="text-white">{planData.premium.period}</div>
-                  </div>
-                </div>
-              </CardHeader>
-               <CardContent className="space-y-4">
-                 <ul className="space-y-3">
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Integrações ILIMITADAS com marketplaces</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Logística completa</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Catálogo de 1400+ produtos</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Suporte logístico dedicado</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Acompanhamento em tempo real</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Publicação de anúncios em massa</span>
-                     </li>
-                     
-                      <li className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                        <span className="text-sm text-white">Suporte completo</span>
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                        <span className="text-sm text-white">Gestão de devoluções</span>
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                         <span className="text-sm text-white">Lives semanais</span>
-                       </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                        <span className="text-sm text-white">Contabilidade</span>
-                      </li>
-                      <li className="flex items-center">
-                         <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                         <span className="text-sm text-white">Mentoria em grupo quinzenal</span>
-                       </li>
-                       <li className="flex items-center">
-                         <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                         <span className="text-sm text-white">Possibilidade de SKU próprio</span>
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                        <span className="text-sm text-white">Importação direta da China</span>
-                      </li>
-                      <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Catálogo exclusivo</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">3 meses de consultoria</span>
-                     </li>
-                     <li className="flex items-center">
-                       <CheckCircle className="h-5 w-5 text-primary mr-3" />
-                       <span className="text-sm text-white">Gerente de contas</span>
-                     </li>
-                 </ul>
-                <Button variant="glow" size="lg" className="w-full mt-6">
-                  <a href={planData.premium.link} target="_blank" rel="noopener noreferrer" onClick={() => trackEventOnce('premium_checkout', () => {
-                  trackInitiateCheckout("soudrop", 797 * 12);
-                })}>
-                    Começar Agora
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
+            ))}
           </div>
 
+          {/* Anchor Phrases */}
+          <div className="max-w-4xl mx-auto mt-12 space-y-4">
+            <div className="flex items-start gap-3 bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+              <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+              <p className="text-zinc-300">Quanto maior o plano, <span className="text-white font-semibold">menor o custo por pedido</span> e maior sua margem.</p>
+            </div>
+            <div className="flex items-start gap-3 bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+              <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+              <p className="text-zinc-300">Quem escolhe o <span className="text-primary font-semibold">Premium ou Pro</span> recupera o investimento com poucas vendas.</p>
+            </div>
+            <div className="flex items-start gap-3 bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+              <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+              <p className="text-zinc-300">Comece pequeno, mas tenha <span className="text-white font-semibold">estrutura para escalar</span> quando as vendas acelerarem.</p>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
           <div className="text-center mt-12">
-            <p className="text-lg text-white mb-6">
-              Aproveite um desconto de até 38% no plano anual e economize ainda mais!
-            </p>
           </div>
         </div>
       </section>
