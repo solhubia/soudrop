@@ -8,38 +8,7 @@ import creatorsLogo from "@/assets/creators-logo.png";
 
 const OperacaoTiktok = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeVideo, setActiveVideo] = useState<number | null>(null);
-
-  const affiliates = [
-    {
-      id: 1,
-      name: "Afiliado 1",
-      faturado: "XXXK+",
-      comissao: "XXK+",
-      loomId: "VIDEO_ID_1"
-    },
-    {
-      id: 2,
-      name: "Afiliado 2",
-      faturado: "XXXK+",
-      comissao: "XXK+",
-      loomId: "VIDEO_ID_2"
-    },
-    {
-      id: 3,
-      name: "Afiliado 3",
-      faturado: "XXXK+",
-      comissao: "XXK+",
-      loomId: "VIDEO_ID_3"
-    },
-    {
-      id: 4,
-      name: "Afiliado 4",
-      faturado: "XXXK+",
-      comissao: "XXK+",
-      loomId: "VIDEO_ID_4"
-    }
-  ];
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const scrollToCTA = () => {
     const ctaButton = document.getElementById('cta-button');
     ctaButton?.scrollIntoView({
@@ -200,60 +169,46 @@ const OperacaoTiktok = () => {
             </p>
           </div>
 
-          {/* Grid de Cards - 4 colunas desktop, 2 tablet, 1 mobile */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
-            {affiliates.map((affiliate) => (
+          {/* Card de Depoimento com Vídeo Inline */}
+          <div className="flex justify-center mb-12">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full max-w-sm">
+              {/* Container do vídeo (9:16) */}
               <div 
-                key={affiliate.id}
-                onClick={() => setActiveVideo(affiliate.id)}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-300 cursor-pointer hover:scale-[1.02] group"
+                className="aspect-[9/16] bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 relative flex items-center justify-center cursor-pointer"
+                onClick={() => setIsVideoPlaying(true)}
               >
-                {/* Thumbnail do vídeo (9:16) */}
-                <div className="aspect-[9/16] bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 relative flex items-center justify-center">
-                  {/* Overlay escuro no hover */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
-                  
-                  {/* Ícone de Play */}
-                  <div className="relative z-10 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Play className="w-7 h-7 text-white ml-1" fill="white" />
-                  </div>
-                </div>
-
-                {/* Bloco de texto */}
-                <div className="p-4 text-center">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">{affiliate.name}</h4>
-                  <p className="text-sm text-gray-600 mb-1">
-                    Total Faturado: <span className="font-semibold text-gray-800">{affiliate.faturado}</span>
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Comissão: <span className="font-semibold text-primary">{affiliate.comissao}</span>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Modal de Vídeo Loom */}
-          <Dialog open={activeVideo !== null} onOpenChange={(open) => !open && setActiveVideo(null)}>
-            <DialogContent className="sm:max-w-[400px] md:max-w-[500px] p-0 bg-black border-none overflow-hidden">
-              <button
-                onClick={() => setActiveVideo(null)}
-                className="absolute right-3 top-3 z-50 w-8 h-8 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors"
-              >
-                <X className="w-5 h-5 text-white" />
-              </button>
-              {activeVideo && (
-                <div className="w-full" style={{ height: '500px' }}>
+                {!isVideoPlaying ? (
+                  <>
+                    {/* Overlay escuro no hover */}
+                    <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors duration-300"></div>
+                    
+                    {/* Ícone de Play */}
+                    <div className="relative z-10 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+                      <Play className="w-7 h-7 text-white ml-1" fill="white" />
+                    </div>
+                  </>
+                ) : (
                   <iframe
-                    src={`https://www.loom.com/embed/${affiliates.find(a => a.id === activeVideo)?.loomId}?autoplay=1`}
+                    src="https://streamable.com/e/ctp619?autoplay=1"
                     frameBorder="0"
                     allow="autoplay; fullscreen"
-                    style={{ width: '100%', height: '100%' }}
+                    className="absolute inset-0 w-full h-full"
                   />
-                </div>
-              )}
-            </DialogContent>
-          </Dialog>
+                )}
+              </div>
+
+              {/* Bloco de texto */}
+              <div className="p-4 text-center">
+                <h4 className="text-lg font-bold text-gray-900 mb-2">Afiliado 1</h4>
+                <p className="text-sm text-gray-600 mb-1">
+                  Total Faturado: <span className="font-semibold text-gray-800">XXXK+</span>
+                </p>
+                <p className="text-sm text-gray-600">
+                  Comissão: <span className="font-semibold text-primary">XXK+</span>
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* CTA */}
           <div className="flex justify-center">
