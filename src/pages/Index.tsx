@@ -74,12 +74,10 @@ const Index = () => {
   };
 
   const benefitsBasico = [
-    { name: "Home", included: true },
-    { name: "Dashboard limitado", included: true },
-    { name: "Dashboard com relatórios completos", included: false },
+    { name: "Taxa por pedido: R$ 1,50", included: true },
+    { name: "Dashboard", included: true },
     { name: "Garantia de 120 dias", included: true },
     { name: "Integrações com marketplaces: 3", included: true },
-    { name: "Taxa por pedido: R$ 1,50", included: true },
     { name: "Lançador automático", included: false },
     { name: "Gerar títulos e descrições por IA", included: false },
     { name: "Acompanhamento do time SouDrop", included: false },
@@ -93,12 +91,10 @@ const Index = () => {
   ];
 
   const benefitsPremium = [
-    { name: "Home", included: true },
-    { name: "Dashboard limitado", included: false },
-    { name: "Dashboard com relatórios completos", included: true },
+    { name: "Taxa por pedido: R$ 0,90", included: true },
+    { name: "Dashboard", included: true },
     { name: "Garantia de 120 dias", included: true },
     { name: "Integrações com marketplaces: 6", included: true },
-    { name: "Taxa por pedido: R$ 0,90", included: true },
     { name: "Lançador automático", included: true },
     { name: "Gerar títulos e descrições por IA", included: true },
     { name: "Acompanhamento do time SouDrop", included: true },
@@ -112,12 +108,10 @@ const Index = () => {
   ];
 
   const benefitsPro = [
-    { name: "Home", included: true },
-    { name: "Dashboard limitado", included: false },
-    { name: "Dashboard com relatórios completos", included: true },
-    { name: "Garantia de 120 dias", included: true },
-    { name: "Integrações com marketplaces: Ilimitadas", included: true },
     { name: "Taxa por pedido: Sem taxa", included: true },
+    { name: "Dashboard", included: true },
+    { name: "Garantia de 120 dias", included: true },
+    { name: "Integrações com marketplaces: Sem limite", included: true },
     { name: "Lançador automático", included: true },
     { name: "Gerar títulos e descrições por IA", included: true },
     { name: "Acompanhamento do time SouDrop", included: true },
