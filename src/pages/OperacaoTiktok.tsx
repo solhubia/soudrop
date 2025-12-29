@@ -11,8 +11,8 @@ const OperacaoTiktok = () => {
   const [activeVideo, setActiveVideo] = useState<1 | 2 | null>(null);
 
   const videoUrls = {
-    1: "https://drive.google.com/file/d/1O_b1pSTiLjmqc4Xjz7Ix-GLM--DGF2Yf/preview",
-    2: "https://drive.google.com/file/d/1Mxzf5KqHKcYcosrHBi5aEzVLQW2UDufW/preview"
+    1: "https://www.youtube.com/embed/omYh9-atx_M?autoplay=1&mute=1&playsinline=1&rel=0",
+    2: "https://www.youtube.com/embed/VIDEO_ID_2?autoplay=1&mute=1&playsinline=1&rel=0"
   };
   const scrollToCTA = () => {
     const ctaButton = document.getElementById('cta-button');
