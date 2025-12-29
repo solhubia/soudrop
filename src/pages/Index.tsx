@@ -78,12 +78,12 @@ const Index = () => {
     { name: "Dashboard", included: true },
     { name: "Garantia de 120 dias", included: true },
     { name: "Integrações com marketplaces: 3", included: true },
+    { name: "Suporte: Email", included: true },
+    { name: "Suporte: WhatsApp", included: false },
     { name: "Lançador automático", included: false },
     { name: "Gerar títulos e descrições por IA", included: false },
     { name: "Acompanhamento do time SouDrop", included: false },
     { name: "Mentoria em grupo", included: false },
-    { name: "Suporte: Email", included: true },
-    { name: "Suporte: WhatsApp", included: false },
     { name: "Gestão de vendas", included: false },
     { name: "Envios FULL", included: false },
     { name: "Envios FLEX", included: false },
@@ -95,12 +95,12 @@ const Index = () => {
     { name: "Dashboard", included: true },
     { name: "Garantia de 120 dias", included: true },
     { name: "Integrações com marketplaces: 6", included: true },
+    { name: "Suporte: Email", included: true },
+    { name: "Suporte: WhatsApp", included: true },
     { name: "Lançador automático", included: true },
     { name: "Gerar títulos e descrições por IA", included: true },
     { name: "Acompanhamento do time SouDrop", included: true },
     { name: "Mentoria em grupo", included: true },
-    { name: "Suporte: Email", included: true },
-    { name: "Suporte: WhatsApp", included: true },
     { name: "Gestão de vendas", included: false },
     { name: "Envios FULL", included: false },
     { name: "Envios FLEX", included: false },
@@ -112,12 +112,12 @@ const Index = () => {
     { name: "Dashboard", included: true },
     { name: "Garantia de 120 dias", included: true },
     { name: "Integrações com marketplaces: Sem limite", included: true },
+    { name: "Suporte: Email", included: true },
+    { name: "Suporte: WhatsApp", included: true },
     { name: "Lançador automático", included: true },
     { name: "Gerar títulos e descrições por IA", included: true },
     { name: "Acompanhamento do time SouDrop", included: true },
     { name: "Mentoria em grupo", included: true },
-    { name: "Suporte: Email", included: true },
-    { name: "Suporte: WhatsApp", included: true },
     { name: "Gestão de vendas", included: true },
     { name: "Envios FULL", included: true },
     { name: "Envios FLEX", included: true },
@@ -1416,66 +1416,15 @@ const Index = () => {
               </Button>
             </div>
 
-            {/* Premium - Destacado */}
+            {/* Pro - Destacado (Centro) */}
             <div className="bg-gradient-to-b from-primary/20 to-zinc-900 border-2 border-primary rounded-2xl p-6 flex flex-col relative transform md:scale-105 z-10 shadow-lg shadow-primary/20">
               <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground">
-                Mais Popular
+                Mais Completo
               </Badge>
               <div className="text-center mb-6 mt-2">
-                <h3 className="text-xl font-bold text-white mb-2">{planData.premium.name}</h3>
-                <div className="text-3xl font-bold text-primary mb-2">{planData.premium.price}</div>
-                <p className="text-zinc-300 text-sm">{planData.premium.tagline}</p>
-              </div>
-              
-              {/* Benefits List */}
-              <div className="flex-1 mb-6">
-                <div className={`space-y-3 ${!expandedCards['premium'] ? 'max-h-[280px] overflow-hidden md:max-h-none' : ''}`}>
-                  {benefitsPremium.map((benefit, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      {benefit.included ? (
-                        <CheckCircle className="h-5 w-5 text-[#22c55e] flex-shrink-0" />
-                      ) : (
-                        <X className="h-5 w-5 text-red-500 flex-shrink-0" />
-                      )}
-                      <span className={`text-sm ${benefit.included ? 'text-zinc-200' : 'text-zinc-500'}`}>
-                        {benefit.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <button 
-                  className="md:hidden mt-3 text-primary text-sm font-medium"
-                  onClick={() => toggleCardExpand('premium')}
-                >
-                  {expandedCards['premium'] ? 'Ver menos' : 'Ver mais'}
-                </button>
-              </div>
-              
-              <Button 
-                variant="glow" 
-                size="lg" 
-                className="w-full"
-                asChild
-              >
-                <a 
-                  href={planData.premium.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  onClick={() => trackEventOnce('premium_checkout', () => {
-                    trackInitiateCheckout("soudrop", 97.90 * 12);
-                  })}
-                >
-                  Começar Agora
-                </a>
-              </Button>
-            </div>
-
-            {/* Pro */}
-            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col">
-              <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-white mb-2">{planData.pro.name}</h3>
                 <div className="text-3xl font-bold text-primary mb-2">{planData.pro.price}</div>
-                <p className="text-zinc-400 text-sm">{planData.pro.tagline}</p>
+                <p className="text-zinc-300 text-sm">{planData.pro.tagline}</p>
               </div>
               
               {/* Benefits List */}
@@ -1488,7 +1437,7 @@ const Index = () => {
                       ) : (
                         <X className="h-5 w-5 text-red-500 flex-shrink-0" />
                       )}
-                      <span className={`text-sm ${benefit.included ? 'text-zinc-300' : 'text-zinc-500'}`}>
+                      <span className={`text-sm ${benefit.included ? 'text-zinc-200' : 'text-zinc-500'}`}>
                         {benefit.name}
                       </span>
                     </div>
@@ -1514,6 +1463,57 @@ const Index = () => {
                   rel="noopener noreferrer"
                   onClick={() => trackEventOnce('pro_checkout', () => {
                     trackInitiateCheckout("soudrop", 197.90 * 12);
+                  })}
+                >
+                  Começar Agora
+                </a>
+              </Button>
+            </div>
+
+            {/* Premium */}
+            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">{planData.premium.name}</h3>
+                <div className="text-3xl font-bold text-primary mb-2">{planData.premium.price}</div>
+                <p className="text-zinc-400 text-sm">{planData.premium.tagline}</p>
+              </div>
+              
+              {/* Benefits List */}
+              <div className="flex-1 mb-6">
+                <div className={`space-y-3 ${!expandedCards['premium'] ? 'max-h-[280px] overflow-hidden md:max-h-none' : ''}`}>
+                  {benefitsPremium.map((benefit, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      {benefit.included ? (
+                        <CheckCircle className="h-5 w-5 text-[#22c55e] flex-shrink-0" />
+                      ) : (
+                        <X className="h-5 w-5 text-red-500 flex-shrink-0" />
+                      )}
+                      <span className={`text-sm ${benefit.included ? 'text-zinc-300' : 'text-zinc-500'}`}>
+                        {benefit.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <button 
+                  className="md:hidden mt-3 text-primary text-sm font-medium"
+                  onClick={() => toggleCardExpand('premium')}
+                >
+                  {expandedCards['premium'] ? 'Ver menos' : 'Ver mais'}
+                </button>
+              </div>
+              
+              <Button 
+                variant="glow" 
+                size="lg" 
+                className="w-full"
+                asChild
+              >
+                <a 
+                  href={planData.premium.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => trackEventOnce('premium_checkout', () => {
+                    trackInitiateCheckout("soudrop", 97.90 * 12);
                   })}
                 >
                   Começar Agora
