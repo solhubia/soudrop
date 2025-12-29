@@ -5,8 +5,15 @@ import { Users, Star, TrendingUp, Play, Package, BarChart3, Gift, BookOpen, Vide
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import creatorsLogo from "@/assets/creators-logo.png";
+
 const OperacaoTiktok = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeVideo, setActiveVideo] = useState<1 | 2 | null>(null);
+
+  const videoUrls = {
+    1: "https://drive.google.com/file/d/1O_b1pSTiLjmqc4Xjz7Ix-GLM--DGF2Yf/preview",
+    2: "https://drive.google.com/file/d/1Mxzf5KqHKcYcosrHBi5aEzVLQW2UDufW/preview"
+  };
   const scrollToCTA = () => {
     const ctaButton = document.getElementById('cta-button');
     ctaButton?.scrollIntoView({
@@ -167,47 +174,60 @@ const OperacaoTiktok = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 max-w-3xl mx-auto">
             {/* Video 1 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-[9/16] bg-gray-200 flex items-center justify-center">
+            <div 
+              onClick={() => setActiveVideo(1)}
+              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+            >
+              <div className="aspect-[9/16] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                 <div className="text-center text-gray-500">
-                  <Play className="w-12 h-12 mx-auto mb-2 text-primary" />
-                  <span className="text-sm">Vídeo 1</span>
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Play className="w-8 h-8 text-primary ml-1" />
+                  </div>
+                  <span className="text-base font-semibold">Clique para assistir</span>
                 </div>
               </div>
             </div>
 
             {/* Video 2 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-[9/16] bg-gray-200 flex items-center justify-center">
+            <div 
+              onClick={() => setActiveVideo(2)}
+              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+            >
+              <div className="aspect-[9/16] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                 <div className="text-center text-gray-500">
-                  <Play className="w-12 h-12 mx-auto mb-2 text-primary" />
-                  <span className="text-sm">Vídeo 2</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Video 3 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-[9/16] bg-gray-200 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <Play className="w-12 h-12 mx-auto mb-2 text-primary" />
-                  <span className="text-sm">Vídeo 3</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Video 4 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-[9/16] bg-gray-200 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <Play className="w-12 h-12 mx-auto mb-2 text-primary" />
-                  <span className="text-sm">Vídeo 4</span>
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Play className="w-8 h-8 text-primary ml-1" />
+                  </div>
+                  <span className="text-base font-semibold">Clique para assistir</span>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Modal de Vídeo */}
+          <Dialog open={activeVideo !== null} onOpenChange={(open) => !open && setActiveVideo(null)}>
+            <DialogContent className="sm:max-w-[500px] p-0 bg-black border-none">
+              <button
+                onClick={() => setActiveVideo(null)}
+                className="absolute right-3 top-3 z-50 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors"
+              >
+                <X className="w-5 h-5 text-white" />
+              </button>
+              {activeVideo && (
+                <div className="aspect-[9/16] w-full">
+                  <iframe
+                    src={videoUrls[activeVideo]}
+                    width="100%"
+                    height="100%"
+                    allow="autoplay"
+                    className="rounded-lg"
+                  />
+                </div>
+              )}
+            </DialogContent>
+          </Dialog>
 
           {/* CTA */}
           <div className="flex justify-center">
