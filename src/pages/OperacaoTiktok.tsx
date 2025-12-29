@@ -8,12 +8,38 @@ import creatorsLogo from "@/assets/creators-logo.png";
 
 const OperacaoTiktok = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeVideo, setActiveVideo] = useState<1 | 2 | null>(null);
+  const [activeVideo, setActiveVideo] = useState<number | null>(null);
 
-  const videoUrls = {
-    1: "https://www.youtube.com/embed/omYh9-atx_M?autoplay=1&mute=1&playsinline=1&rel=0",
-    2: "https://www.youtube.com/embed/VIDEO_ID_2?autoplay=1&mute=1&playsinline=1&rel=0"
-  };
+  const affiliates = [
+    {
+      id: 1,
+      name: "Afiliado 1",
+      faturado: "XXXK+",
+      comissao: "XXK+",
+      loomId: "VIDEO_ID_1"
+    },
+    {
+      id: 2,
+      name: "Afiliado 2",
+      faturado: "XXXK+",
+      comissao: "XXK+",
+      loomId: "VIDEO_ID_2"
+    },
+    {
+      id: 3,
+      name: "Afiliado 3",
+      faturado: "XXXK+",
+      comissao: "XXK+",
+      loomId: "VIDEO_ID_3"
+    },
+    {
+      id: 4,
+      name: "Afiliado 4",
+      faturado: "XXXK+",
+      comissao: "XXK+",
+      loomId: "VIDEO_ID_4"
+    }
+  ];
   const scrollToCTA = () => {
     const ctaButton = document.getElementById('cta-button');
     ctaButton?.scrollIntoView({
@@ -170,59 +196,59 @@ const OperacaoTiktok = () => {
               Resultados dos afiliados
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-              O método funciona e ja tem gente fazendo dar certo          
+              O método funciona e já tem gente fazendo dar certo          
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 max-w-3xl mx-auto">
-            {/* Video 1 */}
-            <div 
-              onClick={() => setActiveVideo(1)}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
-            >
-              <div className="aspect-[9/16] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Play className="w-8 h-8 text-primary ml-1" />
+          {/* Grid de Cards - 4 colunas desktop, 2 tablet, 1 mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+            {affiliates.map((affiliate) => (
+              <div 
+                key={affiliate.id}
+                onClick={() => setActiveVideo(affiliate.id)}
+                className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-300 cursor-pointer hover:scale-[1.02] group"
+              >
+                {/* Thumbnail do vídeo (9:16) */}
+                <div className="aspect-[9/16] bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 relative flex items-center justify-center">
+                  {/* Overlay escuro no hover */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+                  
+                  {/* Ícone de Play */}
+                  <div className="relative z-10 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <Play className="w-7 h-7 text-white ml-1" fill="white" />
                   </div>
-                  <span className="text-base font-semibold">Clique para assistir</span>
                 </div>
-              </div>
-            </div>
 
-            {/* Video 2 */}
-            <div 
-              onClick={() => setActiveVideo(2)}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
-            >
-              <div className="aspect-[9/16] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Play className="w-8 h-8 text-primary ml-1" />
-                  </div>
-                  <span className="text-base font-semibold">Clique para assistir</span>
+                {/* Bloco de texto */}
+                <div className="p-4 text-center">
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">{affiliate.name}</h4>
+                  <p className="text-sm text-gray-600 mb-1">
+                    Total Faturado: <span className="font-semibold text-gray-800">{affiliate.faturado}</span>
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    Comissão: <span className="font-semibold text-primary">{affiliate.comissao}</span>
+                  </p>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
 
-          {/* Modal de Vídeo */}
+          {/* Modal de Vídeo Loom */}
           <Dialog open={activeVideo !== null} onOpenChange={(open) => !open && setActiveVideo(null)}>
-            <DialogContent className="sm:max-w-[500px] p-0 bg-black border-none">
+            <DialogContent className="sm:max-w-[400px] md:max-w-[500px] p-0 bg-black border-none overflow-hidden">
               <button
                 onClick={() => setActiveVideo(null)}
-                className="absolute right-3 top-3 z-50 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors"
+                className="absolute right-3 top-3 z-50 w-8 h-8 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors"
               >
                 <X className="w-5 h-5 text-white" />
               </button>
               {activeVideo && (
-                <div className="aspect-[9/16] w-full">
+                <div className="w-full" style={{ height: '500px' }}>
                   <iframe
-                    src={videoUrls[activeVideo]}
-                    width="100%"
-                    height="100%"
-                    allow="autoplay"
-                    className="rounded-lg"
+                    src={`https://www.loom.com/embed/${affiliates.find(a => a.id === activeVideo)?.loomId}?autoplay=1`}
+                    frameBorder="0"
+                    allow="autoplay; fullscreen"
+                    style={{ width: '100%', height: '100%' }}
                   />
                 </div>
               )}
