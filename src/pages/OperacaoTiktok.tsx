@@ -188,12 +188,18 @@ const OperacaoTiktok = () => {
                     </div>
                   </>
                 ) : (
-                  <iframe
-                    src="https://streamable.com/e/ctp619?autoplay=1"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen"
-                    className="absolute inset-0 w-full h-full"
-                  />
+                  <>
+                    <iframe
+                      src="https://streamable.com/e/ctp619?autoplay=1"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen"
+                      className="absolute inset-0 w-full h-full"
+                    />
+                    {/* Overlay para mascarar logo do Streamable */}
+                    <div 
+                      className="absolute top-[10px] left-[10px] w-16 h-16 bg-black/80 rounded-xl z-50 pointer-events-none"
+                    />
+                  </>
                 )}
               </div>
 
