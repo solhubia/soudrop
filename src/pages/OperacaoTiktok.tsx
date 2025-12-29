@@ -268,9 +268,11 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA */}
           <div className="flex justify-center">
-            <Button size="lg" onClick={() => setIsModalOpen(true)} className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300">
-              QUERO ME INSCREVER GRÁTIS AGORA
-            </Button>
+            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300">
+                QUERO ME INSCREVER GRÁTIS AGORA
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -363,9 +365,11 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA Final */}
           <div className="flex justify-center mt-12">
-            <Button size="lg" onClick={() => setIsModalOpen(true)} className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300">
-              QUERO ME INSCREVER GRÁTIS AGORA
-            </Button>
+            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300">
+                QUERO ME INSCREVER GRÁTIS AGORA
+              </Button>
+            </a>
           </div>
         </div>
       </section>
