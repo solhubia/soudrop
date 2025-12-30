@@ -84,16 +84,39 @@ const ObrigadoTiktokLucrativo = () => {
               />
               
               {/* Card content */}
-              <div className="relative bg-[#0d1f2d]/95 rounded-2xl p-6 md:p-8 space-y-3 backdrop-blur-sm">
-                <p className="text-white text-[clamp(1.25rem,4vw,1.5rem)] font-bold">
-                  🔥 4 Produtos Completos por apenas R$79,90
+              <div className="relative bg-[#0d1f2d]/95 rounded-2xl p-6 md:p-8 space-y-4 backdrop-blur-sm">
+                <p className="text-white text-[clamp(1.1rem,3.5vw,1.35rem)] font-bold">
+                  🔥 Oferta exclusiva para alunos
                 </p>
-                <p className="text-white/70 text-[clamp(0.85rem,2vw,0.95rem)]">
-                  Valor normal R$179,61 | Economize R$99,71
+                <p className="text-[clamp(1.25rem,4vw,1.5rem)] font-extrabold uppercase tracking-wide" style={{ color: "#FF2E5F" }}>
+                  PRODUTOS A PREÇO DE CUSTO
                 </p>
-                <p className="text-white text-[clamp(1rem,3vw,1.15rem)]">
-                  💳 Ou 3x de R$26,63 sem juros
-                </p>
+                <div className="space-y-1">
+                  <p className="text-white/70 text-[clamp(0.9rem,2.5vw,1rem)]">
+                    De <span className="line-through">R$189,90</span> por apenas:
+                  </p>
+                  <p className="text-[clamp(2rem,6vw,2.5rem)] font-extrabold" style={{ color: "#0BFFFF" }}>
+                    R$224,90
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-white/80 text-[clamp(0.85rem,2vw,0.95rem)]">
+                    Ou em até:
+                  </p>
+                  <p className="text-white text-[clamp(1rem,3vw,1.15rem)] font-semibold">
+                    💳 3x de R$74,97 no cartão
+                  </p>
+                </div>
+                <div className="text-white/60 text-[clamp(0.8rem,2vw,0.9rem)] space-y-0.5">
+                  <p>Valor normal: R$479,61</p>
+                  <p className="font-semibold" style={{ color: "#22c55e" }}>Economize R$254,71</p>
+                </div>
+                <div className="pt-2 space-y-1.5 text-left">
+                  <p className="text-white/90 text-[clamp(0.85rem,2vw,0.95rem)]">✔ Kit completo de produtos prontos para vender</p>
+                  <p className="text-white/90 text-[clamp(0.85rem,2vw,0.95rem)]">✔ Ideal para iniciantes no TikTok Shop</p>
+                  <p className="text-white/90 text-[clamp(0.85rem,2vw,0.95rem)]">✔ Estoque limitado</p>
+                  <p className="text-white/90 text-[clamp(0.85rem,2vw,0.95rem)]">✔ Curso gratuito incluso</p>
+                </div>
               </div>
             </div>
           </div>
