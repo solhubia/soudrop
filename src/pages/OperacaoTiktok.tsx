@@ -381,10 +381,10 @@ const OperacaoTiktok = () => {
           </div>
 
           {/* Botão CTA */}
-          <div className="flex justify-center">
-            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300">
-                QUERO ME INSCREVER GRÁTIS AGORA
+          <div className="flex justify-center px-4">
+            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto">
+              <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 text-primary-foreground text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300">
+                QUERO ME INSCREVER GRÁTIS
               </Button>
             </a>
           </div>
