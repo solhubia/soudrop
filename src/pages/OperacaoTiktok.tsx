@@ -370,6 +370,14 @@ const OperacaoTiktok = () => {
                 Estratégias em tempo real com outros alunos
               </p>
             </div>
+
+            <div className="bg-card-dark border border-gray-700 rounded-2xl p-6 hover:scale-105 transition-transform duration-300 md:col-span-2">
+              <Award className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">Premiações Exclusivas</h3>
+              <p className="text-gray-300">
+                Conquiste suas metas e ganhe prêmios. De Kits SouDrop até uma Porsche 911!
+              </p>
+            </div>
           </div>
 
           {/* Botão CTA */}
