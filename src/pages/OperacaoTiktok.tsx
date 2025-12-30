@@ -10,6 +10,7 @@ const OperacaoTiktok = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [isDropboxVideoPlaying, setIsDropboxVideoPlaying] = useState(false);
+  const [isVideo3Playing, setIsVideo3Playing] = useState(false);
   const scrollToCTA = () => {
     const ctaButton = document.getElementById('cta-button');
     ctaButton?.scrollIntoView({
@@ -257,6 +258,53 @@ const OperacaoTiktok = () => {
               {/* Bloco de texto */}
               <div className="p-4 text-center">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Afiliado 2</h4>
+                <p className="text-sm text-gray-600 mb-1">
+                  Total Faturado: <span className="font-semibold text-gray-800">XXXK+</span>
+                </p>
+                <p className="text-sm text-gray-600">
+                  Comissão: <span className="font-semibold text-primary">XXK+</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 - Vídeo MP4 Dropbox */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full max-w-sm">
+              {/* Container do vídeo (9:16) */}
+              <div 
+                className="aspect-[9/16] bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 relative flex items-center justify-center cursor-pointer overflow-hidden"
+                onClick={() => {
+                  if (!isVideo3Playing) {
+                    setIsVideo3Playing(true);
+                    const video = document.getElementById('afiliado3-video') as HTMLVideoElement;
+                    video?.play();
+                  }
+                }}
+              >
+                <video
+                  id="afiliado3-video"
+                  src="https://www.dropbox.com/scl/fi/b8ykve4e1c99m80g5n7fo/DEPOIMNETO-3.mp4?rlkey=rm0auyheigoj4lqom9w0qulnr&raw=1"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  playsInline
+                  preload="metadata"
+                  controls={isVideo3Playing}
+                />
+                
+                {!isVideo3Playing && (
+                  <>
+                    {/* Overlay escuro no hover */}
+                    <div className="absolute inset-0 bg-black/30 hover:bg-black/40 transition-colors duration-300 z-10"></div>
+                    
+                    {/* Ícone de Play */}
+                    <div className="relative z-20 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+                      <Play className="w-7 h-7 text-white ml-1" fill="white" />
+                    </div>
+                  </>
+                )}
+              </div>
+
+              {/* Bloco de texto */}
+              <div className="p-4 text-center">
+                <h4 className="text-lg font-bold text-gray-900 mb-2">Afiliado 3</h4>
                 <p className="text-sm text-gray-600 mb-1">
                   Total Faturado: <span className="font-semibold text-gray-800">XXXK+</span>
                 </p>
