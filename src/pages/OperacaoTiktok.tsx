@@ -62,10 +62,10 @@ const OperacaoTiktok = () => {
           </p>
 
           {/* Botão CTA amarelo pill */}
-          <div className="mb-12" id="cta-button">
-            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-lg md:text-xl px-10 md:px-14 py-6 md:py-7 h-auto rounded-full font-black shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
-                QUERO ME INSCREVER GRÁTIS AGORA
+          <div className="mb-12 flex justify-center w-full" id="cta-button">
+            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+                QUERO ME INSCREVER GRÁTIS
               </Button>
             </a>
           </div>
@@ -316,9 +316,9 @@ const OperacaoTiktok = () => {
           </div>
 
           {/* CTA */}
-          <div className="flex justify-center">
-            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-lg md:text-xl px-10 md:px-14 py-6 md:py-7 h-auto rounded-full font-black shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+          <div className="flex justify-center w-full">
+            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
                 QUERO COMEÇAR AGORA
               </Button>
             </a>
@@ -381,9 +381,9 @@ const OperacaoTiktok = () => {
           </div>
 
           {/* Botão CTA */}
-          <div className="flex justify-center px-4">
-            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto">
-              <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 text-primary-foreground text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300">
+          <div className="flex justify-center w-full">
+            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
                 QUERO ME INSCREVER GRÁTIS
               </Button>
             </a>
@@ -478,10 +478,10 @@ const OperacaoTiktok = () => {
           </Accordion>
 
           {/* Botão CTA Final */}
-          <div className="flex justify-center mt-12">
-            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-10 py-6 h-auto rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300">
-                QUERO ME INSCREVER GRÁTIS AGORA
+          <div className="flex justify-center mt-12 w-full">
+            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+                QUERO ME INSCREVER GRÁTIS
               </Button>
             </a>
           </div>
