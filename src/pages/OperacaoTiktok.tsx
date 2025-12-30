@@ -9,6 +9,7 @@ import creatorsLogo from "@/assets/creators-logo.png";
 const OperacaoTiktok = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isDropboxVideoPlaying, setIsDropboxVideoPlaying] = useState(false);
   const scrollToCTA = () => {
     const ctaButton = document.getElementById('cta-button');
     ctaButton?.scrollIntoView({
@@ -169,8 +170,9 @@ const OperacaoTiktok = () => {
             </p>
           </div>
 
-          {/* Card de Depoimento com Vídeo Inline */}
-          <div className="flex justify-center mb-12">
+          {/* Cards de Depoimento com Vídeo Inline */}
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            {/* Card 1 - Streamable */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full max-w-sm">
               {/* Container do vídeo (9:16) */}
               <div 
@@ -200,6 +202,53 @@ const OperacaoTiktok = () => {
               {/* Bloco de texto */}
               <div className="p-4 text-center">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Afiliado 1</h4>
+                <p className="text-sm text-gray-600 mb-1">
+                  Total Faturado: <span className="font-semibold text-gray-800">XXXK+</span>
+                </p>
+                <p className="text-sm text-gray-600">
+                  Comissão: <span className="font-semibold text-primary">XXK+</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 - Vídeo MP4 Dropbox */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full max-w-sm">
+              {/* Container do vídeo (9:16) */}
+              <div 
+                className="aspect-[9/16] bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 relative flex items-center justify-center cursor-pointer overflow-hidden"
+                onClick={() => {
+                  if (!isDropboxVideoPlaying) {
+                    setIsDropboxVideoPlaying(true);
+                    const video = document.getElementById('dropbox-video') as HTMLVideoElement;
+                    video?.play();
+                  }
+                }}
+              >
+                <video
+                  id="dropbox-video"
+                  src="https://www.dropbox.com/scl/fi/3np4kukbaqukradth4hdk/DEPOIMENTO.mp4?rlkey=4hr0q2j1jflwng18sunk44bqq&raw=1"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  playsInline
+                  preload="metadata"
+                  controls={isDropboxVideoPlaying}
+                />
+                
+                {!isDropboxVideoPlaying && (
+                  <>
+                    {/* Overlay escuro no hover */}
+                    <div className="absolute inset-0 bg-black/30 hover:bg-black/40 transition-colors duration-300 z-10"></div>
+                    
+                    {/* Ícone de Play */}
+                    <div className="relative z-20 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+                      <Play className="w-7 h-7 text-white ml-1" fill="white" />
+                    </div>
+                  </>
+                )}
+              </div>
+
+              {/* Bloco de texto */}
+              <div className="p-4 text-center">
+                <h4 className="text-lg font-bold text-gray-900 mb-2">Afiliado 2</h4>
                 <p className="text-sm text-gray-600 mb-1">
                   Total Faturado: <span className="font-semibold text-gray-800">XXXK+</span>
                 </p>
