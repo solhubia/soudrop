@@ -172,30 +172,38 @@ const OperacaoTiktok = () => {
 
           {/* Cards de Depoimento com Vídeo Inline */}
           <div className="flex flex-wrap justify-center gap-6 mb-12">
-            {/* Card 1 - Streamable */}
+            {/* Card 1 - Vídeo MP4 Dropbox */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full max-w-sm">
               {/* Container do vídeo (9:16) */}
               <div 
-                className="aspect-[9/16] bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 relative flex items-center justify-center cursor-pointer"
-                onClick={() => setIsVideoPlaying(true)}
+                className="aspect-[9/16] bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 relative flex items-center justify-center cursor-pointer overflow-hidden"
+                onClick={() => {
+                  if (!isVideoPlaying) {
+                    setIsVideoPlaying(true);
+                    const video = document.getElementById('afiliado1-video') as HTMLVideoElement;
+                    video?.play();
+                  }
+                }}
               >
-                {!isVideoPlaying ? (
+                <video
+                  id="afiliado1-video"
+                  src="https://www.dropbox.com/scl/fi/d6ab0dhwvk0ftvi3wac77/DEPOIMENTO-2.mp4?rlkey=kzriobr6hljt3fcc7zro492e7&raw=1"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  playsInline
+                  preload="metadata"
+                  controls={isVideoPlaying}
+                />
+                
+                {!isVideoPlaying && (
                   <>
                     {/* Overlay escuro no hover */}
-                    <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors duration-300"></div>
+                    <div className="absolute inset-0 bg-black/30 hover:bg-black/40 transition-colors duration-300 z-10"></div>
                     
                     {/* Ícone de Play */}
-                    <div className="relative z-10 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+                    <div className="relative z-20 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
                       <Play className="w-7 h-7 text-white ml-1" fill="white" />
                     </div>
                   </>
-                ) : (
-                  <iframe
-                    src="https://streamable.com/e/ctp619?autoplay=1"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen"
-                    className="absolute inset-0 w-full h-full"
-                  />
                 )}
               </div>
 
