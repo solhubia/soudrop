@@ -210,12 +210,12 @@ const OperacaoTiktok = () => {
 
               {/* Bloco de texto */}
               <div className="p-4 text-center">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Afiliado 1</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">Thalia</h4>
                 <p className="text-sm text-gray-600 mb-1">
-                  Total Faturado: <span className="font-semibold text-gray-800">XXXK+</span>
+                  Total Faturado: <span className="font-semibold text-gray-800">380K+</span>
                 </p>
                 <p className="text-sm text-gray-600">
-                  Comissão: <span className="font-semibold text-primary">XXK+</span>
+                  Comissão: <span className="font-semibold text-primary">60K+</span>
                 </p>
               </div>
             </div>
@@ -257,12 +257,12 @@ const OperacaoTiktok = () => {
 
               {/* Bloco de texto */}
               <div className="p-4 text-center">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Afiliado 2</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">Emanuel</h4>
                 <p className="text-sm text-gray-600 mb-1">
-                  Total Faturado: <span className="font-semibold text-gray-800">XXXK+</span>
+                  Total Faturado: <span className="font-semibold text-gray-800">728K+</span>
                 </p>
                 <p className="text-sm text-gray-600">
-                  Comissão: <span className="font-semibold text-primary">XXK+</span>
+                  Comissão: <span className="font-semibold text-primary">100K+</span>
                 </p>
               </div>
             </div>
@@ -304,12 +304,12 @@ const OperacaoTiktok = () => {
 
               {/* Bloco de texto */}
               <div className="p-4 text-center">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Afiliado 3</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">Andreza</h4>
                 <p className="text-sm text-gray-600 mb-1">
-                  Total Faturado: <span className="font-semibold text-gray-800">XXXK+</span>
+                  Total Faturado: <span className="font-semibold text-gray-800">450K+</span>
                 </p>
                 <p className="text-sm text-gray-600">
-                  Comissão: <span className="font-semibold text-primary">XXK+</span>
+                  Comissão: <span className="font-semibold text-primary">70K+</span>
                 </p>
               </div>
             </div>
