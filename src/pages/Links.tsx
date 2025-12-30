@@ -68,7 +68,7 @@ const Index = () => {
               <LinkCard
                 title="Vender sem estoque"
                 description="Acesse o site da Soudrop"
-                url="https://soudrop.com.br/black-friday"
+                url="https://4k384ufgv64.typeform.com/to/rIQVeImj"
                 variant="green"
                 type="website"
                 onTrack={() => trackLinkClick('soudrop', 'Vender sem estoque')}
