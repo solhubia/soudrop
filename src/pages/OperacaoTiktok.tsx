@@ -172,9 +172,9 @@ const OperacaoTiktok = () => {
           </div>
 
           {/* Cards de Depoimento com Vídeo Inline */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
+          <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 mb-12">
             {/* Card 1 - Vídeo MP4 Dropbox */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full max-w-sm">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full md:w-1/3 max-w-xs">
               {/* Container do vídeo (9:16) */}
               <div 
                 className="aspect-[9/16] bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 relative flex items-center justify-center cursor-pointer overflow-hidden"
@@ -221,7 +221,7 @@ const OperacaoTiktok = () => {
             </div>
 
             {/* Card 2 - Vídeo MP4 Dropbox */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full max-w-sm">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full md:w-1/3 max-w-xs">
               {/* Container do vídeo (9:16) */}
               <div 
                 className="aspect-[9/16] bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 relative flex items-center justify-center cursor-pointer overflow-hidden"
@@ -268,7 +268,7 @@ const OperacaoTiktok = () => {
             </div>
 
             {/* Card 3 - Vídeo MP4 Dropbox */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full max-w-sm">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full md:w-1/3 max-w-xs">
               {/* Container do vídeo (9:16) */}
               <div 
                 className="aspect-[9/16] bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 relative flex items-center justify-center cursor-pointer overflow-hidden"
