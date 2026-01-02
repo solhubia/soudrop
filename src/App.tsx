@@ -25,6 +25,7 @@ import SoudropElite from "./pages/SoudropElite";
 import BlackFriday from "./pages/BlackFriday";
 import DashboardGiroEstoque from "./pages/DashboardGiroEstoque";
 import ObrigadoTiktokLucrativo from "./pages/ObrigadoTiktokLucrativo";
+import JornadaCreators from "./pages/JornadaCreators";
 import { useEffect } from "react";
 import { trackViewContent } from "./lib/fbq";
 
@@ -131,6 +132,7 @@ const App = () => {
             <Route path="/operacao-tiktok-de-lucro" element={<OperacaoTiktok />} />
             <Route path="/dashboard-giro-estoque" element={<DashboardGiroEstoque />} />
             <Route path="/obrigado-tiktok-lucrativo" element={<ObrigadoTiktokLucrativo />} />
+            <Route path="/jornada-creators" element={<JornadaCreators />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
