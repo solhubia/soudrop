@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import level0kImage from "@/assets/level-0k-wood.png";
 
 const levels = [
   {
@@ -291,16 +292,20 @@ const JornadaCreators = () => {
                   </span>
                 </div>
 
-                {/* Prize Image Placeholder */}
+                {/* Prize Image */}
                 <div className="aspect-[16/10] bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
-                  <div className="text-center px-4">
-                    <p className="text-sm font-medium opacity-80">
-                      {level.commission === "13%" && "13% de comissão"}
-                      {level.commission === "15%" && "15% de comissão"}
-                      {level.commission === "18%" && "18% de comissão"}
-                      {level.commission === "20%" && "20% de comissão"}
-                    </p>
-                  </div>
+                  {level.level === 1 ? (
+                    <img src={level0kImage} alt="Nível 0K" className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="text-center px-4">
+                      <p className="text-sm font-medium opacity-80">
+                        {level.commission === "13%" && "13% de comissão"}
+                        {level.commission === "15%" && "15% de comissão"}
+                        {level.commission === "18%" && "18% de comissão"}
+                        {level.commission === "20%" && "20% de comissão"}
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 {/* Prize Text */}
