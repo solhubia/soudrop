@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 
 // Level images
+import creatorsHeroLogo from "@/assets/creators-hero-logo.png";
 import level1Image from "@/assets/level-1-madeira.png";
 import level2Image from "@/assets/level-2-pedra.png";
 import level3Image from "@/assets/level-3-ferro.png";
@@ -217,11 +218,8 @@ const JornadaCreators = () => {
             {/* Right Column - Team Image with floating icons */}
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <p className="text-2xl font-bold">SouDrop CREATORS</p>
-                    <p className="text-sm mt-2">Imagem da equipe</p>
-                  </div>
+                <div className="aspect-[4/3] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center p-8">
+                  <img src={creatorsHeroLogo} alt="SouDrop Creators Brasil" className="w-full h-full object-contain" />
                 </div>
               </div>
               
