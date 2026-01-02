@@ -7,7 +7,29 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import level0kImage from "@/assets/level-0k-wood.png";
+
+// Level images
+import level1Image from "@/assets/level-1-madeira.png";
+import level2Image from "@/assets/level-2-pedra.png";
+import level3Image from "@/assets/level-3-ferro.png";
+import level4Image from "@/assets/level-4-carvao.png";
+import level5Image from "@/assets/level-5-rubi.png";
+import level6Image from "@/assets/level-6-safira.png";
+import level7Image from "@/assets/level-7-esmeralda.png";
+import level8Image from "@/assets/level-8-ouro.png";
+import level9Image from "@/assets/level-9-diamante.png";
+
+const levelImages: Record<number, string> = {
+  1: level1Image,
+  2: level2Image,
+  3: level3Image,
+  4: level4Image,
+  5: level5Image,
+  6: level6Image,
+  7: level7Image,
+  8: level8Image,
+  9: level9Image,
+};
 
 const levels = [
   {
@@ -26,7 +48,7 @@ const levels = [
   {
     level: 2,
     gmv: "20K",
-    name: "Aventureiro",
+    name: "Explorador",
     description: "Agora você domina o básico. Já entende o TikTok Shop, gera impacto e começa a inspirar outras pessoas.",
     commission: "15%",
     benefits: "Acesso ao Discord com Mentorias Exclusivas semanais",
@@ -39,7 +61,7 @@ const levels = [
   {
     level: 3,
     gmv: "100K",
-    name: "Visionário",
+    name: "Forjador",
     description: "Você se torna referência. Suas vendas crescem, sua comunidade confia em você e sua execução fala por si.",
     commission: "18%",
     benefits: "Acesso a Canais Exclusivos no Discord",
@@ -52,7 +74,7 @@ const levels = [
   {
     level: 4,
     gmv: "250K",
-    name: "Mestre",
+    name: "Minerador",
     description: "Você domina sua arte. Suas estratégias são eficazes, seus resultados consistentes e sua presença marcante.",
     commission: "20%",
     benefits: "Melhores Amigos do Instagram + Canais Exclusivos no Discord.",
@@ -65,7 +87,7 @@ const levels = [
   {
     level: 5,
     gmv: "500K",
-    name: "Grão-Mestre",
+    name: "Joalheiro",
     description: "Nível de elite. Você lidera pelo exemplo, movimenta o mercado e inspira toda a comunidade SouDrop.",
     commission: "20%",
     benefits: "Acesso VIP a eventos exclusivos da SouDrop",
@@ -78,7 +100,7 @@ const levels = [
   {
     level: 6,
     gmv: "1M",
-    name: "Lenda",
+    name: "Lapidador",
     description: "Você ultrapassou as barreiras do comum. Já pensa grande, constrói influência e começa a deixar sua marca.",
     commission: "20%",
     benefits: "Mentoria individual com especialistas",
@@ -92,7 +114,7 @@ const levels = [
   {
     level: 7,
     gmv: "5M",
-    name: "Titã",
+    name: "Mestre das Gemas",
     description: "Agora você inspira uma geração de creators. Seu nome é reconhecido, sua trajetória é símbolo de constância e propósito.",
     commission: "20%",
     benefits: "Participação nos bastidores da SouDrop",
@@ -106,7 +128,7 @@ const levels = [
   {
     level: 8,
     gmv: "10M",
-    name: "Supremo",
+    name: "Magnata",
     description: "Você se tornou força criadora. Move o mercado, cria tendências e molda o futuro do TikTok Shop.",
     commission: "20%",
     benefits: "Co-criação de produtos exclusivos",
@@ -120,7 +142,7 @@ const levels = [
   {
     level: 9,
     gmv: "50M",
-    name: "Eterno",
+    name: "Lendário",
     description: "O ápice da jornada. Onde o impacto vira legado, a comunidade te reconhece e o que você construiu se torna parte da história da SouDrop.",
     commission: "20%",
     benefits: "Legado permanente na comunidade",
@@ -293,19 +315,13 @@ const JornadaCreators = () => {
                 </div>
 
                 {/* Prize Image */}
-                <div className="aspect-[16/10] bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
-                  {level.level === 1 ? (
-                    <img src={level0kImage} alt="Nível 0K" className="w-full h-full object-cover" />
-                  ) : (
-                    <div className="text-center px-4">
-                      <p className="text-sm font-medium opacity-80">
-                        {level.commission === "13%" && "13% de comissão"}
-                        {level.commission === "15%" && "15% de comissão"}
-                        {level.commission === "18%" && "18% de comissão"}
-                        {level.commission === "20%" && "20% de comissão"}
-                      </p>
-                    </div>
-                  )}
+                <div className="aspect-[16/10] rounded-xl mb-3 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={levelImages[level.level]} 
+                    alt={`Nível ${level.level} - ${level.name}`} 
+                    className="w-full h-full object-cover"
+                    style={{ imageRendering: 'pixelated' }}
+                  />
                 </div>
 
                 {/* Prize Text */}
