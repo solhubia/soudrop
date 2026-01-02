@@ -68,9 +68,9 @@ const ObrigadoTiktokLucrativo = () => {
           </div>
 
           {/* Offer Card */}
-          <div className="pt-8">
+          <div className="pt-6">
             <div 
-              className="relative p-[2px] rounded-2xl overflow-hidden mx-auto max-w-xl"
+              className="relative p-[2px] rounded-xl overflow-hidden mx-auto w-full max-w-[340px] md:max-w-[420px]"
               style={{
                 background: "linear-gradient(90deg, #FF2E5F 0%, #7A3BFF 50%, #22D3EE 100%)"
               }}
@@ -84,38 +84,38 @@ const ObrigadoTiktokLucrativo = () => {
               />
               
               {/* Card content */}
-              <div className="relative bg-[#0d1f2d]/95 rounded-2xl p-6 md:p-8 space-y-4 backdrop-blur-sm">
-                <p className="text-white text-[clamp(1.1rem,3.5vw,1.35rem)] font-bold">
+              <div className="relative bg-[#0d1f2d]/95 rounded-xl p-4 md:p-5 space-y-2.5 backdrop-blur-sm">
+                <p className="text-white text-[clamp(0.95rem,3vw,1.1rem)] font-bold">
                   🔥 Oferta exclusiva para alunos
                 </p>
-                <p className="text-[clamp(1.25rem,4vw,1.5rem)] font-extrabold uppercase tracking-wide" style={{ color: "#FF2E5F" }}>
+                <p className="text-[clamp(1rem,3.5vw,1.2rem)] font-extrabold uppercase tracking-wide" style={{ color: "#FF2E5F" }}>
                   PRODUTOS A PREÇO DE CUSTO
                 </p>
-                <div className="space-y-1">
-                  <p className="text-white/70 text-[clamp(0.9rem,2.5vw,1rem)]">
+                <div className="space-y-0.5">
+                  <p className="text-white/70 text-[clamp(0.8rem,2vw,0.9rem)]">
                     De <span className="line-through">R$189,90</span> por apenas:
                   </p>
-                  <p className="text-[clamp(2rem,6vw,2.5rem)] font-extrabold" style={{ color: "#0BFFFF" }}>
+                  <p className="text-[clamp(1.6rem,5vw,2rem)] font-extrabold" style={{ color: "#0BFFFF" }}>
                     R$99,90
                   </p>
                 </div>
-                <div className="space-y-1">
-                  <p className="text-white/80 text-[clamp(0.85rem,2vw,0.95rem)]">
+                <div className="space-y-0.5">
+                  <p className="text-white/80 text-[clamp(0.75rem,1.8vw,0.85rem)]">
                     Ou em até:
                   </p>
-                  <p className="text-white text-[clamp(1rem,3vw,1.15rem)] font-semibold">
+                  <p className="text-white text-[clamp(0.9rem,2.5vw,1rem)] font-semibold">
                     💳 3x de R$33,30 no cartão
                   </p>
                 </div>
-                <div className="text-white/60 text-[clamp(0.8rem,2vw,0.9rem)] space-y-0.5">
+                <div className="text-white/60 text-[clamp(0.7rem,1.8vw,0.8rem)] space-y-0">
                   <p>Valor normal: R$479,61</p>
                   <p className="font-semibold" style={{ color: "#22c55e" }}>Economize R$254,71</p>
                 </div>
-                <div className="pt-2 space-y-1.5 text-left">
-                  <p className="text-white/90 text-[clamp(0.85rem,2vw,0.95rem)]">✔ Kit completo de produtos prontos para vender</p>
-                  <p className="text-white/90 text-[clamp(0.85rem,2vw,0.95rem)]">✔ Ideal para iniciantes no TikTok Shop</p>
-                  <p className="text-white/90 text-[clamp(0.85rem,2vw,0.95rem)]">✔ Estoque limitado</p>
-                  <p className="text-white/90 text-[clamp(0.85rem,2vw,0.95rem)]">✔ Curso gratuito incluso</p>
+                <div className="pt-1.5 space-y-1 text-left">
+                  <p className="text-white/90 text-[clamp(0.75rem,1.8vw,0.85rem)]">✔ Kit completo de produtos prontos para vender</p>
+                  <p className="text-white/90 text-[clamp(0.75rem,1.8vw,0.85rem)]">✔ Ideal para iniciantes no TikTok Shop</p>
+                  <p className="text-white/90 text-[clamp(0.75rem,1.8vw,0.85rem)]">✔ Estoque limitado</p>
+                  <p className="text-white/90 text-[clamp(0.75rem,1.8vw,0.85rem)]">✔ Curso gratuito incluso</p>
                 </div>
               </div>
             </div>
