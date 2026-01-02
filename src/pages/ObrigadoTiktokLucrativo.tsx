@@ -117,6 +117,16 @@ const ObrigadoTiktokLucrativo = () => {
                   <p className="text-white/90 text-[clamp(0.75rem,1.8vw,0.85rem)]">✔ Estoque limitado</p>
                   <p className="text-white/90 text-[clamp(0.75rem,1.8vw,0.85rem)]">✔ Curso gratuito incluso</p>
                 </div>
+                <div className="pt-3">
+                  <a 
+                    href="https://pay.kiwify.com.br/zpYd9xh" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block w-full bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold text-[clamp(0.9rem,2.5vw,1rem)] py-3 px-4 rounded-lg text-center transition-colors duration-200 uppercase tracking-wide"
+                  >
+                    QUERO APROVEITAR
+                  </a>
+                </div>
               </div>
             </div>
           </div>
