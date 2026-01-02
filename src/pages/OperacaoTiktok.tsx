@@ -63,7 +63,7 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA amarelo pill */}
           <div className="mb-12 flex justify-center w-full" id="cta-button">
-            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+            <a href="https://sun.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
               <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
                 QUERO ME INSCREVER GRÁTIS
               </Button>
@@ -317,7 +317,7 @@ const OperacaoTiktok = () => {
 
           {/* CTA */}
           <div className="flex justify-center w-full">
-            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+            <a href="https://sun.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
               <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
                 QUERO COMEÇAR AGORA
               </Button>
@@ -382,7 +382,7 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA */}
           <div className="flex justify-center w-full">
-            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+            <a href="https://sun.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
               <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
                 QUERO ME INSCREVER GRÁTIS
               </Button>
@@ -479,7 +479,7 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA Final */}
           <div className="flex justify-center mt-12 w-full">
-            <a href="https://chk.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+            <a href="https://sun.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
               <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
                 QUERO ME INSCREVER GRÁTIS
               </Button>
