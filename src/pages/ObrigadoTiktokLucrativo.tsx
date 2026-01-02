@@ -96,7 +96,7 @@ const ObrigadoTiktokLucrativo = () => {
                     De <span className="line-through">R$189,90</span> por apenas:
                   </p>
                   <p className="text-[clamp(2rem,6vw,2.5rem)] font-extrabold" style={{ color: "#0BFFFF" }}>
-                    R$224,90
+                    R$99,90
                   </p>
                 </div>
                 <div className="space-y-1">
@@ -104,7 +104,7 @@ const ObrigadoTiktokLucrativo = () => {
                     Ou em até:
                   </p>
                   <p className="text-white text-[clamp(1rem,3vw,1.15rem)] font-semibold">
-                    💳 3x de R$74,97 no cartão
+                    💳 3x de R$33,30 no cartão
                   </p>
                 </div>
                 <div className="text-white/60 text-[clamp(0.8rem,2vw,0.9rem)] space-y-0.5">
