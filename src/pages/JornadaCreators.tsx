@@ -210,7 +210,10 @@ const JornadaCreators = () => {
               <p className="text-gray-400 text-lg max-w-xl">
                 A SouDrop criou o programa de Creators mais premiado e mais respeitado do TikTok Shop. Assim que você entra, sua comissão deixa de ser 7,5% e sobe automaticamente para 13%, e conforme você cresce, ela pode chegar a 20%!
               </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-full font-semibold text-lg hover:opacity-90 transition-all hover:shadow-lg hover:shadow-cyan-500/25">
+              <button 
+                onClick={() => document.getElementById('termos-section')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-full font-semibold text-lg hover:opacity-90 transition-all hover:shadow-lg hover:shadow-cyan-500/25"
+              >
                 Participar Agora
               </button>
             </div>
@@ -345,7 +348,7 @@ const JornadaCreators = () => {
       </section>
 
       {/* Important Information Section */}
-      <section className="py-16 px-4 bg-gradient-to-b from-transparent via-blue-950/20 to-transparent">
+      <section id="termos-section" className="py-16 px-4 bg-gradient-to-b from-transparent via-blue-950/20 to-transparent">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <Info className="w-6 h-6 text-gray-400" />
