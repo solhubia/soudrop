@@ -407,16 +407,19 @@ const JornadaCreators = () => {
           </div>
 
           {/* CTA Button */}
-          <button
-            className={`px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-full font-semibold text-lg transition-all ${
+          <a
+            href="https://forms.gle/YnbjQShvWtmBrunt8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-full font-semibold text-lg transition-all ${
               agreedTerms
                 ? "hover:opacity-90 hover:shadow-lg hover:shadow-cyan-500/25"
-                : "opacity-50 cursor-not-allowed"
+                : "opacity-50 pointer-events-none"
             }`}
-            disabled={!agreedTerms}
+            onClick={(e) => !agreedTerms && e.preventDefault()}
           >
             Participar da Premiação
-          </button>
+          </a>
         </div>
       </section>
 
