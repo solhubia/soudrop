@@ -437,8 +437,8 @@ const SoudropElite = () => {
               <div className="relative">
                 <div className="absolute -inset-3 bg-gradient-to-br from-elite-gold/30 to-yellow-600/20 rounded-2xl blur-xl opacity-50" />
                 <img 
-                  src="/lovable-uploads/renan-ferreira.webp" 
-                  alt="Renan Ferreira" 
+                  src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" 
+                  alt="Renan Ferreira - Especialista em Vendas Online" 
                   className="relative w-full rounded-2xl border-4 border-elite-gold/30 shadow-[0_0_40px_rgba(251,191,36,0.2)]" 
                   loading="lazy"
                   decoding="async"
