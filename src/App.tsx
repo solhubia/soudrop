@@ -3,32 +3,41 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { lazy, Suspense, useEffect } from "react";
+
+// Eager load only the most critical pages (homepage)
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Links from "./pages/Links";
-import Importacao from "./pages/Importacao";
-import CacadorProdutos from "./pages/CacadorProdutos";
-import CacadorProdutosChina from "./pages/CacadorProdutosChina";
-import FontesSecretas from "./pages/FontesSecretas";
-import FontesSecretasDetalhes from "./pages/FontesSecretasDetalhes";
-import LiveImportacao from "./pages/LiveImportacao";
-import Obrigado from "./pages/Obrigado";
-import ObrigadoSoudrop from "./pages/ObrigadoSoudrop";
-import ObrigadoClubeImportacao from "./pages/ObrigadoClubeImportacao";
-import ObrigadoCacadorChina from "./pages/ObrigadoCacadorChina";
-import OperacaoTiktok from "./pages/OperacaoTiktok";
-import ChecklistImportador from "./pages/ChecklistImportador.tsx";
-import CacadorProdutosEntrada from "./pages/CacadorProdutosEntrada";
-import SoudropStart from "./pages/SoudropStart";
-import SoudropPro from "./pages/SoudropPro";
-import SoudropElite from "./pages/SoudropElite";
-import BlackFriday from "./pages/BlackFriday";
-import DashboardGiroEstoque from "./pages/DashboardGiroEstoque";
-import ObrigadoTiktokLucrativo from "./pages/ObrigadoTiktokLucrativo";
-import JornadaCreators from "./pages/JornadaCreators";
-import { useEffect } from "react";
-import { trackViewContent } from "./lib/fbq";
 
+// Lazy load all other pages to reduce initial bundle size (~220KB savings)
+const Links = lazy(() => import("./pages/Links"));
+const Importacao = lazy(() => import("./pages/Importacao"));
+const CacadorProdutos = lazy(() => import("./pages/CacadorProdutos"));
+const CacadorProdutosChina = lazy(() => import("./pages/CacadorProdutosChina"));
+const FontesSecretas = lazy(() => import("./pages/FontesSecretas"));
+const FontesSecretasDetalhes = lazy(() => import("./pages/FontesSecretasDetalhes"));
+const LiveImportacao = lazy(() => import("./pages/LiveImportacao"));
+const Obrigado = lazy(() => import("./pages/Obrigado"));
+const ObrigadoSoudrop = lazy(() => import("./pages/ObrigadoSoudrop"));
+const ObrigadoClubeImportacao = lazy(() => import("./pages/ObrigadoClubeImportacao"));
+const ObrigadoCacadorChina = lazy(() => import("./pages/ObrigadoCacadorChina"));
+const OperacaoTiktok = lazy(() => import("./pages/OperacaoTiktok"));
+const ChecklistImportador = lazy(() => import("./pages/ChecklistImportador"));
+const CacadorProdutosEntrada = lazy(() => import("./pages/CacadorProdutosEntrada"));
+const SoudropStart = lazy(() => import("./pages/SoudropStart"));
+const SoudropPro = lazy(() => import("./pages/SoudropPro"));
+const SoudropElite = lazy(() => import("./pages/SoudropElite"));
+const BlackFriday = lazy(() => import("./pages/BlackFriday"));
+const DashboardGiroEstoque = lazy(() => import("./pages/DashboardGiroEstoque"));
+const ObrigadoTiktokLucrativo = lazy(() => import("./pages/ObrigadoTiktokLucrativo"));
+const JornadaCreators = lazy(() => import("./pages/JornadaCreators"));
+
+// Minimal loading fallback - prevents CLS with fixed height
+const PageLoader = () => (
+  <div className="min-h-screen bg-black flex items-center justify-center">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-yellow-400"></div>
+  </div>
+);
 
 // -------------------------------------------
 // Componente que envia ViewContent por rota
@@ -49,8 +58,7 @@ function RouteListener() {
 
       // Dispara ViewContent contextualizado APENAS se não for a página inicial
       if (path !== "/") {
-        // AGORA IMPORTE da lib correta
-        import('@/lib/fbq').then(({ trackViewContent }) => {
+        import("@/lib/fbq").then(({ trackViewContent }) => {
           trackViewContent(category, { content_name: document.title });
         });
       }
@@ -70,10 +78,20 @@ const App = () => {
     if (window.fbq) return;
 
     // Carrega o script do Pixel apenas uma vez
-    (function (f: any, b: Document, e: string, v: string, n?: any, t?: HTMLScriptElement, s?: HTMLScriptElement) {
+    (function (
+      f: any,
+      b: Document,
+      e: string,
+      v: string,
+      n?: any,
+      t?: HTMLScriptElement,
+      s?: HTMLScriptElement
+    ) {
       if (f.fbq) return;
       n = f.fbq = function () {
-        n!.callMethod ? n!.callMethod.apply(n, arguments) : n!.queue.push(arguments);
+        n!.callMethod
+          ? n!.callMethod.apply(n, arguments)
+          : n!.queue.push(arguments);
       };
       if (!f._fbq) f._fbq = n;
       n.push = n;
@@ -85,7 +103,12 @@ const App = () => {
       t.src = v;
       s = b.getElementsByTagName(e)[0] as HTMLScriptElement;
       s.parentNode!.insertBefore(t, s);
-    })(window as any, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+    })(
+      window as any,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
 
     window.fbq?.("init", "1144631303730010");
 
@@ -94,7 +117,8 @@ const App = () => {
     img.height = 1;
     img.width = 1;
     img.style.display = "none";
-    img.src = "https://www.facebook.com/tr?id=1144631303730010&ev=PageView&noscript=1";
+    img.src =
+      "https://www.facebook.com/tr?id=1144631303730010&ev=PageView&noscript=1";
     document.body.appendChild(img);
 
     return () => {
@@ -110,31 +134,33 @@ const App = () => {
         <BrowserRouter>
           <RouteListener />
 
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/links" element={<Links />} />
-            <Route path="/importacao" element={<Importacao />} />
-            <Route path="/cacador-produtos" element={<CacadorProdutos />} />
-            <Route path="/cacador-produtos-china" element={<CacadorProdutosChina />} />
-            <Route path="/checklist-importador" element={<ChecklistImportador />} />
-            <Route path="/cacador-produtos-entrada" element={<CacadorProdutosEntrada />} />
-            <Route path="/fontes-secretas" element={<FontesSecretas />} />
-            <Route path="/fontes-secretas-detalhes" element={<FontesSecretasDetalhes />} />
-            <Route path="/live-importacao" element={<LiveImportacao />} />
-            <Route path="/obrigado" element={<Obrigado />} />
-            <Route path="/obrigado-soudrop" element={<ObrigadoSoudrop />} />
-            <Route path="/obrigado-clube-importacao" element={<ObrigadoClubeImportacao />} />
-            <Route path="/obrigado-cacador-china" element={<ObrigadoCacadorChina />} />
-            <Route path="/soudrop-start" element={<SoudropStart />} />
-            <Route path="/soudrop-pro" element={<SoudropPro />} />
-            <Route path="/soudrop-elite" element={<SoudropElite />} />
-            <Route path="/black-friday" element={<BlackFriday />} />
-            <Route path="/operacao-tiktok-de-lucro" element={<OperacaoTiktok />} />
-            <Route path="/dashboard-giro-estoque" element={<DashboardGiroEstoque />} />
-            <Route path="/obrigado-tiktok-lucrativo" element={<ObrigadoTiktokLucrativo />} />
-            <Route path="/jornada-creators" element={<JornadaCreators />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/links" element={<Links />} />
+              <Route path="/importacao" element={<Importacao />} />
+              <Route path="/cacador-produtos" element={<CacadorProdutos />} />
+              <Route path="/cacador-produtos-china" element={<CacadorProdutosChina />} />
+              <Route path="/checklist-importador" element={<ChecklistImportador />} />
+              <Route path="/cacador-produtos-entrada" element={<CacadorProdutosEntrada />} />
+              <Route path="/fontes-secretas" element={<FontesSecretas />} />
+              <Route path="/fontes-secretas-detalhes" element={<FontesSecretasDetalhes />} />
+              <Route path="/live-importacao" element={<LiveImportacao />} />
+              <Route path="/obrigado" element={<Obrigado />} />
+              <Route path="/obrigado-soudrop" element={<ObrigadoSoudrop />} />
+              <Route path="/obrigado-clube-importacao" element={<ObrigadoClubeImportacao />} />
+              <Route path="/obrigado-cacador-china" element={<ObrigadoCacadorChina />} />
+              <Route path="/soudrop-start" element={<SoudropStart />} />
+              <Route path="/soudrop-pro" element={<SoudropPro />} />
+              <Route path="/soudrop-elite" element={<SoudropElite />} />
+              <Route path="/black-friday" element={<BlackFriday />} />
+              <Route path="/operacao-tiktok-de-lucro" element={<OperacaoTiktok />} />
+              <Route path="/dashboard-giro-estoque" element={<DashboardGiroEstoque />} />
+              <Route path="/obrigado-tiktok-lucrativo" element={<ObrigadoTiktokLucrativo />} />
+              <Route path="/jornada-creators" element={<JornadaCreators />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

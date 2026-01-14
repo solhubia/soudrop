@@ -27,16 +27,16 @@ const SoudropElite = () => {
     script.async = true;
     script.onload = () => {
       setFormLoaded(true);
-      // Track form_loaded event
+      // Track everwebinar_loaded event (renamed for clarity)
       if (typeof window !== 'undefined') {
         if (window.gtag) {
-          window.gtag('event', 'form_loaded', {
+          window.gtag('event', 'everwebinar_loaded', {
             event_category: 'engagement',
             event_label: 'webinarjam_form_loaded'
           });
         }
         if (window.fbq) {
-          window.fbq('trackCustom', 'FormLoaded', {
+          window.fbq('trackCustom', 'EverwebinarLoaded', {
             content_name: 'webinarjam_form',
             content_category: 'soudrop'
           });
