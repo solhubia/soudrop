@@ -6,16 +6,21 @@ import { trackScrollDepth, trackTimeOnPage } from "@/lib/fbq";
 
 const SoudropElite = () => {
   const formContainerRef = useRef<HTMLDivElement>(null);
+  const formInjectedRef = useRef(false);
   const [hasTrackedScroll25, setHasTrackedScroll25] = useState(false);
   const [hasTrackedTime30, setHasTrackedTime30] = useState(false);
   const [formLoaded, setFormLoaded] = useState(false);
 
   // Load WebinarJam form after initial render (delayed for better FCP)
   useEffect(() => {
+    // Prevent double injection
+    if (formInjectedRef.current) return;
+    
     const loadForm = () => {
-      if (!formContainerRef.current || formLoaded) return;
+      if (!formContainerRef.current || formInjectedRef.current) return;
       
-      formContainerRef.current.innerHTML = '';
+      formInjectedRef.current = true;
+      
       const wrapper = document.createElement('div');
       wrapper.className = 'wj-embed-wrapper';
       wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
@@ -50,7 +55,7 @@ const SoudropElite = () => {
     } else {
       setTimeout(loadForm, 500);
     }
-  }, [formLoaded]);
+  }, []);
 
   // Track CTA clicks
   const handleCtaClick = useCallback(() => {
