@@ -267,16 +267,6 @@ const SoudropElite = () => {
             
         </div>
         
-        {/* Logo Creators SouDrop Brasil - Top Right - Lazy loaded, small */}
-        <img 
-          src="/lovable-uploads/soudrop-creators-brasil.webp" 
-          alt="Creators SouDrop Brasil" 
-          className="absolute top-4 right-4 lg:top-6 lg:right-6 w-[100px] lg:w-[160px] opacity-90 pointer-events-none z-30" 
-          loading="lazy"
-          decoding="async"
-          width={160}
-          height={58}
-        />
       </section>
 
       {/* HERO 2 - O que você vai sair fazendo */}
