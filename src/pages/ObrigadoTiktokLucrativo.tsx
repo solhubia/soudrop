@@ -54,6 +54,21 @@ const ObrigadoTiktokLucrativo = () => {
             todas as instruções para acessar o curso gratuito.
           </p>
 
+          {/* Course Access Button */}
+          <div className="pt-8 pb-4 flex flex-col items-center">
+            <a
+              href="https://app.nutror.com/curso/9245715aa9063683eeaef4b5b4dc7f3df1b0149d"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full max-w-[420px] bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold text-[clamp(1rem,3vw,1.2rem)] py-4 px-6 rounded-xl text-center transition-all duration-200 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40"
+            >
+              ✅ Acessar o curso agora
+            </a>
+            <p className="text-white/60 text-[clamp(0.75rem,2vw,0.85rem)] mt-3">
+              Você também vai receber o acesso no e-mail.
+            </p>
+          </div>
+
           {/* Enquanto isso section */}
           <div className="pt-6 space-y-2">
             <p className="text-white text-[clamp(1.25rem,3.5vw,1.5rem)] font-semibold">
