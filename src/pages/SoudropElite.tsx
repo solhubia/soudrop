@@ -1,100 +1,39 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight, X } from "lucide-react";
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { trackScrollDepth, trackTimeOnPage } from "@/lib/fbq";
 
+// URL do EverWebinar para inscrição - PREENCHER COM O LINK CORRETO
+const EVERWEBINAR_REGISTRATION_URL = "https://event.webinarjam.com/register/8wgw0kty";
+
 const SoudropElite = () => {
-  const formContainerRef = useRef<HTMLDivElement>(null);
-  const formInjectedRef = useRef(false);
   const [hasTrackedScroll25, setHasTrackedScroll25] = useState(false);
   const [hasTrackedTime30, setHasTrackedTime30] = useState(false);
-  const [formLoaded, setFormLoaded] = useState(false);
-  const [formVisible, setFormVisible] = useState(false);
 
-  // Load WebinarJam form with IntersectionObserver (loads when visible OR on CTA click)
-  const loadForm = useCallback(() => {
-    if (formInjectedRef.current || !formContainerRef.current) return;
-    
-    formInjectedRef.current = true;
-    setFormVisible(true);
-    
-    const wrapper = document.createElement('div');
-    wrapper.className = 'wj-embed-wrapper';
-    wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
-    const script = document.createElement('script');
-    script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=QUERO%20MINHA%20VAGA&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1';
-    script.async = true;
-    script.onload = () => {
-      setFormLoaded(true);
-      // Track everwebinar_loaded event (renamed for clarity)
-      if (typeof window !== 'undefined') {
-        if (window.gtag) {
-          window.gtag('event', 'everwebinar_loaded', {
-            event_category: 'engagement',
-            event_label: 'webinarjam_form_loaded'
-          });
-        }
-        if (window.fbq) {
-          window.fbq('trackCustom', 'EverwebinarLoaded', {
-            content_name: 'webinarjam_form',
-            content_category: 'soudrop'
-          });
-        }
-      }
-    };
-    wrapper.appendChild(script);
-    formContainerRef.current.appendChild(wrapper);
-  }, []);
-
-  // IntersectionObserver to load form when visible
-  useEffect(() => {
-    if (formInjectedRef.current || !formContainerRef.current) return;
-    
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          loadForm();
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '200px', threshold: 0.1 }
-    );
-    
-    observer.observe(formContainerRef.current);
-    
-    return () => observer.disconnect();
-  }, [loadForm]);
-
-  // Track CTA clicks and load form
+  // Track CTA clicks and open EverWebinar in new tab
   const handleCtaClick = useCallback(() => {
     // Track CTA click event for GA4 and Meta
     if (typeof window !== 'undefined') {
       if (window.gtag) {
         window.gtag('event', 'cta_click_reservar_vaga', {
           event_category: 'engagement',
-          event_label: 'soudrop_elite_cta'
+          event_label: 'soudrop_elite_cta',
+          page: '/soudrop-elite'
         });
       }
       if (window.fbq) {
         window.fbq('trackCustom', 'CTAClick', {
           content_name: 'reservar_vaga',
-          content_category: 'soudrop'
+          content_category: 'soudrop',
+          page: '/soudrop-elite'
         });
       }
     }
     
-    // Load form if not already loaded
-    loadForm();
-    
-    // Scroll to form
-    setTimeout(() => {
-      formContainerRef.current?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-      });
-    }, 100);
-  }, [loadForm]);
+    // Open EverWebinar registration in new tab
+    window.open(EVERWEBINAR_REGISTRATION_URL, '_blank', 'noopener,noreferrer');
+  }, []);
 
   // Scroll Depth tracking - 25% (passive)
   useEffect(() => {
@@ -150,18 +89,6 @@ const SoudropElite = () => {
   
   const paraQuemE = ["Trabalha registrado ou como autônomo e quer montar uma renda extra pela internet.", "Já pensou em vender na Shopee, Mercado Livre ou Magalu, mas não sabe por onde começar.", "Não tem dinheiro pra comprar estoque e tem medo de ficar com produto parado.", "Quer trabalhar de casa, usando apenas celular ou computador.", "Está disposto a aprender algo novo e aplicar ainda esse mês."];
 
-  // Form placeholder component - prevents CLS
-  const FormPlaceholder = () => (
-    <div className="min-h-[280px] flex flex-col items-center justify-center p-6 bg-white/5 rounded-xl border border-elite-gold/20">
-      <button 
-        onClick={handleCtaClick}
-        className="w-full px-8 py-4 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-lg rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
-      >
-        ✅ QUERO MINHA VAGA
-      </button>
-      <p className="text-gray-400 text-xs mt-3 text-center">Clique para carregar o formulário de inscrição</p>
-    </div>
-  );
 
   return (
     <div className="min-h-screen bg-black overflow-x-hidden">
@@ -207,25 +134,17 @@ const SoudropElite = () => {
                   </p>
                 </div>
                 
-                {/* WebinarJam Form - loads on visibility or CTA click */}
+                {/* CTA Block - Lightweight replacement for EverWebinar form */}
                 <div className="hero-form-wrapper">
-                  <p className="text-center text-xs sm:text-sm text-gray-400 mb-3">
-                    100% gratuito • sem cartão • leva 20 segundos
+                  <button 
+                    onClick={handleCtaClick}
+                    className="w-full px-8 py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-lg sm:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
+                  >
+                    QUERO RESERVAR MINHA VAGA
+                  </button>
+                  <p className="text-center text-xs sm:text-sm text-gray-400 mt-4">
+                    Leva menos de 20 segundos • 100% gratuito
                   </p>
-                  <p className="text-center text-xs sm:text-sm text-gray-300 mb-3">
-                    Vagas limitadas por horário <span className="text-elite-gold font-semibold">Garanta a sua agora.</span>
-                  </p>
-                  
-                  {/* Form container with fixed height to prevent CLS */}
-                  <div ref={formContainerRef} className="min-h-[280px]">
-                    {!formVisible && <FormPlaceholder />}
-                    {formVisible && !formLoaded && (
-                      <div className="min-h-[280px] flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-elite-gold"></div>
-                        <span className="ml-3 text-gray-400">Carregando...</span>
-                      </div>
-                    )}
-                  </div>
                 </div>
               </div>
             </AnimatedSection>
