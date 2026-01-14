@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight, X } from "lucide-react";
-import { useEffect, useState, useCallback } from "react";
+import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight, X, ArrowUp } from "lucide-react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { trackScrollDepth, trackTimeOnPage } from "@/lib/fbq";
 
@@ -10,6 +10,8 @@ const EVERWEBINAR_REGISTRATION_URL = "https://event.webinarjam.com/register/8wgw
 const SoudropElite = () => {
   const [hasTrackedScroll25, setHasTrackedScroll25] = useState(false);
   const [hasTrackedTime30, setHasTrackedTime30] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  const scrollPercentRef = useRef(0);
   const [wjButtonScriptLoaded, setWjButtonScriptLoaded] = useState(false);
   const wjButtonContainerRef = useCallback((node: HTMLDivElement | null) => {
     if (!node || wjButtonScriptLoaded) return;
@@ -68,21 +70,50 @@ const SoudropElite = () => {
     window.open(EVERWEBINAR_REGISTRATION_URL, '_blank', 'noopener,noreferrer');
   }, []);
 
-  // Scroll Depth tracking - 25% (passive)
+  // Scroll Depth tracking - 25% (passive) + Back to Top visibility
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      if (hasTrackedScroll25) return;
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = scrollTop / docHeight * 100;
-      if (scrollPercent >= 25) {
-        trackScrollDepth("soudrop", 25);
-        setHasTrackedScroll25(true);
-      }
+      if (ticking) return;
+      ticking = true;
+      
+      requestAnimationFrame(() => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        scrollPercentRef.current = scrollPercent;
+        
+        // Show/hide back to top button
+        setShowBackToTop(scrollPercent >= 25);
+        
+        // Track scroll depth 25%
+        if (!hasTrackedScroll25 && scrollPercent >= 25) {
+          trackScrollDepth("soudrop", 25);
+          setHasTrackedScroll25(true);
+        }
+        
+        ticking = false;
+      });
     };
+    
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasTrackedScroll25]);
+
+  // Handle back to top click with tracking
+  const handleBackToTop = useCallback(() => {
+    // Track GA4 event
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'back_to_top_click', {
+        event_category: 'engagement',
+        page: '/soudrop-elite',
+        scrollDepthPercent: Math.round(scrollPercentRef.current)
+      });
+    }
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   // Time on Page tracking - 30 seconds
   useEffect(() => {
@@ -601,6 +632,17 @@ const SoudropElite = () => {
           </p>
         </div>
       </footer>
+
+      {/* Back to Top Button */}
+      {showBackToTop && (
+        <button
+          onClick={handleBackToTop}
+          aria-label="Voltar ao topo"
+          className="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-black/90 border-2 border-elite-gold text-elite-gold shadow-lg hover:bg-elite-gold hover:text-black transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-elite-gold focus:ring-offset-2 focus:ring-offset-black"
+        >
+          <ArrowUp className="w-6 h-6" />
+        </button>
+      )}
     </div>
   );
 };
