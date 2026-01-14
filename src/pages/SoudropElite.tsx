@@ -1,31 +1,81 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-import renanPhoto from "@/assets/renan-ferreira.jpg";
-import soudropCreatorsBrasil from "@/assets/soudrop-creators-brasil.png";
+import { useEffect, useRef, useState, useCallback, lazy, Suspense } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { trackScrollDepth, trackTimeOnPage } from "@/lib/fbq";
+import { trackScrollDepth, trackTimeOnPage, trackLead } from "@/lib/fbq";
+
+// Lazy load heavy components and images
+const LazyRenanPhoto = lazy(() => import("@/assets/renan-ferreira.jpg?url").then(m => ({ default: () => <img src={m.default} alt="Renan Ferreira" className="relative w-full rounded-2xl border-4 border-elite-gold/30 shadow-[0_0_40px_rgba(251,191,36,0.2)]" loading="lazy" decoding="async" width={400} height={500} /> })));
+
 const SoudropElite = () => {
   const formContainerRef = useRef<HTMLDivElement>(null);
   const [hasTrackedScroll25, setHasTrackedScroll25] = useState(false);
   const [hasTrackedTime30, setHasTrackedTime30] = useState(false);
+  const [formLoaded, setFormLoaded] = useState(false);
+  const [formTriggered, setFormTriggered] = useState(false);
 
-  // WebinarJam form injection
-  useEffect(() => {
-    if (formContainerRef.current) {
-      formContainerRef.current.innerHTML = '';
-      const wrapper = document.createElement('div');
-      wrapper.className = 'wj-embed-wrapper';
-      wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
-      const script = document.createElement('script');
-      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=QUERO%20MINHA%20VAGA&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1';
-      script.async = true;
-      wrapper.appendChild(script);
-      formContainerRef.current.appendChild(wrapper);
+  // Lazy load WebinarJam form only when CTA is clicked
+  const loadForm = useCallback(() => {
+    if (formLoaded || !formContainerRef.current) return;
+    
+    // Track CTA click event for GA4 and Meta
+    if (typeof window !== 'undefined') {
+      // GA4 event
+      if (window.gtag) {
+        window.gtag('event', 'cta_click_reservar_vaga', {
+          event_category: 'engagement',
+          event_label: 'soudrop_elite_cta'
+        });
+      }
+      // Meta Pixel event
+      if (window.fbq) {
+        window.fbq('trackCustom', 'CTAClick', {
+          content_name: 'reservar_vaga',
+          content_category: 'soudrop'
+        });
+      }
     }
-  }, []);
+    
+    setFormTriggered(true);
+    
+    formContainerRef.current.innerHTML = '';
+    const wrapper = document.createElement('div');
+    wrapper.className = 'wj-embed-wrapper';
+    wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
+    const script = document.createElement('script');
+    script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=QUERO%20MINHA%20VAGA&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1';
+    script.async = true;
+    script.onload = () => {
+      setFormLoaded(true);
+      // Track form_view event
+      if (typeof window !== 'undefined') {
+        if (window.gtag) {
+          window.gtag('event', 'form_view', {
+            event_category: 'engagement',
+            event_label: 'webinarjam_form_loaded'
+          });
+        }
+        if (window.fbq) {
+          window.fbq('trackCustom', 'FormView', {
+            content_name: 'webinarjam_form',
+            content_category: 'soudrop'
+          });
+        }
+      }
+    };
+    wrapper.appendChild(script);
+    formContainerRef.current.appendChild(wrapper);
+    
+    // Scroll to form
+    setTimeout(() => {
+      formContainerRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 100);
+  }, [formLoaded]);
 
-  // Scroll Depth tracking - 25%
+  // Scroll Depth tracking - 25% (passive)
   useEffect(() => {
     const handleScroll = () => {
       if (hasTrackedScroll25) return;
@@ -37,9 +87,7 @@ const SoudropElite = () => {
         setHasTrackedScroll25(true);
       }
     };
-    window.addEventListener('scroll', handleScroll, {
-      passive: true
-    });
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasTrackedScroll25]);
 
@@ -52,6 +100,7 @@ const SoudropElite = () => {
     }, 30000);
     return () => clearTimeout(timer);
   }, [hasTrackedTime30]);
+
   const pilares = [{
     icon: TrendingUp,
     title: "Produtos simples que vendem todo dia: como encontrar e validar",
@@ -77,12 +126,16 @@ const SoudropElite = () => {
     title: "Plano de ação, suporte e comunidade pra você não caminhar sozinho",
     description: "Você sai da MasterClass com um passo a passo claro para aplicar o que aprendeu e acesso a materiais de apoio para não caminhar sozinho."
   }];
+  
   const paraQuemE = ["Trabalha registrado ou como autônomo e quer montar uma renda extra pela internet.", "Já pensou em vender na Shopee, Mercado Livre ou Magalu, mas não sabe por onde começar.", "Não tem dinheiro pra comprar estoque e tem medo de ficar com produto parado.", "Quer trabalhar de casa, usando apenas celular ou computador.", "Está disposto a aprender algo novo e aplicar ainda esse mês."];
+  
   const bulletPoints = ["Como escolher produtos simples que têm demanda real e não ficam encalhados.", "Como anunciar nos marketplaces mesmo sem ter experiência com tráfego hoje.", "O passo a passo do modelo sem estoque que usamos todos os dias na SouDrop."];
-  return <div className="min-h-screen bg-black overflow-x-hidden">
+
+  return (
+    <div className="min-h-screen bg-black overflow-x-hidden">
       {/* Hero Section - Two Column Layout */}
       <section className="hero-soudrop-elite relative z-10 w-full overflow-hidden">
-        {/* Dark gradient background */}
+        {/* Dark gradient background - CSS only, no JS */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0600] to-[#050300]" />
         
         {/* Subtle radial glow from top-right (gold) */}
@@ -94,7 +147,7 @@ const SoudropElite = () => {
         {/* Content container */}
         <div className="hero-content-wrapper relative z-10 w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16">
           
-          {/* LEFT COLUMN - Text + Form in Dark Card */}
+          {/* LEFT COLUMN - Text + CTA/Form */}
           <div className="hero-left">
             <AnimatedSection delay={0}>
               <div className="hero-card-desktop">
@@ -122,39 +175,77 @@ const SoudropElite = () => {
                   </p>
                 </div>
                 
-                {/* WebinarJam Form */}
+                {/* CTA Section - Form loads on demand */}
                 <div className="hero-form-wrapper">
                   <p className="text-center text-xs sm:text-sm text-gray-400 mb-3">
                     100% gratuito • sem cartão • leva 20 segundos
                   </p>
                   <p className="text-center text-xs sm:text-sm text-gray-300 mb-3">
-                    Vagas limitadas por horário  <span className="text-elite-gold font-semibold">Garanta a sua agora.</span>
+                    Vagas limitadas por horário <span className="text-elite-gold font-semibold">Garanta a sua agora.</span>
                   </p>
-                  <div ref={formContainerRef} className="min-h-[200px]" />
+                  
+                  {/* Show CTA button initially, form container when triggered */}
+                  {!formTriggered ? (
+                    <div className="text-center">
+                      <button 
+                        onClick={loadForm}
+                        className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
+                      >
+                        ✅ QUERO RESERVAR MINHA VAGA
+                      </button>
+                    </div>
+                  ) : (
+                    <div ref={formContainerRef} className="min-h-[200px]">
+                      {!formLoaded && (
+                        <div className="flex items-center justify-center py-8">
+                          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-elite-gold"></div>
+                          <span className="ml-3 text-gray-400">Carregando formulário...</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </AnimatedSection>
           </div>
 
-          {/* RIGHT COLUMN - Renan Photo */}
+          {/* RIGHT COLUMN - Renan Photo - Optimized */}
           <div className="hero-right">
             <AnimatedSection delay={100} className="relative flex items-center lg:items-end lg:h-full w-full">
-              {/* Soft gold glow behind photo - more natural gradient */}
+              {/* Soft gold glow behind photo - CSS only */}
               <div className="absolute inset-0 flex items-center lg:items-end justify-center pointer-events-none lg:pb-20">
                 <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[550px] lg:h-[550px] bg-elite-gold/20 rounded-full blur-[100px] lg:blur-[150px]" />
                 <div className="absolute w-[180px] h-[240px] sm:w-[260px] sm:h-[340px] lg:w-[400px] lg:h-[500px] bg-yellow-400/15 rounded-full blur-[80px] lg:blur-[120px]" />
               </div>
               
+              {/* Hero image - LCP element - optimized with explicit dimensions */}
               <div className="renan-hero-wrapper">
-                <img alt="Renan Ferreira - Especialista em Vendas Online" className="block relative z-10 h-auto object-contain drop-shadow-[0_0_40px_rgba(251,191,36,0.35)]" src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" loading="eager" />
+                <img 
+                  alt="Renan Ferreira - Especialista em Vendas Online" 
+                  className="block relative z-10 h-auto object-contain drop-shadow-[0_0_40px_rgba(251,191,36,0.35)]" 
+                  src="/lovable-uploads/4c9983ef-7913-4025-8e00-1dccec71e708.png" 
+                  loading="eager"
+                  decoding="async"
+                  width={400}
+                  height={600}
+                  fetchPriority="high"
+                />
               </div>
             </AnimatedSection>
           </div>
             
         </div>
         
-        {/* Logo Creators SouDrop Brasil - Top Right */}
-        <img src={soudropCreatorsBrasil} alt="Creators SouDrop Brasil" className="absolute top-4 right-4 lg:top-6 lg:right-6 w-[140px] lg:w-[220px] max-w-[260px] opacity-90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] pointer-events-none z-30" />
+        {/* Logo Creators SouDrop Brasil - Top Right - Lazy loaded */}
+        <img 
+          src="/lovable-uploads/soudrop-creators-brasil.webp" 
+          alt="Creators SouDrop Brasil" 
+          className="absolute top-4 right-4 lg:top-6 lg:right-6 w-[140px] lg:w-[220px] max-w-[260px] opacity-90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] pointer-events-none z-30" 
+          loading="lazy"
+          decoding="async"
+          width={220}
+          height={80}
+        />
       </section>
 
       {/* HERO 2 - O que você vai sair fazendo */}
@@ -172,22 +263,22 @@ const SoudropElite = () => {
 
             {/* Checklist */}
             <div className="max-w-3xl mx-auto space-y-4 sm:space-y-5 mb-10 sm:mb-12">
-              {["Como vender em marketplace sem estoque (como funciona a SouDrop na prática)", "Como escolher produtos que giram (sem chute)", "Precificação + frete sem tomar prejuízo", "Como criar anúncios/listagens que vendem", "Fluxo do pedido: você vende → SouDrop separa/embala/despacha"].map((item, index) => <div key={index} className="flex items-start gap-4 p-4 sm:p-5 bg-black/50 border border-elite-gold/30 rounded-xl hover:border-elite-gold/50 transition-all">
+              {["Como vender em marketplace sem estoque (como funciona a SouDrop na prática)", "Como escolher produtos que giram (sem chute)", "Precificação + frete sem tomar prejuízo", "Como criar anúncios/listagens que vendem", "Fluxo do pedido: você vende → SouDrop separa/embala/despacha"].map((item, index) => (
+                <div key={index} className="flex items-start gap-4 p-4 sm:p-5 bg-black/50 border border-elite-gold/30 rounded-xl hover:border-elite-gold/50 transition-all">
                   <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-elite-gold flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
                   </div>
                   <p className="text-white text-sm sm:text-base lg:text-lg font-medium">{item}</p>
-                </div>)}
+                </div>
+              ))}
             </div>
 
             {/* CTA Button */}
             <div className="text-center">
-              <button onClick={() => {
-              formContainerRef.current?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-              });
-            }} className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105">
+              <button 
+                onClick={loadForm}
+                className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
+              >
                 QUERO ESCOLHER MEU HORÁRIO
               </button>
               <p className="text-gray-400 text-xs sm:text-sm mt-4">
@@ -197,9 +288,6 @@ const SoudropElite = () => {
           </AnimatedSection>
         </div>
       </section>
-
-      {/* O que você vai ver neste evento - NEW SECTION */}
-      
 
       {/* O que é a aula */}
       <section className="second-section-soudrop relative z-20 px-5 sm:px-6 md:px-4 bg-[#050A00]">
@@ -218,12 +306,14 @@ const SoudropElite = () => {
           </AnimatedSection>
           
           <div className="grid md:grid-cols-2 gap-4 sm:gap-5">
-            {paraQuemE.map((item, index) => <AnimatedSection key={index} delay={index * 100}>
+            {paraQuemE.map((item, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
                 <div className="flex items-start gap-4 p-5 sm:p-6 bg-black/50 border border-elite-gold/20 rounded-xl hover:border-elite-gold/40 transition-all">
                   <Check className="w-5 h-5 sm:w-6 sm:h-6 text-elite-gold flex-shrink-0 mt-0.5" />
                   <p className="text-gray-200 text-sm sm:text-base lg:text-lg">{item}</p>
                 </div>
-              </AnimatedSection>)}
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
@@ -266,12 +356,7 @@ const SoudropElite = () => {
                 Se você leu isso e pensou <span className="text-elite-gold font-semibold">"ok, eu topo fazer do jeito certo"</span>, então essa Masterclass é pra você.
               </p>
               <button 
-                onClick={() => {
-                  formContainerRef.current?.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
-                  });
-                }} 
+                onClick={loadForm}
                 className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
               >
                 QUERO ESCOLHER MEU HORÁRIO
@@ -295,8 +380,9 @@ const SoudropElite = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {pilares.map((pilar, index) => {
-            const Icon = pilar.icon;
-            return <AnimatedSection key={index} delay={index * 100}>
+              const Icon = pilar.icon;
+              return (
+                <AnimatedSection key={index} delay={index * 100}>
                   <Card className="bg-gradient-to-br from-[#0A0800]/90 to-[#0A0800]/60 border border-elite-gold/20 hover:border-elite-gold/50 transition-all h-full">
                     <CardContent className="p-5 sm:p-6 lg:p-8">
                       <div className="mb-4 sm:mb-5 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-elite-gold to-yellow-600 flex items-center justify-center">
@@ -306,14 +392,12 @@ const SoudropElite = () => {
                       <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{pilar.description}</p>
                     </CardContent>
                   </Card>
-                </AnimatedSection>;
-          })}
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>
-
-      {/* Transformação */}
-      
 
       {/* Seção do Mentor */}
       <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 md:px-4 bg-black">
@@ -322,7 +406,15 @@ const SoudropElite = () => {
             <AnimatedSection className="order-2 md:order-1">
               <div className="relative">
                 <div className="absolute -inset-3 bg-gradient-to-br from-elite-gold/30 to-yellow-600/20 rounded-2xl blur-xl opacity-50" />
-                <img src={renanPhoto} alt="Renan Ferreira" className="relative w-full rounded-2xl border-4 border-elite-gold/30 shadow-[0_0_40px_rgba(251,191,36,0.2)]" />
+                <img 
+                  src="/lovable-uploads/renan-ferreira.webp" 
+                  alt="Renan Ferreira" 
+                  className="relative w-full rounded-2xl border-4 border-elite-gold/30 shadow-[0_0_40px_rgba(251,191,36,0.2)]" 
+                  loading="lazy"
+                  decoding="async"
+                  width={400}
+                  height={500}
+                />
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200} className="order-1 md:order-2">
@@ -362,29 +454,53 @@ const SoudropElite = () => {
               Resultados reais de operações que aplicam o mesmo método que você vai conhecer na aula.
             </p>
             
-            {/* Prints de Resultados com Depoimentos */}
+            {/* Prints de Resultados com Depoimentos - Lazy loaded */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-6 sm:mb-8">
-              {/* Card 1 - Imagem + Depoimento */}
+              {/* Card 1 */}
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30">
-                <img alt="Print de resultado 1" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/6362dee9-25a7-4708-a7ce-924ddbf16d89.jpg" />
+                <img 
+                  alt="Print de resultado 1" 
+                  className="w-full h-48 sm:h-56 lg:h-64 object-cover" 
+                  src="/lovable-uploads/6362dee9-25a7-4708-a7ce-924ddbf16d89.jpg" 
+                  loading="lazy"
+                  decoding="async"
+                  width={400}
+                  height={256}
+                />
                 <div className="p-4 sm:p-5 text-left">
                   <p className="text-gray-300 text-sm sm:text-base italic mb-3">"Eu não tinha dinheiro pra estoque. Comecei com o método sem estoque e em 3 meses bati mais de R$ 7.000 em vendas."</p>
                   <p className="text-elite-gold font-semibold text-sm">— João P.</p>
                 </div>
               </div>
               
-              {/* Card 2 - Imagem + Depoimento */}
+              {/* Card 2 */}
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30">
-                <img alt="Print de resultado 2" src="/lovable-uploads/888fc9cb-6f97-41c8-b7e7-87dc12f0e926.jpg" className="w-full h-48 sm:h-56 lg:h-64 object-fill" />
+                <img 
+                  alt="Print de resultado 2" 
+                  src="/lovable-uploads/888fc9cb-6f97-41c8-b7e7-87dc12f0e926.jpg" 
+                  className="w-full h-48 sm:h-56 lg:h-64 object-fill" 
+                  loading="lazy"
+                  decoding="async"
+                  width={400}
+                  height={256}
+                />
                 <div className="p-4 sm:p-5 text-left">
                   <p className="text-gray-300 text-sm sm:text-base italic mb-3">"Já tinha tentado vender sozinho e nada andava. Depois da aula e do método, tive meus primeiros pedidos em menos de 30 dias."</p>
                   <p className="text-elite-gold font-semibold text-sm">— Mariana S.</p>
                 </div>
               </div>
               
-              {/* Card 3 - Imagem + Depoimento */}
+              {/* Card 3 */}
               <div className="border-2 border-elite-gold/40 rounded-xl overflow-hidden bg-black/30 md:col-span-2 lg:col-span-1 md:max-w-[50%] md:mx-auto lg:max-w-full">
-                <img alt="Print de resultado 3" className="w-full h-48 sm:h-56 lg:h-64 object-cover" src="/lovable-uploads/3442ca16-45c6-4389-95df-18daca740672.jpg" />
+                <img 
+                  alt="Print de resultado 3" 
+                  className="w-full h-48 sm:h-56 lg:h-64 object-cover" 
+                  src="/lovable-uploads/3442ca16-45c6-4389-95df-18daca740672.jpg" 
+                  loading="lazy"
+                  decoding="async"
+                  width={400}
+                  height={256}
+                />
                 <div className="p-4 sm:p-5 text-left">
                   <p className="text-gray-300 text-sm sm:text-base italic mb-3">"O passo a passo é direto ao ponto. Consegui aplicar tudo e hoje já tenho uma renda extra todo mês."</p>
                   <p className="text-elite-gold font-semibold text-sm">— Carlos M.</p>
@@ -462,31 +578,31 @@ const SoudropElite = () => {
                     Escolha a data, confirme seus dados e clique no botão para garantir seu acesso à aula gratuita. Se você mora no Brasil, pode deixar o fuso horário como está.
                   </p>
 
-                  <div style={{
-                  textAlign: 'center'
-                }}>
-                    <button type="button" onClick={() => window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                  })} className="w-full sm:w-auto" style={{
-                    border: "none",
-                    background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
-                    color: "rgb(0, 0, 0)",
-                    fontSize: "16px",
-                    padding: "18px 32px",
-                    boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
-                    borderRadius: "50px",
-                    whiteSpace: "normal",
-                    fontWeight: "700",
-                    lineHeight: "1.4",
-                    cursor: "pointer",
-                    fontFamily: "system-ui, -apple-system, sans-serif",
-                    wordBreak: "break-word",
-                    margin: "auto",
-                    transition: "all 0.3s ease",
-                    letterSpacing: "0.02em",
-                    maxWidth: "100%"
-                  }}>
+                  <div style={{ textAlign: 'center' }}>
+                    <button 
+                      type="button" 
+                      onClick={loadForm}
+                      className="w-full sm:w-auto" 
+                      style={{
+                        border: "none",
+                        background: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
+                        color: "rgb(0, 0, 0)",
+                        fontSize: "16px",
+                        padding: "18px 32px",
+                        boxShadow: "0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(251, 191, 36, 0.2)",
+                        borderRadius: "50px",
+                        whiteSpace: "normal",
+                        fontWeight: "700",
+                        lineHeight: "1.4",
+                        cursor: "pointer",
+                        fontFamily: "system-ui, -apple-system, sans-serif",
+                        wordBreak: "break-word",
+                        margin: "auto",
+                        transition: "all 0.3s ease",
+                        letterSpacing: "0.02em",
+                        maxWidth: "100%"
+                      }}
+                    >
                       QUERO PARTICIPAR DA AULA GRATUITA <ArrowRight className="inline-block ml-2 h-5 w-5" />
                     </button>
                   </div>
@@ -512,6 +628,8 @@ const SoudropElite = () => {
           </p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default SoudropElite;

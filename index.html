@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,13 +7,19 @@
     <meta name="description" content="Automatize a gestão de múltiplos marketplaces com Soudrop. Integração perfeita, logística sem preocupações e controle total das suas vendas em um único painel." />
     <meta name="author" content="Soudrop" />
 
-    <!-- Preconnect para otimizar carregamento de fontes -->
+    <!-- DNS Prefetch para recursos externos -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://event.webinarjam.com">
+    
+    <!-- Preconnect para fontes (crítico) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Preload de recursos críticos -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+    <!-- Fonte única otimizada: Inter com pesos reduzidos e font-display: swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
     <meta property="og:title" content="Soudrop - Automação de Vendas em Múltiplos Marketplaces" />
     <meta property="og:description" content="A integração perfeita, logística sem preocupações e controle total das suas vendas em um único painel. Vender nunca foi tão fácil." />
@@ -24,8 +30,8 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://app2.soudrop.com.br/images/logo_login_soudrop.png" />
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <!-- Google Tag Manager - Defer para não bloquear renderização -->
+    <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -38,7 +44,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-CN06VFEFFH');
     </script>
   </head>
@@ -52,7 +57,6 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- WebinarJam Embed Button Script -->
-    <script src="https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=4&buttonText=QUERO%20ME%20INSCREVER"></script>
+    <!-- WebinarJam script removido do global - carrega sob demanda na página /soudrop-elite -->
   </body>
 </html>
