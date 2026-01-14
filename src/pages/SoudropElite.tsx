@@ -236,19 +236,27 @@ const SoudropElite = () => {
               Não é <span className="text-elite-gold">pra você se:</span>
             </h2>
             <p className="text-center text-gray-400 mb-8 sm:mb-12 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">
-              Prefiro ser sincero pra você não perder tempo  e pra eu manter a sala organizada.
+              Prefiro ser sincero pra você não perder tempo — e pra eu manter a sala organizada.
             </p>
           </AnimatedSection>
           
           <div className="grid md:grid-cols-2 gap-4 sm:gap-5">
-            {["Você quer resultado rápido sem assistir a aula e sem aplicar nada.", "Você quer fórmula mágica e não quer seguir um passo a passo.", "Você não aceita começar com o que tem hoje (celular/PC) e ir melhorando.", "Você quer vender, mas não quer usar marketplace (Shopee/Mercado Livre/Magalu).", "Você não está disposto a se dedicar 30–60 minutos por dia no começo."].map((item, index) => <AnimatedSection key={index} delay={index * 100}>
+            {[
+              "Você quer resultado rápido sem assistir a aula e sem aplicar nada.",
+              "Você quer fórmula mágica e não quer seguir um passo a passo.",
+              "Você não aceita começar com o que tem hoje (celular/PC) e ir melhorando.",
+              "Você quer vender, mas não quer usar marketplace (Shopee/Mercado Livre/Magalu).",
+              "Você não está disposto a se dedicar 30–60 minutos por dia no começo."
+            ].map((item, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
                 <div className="flex items-start gap-4 p-5 sm:p-6 bg-black/50 border border-elite-gold/20 rounded-xl hover:border-elite-gold/40 transition-all">
                   <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-red-500/20 border border-red-500/40 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <X className="w-3 h-3 sm:w-4 sm:h-4 text-red-400" />
                   </div>
                   <p className="text-gray-200 text-sm sm:text-base lg:text-lg">{item}</p>
                 </div>
-              </AnimatedSection>)}
+              </AnimatedSection>
+            ))}
           </div>
 
           {/* Frase final + CTA */}
@@ -257,12 +265,15 @@ const SoudropElite = () => {
               <p className="text-gray-300 text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto">
                 Se você leu isso e pensou <span className="text-elite-gold font-semibold">"ok, eu topo fazer do jeito certo"</span>, então essa Masterclass é pra você.
               </p>
-              <button onClick={() => {
-              formContainerRef.current?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-              });
-            }} className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105">
+              <button 
+                onClick={() => {
+                  formContainerRef.current?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                  });
+                }} 
+                className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
+              >
                 QUERO ESCOLHER MEU HORÁRIO
               </button>
             </div>
