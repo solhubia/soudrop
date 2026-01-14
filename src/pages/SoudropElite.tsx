@@ -12,22 +12,59 @@ const SoudropElite = () => {
   const [hasTrackedScroll25, setHasTrackedScroll25] = useState(false);
   const [hasTrackedTime30, setHasTrackedTime30] = useState(false);
   const [formLoaded, setFormLoaded] = useState(false);
-  const [formTriggered, setFormTriggered] = useState(false);
 
-  // Lazy load WebinarJam form only when CTA is clicked
-  const loadForm = useCallback(() => {
-    if (formLoaded || !formContainerRef.current) return;
-    
+  // Load WebinarJam form after initial render (delayed for better FCP)
+  useEffect(() => {
+    const loadForm = () => {
+      if (!formContainerRef.current || formLoaded) return;
+      
+      formContainerRef.current.innerHTML = '';
+      const wrapper = document.createElement('div');
+      wrapper.className = 'wj-embed-wrapper';
+      wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
+      const script = document.createElement('script');
+      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=QUERO%20MINHA%20VAGA&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1';
+      script.async = true;
+      script.onload = () => {
+        setFormLoaded(true);
+        // Track form_view event
+        if (typeof window !== 'undefined') {
+          if (window.gtag) {
+            window.gtag('event', 'form_view', {
+              event_category: 'engagement',
+              event_label: 'webinarjam_form_loaded'
+            });
+          }
+          if (window.fbq) {
+            window.fbq('trackCustom', 'FormView', {
+              content_name: 'webinarjam_form',
+              content_category: 'soudrop'
+            });
+          }
+        }
+      };
+      wrapper.appendChild(script);
+      formContainerRef.current.appendChild(wrapper);
+    };
+
+    // Use requestIdleCallback for non-blocking load, fallback to setTimeout
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(loadForm, { timeout: 1500 });
+    } else {
+      setTimeout(loadForm, 500);
+    }
+  }, [formLoaded]);
+
+  // Track CTA clicks
+  const handleCtaClick = useCallback(() => {
     // Track CTA click event for GA4 and Meta
     if (typeof window !== 'undefined') {
-      // GA4 event
       if (window.gtag) {
         window.gtag('event', 'cta_click_reservar_vaga', {
           event_category: 'engagement',
           event_label: 'soudrop_elite_cta'
         });
       }
-      // Meta Pixel event
       if (window.fbq) {
         window.fbq('trackCustom', 'CTAClick', {
           content_name: 'reservar_vaga',
@@ -36,44 +73,12 @@ const SoudropElite = () => {
       }
     }
     
-    setFormTriggered(true);
-    
-    formContainerRef.current.innerHTML = '';
-    const wrapper = document.createElement('div');
-    wrapper.className = 'wj-embed-wrapper';
-    wrapper.setAttribute('data-webinar-hash', '8wgw0kty');
-    const script = document.createElement('script');
-    script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-form?formButtonText=QUERO%20MINHA%20VAGA&formAccentColor=%23000000&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1';
-    script.async = true;
-    script.onload = () => {
-      setFormLoaded(true);
-      // Track form_view event
-      if (typeof window !== 'undefined') {
-        if (window.gtag) {
-          window.gtag('event', 'form_view', {
-            event_category: 'engagement',
-            event_label: 'webinarjam_form_loaded'
-          });
-        }
-        if (window.fbq) {
-          window.fbq('trackCustom', 'FormView', {
-            content_name: 'webinarjam_form',
-            content_category: 'soudrop'
-          });
-        }
-      }
-    };
-    wrapper.appendChild(script);
-    formContainerRef.current.appendChild(wrapper);
-    
     // Scroll to form
-    setTimeout(() => {
-      formContainerRef.current?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-      });
-    }, 100);
-  }, [formLoaded]);
+    formContainerRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }, []);
 
   // Scroll Depth tracking - 25% (passive)
   useEffect(() => {
@@ -175,7 +180,7 @@ const SoudropElite = () => {
                   </p>
                 </div>
                 
-                {/* CTA Section - Form loads on demand */}
+                {/* WebinarJam Form - loads after initial render */}
                 <div className="hero-form-wrapper">
                   <p className="text-center text-xs sm:text-sm text-gray-400 mb-3">
                     100% gratuito • sem cartão • leva 20 segundos
@@ -183,27 +188,14 @@ const SoudropElite = () => {
                   <p className="text-center text-xs sm:text-sm text-gray-300 mb-3">
                     Vagas limitadas por horário <span className="text-elite-gold font-semibold">Garanta a sua agora.</span>
                   </p>
-                  
-                  {/* Show CTA button initially, form container when triggered */}
-                  {!formTriggered ? (
-                    <div className="text-center">
-                      <button 
-                        onClick={loadForm}
-                        className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
-                      >
-                        ✅ QUERO RESERVAR MINHA VAGA
-                      </button>
-                    </div>
-                  ) : (
-                    <div ref={formContainerRef} className="min-h-[200px]">
-                      {!formLoaded && (
-                        <div className="flex items-center justify-center py-8">
-                          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-elite-gold"></div>
-                          <span className="ml-3 text-gray-400">Carregando formulário...</span>
-                        </div>
-                      )}
-                    </div>
-                  )}
+                  <div ref={formContainerRef} className="min-h-[200px]">
+                    {!formLoaded && (
+                      <div className="flex items-center justify-center py-8">
+                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-elite-gold"></div>
+                        <span className="ml-3 text-gray-400">Carregando formulário...</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </AnimatedSection>
@@ -276,7 +268,7 @@ const SoudropElite = () => {
             {/* CTA Button */}
             <div className="text-center">
               <button 
-                onClick={loadForm}
+                onClick={handleCtaClick}
                 className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
               >
                 QUERO ESCOLHER MEU HORÁRIO
@@ -356,7 +348,7 @@ const SoudropElite = () => {
                 Se você leu isso e pensou <span className="text-elite-gold font-semibold">"ok, eu topo fazer do jeito certo"</span>, então essa Masterclass é pra você.
               </p>
               <button 
-                onClick={loadForm}
+                onClick={handleCtaClick}
                 className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-base sm:text-lg lg:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
               >
                 QUERO ESCOLHER MEU HORÁRIO
@@ -581,7 +573,7 @@ const SoudropElite = () => {
                   <div style={{ textAlign: 'center' }}>
                     <button 
                       type="button" 
-                      onClick={loadForm}
+                      onClick={handleCtaClick}
                       className="w-full sm:w-auto" 
                       style={{
                         border: "none",
