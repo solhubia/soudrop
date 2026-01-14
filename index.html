@@ -19,7 +19,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Fonte única otimizada: Inter com pesos reduzidos e font-display: swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"></noscript>
 
     <meta property="og:title" content="Soudrop - Automação de Vendas em Múltiplos Marketplaces" />
     <meta property="og:description" content="A integração perfeita, logística sem preocupações e controle total das suas vendas em um único painel. Vender nunca foi tão fácil." />
@@ -30,33 +31,54 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://app2.soudrop.com.br/images/logo_login_soudrop.png" />
 
-    <!-- Google Tag Manager - Defer para não bloquear renderização -->
-    <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WCT8RZSQ');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google tag (gtag.js) - Defer para não bloquear renderização -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-CN06VFEFFH"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CN06VFEFFH');
-    </script>
+    <!-- Critical CSS inline para primeira dobra -->
+    <style>
+      body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:#000;color:#fff}
+      .hero-soudrop-elite{min-height:100vh}
+      .text-elite-gold{color:#FBBF24}
+      .bg-elite-gold{background:#FBBF24}
+    </style>
   </head>
 
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT8RZSQ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- WebinarJam script removido do global - carrega sob demanda na página /soudrop-elite -->
+    <!-- Trackers carregados após interação ou 3s -->
+    <script>
+      function loadTrackers() {
+        if (window.trackersLoaded) return;
+        window.trackersLoaded = true;
+        
+        // GTM
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WCT8RZSQ');
+        
+        // GA4
+        var ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-CN06VFEFFH';
+        document.head.appendChild(ga);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-CN06VFEFFH');
+      }
+      
+      // Load after 3s or on first interaction
+      setTimeout(loadTrackers, 3000);
+      ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(e) {
+        document.addEventListener(e, loadTrackers, { once: true, passive: true });
+      });
+    </script>
   </body>
 </html>
