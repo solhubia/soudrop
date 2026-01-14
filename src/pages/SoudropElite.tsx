@@ -35,6 +35,38 @@ const SoudropElite = () => {
     window.open(EVERWEBINAR_REGISTRATION_URL, '_blank', 'noopener,noreferrer');
   }, []);
 
+  // Load WebinarJam bubble script non-blocking (after 2s OR scroll 200px)
+  useEffect(() => {
+    let scriptLoaded = false;
+
+    const loadBubbleScript = () => {
+      if (scriptLoaded) return;
+      scriptLoaded = true;
+
+      const script = document.createElement('script');
+      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=INSCREVA-SE%20J%C3%81&buttonBgColor=%23edeb32&buttonBgOpacity=0.95&barBgColor=%23ffffff&barBgOpacity=1&type=bubble&formTemplate=2&formColor=6';
+      script.async = true;
+      document.body.appendChild(script);
+    };
+
+    // Load after 2 seconds
+    const timer = setTimeout(loadBubbleScript, 2000);
+
+    // Or load on scroll 200px
+    const handleScroll = () => {
+      if (window.scrollY >= 200) {
+        loadBubbleScript();
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   // Scroll Depth tracking - 25% (passive)
   useEffect(() => {
     const handleScroll = () => {
