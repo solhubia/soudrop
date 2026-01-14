@@ -1,11 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Crown, Target, TrendingUp, Users, Briefcase, Calculator, GraduationCap, Award, Shield, ArrowRight, X } from "lucide-react";
-import { useEffect, useRef, useState, useCallback, lazy, Suspense } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { trackScrollDepth, trackTimeOnPage, trackLead } from "@/lib/fbq";
-
-// Lazy load heavy components and images
-const LazyRenanPhoto = lazy(() => import("@/assets/renan-ferreira.jpg?url").then(m => ({ default: () => <img src={m.default} alt="Renan Ferreira" className="relative w-full rounded-2xl border-4 border-elite-gold/30 shadow-[0_0_40px_rgba(251,191,36,0.2)]" loading="lazy" decoding="async" width={400} height={500} /> })));
+import { trackScrollDepth, trackTimeOnPage } from "@/lib/fbq";
 
 const SoudropElite = () => {
   const formContainerRef = useRef<HTMLDivElement>(null);
