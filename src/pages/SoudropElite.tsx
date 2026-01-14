@@ -10,6 +10,39 @@ const EVERWEBINAR_REGISTRATION_URL = "https://event.webinarjam.com/register/8wgw
 const SoudropElite = () => {
   const [hasTrackedScroll25, setHasTrackedScroll25] = useState(false);
   const [hasTrackedTime30, setHasTrackedTime30] = useState(false);
+  const [wjButtonScriptLoaded, setWjButtonScriptLoaded] = useState(false);
+  const wjButtonContainerRef = useCallback((node: HTMLDivElement | null) => {
+    if (!node || wjButtonScriptLoaded) return;
+    
+    let loaded = false;
+    const loadScript = () => {
+      if (loaded || wjButtonScriptLoaded) return;
+      loaded = true;
+      setWjButtonScriptLoaded(true);
+      
+      const script = document.createElement('script');
+      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=6&buttonText=GARANTIR%20VAGA';
+      script.async = true;
+      node.appendChild(script);
+    };
+
+    // Load after 2 seconds
+    const timer = setTimeout(loadScript, 2000);
+
+    // Or load when element enters viewport
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        loadScript();
+        observer.disconnect();
+      }
+    }, { threshold: 0.1 });
+    observer.observe(node);
+
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, [wjButtonScriptLoaded]);
 
   // Track CTA clicks and open EverWebinar in new tab
   const handleCtaClick = useCallback(() => {
@@ -33,38 +66,6 @@ const SoudropElite = () => {
     
     // Open EverWebinar registration in new tab
     window.open(EVERWEBINAR_REGISTRATION_URL, '_blank', 'noopener,noreferrer');
-  }, []);
-
-  // Load WebinarJam bubble script non-blocking (after 2s OR scroll 200px)
-  useEffect(() => {
-    let scriptLoaded = false;
-
-    const loadBubbleScript = () => {
-      if (scriptLoaded) return;
-      scriptLoaded = true;
-
-      const script = document.createElement('script');
-      script.src = 'https://event.webinarjam.com/register/8wgw0kty/embed-bar?buttonText=INSCREVA-SE%20J%C3%81&buttonBgColor=%23edeb32&buttonBgOpacity=0.95&barBgColor=%23ffffff&barBgOpacity=1&type=bubble&formTemplate=2&formColor=6';
-      script.async = true;
-      document.body.appendChild(script);
-    };
-
-    // Load after 2 seconds
-    const timer = setTimeout(loadBubbleScript, 2000);
-
-    // Or load on scroll 200px
-    const handleScroll = () => {
-      if (window.scrollY >= 200) {
-        loadBubbleScript();
-        window.removeEventListener('scroll', handleScroll);
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('scroll', handleScroll);
-    };
   }, []);
 
   // Scroll Depth tracking - 25% (passive)
@@ -166,17 +167,31 @@ const SoudropElite = () => {
                   </p>
                 </div>
                 
-                {/* CTA Block - Lightweight replacement for EverWebinar form */}
-                <div className="hero-form-wrapper">
+                {/* WebinarJam Embed Button - Lazy loaded */}
+                <div className="hero-form-wrapper" ref={wjButtonContainerRef} style={{ textAlign: 'center' }}>
                   <button 
-                    onClick={handleCtaClick}
-                    className="w-full px-8 py-5 bg-gradient-to-r from-elite-gold to-yellow-500 text-black font-black text-lg sm:text-xl rounded-xl hover:from-yellow-500 hover:to-elite-gold transition-all shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] transform hover:scale-105"
+                    type="button" 
+                    className="wj-embed-button"
+                    data-webinarHash="8wgw0kty"
+                    style={{
+                      border: '4px solid rgb(0, 0, 0)',
+                      background: 'rgba(245, 226, 81, 0.95)',
+                      color: 'rgb(0, 0, 0)',
+                      fontSize: '18px',
+                      padding: '14px 40px',
+                      boxShadow: 'none',
+                      borderRadius: '100px',
+                      whiteSpace: 'normal',
+                      fontWeight: 700,
+                      lineHeight: 1.3,
+                      cursor: 'pointer',
+                      fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+                      wordBreak: 'break-word',
+                      margin: 'auto'
+                    }}
                   >
-                    QUERO RESERVAR MINHA VAGA
+                    GARANTIR VAGA
                   </button>
-                  <p className="text-center text-xs sm:text-sm text-gray-400 mt-4">
-                    Leva menos de 20 segundos • 100% gratuito
-                  </p>
                 </div>
               </div>
             </AnimatedSection>
