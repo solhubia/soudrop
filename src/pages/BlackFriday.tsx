@@ -165,9 +165,11 @@ const BlackFriday = () => {
       <section className="relative py-8 px-4">
         <div className="max-w-5xl mx-auto text-center space-y-16">
           <h2 className="text-3xl md:text-5xl font-black leading-tight lg:text-7xl">
-            Sua melhor compra de Final de ano é um{" "}
+            A melhor decisão que você pode tomar hoje não é comprar algo.
+            <br />
+            É construir um{" "}
             <span className="text-primary">NEGÓCIO</span>{" "}
-            que vai garantir seu sucesso nos próximos anos
+            que vai sustentar seu futuro por anos.
           </h2>
 
           <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{
