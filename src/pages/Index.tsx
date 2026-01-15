@@ -55,79 +55,160 @@ const Index = () => {
       price: "12x de R$ 49,90",
       tagline: "Para quem quer começar com baixo investimento",
       link: "https://pay.kiwify.com.br/RIqama1",
-      popular: false,
+      popular: false
     },
     premium: {
       name: "Soudrop Premium",
       price: "12x de R$ 97,90",
       tagline: "A maioria dos vendedores começa por aqui para escalar mais rápido",
       link: "https://pay.kiwify.com.br/zrBAaMP",
-      popular: true,
+      popular: true
     },
     pro: {
       name: "Soudrop Pro",
       price: "12x de R$ 197,90",
       tagline: "Ideal para quem já vende todos os dias e quer máxima margem",
       link: "https://pay.kiwify.com.br/dfkyoMp",
-      popular: false,
-    },
+      popular: false
+    }
   };
-
-  const benefitsBasico = [
-    { name: "Taxa por pedido: R$ 1,50", included: true },
-    { name: "Dashboard", included: true },
-    { name: "Garantia de 120 dias", included: true },
-    { name: "Integrações com marketplaces: 3", included: true },
-    { name: "Suporte: Email", included: true },
-    { name: "Suporte: WhatsApp", included: false },
-    { name: "Lançador automático", included: false },
-    { name: "Gerar títulos e descrições por IA", included: false },
-    { name: "Acompanhamento do time SouDrop", included: false },
-    { name: "Mentoria em grupo", included: false },
-    { name: "Gestão de vendas", included: false },
-    { name: "Envios FULL", included: false },
-    { name: "Envios FLEX", included: false },
-    { name: "Concorrência de catálogo", included: false },
-  ];
-
-  const benefitsPremium = [
-    { name: "Taxa por pedido: R$ 0,90", included: true },
-    { name: "Dashboard", included: true },
-    { name: "Garantia de 120 dias", included: true },
-    { name: "Integrações com marketplaces: 6", included: true },
-    { name: "Suporte: Email", included: true },
-    { name: "Suporte: WhatsApp", included: true },
-    { name: "Lançador automático", included: true },
-    { name: "Gerar títulos e descrições por IA", included: true },
-    { name: "Acompanhamento do time SouDrop", included: true },
-    { name: "Mentoria em grupo", included: true },
-    { name: "Gestão de vendas", included: false },
-    { name: "Envios FULL", included: false },
-    { name: "Envios FLEX", included: false },
-    { name: "Concorrência de catálogo", included: false },
-  ];
-
-  const benefitsPro = [
-    { name: "Taxa por pedido: Sem taxa", included: true },
-    { name: "Dashboard", included: true },
-    { name: "Garantia de 120 dias", included: true },
-    { name: "Integrações com marketplaces: Sem limite", included: true },
-    { name: "Suporte: Email", included: true },
-    { name: "Suporte: WhatsApp", included: true },
-    { name: "Lançador automático", included: true },
-    { name: "Gerar títulos e descrições por IA", included: true },
-    { name: "Acompanhamento do time SouDrop", included: true },
-    { name: "Mentoria em grupo", included: true },
-    { name: "Gestão de vendas", included: true },
-    { name: "Envios FULL", included: true },
-    { name: "Envios FLEX", included: true },
-    { name: "Concorrência de catálogo", included: true },
-  ];
-
-  const [expandedCards, setExpandedCards] = useState<{ [key: string]: boolean }>({});
-
+  const benefitsBasico = [{
+    name: "Taxa por pedido: R$ 1,50",
+    included: true
+  }, {
+    name: "Dashboard",
+    included: true
+  }, {
+    name: "Garantia de 120 dias",
+    included: true
+  }, {
+    name: "Integrações com marketplaces: 3",
+    included: true
+  }, {
+    name: "Suporte: Email",
+    included: true
+  }, {
+    name: "Suporte: WhatsApp",
+    included: false
+  }, {
+    name: "Lançador automático",
+    included: false
+  }, {
+    name: "Gerar títulos e descrições por IA",
+    included: false
+  }, {
+    name: "Acompanhamento do time SouDrop",
+    included: false
+  }, {
+    name: "Mentoria em grupo",
+    included: false
+  }, {
+    name: "Gestão de vendas",
+    included: false
+  }, {
+    name: "Envios FULL",
+    included: false
+  }, {
+    name: "Envios FLEX",
+    included: false
+  }, {
+    name: "Concorrência de catálogo",
+    included: false
+  }];
+  const benefitsPremium = [{
+    name: "Taxa por pedido: R$ 0,90",
+    included: true
+  }, {
+    name: "Dashboard",
+    included: true
+  }, {
+    name: "Garantia de 120 dias",
+    included: true
+  }, {
+    name: "Integrações com marketplaces: 6",
+    included: true
+  }, {
+    name: "Suporte: Email",
+    included: true
+  }, {
+    name: "Suporte: WhatsApp",
+    included: true
+  }, {
+    name: "Lançador automático",
+    included: true
+  }, {
+    name: "Gerar títulos e descrições por IA",
+    included: true
+  }, {
+    name: "Acompanhamento do time SouDrop",
+    included: true
+  }, {
+    name: "Mentoria em grupo",
+    included: true
+  }, {
+    name: "Gestão de vendas",
+    included: false
+  }, {
+    name: "Envios FULL",
+    included: false
+  }, {
+    name: "Envios FLEX",
+    included: false
+  }, {
+    name: "Concorrência de catálogo",
+    included: false
+  }];
+  const benefitsPro = [{
+    name: "Taxa por pedido: Sem taxa",
+    included: true
+  }, {
+    name: "Dashboard",
+    included: true
+  }, {
+    name: "Garantia de 120 dias",
+    included: true
+  }, {
+    name: "Integrações com marketplaces: Sem limite",
+    included: true
+  }, {
+    name: "Suporte: Email",
+    included: true
+  }, {
+    name: "Suporte: WhatsApp",
+    included: true
+  }, {
+    name: "Lançador automático",
+    included: true
+  }, {
+    name: "Gerar títulos e descrições por IA",
+    included: true
+  }, {
+    name: "Acompanhamento do time SouDrop",
+    included: true
+  }, {
+    name: "Mentoria em grupo",
+    included: true
+  }, {
+    name: "Gestão de vendas",
+    included: true
+  }, {
+    name: "Envios FULL",
+    included: true
+  }, {
+    name: "Envios FLEX",
+    included: true
+  }, {
+    name: "Concorrência de catálogo",
+    included: true
+  }];
+  const [expandedCards, setExpandedCards] = useState<{
+    [key: string]: boolean;
+  }>({});
   const toggleCardExpand = (cardKey: string) => {
-    setExpandedCards(prev => ({ ...prev, [cardKey]: !prev[cardKey] }));
+    setExpandedCards(prev => ({
+      ...prev,
+      [cardKey]: !prev[cardKey]
+    }));
   };
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -1090,192 +1171,7 @@ const Index = () => {
 
       {/* Unique Differential Section */}
       <section className="py-20 bg-black">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-                Importe seus produtos da{" "}
-                <span className="text-green-500">China</span>
-              </h2>
-              <p className="text-lg text-white">
-                Mesmo sem saber como fazer isso
-              </p>
-            </div>
-            
-            {/* Process Flow */}
-            <div className="bg-card/50 rounded-2xl p-8 md:p-12">
-              <div className="text-center mb-12">
-                <h3 className="text-2xl md:text-3xl font-bold text-white">
-                  Funciona em 4 passos práticos
-                </h3>
-              </div>
-              {/* Mobile Layout - Vertical */}
-              <div className="md:hidden space-y-8">
-                {/* Step 1 */}
-                <div className="text-center">
-                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <Search className="h-10 w-10 text-green-500" />
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Passo 1</h3>
-                  <p className="text-white font-medium">Escolha o produto</p>
-                  <p className="text-white text-sm mt-1">Você escolhe o produto que deseja importar.</p>
-                </div>
-                
-                {/* Vertical Animated Line 1 */}
-                <div className="flex justify-center">
-                  <div className="relative w-1 h-16 bg-muted rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-fill-sequential-vertical-1"></div>
-                  </div>
-                </div>
-
-                {/* Step 2 */}
-                <div className="text-center">
-                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <CreditCard className="h-10 w-10 text-green-500" />
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Passo 2</h3>
-                  <p className="text-white font-medium">Preço transparente</p>
-                  <p className="text-white text-sm mt-1">Mostramos o custo real até chegar no Brasil.</p>
-                </div>
-
-                {/* Vertical Animated Line 2 */}
-                <div className="flex justify-center">
-                  <div className="relative w-1 h-16 bg-muted rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-fill-sequential-vertical-2"></div>
-                  </div>
-                </div>
-
-                {/* Step 3 */}
-                <div className="text-center">
-                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <Settings className="h-10 w-10 text-green-500" />
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Passo 3</h3>
-                  <p className="text-white font-medium">Importação sem dor de cabeça</p>
-                  <p className="text-white text-sm mt-1">Nós cuidamos de todo o processo.</p>
-                </div>
-
-                {/* Vertical Animated Line 3 */}
-                <div className="flex justify-center">
-                  <div className="relative w-1 h-16 bg-muted rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-y-full animate-fill-sequential-vertical-3"></div>
-                  </div>
-                </div>
-
-                {/* Step 4 */}
-                <div className="text-center">
-                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <CheckSquare className="h-10 w-10 text-green-500" />
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Passo 4</h3>
-                  <p className="text-white font-medium">Você recebe pronto pra vender</p>
-                  <p className="text-white text-sm mt-1">Chega direto no seu estoque, sem burocracia.</p>
-                </div>
-              </div>
-
-              {/* Desktop Layout - Horizontal */}
-              <div className="hidden md:grid md:grid-cols-7 gap-4 items-center mb-12">
-                {/* Step 1 */}
-                <div className="text-center">
-                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <Search className="h-10 w-10 text-green-500" />
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Passo 1</h3>
-                  <p className="text-white font-medium">Escolha o produto</p>
-                  <p className="text-white text-sm">Você escolhe o produto que deseja importar.</p>
-                </div>
-                
-                {/* Horizontal Animated Connecting Line 1 */}
-                <div className="flex justify-center items-center">
-                  <div className="relative w-full h-1 bg-muted rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-fill-sequential-1"></div>
-                  </div>
-                </div>
-
-                {/* Step 2 */}
-                <div className="text-center">
-                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <CreditCard className="h-10 w-10 text-green-500" />
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Passo 2</h3>
-                  <p className="text-white font-medium">Preço transparente</p>
-                  <p className="text-white text-sm">Mostramos o custo real até chegar no Brasil.</p>
-                </div>
-
-                {/* Horizontal Animated Connecting Line 2 */}
-                <div className="flex justify-center items-center">
-                  <div className="relative w-full h-1 bg-muted rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-fill-sequential-2"></div>
-                  </div>
-                </div>
-
-                {/* Step 3 */}
-                <div className="text-center">
-                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <Settings className="h-10 w-10 text-green-500" />
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Passo 3</h3>
-                  <p className="text-white font-medium">Importação sem dor de cabeça</p>
-                  <p className="text-white text-sm">Nós cuidamos de todo o processo.</p>
-                </div>
-
-                {/* Horizontal Animated Connecting Line 3 */}
-                <div className="flex justify-center items-center">
-                  <div className="relative w-full h-1 bg-muted rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-green-500 rounded-full transform -translate-x-full animate-fill-sequential-3"></div>
-                  </div>
-                </div>
-
-                {/* Step 4 */}
-                <div className="text-center">
-                  <div className="relative inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-2xl mb-6">
-                    <CheckSquare className="h-10 w-10 text-green-500" />
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Passo 4</h3>
-                  <p className="text-white font-medium">Você recebe pronto pra vender</p>
-                  <p className="text-white text-sm">Chega direto no seu estoque, sem burocracia.</p>
-                </div>
-              </div>
-              
-              {/* Result */}
-              <div className="border-t border-muted pt-8">
-                <div className="text-center">
-                  <h3 className="text-xl font-bold text-green-500 mb-6 flex items-center justify-center">
-                    <Zap className="h-5 w-5 mr-2" />
-                    Sem quantidade mínima necessária!
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-6 max-w-md mx-auto mb-6">
-                    <div className="flex items-center justify-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                      <span className="text-white">Sem quantidade mínima</span>
-                    </div>
-                    <div className="flex items-center justify-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                      <span className="text-white">Preços transparentes</span>
-                    </div>
-                  </div>
-                  
-                  {/* Premium Plan Notice */}
-                  <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-                    <span className="text-sm font-medium text-green-600 dark:text-green-400">
-                      Disponível no Plano Premium
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </section>
 
       {/* Security Section */}
@@ -1376,41 +1272,22 @@ const Index = () => {
               {/* Benefits List */}
               <div className="flex-1 mb-6">
                 <div className={`space-y-3 ${!expandedCards['basico'] ? 'max-h-[280px] overflow-hidden md:max-h-none' : ''}`}>
-                  {benefitsBasico.map((benefit, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      {benefit.included ? (
-                        <CheckCircle className="h-5 w-5 text-[#22c55e] flex-shrink-0" />
-                      ) : (
-                        <X className="h-5 w-5 text-red-500 flex-shrink-0" />
-                      )}
+                  {benefitsBasico.map((benefit, index) => <div key={index} className="flex items-center gap-3">
+                      {benefit.included ? <CheckCircle className="h-5 w-5 text-[#22c55e] flex-shrink-0" /> : <X className="h-5 w-5 text-red-500 flex-shrink-0" />}
                       <span className={`text-sm ${benefit.included ? 'text-zinc-300' : 'text-zinc-500'}`}>
                         {benefit.name}
                       </span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
-                <button 
-                  className="md:hidden mt-3 text-primary text-sm font-medium"
-                  onClick={() => toggleCardExpand('basico')}
-                >
+                <button className="md:hidden mt-3 text-primary text-sm font-medium" onClick={() => toggleCardExpand('basico')}>
                   {expandedCards['basico'] ? 'Ver menos' : 'Ver mais'}
                 </button>
               </div>
               
-              <Button 
-                variant="glow" 
-                size="lg" 
-                className="w-full"
-                asChild
-              >
-                <a 
-                  href={planData.basico.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  onClick={() => trackEventOnce('basico_checkout', () => {
-                    trackInitiateCheckout("soudrop", 49.90 * 12);
-                  })}
-                >
+              <Button variant="glow" size="lg" className="w-full" asChild>
+                <a href={planData.basico.link} target="_blank" rel="noopener noreferrer" onClick={() => trackEventOnce('basico_checkout', () => {
+                trackInitiateCheckout("soudrop", 49.90 * 12);
+              })}>
                   Começar Agora
                 </a>
               </Button>
@@ -1430,41 +1307,22 @@ const Index = () => {
               {/* Benefits List */}
               <div className="flex-1 mb-6">
                 <div className={`space-y-3 ${!expandedCards['pro'] ? 'max-h-[280px] overflow-hidden md:max-h-none' : ''}`}>
-                  {benefitsPro.map((benefit, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      {benefit.included ? (
-                        <CheckCircle className="h-5 w-5 text-[#22c55e] flex-shrink-0" />
-                      ) : (
-                        <X className="h-5 w-5 text-red-500 flex-shrink-0" />
-                      )}
+                  {benefitsPro.map((benefit, index) => <div key={index} className="flex items-center gap-3">
+                      {benefit.included ? <CheckCircle className="h-5 w-5 text-[#22c55e] flex-shrink-0" /> : <X className="h-5 w-5 text-red-500 flex-shrink-0" />}
                       <span className={`text-sm ${benefit.included ? 'text-zinc-200' : 'text-zinc-500'}`}>
                         {benefit.name}
                       </span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
-                <button 
-                  className="md:hidden mt-3 text-primary text-sm font-medium"
-                  onClick={() => toggleCardExpand('pro')}
-                >
+                <button className="md:hidden mt-3 text-primary text-sm font-medium" onClick={() => toggleCardExpand('pro')}>
                   {expandedCards['pro'] ? 'Ver menos' : 'Ver mais'}
                 </button>
               </div>
               
-              <Button 
-                variant="glow" 
-                size="lg" 
-                className="w-full"
-                asChild
-              >
-                <a 
-                  href={planData.pro.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  onClick={() => trackEventOnce('pro_checkout', () => {
-                    trackInitiateCheckout("soudrop", 197.90 * 12);
-                  })}
-                >
+              <Button variant="glow" size="lg" className="w-full" asChild>
+                <a href={planData.pro.link} target="_blank" rel="noopener noreferrer" onClick={() => trackEventOnce('pro_checkout', () => {
+                trackInitiateCheckout("soudrop", 197.90 * 12);
+              })}>
                   Começar Agora
                 </a>
               </Button>
@@ -1481,41 +1339,22 @@ const Index = () => {
               {/* Benefits List */}
               <div className="flex-1 mb-6">
                 <div className={`space-y-3 ${!expandedCards['premium'] ? 'max-h-[280px] overflow-hidden md:max-h-none' : ''}`}>
-                  {benefitsPremium.map((benefit, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      {benefit.included ? (
-                        <CheckCircle className="h-5 w-5 text-[#22c55e] flex-shrink-0" />
-                      ) : (
-                        <X className="h-5 w-5 text-red-500 flex-shrink-0" />
-                      )}
+                  {benefitsPremium.map((benefit, index) => <div key={index} className="flex items-center gap-3">
+                      {benefit.included ? <CheckCircle className="h-5 w-5 text-[#22c55e] flex-shrink-0" /> : <X className="h-5 w-5 text-red-500 flex-shrink-0" />}
                       <span className={`text-sm ${benefit.included ? 'text-zinc-300' : 'text-zinc-500'}`}>
                         {benefit.name}
                       </span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
-                <button 
-                  className="md:hidden mt-3 text-primary text-sm font-medium"
-                  onClick={() => toggleCardExpand('premium')}
-                >
+                <button className="md:hidden mt-3 text-primary text-sm font-medium" onClick={() => toggleCardExpand('premium')}>
                   {expandedCards['premium'] ? 'Ver menos' : 'Ver mais'}
                 </button>
               </div>
               
-              <Button 
-                variant="glow" 
-                size="lg" 
-                className="w-full"
-                asChild
-              >
-                <a 
-                  href={planData.premium.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  onClick={() => trackEventOnce('premium_checkout', () => {
-                    trackInitiateCheckout("soudrop", 97.90 * 12);
-                  })}
-                >
+              <Button variant="glow" size="lg" className="w-full" asChild>
+                <a href={planData.premium.link} target="_blank" rel="noopener noreferrer" onClick={() => trackEventOnce('premium_checkout', () => {
+                trackInitiateCheckout("soudrop", 97.90 * 12);
+              })}>
                   Começar Agora
                 </a>
               </Button>
