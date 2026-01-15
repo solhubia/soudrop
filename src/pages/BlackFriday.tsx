@@ -284,8 +284,8 @@ const BlackFriday = () => {
         <div className="max-w-5xl mx-auto text-center space-y-6 md:space-y-16">
           <h2 className="text-[24px] leading-[1.25] md:text-5xl font-black md:leading-tight lg:text-7xl">
             Sua melhor compra de agora é um{" "}
-            <span className="text-primary">NEGÓCIO</span>{" "}
-            que vai garantir seu sucesso
+            <span className="text-primary">negócio</span>{" "}
+            que vai garantir seu sucesso nos próximos anos
           </h2>
 
           <div className="w-full">
