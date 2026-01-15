@@ -93,13 +93,17 @@ const BlackFriday = () => {
 
       {/* Hero Section - Solid fallback renders text immediately */}
       <section className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center px-4 md:px-4 py-8 md:py-20 bg-gray-950">
-        {/* Background Image - No filters for performance */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('${isMobile ? HERO_MOBILE : HERO_DESKTOP}')`
-          }}
-        />
+        {/* Background Image - Using <img> for proper preload connection (LCP element) */}
+        <picture className="absolute inset-0 w-full h-full">
+          <source media="(min-width: 768px)" srcSet={HERO_DESKTOP} type="image/webp" />
+          <img 
+            src={HERO_MOBILE}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
+            decoding="sync"
+          />
+        </picture>
         {/* Single simple overlay - no gradient for mobile performance */}
         <div className="absolute inset-0 bg-black/75 md:bg-black/70" />
 
