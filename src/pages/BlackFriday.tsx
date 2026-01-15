@@ -72,14 +72,17 @@ const BlackFriday = () => {
 
           {/* Headline - Mobile: larger, full width */}
           <h2 className="text-[18px] leading-[1.35] md:max-w-4xl mx-auto font-sans font-extrabold md:text-3xl lg:text-5xl md:leading-tight">
-            Aula prática para você fazer parte do{" "}
-            <span className="text-primary">1% das pessoas</span> que ganham dinheiro vendendo sem estoque.
+            A aula que vai mostrar como fazer parte do{" "}
+            <span className="text-primary">1% das pessoas</span> que ganham dinheiro vendendo sem estoque, 
+            com uma{" "}
+            <span className="text-destructive">condição histórica</span>{" "}
+            (a melhor já liberada) de acesso à SouDrop.
           </h2>
 
           {/* Subheadline - Mobile: 17px */}
           <p className="text-[17px] md:text-xl text-gray-300 flex items-center justify-center gap-2">
             <span className="text-xl md:text-2xl">⏱</span>
-            Escolha um horário e garanta sua vaga
+            Clique no botão abaixo e escolha um horário
           </p>
 
           {/* CTA Button - Mobile: 90% width, dominant */}
