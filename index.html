@@ -34,9 +34,8 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://app2.soudrop.com.br/images/logo_login_soudrop.png" />
 
-    <!-- Preload hero image for /black-friday - local optimized files -->
-    <link rel="preload" as="image" type="image/webp" href="/images/hero-bf-mobile.webp" fetchpriority="high" media="(max-width: 767px)">
-    <link rel="preload" as="image" type="image/webp" href="/images/hero-bf-desktop.webp" fetchpriority="high" media="(min-width: 768px)">
+    <!-- Preload hero image for /black-friday - mobile only loads mobile, desktop only loads desktop -->
+    <link rel="preload" as="image" type="image/webp" imagesrcset="/images/hero-bf-mobile.webp 767w, /images/hero-bf-desktop.webp 768w" imagesizes="100vw" fetchpriority="high">
     
     <!-- Critical CSS inline para primeira dobra -->
     <style>
