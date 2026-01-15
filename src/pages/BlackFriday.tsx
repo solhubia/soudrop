@@ -43,13 +43,9 @@ const BlackFriday = () => {
               </div>
               
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter">
-                <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)] text-9xl font-extrabold">
-                  A VIRADA 
-                </span>
+                <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)] text-9xl font-extrabold">O MÉTODO</span>
                 <br />
-                <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">
-                  DE ANO 
-                </span>
+                <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">DOS 1%</span>
               </h1>
               
             </div>
