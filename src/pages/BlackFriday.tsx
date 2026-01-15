@@ -258,7 +258,9 @@ const BlackFriday = () => {
               <img 
                 alt="Renan Ferreira" 
                 className="w-32 h-32 md:w-64 md:h-64 rounded-full object-cover" 
-                src="/lovable-uploads/1f926195-0aa4-4cb4-ae07-1803732511ce.jpg" 
+                src="/lovable-uploads/1f926195-0aa4-4cb4-ae07-1803732511ce.jpg"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
