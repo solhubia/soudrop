@@ -3,10 +3,9 @@ import { ArrowRight, CheckCircle, Users, Target, TrendingUp } from "lucide-react
 import { useEffect, useState, useRef } from "react";
 import renanPhoto from "@/assets/renan-ferreira-bf.jpg";
 
-// Optimized hero images - mobile 720w q60 (~80KB), desktop 1920w q75
-// Unsplash auto-serves WebP/AVIF based on browser support
-const HERO_MOBILE = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=720&q=60";
-const HERO_DESKTOP = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=75";
+// Local optimized hero images - mobile 800w (~70KB), desktop 1920w (~150KB)
+const HERO_MOBILE = "/images/hero-bf-mobile.webp";
+const HERO_DESKTOP = "/images/hero-bf-desktop.webp";
 
 const BlackFriday = () => {
   const [showStickyButton, setShowStickyButton] = useState(false);
