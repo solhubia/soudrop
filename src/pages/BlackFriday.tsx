@@ -10,7 +10,9 @@ const HERO_DESKTOP = "https://images.unsplash.com/photo-1586528116311-ad8dd3c831
 const BlackFriday = () => {
   const [showStickyButton, setShowStickyButton] = useState(false);
   const [heroLoaded, setHeroLoaded] = useState(false);
+  const [heroCTAVisible, setHeroCTAVisible] = useState(true);
   const scriptLoaded = useRef(false);
+  const heroCTARef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -50,10 +52,28 @@ const BlackFriday = () => {
       document.addEventListener(event, loadWebinarScript, { once: true, passive: true });
     });
 
-    // Sticky button logic for mobile
+    // Intersection Observer for hero CTA visibility
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setHeroCTAVisible(entry.isIntersecting);
+      },
+      { threshold: 0.3 }
+    );
+
+    if (heroCTARef.current) {
+      observer.observe(heroCTARef.current);
+    }
+
+    // Sticky button logic for mobile - show only between 15% and 85% scroll
     const handleScroll = () => {
+      if (window.innerWidth >= 768) {
+        setShowStickyButton(false);
+        return;
+      }
+      
       const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      setShowStickyButton(scrollPercent > 15 && window.innerWidth < 768);
+      const isInRange = scrollPercent > 15 && scrollPercent < 85;
+      setShowStickyButton(isInRange);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -62,6 +82,7 @@ const BlackFriday = () => {
     return () => {
       clearTimeout(timeout);
       document.head.removeChild(link);
+      observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
       interactionEvents.forEach(event => {
@@ -130,7 +151,7 @@ const BlackFriday = () => {
           </p>
 
           {/* CTA Button - Mobile: 90% width, dominant */}
-          <div className="pt-3 md:pt-4 w-full">
+          <div ref={heroCTARef} className="pt-3 md:pt-4 w-full">
             <button 
               type="button" 
               className="wj-embed-button w-[90%] md:w-auto" 
@@ -293,8 +314,8 @@ const BlackFriday = () => {
         </div>
       </section>
 
-      {/* Sticky CTA Button - Mobile Only */}
-      {showStickyButton && (
+      {/* Sticky CTA Button - Mobile Only: hidden when hero CTA visible */}
+      {showStickyButton && !heroCTAVisible && (
         <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-gradient-to-t from-black via-black/98 to-transparent md:hidden">
           <button 
             type="button" 
