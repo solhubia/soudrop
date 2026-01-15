@@ -31,6 +31,10 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://app2.soudrop.com.br/images/logo_login_soudrop.png" />
 
+    <!-- Preload hero image for /black-friday (mobile priority) -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=720&q=75" fetchpriority="high" media="(max-width: 767px)">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80" fetchpriority="high" media="(min-width: 768px)">
+    
     <!-- Critical CSS inline para primeira dobra -->
     <style>
       body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:#000;color:#fff}
