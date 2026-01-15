@@ -3,9 +3,10 @@ import { ArrowRight, CheckCircle, Users, Target, TrendingUp } from "lucide-react
 import { useEffect, useState, useRef } from "react";
 import renanPhoto from "@/assets/renan-ferreira-bf.jpg";
 
-// Optimized hero images - mobile 720w, desktop 1920w (Unsplash auto-serves WebP/AVIF)
-const HERO_MOBILE = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=720&q=70";
-const HERO_DESKTOP = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80";
+// Optimized hero images - mobile 720w q60 (~80KB), desktop 1920w q75
+// Unsplash auto-serves WebP/AVIF based on browser support
+const HERO_MOBILE = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=720&q=60";
+const HERO_DESKTOP = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=75";
 
 const BlackFriday = () => {
   const [showStickyButton, setShowStickyButton] = useState(false);
@@ -28,6 +29,7 @@ const BlackFriday = () => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
+    link.type = 'image/webp';
     link.href = heroUrl;
     link.setAttribute('fetchpriority', 'high');
     document.head.appendChild(link);
@@ -103,15 +105,15 @@ const BlackFriday = () => {
 
       {/* Hero Section - Solid fallback renders text immediately */}
       <section className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center px-4 md:px-4 py-8 md:py-20 bg-gray-950">
-        {/* Background Image - Always visible, optimized per device */}
+        {/* Background Image - No filters for performance */}
         <div 
-          className="absolute inset-0 bg-cover bg-center brightness-[0.8] md:brightness-100"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url('${isMobile ? HERO_MOBILE : HERO_DESKTOP}')`
           }}
         />
-        {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-black/90 md:from-black/90 md:via-black/80 md:to-black" />
+        {/* Single simple overlay - no gradient for mobile performance */}
+        <div className="absolute inset-0 bg-black/75 md:bg-black/70" />
 
         {/* Mobile: full width content, Desktop: centered max-width */}
         <div className="relative z-10 w-full px-4 md:px-0 md:max-w-5xl mx-auto text-center space-y-5 md:space-y-8">
