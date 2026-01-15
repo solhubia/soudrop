@@ -22,16 +22,8 @@ const BlackFriday = () => {
     checkMobile();
     window.addEventListener('resize', checkMobile, { passive: true });
 
-    // Preload hero image based on viewport
-    const heroUrl = window.innerWidth < 768 ? HERO_MOBILE : HERO_DESKTOP;
-    
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.type = 'image/webp';
-    link.href = heroUrl;
-    link.setAttribute('fetchpriority', 'high');
-    document.head.appendChild(link);
+    // Hero image preload is handled in index.html (static, high priority)
+    // No dynamic preload needed - avoids duplicate requests
 
     // Defer WebinarJam script until user interaction or 4s
     const loadWebinarScript = () => {
@@ -81,9 +73,6 @@ const BlackFriday = () => {
 
     return () => {
       clearTimeout(timeout);
-      if (document.head.contains(link)) {
-        document.head.removeChild(link);
-      }
       observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
