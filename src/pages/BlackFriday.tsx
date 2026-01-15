@@ -3,23 +3,27 @@ import { ArrowRight, CheckCircle, Users, Target, TrendingUp } from "lucide-react
 import { useEffect, useState, useRef } from "react";
 import renanPhoto from "@/assets/renan-ferreira-bf.jpg";
 
-// Optimized hero images - mobile 720w, desktop 1920w
-const HERO_MOBILE = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=720&q=75";
+// Optimized hero images - mobile 720w, desktop 1920w (Unsplash auto-serves WebP/AVIF)
+const HERO_MOBILE = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=720&q=70";
 const HERO_DESKTOP = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80";
 
 const BlackFriday = () => {
   const [showStickyButton, setShowStickyButton] = useState(false);
-  const [heroLoaded, setHeroLoaded] = useState(false);
   const [heroCTAVisible, setHeroCTAVisible] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const scriptLoaded = useRef(false);
   const heroCTARef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
 
+    // Detect mobile on mount
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile, { passive: true });
+
     // Preload hero image based on viewport
-    const isMobile = window.innerWidth < 768;
-    const heroUrl = isMobile ? HERO_MOBILE : HERO_DESKTOP;
+    const heroUrl = window.innerWidth < 768 ? HERO_MOBILE : HERO_DESKTOP;
     
     const link = document.createElement('link');
     link.rel = 'preload';
@@ -27,11 +31,6 @@ const BlackFriday = () => {
     link.href = heroUrl;
     link.setAttribute('fetchpriority', 'high');
     document.head.appendChild(link);
-
-    // Load image
-    const img = new Image();
-    img.src = heroUrl;
-    img.onload = () => setHeroLoaded(true);
 
     // Defer WebinarJam script until user interaction or 4s
     const loadWebinarScript = () => {
@@ -81,10 +80,13 @@ const BlackFriday = () => {
 
     return () => {
       clearTimeout(timeout);
-      document.head.removeChild(link);
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
       observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
+      window.removeEventListener('resize', checkMobile);
       interactionEvents.forEach(event => {
         document.removeEventListener(event, loadWebinarScript);
       });
@@ -101,18 +103,15 @@ const BlackFriday = () => {
 
       {/* Hero Section - Solid fallback renders text immediately */}
       <section className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center px-4 md:px-4 py-8 md:py-20 bg-gray-950">
-        {/* Background Image with Overlay - Loads behind content */}
+        {/* Background Image - Always visible, optimized per device */}
         <div 
-          className={`absolute inset-0 bg-cover bg-center brightness-[0.8] md:brightness-100 transition-opacity duration-500 ${heroLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className="absolute inset-0 bg-cover bg-center brightness-[0.8] md:brightness-100"
           style={{
-            backgroundImage: `url('${window.innerWidth < 768 ? HERO_MOBILE : HERO_DESKTOP}')`
+            backgroundImage: `url('${isMobile ? HERO_MOBILE : HERO_DESKTOP}')`
           }}
-        >
-          {/* Mobile: stronger overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-black/90 md:from-black/90 md:via-black/80 md:to-black" />
-        </div>
-        {/* Fallback overlay always visible for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-black/90 md:from-black/90 md:via-black/80 md:to-black pointer-events-none" />
+        />
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-black/90 md:from-black/90 md:via-black/80 md:to-black" />
 
         {/* Mobile: full width content, Desktop: centered max-width */}
         <div className="relative z-10 w-full px-4 md:px-0 md:max-w-5xl mx-auto text-center space-y-5 md:space-y-8">
