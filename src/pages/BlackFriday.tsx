@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Users, Target, TrendingUp } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import renanPhoto from "@/assets/renan-ferreira-bf.jpg";
+
 const BlackFriday = () => {
+  const [showStickyButton, setShowStickyButton] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -11,79 +14,97 @@ const BlackFriday = () => {
     script.src = "https://event.webinarjam.com/register/8wgw0kty/embed-button?formTemplate=2&formColor=3&buttonText=Register";
     script.async = true;
     document.body.appendChild(script);
+
+    // Sticky button logic for mobile
+    const handleScroll = () => {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      setShowStickyButton(scrollPercent > 15 && window.innerWidth < 768);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true });
+
     return () => {
       document.body.removeChild(script);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
     };
   }, []);
-  return <div className="min-h-screen bg-black text-white overflow-hidden">
+
+  return (
+    <div className="min-h-screen bg-black text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="fixed inset-0 opacity-10" style={{
-      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E")`,
-      backgroundSize: '60px 60px'
-    }} />
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E")`,
+        backgroundSize: '60px 60px'
+      }} />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80')"
-      }}>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black" />
+      <section className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center px-4 md:px-4 py-12 md:py-20">
+        {/* Background Image with Overlay - Stronger on mobile */}
+        <div className="absolute inset-0 bg-cover bg-center brightness-[0.75] md:brightness-100" style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80')"
+        }}>
+          {/* Mobile: stronger overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/90 md:from-black/90 md:via-black/80 md:to-black" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8">
+        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-4 md:space-y-8">
           {/* Logo/Badge Black Friday */}
           <div className="relative inline-block">
             <div className="relative">
               {/* Tag Superior */}
-              <div className="inline-block mb-4">
-                <span className="text-sm font-bold tracking-widest uppercase text-slate-50 md:text-2xl">
+              <div className="inline-block mb-2 md:mb-4">
+                <span className="text-xs md:text-2xl font-bold tracking-widest uppercase text-slate-50">
                   Masterclass Sou Drop
                 </span>
               </div>
               
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter">
-                <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)] text-9xl font-extrabold">INCRIÇÕES</span>
+              {/* Mobile: 32-36px, Desktop: unchanged */}
+              <h1 className="text-[32px] leading-[1.1] md:text-8xl lg:text-9xl font-black tracking-tighter md:leading-normal">
+                <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)] md:text-9xl font-extrabold">INSCRIÇÕES</span>
                 <br />
                 <span className="bg-gradient-to-r from-destructive via-red-600 to-destructive bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">ABERTAS</span>
               </h1>
-              
             </div>
           </div>
 
-          {/* Headline */}
-          <h2 className="text-2xl md:text-3xl leading-tight max-w-4xl mx-auto px-4 font-sans font-extrabold lg:text-5xl">
-            A aula que vai mostrar como fazer parte do{" "}
-            <span className="text-primary">1% das pessoas</span> que ganham dinheiro vendendo sem estoque, 
-            com uma{" "}
-            <span className="text-destructive">condição histórica</span>{" "}
-            (a melhor já liberada) de acesso à SouDrop.
+          {/* Headline - Mobile optimized */}
+          <h2 className="text-base leading-snug max-w-[360px] md:max-w-4xl mx-auto px-2 md:px-4 font-sans font-extrabold md:text-3xl lg:text-5xl md:leading-tight">
+            Aula prática para você fazer parte do{" "}
+            <span className="text-primary">1% das pessoas</span> que ganham dinheiro vendendo sem estoque.
           </h2>
 
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-gray-400 flex items-center justify-center gap-2">
-            <span className="text-2xl">⏱</span>
-            Clique no botão abaixo e escolha um horário
+          {/* Subheadline - Mobile: 16px */}
+          <p className="text-sm md:text-xl text-gray-400 flex items-center justify-center gap-2">
+            <span className="text-lg md:text-2xl">⏱</span>
+            Escolha um horário e garanta sua vaga
           </p>
 
-          {/* CTA Button */}
-          <div className="pt-4 text-center">
-            <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{
-            border: '2px solid rgba(0, 0, 0, 0.5)',
-            background: 'rgba(34, 197, 94, 0.95)',
-            color: 'rgb(255, 255, 255)',
-            fontSize: '24px',
-            padding: '18px 80px',
-            boxShadow: 'none',
-            borderRadius: '100px',
-            whiteSpace: 'normal',
-            fontWeight: '700',
-            lineHeight: '1.3',
-            cursor: 'pointer',
-            fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-            wordBreak: 'break-word',
-            margin: 'auto'
-          }}>
+          {/* CTA Button - Mobile optimized */}
+          <div className="pt-2 md:pt-4 text-center">
+            <button 
+              type="button" 
+              className="wj-embed-button" 
+              data-webinarHash="8wgw0kty" 
+              style={{
+                border: '2px solid rgba(0, 0, 0, 0.5)',
+                background: 'rgba(34, 197, 94, 0.95)',
+                color: 'rgb(255, 255, 255)',
+                fontSize: 'clamp(16px, 4vw, 24px)',
+                padding: 'clamp(12px, 3vw, 18px) clamp(32px, 10vw, 80px)',
+                boxShadow: 'none',
+                borderRadius: '14px',
+                whiteSpace: 'normal',
+                fontWeight: '700',
+                lineHeight: '1.3',
+                cursor: 'pointer',
+                fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                wordBreak: 'break-word',
+                margin: 'auto',
+                minHeight: '48px'
+              }}
+            >
               GARANTIR VAGA
             </button>
           </div>
@@ -91,119 +112,184 @@ const BlackFriday = () => {
       </section>
 
       {/* O que você vai ver Section */}
-      <section className="relative py-20 px-4">
+      <section className="relative py-12 md:py-20 px-4 md:px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16">
+          <h2 className="text-2xl md:text-5xl font-black text-center mb-8 md:mb-16">
             O que você vai ver nessa{" "}
             <span className="text-primary">MasterClass</span>
           </h2>
 
-          <div className="grid gap-6 max-w-4xl mx-auto">
-            {["SouDrop 3.0 na prática: nada de teoria — tela aberta, mão na massa.", "Pesquisa de produtos em tempo real: do zero até a lista quente.", "Catálogo da SouDrop por dentro: o que vende e por que vende.", "Comparativos inteligentes: margem, volume, concorrência.", "Ferramentas de Lançamento por IA: Como lançar bons anúncios em poucos segundos por IA.", "Condição histórica: a melhor oportunidade já liberada pra você entrar na SouDrop."].map((item, index) => <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-r from-red-950/20 to-transparent border-l-4 border-destructive rounded-lg hover:from-red-950/30 transition-all duration-300 group">
-                <ArrowRight className="w-6 h-6 text-destructive flex-shrink-0 mt-1 group-hover:translate-x-1 transition-transform" />
-                <p className="text-lg text-gray-300 leading-relaxed">{item}</p>
-              </div>)}
+          {/* Mobile: stacked cards, full width */}
+          <div className="grid gap-4 md:gap-6 max-w-4xl mx-auto">
+            {[
+              "SouDrop 3.0 na prática: nada de teoria — tela aberta, mão na massa.",
+              "Pesquisa de produtos em tempo real: do zero até a lista quente.",
+              "Catálogo da SouDrop por dentro: o que vende e por que vende.",
+              "Comparativos inteligentes: margem, volume, concorrência.",
+              "Ferramentas de Lançamento por IA: Como lançar bons anúncios em poucos segundos por IA.",
+              "Condição histórica: a melhor oportunidade já liberada pra você entrar na SouDrop."
+            ].map((item, index) => (
+              <div 
+                key={index} 
+                className="flex items-start gap-3 md:gap-4 p-4 md:p-6 bg-gradient-to-r from-red-950/20 to-transparent border-l-4 border-destructive rounded-lg hover:from-red-950/30 transition-all duration-300 group w-full"
+              >
+                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-destructive flex-shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform" />
+                <p className="text-[15px] leading-relaxed md:text-lg text-gray-300">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Quem deve participar Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-b from-black via-gray-950 to-black">
+      <section className="relative py-12 md:py-20 px-4 md:px-4 bg-gradient-to-b from-black via-gray-950 to-black">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16">
+          <h2 className="text-2xl md:text-5xl font-black text-center mb-8 md:mb-16">
             Quem deve <span className="text-primary">participar</span>
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{
-            icon: <TrendingUp className="w-12 h-12" />,
-            text: "Se você já tentou vender online e não conseguiu resultado."
-          }, {
-            icon: <Target className="w-12 h-12" />,
-            text: "Se você nunca vendeu, mas quer começar de forma simples e segura."
-          }, {
-            icon: <Users className="w-12 h-12" />,
-            text: "Se você já foi membro da SouDrop, mas não renovou seu acesso."
-          }].map((card, index) => <div key={index} className="relative p-8 bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl hover:border-primary/50 transition-all duration-300 group overflow-hidden">
+          {/* Mobile: 1 card per row, full width */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+            {[
+              {
+                icon: <TrendingUp className="w-8 h-8 md:w-12 md:h-12" />,
+                text: "Se você já tentou vender online e não conseguiu resultado."
+              },
+              {
+                icon: <Target className="w-8 h-8 md:w-12 md:h-12" />,
+                text: "Se você nunca vendeu, mas quer começar de forma simples e segura."
+              },
+              {
+                icon: <Users className="w-8 h-8 md:w-12 md:h-12" />,
+                text: "Se você já foi membro da SouDrop, mas não renovou seu acesso."
+              }
+            ].map((card, index) => (
+              <div 
+                key={index} 
+                className="relative p-5 md:p-8 bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl hover:border-primary/50 transition-all duration-300 group overflow-hidden text-center md:text-left"
+              >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-destructive to-primary" />
-                <div className="text-destructive mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-destructive mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 flex justify-center md:justify-start">
                   {card.icon}
                 </div>
-                <p className="text-lg leading-relaxed text-gray-300">
+                <p className="text-base md:text-lg leading-relaxed text-gray-300">
                   {card.text}
                 </p>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Especialista Section */}
-      <section className="relative py-8 px-4 bg-gradient-to-b from-black via-gray-950 to-black">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="inline-block p-2 bg-gradient-to-r from-primary to-destructive rounded-full">
-            <div className="bg-black rounded-full p-3">
-              <img alt="Renan Ferreira" className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover" src="/lovable-uploads/1f926195-0aa4-4cb4-ae07-1803732511ce.jpg" />
+      <section className="relative py-8 md:py-8 px-4 md:px-4 bg-gradient-to-b from-black via-gray-950 to-black">
+        <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-8">
+          {/* Photo - smaller on mobile */}
+          <div className="inline-block p-1.5 md:p-2 bg-gradient-to-r from-primary to-destructive rounded-full">
+            <div className="bg-black rounded-full p-2 md:p-3">
+              <img 
+                alt="Renan Ferreira" 
+                className="w-28 h-28 md:w-64 md:h-64 rounded-full object-cover" 
+                src="/lovable-uploads/1f926195-0aa4-4cb4-ae07-1803732511ce.jpg" 
+              />
             </div>
           </div>
           
-          <div>
-            <h3 className="text-3xl md:text-4xl font-black mb-4">
+          <div className="space-y-2 md:space-y-4">
+            <h3 className="text-xl md:text-4xl font-black">
               <span className="text-primary">RENAN</span> FERREIRA
             </h3>
-            <p className="text-xl text-gray-400 mb-2">
-              Especialista em Importação e Operação Real de E-commerce
+            <p className="text-sm md:text-xl text-gray-400">
+              Especialista em Importação e E-commerce
             </p>
-            <p className="text-gray-500 max-w-2xl mx-auto">
-              Experiência prática com importação direta da China, negociação com fábricas, 
-              containers, logística e operação real no dia a dia.
+            <p className="text-xs md:text-base text-gray-500 max-w-2xl mx-auto px-2">
+              Experiência prática com importação direta da China, negociação com fábricas e operação real no dia a dia.
             </p>
           </div>
         </div>
       </section>
 
       {/* CTA Final Section */}
-      <section className="relative py-8 px-4">
-        <div className="max-w-5xl mx-auto text-center space-y-16">
-          <h2 className="text-3xl md:text-5xl font-black leading-tight lg:text-7xl">
+      <section className="relative py-8 md:py-8 px-4 md:px-4">
+        <div className="max-w-5xl mx-auto text-center space-y-8 md:space-y-16">
+          <h2 className="text-xl md:text-5xl font-black leading-tight lg:text-7xl px-2">
             Sua melhor compra de agora é um{" "}
             <span className="text-primary">NEGÓCIO</span>{" "}
-            que vai garantir seu sucesso nos próximos anos
+            que vai garantir seu sucesso
           </h2>
 
-          <button type="button" className="wj-embed-button" data-webinarHash="8wgw0kty" style={{
-          border: '2px solid rgba(0, 0, 0, 0.5)',
-          background: 'rgba(34, 197, 94, 0.95)',
-          color: 'rgb(255, 255, 255)',
-          fontSize: '24px',
-          padding: '18px 80px',
-          boxShadow: 'none',
-          borderRadius: '100px',
-          whiteSpace: 'normal',
-          fontWeight: '700',
-          lineHeight: '1.3',
-          cursor: 'pointer',
-          fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-          wordBreak: 'break-word',
-          margin: 'auto'
-        }}>
+          <button 
+            type="button" 
+            className="wj-embed-button" 
+            data-webinarHash="8wgw0kty" 
+            style={{
+              border: '2px solid rgba(0, 0, 0, 0.5)',
+              background: 'rgba(34, 197, 94, 0.95)',
+              color: 'rgb(255, 255, 255)',
+              fontSize: 'clamp(16px, 4vw, 24px)',
+              padding: 'clamp(12px, 3vw, 18px) clamp(32px, 10vw, 80px)',
+              boxShadow: 'none',
+              borderRadius: '14px',
+              whiteSpace: 'normal',
+              fontWeight: '700',
+              lineHeight: '1.3',
+              cursor: 'pointer',
+              fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+              wordBreak: 'break-word',
+              margin: 'auto',
+              minHeight: '48px'
+            }}
+          >
             GARANTIR VAGA
           </button>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="relative border-t border-gray-900 py-8 px-4">
+      {/* Sticky CTA Button - Mobile Only */}
+      {showStickyButton && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 p-3 bg-gradient-to-t from-black via-black/95 to-transparent md:hidden">
+          <button 
+            type="button" 
+            className="wj-embed-button w-full" 
+            data-webinarHash="8wgw0kty" 
+            style={{
+              border: '2px solid rgba(0, 0, 0, 0.5)',
+              background: 'rgba(34, 197, 94, 0.95)',
+              color: 'rgb(255, 255, 255)',
+              fontSize: '16px',
+              padding: '14px 24px',
+              boxShadow: '0 -4px 20px rgba(34, 197, 94, 0.3)',
+              borderRadius: '14px',
+              whiteSpace: 'normal',
+              fontWeight: '700',
+              lineHeight: '1.3',
+              cursor: 'pointer',
+              fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+              wordBreak: 'break-word',
+              width: '100%',
+              minHeight: '52px'
+            }}
+          >
+            GARANTIR VAGA AGORA
+          </button>
+        </div>
+      )}
+
+      {/* Footer - Add padding bottom for sticky button on mobile */}
+      <footer className="relative border-t border-gray-900 py-8 px-4 pb-24 md:pb-8">
         <div className="max-w-6xl mx-auto text-center space-y-4">
-          <p className="text-gray-500">
+          <p className="text-gray-500 text-sm md:text-base">
             Desenvolvido por <span className="text-primary font-semibold">SouDrop Digital</span>
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+          <div className="flex flex-wrap justify-center gap-4 text-xs md:text-sm text-gray-600">
             <a href="#" className="hover:text-primary transition-colors">Política de privacidade</a>
             <span>•</span>
             <span>Todos os direitos reservados SouDrop 2025.</span>
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default BlackFriday;
