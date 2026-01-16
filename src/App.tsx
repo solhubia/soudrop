@@ -74,52 +74,54 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
-    // Verifica se o Pixel já foi carregado
-    if (window.fbq) return;
+    // Verifica se o Pixel já foi carregado E inicializado
+    if (window.fbqInitialized) return;
 
     // Carrega o script do Pixel apenas uma vez
-    (function (
-      f: any,
-      b: Document,
-      e: string,
-      v: string,
-      n?: any,
-      t?: HTMLScriptElement,
-      s?: HTMLScriptElement
-    ) {
-      if (f.fbq) return;
-      n = f.fbq = function () {
-        n!.callMethod
-          ? n!.callMethod.apply(n, arguments)
-          : n!.queue.push(arguments);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = "2.0";
-      n.queue = [];
-      t = b.createElement(e) as HTMLScriptElement;
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0] as HTMLScriptElement;
-      s.parentNode!.insertBefore(t, s);
-    })(
-      window as any,
-      document,
-      "script",
-      "https://connect.facebook.net/en_US/fbevents.js"
-    );
+    if (!window.fbq) {
+      (function (
+        f: any,
+        b: Document,
+        e: string,
+        v: string,
+        n?: any,
+        t?: HTMLScriptElement,
+        s?: HTMLScriptElement
+      ) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n!.callMethod
+            ? n!.callMethod.apply(n, arguments)
+            : n!.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e) as HTMLScriptElement;
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0] as HTMLScriptElement;
+        s.parentNode!.insertBefore(t, s);
+      })(
+        window as any,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+    }
 
-    // window.fbq?.("init", "1144631303730010");
+    // Inicializa o pixel apenas UMA vez
     window.fbq?.("init", "245528455206400");
+    window.fbq?.("track", "PageView");
+    window.fbqInitialized = true;
 
-    // Fallback para noScript (pode manter)
+    // Fallback para noScript
     const img = document.createElement("img");
     img.height = 1;
     img.width = 1;
     img.style.display = "none";
-    // img.src =
-    //   "https://www.facebook.com/tr?id=1144631303730010&ev=PageView&noscript=1";
     img.src =
       "https://www.facebook.com/tr?id=245528455206400&ev=PageView&noscript=1";
     document.body.appendChild(img);
