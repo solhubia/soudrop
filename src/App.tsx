@@ -110,15 +110,18 @@ const App = () => {
       "https://connect.facebook.net/en_US/fbevents.js"
     );
 
-    window.fbq?.("init", "1144631303730010");
+    // window.fbq?.("init", "1144631303730010");
+    window.fbq?.("init", "245528455206400");
 
     // Fallback para noScript (pode manter)
     const img = document.createElement("img");
     img.height = 1;
     img.width = 1;
     img.style.display = "none";
+    // img.src =
+    //   "https://www.facebook.com/tr?id=1144631303730010&ev=PageView&noscript=1";
     img.src =
-      "https://www.facebook.com/tr?id=1144631303730010&ev=PageView&noscript=1";
+      "https://www.facebook.com/tr?id=245528455206400&ev=PageView&noscript=1";
     document.body.appendChild(img);
 
     return () => {
