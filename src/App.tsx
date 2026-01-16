@@ -70,73 +70,93 @@ function RouteListener() {
   return null;
 }
 
+declare global {
+  interface Window {
+    __fbqInitedIds?: Record<string, boolean>;
+    __fbqPageViewSentIds?: Record<string, boolean>;
+  }
+}
+
+const META_PIXEL_DEFAULT = "1144631303730010";
+const META_PIXEL_BLACK_FRIDAY = "245528455206400";
+
+function ensureMetaPixelLoaded() {
+  if (window.fbq) return;
+
+  (function (
+    f: any,
+    b: Document,
+    e: string,
+    v: string,
+    n?: any,
+    t?: HTMLScriptElement,
+    s?: HTMLScriptElement
+  ) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n!.callMethod ? n!.callMethod.apply(n, arguments) : n!.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = "2.0";
+    n.queue = [];
+    t = b.createElement(e) as HTMLScriptElement;
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0] as HTMLScriptElement;
+    s.parentNode!.insertBefore(t, s);
+  })(window as any, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+}
+
+// -------------------------------------------
+// Componente que inicializa o Meta Pixel por rota
+// - /links: NÃO toca no pixel (page-level)
+// - /black-friday: usa SOMENTE 245528455206400
+// - demais: usa o pixel padrão 1144631303730010
+// -------------------------------------------
+function MetaPixelListener() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = location.pathname.toLowerCase();
+
+    // Não alterar /links (pixel específico já é gerenciado na própria página)
+    if (path === "/links") return;
+
+    const pixelId = path === "/black-friday" ? META_PIXEL_BLACK_FRIDAY : META_PIXEL_DEFAULT;
+
+    ensureMetaPixelLoaded();
+
+    window.__fbqInitedIds = window.__fbqInitedIds || {};
+    window.__fbqPageViewSentIds = window.__fbqPageViewSentIds || {};
+
+    // Garantir init + PageView apenas uma vez por ID (evita "activated 2 times")
+    if (!window.__fbqInitedIds[pixelId]) {
+      window.fbq?.("init", pixelId);
+      window.__fbqInitedIds[pixelId] = true;
+    }
+
+    if (!window.__fbqPageViewSentIds[pixelId]) {
+      window.fbq?.("track", "PageView");
+      window.__fbqPageViewSentIds[pixelId] = true;
+    }
+  }, [location.pathname]);
+
+  return null;
+}
+
+
 const queryClient = new QueryClient();
 
 const App = () => {
-  useEffect(() => {
-    // Verifica se o Pixel já foi carregado E inicializado
-    if (window.fbqInitialized) return;
-
-    // Carrega o script do Pixel apenas uma vez
-    if (!window.fbq) {
-      (function (
-        f: any,
-        b: Document,
-        e: string,
-        v: string,
-        n?: any,
-        t?: HTMLScriptElement,
-        s?: HTMLScriptElement
-      ) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n!.callMethod
-            ? n!.callMethod.apply(n, arguments)
-            : n!.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e) as HTMLScriptElement;
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0] as HTMLScriptElement;
-        s.parentNode!.insertBefore(t, s);
-      })(
-        window as any,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-    }
-
-    // Inicializa o pixel apenas UMA vez
-    window.fbq?.("init", "245528455206400");
-    window.fbq?.("track", "PageView");
-    window.fbqInitialized = true;
-
-    // Fallback para noScript
-    const img = document.createElement("img");
-    img.height = 1;
-    img.width = 1;
-    img.style.display = "none";
-    img.src =
-      "https://www.facebook.com/tr?id=245528455206400&ev=PageView&noscript=1";
-    document.body.appendChild(img);
-
-    return () => {
-      if (img && img.parentNode) img.parentNode.removeChild(img);
-    };
-  }, []);
-
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <MetaPixelListener />
           <RouteListener />
 
           <Suspense fallback={<PageLoader />}>
