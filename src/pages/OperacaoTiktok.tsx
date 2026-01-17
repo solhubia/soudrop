@@ -6,24 +6,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import creatorsLogo from "@/assets/creators-logo.png";
 
-declare global {
-  interface Window {
-    Eduzz: (type: string, args: { id: number }, caller: EventTarget | null) => void;
-  }
-}
-
 const OperacaoTiktok = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [isDropboxVideoPlaying, setIsDropboxVideoPlaying] = useState(false);
   const [isVideo3Playing, setIsVideo3Playing] = useState(false);
-  
-  const openEduzzWidget = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (window.Eduzz) {
-      window.Eduzz('Widget', { id: 2927424 }, e.currentTarget);
-    }
-  };
-
   const scrollToCTA = () => {
     const ctaButton = document.getElementById('cta-button');
     ctaButton?.scrollIntoView({
@@ -76,13 +63,11 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA amarelo pill */}
           <div className="mb-12 flex justify-center w-full" id="cta-button">
-            <Button 
-              size="lg" 
-              onClick={openEduzzWidget}
-              className="max-w-[90%] md:max-w-none bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide"
-            >
-              QUERO ME INSCREVER GRÁTIS
-            </Button>
+            <a href="https://sun.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+                QUERO ME INSCREVER GRÁTIS
+              </Button>
+            </a>
           </div>
 
           {/* 3 Cards */}
@@ -332,13 +317,11 @@ const OperacaoTiktok = () => {
 
           {/* CTA */}
           <div className="flex justify-center w-full">
-            <Button 
-              size="lg" 
-              onClick={openEduzzWidget}
-              className="max-w-[90%] md:max-w-none bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide"
-            >
-              QUERO COMEÇAR AGORA
-            </Button>
+            <a href="https://sun.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+                QUERO COMEÇAR AGORA
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -399,13 +382,11 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA */}
           <div className="flex justify-center w-full">
-            <Button 
-              size="lg" 
-              onClick={openEduzzWidget}
-              className="max-w-[90%] md:max-w-none bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide"
-            >
-              QUERO ME INSCREVER GRÁTIS
-            </Button>
+            <a href="https://sun.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+                QUERO ME INSCREVER GRÁTIS
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -498,13 +479,11 @@ const OperacaoTiktok = () => {
 
           {/* Botão CTA Final */}
           <div className="flex justify-center mt-12 w-full">
-            <Button 
-              size="lg" 
-              onClick={openEduzzWidget}
-              className="max-w-[90%] md:max-w-none bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide"
-            >
-              QUERO ME INSCREVER GRÁTIS
-            </Button>
+            <a href="https://sun.eduzz.com/KW8KXAK201" target="_blank" rel="noopener noreferrer" className="max-w-[90%] md:max-w-none">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+                QUERO ME INSCREVER GRÁTIS
+              </Button>
+            </a>
           </div>
         </div>
       </section>
