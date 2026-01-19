@@ -124,7 +124,9 @@ function MetaPixelListener() {
     // Não alterar /links (pixel específico já é gerenciado na própria página)
     if (path === "/links") return;
 
-    const pixelId = path === "/black-friday" ? META_PIXEL_BLACK_FRIDAY : META_PIXEL_DEFAULT;
+    // Páginas que usam o pixel Black Friday (245528455206400)
+    const useBlackFridayPixel = path === "/black-friday" || path === "/operacao-tiktok-de-lucro";
+    const pixelId = useBlackFridayPixel ? META_PIXEL_BLACK_FRIDAY : META_PIXEL_DEFAULT;
 
     ensureMetaPixelLoaded();
 
