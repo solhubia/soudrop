@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Users, Star, TrendingUp, Play, Package, BarChart3, Gift, BookOpen, Video, MessageCircle, UsersRound, Award, Lock, X } from "lucide-react";
@@ -6,90 +6,17 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import creatorsLogo from "@/assets/creators-logo.png";
 
-declare global {
-  interface Window {
-    Eduzz?: any;
-    EdzLs?: any[];
-    edz?: () => void;
-    edzScript?: HTMLScriptElement;
-  }
-}
-
 const OperacaoTiktok = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [isDropboxVideoPlaying, setIsDropboxVideoPlaying] = useState(false);
   const [isVideo3Playing, setIsVideo3Playing] = useState(false);
-  const btnRef = useRef<HTMLButtonElement | null>(null);
-
   const scrollToCTA = () => {
     const ctaButton = document.getElementById('cta-button');
     ctaButton?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-
-  // Carrega scripts da Eduzz (bridge.js + widget)
-  useEffect(() => {
-    // 1) Carregar bridge.js (checkout embed) e inicializar
-    const BRIDGE_ID = "eduzz-bridge-js";
-    const initCheckout = () => {
-      try {
-        window.Eduzz?.Checkout?.init({
-          contentId: "KW8KXAK201",
-          target: "elements",
-          errorCover: false,
-        });
-      } catch (e) {
-        console.error("Erro ao iniciar Eduzz Checkout:", e);
-      }
-    };
-
-    if (!document.getElementById(BRIDGE_ID)) {
-      const s = document.createElement("script");
-      s.id = BRIDGE_ID;
-      s.src = "https://cdn.eduzzcdn.com/sun/bridge/bridge.js";
-      s.async = true;
-      s.type = "module";
-      s.addEventListener("load", initCheckout);
-      document.body.appendChild(s);
-    } else {
-      initCheckout();
-    }
-
-    // 2) Carregar Widget da Eduzz (para o botão Eduzz('Widget', ...))
-    const WIDGET_SCRIPT_ID = "eduzz-widget-main-js";
-    if (!document.getElementById(WIDGET_SCRIPT_ID)) {
-      window.EdzLs = window.EdzLs || [];
-      window.Eduzz =
-        window.Eduzz ||
-        function (t: any, a: any, c: any) {
-          window.EdzLs!.push({ type: t, args: a, caller: c });
-          if (window.edz) window.edz();
-        };
-      const ws = document.createElement("script");
-      ws.id = WIDGET_SCRIPT_ID;
-      ws.async = true;
-      ws.defer = true;
-      ws.src = "https://sun.eduzz.com/widget/main.js";
-      window.edzScript = ws;
-      const firstScript = document.getElementsByTagName("script")[0];
-      if (firstScript?.parentNode) {
-        firstScript.parentNode.insertBefore(ws, firstScript);
-      } else {
-        document.body.appendChild(ws);
-      }
-    }
-  }, []);
-
-  const handleBuyNow = (e: React.MouseEvent<HTMLButtonElement>) => {
-    try {
-      window.Eduzz?.("Widget", { id: 2927424 }, e.currentTarget);
-    } catch (err) {
-      console.error("Erro ao abrir Widget Eduzz:", err);
-    }
-  };
-
   return <div className="min-h-screen">
       {/* FAIXA DO EVENTO NO TOPO */}
       
@@ -557,36 +484,6 @@ const OperacaoTiktok = () => {
                 QUERO ME INSCREVER GRÁTIS
               </Button>
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* SEÇÃO - CHECKOUT EMBUTIDO EDUZZ */}
-      <section className="bg-white py-16 md:py-24 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">
-              Finalize sua inscrição
-            </h2>
-            <p className="text-lg md:text-xl text-gray-600 mb-8">
-              Preencha os dados abaixo para garantir sua vaga
-            </p>
-          </div>
-
-          {/* Container onde o checkout embed da Eduzz vai renderizar */}
-          <div id="elements" className="w-full min-h-[400px]"></div>
-
-          {/* Botão alternativo para abrir o widget */}
-          <div className="flex justify-center mt-8">
-            <Button
-              type="button"
-              ref={btnRef}
-              onClick={handleBuyNow}
-              size="lg"
-              className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-xs md:text-xl px-6 md:px-14 py-2.5 md:py-7 h-auto rounded-full font-semibold md:font-black shadow-none md:shadow-[0_0_50px_rgba(250,204,21,0.4)] hover:shadow-none md:hover:shadow-[0_0_70px_rgba(250,204,21,0.5)] hover:scale-105 transition-all duration-300 uppercase tracking-wide"
-            >
-              COMPRAR AGORA!
-            </Button>
           </div>
         </div>
       </section>
