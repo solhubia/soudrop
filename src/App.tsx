@@ -125,7 +125,7 @@ function MetaPixelListener() {
     if (path === "/links") return;
 
     // Páginas que usam o pixel Black Friday (245528455206400)
-    const useBlackFridayPixel = path === "/black-friday" || path === "/operacao-tiktok-de-lucro";
+    const useBlackFridayPixel = path === "/black-friday" || path === "/operacao-tiktok-de-lucro" || path === "/obrigado-tiktok-lucrativo";
     const pixelId = useBlackFridayPixel ? META_PIXEL_BLACK_FRIDAY : META_PIXEL_DEFAULT;
 
     ensureMetaPixelLoaded();
