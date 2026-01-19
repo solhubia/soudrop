@@ -1,9 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import creatorsLogo from "@/assets/creators-logo-tiktok.png";
 
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 const ObrigadoTiktokLucrativo = () => {
+  const leadFiredRef = useRef(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Dispara Lead apenas uma vez por visita
+    if (!leadFiredRef.current && window.fbq) {
+      window.fbq('track', 'Lead');
+      leadFiredRef.current = true;
+    }
   }, []);
 
   return (
