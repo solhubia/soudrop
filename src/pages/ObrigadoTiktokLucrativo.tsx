@@ -71,7 +71,7 @@ const ObrigadoTiktokLucrativo = () => {
           {/* Course Access Button */}
           <div className="pt-8 pb-4 flex flex-col items-center">
             <a
-              href="https://soudrop.alpaclass.com/conteudos"
+              href="https://cursos.nutror.com/curso/9245715aa9063683eeaef4b5b4dc7f3df1b0149d"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full max-w-[420px] bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold text-[clamp(1rem,3vw,1.2rem)] py-4 px-6 rounded-xl text-center transition-all duration-200 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40"
