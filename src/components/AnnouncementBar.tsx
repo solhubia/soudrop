@@ -1,13 +1,22 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { X } from "lucide-react";
 
 const STORAGE_KEY = "announcement_bar_closed";
 const EXPIRY_HOURS = 24;
+const ALLOWED_ROUTES = ["/importacao", "/importação"];
 
 export default function AnnouncementBar() {
+  const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
 
+  const isAllowedRoute = ALLOWED_ROUTES.includes(location.pathname.toLowerCase());
+
   useEffect(() => {
+    if (!isAllowedRoute) {
+      setIsVisible(false);
+      return;
+    }
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
       const closedAt = parseInt(stored, 10);
