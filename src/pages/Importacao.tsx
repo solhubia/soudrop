@@ -90,6 +90,13 @@ const Importacao = () => {
           event.target.mute();
           event.target.playVideo();
         },
+        onStateChange: (event) => {
+          // When video ends, loop it (keeping sound on if unmuted)
+          if (event.data === window.YT.PlayerState.ENDED && playerRef.current) {
+            playerRef.current.seekTo(0, true);
+            playerRef.current.playVideo();
+          }
+        },
       },
     });
 
