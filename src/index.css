@@ -562,17 +562,13 @@
   pointer-events: none;
 }
 
-.vsl-container:has(button) iframe {
-  pointer-events: none;
-}
-
-.vsl-container:not(:has(button)) iframe {
-  pointer-events: auto;
-}
-
 /* Hide YouTube branding and overlays */
 .vsl-container .ytp-chrome-top,
 .vsl-container .ytp-chrome-bottom,
+.vsl-container .ytp-gradient-top,
+.vsl-container .ytp-gradient-bottom,
+.vsl-container .ytp-title,
+.vsl-container .ytp-title-channel,
 .vsl-container .ytp-watermark,
 .vsl-container .ytp-show-cards-title,
 .vsl-container .ytp-ce-element,
@@ -580,8 +576,9 @@
 .vsl-container .ytp-endscreen-content,
 .vsl-container .ytp-endscreen-more-videos,
 .vsl-container .ytp-pause-overlay,
-.vsl-container .ytp-title,
-.vsl-container .ytp-share-button {
+.vsl-container .ytp-share-button,
+.vsl-container .ytp-cued-thumbnail-overlay,
+.vsl-container .ytp-large-play-button {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
