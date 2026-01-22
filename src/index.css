@@ -576,9 +576,14 @@
 .vsl-container .ytp-watermark,
 .vsl-container .ytp-show-cards-title,
 .vsl-container .ytp-ce-element,
+.vsl-container .ytp-cards-teaser,
 .vsl-container .ytp-endscreen-content,
-.vsl-container .ytp-pause-overlay {
+.vsl-container .ytp-endscreen-more-videos,
+.vsl-container .ytp-pause-overlay,
+.vsl-container .ytp-title,
+.vsl-container .ytp-share-button {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
+  pointer-events: none !important;
 }
