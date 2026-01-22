@@ -556,3 +556,29 @@
     max-width: 800px;
   }
 }
+
+/* VSL Container - Hide YouTube UI elements */
+.vsl-container iframe {
+  pointer-events: none;
+}
+
+.vsl-container:has(button) iframe {
+  pointer-events: none;
+}
+
+.vsl-container:not(:has(button)) iframe {
+  pointer-events: auto;
+}
+
+/* Hide YouTube branding and overlays */
+.vsl-container .ytp-chrome-top,
+.vsl-container .ytp-chrome-bottom,
+.vsl-container .ytp-watermark,
+.vsl-container .ytp-show-cards-title,
+.vsl-container .ytp-ce-element,
+.vsl-container .ytp-endscreen-content,
+.vsl-container .ytp-pause-overlay {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
