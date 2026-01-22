@@ -1,16 +1,114 @@
-import { Ship, Globe, TrendingDown, CheckCircle2, Users, Shield, Zap, Package, Play } from "lucide-react";
+import { Ship, Globe, TrendingDown, CheckCircle2, Users, Shield, Zap, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
-import { trackViewContent, trackInitiateCheckout, trackWishCheckout  } from "@/lib/fbq";
+import { useEffect, useRef, useState, useCallback } from "react";
+import { trackViewContent, trackInitiateCheckout, trackWishCheckout } from "@/lib/fbq";
 import { useTracking } from "@/hooks/useTracking";
+
+declare global {
+  interface Window {
+    YT: {
+      Player: new (
+        elementId: string,
+        config: {
+          videoId: string;
+          playerVars?: Record<string, number | string>;
+          events?: {
+            onReady?: (event: { target: YTPlayer }) => void;
+            onStateChange?: (event: { data: number }) => void;
+          };
+        }
+      ) => YTPlayer;
+      PlayerState: {
+        PLAYING: number;
+        PAUSED: number;
+        ENDED: number;
+      };
+    };
+    onYouTubeIframeAPIReady?: () => void;
+  }
+}
+
+interface YTPlayer {
+  playVideo: () => void;
+  pauseVideo: () => void;
+  mute: () => void;
+  unMute: () => void;
+  seekTo: (seconds: number, allowSeekAhead?: boolean) => void;
+  destroy: () => void;
+}
 
 const Importacao = () => {
   const { trackEventOnce } = useTracking();
+  const playerRef = useRef<YTPlayer | null>(null);
+  const [showUnmuteButton, setShowUnmuteButton] = useState(true);
+  const [isAPIReady, setIsAPIReady] = useState(false);
 
+  // Load YouTube Iframe API
   useEffect(() => {
-    // Dispara ViewContent com content_category 'club' quando a página for acessada
     trackViewContent("club", { content_name: document.title });
+
+    if (window.YT && window.YT.Player) {
+      setIsAPIReady(true);
+      return;
+    }
+
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName("script")[0];
+    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
+
+    window.onYouTubeIframeAPIReady = () => {
+      setIsAPIReady(true);
+    };
+
+    return () => {
+      window.onYouTubeIframeAPIReady = undefined;
+    };
   }, []);
+
+  // Initialize player when API is ready
+  useEffect(() => {
+    if (!isAPIReady) return;
+
+    playerRef.current = new window.YT.Player("vsl-player", {
+      videoId: "AFsOl5kf_hM",
+      playerVars: {
+        autoplay: 1,
+        mute: 1,
+        controls: 0,
+        rel: 0,
+        modestbranding: 1,
+        iv_load_policy: 3,
+        fs: 0,
+        disablekb: 1,
+        playsinline: 1,
+        enablejsapi: 1,
+        origin: window.location.origin,
+      },
+      events: {
+        onReady: (event) => {
+          event.target.mute();
+          event.target.playVideo();
+        },
+      },
+    });
+
+    return () => {
+      if (playerRef.current) {
+        playerRef.current.destroy();
+      }
+    };
+  }, [isAPIReady]);
+
+  const handleUnmute = useCallback(() => {
+    if (playerRef.current) {
+      playerRef.current.unMute();
+      playerRef.current.seekTo(0, true);
+      playerRef.current.playVideo();
+      setShowUnmuteButton(false);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section with Video */}
@@ -25,15 +123,21 @@ const Importacao = () => {
               </div>
             </div>
 
-            {/* Video Section */}
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-8 shadow-2xl">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/AFsOl5kf_hM"
-                title="Vídeo do Clube de Importação"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+            {/* VSL Video Section */}
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-8 shadow-2xl vsl-container">
+              <div id="vsl-player" className="w-full h-full" />
+              
+              {/* Unmute Overlay */}
+              {showUnmuteButton && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 z-10">
+                  <button
+                    onClick={handleUnmute}
+                    className="flex items-center gap-3 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-6 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105"
+                  >
+                    🔊 Ativar som e assistir do início
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Headline */}
