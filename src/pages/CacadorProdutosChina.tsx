@@ -71,7 +71,7 @@ const CacadorProdutosChina = () => {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-[#FFF9E6]/80 max-w-2xl mx-auto">
-              O método testado e aprovado por importadores profissionais, agora disponível em um treinamento completo por <span className="font-bold text-[#FFD700]">apenas R$37</span>.
+              O método testado e aprovado por importadores profissionais, agora disponível em um treinamento completo <span className="font-bold text-[#FFD700]">GRATUITO</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
               <Button size="lg" variant="red" className="w-full sm:w-auto text-lg px-8 py-6" asChild>
@@ -314,7 +314,7 @@ const CacadorProdutosChina = () => {
                   <p className="text-white/80 text-sm mb-2">🎉 Investimento Promocional de Hoje:</p>
                   <div className="flex items-center justify-center gap-3 mb-2">
                     <span className="text-3xl text-white/60 line-through">R$838</span>
-                    <span className="text-6xl md:text-7xl font-bold text-[#FFD700]">R$37</span>
+                    <span className="text-6xl md:text-7xl font-bold text-[#FFD700]">GRATUITO</span>
                   </div>
                   <p className="text-white/80 text-sm">✅ Acesso imediato e vitalício | ✅ Garantia de 7 dias</p>
                 </div>
@@ -356,7 +356,7 @@ const CacadorProdutosChina = () => {
           <div className="max-w-3xl mx-auto text-center space-y-4">
             <div className="flex items-center justify-center gap-2 text-[#FFD700]">
               <Clock className="w-6 h-6" />
-              <p className="text-lg font-bold">⚠️ Oferta de R$37 pode sair do ar a qualquer momento!</p>
+              <p className="text-lg font-bold">⚠️ Oferta gratuita pode sair do ar a qualquer momento!</p>
             </div>
             <p className="text-[#FFF9E6]/80">Vagas limitadas para garantir qualidade no suporte aos alunos.</p>
           </div>
