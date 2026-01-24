@@ -75,7 +75,7 @@ const CacadorProdutosChina = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
               <Button size="lg" variant="red" className="w-full sm:w-auto text-lg px-8 py-6" asChild>
-                <a href="https://pay.kiwify.com.br/8SaUXFm"
+                <a href="https://sun.eduzz.com/60EEXEYB03"
                   onClick={() => trackEventOnce('comecar_agora', () => {
                     trackInitiateCheckout("courses", 37);
                   })}
@@ -119,7 +119,7 @@ const CacadorProdutosChina = () => {
                     Descubra onde estão os produtos mais lucrativos da China e como qualquer pessoa pode começar a importar hoje mesmo.
                   </p>
                   <Button variant="blue" size="lg" asChild>
-                    <a href="https://pay.kiwify.com.br/8SaUXFm"
+                    <a href="https://sun.eduzz.com/60EEXEYB03"
                       onClick={() => trackEventOnce('garantir_agora', () => {
                         trackInitiateCheckout("courses", 37);
                       })}
@@ -179,7 +179,7 @@ const CacadorProdutosChina = () => {
               Em poucas horas você vai enxergar oportunidades que 95% das pessoas não conseguem ver — produtos que praticamente se vendem sozinhos, com margens incríveis de lucro.
             </p>
             <Button size="lg" variant="red" className="text-lg px-8 py-6" asChild>
-              <a href="https://pay.kiwify.com.br/8SaUXFm"
+              <a href="https://sun.eduzz.com/60EEXEYB03"
                 onClick={() => trackEventOnce('quero_transformacao', () => {
                   trackInitiateCheckout("courses", 37);
                 })}
@@ -320,7 +320,7 @@ const CacadorProdutosChina = () => {
                 </div>
 
                 <Button size="lg" variant="red" className="w-full text-lg py-6" asChild>
-                  <a href="https://pay.kiwify.com.br/8SaUXFm"
+                  <a href="https://sun.eduzz.com/60EEXEYB03"
                     onClick={() => trackEventOnce('courses_checkout', () => {
                       trackInitiateCheckout("courses", 37);
                     })}
