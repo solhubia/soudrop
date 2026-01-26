@@ -45,7 +45,7 @@ const ObrigadoCacadorChina = () => {
                   </p>
                 </div>
                 <Button size="lg" variant="red" className="w-full" asChild>
-                  <a href="https://chat.whatsapp.com/seu-link-aqui" target="_blank" rel="noopener noreferrer">
+                  <a href="https://chat.whatsapp.com/KBS2Vx84G0fG4X6zCOK0wL" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Entrar no Grupo VIP
                   </a>
