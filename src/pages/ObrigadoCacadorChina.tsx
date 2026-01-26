@@ -78,7 +78,7 @@ const ObrigadoCacadorChina = () => {
                 </div>
                 <Button size="lg" variant="blue" className="w-full" asChild>
                   <a 
-                    href="https://area-de-membros.exemplo.com" 
+                    href="https://app.nutror.com/curso/29fde18dcb00778014c7b1165dc33eec86963ec3" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
