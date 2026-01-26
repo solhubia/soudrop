@@ -51,7 +51,7 @@ const ObrigadoCacadorChina = () => {
                 </div>
                 <Button size="lg" variant="red" className="w-full" asChild>
                   <a 
-                    href="https://chat.whatsapp.com/seu-link-aqui" 
+                    href="https://chat.whatsapp.com/Jy3DyfHA87gAkHw77RcCYu" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
