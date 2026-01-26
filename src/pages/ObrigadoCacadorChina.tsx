@@ -2,14 +2,11 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui_link/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, MessageCircle, GraduationCap, TrendingUp, Sparkles } from "lucide-react";
-
 const ObrigadoCacadorChina = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-[#0A0604] text-[#FFF9E6]">
+  return <div className="min-h-screen bg-[#0A0604] text-[#FFF9E6]">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
           {/* Success Icon */}
@@ -42,19 +39,13 @@ const ObrigadoCacadorChina = () => {
                   <MessageCircle className="w-8 h-8 text-white" />
                 </div>
                 <div className="space-y-2">
-                  <h2 className="text-2xl font-bold text-[#FFD700]">
-                    1. Entre no Grupo VIP do WhatsApp
-                  </h2>
+                  <h2 className="text-2xl font-bold text-[#FFD700]">1. Entre no Grupo de Suporte do WhatsApp</h2>
                   <p className="text-[#FFF9E6]/80">
                     Acesse nossa comunidade exclusiva com dicas diárias, produtos quentes e suporte direto.
                   </p>
                 </div>
                 <Button size="lg" variant="red" className="w-full" asChild>
-                  <a 
-                    href="https://chat.whatsapp.com/Jy3DyfHA87gAkHw77RcCYu" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
+                  <a href="https://chat.whatsapp.com/seu-link-aqui" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Entrar no Grupo VIP
                   </a>
@@ -77,11 +68,7 @@ const ObrigadoCacadorChina = () => {
                   </p>
                 </div>
                 <Button size="lg" variant="blue" className="w-full" asChild>
-                  <a 
-                    href="https://app.nutror.com/curso/29fde18dcb00778014c7b1165dc33eec86963ec3" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
+                  <a href="https://app.nutror.com/curso/29fde18dcb00778014c7b1165dc33eec86963ec3" target="_blank" rel="noopener noreferrer">
                     <Sparkles className="w-5 h-5 mr-2" />
                     Acessar Treinamento
                   </a>
@@ -163,8 +150,6 @@ const ObrigadoCacadorChina = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ObrigadoCacadorChina;
