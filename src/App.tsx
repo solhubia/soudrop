@@ -31,6 +31,7 @@ const BlackFriday = lazy(() => import("./pages/BlackFriday"));
 const DashboardGiroEstoque = lazy(() => import("./pages/DashboardGiroEstoque"));
 const ObrigadoTiktokLucrativo = lazy(() => import("./pages/ObrigadoTiktokLucrativo"));
 const JornadaCreators = lazy(() => import("./pages/JornadaCreators"));
+const CondicaoEspecial = lazy(() => import("./pages/CondicaoEspecial"));
 
 // Minimal loading fallback - prevents CLS with fixed height
 const PageLoader = () => (
@@ -185,6 +186,7 @@ const App = () => {
               <Route path="/dashboard-giro-estoque" element={<DashboardGiroEstoque />} />
               <Route path="/obrigado-tiktok-lucrativo" element={<ObrigadoTiktokLucrativo />} />
               <Route path="/jornada-creators" element={<JornadaCreators />} />
+              <Route path="/condicao-especial" element={<CondicaoEspecial />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
