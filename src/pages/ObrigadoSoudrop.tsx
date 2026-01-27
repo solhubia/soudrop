@@ -1,131 +1,67 @@
 import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 import { CheckCircle, MessageCircle, Package } from "lucide-react";
-import { useEffect, useState, useRef, useCallback } from "react";
-
-declare global {
-  interface Window {
-    YT: {
-      Player: new (
-        elementId: string,
-        config: {
-          videoId: string;
-          playerVars?: Record<string, number | string>;
-          events?: {
-            onReady?: (event: { target: YTPlayer }) => void;
-            onStateChange?: (event: { data: number }) => void;
-          };
-        }
-      ) => YTPlayer;
-      PlayerState: {
-        PLAYING: number;
-        PAUSED: number;
-        ENDED: number;
-      };
-    };
-    onYouTubeIframeAPIReady?: () => void;
-  }
-}
-
-interface YTPlayer {
-  playVideo: () => void;
-  pauseVideo: () => void;
-  mute: () => void;
-  unMute: () => void;
-  seekTo: (seconds: number, allowSeekAhead?: boolean) => void;
-  destroy: () => void;
-}
-
+import { useEffect, useState, useRef } from "react";
 const ObrigadoSoudrop = () => {
-  const [showUnmuteOverlay, setShowUnmuteOverlay] = useState(true);
-  const [showButtons, setShowButtons] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const [showSecondFold, setShowSecondFold] = useState(false);
-  const [isAPIReady, setIsAPIReady] = useState(false);
-  const playerRef = useRef<YTPlayer | null>(null);
-  const playerIdRef = useRef(`upsell-player-${Math.random().toString(36).substr(2, 9)}`);
-
-  // Video ID - pode ser alterado conforme necessário
-  const videoId = "RdT2ExTPB7o";
-
+  const [showButtons, setShowButtons] = useState(false);
+  const [videoWatched, setVideoWatched] = useState(false);
+  const [progress, setProgress] = useState(70);
+  const playerRef = useRef<any>(null);
+  const intervalRef = useRef<any>(null);
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
 
-  // Load YouTube Iframe API
-  useEffect(() => {
-    if (window.YT && window.YT.Player) {
-      setIsAPIReady(true);
-      return;
-    }
+    // Animação suave da barra de progresso de 70% para 80%
+    const progressInterval = setInterval(() => {
+      setProgress(prev => {
+        if (prev >= 80) return 80;
+        return prev + 0.1;
+      });
+    }, 100);
 
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    const firstScriptTag = document.getElementsByTagName("script")[0];
+    // Carregar YouTube IFrame API
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
 
+    // @ts-ignore
     window.onYouTubeIframeAPIReady = () => {
-      setIsAPIReady(true);
+      // @ts-ignore
+      playerRef.current = new YT.Player('webinar-video', {
+        events: {
+          onStateChange: onPlayerStateChange
+        }
+      });
     };
-
     return () => {
-      window.onYouTubeIframeAPIReady = undefined;
+      clearInterval(progressInterval);
+      if (intervalRef.current) clearInterval(intervalRef.current);
     };
   }, []);
-
-  // Initialize player when API is ready
-  useEffect(() => {
-    if (!isAPIReady) return;
-
-    playerRef.current = new window.YT.Player(playerIdRef.current, {
-      videoId,
-      playerVars: {
-        autoplay: 1,
-        mute: 1,
-        controls: 0,
-        rel: 0,
-        modestbranding: 1,
-        iv_load_policy: 3,
-        fs: 0,
-        disablekb: 1,
-        playsinline: 1,
-        enablejsapi: 1,
-        origin: window.location.origin,
-      },
-      events: {
-        onReady: (event) => {
-          event.target.mute();
-          event.target.playVideo();
-        },
-        onStateChange: (event) => {
-          // Quando o vídeo termina, libera os botões
-          if (event.data === window.YT.PlayerState.ENDED) {
+  const onPlayerStateChange = (event: any) => {
+    // @ts-ignore
+    if (event.data === YT.PlayerState.PLAYING) {
+      // Verificar tempo do vídeo a cada segundo
+      intervalRef.current = setInterval(() => {
+        if (playerRef.current && playerRef.current.getCurrentTime) {
+          const currentTime = playerRef.current.getCurrentTime();
+          if (currentTime >= 170 && !videoWatched) {
+            setVideoWatched(true);
             setShowButtons(true);
-            // Reinicia o vídeo em loop
-            if (playerRef.current) {
-              playerRef.current.seekTo(0, true);
-              playerRef.current.playVideo();
-            }
+            clearInterval(intervalRef.current);
           }
-        },
-      },
-    });
-
-    return () => {
-      if (playerRef.current) {
-        playerRef.current.destroy();
-      }
-    };
-  }, [isAPIReady, videoId]);
-
-  const handleUnmute = useCallback(() => {
-    if (playerRef.current) {
-      playerRef.current.unMute();
-      playerRef.current.seekTo(0, true);
-      playerRef.current.playVideo();
-      setShowUnmuteOverlay(false);
+        }
+      }, 1000);
     }
-  }, []);
-
-  const handleSkipBonus = () => {
+  };
+  const handleShowSecondFold = () => {
+    if (!videoWatched) {
+      alert('Por favor, assista ao vídeo até o final para desbloquear o acesso.');
+      return;
+    }
     setShowSecondFold(true);
     setTimeout(() => {
       const secondFold = document.getElementById('second-fold');
@@ -137,169 +73,165 @@ const ObrigadoSoudrop = () => {
       }
     }, 100);
   };
+  return <div className="min-h-screen bg-black">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-3xl mx-auto">
+          {/* Progress Bar - Loading Style */}
+          <div className="max-w-2xl mx-auto mb-8 animate-fade-in" style={{
+          animationDelay: '0.15s'
+        }}>
+            <div className="space-y-3">
+              <p className="text-center text-sm md:text-base font-medium text-white">
+                Carregando seu bônus exclusivo…
+              </p>
+              <div className="relative h-3 bg-muted rounded-full overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]" style={{
+                backgroundSize: '200% 100%'
+              }} />
+                <Progress value={progress} className="h-full bg-transparent [&>div]:bg-primary [&>div]:relative [&>div]:overflow-hidden [&>div]:after:content-[''] [&>div]:after:absolute [&>div]:after:inset-0 [&>div]:after:bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.1)_10px,rgba(255,255,255,0.1)_20px)] [&>div]:after:animate-[slide_1s_linear_infinite]" />
+              </div>
+            </div>
+          </div>
 
-  return (
-    <div className="min-h-screen bg-black">
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto">
-          {/* Header Section */}
-          <div className="text-center space-y-4 mb-10 animate-fade-in">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">
-              Você está quase lá!
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Assista ao vídeo abaixo para liberar um <span className="text-primary font-semibold">bônus exclusivo</span> disponível apenas nesta página.
+          {/* Main Content */}
+          <div className="text-center space-y-6 mb-8 animate-fade-in" style={{
+          animationDelay: '0.2s'
+        }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">Você está quase lá!</h1>
+            <p className="text-xl md:text-2xl text-white max-w-2xl mx-auto">
+              Assista ao vídeo abaixo para liberar um bônus exclusivo para novos membros.
             </p>
-            <p className="text-base md:text-lg text-primary font-medium max-w-xl mx-auto">
-              São poucos minutos que podem acelerar seus resultados com a SouDrop.
+            <p className="text-lg md:text-xl font-semibold text-primary max-w-2xl mx-auto">
+              São poucos minutos que podem multiplicar seus resultados com a Soudrop.
+            </p>
+          </div>
+
+          {/* Video Instruction Text */}
+          <div className="max-w-3xl mx-auto mb-6 text-center animate-fade-in" style={{
+          animationDelay: '0.3s'
+        }}>
+            <p className="text-sm md:text-base text-white italic">
+              Assista até o final para desbloquear sua condição especial.
             </p>
           </div>
 
           {/* Video Section */}
-          <div className="mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="relative w-full max-w-3xl mx-auto">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
-                <div className="aspect-video relative">
-                  {/* YouTube Player Target */}
-                  <div id={playerIdRef.current} className="absolute inset-0 w-full h-full" />
+          <div className="mb-8 animate-fade-in" style={{
+          animationDelay: '0.4s'
+        }}>
+            <div className="relative w-full max-w-4xl mx-auto">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card">
+                <div className="aspect-video relative bg-black overflow-hidden webinar-wrapper">
+                  <iframe id="webinar-video" className="w-full h-full" src={`https://www.youtube.com/embed/RdT2ExTPB7o?autoplay=1&mute=1&enablejsapi=1&loop=1&playlist=RdT2ExTPB7o&controls=0&rel=0&modestbranding=1&showinfo=0&playsinline=1`} title="Webinário Soudrop" frameBorder="0" allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen></iframe>
                   
-                  {/* Click Blocker Overlay */}
-                  <div 
-                    className="absolute inset-0 z-10"
-                    style={{ pointerEvents: showUnmuteOverlay ? 'none' : 'auto' }}
-                    onClick={(e) => e.preventDefault()}
-                  />
-
-                  {/* Unmute Overlay */}
-                  {showUnmuteOverlay && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/50 z-20">
-                      <button
-                        onClick={handleUnmute}
-                        className="flex items-center gap-3 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-6 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105"
-                      >
+                  {/* Overlay para ativar o som */}
+                  {isMuted && <div onClick={() => {
+                      if (playerRef.current && playerRef.current.unMute) {
+                        playerRef.current.unMute();
+                        playerRef.current.setVolume(100);
+                      }
+                      setIsMuted(false);
+                    }} className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/40 transition-colors z-10">
+                      <div className="bg-white/90 hover:bg-white text-black px-6 py-3 rounded-lg font-semibold text-lg shadow-lg transition-all hover:scale-105">
                         🔊 Clique para ativar o som
-                      </button>
-                    </div>
-                  )}
+                      </div>
+                    </div>}
+                  
+                  {/* Camada para bloquear clique/pause */}
+                  <div className="absolute inset-0 pointer-events-auto bg-transparent"></div>
+                  
+                  {/* Camada para cobrir a área do logo do YouTube */}
+                  <div className="absolute right-0 bottom-0 w-20 h-10 bg-gradient-to-l from-black/90 to-black/0"></div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* First Layer CTAs - Only show after video ends */}
-          {showButtons && !showSecondFold && (
-            <div className="mb-12 flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in">
-              {/* Green Button - Upsell */}
-              <Button 
-                size="lg" 
-                className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-bold"
-                asChild
-              >
-                <a href="https://pay.kiwify.com.br/zrBAaMP" target="_blank" rel="noopener noreferrer">
-                  ✅ Quero aproveitar essa oferta agora
+          {/* Upsell Buttons - Aparecem após 2:50 do vídeo */}
+          {showButtons && <div className="mb-12 flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in">
+              {/* Botão Verde - Upsell */}
+            <Button size="lg" className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" asChild>
+              <a href="https://pay.kiwify.com.br/zrBAaMP" target="_blank" rel="noopener noreferrer">
+                Eu Quero Lucrar mais Rápido!
+              </a>
+            </Button>
+
+              {/* Botão Vermelho - Seguir sem bônus */}
+              <Button size="lg" onClick={handleShowSecondFold} className="w-full md:w-auto bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                Quero acessar a Plataforma.     
+              </Button>
+            </div>}
+
+          {/* Segunda Dobra - Obrigado / Acesso */}
+          {showSecondFold && <div id="second-fold" className="animate-fade-in">
+              {/* Cards with Buttons */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {/* WhatsApp Card */}
+            <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{
+              animationDelay: '0.4s'
+            }}>
+              <div className="flex justify-center">
+                <div className="p-4 bg-green-500/10 rounded-full">
+                  <MessageCircle className="w-8 h-8 text-green-500" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-center text-white">Grupo WhatsApp</h3>
+              <p className="text-white text-center">
+                Entre no nosso grupo exclusivo e conecte-se com outros membros
+              </p>
+              <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white" asChild>
+                <a href="https://chat.whatsapp.com/ChzrC8Px4sPFYkImtHPa5Z" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Entrar no Grupo
                 </a>
               </Button>
+            </div>
 
-              {/* Red Button - Skip */}
-              <Button 
-                size="lg" 
-                onClick={handleSkipBonus}
-                className="w-full md:w-auto bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-bold"
-              >
-                ❌ Quero seguir sem esse bônus
+            {/* Soudrop Platform Card */}
+            <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{
+              animationDelay: '0.6s'
+            }}>
+              <div className="flex justify-center">
+                <div className="p-4 bg-primary/10 rounded-full">
+                  <Package className="w-8 h-8 text-primary" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-center text-white">Plataforma Soudrop</h3>
+              <p className="text-white text-center">
+                Acesse agora a plataforma e comece a vender
+              </p>
+              <Button size="lg" className="w-full" asChild>
+                <a href="https://app2.soudrop.com.br/login" target="_blank" rel="noopener noreferrer">
+                  <Package className="w-5 h-5 mr-2" />
+                  Acessar Plataforma
+                </a>
               </Button>
             </div>
-          )}
+          </div>
 
-          {/* Second Layer - Shows after clicking "skip bonus" */}
-          {showSecondFold && (
-            <div id="second-fold" className="animate-fade-in space-y-8">
-              {/* Cards Section */}
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* WhatsApp Card */}
-                <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300 hover:scale-[1.02]">
-                  <div className="flex justify-center">
-                    <div className="p-4 bg-green-500/10 rounded-full">
-                      <MessageCircle className="w-10 h-10 text-green-500" />
-                    </div>
-                  </div>
-                  <h3 className="text-2xl font-bold text-center text-white">
-                    Grupo WhatsApp SouDrop
-                  </h3>
-                  <p className="text-white/80 text-center">
-                    Entre no nosso grupo exclusivo e receba avisos, suporte e oportunidades
-                  </p>
-                  <Button 
-                    size="lg" 
-                    className="w-full bg-green-500 hover:bg-green-600 text-white font-bold"
-                    asChild
-                  >
-                    <a href="https://chat.whatsapp.com/ChzrC8Px4sPFYkImtHPa5Z" target="_blank" rel="noopener noreferrer">
-                      <MessageCircle className="w-5 h-5 mr-2" />
-                      Entrar no Grupo
-                    </a>
-                  </Button>
-                </div>
-
-                {/* Platform Card */}
-                <div className="bg-card border border-border rounded-2xl p-8 space-y-4 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 hover:scale-[1.02]">
-                  <div className="flex justify-center">
-                    <div className="p-4 bg-primary/10 rounded-full">
-                      <Package className="w-10 h-10 text-primary" />
-                    </div>
-                  </div>
-                  <h3 className="text-2xl font-bold text-center text-white">
-                    Plataforma SouDrop
-                  </h3>
-                  <p className="text-white/80 text-center">
-                    Acesse agora a plataforma e comece a vender hoje
-                  </p>
-                  <Button 
-                    size="lg" 
-                    className="w-full font-bold"
-                    asChild
-                  >
-                    <a href="https://app2.soudrop.com.br/login" target="_blank" rel="noopener noreferrer">
-                      <Package className="w-5 h-5 mr-2" />
-                      Acessar Plataforma
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Next Steps Section */}
-              <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-8 text-center space-y-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-white flex items-center justify-center gap-2">
-                  <CheckCircle className="w-7 h-7 text-primary" />
-                  Próximos Passos
-                </h3>
-                <ul className="space-y-4 text-left max-w-xl mx-auto">
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary text-xl mt-0.5">✓</span>
-                    <span className="text-white text-lg">
-                      Entre no grupo do WhatsApp para receber suporte e atualizações
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary text-xl mt-0.5">✓</span>
-                    <span className="text-white text-lg">
-                      Acesse a plataforma SouDrop e configure sua conta
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary text-xl mt-0.5">✓</span>
-                    <span className="text-white text-lg">
-                      Comece a vender com os melhores produtos para dropshipping
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          )}
+          {/* Additional Info */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center space-y-4 animate-fade-in" style={{
+            animationDelay: '0.8s'
+          }}>
+            <h3 className="text-2xl font-bold text-white">Próximos Passos</h3>
+            <ul className="space-y-3 text-left max-w-xl mx-auto text-white">
+              <li className="flex items-start">
+                <span className="text-primary mr-2 mt-1">✓</span>
+                <span>Entre no grupo do WhatsApp para receber atualizações e suporte</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2 mt-1">✓</span>
+                <span>Acesse a plataforma Soudrop e configure sua conta</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2 mt-1">✓</span>
+                <span>Comece a vender com os melhores produtos para dropshipping</span>
+              </li>
+            </ul>
+          </div>
+            </div>}
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ObrigadoSoudrop;

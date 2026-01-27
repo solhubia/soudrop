@@ -77,8 +77,7 @@ declare global {
   }
 }
 
-// const META_PIXEL_DEFAULT = "1144631303730010";
-const META_PIXEL_DEFAULT = "245528455206400";
+const META_PIXEL_DEFAULT = "1144631303730010";
 const META_PIXEL_BLACK_FRIDAY = "245528455206400";
 
 function ensureMetaPixelLoaded() {
