@@ -122,9 +122,6 @@ const Index = () => {
     name: "Dashboard",
     included: true
   }, {
-    name: "Garantia de 120 dias",
-    included: true
-  }, {
     name: "Integrações com marketplaces: 6",
     included: true
   }, {
@@ -163,9 +160,6 @@ const Index = () => {
     included: true
   }, {
     name: "Dashboard",
-    included: true
-  }, {
-    name: "Garantia de 120 dias",
     included: true
   }, {
     name: "Integrações com marketplaces: Sem limite",
