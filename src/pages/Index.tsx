@@ -79,9 +79,6 @@ const Index = () => {
     name: "Dashboard",
     included: true
   }, {
-    name: "Garantia de 120 dias",
-    included: true
-  }, {
     name: "Integrações com marketplaces: 3",
     included: true
   }, {
