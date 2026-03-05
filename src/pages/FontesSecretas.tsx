@@ -421,7 +421,7 @@ const FontesSecretas = () => {
           </section>
 
           {/* Guarantee Badge */}
-          <section className="mb-4 md:mb-6">
+          {/* <section className="mb-4 md:mb-6">
             <div className="flex justify-center">
               <img 
                 src={garantia120Image} 
@@ -430,20 +430,20 @@ const FontesSecretas = () => {
                 loading="lazy"
               />
             </div>
-          </section>
+          </section> */}
 
           {/* Guarantee Section */}
           <section className="mb-8 md:mb-16">
             <Card className="p-6 md:p-10 bg-[#0F0A08] border-[#FFD700] border-2 max-w-3xl mx-auto">
               <div className="text-left">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
-                  <span className="text-[#FFF9E6]">Garantia de 120 Dias: </span>
+                  {/* <span className="text-[#FFF9E6]">Garantia de 120 Dias: </span> */}
                   <span className="text-[#C41E3A]">Risco Zero para sua Jornada Rumo ao Sucesso!</span>
                 </h2>
                 
-                <p className="text-base md:text-lg text-[#FFF9E6] mb-6 leading-relaxed">
+                {/* <p className="text-base md:text-lg text-[#FFF9E6] mb-6 leading-relaxed">
                   Se você estiver com sua operação ativa e <span className="font-bold">não faturar</span> nos próximos <span className="font-bold">120 dias</span>, <span className="font-bold underline">eu reembolso 100% do seu valor investido</span> nas Fontes Secretas da China.
-                </p>
+                </p> */}
                 
                 <p className="text-base md:text-lg text-[#FFF9E6] mb-6 leading-relaxed">
                   Eu tenho tanta certeza que com as <span className="font-bold">Fontes Secretas + Os Fornecedores Validados</span> é impossível você não ter resultado, que eu criei essa <span className="font-bold">garantia ABSURDA.</span>
@@ -480,10 +480,10 @@ const FontesSecretas = () => {
                     question: "Recebo acesso imediato?",
                     answer: "Sim, o acesso é liberado assim que o pagamento é confirmado."
                   },
-                  {
-                    question: "E se eu não gostar do curso?",
-                    answer: "Você tem 120 dias de garantia total — risco zero."
-                  },
+                  // {
+                  //   question: "E se eu não gostar do curso?",
+                  //   answer: "Você tem 120 dias de garantia total — risco zero."
+                  // },
                   {
                     question: "Posso importar mesmo sem falar chinês?",
                     answer: "Sim! O método mostra como negociar de forma simples, com ferramentas automáticas e seguras."
