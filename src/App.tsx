@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 
 // Lazy load all other pages to reduce initial bundle size (~220KB savings)
 const Links = lazy(() => import("./pages/Links"));
+const NewPlans = lazy(() => import("./pages/NewPlans"));
 const Importacao = lazy(() => import("./pages/Importacao"));
 const CacadorProdutos = lazy(() => import("./pages/CacadorProdutos"));
 const CacadorProdutosChina = lazy(() => import("./pages/CacadorProdutosChina"));
@@ -165,6 +166,7 @@ const App = () => {
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/NewPlans" element={<NewPlans />} />
               <Route path="/links" element={<Links />} />
               <Route path="/importacao" element={<Importacao />} />
               <Route path="/cacador-produtos" element={<CacadorProdutos />} />
