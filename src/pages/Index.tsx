@@ -110,6 +110,9 @@ const Index = () => {
     name: "Envios FULL e FLEX",
     included: true
   }, {
+    name: "Campanhas Comerciais e Premiações",
+    included: true
+  }, {
     name: "Valor Exclusivo nos Produtos",
     included: false
   }, {
@@ -145,6 +148,9 @@ const Index = () => {
     included: true
   }, {
     name: "Envios FULL e FLEX",
+    included: true
+  }, {
+    name: "Campanhas Comerciais e Premiações",
     included: true
   }, {
     name: "Valor Exclusivo nos Produtos",
@@ -184,6 +190,9 @@ const Index = () => {
     name: "Envios FULL e FLEX",
     included: false
   }, {
+    name: "Campanhas Comerciais e Premiações",
+    included: false
+  }, {
     name: "Valor Exclusivo nos Produtos",
     included: false
   }, {
@@ -219,6 +228,9 @@ const Index = () => {
     included: true
   }, {
     name: "Envios FULL e FLEX",
+    included: true
+  }, {
+    name: "Campanhas Comerciais e Premiações",
     included: true
   }, {
     name: "Valor Exclusivo nos Produtos",
