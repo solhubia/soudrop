@@ -166,7 +166,7 @@ const App = () => {
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Index />} />
-              {/* <Route path="/NewPlans" element={<NewPlans />} /> */}
+              <Route path="/NewPlans" element={<Index />} />
               <Route path="/links" element={<Links />} />
               <Route path="/importacao" element={<Importacao />} />
               <Route path="/cacador-produtos" element={<CacadorProdutos />} />
