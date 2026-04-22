@@ -1,40 +1,47 @@
-import { LinkCard } from "@/components/LinkCard";
 import { useEffect } from "react";
-import "../index.css"; 
+import { LayoutDashboard, MessageCircle, ExternalLink } from "lucide-react";
+import "../index.css";
 
-const Index = () => {
+const SYSTEM_URL = "https://app.soudrop.com.br";
+const WHATSAPP_URL = "https://wa.me/5515992564207";
+
+const Links = () => {
   useEffect(() => {
-    // Inicializar Facebook Pixel
     if (!window.fbq) {
-      (function(f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
+      (function (f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
         if (f.fbq) return;
-        n = f.fbq = function() {
+        n = f.fbq = function () {
           n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
         };
         if (!f._fbq) f._fbq = n;
         n.push = n;
         n.loaded = !0;
-        n.version = '2.0';
+        n.version = "2.0";
         n.queue = [];
         t = b.createElement(e);
         t.async = !0;
         t.src = v;
         s = b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t, s);
-      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
     }
-    
-    window.fbq('init', '2423820908020503');
-    window.fbq('track', 'PageView');
+
+    window.fbq("init", "2423820908020503");
+    window.fbq("track", "PageView");
   }, []);
 
   const trackLinkClick = (linkType: string, linkTitle: string) => {
     if (window.fbq) {
-      window.fbq('track', 'Lead', {
+      window.fbq("track", "Lead", {
         content_name: linkTitle,
         content_category: linkType,
       });
     }
+  };
+
+  const handleClick = (url: string, type: string, title: string) => {
+    trackLinkClick(type, title);
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -51,39 +58,56 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Links */}
-          <div className="space-y-8 max-w-lg mx-auto">
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <LinkCard
-                title="Importe da China"
-                description="Clique aqui para fazer importação"
-                url="https://4k384ufgv64.typeform.com/to/vTnWbUQI"
-                variant="red"
-                type="import"
-                onTrack={() => trackLinkClick('import', 'Importe da China')}
-              />
+          {/* Buttons */}
+          <div className="space-y-6 max-w-lg mx-auto">
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <button
+                onClick={() => handleClick(SYSTEM_URL, "system", "Acessar sistema SouDrop")}
+                className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 p-5 sm:p-6 text-white shadow-xl border border-blue-500/20 hover:scale-[1.02] hover:brightness-110 transition-all duration-300"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+                <div className="relative flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="p-3 bg-white/15 rounded-xl backdrop-blur-sm flex-shrink-0">
+                      <LayoutDashboard className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={2.5} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-bold tracking-tight leading-tight">
+                        Acessar sistema SouDrop
+                      </h3>
+                      <p className="text-xs sm:text-sm opacity-90 font-medium mt-1">
+                        Entre na plataforma da SouDrop
+                      </p>
+                    </div>
+                  </div>
+                  <ExternalLink className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                </div>
+              </button>
             </div>
 
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <LinkCard
-                title="Vender sem estoque"
-                description="Acesse o site da Soudrop"
-                url="https://4k384ufgv64.typeform.com/to/rIQVeImj"
-                variant="green"
-                type="website"
-                onTrack={() => trackLinkClick('soudrop', 'Vender sem estoque')}
-              />
-            </div>
-
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <LinkCard
-                title="Aprender a vender no digital"
-                description="Tudo que você precisa para aprender vender online está aqui"
-                url="https://soudrop.com.br/black-friday"
-                variant="blue"
-                type="course"
-                onTrack={() => trackLinkClick('courses', 'Aprender a vender no digital')}
-              />
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+              <button
+                onClick={() => handleClick(WHATSAPP_URL, "whatsapp", "Comprar no atacado pelo WhatsApp")}
+                className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-green-600 to-green-700 p-5 sm:p-6 text-white shadow-xl border border-green-500/20 hover:scale-[1.02] hover:brightness-110 transition-all duration-300"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+                <div className="relative flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="p-3 bg-white/15 rounded-xl backdrop-blur-sm flex-shrink-0">
+                      <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={2.5} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-bold tracking-tight leading-tight">
+                        Comprar no atacado pelo WhatsApp
+                      </h3>
+                      <p className="text-xs sm:text-sm opacity-90 font-medium mt-1">
+                        Fale com nosso time no WhatsApp
+                      </p>
+                    </div>
+                  </div>
+                  <ExternalLink className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                </div>
+              </button>
             </div>
           </div>
 
@@ -99,5 +123,4 @@ const Index = () => {
   );
 };
 
-export default Index;
-
+export default Links;
