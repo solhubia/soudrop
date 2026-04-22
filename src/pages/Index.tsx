@@ -60,14 +60,14 @@ const Index = () => {
     gratis: {
       name: "Soudrop Grátis",
       price: "R$ 0",
-      tagline: "Entre no universo da SouDrop totalmente de grátis e comece já a anunciar!",
+      tagline: "Entre na SouDrop totalmente de grátis e comece já a anunciar!",
       link: "https://app2.soudrop.com.br/create-account",
       popular: true
     },
     premium: {
       name: "Soudrop Premium",
       price: "12x de R$ 97,90",
-      tagline: "A maioria dos vendedores começa por aqui para escalar mais rápido",
+      tagline: "A maioria dos vendedores começa por aqui!",
       link: "https://pay.kiwify.com.br/zrBAaMP",
       popular: true
     },
@@ -95,6 +95,9 @@ const Index = () => {
     name: "Lançador Automático: 200 Anúncios",
     included: true
   }, {
+    name: "Comunidade EXCLUSIVA",
+    included: true
+  }, {
   //   name: "Notas Fiscais: 150 Notas por mês",
   //   included: true
   // }, {
@@ -104,8 +107,8 @@ const Index = () => {
     name: "Gestão de Vendas Completo",
     included: true
   }, {
-    name: "Envios FULL",
-    included: false
+    name: "Envios FULL e FLEX",
+    included: true
   }, {
     name: "Valor Exclusivo nos Produtos",
     included: false
@@ -129,6 +132,9 @@ const Index = () => {
     name: "Lançador Automático: 500 Anúncios",
     included: true
   }, {
+    name: "Comunidade EXCLUSIVA",
+    included: true
+  }, {
   //   name: "Notas Fiscais: 150 Notas por mês",
   //   included: true
   // }, {
@@ -138,8 +144,8 @@ const Index = () => {
     name: "Gestão de Vendas Completo",
     included: true
   }, {
-    name: "Envios FULL",
-    included: false
+    name: "Envios FULL e FLEX",
+    included: true
   }, {
     name: "Valor Exclusivo nos Produtos",
     included: false
@@ -163,6 +169,9 @@ const Index = () => {
     name: "Lançador Automático: 10 Anúncios",
     included: true
   }, {
+    name: "Comunidade",
+    included: true
+  }, {
   //   name: "Notas Fiscais: 20 Notas total",
   //   included: true
   // }, {
@@ -172,7 +181,7 @@ const Index = () => {
     name: "Gestão de Vendas Completo",
     included: false
   }, {
-    name: "Envios FULL",
+    name: "Envios FULL e FLEX",
     included: false
   }, {
     name: "Valor Exclusivo nos Produtos",
@@ -197,6 +206,9 @@ const Index = () => {
     name: "Lançador Automático: Sem Limite",
     included: true
   }, {
+    name: "Comunidade EXCLUSIVA",
+    included: true
+  }, {
   //   name: "Notas Fiscais: 1000 Notas por mês",
   //   included: true
   // }, {
@@ -206,7 +218,7 @@ const Index = () => {
     name: "Gestão de Vendas Completo",
     included: true
   }, {
-    name: "Envios FULL",
+    name: "Envios FULL e FLEX",
     included: true
   }, {
     name: "Valor Exclusivo nos Produtos",
