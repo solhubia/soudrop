@@ -1,7 +1,18 @@
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.html$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
-    
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1. Forçar HTTPS (Redirecionamento 301)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 2. Apontar todo o tráfego do domínio para dentro da pasta "dist"
+  RewriteCond %{REQUEST_URI} !^/dist/
+  RewriteRule ^(.*)$ /dist/$1 [L]
+
+  # 3. Regra de Roteamento do SPA (React/Vite) focada na pasta "dist"
+  # Se o que foi acessado não for um arquivo real nem uma pasta real
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  # Manda para o index.html que está dentro da dist
+  RewriteRule ^dist/.*$ /dist/index.html [L]
+</IfModule>
