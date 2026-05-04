@@ -584,3 +584,54 @@
   visibility: hidden !important;
   pointer-events: none !important;
 }
+
+/* === ObrigadoSoudrop2 - classes exclusivas === */
+/* === ObrigadoSoudrop2 — classes exclusivas (prefixo sd2-) === */
+.sd2-check-anim {
+  animation: sd2CheckPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+.sd2-fade-1 { animation: sd2FadeUp 0.55s ease 0.5s both; }
+.sd2-fade-2 { animation: sd2FadeUp 0.6s ease 0.65s both; }
+.sd2-fade-3 { animation: sd2FadeUp 0.6s ease 0.8s both; }
+.sd2-fade-4 { animation: sd2FadeUp 0.6s ease 0.95s both; }
+.sd2-fade-5 { animation: sd2FadeUp 0.6s ease 1.1s both; }
+.sd2-step-1 { animation: sd2StepSlide 0.5s ease 1.25s both; }
+.sd2-step-2 { animation: sd2StepSlide 0.5s ease 1.4s both; }
+.sd2-step-3 { animation: sd2StepSlide 0.5s ease 1.55s both; }
+.sd2-badge  { animation: sd2BadgePulse 2.5s ease 1.5s infinite, sd2FadeUp 0.5s ease 0.5s both; }
+.sd2-cta-btn { animation: sd2BtnGlow 2.5s ease 1.5s infinite; }
+
+.sd2-shimmer-text {
+  background: linear-gradient(90deg, #22c55e, #86efac, #22c55e);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: sd2Shimmer 3s linear 1.2s infinite;
+}
+
+@keyframes sd2FadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes sd2CheckPop {
+  0%   { transform: scale(0) rotate(-20deg); opacity: 0; }
+  70%  { transform: scale(1.15) rotate(4deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+@keyframes sd2StepSlide {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes sd2Shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes sd2BadgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,.45); }
+  50%       { box-shadow: 0 0 0 8px rgba(34,197,94,0); }
+}
+@keyframes sd2BtnGlow {
+  0%, 100% { box-shadow: 0 4px 24px rgba(34,197,94,.35); }
+  50%       { box-shadow: 0 4px 42px rgba(34,197,94,.65); }
+}

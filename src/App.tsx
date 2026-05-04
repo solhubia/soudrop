@@ -20,6 +20,7 @@ const FontesSecretasDetalhes = lazy(() => import("./pages/FontesSecretasDetalhes
 const LiveImportacao = lazy(() => import("./pages/LiveImportacao"));
 const Obrigado = lazy(() => import("./pages/Obrigado"));
 const ObrigadoSoudrop = lazy(() => import("./pages/ObrigadoSoudrop"));
+const ObrigadoSoudrop2 = lazy(() => import("./pages/ObrigadoSoudrop2"));
 const ObrigadoClubeImportacao = lazy(() => import("./pages/ObrigadoClubeImportacao"));
 const ObrigadoCacadorChina = lazy(() => import("./pages/ObrigadoCacadorChina"));
 const OperacaoTiktok = lazy(() => import("./pages/OperacaoTiktok"));
@@ -178,6 +179,7 @@ const App = () => {
               <Route path="/live-importacao" element={<LiveImportacao />} />
               <Route path="/obrigado" element={<Obrigado />} />
               <Route path="/obrigado-soudrop" element={<ObrigadoSoudrop />} />
+              <Route path="/obrigado-soudrop2" element={<ObrigadoSoudrop2 />} />
               <Route path="/obrigado-clube-importacao" element={<ObrigadoClubeImportacao />} />
               <Route path="/obrigado-cacador-china" element={<ObrigadoCacadorChina />} />
               <Route path="/soudrop-start" element={<SoudropStart />} />
