@@ -83,6 +83,9 @@ const Index = () => {
     name: "Taxa por pedido: R$ 1,50",
     included: true
   }, {
+    name: "Pedidos Ilimitados",
+    included: true
+  }, {
     name: "Acesso a + 1000 SKUS",
     included: true
   }, {
@@ -121,6 +124,9 @@ const Index = () => {
   }];
   const benefitsPremium = [{
     name: "Taxa por pedido: R$ 1,25",
+    included: true
+  }, {
+    name: "Pedidos Ilimitados",
     included: true
   }, {
     name: "Acesso a + 1000 SKUS",
@@ -163,6 +169,9 @@ const Index = () => {
     name: "Taxa por Pedido: R$ 1,75",
     included: true
   }, {
+    name: "Apenas 10 Pedidos",
+    included: true
+  }, {
     name: "Acesso a +1000 SKUS",
     included: true
   }, {
@@ -201,6 +210,9 @@ const Index = () => {
   }];
   const benefitsPro = [{
     name: "Taxa por Pedido: R$ 1",
+    included: true
+  }, {
+    name: "Pedidos Ilimitados",
     included: true
   }, {
     name: "Acesso a + 1000 SKUS",
