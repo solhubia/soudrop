@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { LayoutDashboard, MessageCircle, ExternalLink } from "lucide-react";
 import "../index.css";
 
-const SYSTEM_URL = "https://soudrop.com.br/";
+const SYSTEM_URL = "https://w.app/soudrop";
 const WHATSAPP_URL = "https://wa.me/5515992564207";
 
 const Links = () => {
