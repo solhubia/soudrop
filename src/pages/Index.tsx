@@ -162,10 +162,10 @@ const Index = () => {
     name: "Mentoria e acompanhamento de contas por 1 mês",
     included: true
   }, {
-    name: "Valor Exclusivo nos Produtos",
+    name: "Valor promocional exclusivo para membros",
     included: false
   }, {
-    name: "Gestão Financeira",
+    name: "Gestão Financeira (sem medo de contas a pagar e DRE)",
     included: false
   }];
   const benefitsGratis = [{
