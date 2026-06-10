@@ -251,10 +251,10 @@ const Index = () => {
     name: "Mentoria, acompanhamento de contas + ADS por 3 meses",
     included: true
   }, {
-    name: "Valor Exclusivo nos Produtos",
+    name: "Valor promocional exclusivo para membros",
     included: true
   }, {
-    name: "Gestão Financeira",
+    name: "Gestão Financeira (sem medo de contas a pagar e DRE)",
     included: true
   }];
   const [expandedCards, setExpandedCards] = useState<{
