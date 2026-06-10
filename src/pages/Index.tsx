@@ -116,10 +116,10 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: true
   }, {
-    name: "Valor Exclusivo nos Produtos",
+    name: "Valor promocional exclusivo para membros",
     included: false
   }, {
-    name: "Gestão Financeira",
+    name: "Gestão Financeira (sem medo de contas a pagar e DRE)",
     included: false
   }];
   const benefitsPremium = [{
@@ -162,10 +162,10 @@ const Index = () => {
     name: "Mentoria e acompanhamento de contas por 1 mês",
     included: true
   }, {
-    name: "Valor Exclusivo nos Produtos",
+    name: "Valor promocional exclusivo para membros",
     included: false
   }, {
-    name: "Gestão Financeira",
+    name: "Gestão Financeira (sem medo de contas a pagar e DRE)",
     included: false
   }];
   const benefitsGratis = [{
@@ -205,10 +205,10 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: false
   }, {
-    name: "Valor Exclusivo nos Produtos",
+    name: "Valor promocional exclusivo para membros",
     included: false
   }, {
-    name: "Gestão Financeira",
+    name: "Gestão Financeira (sem medo de contas a pagar e DRE)",
     included: false
   }];
   const benefitsPro = [{
@@ -251,10 +251,10 @@ const Index = () => {
     name: "Mentoria, acompanhamento de contas + ADS por 3 meses",
     included: true
   }, {
-    name: "Valor Exclusivo nos Produtos",
+    name: "Valor promocional exclusivo para membros",
     included: true
   }, {
-    name: "Gestão Financeira",
+    name: "Gestão Financeira (sem medo de contas a pagar e DRE)",
     included: true
   }];
   const [expandedCards, setExpandedCards] = useState<{
