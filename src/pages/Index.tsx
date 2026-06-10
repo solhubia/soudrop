@@ -159,6 +159,9 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: true
   }, {
+    name: "Mentoria e acompanhamento de contas por 1 mês",
+    included: true
+  }, {
     name: "Valor Exclusivo nos Produtos",
     included: false
   }, {
@@ -243,6 +246,9 @@ const Index = () => {
     included: true
   }, {
     name: "Campanhas Comerciais e Premiações",
+    included: true
+  }, {
+    name: "Mentoria, acompanhamento de contas + ADS por 3 meses",
     included: true
   }, {
     name: "Valor Exclusivo nos Produtos",
