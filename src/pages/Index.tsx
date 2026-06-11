@@ -116,7 +116,7 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: true
   }, {
-    name: "Valor promocional exclusivo para membros",
+    name: "Valor Exclusivo nos Produtos",
     included: false
   }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
