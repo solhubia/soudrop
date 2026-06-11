@@ -119,7 +119,7 @@ const Index = () => {
     name: "Valor promocional exclusivo para membros",
     included: false
   }, {
-    name: "Gestão Financeira (sem medo de contas a pagar e DRE)",
+    name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
     included: false
   }];
   const benefitsPremium = [{
