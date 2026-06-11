@@ -208,6 +208,9 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: false
   }, {
+    name: "Mentoria e acompanhamento de contas por 1 mês",
+    included: false
+  }, {
     name: "Valor Exclusivo nos Produtos",
     included: false
   }, {
