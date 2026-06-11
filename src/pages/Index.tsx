@@ -116,7 +116,7 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: true
   }, {
-    name: "Valor promocional exclusivo para membros",
+    name: "Valor Exclusivo nos Produtos",
     included: false
   }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
@@ -162,7 +162,7 @@ const Index = () => {
     name: "Mentoria e acompanhamento de contas por 1 mês",
     included: true
   }, {
-    name: "Valor promocional exclusivo para membros",
+    name: "Valor Exclusivo nos Produtos",
     included: false
   }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
@@ -205,7 +205,7 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: false
   }, {
-    name: "Valor promocional exclusivo para membros",
+    name: "Valor Exclusivo nos Produtos",
     included: false
   }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
@@ -251,7 +251,7 @@ const Index = () => {
     name: "Mentoria, acompanhamento de contas + ADS por 3 meses",
     included: true
   }, {
-    name: "Valor promocional exclusivo para membros",
+    name: "Valor Exclusivo nos Produtos",
     included: true
   }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
