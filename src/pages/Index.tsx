@@ -165,6 +165,9 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: true
   }, {
+    name: "Drive de Vídeos",
+    included: true
+  }, {
     name: "Mentoria e acompanhamento de contas por 1 mês",
     included: true
   }, {
