@@ -269,9 +269,6 @@ const Index = () => {
     name: "Mentoria, acompanhamento de contas + ADS por 3 meses",
     included: true
   }, {
-    name: "Valor em atacado mais barato",
-    included: true
-  }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
     included: true
   }];
