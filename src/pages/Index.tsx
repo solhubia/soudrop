@@ -122,6 +122,9 @@ const Index = () => {
     name: "Mentoria e acompanhamento de contas por 1 mês",
     included: false
   }, {
+    name: "Mentoria, acompanhamento de contas + ADS por 3 meses",
+    included: false
+  }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
     included: false
   }];
@@ -167,6 +170,9 @@ const Index = () => {
   }, {
     name: "Mentoria e acompanhamento de contas por 1 mês",
     included: true
+  }, {
+    name: "Mentoria, acompanhamento de contas + ADS por 3 meses",
+    included: false
   }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
     included: false
@@ -214,6 +220,9 @@ const Index = () => {
     name: "Mentoria e acompanhamento de contas por 1 mês",
     included: false
   }, {
+    name: "Mentoria, acompanhamento de contas + ADS por 3 meses",
+    included: false
+  }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
     included: false
   }];
@@ -258,6 +267,9 @@ const Index = () => {
     included: true
   }, {
     name: "Mentoria, acompanhamento de contas + ADS por 3 meses",
+    included: true
+  }, {
+    name: "Valor em atacado mais barato",
     included: true
   }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
