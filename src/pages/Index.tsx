@@ -116,7 +116,7 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: true
   }, {
-    name: "Drive de Vídeos",
+    name: "Drive de Vídeos de Produtos",
     included: true
   }, {
     name: "Mentoria e acompanhamento de contas por 1 mês",
@@ -165,7 +165,7 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: true
   }, {
-    name: "Drive de Vídeos",
+    name: "Drive de Vídeos de Produtos",
     included: true
   }, {
     name: "Mentoria e acompanhamento de contas por 1 mês",
@@ -214,7 +214,7 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: false
   }, {
-    name: "Drive de Vídeos",
+    name: "Drive de Vídeos de Produtos",
     included: false
   }, {
     name: "Mentoria e acompanhamento de contas por 1 mês",
@@ -263,13 +263,10 @@ const Index = () => {
     name: "Campanhas Comerciais e Premiações",
     included: true
   }, {
-    name: "Drive de Vídeos",
+    name: "Drive de Vídeos de Produtos",
     included: true
   }, {
     name: "Mentoria, acompanhamento de contas + ADS por 3 meses",
-    included: true
-  }, {
-    name: "Valor Exclusivo nos Produtos",
     included: true
   }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
