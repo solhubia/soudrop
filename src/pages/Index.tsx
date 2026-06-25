@@ -122,9 +122,6 @@ const Index = () => {
     name: "Mentoria e acompanhamento de contas por 1 mês",
     included: false
   }, {
-    name: "Valor Exclusivo nos Produtos",
-    included: false
-  }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
     included: false
   }];
@@ -171,9 +168,6 @@ const Index = () => {
     name: "Mentoria e acompanhamento de contas por 1 mês",
     included: true
   }, {
-    name: "Valor Exclusivo nos Produtos",
-    included: false
-  }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
     included: false
   }];
@@ -218,9 +212,6 @@ const Index = () => {
     included: false
   }, {
     name: "Mentoria e acompanhamento de contas por 1 mês",
-    included: false
-  }, {
-    name: "Valor Exclusivo nos Produtos",
     included: false
   }, {
     name: "Gestão Financeira (MÓDULO de contas a pagar e DRE)",
